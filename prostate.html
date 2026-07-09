@@ -27,27 +27,1174 @@
 <div class="progress-bar-container"><div class="progress-bar" id="progressBar"></div></div>
 <header class="page-hero"><div class="step-badge">♂️ PROSTATE CANCER</div>
 <h1 data-zh="攝護腺癌" data-en="Prostate Cancer">攝護腺癌</h1>
-<p class="subtitle" data-lang="zh">局限性、術後、轉移性攝護腺癌與系統性治療。</p>
-<p class="subtitle" data-lang="en">Localized, post-prostatectomy, metastatic; systemic therapy & RT regimens.</p>
+<p class="subtitle" data-lang="zh">攝護腺癌總論、workup、Gleason/Grade Group、risk stratification、localized RT、hypofractionation、SBRT、ADT、術後 salvage、mCSPC、mCRPC、MDT 與 radiopharmaceutical therapy。</p>
+<p class="subtitle" data-lang="en">Prostate cancer overview, workup, Gleason/Grade Group, risk stratification, localized RT, hypofractionation, SBRT, ADT, postoperative salvage, mCSPC, mCRPC, MDT, and radiopharmaceutical therapy.</p>
 </header>
 <main class="content-wrap">
 <section class="section">
-<div class="section-label" data-zh="風險分層" data-en="RISK">風險分層</div>
-<h2 data-zh="NCCN 風險分層" data-en="NCCN risk stratification">NCCN 風險分層</h2>
-<div data-lang="zh"><ul><li><strong>Very low / Low:</strong> PSA &lt; 10, GS ≤ 6, T1c–T2a</li><li><strong>Favorable intermediate (FIR):</strong> single IR factor + &lt; 50% cores + GG 1–2</li><li><strong>Unfavorable IR (UIR):</strong> 2+ IR factors / GG 3 / &gt; 50% cores</li><li><strong>High / Very high:</strong> GS ≥ 8, PSA &gt; 20, T3a+</li></ul></div>
-<div data-lang="en"><ul><li><strong>Very low / Low:</strong> PSA &lt; 10, GS ≤ 6, T1c–T2a</li><li><strong>Favorable intermediate (FIR):</strong> single IR factor + &lt; 50% cores + GG 1–2</li><li><strong>Unfavorable IR (UIR):</strong> 2+ IR factors / GG 3 / &gt; 50% cores</li><li><strong>High / Very high:</strong> GS ≥ 8, PSA &gt; 20, T3a+</li></ul></div>
+<div class="section-label" data-zh="攝護腺總論" data-en="PCA OVERVIEW">攝護腺總論</div>
+<h2 data-zh="攝護腺癌流行病學、臨床表現、解剖與 androgen axis" data-en="Prostate cancer epidemiology, presentation, anatomy, and androgen axis">攝護腺癌流行病學、臨床表現、解剖與 androgen axis</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第一部分：攝護腺癌總論</strong></p>
+<h3>一、流行病學與臨床重要性</h3>
+<p>攝護腺癌是美國男性最常見的惡性腫瘤，若排除 non-melanoma skin cancers，男性一生罹患風險約為 1 in 8。它也是男性第二常見癌症死因，第一名是肺癌。多數攝護腺癌診斷時仍屬 localized 或 regional disease，因此治療重點不只是「能不能治癒」，更是如何根據 risk group，在癌症控制、尿路功能、性功能、腸胃毒性、ADT 副作用、病人年齡與 competing mortality 之間取得平衡。</p>
+<p>Source file 的圖表也強調，攝護腺癌大多在 localized stage 被診斷；localized 和 regional disease 的 5-year relative survival 幾乎非常高，但 distant disease 的 survival 明顯下降。因此 localized disease 的治療強度要依風險分層決定，而 metastatic disease 則要再依 castration-sensitive vs castration-resistant、low-volume vs high-volume、PSMA status、prior therapy 來決定。</p>
+<h3>二、Clinical presentation</h3>
+<p>攝護腺癌通常沒有症狀，最常因 PSA screening 發現。若有症狀，多數是 lower urinary tract symptoms，包括 frequency、urgency、nocturia、hesitancy，也可能出現 hematuria 或 hematospermia。PSA screening 的核心是 shared decision-making，因為 randomized trials 和 meta-analyses 沒有顯示明確 overall mortality reduction，但 ERSPC 顯示 screening 可能降低 distant-stage prostate cancer incidence；同時必須考慮 over-diagnosis、over-treatment、biopsy complications、治療後尿路/性功能/腸胃毒性，以及病人焦慮。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>AUA screening concept</caption>
+    <thead><tr><th scope="col">年齡/族群</th><th scope="col">Screening 建議</th></tr></thead>
+    <tbody>
+      <tr><td>&lt;40 歲</td><td>不建議 routine screening</td></tr>
+      <tr><td>40–54 歲</td><td>主要 screen higher-risk patients，例如 Black race 或 family history</td></tr>
+      <tr><td>55–69 歲</td><td>Shared decision-making</td></tr>
+      <tr><td>部分 &gt;70 歲且健康狀況好</td><td>可個案化討論</td></tr>
+      <tr><td>&gt;70 歲且 life expectancy &lt;10–15 年</td><td>通常不 screen</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>三、攝護腺解剖</h3>
+<p>攝護腺約 1/3 是 fibromuscular stroma，主要包含 anterior zone；約 2/3 是 glandular elements，包含 central zone、transition zone、peripheral zone。Transition zone 是 BPH 常見位置；peripheral zone 是多數攝護腺癌發生位置。這點對 DRE、MRI interpretation、biopsy targeting 很重要，因為 posterior/peripheral lesions 比較容易被 DRE 或 systematic posterior biopsy 偵測。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>攝護腺區域與臨床意義</caption>
+    <thead><tr><th scope="col">區域</th><th scope="col">臨床意義</th></tr></thead>
+    <tbody>
+      <tr><td>Peripheral zone</td><td>大多數 prostate cancer 起源處</td></tr>
+      <tr><td>Transition zone</td><td>BPH 常見部位</td></tr>
+      <tr><td>Central zone</td><td>位於 ejaculatory ducts 周圍</td></tr>
+      <tr><td>Anterior fibromuscular stroma</td><td>非 glandular dominant；前方病灶有時 biopsy 較容易漏掉</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>四、攝護腺生理與 androgen axis</h3>
+<p>攝護腺參與 seminal fluid production，約 30% seminal fluid 來自 prostate，約 70% 來自 seminal vesicles、testes、bulbourethral glands。攝護腺生長與攝護腺癌存活高度依賴 androgen regulation：LH 促進 testes 製造 testosterone；ACTH 促進 adrenals 產生 DHEA，再轉成 testosterone；testosterone 經 5-α reductase 轉成 DHT，DHT 與 androgen receptor 結合後促進 prostate survival、growth、PSA secretion。這就是 ADT、AR inhibitors、CYP17 inhibitors 的生物學基礎。</p></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part I. Prostate Cancer Overview</strong></p>
+<h3>1. Epidemiology and clinical importance</h3>
+<p>Prostate cancer is the most common malignancy in men in the United States if non-melanoma skin cancers are excluded. The lifetime risk is approximately 1 in 8, and it is the second leading cause of cancer death in men after lung cancer. Most cases are diagnosed as localized or regional disease, so management is not only about cure, but also about balancing cancer control against urinary function, sexual function, bowel toxicity, ADT adverse effects, patient age, and competing mortality.</p>
+<p>Localized and regional prostate cancer have very high 5-year relative survival, whereas distant disease has substantially worse survival. Localized treatment intensity is therefore risk-adapted. Metastatic disease requires additional classification by castration-sensitive versus castration-resistant status, low-volume versus high-volume burden, PSMA status, and prior therapy.</p>
+<h3>2. Clinical presentation</h3>
+<p>Prostate cancer is usually asymptomatic and is most often detected through PSA screening. When symptoms occur, they are usually lower urinary tract symptoms such as frequency, urgency, nocturia, hesitancy, hematuria, or hematospermia. PSA screening should be based on shared decision-making because screening can reduce distant-stage prostate cancer but also causes over-diagnosis, over-treatment, biopsy complications, treatment-related urinary, sexual, and bowel toxicity, and patient anxiety.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>AUA screening concept</caption>
+    <thead><tr><th scope="col">Age / group</th><th scope="col">Screening recommendation</th></tr></thead>
+    <tbody>
+      <tr><td>&lt;40 years</td><td>Routine screening is not recommended</td></tr>
+      <tr><td>40–54 years</td><td>Mainly screen higher-risk patients, such as Black men or those with family history</td></tr>
+      <tr><td>55–69 years</td><td>Shared decision-making</td></tr>
+      <tr><td>Selected healthy men &gt;70 years</td><td>Individualized discussion</td></tr>
+      <tr><td>&gt;70 years with life expectancy &lt;10–15 years</td><td>Usually do not screen</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>3. Prostate anatomy</h3>
+<p>About one third of the prostate is fibromuscular stroma, mainly the anterior zone, and about two thirds are glandular elements, including the central, transition, and peripheral zones. The transition zone is the common site of BPH. The peripheral zone is the most common origin of prostate cancer, which is why posterior and peripheral lesions are more likely to be detected by DRE or systematic posterior biopsy.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Prostate zones and clinical relevance</caption>
+    <thead><tr><th scope="col">Zone</th><th scope="col">Clinical relevance</th></tr></thead>
+    <tbody>
+      <tr><td>Peripheral zone</td><td>Most prostate cancers arise here</td></tr>
+      <tr><td>Transition zone</td><td>Common site of BPH</td></tr>
+      <tr><td>Central zone</td><td>Surrounds the ejaculatory ducts</td></tr>
+      <tr><td>Anterior fibromuscular stroma</td><td>Non-glandular dominant; anterior lesions may be missed by standard biopsy</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>4. Androgen axis</h3>
+<p>The prostate contributes roughly 30% of seminal fluid, while the seminal vesicles, testes, and bulbourethral glands contribute the rest. Prostate growth and prostate cancer survival are strongly androgen-driven. LH stimulates testicular testosterone production, ACTH stimulates adrenal DHEA production, testosterone is converted to DHT by 5-alpha reductase, and DHT activates the androgen receptor to promote prostate survival, growth, and PSA secretion. This is the biologic basis for ADT, androgen receptor inhibitors, and CYP17 inhibitors.</p></div>
 </section>
 <section class="section">
-<div class="section-label" data-zh="劑量與分次" data-en="DOSE">劑量與分次</div>
-<h2 data-zh="劑量與大分次" data-en="Dose & hypofractionation">劑量與大分次</h2>
-<div data-lang="zh"><p><strong>標準:</strong> 78–80 Gy standard fractionation。</p><p><strong>Moderate hypofx:</strong> CHHiP (60 Gy/20 fx) / PROFIT (60 Gy/20 fx) — 非劣。</p><p><strong>Ultra-hypofx / SBRT:</strong> HYPO-RT-PC (42.7 Gy/7 fx)、PACE-B (36.25 Gy/5 fx) — 非劣。</p><p><strong>ADT + RT (STAMPEDE, Bolla EORTC 22961):</strong><br>· FIR：短程 ADT 4 個月<br>· UIR：ADT 4–6 個月<br>· 高風險：長程 ADT 18–36 個月</p></div>
-<div data-lang="en"><p><strong>Standard:</strong> 78–80 Gy standard fractionation.</p><p><strong>Moderate hypofractionation:</strong> CHHiP (60 Gy/20 fx) / PROFIT (60 Gy/20 fx) — non-inferior.</p><p><strong>Ultra-hypofx / SBRT:</strong> HYPO-RT-PC (42.7 Gy/7 fx); PACE-B (36.25 Gy/5 fx) — non-inferior.</p><p><strong>ADT + RT (STAMPEDE, Bolla EORTC 22961):</strong><br>· FIR: short-course ADT 4 mo<br>· UIR: ADT 4–6 mo<br>· High risk: long-course ADT 18–36 mo</p></div>
+<div class="section-label" data-zh="Workup" data-en="WORKUP">Workup</div>
+<h2 data-zh="Initial workup、IPSS/SHIM、PSA metrics、MRI、systemic imaging 與 biopsy" data-en="Initial workup, IPSS/SHIM, PSA metrics, MRI, systemic imaging, and biopsy">Initial workup、IPSS/SHIM、PSA metrics、MRI、systemic imaging 與 biopsy</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第三部分：Workup 細節</strong></p>
+<h3>一、Initial clinical workup</h3>
+<p>Workup 包括 H&P、labs、imaging、pathology。H&P 要特別評估 urinary、sexual、bowel symptoms，並記錄 IPSS 和 SHIM scores。DRE 用於評估 palpable nodule、induration、T-stage suspicion。Labs 包括 PSA 和 serum testosterone；testosterone 對日後 ADT response、是否達到 castration level，以及 castration-resistant disease definition 很重要。</p>
+<h3>二、IPSS 與 SHIM</h3>
+<p>IPSS（International Prostate Symptom Score）用於量化 urinary symptoms，包括 incomplete emptying、frequency、intermittency、urgency、weak stream、straining、nocturia。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>IPSS 嚴重程度</caption>
+    <thead><tr><th scope="col">IPSS</th><th scope="col">嚴重程度</th></tr></thead>
+    <tbody>
+      <tr><td>1–7</td><td>Mild</td></tr>
+      <tr><td>8–19</td><td>Moderate</td></tr>
+      <tr><td>20–35</td><td>Severe</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>IPSS 對 radiation decision 很重要。若 baseline IPSS 很高，尤其 obstructive symptoms 明顯，brachytherapy 或 SBRT 後 urinary flare/retention risk 可能較高，需先處理 BPH 或慎選治療方式。</p>
+<p>SHIM（Sexual Health Inventory for Men）用於評估 erectile function。它可協助治療前 counseling，因為 surgery、RT、ADT 都可能影響 erectile function，但機轉與時間軸不同：surgery 可能較早出現 erectile dysfunction；RT 相關 ED 常較漸進；ADT 則可造成 libido 降低與 erectile dysfunction。</p>
+<h3>三、PSA metrics</h3>
+<p>PSA &gt;2.5–4 ng/mL 代表 prostate cancer risk 增加，但 normal PSA 會受年齡與族群影響。PSA false positive causes 包括 manipulation/biopsy、BPH、prostatitis、urinary retention、trauma、ejaculation，因此單一 isolated PSA value 不容易判讀。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>常用 PSA metrics</caption>
+    <thead><tr><th scope="col">指標</th><th scope="col">定義</th><th scope="col">高風險概念</th></tr></thead>
+    <tbody>
+      <tr><td>PSA density</td><td>serum PSA / prostate volume</td><td>&gt;0.15 ng/mL² suggests higher risk</td></tr>
+      <tr><td>PSA velocity</td><td>PSA over time 的變化速度</td><td>&gt;0.75 ng/mL/year suggests higher risk</td></tr>
+      <tr><td>PSA doubling time</td><td>PSA doubling 所需時間</td><td>&lt;12 months suggests higher risk</td></tr>
+      <tr><td>Free PSA / total PSA ratio</td><td>游離 PSA 比例</td><td>&lt;25% suggests higher risk</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>四、MRI and systemic imaging</h3>
+<p>NCCN strongly recommends prostate MRI before biopsy，以利 image-guided biopsy。Multiparametric MRI 至少包含 T2 sequence 和一個 functional sequence，例如 DWI 或 dynamic contrast-enhanced imaging。MRI 可用於 visualizing intraprostatic disease、評估 extracapsular extension、seminal vesicle invasion、lesion targeting、prostate volume，以及 RT planning。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>MRI sequences 的基本 interpretation</caption>
+    <thead><tr><th scope="col">MRI sequence</th><th scope="col">主要用途</th></tr></thead>
+    <tbody>
+      <tr><td>T1-weighted image</td><td>看 prostate/SV hemorrhage、lymph node enlargement</td></tr>
+      <tr><td>T2-weighted image</td><td>看 prostate volume、zonal anatomy；focal circumscribed moderately hypointense lesions suspicious</td></tr>
+      <tr><td>DWI / ADC</td><td>高 cellularity 的癌細胞會 restrict diffusion；high b-value hyperintensity + ADC hypointensity suspicious</td></tr>
+      <tr><td>Dynamic contrast-enhanced</td><td>早期 enhancement 可支持 suspicious lesion，但通常輔助 DWI/T2</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>對 unfavorable intermediate-risk、high-risk 或更高 risk disease，要 rule out metastatic disease。可用 Tc-99m bone scan 評估 bone metastases；soft tissue imaging 可用 PSMA PET/CT 或 CT C/A/P。Source file 特別提到 proPSMA study：PSMA PET 對 nodal/distant metastases detection 的 accuracy 比 conventional CT 高，92% vs 65%。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>NCCN imaging triggers in the file</caption>
+    <thead><tr><th scope="col">Imaging 建議情境</th></tr></thead>
+    <tbody>
+      <tr><td>PSA &gt;20 ng/mL</td></tr>
+      <tr><td>GG2 且 PSA &gt;10</td></tr>
+      <tr><td>GG3 or higher</td></tr>
+      <tr><td>T3–T4 disease</td></tr>
+      <tr><td>≥50% positive biopsy cores</td></tr>
+      <tr><td>PSA &gt;10 且 T2b/T2c</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>五、Biopsy</h3>
+<p>Pathologic diagnosis 來自 prostate biopsy。可用 transrectal ultrasound-guided biopsy，route 可為 transrectal 或 transperineal。Source file 指出 transperineal approach preferred，因為 sepsis risk 較低。若可行，MRI-fusion biopsy preferred，尤其 MRI 有 PI-RADS suspicious lesion 時。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Biopsy type 與優點</caption>
+    <thead><tr><th scope="col">Biopsy type</th><th scope="col">優點</th></tr></thead>
+    <tbody>
+      <tr><td>Systematic biopsy</td><td>可偵測 MRI occult disease；提供 core positivity 分層</td></tr>
+      <tr><td>MRI-targeted biopsy</td><td>提高 clinically significant cancer detection</td></tr>
+      <tr><td>Transperineal biopsy</td><td>Sepsis risk 較低；anterior lesion access 較佳</td></tr>
+      <tr><td>Transrectal biopsy</td><td>傳統常用；但感染風險較高</td></tr>
+    </tbody>
+  </table>
+</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part III. Workup Details</strong></p>
+<h3>1. Initial clinical workup</h3>
+<p>The workup includes history and physical examination, laboratory testing, imaging, and pathology. History should specifically assess urinary, sexual, and bowel symptoms and document IPSS and SHIM scores. DRE evaluates palpable nodules, induration, and suspected T stage. Laboratory testing includes PSA and serum testosterone. Testosterone is important for later assessment of ADT response, whether castration level is achieved, and whether disease is castration-resistant.</p>
+<h3>2. IPSS and SHIM</h3>
+<p>IPSS quantifies urinary symptoms including incomplete emptying, frequency, intermittency, urgency, weak stream, straining, and nocturia.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>IPSS severity</caption>
+    <thead><tr><th scope="col">IPSS</th><th scope="col">Severity</th></tr></thead>
+    <tbody>
+      <tr><td>1–7</td><td>Mild</td></tr>
+      <tr><td>8–19</td><td>Moderate</td></tr>
+      <tr><td>20–35</td><td>Severe</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>IPSS is important for radiation decision-making. Patients with high baseline IPSS, especially obstructive symptoms, have higher urinary flare or retention risk after brachytherapy or SBRT and may need BPH management or careful treatment selection.</p>
+<p>SHIM evaluates erectile function and supports pretreatment counseling. Surgery, radiation, and ADT can all affect erectile function, but with different mechanisms and timing: surgery may cause earlier dysfunction, RT-related ED tends to be gradual, and ADT reduces libido and erectile function.</p>
+<h3>3. PSA metrics</h3>
+<p>PSA above roughly 2.5–4 ng/mL increases prostate cancer risk, but normal PSA depends on age and population. False positives can occur after manipulation or biopsy, BPH, prostatitis, urinary retention, trauma, or ejaculation, so an isolated PSA value can be difficult to interpret.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Common PSA metrics</caption>
+    <thead><tr><th scope="col">Metric</th><th scope="col">Definition</th><th scope="col">Higher-risk concept</th></tr></thead>
+    <tbody>
+      <tr><td>PSA density</td><td>Serum PSA divided by prostate volume</td><td>&gt;0.15 ng/mL² suggests higher risk</td></tr>
+      <tr><td>PSA velocity</td><td>Rate of PSA change over time</td><td>&gt;0.75 ng/mL/year suggests higher risk</td></tr>
+      <tr><td>PSA doubling time</td><td>Time required for PSA to double</td><td>&lt;12 months suggests higher risk</td></tr>
+      <tr><td>Free PSA / total PSA ratio</td><td>Proportion of free PSA</td><td>&lt;25% suggests higher risk</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>4. MRI and systemic imaging</h3>
+<p>Prostate MRI before biopsy is strongly recommended to support image-guided biopsy. Multiparametric MRI should include T2 imaging and at least one functional sequence, such as diffusion-weighted imaging or dynamic contrast-enhanced imaging. MRI helps visualize intraprostatic disease, extracapsular extension, seminal vesicle invasion, lesion targeting, prostate volume, and RT planning.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Basic interpretation of MRI sequences</caption>
+    <thead><tr><th scope="col">MRI sequence</th><th scope="col">Main use</th></tr></thead>
+    <tbody>
+      <tr><td>T1-weighted image</td><td>Detect prostate or seminal vesicle hemorrhage and lymph node enlargement</td></tr>
+      <tr><td>T2-weighted image</td><td>Assess prostate volume and zonal anatomy; focal circumscribed moderately hypointense lesions are suspicious</td></tr>
+      <tr><td>DWI / ADC</td><td>High-cellularity cancer restricts diffusion; high b-value hyperintensity with ADC hypointensity is suspicious</td></tr>
+      <tr><td>Dynamic contrast-enhanced</td><td>Early enhancement supports a suspicious lesion, usually as an adjunct to DWI/T2</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>For unfavorable intermediate-risk, high-risk, or higher-risk disease, metastatic disease should be excluded. Bone scan can assess bone metastases, and soft tissue imaging may use PSMA PET/CT or CT chest/abdomen/pelvis. The proPSMA study showed higher accuracy for PSMA PET than conventional CT for nodal and distant metastases.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Imaging triggers listed in the source</caption>
+    <thead><tr><th scope="col">Imaging indication</th></tr></thead>
+    <tbody>
+      <tr><td>PSA &gt;20 ng/mL</td></tr>
+      <tr><td>Grade Group 2 with PSA &gt;10</td></tr>
+      <tr><td>Grade Group 3 or higher</td></tr>
+      <tr><td>T3–T4 disease</td></tr>
+      <tr><td>≥50% positive biopsy cores</td></tr>
+      <tr><td>PSA &gt;10 with T2b/T2c disease</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>5. Biopsy</h3>
+<p>Pathologic diagnosis is made by prostate biopsy. Biopsy can be transrectal ultrasound-guided via transrectal or transperineal route. The transperineal approach is preferred when feasible because of lower sepsis risk. MRI-fusion biopsy is preferred when MRI shows a PI-RADS suspicious lesion.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Biopsy types and advantages</caption>
+    <thead><tr><th scope="col">Biopsy type</th><th scope="col">Advantage</th></tr></thead>
+    <tbody>
+      <tr><td>Systematic biopsy</td><td>Detects MRI-occult disease and provides core positivity for risk stratification</td></tr>
+      <tr><td>MRI-targeted biopsy</td><td>Improves clinically significant cancer detection</td></tr>
+      <tr><td>Transperineal biopsy</td><td>Lower sepsis risk and better access to anterior lesions</td></tr>
+      <tr><td>Transrectal biopsy</td><td>Traditionally common, but higher infection risk</td></tr>
+    </tbody>
+  </table>
+</div></div>
 </section>
 <section class="section">
-<div class="section-label" data-zh="術後 RT" data-en="POSTOP">術後 RT</div>
-<h2 data-zh="術後放射治療" data-en="Post-prostatectomy RT">術後放射治療</h2>
-<div data-lang="zh"><p><strong>Adjuvant vs early salvage (RADICALS-RT, GETUG-17, RAVES):</strong> 早期 salvage 與 adjuvant 相當，且副作用較少。</p><p><strong>RTOG 9601:</strong> Salvage RT + bicalutamide 2 yr 相對 RT alone 提升 OS (但主要獲益在 PSA &gt; 0.7)。</p><p><strong>SPPORT (NRG 0534):</strong> Salvage RT + short-term ADT + pelvic nodal RT 提升 fPFS。</p></div>
-<div data-lang="en"><p><strong>Adjuvant vs early salvage (RADICALS-RT, GETUG-17, RAVES):</strong> Early salvage equivalent to adjuvant with less toxicity.</p><p><strong>RTOG 9601:</strong> Salvage RT + 2-yr bicalutamide improves OS vs RT alone (benefit mainly in PSA &gt; 0.7).</p><p><strong>SPPORT (NRG 0534):</strong> Salvage RT + short-term ADT + pelvic nodal RT improves fPFS.</p></div>
+<div class="section-label" data-zh="分級與風險" data-en="GRADE/RISK">分級與風險</div>
+<h2 data-zh="Gleason score、Grade Group 與 localized risk grouping" data-en="Gleason score, Grade Group, and localized risk grouping">Gleason score、Grade Group 與 localized risk grouping</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第四部分：Gleason score、Grade Group 與 risk group</strong></p>
+<h3>一、Gleason / Grade Group</h3>
+<p>攝護腺腺癌 grading 使用 Gleason pattern 和 Grade Group。Source file 的整理如下：</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Gleason score 與 Grade Group</caption>
+    <thead><tr><th scope="col">Grade Group</th><th scope="col">Gleason score</th><th scope="col">臨床意義</th></tr></thead>
+    <tbody>
+      <tr><td>GG1</td><td>Gleason ≤6</td><td>通常 very low / low risk</td></tr>
+      <tr><td>GG2</td><td>Gleason 3+4=7</td><td>通常 favorable intermediate</td></tr>
+      <tr><td>GG3</td><td>Gleason 4+3=7</td><td>通常 unfavorable intermediate</td></tr>
+      <tr><td>GG4</td><td>Gleason 8</td><td>High risk</td></tr>
+      <tr><td>GG5</td><td>Gleason 9–10</td><td>Very high-risk biology</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">高分記憶：3+4 和 4+3 都是 7，但臨床意義不同。3+4 代表 pattern 3 predominant，較 favorable；4+3 代表 pattern 4 predominant，較 aggressive，因此歸 unfavorable intermediate。</div>
+<h3>二、Risk grouping</h3>
+<p>Risk stratification 會影響 staging、prognosis 與 treatment paradigm。Source file 的 risk grouping 可整理如下：</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Localized prostate cancer risk grouping</caption>
+    <thead><tr><th scope="col">Risk group</th><th scope="col">Definition</th></tr></thead>
+    <tbody>
+      <tr><td>Very low risk</td><td>T1c、GG1、PSA &lt;10；&lt;3 positive cores 且每個 core &lt;50% involvement</td></tr>
+      <tr><td>Low risk</td><td>T2a、GG1、PSA &lt;10</td></tr>
+      <tr><td>Favorable intermediate risk</td><td>只有一個 intermediate-risk factor：T2b–T2c、GG2、或 PSA 10–20，且 &lt;50% biopsy cores positive</td></tr>
+      <tr><td>Unfavorable intermediate risk</td><td>GG3 或超過一個 intermediate-risk factor</td></tr>
+      <tr><td>High risk</td><td>T3a、GG4/GG5、或 PSA &gt;20</td></tr>
+      <tr><td>Very high risk</td><td>T3b–T4、primary Gleason pattern 5、&gt;4 cores with GG4/5、或 &gt;1 high-risk factor</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>三、Risk-stratified localized management</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Localized management summary</caption>
+    <thead><tr><th scope="col">Risk group</th><th scope="col">Typical management</th></tr></thead>
+    <tbody>
+      <tr><td>Low risk</td><td>Active surveillance 或 monotherapy：surgery 或 RT</td></tr>
+      <tr><td>Favorable intermediate</td><td>Monotherapy</td></tr>
+      <tr><td>Unfavorable intermediate</td><td>Surgery 或 prostate RT + ST-ADT 4–6 months</td></tr>
+      <tr><td>High risk</td><td>考慮 pelvic RT + LT-ADT 18–36 months，或 surgery</td></tr>
+      <tr><td>Very high risk</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone，或 selected surgery</td></tr>
+      <tr><td>Node positive</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone</td></tr>
+    </tbody>
+  </table>
+</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part IV. Gleason Score, Grade Group, and Risk Group</strong></p>
+<h3>1. Gleason score and Grade Group</h3>
+<p>Prostate adenocarcinoma is graded by Gleason pattern and Grade Group.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Gleason score and Grade Group</caption>
+    <thead><tr><th scope="col">Grade Group</th><th scope="col">Gleason score</th><th scope="col">Clinical meaning</th></tr></thead>
+    <tbody>
+      <tr><td>GG1</td><td>Gleason ≤6</td><td>Usually very low or low risk</td></tr>
+      <tr><td>GG2</td><td>Gleason 3+4=7</td><td>Usually favorable intermediate risk</td></tr>
+      <tr><td>GG3</td><td>Gleason 4+3=7</td><td>Usually unfavorable intermediate risk</td></tr>
+      <tr><td>GG4</td><td>Gleason 8</td><td>High risk</td></tr>
+      <tr><td>GG5</td><td>Gleason 9–10</td><td>Very high-risk biology</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">High-yield memory: 3+4 and 4+3 are both Gleason 7, but they are not equivalent. Gleason 3+4 is pattern 3 predominant and more favorable. Gleason 4+3 is pattern 4 predominant and more aggressive, so it belongs to unfavorable intermediate-risk disease.</div>
+<h3>2. Risk grouping</h3>
+<p>Risk stratification determines staging intensity, prognosis, and treatment selection.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Localized prostate cancer risk grouping</caption>
+    <thead><tr><th scope="col">Risk group</th><th scope="col">Definition</th></tr></thead>
+    <tbody>
+      <tr><td>Very low risk</td><td>T1c, GG1, PSA &lt;10; &lt;3 positive cores and each core &lt;50% involved</td></tr>
+      <tr><td>Low risk</td><td>T2a, GG1, PSA &lt;10</td></tr>
+      <tr><td>Favorable intermediate risk</td><td>Only one intermediate-risk factor: T2b–T2c, GG2, or PSA 10–20, and &lt;50% positive biopsy cores</td></tr>
+      <tr><td>Unfavorable intermediate risk</td><td>GG3 or more than one intermediate-risk factor</td></tr>
+      <tr><td>High risk</td><td>T3a, GG4/GG5, or PSA &gt;20</td></tr>
+      <tr><td>Very high risk</td><td>T3b–T4, primary Gleason pattern 5, &gt;4 cores with GG4/5, or more than one high-risk factor</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>3. Risk-stratified localized management</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Localized management summary</caption>
+    <thead><tr><th scope="col">Risk group</th><th scope="col">Typical management</th></tr></thead>
+    <tbody>
+      <tr><td>Low risk</td><td>Active surveillance or monotherapy with surgery or RT</td></tr>
+      <tr><td>Favorable intermediate</td><td>Monotherapy</td></tr>
+      <tr><td>Unfavorable intermediate</td><td>Surgery or prostate RT plus 4–6 months short-term ADT</td></tr>
+      <tr><td>High risk</td><td>Consider pelvic RT plus 18–36 months long-term ADT, or surgery</td></tr>
+      <tr><td>Very high risk</td><td>Pelvic RT plus long-term ADT plus abiraterone/prednisone, or selected surgery</td></tr>
+      <tr><td>Node-positive</td><td>Pelvic RT plus long-term ADT plus abiraterone/prednisone</td></tr>
+    </tbody>
+  </table>
+</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="局部治療" data-en="LOCAL TX">局部治療</div>
+<h2 data-zh="Localized prostate cancer treatment options 與 radiobiology" data-en="Localized prostate cancer treatment options and radiobiology">Localized prostate cancer treatment options 與 radiobiology</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第五部分：Localized prostate cancer treatment options</strong></p>
+<h3>一、Local therapy options</h3>
+<p>Localized prostate cancer treatment 是 risk-adapted。Local therapy 包括 radical prostatectomy、EBRT alone、brachytherapy alone、EBRT + brachytherapy boost、moderate hypofractionation、SBRT、以及 focal intraprostatic boost。若 pelvic nodal involvement risk 高，手術可考慮 PLND；放療可考慮 pelvic EBRT。Systemic therapy 以 ADT 為核心：unfavorable intermediate-risk 用 ST-ADT 4–6 months；high-risk 或更高風險用 LT-ADT 18–36 months。</p>
+<h3>二、Surgery</h3>
+<p>Radical prostatectomy 移除 prostate 與 seminal vesicles，常合併 risk-adapted pelvic lymph node dissection。優點是可獲得 pathologic staging、margin status、nodal status，且術後 PSA endpoint 清楚：PSA 應該變成 undetectable。缺點包括 urinary incontinence、erectile dysfunction、perioperative risk，以及若有 adverse pathology 或 PSA recurrence，後續可能仍需 salvage RT ± ADT。</p>
+<h3>三、Radiation</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Radiation options</caption>
+    <thead><tr><th scope="col">RT modality</th><th scope="col">常見用途</th></tr></thead>
+    <tbody>
+      <tr><td>Conventional dose-escalated EBRT</td><td>傳統 definitive RT；現代常用 78–79.2 Gy</td></tr>
+      <tr><td>Moderate hypofractionation</td><td>60 Gy/20 Fx 或 70 Gy/28 Fx；現代標準之一</td></tr>
+      <tr><td>SBRT / ultra-hypofractionation</td><td>36.25 Gy/5 Fx 等；適合 selected low/intermediate risk，也可用於部分 high-risk protocols</td></tr>
+      <tr><td>LDR/HDR brachytherapy</td><td>Low/FIR 可 monotherapy；UIR/HR 可 boost</td></tr>
+      <tr><td>EBRT + brachytherapy boost</td><td>強化 biochemical control，特別 UIR/HR，但 GU toxicity 較高</td></tr>
+      <tr><td>FLAME-style focal boost</td><td>MRI-defined dominant intraprostatic lesion isotoxic boost</td></tr>
+      <tr><td>Pelvic nodal RT</td><td>High-risk / VHR / N+ 或 high nodal-risk 情境</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="section-kicker"><strong>第六部分：攝護腺癌 radiobiology 與 fractionation</strong></p>
+<h3>四、為什麼 prostate cancer 適合 hypofractionation？</h3>
+<p>α/β ratio 是 linear component 與 quadratic component cell killing 相等時的 dose。High α/β tissues 對 fraction size 較不敏感，通常是 rapidly proliferating tumors；low α/β tissues 對 dose per fraction 較敏感，通常是 late-responding tissues。攝護腺癌 estimated α/β ratio 約 1.5–3，比許多腫瘤低，代表較大的 fraction size 可能對腫瘤更有利。Source file 因此提出三個策略：conventional dose escalation、moderate hypofractionation、ultra-hypofractionation/SBRT。</p></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part V. Localized Prostate Cancer Treatment Options</strong></p>
+<h3>1. Local therapy options</h3>
+<p>Localized prostate cancer treatment is risk-adapted. Local therapy options include radical prostatectomy, EBRT alone, brachytherapy alone, EBRT plus brachytherapy boost, moderate hypofractionation, SBRT, and focal intraprostatic boost. If pelvic nodal involvement risk is high, surgery may include pelvic lymph node dissection and RT may include pelvic nodal irradiation. Systemic therapy is centered on ADT: unfavorable intermediate-risk disease uses 4–6 months short-term ADT, while high-risk or higher-risk disease uses 18–36 months long-term ADT.</p>
+<h3>2. Surgery</h3>
+<p>Radical prostatectomy removes the prostate and seminal vesicles and often includes risk-adapted pelvic lymph node dissection. Advantages include pathologic staging, margin status, nodal status, and a clear PSA endpoint: PSA should become undetectable. Disadvantages include urinary incontinence, erectile dysfunction, perioperative risk, and possible need for salvage RT with or without ADT if adverse pathology or PSA recurrence occurs.</p>
+<h3>3. Radiation</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Radiation options</caption>
+    <thead><tr><th scope="col">RT modality</th><th scope="col">Common use</th></tr></thead>
+    <tbody>
+      <tr><td>Conventional dose-escalated EBRT</td><td>Traditional definitive RT; modern dose is usually 78–79.2 Gy</td></tr>
+      <tr><td>Moderate hypofractionation</td><td>60 Gy/20 fractions or 70 Gy/28 fractions; a modern standard option</td></tr>
+      <tr><td>SBRT / ultra-hypofractionation</td><td>36.25 Gy/5 fractions and related regimens; selected low/intermediate-risk disease and some high-risk protocols</td></tr>
+      <tr><td>LDR/HDR brachytherapy</td><td>Low-risk/FIR monotherapy; boost for UIR/HR disease</td></tr>
+      <tr><td>EBRT + brachytherapy boost</td><td>Strengthens biochemical control, especially for UIR/HR disease, but increases GU toxicity</td></tr>
+      <tr><td>FLAME-style focal boost</td><td>Isotoxic boost to MRI-defined dominant intraprostatic lesion</td></tr>
+      <tr><td>Pelvic nodal RT</td><td>High-risk, very high-risk, node-positive, or high nodal-risk disease</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="section-kicker"><strong>Part VI. Prostate Cancer Radiobiology and Fractionation</strong></p>
+<h3>4. Why prostate cancer is suitable for hypofractionation</h3>
+<p>The alpha/beta ratio is the dose at which the linear and quadratic components of cell killing are equal. High alpha/beta tissues are less sensitive to fraction size and are often rapidly proliferating tumors. Low alpha/beta tissues are more sensitive to dose per fraction and are often late-responding tissues. Prostate cancer has an estimated alpha/beta ratio of about 1.5–3, lower than many tumors, so larger fraction sizes may be advantageous. This supports conventional dose escalation, moderate hypofractionation, and ultra-hypofractionation/SBRT.</p></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="劑量升階" data-en="DOSE ESC">劑量升階</div>
+<h2 data-zh="Conventional dose escalation、FLAME 與 ASCENDE-RT" data-en="Conventional dose escalation, FLAME, and ASCENDE-RT">Conventional dose escalation、FLAME 與 ASCENDE-RT</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第七部分：Dose escalation evidence</strong></p>
+<h3>一、Conventional dose escalation</h3>
+<p>多個 randomized trials 比較 conventional-dose RT 與 dose-escalated RT。整體結論是：dose escalation 改善 biochemical control，但多數舊 trial 沒有改善 OS。Source file 列出的 trials 包括：</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Conventional dose escalation trials</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Dose</th><th scope="col">ADT?</th><th scope="col">Biochemical control</th></tr></thead>
+    <tbody>
+      <tr><td>MDACC / Pasalic et al.</td><td>70 vs 78 Gy</td><td>No</td><td>81% vs 88%</td></tr>
+      <tr><td>MGH / Zietman et al.</td><td>70.2 vs 79.2 Gy</td><td>No</td><td>68% vs 83%</td></tr>
+      <tr><td>Dutch / Heemsbergen et al.</td><td>68 vs 78 Gy</td><td>Yes</td><td>43% vs 49%</td></tr>
+      <tr><td>MRC RT01 / Dearnaley et al.</td><td>64 vs 74 Gy</td><td>Yes</td><td>43% vs 55%</td></tr>
+      <tr><td>RTOG 0126 / Michalski et al.</td><td>70.2 vs 79.2 Gy</td><td>No</td><td>55% vs 70%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>臨床解讀：現代 definitive EBRT 應使用 dose-escalated conventional dose 或透過 hypofractionation 達成 biologic dose escalation。傳統 66–70 Gy 對 definitive localized disease，尤其 intermediate/high-risk disease，通常已不算現代標準。</p>
+<h3>二、FLAME trial：focal intraprostatic boost</h3>
+<p>FLAME 是 phase III superiority randomized trial，納入 intermediate- 和 high-risk prostate cancer。Standard arm 給 prostate 77 Gy/35 Fx；boost arm 給 prostate 77 Gy/35 Fx，並對 macroscopic tumor 給 up to 95 Gy simultaneous integrated boost。病人中約 85% 是 high-risk，約 15% 是 intermediate-risk；兩組約 65% 接受 ADT。</p>
+<p>Planning concept 是 isotoxic boost：OAR constraints 優先於 95 Gy boost coverage；兩組都沒有 pelvic nodal RT；使用 IMRT 或 VMAT；放置 gold fiducials；experimental arm 的 boost volume 沒有 CTV/PTV margin；若 PTV overlap rectum，該 overlap 區域 prescribed 70 Gy。Key OAR constraints 包括 rectum V77 Gy &lt;1 cc、bladder V80 Gy &lt;1 cc，後續 protocols 加入 urethra V80 Gy &lt;0.1 cc。</p>
+<p>FLAME 結果：intraprostatic boost 改善 5-year bDFS，standard arm 85% vs boost arm 92%，且沒有顯著增加 late GU 或 GI toxicity。Late G2+ GU toxicity 約 23% vs 28%；late G2+ GI toxicity 約 12% vs 13%。OS、DMFS、PCSS 無差異。Post-hoc pattern-of-failure analysis 顯示，GTV D98% 與 local failure、regional/distant metastasis-free survival 有 dose-response relationship；focal boost dose ≥85 Gy 時，local failure 接近 zero，regional/distant metastasis &lt;10%。</p>
+<div class="clinical-note">臨床解讀：FLAME 的重點不是盲目把 visible lesion 打到 95 Gy，而是 MRI-visible dominant intraprostatic lesion 的 isotoxic dose escalation。若有高品質 MRI、image guidance、良好 OAR sparing，FLAME-style boost 是很有力的 dose intensification strategy。</div>
+<h3>三、ASCENDE-RT：EBRT boost vs LDR brachytherapy boost</h3>
+<p>ASCENDE-RT 是 phase III randomized trial，納入 intermediate- 和 high-risk prostate cancer；約 69% high-risk，31% intermediate-risk，大多數 intermediate-risk 是 unfavorable intermediate-risk。所有病人接受 12 months ADT，以及 46 Gy/23 Fx to prostate、SV、pelvis。之後 randomization：dose-escalated EBRT boost arm 給 EBRT boost 至 total 78 Gy；LDR boost arm 給 I-125 LDR prostate brachytherapy boost 115 Gy minimum peripheral dose。</p>
+<p>結果顯示 LDR prostate brachytherapy boost 明顯改善 long-term biochemical control。15-year bPFS 約 80% with LDR boost vs 53% with dose-escalated EBRT。但 OS、CSS、DMFS 沒有顯著差異。代價是 GU toxicity 增加：grade 3+ GU toxicity 約 18% vs 5%，並增加 urethral stricture、pad use、late catheterization。</p>
+<div class="clinical-note">臨床解讀：Brachytherapy boost 是 UIR/HR disease 最強的 biochemical intensification 方法之一，但 patient selection 非常重要。Baseline urinary function、IPSS、prostate size、median lobe、prior TURP、anatomy、病人對 GU toxicity 的接受度，都會影響是否適合。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part VII. Dose Escalation Evidence</strong></p>
+<h3>1. Conventional dose escalation</h3>
+<p>Multiple randomized trials compared conventional-dose RT with dose-escalated RT. The overall conclusion is that dose escalation improves biochemical control, although most older trials did not show an overall survival benefit.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Conventional dose escalation trials</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Dose</th><th scope="col">ADT?</th><th scope="col">Biochemical control</th></tr></thead>
+    <tbody>
+      <tr><td>MDACC / Pasalic et al.</td><td>70 vs 78 Gy</td><td>No</td><td>81% vs 88%</td></tr>
+      <tr><td>MGH / Zietman et al.</td><td>70.2 vs 79.2 Gy</td><td>No</td><td>68% vs 83%</td></tr>
+      <tr><td>Dutch / Heemsbergen et al.</td><td>68 vs 78 Gy</td><td>Yes</td><td>43% vs 49%</td></tr>
+      <tr><td>MRC RT01 / Dearnaley et al.</td><td>64 vs 74 Gy</td><td>Yes</td><td>43% vs 55%</td></tr>
+      <tr><td>RTOG 0126 / Michalski et al.</td><td>70.2 vs 79.2 Gy</td><td>No</td><td>55% vs 70%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Modern definitive EBRT should use a dose-escalated conventional dose or achieve biologic dose escalation through hypofractionation. Traditional 66–70 Gy is generally not a modern standard for definitive localized disease, especially intermediate- or high-risk disease.</p>
+<h3>2. FLAME: focal intraprostatic boost</h3>
+<p>FLAME was a phase III randomized superiority trial in intermediate- and high-risk prostate cancer. The standard arm delivered 77 Gy in 35 fractions to the prostate. The boost arm delivered 77 Gy to the prostate with an SIB up to 95 Gy to the macroscopic tumor. About 85% of patients were high-risk and about 65% received ADT.</p>
+<p>The planning concept was isotoxic boost: OAR constraints were prioritized over complete 95 Gy boost coverage. There was no pelvic nodal RT. IMRT or VMAT and gold fiducials were used. The boost volume had no CTV/PTV margin, and areas overlapping rectum received a lower prescription. Key constraints included rectum V77 Gy &lt;1 cc and bladder V80 Gy &lt;1 cc, with later protocols adding urethra V80 Gy &lt;0.1 cc.</p>
+<p>FLAME improved 5-year biochemical disease-free survival from about 85% to 92% without significantly increasing late GU or GI toxicity. There was no OS, DMFS, or PCSS difference. Post-hoc pattern-of-failure analysis showed a dose-response relationship between GTV D98% and local, regional, and distant control, with near-zero local failure when focal boost dose was at least 85 Gy.</p>
+<div class="clinical-note">Clinical interpretation: FLAME is not about blindly escalating all visible disease to 95 Gy. It is about MRI-visible dominant intraprostatic lesion isotoxic dose escalation with high-quality MRI, image guidance, and OAR sparing.</div>
+<h3>3. ASCENDE-RT: EBRT boost versus LDR brachytherapy boost</h3>
+<p>ASCENDE-RT randomized intermediate- and high-risk prostate cancer patients, most of whom had high-risk or unfavorable intermediate-risk disease. All patients received 12 months of ADT and 46 Gy in 23 fractions to prostate, seminal vesicles, and pelvis. Patients were then randomized to EBRT boost to 78 Gy total versus I-125 LDR prostate brachytherapy boost to 115 Gy minimum peripheral dose.</p>
+<p>LDR brachytherapy boost substantially improved long-term biochemical control. Fifteen-year bPFS was about 80% with LDR boost versus 53% with dose-escalated EBRT. There was no significant OS, CSS, or DMFS difference. The tradeoff was increased grade 3+ GU toxicity, including urethral stricture, pad use, and late catheterization.</p>
+<div class="clinical-note">Clinical interpretation: brachytherapy boost is one of the strongest biochemical intensification strategies for UIR/HR disease, but selection is critical. Baseline urinary function, IPSS, prostate size, median lobe, prior TURP, anatomy, and patient tolerance for GU toxicity all matter.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="分割治療" data-en="FRACTIONATION">分割治療</div>
+<h2 data-zh="Moderate hypofractionation 與 SBRT evidence" data-en="Moderate hypofractionation and SBRT evidence">Moderate hypofractionation 與 SBRT evidence</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第八部分：Moderate hypofractionation</strong></p>
+<h3>一、RTOG 0415</h3>
+<p>RTOG 0415 納入 low-risk prostate cancer，randomized conventional RT 73.8 Gy/41 Fx vs hypofractionated RT 70 Gy/28 Fx。結果 hypofractionated RT 對 DFS 和 biochemical failure 達到 non-inferiority；5-year DFS 約 85% vs 86%，biochemical failure 約 6% vs 8%。早期報告中 hypofractionation 的 late grade 2–3 GI/GU events 較高，但 patient-reported QoL 沒有差異，long-term grade 3+ toxicity 也沒有顯著差異。</p>
+<h3>二、PROFIT</h3>
+<p>PROFIT 納入 intermediate-risk patients，randomized 78 Gy/39 Fx vs 60 Gy/20 Fx，且不允許 ADT。5-year biochemical PFS 兩組皆約 85%，顯示 60 Gy/20 Fx non-inferior。GU toxicity 無顯著差異；acute grade 2+ toxicity 在 hypofractionation 較高，而 late grade 2+ toxicity 在 conventional RT 較高。</p>
+<h3>三、CHHiP</h3>
+<p>CHHiP 與 PROFIT 一起支持 60 Gy/20 Fx 作為常用 standard moderate hypofractionation regimen。實務上 60 Gy/20 Fx 是非常常用的 prostate regimen，因為療程短、radiobiologically rational，且有 randomized evidence 支持。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Moderate hypofractionation high-yield</caption>
+    <thead><tr><th scope="col">Regimen</th><th scope="col">常見情境</th></tr></thead>
+    <tbody>
+      <tr><td>70 Gy/28 Fx</td><td>Low-risk evidence strong</td></tr>
+      <tr><td>60 Gy/20 Fx</td><td>Intermediate/high-risk 常用；現代標準之一</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">一句話：Moderate hypofractionation 已是標準，不是 experimental。</div>
+<p class="section-kicker"><strong>第九部分：Extreme hypofractionation / SBRT</strong></p>
+<h3>四、HYPO-RT-PC</h3>
+<p>HYPO-RT-PC randomized intermediate- 到 high-risk patients，比較 78 Gy/39 Fx vs 42.7 Gy/7 Fx over 1–2 weeks。Trial 不允許 ADT。Ultra-hypofractionation 對 failure-free survival 達到 non-inferiority，FFS 約 84% vs 84%。Acute GI/GU toxicity 和 1-year urinary toxicity 在 ultra-hypofractionation 較高，但 5-year toxicity 兩組相等。重要 caveat 是：trial 使用 7 mm PTV margins all directions，且 80% plans 使用 3D-CRT，因此毒性資料不完全等同現代 MRI-guided/IGRT SBRT。</p>
+<h3>五、PACE-B</h3>
+<p>PACE-B randomized low/intermediate-risk patients 至 conventional/moderate fractionation vs SBRT 36.25 Gy/5 Fx，且 prostate CTV boost 到 40 Gy。Trial 不允許 ADT。SBRT 可以 daily 或 every other day；margins 4–5 mm，posterior 3–5 mm。Toxicity 兩組相似，但 SBRT acute symptoms 較早在 1–2 weeks peak。5-year bPFS 兩組皆約 95%，達到 non-inferiority。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>SBRT high-yield</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Regimen</th><th scope="col">重點</th></tr></thead>
+    <tbody>
+      <tr><td>HYPO-RT-PC</td><td>42.7 Gy/7 Fx</td><td>Non-inferior，但 older technique、較多 acute toxicity</td></tr>
+      <tr><td>PACE-B</td><td>36.25 Gy/5 Fx with 40 Gy CTV boost</td><td>Modern low/intermediate-risk SBRT evidence；5-year bPFS 約 95%</td></tr>
+    </tbody>
+  </table>
+</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part VIII. Moderate Hypofractionation</strong></p>
+<h3>1. RTOG 0415</h3>
+<p>RTOG 0415 randomized low-risk prostate cancer patients to conventional RT 73.8 Gy in 41 fractions versus hypofractionated RT 70 Gy in 28 fractions. Hypofractionation was non-inferior for DFS and biochemical failure. Five-year DFS was about 85–86%, and biochemical failure was about 6–8%. Early reports showed more late grade 2–3 GI/GU events with hypofractionation, but patient-reported QoL and long-term grade 3+ toxicity were not significantly different.</p>
+<h3>2. PROFIT</h3>
+<p>PROFIT enrolled intermediate-risk patients and compared 78 Gy in 39 fractions with 60 Gy in 20 fractions without ADT. Five-year biochemical PFS was about 85% in both arms, showing that 60 Gy in 20 fractions was non-inferior. GU toxicity was similar; acute grade 2+ toxicity was higher with hypofractionation, while late grade 2+ toxicity was higher with conventional RT.</p>
+<h3>3. CHHiP</h3>
+<p>Together with PROFIT, CHHiP supports 60 Gy in 20 fractions as a standard moderate hypofractionation regimen. In practice, 60 Gy in 20 fractions is common because it is shorter, radiobiologically rational, and supported by randomized evidence.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Moderate hypofractionation high-yield</caption>
+    <thead><tr><th scope="col">Regimen</th><th scope="col">Common setting</th></tr></thead>
+    <tbody>
+      <tr><td>70 Gy/28 fractions</td><td>Strong evidence in low-risk disease</td></tr>
+      <tr><td>60 Gy/20 fractions</td><td>Common for intermediate/high-risk disease; a modern standard option</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">One-line memory: moderate hypofractionation is a standard, not experimental.</div>
+<p class="section-kicker"><strong>Part IX. Extreme Hypofractionation / SBRT</strong></p>
+<h3>4. HYPO-RT-PC</h3>
+<p>HYPO-RT-PC randomized intermediate- to high-risk patients to 78 Gy in 39 fractions versus 42.7 Gy in 7 fractions over 1–2 weeks. ADT was not allowed. Ultra-hypofractionation was non-inferior for failure-free survival, about 84% in both groups. Acute GI/GU toxicity and 1-year urinary toxicity were higher with ultra-hypofractionation, but 5-year toxicity was similar. Important caveats are that 7 mm PTV margins were used in all directions and most plans used 3D-CRT, so the toxicity data are not identical to modern MRI-guided or IGRT SBRT.</p>
+<h3>5. PACE-B</h3>
+<p>PACE-B randomized low/intermediate-risk patients to conventional/moderate fractionation versus SBRT 36.25 Gy in 5 fractions with prostate CTV boost to 40 Gy. ADT was not allowed. SBRT could be daily or every other day, with margins of about 4–5 mm and smaller posterior margins. Toxicity was similar, though SBRT acute symptoms peaked earlier. Five-year bPFS was about 95% in both arms, meeting non-inferiority.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>SBRT high-yield</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Regimen</th><th scope="col">Key point</th></tr></thead>
+    <tbody>
+      <tr><td>HYPO-RT-PC</td><td>42.7 Gy/7 fractions</td><td>Non-inferior but older technique and more acute toxicity</td></tr>
+      <tr><td>PACE-B</td><td>36.25 Gy/5 fractions with 40 Gy CTV boost</td><td>Modern low/intermediate-risk SBRT evidence; 5-year bPFS about 95%</td></tr>
+    </tbody>
+  </table>
+</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="骨盆淋巴" data-en="PELVIC NODES">骨盆淋巴</div>
+<h2 data-zh="Elective pelvic nodal RT 與 POP-RT" data-en="Elective pelvic nodal RT and POP-RT">Elective pelvic nodal RT 與 POP-RT</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十部分：Elective pelvic nodal RT</strong></p>
+<h3>一、為何要考慮 pelvic nodes？</h3>
+<p>Pelvic nodal RT 主要用於 high-risk 或 very high-risk prostate cancer，尤其 occult nodal involvement risk 高的病人。決策取決於 nodal risk estimate、PSA、GG/Gleason、T stage、positive core percentage、影像品質、是否使用 ADT、以及是 definitive 還是 postoperative setting。</p>
+<h3>二、POP-RT</h3>
+<p>POP-RT 納入 high-risk patients，且 by Roach formula estimated LN involvement risk ≥20%。Randomized WPRT vs prostate-only RT。WPRT 給 pelvic nodes 50 Gy/25 Fx，包括 common iliacs，並以 SIB 給 prostate 68 Gy；PO-RT 給 prostate 68 Gy/25 Fx。所有病人至少接受 2 years ADT，且約 80% 接受 PSMA PET 排除 N+ disease。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>POP-RT 主要結果</caption>
+    <thead><tr><th scope="col">Endpoint</th><th scope="col">WPRT</th><th scope="col">Prostate-only RT</th><th scope="col">解讀</th></tr></thead>
+    <tbody>
+      <tr><td>5-year BFFS</td><td>約 95%</td><td>約 81%</td><td>WPRT 改善 biochemical control</td></tr>
+      <tr><td>5-year DFS</td><td>約 90%</td><td>約 77%</td><td>WPRT 改善 DFS</td></tr>
+      <tr><td>5-year DMFS</td><td>約 96%</td><td>約 89%</td><td>WPRT 改善 distant control</td></tr>
+      <tr><td>5-year OS</td><td>約 93%</td><td>約 91%</td><td>未改善 OS</td></tr>
+      <tr><td>Late grade 2+ GU toxicity</td><td>19%</td><td>8%</td><td>WPRT 較高</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">臨床解讀：High-risk/VHR 且 nodal risk 高者，pelvic nodal RT 合理，尤其搭配 modern IMRT 和 ADT。主要 benefit 是 biochemical control、DFS、DMFS，目前不是明確 OS benefit。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part X. Elective Pelvic Nodal RT</strong></p>
+<h3>1. Why consider pelvic nodes?</h3>
+<p>Pelvic nodal RT is mainly used for high-risk or very high-risk prostate cancer, especially when occult nodal involvement risk is high. The decision depends on estimated nodal risk, PSA, Grade Group/Gleason score, T stage, positive core percentage, imaging quality, ADT use, and whether treatment is definitive or postoperative.</p>
+<h3>2. POP-RT</h3>
+<p>POP-RT enrolled high-risk patients with estimated nodal involvement risk at least 20% by Roach formula. Patients were randomized to whole-pelvis RT versus prostate-only RT. WPRT delivered 50 Gy in 25 fractions to pelvic nodes including common iliacs, with SIB to 68 Gy to the prostate. Prostate-only RT delivered 68 Gy in 25 fractions to the prostate. All patients received at least 2 years of ADT, and about 80% had PSMA PET to exclude node-positive disease.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>POP-RT main results</caption>
+    <thead><tr><th scope="col">Endpoint</th><th scope="col">WPRT</th><th scope="col">Prostate-only RT</th><th scope="col">Interpretation</th></tr></thead>
+    <tbody>
+      <tr><td>5-year BFFS</td><td>About 95%</td><td>About 81%</td><td>WPRT improved biochemical control</td></tr>
+      <tr><td>5-year DFS</td><td>About 90%</td><td>About 77%</td><td>WPRT improved DFS</td></tr>
+      <tr><td>5-year DMFS</td><td>About 96%</td><td>About 89%</td><td>WPRT improved distant control</td></tr>
+      <tr><td>5-year OS</td><td>About 93%</td><td>About 91%</td><td>No OS improvement</td></tr>
+      <tr><td>Late grade 2+ GU toxicity</td><td>19%</td><td>8%</td><td>Higher with WPRT</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">Clinical interpretation: for high-risk or very high-risk patients with high nodal risk, pelvic nodal RT is reasonable, especially with modern IMRT and ADT. The main benefit is biochemical control, DFS, and DMFS, not a proven OS benefit.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="ADT" data-en="ADT">ADT</div>
+<h2 data-zh="Localized prostate cancer 的 ADT 策略與常用藥物" data-en="ADT strategy and common drugs in localized prostate cancer">Localized prostate cancer 的 ADT 策略與常用藥物</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十一部分：Localized prostate cancer 的 systemic therapy</strong></p>
+<h3>一、ADT by risk group</h3>
+<p>攝護腺癌是 androgen-driven cancer。Source file 的 systemic therapy summary：</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>ADT by risk group</caption>
+    <thead><tr><th scope="col">Risk group</th><th scope="col">ADT strategy</th></tr></thead>
+    <tbody>
+      <tr><td>Low risk</td><td>No ADT</td></tr>
+      <tr><td>Favorable intermediate risk</td><td>No ADT</td></tr>
+      <tr><td>Unfavorable intermediate risk</td><td>ST-ADT 4–6 months</td></tr>
+      <tr><td>High risk</td><td>LT-ADT 18–24 months，部分 trial 用 28–36 months</td></tr>
+      <tr><td>Very high risk / N+</td><td>LT-ADT + abiraterone/prednisolone for 2 years</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">一句話演算法：LR/FIR no ADT → UIR RT + ST-ADT 4–6 months → HR RT + LT-ADT 18–24 months → VHR/N+ RT + LT-ADT + abiraterone/prednisolone 2 years。</div>
+<h3>二、Common ADT drugs and mechanisms</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Common ADT drugs and mechanisms</caption>
+    <thead><tr><th scope="col">Drug</th><th scope="col">Mechanism</th><th scope="col">Typical role</th><th scope="col">Key adverse effects</th></tr></thead>
+    <tbody>
+      <tr><td>Leuprolide / goserelin</td><td>LHRH agonist</td><td>每幾個月 injection；常用 ADT</td><td>Hot flashes、erectile dysfunction、bone loss、cardiac toxicity</td></tr>
+      <tr><td>Relugolix</td><td>LHRH antagonist</td><td>Daily oral ADT</td><td>Faster on/off，cardiac toxicity 較少</td></tr>
+      <tr><td>Bicalutamide</td><td>First-generation AR antagonist，有 partial agonist activity</td><td>常與 LHRH agonist 初期併用，防 testosterone flare</td><td>Gynecomastia</td></tr>
+      <tr><td>Enzalutamide</td><td>Pure androgen receptor antagonist</td><td>主要 metastatic disease 或 intensification contexts</td><td>Hot flashes、bone loss、cardiac toxicity</td></tr>
+      <tr><td>Abiraterone + prednisolone/prednisone</td><td>CYP17 inhibitor，阻斷 adrenal androgen synthesis</td><td>VHR localized、N+、metastatic disease</td><td>Hypertension、elevated LFTs；需 steroid 避免 mineralocorticoid excess</td></tr>
+    </tbody>
+  </table>
+</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XI. Systemic Therapy in Localized Prostate Cancer</strong></p>
+<h3>1. ADT by risk group</h3>
+<p>Prostate cancer is androgen-driven. The systemic therapy strategy is risk-adapted.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>ADT by risk group</caption>
+    <thead><tr><th scope="col">Risk group</th><th scope="col">ADT strategy</th></tr></thead>
+    <tbody>
+      <tr><td>Low risk</td><td>No ADT</td></tr>
+      <tr><td>Favorable intermediate risk</td><td>No ADT</td></tr>
+      <tr><td>Unfavorable intermediate risk</td><td>Short-term ADT for 4–6 months</td></tr>
+      <tr><td>High risk</td><td>Long-term ADT for 18–24 months; some trials used 28–36 months</td></tr>
+      <tr><td>Very high risk / node-positive</td><td>Long-term ADT plus abiraterone/prednisolone for 2 years</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">One-line algorithm: low-risk/FIR no ADT → UIR RT + 4–6 months ST-ADT → high-risk RT + 18–24 months LT-ADT → VHR/N+ RT + LT-ADT + abiraterone/prednisolone for 2 years.</div>
+<h3>2. Common ADT drugs and mechanisms</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Common ADT drugs and mechanisms</caption>
+    <thead><tr><th scope="col">Drug</th><th scope="col">Mechanism</th><th scope="col">Typical role</th><th scope="col">Key adverse effects</th></tr></thead>
+    <tbody>
+      <tr><td>Leuprolide / goserelin</td><td>LHRH agonist</td><td>Injection every few months; common ADT backbone</td><td>Hot flashes, erectile dysfunction, bone loss, cardiac toxicity</td></tr>
+      <tr><td>Relugolix</td><td>LHRH antagonist</td><td>Daily oral ADT</td><td>Faster on/off; possibly less cardiac toxicity</td></tr>
+      <tr><td>Bicalutamide</td><td>First-generation AR antagonist with partial agonist activity</td><td>Often combined briefly with LHRH agonist to prevent testosterone flare</td><td>Gynecomastia</td></tr>
+      <tr><td>Enzalutamide</td><td>Pure androgen receptor antagonist</td><td>Mainly metastatic disease or intensification contexts</td><td>Hot flashes, bone loss, cardiac toxicity</td></tr>
+      <tr><td>Abiraterone + prednisolone/prednisone</td><td>CYP17 inhibitor blocking adrenal androgen synthesis</td><td>Very high-risk localized, node-positive, or metastatic disease</td><td>Hypertension and elevated LFTs; steroid required to prevent mineralocorticoid excess</td></tr>
+    </tbody>
+  </table>
+</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="ST-ADT 證據" data-en="ST-ADT">ST-ADT 證據</div>
+<h2 data-zh="Unfavorable intermediate-risk disease 的 ST-ADT 證據" data-en="Evidence for short-term ADT in unfavorable intermediate-risk disease">Unfavorable intermediate-risk disease 的 ST-ADT 證據</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十二部分：ST-ADT for unfavorable intermediate-risk disease</strong></p>
+<h3>一、RTOG 9408</h3>
+<p>RTOG 9408 randomized 2028 位 cT1b–T2b N0、PSA ≤20 prostate cancer patients 至 66.6 Gy RT alone vs 66.6 Gy RT + 4 months ADT。ADT 為 flutamide + goserelin 或 leuprolide。病人約 36% low-risk、54% intermediate-risk、10% high-risk。</p>
+<p>ST-ADT 改善 10-year OS、CSS、biochemical failure、distant metastasis 和 pathologic tumor clearance。10-year OS：RT alone 57% vs RT + ADT 62%。但 18-year OS benefit 消失，兩組 OS 均約 23%；不過 biochemical failure 和 distant metastasis benefit 仍存在。這可能因為 18 年時很多死亡來自 competing causes。</p>
+<p>Post-hoc subgroup analysis 顯示，ADT benefit 主要集中在 intermediate-risk subgroup；low-risk disease-specific mortality 很低，因此可省略 ADT；high-risk 則可能需要更長 ADT。雖然 RTOG 9408 使用的 RT dose 比現代低，但它建立了 intermediate-risk prostate cancer 使用 short-term ADT 的重要基礎。</p>
+<h3>二、Favorable vs unfavorable intermediate-risk 的重要性</h3>
+<p>RTOG 9408 secondary analysis 將 intermediate-risk 分成 FIR 與 UIR。UIR 整體 DM、PCSM、ACM 風險較高。ADT 在 UIR 中改善 DM、PCSM、ACM，但在 FIR 中沒有明顯 benefit。這就是現代臨床上 FIR 通常不加 ADT，UIR 加 4–6 months ADT 的理由。</p>
+<h3>三、Harvard / D’Amico trial</h3>
+<p>D’Amico trial 比較 70 Gy RT alone vs 70 Gy RT + 6 months ADT，納入 cT1b–T2b、PSA ≥10 或 GS ≥7 的病人，其中約 75% 是 intermediate-risk。結果 6 months ADT 改善 OS：5-year OS 78% vs 88%，也改善 freedom from salvage ADT。Toxicity 方面 ADT group 有較多 grade 1–2 gynecomastia 和 grade 3 impotence。</p>
+<h3>四、RTOG 0815</h3>
+<p>RTOG 0815 測試 modern dose-escalated RT 79.2 Gy ± 6 months ADT in intermediate-risk prostate cancer。ST-ADT 改善 PSA failure、DM、PCSM、salvage therapy use，但未改善 OS：5-year OS 約 90% vs 91%。Acute grade 3+ toxicity 在 ADT arm 較高，2% vs 12%，但 late grade 3+ toxicity 類似。</p>
+<div class="clinical-note">臨床解讀：即使在 modern dose-escalated RT 下，ST-ADT 仍改善 disease-control endpoints，但 OS benefit 可能小，因此要根據 FIR vs UIR、Decipher、病人年齡、心血管風險與 preference 個案化。</div>
+<h3>五、NRG-GU010</h3>
+<p>NRG-GU010 是 ongoing trial，使用 Decipher risk score personalize UIR disease。低 Decipher score 病人測試 de-escalation：RT + 6 months ADT vs RT alone；較高 Decipher score 病人測試 escalation：RT + 6 months ADT vs RT + 6 months ADT + 6 months darolutamide。</p></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XII. Short-Term ADT for Unfavorable Intermediate-Risk Disease</strong></p>
+<h3>1. RTOG 9408</h3>
+<p>RTOG 9408 randomized 2028 patients with cT1b–T2b N0, PSA ≤20 prostate cancer to 66.6 Gy RT alone versus 66.6 Gy RT plus 4 months of ADT. ADT was flutamide plus goserelin or leuprolide. About 36% had low-risk, 54% intermediate-risk, and 10% high-risk disease.</p>
+<p>Short-term ADT improved 10-year OS, CSS, biochemical failure, distant metastasis, and pathologic tumor clearance. Ten-year OS improved from 57% to 62%. At 18 years, the OS benefit disappeared because many deaths were due to competing causes, but biochemical failure and distant metastasis benefit persisted.</p>
+<p>Post-hoc analysis showed that benefit was concentrated in intermediate-risk disease. Low-risk disease-specific mortality was very low, so ADT can be omitted, while high-risk disease likely requires longer ADT. Although RTOG 9408 used a lower RT dose than modern practice, it established the foundation for short-term ADT in intermediate-risk prostate cancer.</p>
+<h3>2. Favorable versus unfavorable intermediate risk</h3>
+<p>A secondary analysis of RTOG 9408 separated favorable intermediate-risk from unfavorable intermediate-risk disease. UIR had higher distant metastasis, prostate cancer-specific mortality, and all-cause mortality. ADT improved these outcomes in UIR but not FIR. This explains the modern practice of omitting ADT in FIR and adding 4–6 months of ADT in UIR.</p>
+<h3>3. Harvard / D’Amico trial</h3>
+<p>The D’Amico trial compared 70 Gy RT alone versus 70 Gy RT plus 6 months of ADT in patients with cT1b–T2b disease, PSA ≥10, or Gleason score ≥7. About 75% were intermediate-risk. Six months of ADT improved 5-year OS from 78% to 88% and improved freedom from salvage ADT. ADT caused more gynecomastia and impotence.</p>
+<h3>4. RTOG 0815</h3>
+<p>RTOG 0815 tested modern dose-escalated RT to 79.2 Gy with or without 6 months of ADT in intermediate-risk prostate cancer. Short-term ADT improved PSA failure, distant metastasis, prostate cancer-specific mortality, and salvage therapy use, but not OS. Acute grade 3+ toxicity was higher with ADT, while late grade 3+ toxicity was similar.</p>
+<div class="clinical-note">Clinical interpretation: even with modern dose-escalated RT, short-term ADT improves disease-control endpoints, but the OS benefit may be small. Treatment should be individualized by FIR versus UIR, Decipher, age, cardiovascular risk, and preference.</div>
+<h3>5. NRG-GU010</h3>
+<p>NRG-GU010 is an ongoing trial using Decipher to personalize UIR disease. Low Decipher score patients are tested for de-escalation with RT plus 6 months ADT versus RT alone, while higher Decipher score patients are tested for escalation with RT plus ADT versus RT plus ADT plus darolutamide.</p></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="LT-ADT / VHR" data-en="LT-ADT/VHR">LT-ADT / VHR</div>
+<h2 data-zh="High-risk LT-ADT 與 very high-risk / node-positive intensification" data-en="Long-term ADT for high-risk and intensification for very high-risk / node-positive disease">High-risk LT-ADT 與 very high-risk / node-positive intensification</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十三部分：LT-ADT for high-risk disease</strong></p>
+<h3>一、RTOG 9202</h3>
+<p>RTOG 9202 randomized mostly high-risk patients 至 RT + 4 months ADT vs RT + 28 months ADT。LT-ADT 改善多項 long-term disease control endpoints，最大 benefit 出現在 Gleason 8–10 patients，包括 OS benefit。Late grade 3+ GI toxicity 在 LT-ADT 稍高。Source file summary：LT-ADT superior to ST-ADT，greatest benefit in GS 8–10。</p>
+<h3>二、EORTC 22961</h3>
+<p>EORTC 22961 比較 70 Gy RT + 6 months ADT vs 70 Gy RT + 36 months ADT，病人多為 high-risk。ST-ADT 未能對 LT-ADT 達到 non-inferiority for prostate cancer mortality。5-year prostate cancer mortality 約 4.7% with ST-ADT vs 3.5% with LT-ADT。LT-ADT hot flashes 和 sexual side effects 較明顯，但 cardiac-related deaths 沒有顯著增加。</p>
+<h3>三、DART01/05 GICOR</h3>
+<p>DART01/05 GICOR 測試 dose-escalated RT 76–82 Gy + 4 months ADT vs 28 months ADT。5-year results 顯示 LT-ADT 改善 bDFS，90% vs 81%，且 high-risk subgroup 有 OS/DM benefit。10-year results 中，整體 bDFS improvement 不完全維持，但 high-risk patients 仍有 improved 10-year bDFS，67% vs 54%。這代表 dose-escalated RT 並不能完全取代 LT-ADT 在 high-risk disease 的作用。</p>
+<h3>四、PCS IV concept</h3>
+<p>PCS IV 支持許多 high-risk patients 可用 18 months 而不是 36 months ADT。36 months 沒有優於 18 months OS，且 QoL 與 testosterone recovery 較差。因此現代實務常把 LT-ADT 設為 18–24 months，雖然舊 trials 常用 24–36 months。</p>
+<h3>五、NRG-GU009 / PREDICT-RT</h3>
+<p>NRG-GU009 使用 Decipher personalize high-risk treatment。Decipher ≤0.85 patients randomized between standard RT + 24 months ADT vs de-escalated RT + 12 months ADT。Decipher &gt;0.85 或 CT/MRI node-positive patients randomized between RT + 24 months ADT vs RT + 24 months ADT + apalutamide。</p>
+<p class="section-kicker"><strong>第十四部分：Very high-risk / node-positive localized disease</strong></p>
+<h3>六、STAMPEDE abiraterone</h3>
+<p>STAMPEDE meta-analysis 測試 abiraterone ± enzalutamide in nonmetastatic high-risk patients。納入條件包括 node-positive，或至少 2 個 high-risk factors：T3–T4、GS ≥8、PSA ≥40，或 high-risk relapsing features。Treatment 比較 74 Gy RT + 3 years ADT alone vs 同樣治療加 2 years abiraterone/prednisolone，另一 trial 加入 enzalutamide。</p>
+<p>Abiraterone 改善 DMFS、OS、BFS、PFS；加 enzalutamide 沒有額外 benefit。6-year DMFS 約 82% with abiraterone vs 69% with ADT alone。Toxicities 包括 hypertension 和 elevated LFTs。</p>
+<div class="clinical-note">臨床解讀：Node-positive 或 very high-risk nonmetastatic patients，definitive pelvic RT + LT-ADT + abiraterone/prednisone 是重要 intensification strategy。Source file 的 summary 明確指出 VHR/N+ → LT-ADT + abiraterone/prednisolone for 2 years。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XIII. Long-Term ADT for High-Risk Disease</strong></p>
+<h3>1. RTOG 9202</h3>
+<p>RTOG 9202 randomized mostly high-risk patients to RT plus 4 months ADT versus RT plus 28 months ADT. Long-term ADT improved multiple long-term disease-control endpoints. The greatest benefit was in Gleason 8–10 disease, including an OS benefit. Late grade 3+ GI toxicity was slightly higher with long-term ADT. The source summary is: LT-ADT is superior to ST-ADT, with greatest benefit in Gleason 8–10.</p>
+<h3>2. EORTC 22961</h3>
+<p>EORTC 22961 compared 70 Gy RT plus 6 months ADT versus 70 Gy RT plus 36 months ADT in mostly high-risk patients. Short-term ADT failed to show non-inferiority for prostate cancer mortality. Long-term ADT caused more hot flashes and sexual side effects, but cardiac-related deaths were not significantly increased.</p>
+<h3>3. DART01/05 GICOR</h3>
+<p>DART01/05 GICOR tested dose-escalated RT 76–82 Gy plus 4 months versus 28 months ADT. Five-year results showed improved bDFS with long-term ADT and OS/DM benefit in the high-risk subgroup. At 10 years, the overall bDFS improvement was less durable, but high-risk patients still had improved 10-year bDFS. Dose-escalated RT does not fully replace long-term ADT in high-risk disease.</p>
+<h3>4. PCS IV concept</h3>
+<p>PCS IV supports 18 months rather than 36 months of ADT for many high-risk patients. Thirty-six months did not improve OS over 18 months and had worse QoL and testosterone recovery. Modern practice often uses 18–24 months of long-term ADT, although older trials used 24–36 months.</p>
+<h3>5. NRG-GU009 / PREDICT-RT</h3>
+<p>NRG-GU009 uses Decipher to personalize high-risk treatment. Decipher ≤0.85 patients are randomized between RT plus 24 months ADT and de-escalated RT plus 12 months ADT. Decipher &gt;0.85 or CT/MRI node-positive patients are randomized between RT plus 24 months ADT and RT plus 24 months ADT plus apalutamide.</p>
+<p class="section-kicker"><strong>Part XIV. Very High-Risk / Node-Positive Localized Disease</strong></p>
+<h3>6. STAMPEDE abiraterone</h3>
+<p>STAMPEDE tested abiraterone with or without enzalutamide in nonmetastatic high-risk patients. Eligible patients were node-positive or had at least two high-risk factors such as T3–T4 disease, Gleason score ≥8, PSA ≥40, or high-risk relapsing features. Treatment compared 74 Gy RT plus 3 years of ADT versus the same therapy plus 2 years of abiraterone/prednisolone; another trial added enzalutamide.</p>
+<p>Abiraterone improved DMFS, OS, BFS, and PFS. Adding enzalutamide did not add benefit. Six-year DMFS was about 82% with abiraterone versus 69% with ADT alone. Toxicities included hypertension and elevated LFTs.</p>
+<div class="clinical-note">Clinical interpretation: for node-positive or very high-risk nonmetastatic patients, definitive pelvic RT plus long-term ADT plus abiraterone/prednisone is an important intensification strategy.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="術後處理" data-en="POST-RP">術後處理</div>
+<h2 data-zh="Post-prostatectomy management、adjuvant RT 與 early salvage RT" data-en="Post-prostatectomy management, adjuvant RT, and early salvage RT">Post-prostatectomy management、adjuvant RT 與 early salvage RT</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十五部分：Post-prostatectomy management</strong></p>
+<h3>一、Biochemical recurrence definitions</h3>
+<p>RP 後 PSA 應該變成 undetectable。AUA biochemical recurrence definition 是 PSA &gt;0.2 ng/mL on 2 consecutive readings。使用 ultrasensitive PSA 時，也常接受 2 consecutive rises of PSA &gt;0.1 ng/mL。Definitive RT 後 PSA 會慢慢下降至 nadir；post-RT biochemical recurrence 使用 Phoenix criteria：PSA rise ≥2 ng/mL above nadir，也就是 nadir + 2。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>BCR definition</caption>
+    <thead><tr><th scope="col">情境</th><th scope="col">BCR definition</th></tr></thead>
+    <tbody>
+      <tr><td>Post-prostatectomy</td><td>PSA &gt;0.2 ng/mL on 2 consecutive readings；或 ultrasensitive PSA 下 2 consecutive rises &gt;0.1</td></tr>
+      <tr><td>Post-radiotherapy</td><td>Phoenix criteria：nadir + 2 ng/mL</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>二、Historical adjuvant RT trials</h3>
+<p>Historical trials 顯示 high-risk post-prostatectomy patients，尤其 positive surgical margin、pT3a extracapsular extension、pT3b seminal vesicle invasion，可從 adjuvant RT 得到 bPFS benefit。SWOG 8794、EORTC 22911、ARO 96-02 都支持 adjuvant RT 改善 bPFS；SWOG 8794 還顯示 DMFS 和 OS benefit。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Historical adjuvant RT trials</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Population</th><th scope="col">Intervention</th><th scope="col">10-year results / conclusion</th></tr></thead>
+    <tbody>
+      <tr><td>SWOG 8794</td><td>RP 後 +SM 或 pT3N0；非低風險、非 node positive</td><td>Observation vs prostate fossa RT 60–64 Gy/30–32 Fx；no ADT</td><td>DMFS 71% vs 61%；OS 74% vs 66%；bPFS 58% vs 28%；adjuvant RT improves bPFS, OS, DMFS</td></tr>
+      <tr><td>EORTC 22911</td><td>RP 後 +SM 或 pT3N0</td><td>Observation vs prostate fossa RT 60 Gy/30 Fx</td><td>bPFS 62% vs 39%；OS/DM similar；adjuvant RT improves bPFS</td></tr>
+      <tr><td>ARO 96-02</td><td>RP 後 pT3N0、PSA &lt;0.1</td><td>Observation vs prostate fossa RT 60 Gy/30 Fx</td><td>bPFS 56% vs 35%；adjuvant RT improves bPFS</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>三、Adjuvant RT vs early salvage RT</h3>
+<p>較新的 trials 比較 routine adjuvant RT vs early salvage RT。RAVES、RADICALS-RT、GETUG-AFU 17 顯示 adjuvant 與 early salvage strategy 的 bPFS/EFS 沒有明顯差異，而且 early salvage approach 可以讓約 50% 病人避免 postoperative RT。ARTISTIC meta-analysis 也 confirmed similar EFS，兩組約 88–89%。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Adjuvant RT vs early salvage RT trials</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Patients</th><th scope="col">Salvage threshold</th><th scope="col">Intervention</th><th scope="col">5-year result</th></tr></thead>
+    <tbody>
+      <tr><td>RAVES</td><td>RP 後 +SM 或 pT3；post-op PSA &lt;0.1</td><td>PSA ≥0.2</td><td>Prostate fossa RT 64 Gy；no ADT/WPRT</td><td>bPFS 86% sRT vs 87% aRT</td></tr>
+      <tr><td>RADICALS-RT</td><td>RP 後 +SM、pT3–T4、GS 7–10、或 pre-op PSA ≥10；post-op PSA ≤0.2</td><td>PSA &gt;0.1 and rising x2，或 consecutive rises x3</td><td>66 Gy/33 Fx 或 52.5 Gy/20 Fx；WPRT optional</td><td>bPFS 88% sRT vs 85% aRT</td></tr>
+      <tr><td>GETUG-AFU 17</td><td>RP 後 +SM and pT3–4；post-op PSA ≤0.1</td><td>PSA &gt;0.2 and rising</td><td>66 Gy/33 Fx + 6 months ADT for all；WPRT optional</td><td>EFS 90% sRT vs 92% aRT</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">臨床解讀：對多數 RP 後 adverse pathology 但 PSA undetectable 的病人，偏向 observation + early salvage RT，而非 routine adjuvant RT。Adjuvant RT 保留給 selected very high-risk、persistent PSA、多重 adverse features、或 pN1 disease。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XV. Post-Prostatectomy Management</strong></p>
+<h3>1. Biochemical recurrence definitions</h3>
+<p>After radical prostatectomy, PSA should become undetectable. The AUA biochemical recurrence definition is PSA &gt;0.2 ng/mL on two consecutive readings. With ultrasensitive PSA, two consecutive rises above 0.1 ng/mL are also commonly used. After definitive RT, PSA gradually declines to a nadir; post-RT biochemical recurrence uses Phoenix criteria, PSA nadir + 2 ng/mL.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>BCR definition</caption>
+    <thead><tr><th scope="col">Setting</th><th scope="col">BCR definition</th></tr></thead>
+    <tbody>
+      <tr><td>Post-prostatectomy</td><td>PSA &gt;0.2 ng/mL on two consecutive readings; or two consecutive ultrasensitive PSA rises &gt;0.1</td></tr>
+      <tr><td>Post-radiotherapy</td><td>Phoenix criteria: nadir + 2 ng/mL</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>2. Historical adjuvant RT trials</h3>
+<p>Historical trials showed that high-risk post-prostatectomy patients, especially those with positive surgical margin, pT3a extracapsular extension, or pT3b seminal vesicle invasion, benefit from adjuvant RT in bPFS. SWOG 8794, EORTC 22911, and ARO 96-02 supported bPFS improvement, and SWOG 8794 also showed DMFS and OS benefit.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Historical adjuvant RT trials</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Population</th><th scope="col">Intervention</th><th scope="col">10-year results / conclusion</th></tr></thead>
+    <tbody>
+      <tr><td>SWOG 8794</td><td>Post-RP +SM or pT3N0; not low-risk and not node-positive</td><td>Observation vs prostate fossa RT 60–64 Gy/30–32 fractions; no ADT</td><td>DMFS 71% vs 61%; OS 74% vs 66%; bPFS 58% vs 28%; adjuvant RT improves bPFS, OS, DMFS</td></tr>
+      <tr><td>EORTC 22911</td><td>Post-RP +SM or pT3N0</td><td>Observation vs prostate fossa RT 60 Gy/30 fractions</td><td>bPFS 62% vs 39%; OS/DM similar; adjuvant RT improves bPFS</td></tr>
+      <tr><td>ARO 96-02</td><td>Post-RP pT3N0, PSA &lt;0.1</td><td>Observation vs prostate fossa RT 60 Gy/30 fractions</td><td>bPFS 56% vs 35%; adjuvant RT improves bPFS</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>3. Adjuvant RT versus early salvage RT</h3>
+<p>Newer trials compared routine adjuvant RT with early salvage RT. RAVES, RADICALS-RT, and GETUG-AFU 17 showed no meaningful bPFS/EFS difference, while early salvage allowed about half of patients to avoid postoperative RT. ARTISTIC meta-analysis confirmed similar EFS, about 88–89% in both strategies.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Adjuvant RT vs early salvage RT trials</caption>
+    <thead><tr><th scope="col">Trial</th><th scope="col">Patients</th><th scope="col">Salvage threshold</th><th scope="col">Intervention</th><th scope="col">5-year result</th></tr></thead>
+    <tbody>
+      <tr><td>RAVES</td><td>Post-RP +SM or pT3; post-op PSA &lt;0.1</td><td>PSA ≥0.2</td><td>Prostate fossa RT 64 Gy; no ADT/WPRT</td><td>bPFS 86% sRT vs 87% aRT</td></tr>
+      <tr><td>RADICALS-RT</td><td>Post-RP +SM, pT3–T4, GS 7–10, or pre-op PSA ≥10; post-op PSA ≤0.2</td><td>PSA &gt;0.1 and rising twice, or consecutive rises three times</td><td>66 Gy/33 fractions or 52.5 Gy/20 fractions; WPRT optional</td><td>bPFS 88% sRT vs 85% aRT</td></tr>
+      <tr><td>GETUG-AFU 17</td><td>Post-RP +SM and pT3–4; post-op PSA ≤0.1</td><td>PSA &gt;0.2 and rising</td><td>66 Gy/33 fractions + 6 months ADT for all; WPRT optional</td><td>EFS 90% sRT vs 92% aRT</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">Clinical interpretation: for most patients with adverse pathology but undetectable PSA after prostatectomy, observation plus early salvage RT is preferred over routine adjuvant RT. Adjuvant RT is reserved for selected very high-risk disease, persistent PSA, multiple adverse features, or pN1 disease.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="Salvage RT" data-en="SALVAGE RT">Salvage RT</div>
+<h2 data-zh="Salvage RT 加 ADT、pelvic nodes、Decipher 與 pN1 disease" data-en="Salvage RT with ADT, pelvic nodes, Decipher, and pN1 disease">Salvage RT 加 ADT、pelvic nodes、Decipher 與 pN1 disease</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十六部分：Salvage RT 加 ADT 與 pelvic nodes</strong></p>
+<h3>一、RTOG 9601</h3>
+<p>RTOG 9601 randomized post-RP patients with PSA 0.2–4 ng/mL to salvage RT alone vs salvage RT + 2 years bicalutamide 150 mg daily。RT 是 prostate bed 64.8 Gy/36 Fx；因病人都有 negative LND，所以沒有 pelvic nodes。12-year results 顯示加 ADT 改善 OS 76% vs 71%、PCSM 6% vs 13%、DM 15% vs 23%、second biochemical failure 44% vs 68%。Bicalutamide toxicity 主要是 gynecomastia，70% vs 11%。</p>
+<p>重要 nuance：secondary analysis 顯示 ADT benefit 主要在 PSA &gt;0.6 ng/mL 的 salvage setting；若 PSA 很低時 salvage，long-course antiandrogen benefit 可能小，且可能增加 non-cancer harm。因此 salvage ADT 要根據 PSA、PSA doubling time、GG、margin、pT stage、Decipher 等 risk-adapted。</p>
+<h3>二、GETUG-AFU 16</h3>
+<p>GETUG-AFU 16 randomized PSA 0.2–2.0 ng/mL post-RP rising PSA patients to prostate fossa RT 66 Gy/33 Fx ± 6 months goserelin。10-year bPFS 和 DMFS 都因 ADT 改善：bPFS 64% vs 49%；DMFS 75% vs 69%；OS 無改變。Toxicity 和 QoL 沒有顯著差異。</p>
+<div class="clinical-note">臨床解讀：Short-course ADT in salvage RT 可以改善 biochemical and metastatic control，特別是 higher-risk salvage patients。</div>
+<h3>三、SPPORT / RTOG 0534</h3>
+<p>SPPORT / RTOG 0534 支持在 selected salvage setting 加入 pelvic nodal RT 與 ST-ADT。整體概念是：prostate bed RT alone &lt; prostate bed RT + ST-ADT &lt; prostate bed RT + pelvic nodal RT + ST-ADT，尤其 PSA 較高、nodal risk 較高者 benefit 更明顯。</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Salvage RT decision</caption>
+    <thead><tr><th scope="col">Salvage option</th><th scope="col">適合情境</th></tr></thead>
+    <tbody>
+      <tr><td>Prostate bed RT alone</td><td>低 PSA、低 risk、PSA doubling time 長、Decipher low</td></tr>
+      <tr><td>Prostate bed RT + ST-ADT</td><td>UIR/high-risk pathology、PSA 較高、PSADT 短</td></tr>
+      <tr><td>Prostate bed + pelvic nodes + ST-ADT</td><td>Nodal risk 高、PSA 較高、Decipher high、其他 high-risk features</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>四、RADICALS-HD</h3>
+<p>RADICALS-HD 0 vs 6 months ADT 顯示，在多數 intermediate-risk postoperative RT patients 中，ST-ADT 沒有顯著改善 10-year DMFS：79% no ADT vs 80% ST-ADT。不過 secondary endpoints 如 clinical PFS 和 time to salvage ADT 有改善。</p>
+<p>RADICALS-HD 6 vs 24 months ADT 納入較高風險病人，顯示 LT-ADT 改善 10-year DMFS，78% vs 72%，但代價是更長時間 hormonal side effects。</p>
+<h3>五、Decipher genomic classifier</h3>
+<p>Decipher 是 22-gene genomic classifier，score 0–1。RTOG 9601 validation 顯示 Decipher 與 bPFS、DMFS、OS 相關，可協助個人化 salvage RT 是否加 ADT、以及治療強度。Source file 分類：low &lt;0.45、intermediate 0.45–0.6、high &gt;0.6。</p>
+<h3>六、pN1 after prostatectomy</h3>
+<p>對 pN1 disease，retrospective data 支持 selected patients 可從 adjuvant RT 受益。Abdollah et al. 顯示 cancer-specific mortality benefit 主要在兩群：1–2 nodes 且 GS 7–10 加 pT3b–4 或 positive margin；以及 3–4 positive nodes。Tilki et al. 顯示 adjuvant RT 相較 salvage RT 可降低 all-cause mortality，benefit 隨 positive nodes 數目增加而更明顯，尤其 ≥4 nodes。</p>
+<div class="clinical-note">Post-RP high-yield：多數 adverse pathology + undetectable PSA → observation + early salvage。PSA detectable/rising → early salvage RT。Higher-risk salvage → 加 ADT，並考慮 pelvic nodes。pN1，尤其 ≥4 nodes 或 adverse features → 更支持 adjuvant RT + systemic therapy。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XVI. Salvage RT with ADT and Pelvic Nodes</strong></p>
+<h3>1. RTOG 9601</h3>
+<p>RTOG 9601 randomized post-prostatectomy patients with PSA 0.2–4 ng/mL to salvage RT alone versus salvage RT plus 2 years of bicalutamide 150 mg daily. RT was prostate bed 64.8 Gy in 36 fractions. Because patients had negative lymph node dissection, pelvic nodes were not treated. At 12 years, ADT improved OS, prostate cancer-specific mortality, distant metastasis, and second biochemical failure. The main toxicity was gynecomastia.</p>
+<p>Important nuance: secondary analysis showed that benefit was mainly in patients with salvage PSA &gt;0.6 ng/mL. When salvage RT is given at very low PSA, long-course antiandrogen benefit may be smaller and non-cancer harm may increase. Salvage ADT should therefore be risk-adapted by PSA, PSA doubling time, Grade Group, margin, pT stage, Decipher, and other features.</p>
+<h3>2. GETUG-AFU 16</h3>
+<p>GETUG-AFU 16 randomized post-RP patients with rising PSA 0.2–2.0 ng/mL to prostate fossa RT 66 Gy in 33 fractions with or without 6 months of goserelin. Ten-year bPFS and DMFS improved with ADT, while OS did not change. Toxicity and QoL were similar.</p>
+<div class="clinical-note">Clinical interpretation: short-course ADT with salvage RT improves biochemical and metastatic control, especially in higher-risk salvage patients.</div>
+<h3>3. SPPORT / RTOG 0534</h3>
+<p>SPPORT supports adding pelvic nodal RT and short-term ADT in selected salvage settings. The hierarchy is: prostate bed RT alone < prostate bed RT + ST-ADT < prostate bed RT + pelvic nodal RT + ST-ADT, especially when PSA and nodal risk are higher.</p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Salvage RT decision</caption>
+    <thead><tr><th scope="col">Salvage option</th><th scope="col">Suitable setting</th></tr></thead>
+    <tbody>
+      <tr><td>Prostate bed RT alone</td><td>Low PSA, low risk, long PSA doubling time, Decipher low</td></tr>
+      <tr><td>Prostate bed RT + ST-ADT</td><td>UIR/high-risk pathology, higher PSA, short PSADT</td></tr>
+      <tr><td>Prostate bed + pelvic nodes + ST-ADT</td><td>High nodal risk, higher PSA, Decipher high, or other high-risk features</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>4. RADICALS-HD</h3>
+<p>RADICALS-HD 0 versus 6 months ADT showed that, in many intermediate-risk postoperative RT patients, short-term ADT did not significantly improve 10-year DMFS, although clinical PFS and time to salvage ADT improved. RADICALS-HD 6 versus 24 months ADT enrolled higher-risk patients and showed improved 10-year DMFS with long-term ADT, at the cost of longer hormonal side effects.</p>
+<h3>5. Decipher genomic classifier</h3>
+<p>Decipher is a 22-gene genomic classifier scored from 0 to 1. RTOG 9601 validation showed association with bPFS, DMFS, and OS, supporting personalized decisions about ADT and treatment intensity with salvage RT. The source classification is low &lt;0.45, intermediate 0.45–0.6, and high &gt;0.6.</p>
+<h3>6. pN1 after prostatectomy</h3>
+<p>For pN1 disease, retrospective data support benefit from adjuvant RT in selected patients. Benefit is strongest with higher nodal burden or adverse features such as high Gleason score, pT3b–4 disease, or positive margin. The benefit of adjuvant RT over salvage RT becomes more apparent as positive node count increases, especially with ≥4 nodes.</p>
+<div class="clinical-note">Post-RP high-yield: most adverse pathology with undetectable PSA → observation plus early salvage. Detectable or rising PSA → early salvage RT. Higher-risk salvage → add ADT and consider pelvic nodes. pN1, especially ≥4 nodes or adverse features → stronger support for adjuvant RT plus systemic therapy.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="轉移性疾病" data-en="METASTATIC">轉移性疾病</div>
+<h2 data-zh="Metastatic prostate cancer framework、mCSPC 與 mCRPC" data-en="Metastatic prostate cancer framework, mCSPC, and mCRPC">Metastatic prostate cancer framework、mCSPC 與 mCRPC</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十七部分：Metastatic prostate cancer framework</strong></p>
+<h3>一、Castration-sensitive vs castration-resistant</h3>
+<p>Castration-sensitive prostate cancer 表示 disease 仍對 ADT 有反應。Castration-resistant prostate cancer 表示在 castrate testosterone environment 中仍有 clinical 或 biochemical progression。Castrate testosterone 定義為 serum testosterone &lt;50 ng/dL 或 1.7 nmol/L。CRPC diagnosis based on rising PSA in the setting of adequately suppressed testosterone。</p>
+<h3>二、Low-volume vs high-volume mCSPC</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>mCSPC volume definition</caption>
+    <thead><tr><th scope="col">Low-volume disease</th><th scope="col">High-volume disease</th></tr></thead>
+    <tbody>
+      <tr><td>≤3 bone metastases total</td><td>Presence of visceral metastases</td></tr>
+      <tr><td>Bone mets only involving vertebral bodies or pelvis</td><td>≥4 bone lesions，且至少一個在 vertebral bodies 或 pelvis 之外</td></tr>
+      <tr><td>Any number of pelvic nodal metastases 在 revised STAMPEDE context 可視為 low-volume</td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>注意：CHAARTED 原始定義沒有把 pelvic nodal metastases 納入 bone lesion count，但 revised STAMPEDE context 中 pelvic nodal metastases 可被視為 low-volume metastatic disease。</p>
+<h3>三、Management summary</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Metastatic management summary</caption>
+    <thead><tr><th scope="col">Disease state</th><th scope="col">Treatment concept</th></tr></thead>
+    <tbody>
+      <tr><td>Low-volume mCSPC</td><td>Doublet therapy：ADT + abiraterone、apalutamide 或 enzalutamide；加 prostate-directed RT 有 OS benefit；≤5 metastases 可考慮 MDT/SBRT 或 surgery，主要 PFS benefit</td></tr>
+      <tr><td>High-volume mCSPC</td><td>Triplet therapy：ADT + docetaxel + abiraterone 或 darolutamide</td></tr>
+      <tr><td>mCRPC adenocarcinoma</td><td>依 prior therapy 與 biomarker：abiraterone、docetaxel、enzalutamide、olaparib for BRCA mutation、pembrolizumab for MSI-H/dMMR、cabazitaxel 或 docetaxel rechallenge</td></tr>
+      <tr><td>mCRPC radiopharmaceuticals</td><td>Ra-223 for bone-only metastases；Lu-177-PSMA-617 for PSMA-positive disease</td></tr>
+      <tr><td>Neuroendocrine differentiation</td><td>Cisplatin/etoposide 或 carboplatin/etoposide</td></tr>
+    </tbody>
+  </table>
+</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XVII. Metastatic Prostate Cancer Framework</strong></p>
+<h3>1. Castration-sensitive versus castration-resistant</h3>
+<p>Castration-sensitive prostate cancer remains responsive to ADT. Castration-resistant prostate cancer progresses clinically or biochemically despite castrate testosterone. Castrate testosterone is defined as serum testosterone &lt;50 ng/dL or 1.7 nmol/L. CRPC is diagnosed by rising PSA or progression in the setting of adequately suppressed testosterone.</p>
+<h3>2. Low-volume versus high-volume mCSPC</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>mCSPC volume definition</caption>
+    <thead><tr><th scope="col">Low-volume disease</th><th scope="col">High-volume disease</th></tr></thead>
+    <tbody>
+      <tr><td>≤3 bone metastases total</td><td>Presence of visceral metastases</td></tr>
+      <tr><td>Bone metastases only involving vertebral bodies or pelvis</td><td>≥4 bone lesions, with at least one outside the vertebral bodies or pelvis</td></tr>
+      <tr><td>Any number of pelvic nodal metastases can be considered low-volume in the revised STAMPEDE context</td><td>—</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Note: the original CHAARTED definition did not count pelvic nodal metastases as bone lesions, but in revised STAMPEDE interpretation, pelvic nodal metastases can be treated as low-volume metastatic disease.</p>
+<h3>3. Management summary</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Metastatic management summary</caption>
+    <thead><tr><th scope="col">Disease state</th><th scope="col">Treatment concept</th></tr></thead>
+    <tbody>
+      <tr><td>Low-volume mCSPC</td><td>Doublet therapy with ADT plus abiraterone, apalutamide, or enzalutamide; prostate-directed RT improves OS; ≤5 metastases can be considered for MDT/SBRT or surgery, mainly for PFS benefit</td></tr>
+      <tr><td>High-volume mCSPC</td><td>Triplet therapy with ADT + docetaxel + abiraterone or darolutamide</td></tr>
+      <tr><td>mCRPC adenocarcinoma</td><td>Depends on prior therapy and biomarker: abiraterone, docetaxel, enzalutamide, olaparib for BRCA mutation, pembrolizumab for MSI-H/dMMR, cabazitaxel, or docetaxel rechallenge</td></tr>
+      <tr><td>mCRPC radiopharmaceuticals</td><td>Ra-223 for bone-only metastases; Lu-177-PSMA-617 for PSMA-positive disease</td></tr>
+      <tr><td>Neuroendocrine differentiation</td><td>Cisplatin/etoposide or carboplatin/etoposide</td></tr>
+    </tbody>
+  </table>
+</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="mCSPC/MDT" data-en="mCSPC/MDT">mCSPC/MDT</div>
+<h2 data-zh="Prostate-directed RT in metastatic CSPC 與 oligometastatic MDT" data-en="Prostate-directed RT in metastatic CSPC and oligometastatic MDT">Prostate-directed RT in metastatic CSPC 與 oligometastatic MDT</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第十八部分：Prostate-directed RT in metastatic CSPC</strong></p>
+<h3>一、STAMPEDE</h3>
+<p>STAMPEDE 測試 de novo metastatic prostate cancer 中，對 primary prostate 加 RT 是否有 benefit。病人依 CHAARTED burden 用 CT/MRI 分層，不是 PSMA PET。High metastatic burden 定義為 ≥4 bone metastases 且至少 1 個在 vertebral bodies 或 pelvis 之外，或有 visceral metastases。Low metastatic burden 則是其餘病人，包括 ≤3 bone metastases，或 bone mets only involving vertebral bodies/pelvis。</p>
+<p>Randomization：standard arm 為 lifelong ADT，部分病人後來接受 docetaxel；experimental arm 則在 systemic therapy 上加 prostate RT。RT regimen 有兩種：55 Gy/20 Fx daily over 4 weeks，或 36 Gy/6 Fx weekly over 6 weeks。</p>
+<p>結果：low metastatic burden patients 有 OS benefit。5-year OS：without RT 53% vs with RT 65%。High burden patients 沒有 benefit：without RT 35% vs with RT 30%。Failure-free survival 在所有病人改善。QoL 沒有顯著差異，5 年 overall G3+ toxicity 類似，1 年 grade 3+ urinary toxicity 約 2%，grade 3+ bowel toxicity 約 3%。</p>
+<h3>二、STOPCAP meta-analysis</h3>
+<p>STOPCAP prospective meta-analysis 合併 STAMPEDE 和 HORRAD。STAMPEDE 使用 55 Gy/20 Fx 或 36 Gy/6 Fx；HORRAD 使用 70 Gy/35 Fx 或 57.76 Gy/19 Fx。STOPCAP 顯示 prostate-directed RT 在 &lt;5 bone lesions patients 中改善 OS；3-year OS 約 70% → 77%。Unselected metastatic patients 沒有 OS benefit，但 failure-free survival 和 biochemical PFS 有約 10% benefit，且 effect size 依 metastatic burden 不同。</p>
+<h3>三、PEACE-1</h3>
+<p>PEACE-1 是 de novo mCSPC trial，採 2×2 factorial design，比較 SOC、SOC + abiraterone、SOC + prostate RT 74 Gy/37 Fx、SOC + abiraterone + prostate RT。SOC 包含 ADT ± docetaxel。Abiraterone 加到 SOC 明顯改善 rPFS 和 OS。Low-volume population 中，SOC + abiraterone + prostate RT 改善 rPFS，7.5 years with RT vs 4.4 years without RT，但未見 OS benefit。在 overall population，prostate RT 改善 time to serious GU events 和 castration-resistance-free survival，但 time to GU event 較難解讀，因為 receiving prostate RT 本身也被定義為 GU event。</p>
+<div class="clinical-note">Metastatic prostate RT high-yield：Low-volume de novo mCSPC → prostate RT 應強烈考慮。STAMPEDE regimen：55 Gy/20 Fx daily 或 36 Gy/6 weekly fractions。PSMA PET era 要小心：STAMPEDE 用 CT/MRI 分層，今天用 PSMA PET 可能把原本 CT low-volume 的病人 upstage。</div>
+<p class="section-kicker"><strong>第十九部分：Oligometastatic prostate cancer 的 MDT</strong></p>
+<h3>四、STOMP and ORIOLE concept</h3>
+<p>Oligometastatic prostate cancer 中，MDT/SBRT 可延後 progression 和 ADT initiation。STOMP 和 ORIOLE 都支持 selected oligometastatic patients 使用 MDT。Pooled ORIOLE + STOMP analysis 顯示 median PFS 11.9 months with MDT vs 5.9 months with observation。Source file 將此總結為 MDT 對 ≤3 metastases 可改善 PFS。</p>
+<h3>五、EXTEND</h3>
+<p>EXTEND randomized oligometastatic mCSPC patients with ≤5 metastases and receiving ADT 至 continued ADT alone vs ADT + SBRT to all metastatic lesions。SBRT 改善 PFS：ADT alone median PFS 15.8 months，ADT + SBRT arm median PFS not reached。也改善 eugonadal PFS after testosterone recovery，代表 MDT 可能幫助 intermittent ADT strategy。Correlative immune assays 顯示 ADT + SBRT arm 有 increased T-cell activation、proliferation、clonal expansion。</p>
+<div class="clinical-note">MDT high-yield：對 ≤3–5 metastases，特別是 PSMA PET-detected oligometastatic disease，SBRT/MDT 可改善 PFS、延後 systemic escalation 或 ADT，但 OS benefit 仍未完全確立。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XVIII. Prostate-Directed RT in Metastatic CSPC</strong></p>
+<h3>1. STAMPEDE</h3>
+<p>STAMPEDE tested whether adding RT to the primary prostate improves outcomes in de novo metastatic prostate cancer. Patients were classified by CHAARTED burden using CT/MRI, not PSMA PET. High metastatic burden was defined as ≥4 bone metastases with at least one outside the vertebral bodies or pelvis, or visceral metastases. Low burden was all other patients, including ≤3 bone metastases or bone metastases confined to vertebral bodies or pelvis.</p>
+<p>The standard arm was lifelong ADT, with some later receiving docetaxel. The experimental arm added prostate RT. Two RT regimens were used: 55 Gy in 20 daily fractions over 4 weeks, or 36 Gy in 6 weekly fractions over 6 weeks.</p>
+<p>Low metastatic burden patients had an OS benefit: 5-year OS improved from about 53% to 65%. High-burden patients did not benefit. Failure-free survival improved in all patients. QoL and overall grade 3+ toxicity were similar.</p>
+<h3>2. STOPCAP meta-analysis</h3>
+<p>STOPCAP combined STAMPEDE and HORRAD. STAMPEDE used 55 Gy/20 fractions or 36 Gy/6 weekly fractions; HORRAD used 70 Gy/35 fractions or 57.76 Gy/19 fractions. STOPCAP showed OS improvement from prostate-directed RT in patients with fewer than 5 bone lesions, while unselected metastatic patients did not have an OS benefit. Failure-free survival and biochemical PFS improved by about 10%, with effect size depending on metastatic burden.</p>
+<h3>3. PEACE-1</h3>
+<p>PEACE-1 was a de novo mCSPC 2×2 factorial trial comparing standard of care, SOC plus abiraterone, SOC plus prostate RT 74 Gy/37 fractions, and SOC plus abiraterone plus prostate RT. SOC included ADT with or without docetaxel. Abiraterone improved rPFS and OS. In low-volume disease, adding prostate RT to SOC plus abiraterone improved rPFS but not OS. Prostate RT also improved time to serious GU events and castration-resistance-free survival, but GU event endpoints are harder to interpret because receiving prostate RT itself counted as a GU event.</p>
+<div class="clinical-note">Metastatic prostate RT high-yield: low-volume de novo mCSPC → strongly consider prostate RT. STAMPEDE regimens: 55 Gy/20 daily fractions or 36 Gy/6 weekly fractions. In the PSMA PET era, be careful: STAMPEDE used CT/MRI staging, and PSMA PET may upstage patients who were CT low-volume.</div>
+<p class="section-kicker"><strong>Part XIX. MDT for Oligometastatic Prostate Cancer</strong></p>
+<h3>4. STOMP and ORIOLE concept</h3>
+<p>In oligometastatic prostate cancer, MDT/SBRT can delay progression and ADT initiation. STOMP and ORIOLE support MDT in selected oligometastatic patients. Pooled ORIOLE + STOMP analysis showed median PFS 11.9 months with MDT versus 5.9 months with observation. The source summarizes that MDT improves PFS for ≤3 metastases.</p>
+<h3>5. EXTEND</h3>
+<p>EXTEND randomized oligometastatic mCSPC patients with ≤5 metastases receiving ADT to continued ADT alone versus ADT plus SBRT to all metastatic lesions. SBRT improved PFS, with ADT alone median PFS 15.8 months and median PFS not reached in the ADT + SBRT arm. It also improved eugonadal PFS after testosterone recovery, suggesting MDT may support intermittent ADT strategies. Correlative immune assays showed increased T-cell activation, proliferation, and clonal expansion with ADT + SBRT.</p>
+<div class="clinical-note">MDT high-yield: for ≤3–5 metastases, especially PSMA PET-detected oligometastatic disease, SBRT/MDT can improve PFS and delay systemic escalation or ADT, but OS benefit is not fully established.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="放射藥物" data-en="RPT">放射藥物</div>
+<h2 data-zh="Radiopharmaceutical therapy in metastatic prostate cancer" data-en="Radiopharmaceutical therapy in metastatic prostate cancer">Radiopharmaceutical therapy in metastatic prostate cancer</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第二十部分：Radiopharmaceutical therapy in metastatic prostate cancer</strong></p>
+<h3>一、Ra-223 vs Lu-177-PSMA-617</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Ra-223 vs Lu-177-PSMA-617</caption>
+    <thead><tr><th scope="col">Feature</th><th scope="col">Ra-223 / Xofigo</th><th scope="col">Lu-177-PSMA-617 / Pluvicto</th></tr></thead>
+    <tbody>
+      <tr><td>放射型態</td><td>α-particle emitter</td><td>β-particle + γ emission</td></tr>
+      <tr><td>射程</td><td>很短，&lt;0.1 mm，約 8 cells</td><td>較長，約 0.25 mm，約 125 cells</td></tr>
+      <tr><td>Mechanism</td><td>Calcium mimic，進入 osteoblastic bone metastases</td><td>被 PSMA-expressing prostate cancer cells uptake</td></tr>
+      <tr><td>Indication</td><td>mCRPC with bone-only metastases，尤其 symptomatic bone mets</td><td>PSMA-positive mCRPC，可包含 bone 和 visceral metastases</td></tr>
+      <tr><td>Toxicities</td><td>Myelosuppression、GI toxicity、edema</td><td>Myelosuppression，尤其 thrombocytopenia</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>二、ALSYMPCA：Ra-223</h3>
+<p>ALSYMPCA 建立 Ra-223 用於 symptomatic bone-metastatic mCRPC。Trial 顯示 OS benefit：14.9 vs 11.3 months，並延長 time to first symptomatic skeletal event：15.6 vs 9.8 months。Clinical selection：Ra-223 最適合 bone-predominant 或 bone-only mCRPC，無 visceral disease，marrow reserve 足夠，沒有 urgent cord compression/impending fracture，且沒有 major soft tissue component 的病人。</p>
+<h3>三、VISION：Lu-177-PSMA-617</h3>
+<p>VISION randomized PSMA PET-positive mCRPC patients to Lu-177-PSMA-617 7.5 GBq every 6 weeks for 4–6 cycles + SOC vs SOC alone。Lu-177 改善 median OS：15.3 vs 11.3 months，也改善 image-based PFS：8.7 vs 3.4 months。Grade 3+ toxicity 較高，53% vs 38%，但 QoL 沒有明顯惡化。</p>
+<div class="clinical-note">RPT high-yield：Ra-223 = α emitter，適合 symptomatic bone-only mCRPC。Lu-177-PSMA = PSMA-targeted β emitter，適合 PSMA-positive mCRPC，若符合條件可治療 bone、nodal、visceral disease。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XX. Radiopharmaceutical Therapy in Metastatic Prostate Cancer</strong></p>
+<h3>1. Ra-223 versus Lu-177-PSMA-617</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Ra-223 versus Lu-177-PSMA-617</caption>
+    <thead><tr><th scope="col">Feature</th><th scope="col">Ra-223 / Xofigo</th><th scope="col">Lu-177-PSMA-617 / Pluvicto</th></tr></thead>
+    <tbody>
+      <tr><td>Radiation type</td><td>Alpha-particle emitter</td><td>Beta-particle plus gamma emission</td></tr>
+      <tr><td>Range</td><td>Very short, &lt;0.1 mm, about 8 cells</td><td>Longer, about 0.25 mm, about 125 cells</td></tr>
+      <tr><td>Mechanism</td><td>Calcium mimic incorporated into osteoblastic bone metastases</td><td>Taken up by PSMA-expressing prostate cancer cells</td></tr>
+      <tr><td>Indication</td><td>mCRPC with bone-only metastases, especially symptomatic bone metastases</td><td>PSMA-positive mCRPC, including bone and visceral metastases</td></tr>
+      <tr><td>Toxicities</td><td>Myelosuppression, GI toxicity, edema</td><td>Myelosuppression, especially thrombocytopenia</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>2. ALSYMPCA: Ra-223</h3>
+<p>ALSYMPCA established Ra-223 for symptomatic bone-metastatic mCRPC. Ra-223 improved OS from 11.3 to 14.9 months and prolonged time to first symptomatic skeletal event from 9.8 to 15.6 months. Ideal selection is bone-predominant or bone-only mCRPC without visceral disease, adequate marrow reserve, no urgent cord compression or impending fracture, and no major soft tissue component.</p>
+<h3>3. VISION: Lu-177-PSMA-617</h3>
+<p>VISION randomized PSMA PET-positive mCRPC patients to Lu-177-PSMA-617 7.5 GBq every 6 weeks for 4–6 cycles plus standard of care versus standard of care alone. Lu-177 improved median OS from 11.3 to 15.3 months and image-based PFS from 3.4 to 8.7 months. Grade 3+ toxicity was higher, but QoL was not clearly worsened.</p>
+<div class="clinical-note">RPT high-yield: Ra-223 is an alpha emitter for symptomatic bone-only mCRPC. Lu-177-PSMA is a PSMA-targeted beta emitter for PSMA-positive mCRPC and can treat bone, nodal, and visceral disease if eligibility criteria are met.</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="Dose/演算法" data-en="DOSE/ALGO">Dose/演算法</div>
+<h2 data-zh="重要 RT dose table 與 risk-adapted treatment algorithm" data-en="Important RT dose table and risk-adapted treatment algorithm">重要 RT dose table 與 risk-adapted treatment algorithm</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>第二十一部分：重要 RT dose table</strong></p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Prostate cancer RT dose table</caption>
+    <thead><tr><th scope="col">Clinical setting</th><th scope="col">Regimen / dose</th></tr></thead>
+    <tbody>
+      <tr><td>Conventional dose-escalated definitive EBRT</td><td>78–79.2 Gy in 39–44 Fx</td></tr>
+      <tr><td>Moderate hypofractionation</td><td>70 Gy/28 Fx；60 Gy/20 Fx</td></tr>
+      <tr><td>SBRT / ultra-hypofractionation</td><td>36.25 Gy/5 Fx，常 prostate CTV boost to 40 Gy；HYPO-RT-PC 為 42.7 Gy/7 Fx</td></tr>
+      <tr><td>FLAME-style intraprostatic boost</td><td>77 Gy/35 Fx to prostate + up to 95 Gy SIB to MRI-defined GTV</td></tr>
+      <tr><td>ASCENDE-RT EBRT boost</td><td>Pelvis/prostate/SV 46 Gy/23 Fx → EBRT boost to total 78 Gy</td></tr>
+      <tr><td>ASCENDE-RT LDR boost</td><td>Pelvis/prostate/SV 46 Gy/23 Fx → I-125 LDR boost 115 Gy</td></tr>
+      <tr><td>POP-RT pelvic nodes</td><td>Pelvic nodes 50 Gy/25 Fx + prostate SIB 68 Gy</td></tr>
+      <tr><td>Post-prostatectomy prostate bed</td><td>常 64–66 Gy；部分 modern regimen 用 52.5 Gy/20 Fx</td></tr>
+      <tr><td>RTOG 9601 salvage prostate bed</td><td>64.8 Gy/36 Fx</td></tr>
+      <tr><td>GETUG-AFU 16 salvage prostate bed</td><td>66 Gy/33 Fx</td></tr>
+      <tr><td>STAMPEDE metastatic primary prostate RT</td><td>55 Gy/20 Fx daily 或 36 Gy/6 Fx weekly</td></tr>
+      <tr><td>Oligometastatic MDT</td><td>SBRT dose 依部位/OAR；可行時 treat all visible lesions</td></tr>
+      <tr><td>Painful uncomplicated bone metastasis</td><td>8 Gy ×1、20 Gy/5 Fx、30 Gy/10 Fx 等</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="section-kicker"><strong>第二十二部分：Risk-adapted treatment algorithm</strong></p>
+<h3>一、Localized disease</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Localized disease algorithm</caption>
+    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Preferred conceptual approach</th></tr></thead>
+    <tbody>
+      <tr><td>Very low / low risk</td><td>多數可 active surveillance；若治療可選 surgery 或 RT monotherapy</td></tr>
+      <tr><td>Favorable intermediate</td><td>Monotherapy：surgery、EBRT、SBRT、brachytherapy，依 anatomy/preference</td></tr>
+      <tr><td>Unfavorable intermediate</td><td>Surgery 或 RT + 4–6 months ADT；selected patients 可考慮 dose intensification</td></tr>
+      <tr><td>High risk</td><td>EBRT ± pelvic nodes + LT-ADT 18–24 months；可考慮 BT boost 或 focal boost；selected surgery</td></tr>
+      <tr><td>Very high risk</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone；selected surgery 但常需 multimodality</td></tr>
+      <tr><td>cN1 M0</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>二、Post-prostatectomy</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Post-prostatectomy algorithm</caption>
+    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Approach</th></tr></thead>
+    <tbody>
+      <tr><td>Undetectable PSA + adverse pathology</td><td>多數 observation + early salvage RT</td></tr>
+      <tr><td>PSA detectable/rising</td><td>Early salvage RT to prostate bed</td></tr>
+      <tr><td>Higher-risk salvage</td><td>加 ADT；考慮 pelvic nodal RT</td></tr>
+      <tr><td>pN1</td><td>Consider adjuvant RT + systemic therapy，尤其 ≥4 nodes 或 adverse features</td></tr>
+      <tr><td>Decipher high</td><td>更支持 treatment intensification</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>三、Metastatic disease</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Metastatic disease algorithm</caption>
+    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Approach</th></tr></thead>
+    <tbody>
+      <tr><td>Low-volume de novo mCSPC</td><td>ADT + ARSI doublet；prostate RT；selected MDT</td></tr>
+      <tr><td>High-volume mCSPC</td><td>ADT + docetaxel + abiraterone/darolutamide triplet；prostate RT 主要是 GU-event/rPFS rationale，非確立 OS benefit</td></tr>
+      <tr><td>Oligometastatic recurrence</td><td>MDT/SBRT 可改善 PFS、延後 systemic escalation</td></tr>
+      <tr><td>mCRPC bone-only symptomatic</td><td>Ra-223 if eligible</td></tr>
+      <tr><td>mCRPC PSMA-positive</td><td>Lu-177-PSMA-617 if eligible</td></tr>
+      <tr><td>Neuroendocrine/small-cell transformation</td><td>Platinum/etoposide-based therapy</td></tr>
+    </tbody>
+  </table>
+</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Part XXI. Important RT Dose Table</strong></p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Prostate cancer RT dose table</caption>
+    <thead><tr><th scope="col">Clinical setting</th><th scope="col">Regimen / dose</th></tr></thead>
+    <tbody>
+      <tr><td>Conventional dose-escalated definitive EBRT</td><td>78–79.2 Gy in 39–44 fractions</td></tr>
+      <tr><td>Moderate hypofractionation</td><td>70 Gy/28 fractions; 60 Gy/20 fractions</td></tr>
+      <tr><td>SBRT / ultra-hypofractionation</td><td>36.25 Gy/5 fractions, often with prostate CTV boost to 40 Gy; HYPO-RT-PC used 42.7 Gy/7 fractions</td></tr>
+      <tr><td>FLAME-style intraprostatic boost</td><td>77 Gy/35 fractions to prostate + up to 95 Gy SIB to MRI-defined GTV</td></tr>
+      <tr><td>ASCENDE-RT EBRT boost</td><td>Pelvis/prostate/SV 46 Gy/23 fractions → EBRT boost to total 78 Gy</td></tr>
+      <tr><td>ASCENDE-RT LDR boost</td><td>Pelvis/prostate/SV 46 Gy/23 fractions → I-125 LDR boost 115 Gy</td></tr>
+      <tr><td>POP-RT pelvic nodes</td><td>Pelvic nodes 50 Gy/25 fractions + prostate SIB 68 Gy</td></tr>
+      <tr><td>Post-prostatectomy prostate bed</td><td>Usually 64–66 Gy; some modern regimens use 52.5 Gy/20 fractions</td></tr>
+      <tr><td>RTOG 9601 salvage prostate bed</td><td>64.8 Gy/36 fractions</td></tr>
+      <tr><td>GETUG-AFU 16 salvage prostate bed</td><td>66 Gy/33 fractions</td></tr>
+      <tr><td>STAMPEDE metastatic primary prostate RT</td><td>55 Gy/20 daily fractions or 36 Gy/6 weekly fractions</td></tr>
+      <tr><td>Oligometastatic MDT</td><td>SBRT dose depends on site/OAR; treat all visible lesions when feasible</td></tr>
+      <tr><td>Painful uncomplicated bone metastasis</td><td>8 Gy ×1, 20 Gy/5 fractions, 30 Gy/10 fractions, etc.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="section-kicker"><strong>Part XXII. Risk-Adapted Treatment Algorithm</strong></p>
+<h3>1. Localized disease</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Localized disease algorithm</caption>
+    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Preferred conceptual approach</th></tr></thead>
+    <tbody>
+      <tr><td>Very low / low risk</td><td>Often active surveillance; if treated, surgery or RT monotherapy</td></tr>
+      <tr><td>Favorable intermediate</td><td>Monotherapy with surgery, EBRT, SBRT, or brachytherapy depending on anatomy and preference</td></tr>
+      <tr><td>Unfavorable intermediate</td><td>Surgery or RT + 4–6 months ADT; selected patients may consider dose intensification</td></tr>
+      <tr><td>High risk</td><td>EBRT ± pelvic nodes + 18–24 months LT-ADT; consider brachytherapy boost or focal boost; selected surgery</td></tr>
+      <tr><td>Very high risk</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone; selected surgery but usually multimodality</td></tr>
+      <tr><td>cN1 M0</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>2. Post-prostatectomy</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Post-prostatectomy algorithm</caption>
+    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Approach</th></tr></thead>
+    <tbody>
+      <tr><td>Undetectable PSA + adverse pathology</td><td>Usually observation + early salvage RT</td></tr>
+      <tr><td>Detectable/rising PSA</td><td>Early salvage RT to prostate bed</td></tr>
+      <tr><td>Higher-risk salvage</td><td>Add ADT; consider pelvic nodal RT</td></tr>
+      <tr><td>pN1</td><td>Consider adjuvant RT + systemic therapy, especially ≥4 nodes or adverse features</td></tr>
+      <tr><td>Decipher high</td><td>Supports treatment intensification</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>3. Metastatic disease</h3>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>Metastatic disease algorithm</caption>
+    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Approach</th></tr></thead>
+    <tbody>
+      <tr><td>Low-volume de novo mCSPC</td><td>ADT + ARSI doublet; prostate RT; selected MDT</td></tr>
+      <tr><td>High-volume mCSPC</td><td>ADT + docetaxel + abiraterone/darolutamide triplet; prostate RT mainly for GU-event/rPFS rationale, not established OS benefit</td></tr>
+      <tr><td>Oligometastatic recurrence</td><td>MDT/SBRT can improve PFS and delay systemic escalation</td></tr>
+      <tr><td>mCRPC bone-only symptomatic</td><td>Ra-223 if eligible</td></tr>
+      <tr><td>mCRPC PSMA-positive</td><td>Lu-177-PSMA-617 if eligible</td></tr>
+      <tr><td>Neuroendocrine/small-cell transformation</td><td>Platinum/etoposide-based therapy</td></tr>
+    </tbody>
+  </table>
+</div></div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="重點整理" data-en="TAKE HOME">重點整理</div>
+<h2 data-zh="攝護腺癌最終高分整理" data-en="High-yield take-home summary for prostate cancer">攝護腺癌最終高分整理</h2>
+<div data-lang="zh"><p class="section-kicker"><strong>最終高分整理</strong></p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>High-yield summary</caption>
+    <thead><tr><th scope="col">主題</th><th scope="col">最重要結論</th></tr></thead>
+    <tbody>
+      <tr><td>Biology</td><td>Prostate cancer is androgen-driven，常為 peripheral-zone adenocarcinoma，PSA-secreting</td></tr>
+      <tr><td>Workup</td><td>H&P + IPSS/SHIM/DRE、PSA/testosterone、biopsy 前 prostate MRI、MRI-fusion biopsy preferred、依 risk 做 metastatic imaging</td></tr>
+      <tr><td>PSA recurrence</td><td>Post-RP：PSA &gt;0.2 twice；Post-RT：nadir + 2</td></tr>
+      <tr><td>Risk grouping</td><td>GG、PSA、T-stage、core positivity 決定 low/FIR/UIR/HR/VHR</td></tr>
+      <tr><td>ADT</td><td>LR/FIR 不加 ADT；UIR 加 4–6 months；HR 加 18–24 months；VHR/N+ 加 abiraterone</td></tr>
+      <tr><td>Radiobiology</td><td>Prostate α/β 約 1.5–3，因此 moderate hypofractionation 和 SBRT 有生物學合理性</td></tr>
+      <tr><td>Moderate hypo</td><td>60 Gy/20 Fx 和 70 Gy/28 Fx 是主要 standard regimens</td></tr>
+      <tr><td>SBRT</td><td>PACE-B 支持 36.25 Gy/5 Fx，5-year bPFS 約 95%</td></tr>
+      <tr><td>Dose escalation</td><td>改善 biochemical control；FLAME boost 改善 bDFS 且不增加 late GU/GI toxicity</td></tr>
+      <tr><td>Brachy boost</td><td>ASCENDE-RT 改善 bPFS，但增加 grade 3+ GU toxicity/stricture</td></tr>
+      <tr><td>Pelvic nodes</td><td>POP-RT 在 high-risk nodal-risk patients 改善 BFFS/DFS/DMFS，但未改善 OS</td></tr>
+      <tr><td>Post-RP</td><td>多數選 early salvage RT，而非 routine adjuvant RT；可避免約 50% 病人接受 RT</td></tr>
+      <tr><td>Salvage ADT</td><td>RTOG 9601 和 GETUG-AFU 16 支持 selected salvage RT 加 ADT</td></tr>
+      <tr><td>Salvage PLNRT</td><td>SPPORT 支持 higher-risk salvage patients 加 pelvic nodes + ST-ADT</td></tr>
+      <tr><td>mCSPC primary RT</td><td>STAMPEDE 支持 low-burden metastatic disease 加 prostate RT 改善 OS</td></tr>
+      <tr><td>MDT</td><td>STOMP/ORIOLE/EXTEND 支持 oligometastatic disease 用 SBRT/MDT 改善 PFS</td></tr>
+      <tr><td>Radiopharmaceuticals</td><td>Ra-223 for bone-only mCRPC；Lu-177-PSMA for PSMA-positive mCRPC</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">一句話總結：攝護腺癌治療核心是 risk-adapted and hormone-integrated management：low/FIR 可常常避免 ADT，UIR 需 definitive RT + short-course ADT，high-risk 需 LT-ADT 並考慮 pelvic/dose intensification，VHR/N+ 可加入 abiraterone；RP 後多數採 early salvage 而非 routine adjuvant RT；metastatic disease 則整合 systemic intensification、low-volume mCSPC 的 prostate-directed RT、oligometastatic MDT，以及 selected mCRPC 的 radiopharmaceutical therapy。</div></div>
+<div data-lang="en"><p class="section-kicker"><strong>Final High-Yield Summary</strong></p>
+<div class="table-wrap">
+  <table class="oncology-table pca-table">
+    <caption>High-yield summary</caption>
+    <thead><tr><th scope="col">Topic</th><th scope="col">Most important conclusion</th></tr></thead>
+    <tbody>
+      <tr><td>Biology</td><td>Prostate cancer is androgen-driven, usually peripheral-zone adenocarcinoma, and PSA-secreting</td></tr>
+      <tr><td>Workup</td><td>H&P + IPSS/SHIM/DRE, PSA/testosterone, prostate MRI before biopsy, MRI-fusion biopsy preferred, metastatic imaging by risk</td></tr>
+      <tr><td>PSA recurrence</td><td>Post-RP: PSA &gt;0.2 twice; post-RT: nadir + 2</td></tr>
+      <tr><td>Risk grouping</td><td>Grade Group, PSA, T stage, and core positivity define low/FIR/UIR/HR/VHR</td></tr>
+      <tr><td>ADT</td><td>LR/FIR no ADT; UIR 4–6 months; HR 18–24 months; VHR/N+ add abiraterone</td></tr>
+      <tr><td>Radiobiology</td><td>Prostate alpha/beta about 1.5–3, supporting moderate hypofractionation and SBRT</td></tr>
+      <tr><td>Moderate hypo</td><td>60 Gy/20 fractions and 70 Gy/28 fractions are standard regimens</td></tr>
+      <tr><td>SBRT</td><td>PACE-B supports 36.25 Gy/5 fractions, with 5-year bPFS about 95%</td></tr>
+      <tr><td>Dose escalation</td><td>Improves biochemical control; FLAME boost improves bDFS without increasing late GU/GI toxicity</td></tr>
+      <tr><td>Brachy boost</td><td>ASCENDE-RT improves bPFS but increases grade 3+ GU toxicity and stricture</td></tr>
+      <tr><td>Pelvic nodes</td><td>POP-RT improves BFFS/DFS/DMFS in high-risk nodal-risk patients but not OS</td></tr>
+      <tr><td>Post-RP</td><td>Most patients use early salvage RT rather than routine adjuvant RT, avoiding RT in about half</td></tr>
+      <tr><td>Salvage ADT</td><td>RTOG 9601 and GETUG-AFU 16 support ADT with selected salvage RT</td></tr>
+      <tr><td>Salvage PLNRT</td><td>SPPORT supports pelvic nodes + ST-ADT in higher-risk salvage patients</td></tr>
+      <tr><td>mCSPC primary RT</td><td>STAMPEDE supports prostate RT for low-burden metastatic disease with OS benefit</td></tr>
+      <tr><td>MDT</td><td>STOMP/ORIOLE/EXTEND support SBRT/MDT to improve PFS in oligometastatic disease</td></tr>
+      <tr><td>Radiopharmaceuticals</td><td>Ra-223 for bone-only mCRPC; Lu-177-PSMA for PSMA-positive mCRPC</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="clinical-note">One-line summary: prostate cancer management is risk-adapted and hormone-integrated. Low-risk/FIR disease can often avoid ADT. UIR needs definitive RT plus short-course ADT. High-risk disease needs long-term ADT and consideration of pelvic or dose intensification. VHR/N+ disease may add abiraterone. After prostatectomy, most patients use early salvage rather than routine adjuvant RT. Metastatic disease integrates systemic intensification, prostate-directed RT for low-volume mCSPC, oligometastatic MDT, and selected radiopharmaceutical therapy for mCRPC.</div></div>
 </section>
 
 <section class="section"><div class="section-label" data-zh="關鍵試驗" data-en="KEY TRIALS">關鍵試驗</div><h2 data-zh="關鍵臨床試驗 (Estes 2025)" data-en="Key Clinical Trials (Estes 2025)">關鍵臨床試驗</h2><p data-lang="zh">以下為此主題的核心隨機試驗與樞紐研究，資料源自 Estes 2025 Key Studies 資料表，已整合於本章。</p><p data-lang="en">Core randomized trials and pivotal studies for this topic, from the Estes 2025 Key Studies tables, are integrated into this chapter.</p><div class="card" style="margin-bottom:14px">

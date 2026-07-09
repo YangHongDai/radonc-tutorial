@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Palliative Radiation — Rad Onc Tutorial</title>
+<title>Palliative Care and Radiation Emergencies — Rad Onc Tutorial</title>
 <link rel="stylesheet" href="styles.css"></head><body>
 <nav class="top-nav"><div class="top-nav-inner">
   <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="放射腫瘤學教學" data-en="Rad Onc Tutorial">Rad Onc Tutorial</span></a>
@@ -25,29 +25,459 @@
   </ul>
 </div></nav>
 <div class="progress-bar-container"><div class="progress-bar" id="progressBar"></div></div>
-<header class="page-hero"><div class="step-badge">🕊️ PALLIATIVE RADIATION</div>
-<h1 data-zh="緩和放射治療" data-en="Palliative Radiation">緩和放射治療</h1>
-<p class="subtitle" data-lang="zh">骨轉移、脊髓壓迫、SVC 症候群、腫瘤出血的處置。</p>
-<p class="subtitle" data-lang="en">Bone mets, cord compression, SVC syndrome, and tumor bleeding.</p>
+<header class="page-hero"><div class="step-badge">🩺 PALLIATIVE CARE AND RADIATION EMERGENCIES</div>
+<h1 data-zh="緩和治療與放射腫瘤急症" data-en="Palliative Care and Radiation Emergencies">緩和治療與放射腫瘤急症</h1>
+<p class="subtitle" data-lang="zh">Palliative RT、radiation emergency、SVC syndrome、bleeding、airway obstruction、bone metastases、MSCC、spine SBRT 與高分決策表。</p>
+<p class="subtitle" data-lang="en">Palliative radiotherapy, radiation emergencies, SVC syndrome, bleeding, airway obstruction, bone metastases, MSCC, spine SBRT, and high-yield decision tables.</p>
 </header>
 <main class="content-wrap">
 <section class="section">
-<div class="section-label" data-zh="骨轉移" data-en="BONE METS">骨轉移</div>
-<h2 data-zh="骨轉移" data-en="Bone metastases">骨轉移</h2>
-<div data-lang="zh"><p><strong>單次 8 Gy vs 30 Gy/10 fx (Chow, RTOG 97-14):</strong> 疼痛控制相當；單次再照射率較高但方便。</p><p><strong>複雜/脊柱/軟組織:</strong> 30 Gy/10 fx or 20 Gy/5 fx。</p><p><strong>SBRT 為骨轉移 (RTOG 0631, SC.24/CCTG SC.24 SORCE):</strong> 脊椎 24 Gy/2 fx 相對 conventional 20 Gy/5 fx 疼痛完全緩解率更高。</p></div>
-<div data-lang="en"><p><strong>Single 8 Gy vs 30 Gy/10 fx (Chow, RTOG 97-14):</strong> Equivalent pain control; single-fx has higher retreatment rate but is convenient.</p><p><strong>Complex / spine / soft-tissue extension:</strong> 30 Gy/10 fx or 20 Gy/5 fx.</p><p><strong>Spine SBRT (RTOG 0631, SC.24):</strong> 24 Gy/2 fx improves complete pain response vs conventional 20 Gy/5 fx.</p></div>
+<div class="section-label" data-zh="共通原則" data-en="GENERAL PRINCIPLES">共通原則</div>
+<h2 data-zh="Palliative RT / Radiation emergency 共通原則" data-en="General principles for palliative radiotherapy and radiation emergencies">Palliative RT / Radiation emergency 共通原則</h2>
+<div data-lang="zh">
+<p class="section-kicker"><strong>第一部分：Palliative RT / Radiation emergency 共通原則</strong></p>
+<h3>一、最重要的 emergency rule</h3>
+<p>Radiation emergency 不等於一定要立刻 RT。核心原則是：先評估是否真正急危、是否需要 tissue diagnosis、是否有 prior RT、是否需要先手術/介入處置。</p>
+<p>講義中的一句話很重要：“Tumor is the rumor, but tissue is the issue.” 也就是說，除非病人生命徵象或神經功能正在快速惡化，否則要盡量確認 pathology，因為 lymphoma、sarcoma、NSCLC、SCLC、germ cell tumor 對 chemotherapy、steroid、RT 的反應和治療順序完全不同。若要 emergency RT，必須記錄 pathology 狀態；若是 re-irradiation，要查病歷並詢問病人是否曾照射相同區域，最好做 plan sum、紀錄 OAR dose，並親自 bedside evaluation。</p>
+<h3>二、常見 palliative RT regimen</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>常見 palliative RT regimen</caption>
+    <thead><tr><th scope="col">部位 / 狀況</th><th scope="col">Poor PS / very short prognosis</th><th scope="col">Intermediate</th><th scope="col">Better PS / longer prognosis</th></tr></thead>
+    <tbody>
+      <tr><td>Spine/Bone</td><td>8 Gy ×1</td><td>20 Gy/5 Fx</td><td>30 Gy/10 Fx；selected spine SBRT</td></tr>
+      <tr><td>Lung / thorax</td><td>10 Gy ×1、17 Gy/2 Fx</td><td>20 Gy/5 Fx</td><td>30 Gy/10 Fx；40–45 Gy/15 Fx</td></tr>
+      <tr><td>Abdomen / pelvis</td><td>8 Gy ×1</td><td>14.8 Gy/4 Fx QUADSHOT、20 Gy/5 Fx</td><td>30 Gy/10 Fx</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>這個表的邏輯是：越差 PS、越短預期壽命，越短療程；越好 PS、越需要 durable control，越可以用較長療程或 SBRT。</p>
+</div>
+<div data-lang="en">
+<p class="section-kicker"><strong>Part I. Shared principles for palliative radiotherapy and radiation emergencies</strong></p>
+<h3>1. The most important emergency rule</h3>
+<p>A radiation emergency does not automatically mean immediate radiotherapy. The first step is to decide whether the situation is truly urgent, whether tissue diagnosis is needed, whether the patient has had prior radiotherapy, and whether surgery or an interventional procedure should come first.</p>
+<p>The teaching phrase is: “Tumor is the rumor, but tissue is the issue.” Unless vital signs or neurologic function are rapidly deteriorating, pathology should be confirmed whenever possible, because lymphoma, sarcoma, NSCLC, SCLC, and germ-cell tumor differ substantially in their response to chemotherapy, steroids, radiotherapy, and treatment sequencing. If emergency radiotherapy is delivered, document the pathology status. For re-irradiation, review the prior records, ask whether the same region was irradiated, perform plan summation when possible, document organ-at-risk dose, and assess the patient at the bedside.</p>
+<h3>2. Common palliative radiotherapy regimens</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Common palliative radiotherapy regimens</caption>
+    <thead><tr><th scope="col">Site / situation</th><th scope="col">Poor performance status / very short prognosis</th><th scope="col">Intermediate</th><th scope="col">Better performance status / longer prognosis</th></tr></thead>
+    <tbody>
+      <tr><td>Spine / bone</td><td>8 Gy ×1</td><td>20 Gy in 5 fractions</td><td>30 Gy in 10 fractions; selected spine SBRT</td></tr>
+      <tr><td>Lung / thorax</td><td>10 Gy ×1; 17 Gy in 2 fractions</td><td>20 Gy in 5 fractions</td><td>30 Gy in 10 fractions; 40–45 Gy in 15 fractions</td></tr>
+      <tr><td>Abdomen / pelvis</td><td>8 Gy ×1</td><td>14.8 Gy in 4 fractions QUADSHOT; 20 Gy in 5 fractions</td><td>30 Gy in 10 fractions</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The logic is simple: worse performance status and shorter expected survival favor shorter courses; better performance status and need for durable control justify longer courses or SBRT when appropriate.</p>
+</div>
 </section>
 <section class="section">
-<div class="section-label" data-zh="脊髓壓迫" data-en="CORD">脊髓壓迫</div>
-<h2 data-zh="惡性脊髓壓迫" data-en="Malignant spinal cord compression">惡性脊髓壓迫</h2>
-<div data-lang="zh"><p><strong>Patchell trial (Lancet 2005):</strong> 手術 + RT 相對 RT alone 顯著提升行走與存活。</p><p><strong>RT alone dose:</strong> 30 Gy/10 fx。<br><strong>Highly selected:</strong> SBRT 為 oligomets 病人的選項。</p></div>
-<div data-lang="en"><p><strong>Patchell trial (Lancet 2005):</strong> Surgery + RT significantly improves ambulation and survival vs RT alone.</p><p><strong>RT alone dose:</strong> 30 Gy/10 fx.<br><strong>Highly selected:</strong> SBRT is an option for oligomets patients.</p></div>
+<div class="section-label" data-zh="SVC syndrome" data-en="SVC SYNDROME">SVC syndrome</div>
+<h2 data-zh="Superior vena cava syndrome：pathophysiology、presentation、workup、severity 與治療" data-en="Superior vena cava syndrome: pathophysiology, presentation, workup, severity, and treatment">Superior vena cava syndrome：pathophysiology、presentation、workup、severity 與治療</h2>
+<div data-lang="zh">
+<p class="section-kicker"><strong>第二部分：SVC Syndrome</strong></p>
+<h3>一、Pathophysiology</h3>
+<p>SVC syndrome 是因 superior vena cava 被 extrinsic compression 或 intrinsic obstruction 阻塞，造成頭頸、上肢、上胸部 venous return 受阻，導致 proximal venous congestion。SVC 負責約 1/3 total venous return，drain head、arms、upper torso；右左 brachiocephalic veins 匯入 SVC，SVC 從 sternal angle 進入 right atrium。Collateral routes 包括 azygos、mammary、vertebral、lateral thoracic、paraspinous、esophageal veins。</p>
+<h3>二、Presentation</h3>
+<p>典型症狀與徵象是 facial edema、arm edema、distended neck veins、distended chest veins、facial plethora、dyspnea、cough、hoarseness、stridor、syncope、headache、dizziness、confusion、obtundation。講義圖表中最常見的是 facial edema 約 82%，distended neck veins 約 63%，dyspnea/cough 約 54%，distended chest veins 約 53%，arm edema 約 46%；stridor、confusion、obtundation 雖較少見，但代表可能有 life-threatening airway 或 neurologic compromise。</p>
+<h3>三、Common causes</h3>
+<p>過去 SVC syndrome 約 90% 由 malignancy 造成，但因 pacemaker leads、central venous catheters 等 implantable IV devices 增加，現在 malignancy 約佔 60%。非惡性原因包括 catheter-induced thrombosis、chronic mediastinitis、retrosternal goiter、CHF、aortic aneurysm。惡性原因中最常見是 NSCLC 約 50%，其次 SCLC 約 25%，但 SCLC 因 central airway rapid growth 更容易造成急性表現；NHL 約 12%，且是 &lt;50 歲病人最常見 cause，常見 histology 包括 DLBCL、lymphoblastic lymphoma、primary mediastinal B-cell lymphoma；其他包括 metastases、germ cell tumor、thymoma、mesothelioma。</p>
+<h3>四、Workup</h3>
+<p>SVC workup 先看穩定性：duration/severity of symptoms、respiratory status、neurologic status、hemodynamic stability。H&amp;P 要問 prior cancer diagnosis、prior intravascular procedures，並比較 facial changes，例如看 driver’s license 或詢問家屬。Imaging 包括 CXR 看 widened mediastinum、CT chest with contrast 看 collaterals。Labs 包括 BMP、CBC；若 cancer unknown，需 LDH、AFP、β-hCG。外壓型病灶需要 tissue diagnosis，可用 bronchoscopy/EBUS、mediastinoscopy、thoracentesis、VATS。</p>
+<h3>五、Severity classification：Yu et al. 2008</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Yu et al. 2008 SVC syndrome severity classification</caption>
+    <thead><tr><th scope="col">Grade</th><th scope="col">臨床意義</th><th scope="col">典型定義</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>Asymptomatic</td><td>Imaging 有 SVC obstruction，但無症狀</td></tr>
+      <tr><td>1</td><td>Mild</td><td>Head/neck edema、vascular distention、cyanosis、plethora</td></tr>
+      <tr><td>2</td><td>Moderate</td><td>Head/neck edema 加 functional impairment，例如 mild dysphagia、cough、jaw/eyelid movement impairment、visual disturbance</td></tr>
+      <tr><td>3</td><td>Severe</td><td>Mild/moderate cerebral edema，例如 headache/dizziness；或 laryngeal edema；或 diminished cardiac reserve</td></tr>
+      <tr><td>4</td><td>Life-threatening</td><td>Significant cerebral edema、confusion/obtundation、stridor、hemodynamic compromise</td></tr>
+      <tr><td>5</td><td>Fatal</td><td>Death</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>重點：Grade 3–4 才真正接近 emergency；大部分 SVC syndrome 是數週形成，有 collateral vessels 代表慢性過程。</p>
+<h3>六、Treatment</h3>
+<p>Initial management 包括 head-of-bed elevation、supplemental oxygen、dexamethasone/diuretics if cerebral edema。若有 thrombosis，給 anticoagulation。若病人 respiratory、neurologic 或 hemodynamic compromised，endovascular stent 是一線，因為 symptom relief 最快。若不是立即危及生命，抗癌治療前需先取得 pathology，因為 RT 與 steroid 可能影響 histologic diagnosis。Cancer-directed treatment 依 histology：lymphoma/SCLC/germ cell tumor 通常 chemotherapy 反應快；SCLC/NSCLC 可用 RT；thymoma 可考慮 surgery。</p>
+<h3>七、RT in SVC syndrome</h3>
+<p>RT 對 SVC syndrome 可在 72 小時內改善，尤其 radiosensitive histologies。若治療目標仍是 curative，可先用 3–4 Gy/Fx ×2–3 days 快速減症，再轉 1.8–2 Gy/Fx 完成 definitive RT；若純 palliative，可繼續較大 fraction。整體約 60–70% 有 good-to-excellent response，約 20% 病人在 2 週內 dyspnea、edema、venous distention 完全消失。Rowell &amp; Gleeson meta-analysis 顯示 SCLC 的 SVC relief 率：chemo 77% vs RT 78%；NSCLC：chemo 59% vs RT 63%，且 relief 不明顯依賴 RT fractionation 或 chemo regimen。Washington University retrospective study 中，125 位接受 RT 的 SVC syndrome 病人，80% 有 good-to-excellent symptomatic relief；2 週 relief rate 為 initial high dose 3–4 Gy/Fx ×3 Fx 70% vs 2 Gy/Fx 56%。</p>
+<p class="clinical-note"><strong>SVC high-yield：</strong>SVC syndrome 不一定是 emergency；真正急症是 airway、neurologic、hemodynamic compromise。先穩定病人，若 compromised 先 stent；若穩定，先取得 tissue diagnosis，再依 histology 選 chemotherapy、RT 或 surgery。</p>
+</div>
+<div data-lang="en">
+<p class="section-kicker"><strong>Part II. Superior vena cava syndrome</strong></p>
+<h3>1. Pathophysiology</h3>
+<p>Superior vena cava syndrome results from extrinsic compression or intrinsic obstruction of the superior vena cava, impairing venous return from the head, neck, upper limbs, and upper torso and causing proximal venous congestion. The SVC carries approximately one third of total venous return, draining the head, arms, and upper torso. The right and left brachiocephalic veins join to form the SVC, which enters the right atrium from the sternal angle. Collateral routes include the azygos, mammary, vertebral, lateral thoracic, paraspinous, and esophageal veins.</p>
+<h3>2. Presentation</h3>
+<p>Typical symptoms and signs include facial edema, arm edema, distended neck veins, distended chest veins, facial plethora, dyspnea, cough, hoarseness, stridor, syncope, headache, dizziness, confusion, and obtundation. In the teaching table, the most common findings are facial edema, distended neck veins, dyspnea or cough, distended chest veins, and arm edema. Stridor, confusion, and obtundation are less common but indicate possible life-threatening airway or neurologic compromise.</p>
+<h3>3. Common causes</h3>
+<p>Historically, approximately 90% of SVC syndrome was caused by malignancy. With the increased use of pacemaker leads and central venous catheters, malignancy now accounts for about 60%. Nonmalignant causes include catheter-induced thrombosis, chronic mediastinitis, retrosternal goiter, congestive heart failure, and aortic aneurysm. Among malignant causes, NSCLC is most common, followed by SCLC. SCLC can cause more acute presentations because of rapid central airway growth. NHL is an important cause, especially in patients younger than 50 years, with histologies including DLBCL, lymphoblastic lymphoma, and primary mediastinal B-cell lymphoma. Other causes include metastases, germ-cell tumor, thymoma, and mesothelioma.</p>
+<h3>4. Workup</h3>
+<p>The workup starts with stability: symptom duration and severity, respiratory status, neurologic status, and hemodynamic stability. History and physical examination should assess prior cancer diagnosis and prior intravascular procedures, and facial changes can be compared with a driver’s license photo or family report. Imaging includes chest radiography for mediastinal widening and contrast-enhanced chest CT for obstruction and collateral vessels. Laboratory tests include BMP and CBC; if cancer is unknown, obtain LDH, AFP, and β-hCG. Externally compressive lesions require tissue diagnosis, using bronchoscopy/EBUS, mediastinoscopy, thoracentesis, or VATS as appropriate.</p>
+<h3>5. Severity classification: Yu et al. 2008</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Yu et al. 2008 SVC syndrome severity classification</caption>
+    <thead><tr><th scope="col">Grade</th><th scope="col">Clinical meaning</th><th scope="col">Typical definition</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>Asymptomatic</td><td>Imaging shows SVC obstruction but there are no symptoms.</td></tr>
+      <tr><td>1</td><td>Mild</td><td>Head or neck edema, vascular distention, cyanosis, or plethora.</td></tr>
+      <tr><td>2</td><td>Moderate</td><td>Head or neck edema plus functional impairment, such as mild dysphagia, cough, impaired jaw or eyelid movement, or visual disturbance.</td></tr>
+      <tr><td>3</td><td>Severe</td><td>Mild to moderate cerebral edema, such as headache or dizziness; laryngeal edema; or diminished cardiac reserve.</td></tr>
+      <tr><td>4</td><td>Life-threatening</td><td>Significant cerebral edema, confusion or obtundation, stridor, or hemodynamic compromise.</td></tr>
+      <tr><td>5</td><td>Fatal</td><td>Death.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The key point is that grades 3–4 are the true emergency range. Most SVC syndrome develops over weeks, and collateral vessels indicate a chronic process.</p>
+<h3>6. Treatment</h3>
+<p>Initial management includes head-of-bed elevation, supplemental oxygen, and dexamethasone or diuretics when cerebral edema is present. If thrombosis is present, give anticoagulation. If the patient has respiratory, neurologic, or hemodynamic compromise, endovascular stenting is first-line because it provides the fastest symptomatic relief. If the situation is not immediately life-threatening, obtain pathology before cancer-directed treatment, because radiotherapy and steroids can affect histologic diagnosis. Cancer-directed therapy depends on histology: lymphoma, SCLC, and germ-cell tumors often respond rapidly to chemotherapy; SCLC and NSCLC can be treated with radiotherapy; thymoma may be surgical.</p>
+<h3>7. Radiotherapy for SVC syndrome</h3>
+<p>Radiotherapy can improve SVC syndrome within 72 hours, especially for radiosensitive histologies. If the intent remains curative, a short initial course of 3–4 Gy per fraction for 2–3 days can be used for rapid symptom relief, followed by 1.8–2 Gy fractions to complete definitive treatment. If the intent is purely palliative, larger fractions can be continued. Overall, about 60–70% have good-to-excellent responses, and about 20% have complete resolution of dyspnea, edema, and venous distention within 2 weeks. Rowell and Gleeson reported similar relief with chemotherapy and radiotherapy in SCLC and NSCLC. A Washington University retrospective series found good-to-excellent symptomatic relief in 80% of patients receiving radiotherapy, with faster two-week relief using initial 3–4 Gy fractions compared with 2 Gy fractions.</p>
+<p class="clinical-note"><strong>SVC high-yield:</strong> SVC syndrome is not always an emergency. The true emergencies are airway, neurologic, or hemodynamic compromise. Stabilize first; if compromised, stent first. If stable, obtain tissue diagnosis and then choose chemotherapy, radiotherapy, or surgery according to histology.</p>
+</div>
 </section>
 <section class="section">
-<div class="section-label" data-zh="SVC / 出血" data-en="SVC / BLEED">SVC / 出血</div>
-<h2 data-zh="SVC 症候群與出血" data-en="SVC syndrome & tumor bleeding">SVC 症候群與出血</h2>
-<div data-lang="zh"><p><strong>SVC:</strong> 首選<strong>血管內支架</strong>快速緩解；後續 RT 依原發癌 (SCLC → 化療優先)。</p><p><strong>Hemostatic RT:</strong> 婦科 / 泌尿 / 胸腔出血 — 20–30 Gy/5–10 fx 有效止血。</p></div>
-<div data-lang="en"><p><strong>SVC:</strong> <strong>Endovascular stenting</strong> is preferred for rapid relief; subsequent RT depends on primary (SCLC → chemo first).</p><p><strong>Hemostatic RT:</strong> Gyn / GU / thoracic bleeding — 20–30 Gy/5–10 fx effectively stops bleeding.</p></div>
+<div class="section-label" data-zh="出血/氣道" data-en="BLEEDING/AIRWAY">出血/氣道</div>
+<h2 data-zh="Bleeding、airway obstruction、hemoptysis 與 QUADSHOT" data-en="Bleeding, airway obstruction, hemoptysis, and QUADSHOT">Bleeding、airway obstruction、hemoptysis 與 QUADSHOT</h2>
+<div data-lang="zh">
+<p class="section-kicker"><strong>第三部分：Bleeding / Airway obstruction / Hemoptysis</strong></p>
+<h3>一、Airway obstruction and hemoptysis</h3>
+<p>Tumor adjacent to or invading airway 可造成 compression/obstruction 或 bleeding/hemoptysis。若病人有 significant acute airway compromise，不應一開始就用 RT，因為 RT 通常不是最快的解決方法。急性 airway compromise 或 massive hemoptysis 應先考慮 bronchoscopy、stenting、laser、local stabilization of bleeding source；RT 在病人穩定後可作為 durable palliation。</p>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>RT symptom response by indication</caption>
+    <thead><tr><th scope="col">Symptom / indication</th><th scope="col">RT response rate</th></tr></thead>
+    <tbody>
+      <tr><td>Hemoptysis</td><td>76–95%</td></tr>
+      <tr><td>Chest pain</td><td>50–80%</td></tr>
+      <tr><td>Cough</td><td>50–65%</td></tr>
+      <tr><td>Dyspnea</td><td>37–60%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Hemoptysis 的 palliation 通常需要 24–48 小時；dyspnea 可需要到 1 週。</p>
+<h3>二、ASTRO palliative thoracic RT for NSCLC</h3>
+<p>2011 ASTRO guideline：good performance status 的病人可受益於較高 dose-fractionated palliative EBRT，例如 30 Gy/10 Fx equivalent or greater，可能有 modest OS benefit，但 esophageal toxicity 較高。Poor performance status 病人可用短療程，例如 20 Gy/5 Fx、17 Gy/2 Fx、10 Gy/1 Fx，症狀緩解好且副作用少。</p>
+<p>2018 update：stage III NSCLC 若不適合 curative therapy，但 ECOG 0–2、可接受 chemotherapy、life expectancy ≥3 months，可考慮 platinum-containing chemotherapy doublet concurrent with moderately hypofractionated palliative thoracic RT，regimens 包括 20/5、30/10、42/15。Stage IV NSCLC 則不建議在臨床試驗/registry 外常規 concurrent chemoradiation，因缺乏 level I evidence。</p>
+<h3>三、GI and pelvic bleeding</h3>
+<p>Radiation 對 bleeding control 很有效。講義表格顯示，lung bleeding 在 RT 結束時 improvement 100%、follow-up 80%；upper GI 100%/60%；uterovaginal 95%/79%；bladder 65%/59%。</p>
+<p>Gastric bleeding：Tey et al. 2007 retrospective review 納入 33 位 locally advanced 或 recurrent gastric cancer 接受 palliative RT alone，多數接受 30 Gy/10 Fx，range 8 Gy/1 Fx 到 40 Gy/16 Fx。Bleeding response 為 54.3%，median duration 140 days；obstruction response 25%，pain response 25%；只有 1 例 grade 3 nausea/vomiting 需住院 IV hydration/antiemetics，無 treatment-related fatality。</p>
+<h3>四、QUADSHOT for pelvic bleeding：RTOG 8502</h3>
+<p>Pelvic QUADSHOT：3.7 Gy ×4 Fx，BID，2 consecutive days，total 14.8 Gy/course，可每 4 週重複，最多 3 courses，總劑量 44.4 Gy。RTOG 8502 phase II trial 納入 142 位 pelvic malignancy palliation 病人，60% 完成 1 course、20% 完成 2 courses、20% 完成 3 courses。整體 complete remission 10%、partial remission 22%；3 courses 後 complete remission 14%、partial remission 31%。Toxicity 低，僅 1 acute GI 與 1 late GI toxicity。</p>
+<h3>五、QUADSHOT for head and neck bleeding</h3>
+<p>Head and neck QUADSHOT：3.5 Gy ×4 Fx，BID over 2 consecutive days，total 14 Gy/course，可每 4 週重複，最多 3 courses，總劑量 42 Gy。Corry et al. 2005 phase II study 納入 35 位 H&amp;N squamous cell carcinoma 病人，最常見症狀是 dysphagia 與 pain。20% 完成 1 course、27% 完成 2 courses、53% 完成 3 courses。Overall response CR/PR 為 53%，77% 有 disease reduction or stabilization；treatment well tolerated，無 grade 3+ toxicity。</p>
+<p class="clinical-note"><strong>Bleeding high-yield：</strong>Airway compromise 先 bronchoscopy/stent/laser；穩定後 RT。Bleeding control 是 palliative RT 很強的 indication；GI/pelvis/H&amp;N 若 PS 差或需要快速短程，可用 QUADSHOT。</p>
+</div>
+<div data-lang="en">
+<p class="section-kicker"><strong>Part III. Bleeding, airway obstruction, and hemoptysis</strong></p>
+<h3>1. Airway obstruction and hemoptysis</h3>
+<p>Tumor adjacent to or invading the airway can cause compression, obstruction, bleeding, or hemoptysis. If the patient has significant acute airway compromise, radiotherapy should not be the first maneuver because it is usually not the fastest way to restore airway stability. Acute airway compromise or massive hemoptysis should first prompt bronchoscopy, stenting, laser therapy, and local stabilization of the bleeding source. Radiotherapy can then provide more durable palliation once the patient is stable.</p>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Radiotherapy symptom response by indication</caption>
+    <thead><tr><th scope="col">Symptom / indication</th><th scope="col">Radiotherapy response rate</th></tr></thead>
+    <tbody>
+      <tr><td>Hemoptysis</td><td>76–95%</td></tr>
+      <tr><td>Chest pain</td><td>50–80%</td></tr>
+      <tr><td>Cough</td><td>50–65%</td></tr>
+      <tr><td>Dyspnea</td><td>37–60%</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Hemoptysis palliation often takes 24–48 hours; dyspnea may take up to one week to improve.</p>
+<h3>2. ASTRO palliative thoracic radiotherapy for NSCLC</h3>
+<p>The 2011 ASTRO guideline states that patients with good performance status may benefit from higher-dose palliative thoracic EBRT, such as 30 Gy in 10 fractions or an equivalent or greater dose, with a possible modest survival benefit but higher esophageal toxicity. Patients with poor performance status can receive shorter courses such as 20 Gy in 5 fractions, 17 Gy in 2 fractions, or 10 Gy in 1 fraction, with good symptom relief and fewer side effects.</p>
+<p>The 2018 update notes that selected stage III NSCLC patients who are not candidates for curative therapy but have ECOG 0–2, can tolerate chemotherapy, and have life expectancy of at least 3 months may be considered for platinum-containing doublet chemotherapy with moderately hypofractionated palliative thoracic radiotherapy, such as 20/5, 30/10, or 42/15. For stage IV NSCLC, routine concurrent chemoradiation outside a clinical trial or registry is not recommended because level I evidence is lacking.</p>
+<h3>3. Gastrointestinal and pelvic bleeding</h3>
+<p>Radiotherapy is highly effective for bleeding control. The lecture table reports improvement at the end of radiotherapy and at follow-up for lung bleeding, upper gastrointestinal bleeding, uterovaginal bleeding, and bladder bleeding.</p>
+<p>For gastric bleeding, Tey et al. 2007 retrospectively reviewed 33 patients with locally advanced or recurrent gastric cancer treated with palliative radiotherapy alone, most commonly 30 Gy in 10 fractions. The bleeding response was 54.3%, with median duration of 140 days. Obstruction and pain responses were lower. Only one patient had grade 3 nausea or vomiting requiring hospitalization for intravenous hydration and antiemetics, and there was no treatment-related fatality.</p>
+<h3>4. QUADSHOT for pelvic bleeding: RTOG 8502</h3>
+<p>Pelvic QUADSHOT uses 3.7 Gy ×4 fractions, delivered twice daily over 2 consecutive days, for 14.8 Gy per course. It can be repeated every 4 weeks for up to 3 courses, to a total dose of 44.4 Gy. RTOG 8502 enrolled 142 patients receiving pelvic malignancy palliation. Overall complete remission was 10% and partial remission 22%; after 3 courses, complete remission was 14% and partial remission 31%. Toxicity was low, with only one acute gastrointestinal toxicity and one late gastrointestinal toxicity.</p>
+<h3>5. QUADSHOT for head and neck bleeding</h3>
+<p>Head and neck QUADSHOT uses 3.5 Gy ×4 fractions, delivered twice daily over 2 consecutive days, for 14 Gy per course. It can be repeated every 4 weeks for up to 3 courses, to a total dose of 42 Gy. Corry et al. 2005 enrolled 35 patients with head and neck squamous cell carcinoma; the most common symptoms were dysphagia and pain. Overall CR/PR was 53%, and 77% had disease reduction or stabilization. Treatment was well tolerated, with no grade 3 or higher toxicity.</p>
+<p class="clinical-note"><strong>Bleeding high-yield:</strong> Airway compromise comes first: bronchoscopy, stent, or laser before radiotherapy. Once stable, radiotherapy is useful. Bleeding control is one of the strongest indications for palliative radiotherapy; for GI, pelvic, or head and neck bleeding in frail patients or when rapid short-course palliation is needed, QUADSHOT is a useful option.</p>
+</div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="骨轉移" data-en="BONE METASTASES">骨轉移</div>
+<h2 data-zh="Bone metastases：workup、預後、fracture risk、術後 RT、劑量與放射性藥物" data-en="Bone metastases: workup, prognosis, fracture risk, postoperative radiotherapy, dose, and radiopharmaceuticals">Bone metastases：workup、預後、fracture risk、術後 RT、劑量與放射性藥物</h2>
+<div data-lang="zh">
+<p class="section-kicker"><strong>第四部分：Bone Metastases</strong></p>
+<h3>一、Epidemiology</h3>
+<p>Symptomatic bone metastases 是 palliative RT 最常見 indication 之一。最多可有 80% cancer patients 發生 bone metastases，通常 hematogenous spread，也可由 direct invasion。Bone metastases 較常見於 axial skeleton，包括 skull、spine、sternum、ribs；spine 中 thoracic spine 最常受影響。Top 5 原發癌是 prostate、breast、renal cell carcinoma、thyroid、lung。</p>
+<p>Bone lesion 可分 lytic、sclerotic、mixed。Lytic lesions 在 CT 上通常 lucent、接近 soft tissue density；sclerotic lesions 則 hyperdense。常見 osteolytic 原發包括 multiple myeloma、RCC、thyroid、melanoma、lymphoma、uterine、GI malignancies、HCC、squamous cell、sarcoma；osteoblastic 常見 prostate cancer，也可見 osteosarcoma/chondrosarcoma；breast、lung、cervical、testicular 可 mixed。</p>
+<h3>二、Workup</h3>
+<p>Full H&amp;P 要評估 pain、sensory/motor dysfunction、walking ability、impending fracture risk、是否 weight-bearing bone。Imaging 包括 X-ray，但 CT 更 sensitive；若 concern for spinal cord compression，要 MRI；breast/prostate cancer 可用 bone scintigraphy。需要 tissue diagnosis 的情境包括 solitary bone tumor、沒有既有 cancer diagnosis 的新 bone tumor、first metastatic relapse；preferred 是 CT-guided FNA 或 core biopsy。</p>
+<p>Consultants：weight-bearing bone 或 fracture concern 找 orthopedics；cord compression 或 skull metastasis concern 找 neurosurgery。</p>
+<h3>三、Prognostication</h3>
+<p>Chow et al. JCO 2008 model：三個不良因子是 non-breast primary、non-bony metastases、KPS ≤60%。0–1 個 risk factor median survival 60 weeks；2 個 25 weeks；3 個 10 weeks。Kubota/Katagiri-type survival framework 依 primary cancer speed、visceral metastases、lab data、ECOG PS、previous chemotherapy、multiple skeletal metastases 等分類；slow primary 包括 breast、prostate、thyroid、multiple myeloma、lymphoma；moderate 包括 renal、endometrial、ovarian、sarcoma；rapid 包括 lung、colorectal、gastric、pancreatic、H&amp;N、esophageal、melanoma、gallbladder、cervical、other urologic cancers。</p>
+<h3>四、Complicated vs uncomplicated bone metastases</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Complicated vs uncomplicated bone metastases</caption>
+    <thead><tr><th scope="col">分類</th><th scope="col">定義</th></tr></thead>
+    <tbody>
+      <tr><td>Uncomplicated</td><td>Painful bone metastases，但沒有 impending/existing pathologic fracture，也沒有 spinal cord 或 cauda equina compression</td></tr>
+      <tr><td>Complicated</td><td>有 pathologic fracture、spinal cord/cauda equina compression；臨床上也常把 soft tissue component、weight-bearing bone high fracture risk 納入 complicated</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>這個分類影響 fractionation：uncomplicated painful bone mets 可放心使用 8 Gy ×1；complicated lesions 常需要手術評估、較長療程或更精細 technique。</p>
+<h3>五、Fracture risk and prophylactic fixation</h3>
+<p>Harrington criteria for prophylactic fixation 包括：cortical bone destruction &gt;50%、metaphyseal involvement &gt;2.5 cm、destruction of subtrochanteric femoral lesion、persistent pain following radiation。這些 criteria 早於 Mirels，但未被充分 validation，使用仍有爭議。Mirels score 則依 long bone lesion 的 site、size、nature、pain 預測 pathologic fracture risk；其中 pain 是最主觀項目，Mirels score 可能稍微高估 fracture risk。</p>
+<h3>六、Surgery and postoperative RT</h3>
+<p>Surgical options 包括 vertebroplasty、kyphoplasty、intramedullary rod。Vertebroplasty 是經皮注入 PMMA bone cement 到 collapsed vertebral body；kyphoplasty 是先用 balloon 在 fractured vertebral body 建 cavity，再注入 cement；intramedullary rod 則用於 long bone stabilization 後 cementing。</p>
+<p>Townsend et al. 1995 顯示 orthopedic stabilization 後 PORT 很重要。64 個 humerus/acetabulum/femur metastatic stabilization procedures 中，postop RT 是 multivariate 上唯一與良好 functional status 顯著相關的因子；PORT 通常在術後 6 週內開始，median dose 30 Gy。Postoperative RT 達到 normal use with/without pain 的機率 53% vs surgery alone 11.5%，並降低第二次手術需要。Whole hardware coverage 也很重要：MSKCC retrospective analysis 顯示 whole hardware coverage 在 propensity-score matching 後與較低 local recurrence 相關；multiple myeloma long-bone fixation 後，&lt;80% hardware coverage 會增加 hardware relapse risk。</p>
+<h3>七、RT dose for uncomplicated bone metastases</h3>
+<p>RTOG 7402 顯示多種 fractionation 都可提供 pain relief，約 90% 有 some relief，54% complete relief。Rich et al. 2018 meta-analysis 納入 29 個 RCT，單次與多次 fraction palliative RT 在 uncomplicated bone metastases 的 pain relief 與 toxicity 相近：overall response 61% vs 62%，complete response 23% vs 24%，pathologic fracture、cord compression、acute toxicity 無顯著差異；但 retreatment 較常見於 single fraction：20% vs 8%。</p>
+<p>RTOG 9714 比較 breast/prostate cancer painful bone mets 的 8 Gy ×1 vs 30 Gy/10 Fx。ORR 幾乎相同：65% vs 66%；narcotic relief 33% vs 32%；fracture 5% vs 4%；late G2+ toxicity 4% vs 4%。8 Gy ×1 的 acute G2+ toxicity 較少，但 retreatment 較高：18% vs 9%。</p>
+<p>ASTRO 2017 update：previously unirradiated bone mets 中，8 Gy/1 Fx、24 Gy/6 Fx、30 Gy/10 Fx 的 pain relief 相等；single fraction retreatment 較高，但不增加 pathologic fracture 或 late toxicity。Persistent/recurrent pain 可在 EBRT 後 1 個月考慮 retreatment，需遵守 normal tissue constraints。Surgery、radionuclides、bisphosphonates、kypho/vertebroplasty 不取代 EBRT。</p>
+<h3>八、High-risk asymptomatic bone metastases</h3>
+<p>RT 不只用於 symptomatic lesions。Gillespie et al. 2022 phase II RCT 針對 high-risk asymptomatic bone metastases 比較 prophylactic RT vs standard of care。High-risk 定義包括 bulky disease ≥2 cm、junctional spine or posterior spinal element disease、hip/SI joint involvement、long bone lesion involving 1/3–2/3 cortical thickness。SRE 在 SOC arm 為 29%，prophylactic RT arm 為 1.6%；RT prophylaxis 改善 time to SRE、hospitalizations、pain、OS。</p>
+<h3>九、Re-irradiation</h3>
+<p>RTOG 0433 比較 8 Gy/1 Fx vs 20 Gy/5–8 Fx reirradiation for painful bone metastases，primary endpoint 是 2 個月 pain relief；結果 overall response 無差異，single fraction toxicity 較少，包括 appetite loss、vomiting、diarrhea、skin redness 較少。</p>
+<h3>十、Pain flare and dexamethasone</h3>
+<p>Pain flare 是 treated metastatic bone site 的 transient worsening pain。EBRT 後 incidence 可達 44%，SBRT 後可達 64%，會影響 QoL，也可能增加 analgesic side effects。Dexamethasone 被研究作為 prophylaxis，機制可能是減少 treated bone periosteal edema，但 optimal dose/frequency/duration 無共識。Dutch DEXA study 中 dexamethasone 對 pain 有 immediate effect，但 prophylaxis 對降低 pain flare incidence 沒有明確效果，可能只是 postpones pain flare。</p>
+<h3>十一、Multiple myeloma bone RT</h3>
+<p>Multiple myeloma 常需要較低 BED。常見 regimen 包括 8 Gy/1 Fx、20 Gy/5 Fx、20–30 Gy/10–20 Fx for painful osseous plasmacytomas；30 Gy/10–15 Fx 保留給 bulky masses 或 spinal cord compression 且需要 durable control 的情境。Retrospective data 顯示 MM 最常用 20 Gy/10 Fx，最常照射 spine；BED10 &lt;28 Gy reirradiation rate 稍高，但整體 reirradiation rate 低。</p>
+<h3>十二、Bone-modifying agents and radiopharmaceuticals</h3>
+<p>Bone-modifying agents：pamidronate/zoledronate 是 bisphosphonates，抑制 osteoclasts，風險包括 osteonecrosis of jaw 與 atypical femur fractures；denosumab 是 RANKL inhibitor，可阻止 osteoclast maturation。</p>
+<p>Unsealed sources 包括 Sr-89、Sm-153、P-32、Ra-223。P-32 因 hematologic toxicity 高而少用。Sr-89 是 pure β-emitter，half-life 50.6 days；Sm-153 主要 β emission 且有 gamma component，half-life 46 hours、尿液排除快，pain relief 較快；Ra-223/Xofigo 是 α-emitter，half-life 11.4 days。Ra-223 適合 metastatic castration-resistant prostate cancer 且無 myelosuppression、kidney function good、無 cord compression/impending fracture、無 soft tissue component、未與 abiraterone/Zytiga 併用。ALSYMPCA trial 顯示 Ra-223 有約 3 個月 OS benefit：14.9 vs 11.3 months，並延長 time to first symptomatic skeletal event：15.6 vs 9.8 months。Sr-89/Sm-153 marrow toxicity 較高，適合 acceptable blood counts 且 multifocal painful mets。</p>
+<p class="clinical-note"><strong>Bone mets high-yield：</strong>8 Gy ×1 與 30 Gy/10 在 pain relief 相近；8 Gy ×1 更方便、acute toxicity 較低，但 retreatment 較高。Longer course 用於 better prognosis、post-op、complicated lesions 或需要 durable control。Hardware 要盡量全長 cover。</p>
+</div>
+<div data-lang="en">
+<p class="section-kicker"><strong>Part IV. Bone metastases</strong></p>
+<h3>1. Epidemiology</h3>
+<p>Symptomatic bone metastases are among the most common indications for palliative radiotherapy. Bone metastases can occur in up to 80% of cancer patients, usually through hematogenous spread, although direct invasion can occur. They most often involve the axial skeleton, including skull, spine, sternum, and ribs; within the spine, the thoracic spine is most commonly affected. The five most common primaries are prostate, breast, renal cell carcinoma, thyroid, and lung cancer.</p>
+<p>Bone lesions can be lytic, sclerotic, or mixed. Lytic lesions are usually lucent on CT and approach soft-tissue density, whereas sclerotic lesions are hyperdense. Osteolytic primaries include multiple myeloma, RCC, thyroid, melanoma, lymphoma, uterine, GI malignancies, HCC, squamous cell carcinoma, and sarcoma. Osteoblastic metastases are classically prostate cancer. Breast, lung, cervical, and testicular cancers can be mixed.</p>
+<h3>2. Workup</h3>
+<p>History and physical examination should assess pain, sensory or motor dysfunction, walking ability, impending fracture risk, and whether a weight-bearing bone is involved. Imaging can start with radiography, but CT is more sensitive. If spinal cord compression is a concern, obtain MRI. Breast and prostate cancer may be evaluated with bone scintigraphy. Tissue diagnosis is needed for a solitary bone tumor, a new bone tumor without a known cancer diagnosis, or first metastatic relapse; CT-guided FNA or core biopsy is preferred.</p>
+<p>Consult orthopedics for weight-bearing bone lesions or fracture concern, and neurosurgery for cord compression or skull metastasis concern.</p>
+<h3>3. Prognostication</h3>
+<p>The Chow et al. JCO 2008 model uses three adverse factors: non-breast primary, non-bony metastases, and KPS ≤60%. Median survival was 60 weeks for 0–1 risk factor, 25 weeks for 2 factors, and 10 weeks for 3 factors. Kubota/Katagiri-type frameworks use primary cancer speed, visceral metastases, laboratory data, ECOG performance status, prior chemotherapy, and multiple skeletal metastases. Slow primaries include breast, prostate, thyroid, multiple myeloma, and lymphoma; moderate primaries include renal, endometrial, ovarian, and sarcoma; rapid primaries include lung, colorectal, gastric, pancreatic, head and neck, esophageal, melanoma, gallbladder, cervical, and other urologic cancers.</p>
+<h3>4. Complicated versus uncomplicated bone metastases</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Complicated versus uncomplicated bone metastases</caption>
+    <thead><tr><th scope="col">Category</th><th scope="col">Definition</th></tr></thead>
+    <tbody>
+      <tr><td>Uncomplicated</td><td>Painful bone metastases without impending or existing pathologic fracture and without spinal cord or cauda equina compression.</td></tr>
+      <tr><td>Complicated</td><td>Pathologic fracture, spinal cord or cauda equina compression; in practice, soft-tissue component and high fracture risk in weight-bearing bone are also often treated as complicated.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>This classification affects fractionation. Uncomplicated painful bone metastases can be treated confidently with 8 Gy ×1. Complicated lesions often require surgical assessment, longer-course radiotherapy, or more precise technique.</p>
+<h3>5. Fracture risk and prophylactic fixation</h3>
+<p>Harrington criteria for prophylactic fixation include cortical bone destruction greater than 50%, metaphyseal involvement greater than 2.5 cm, destruction of a subtrochanteric femoral lesion, and persistent pain after radiotherapy. These criteria predate Mirels and have not been fully validated. Mirels score uses long-bone lesion site, size, nature, and pain to predict pathologic fracture risk; pain is the most subjective component, so Mirels may somewhat overestimate fracture risk.</p>
+<h3>6. Surgery and postoperative radiotherapy</h3>
+<p>Surgical options include vertebroplasty, kyphoplasty, and intramedullary rod fixation. Vertebroplasty injects PMMA bone cement into a collapsed vertebral body. Kyphoplasty first uses a balloon to create a cavity in the fractured vertebral body before cement injection. Intramedullary rods are used for long-bone stabilization, often with cementing.</p>
+<p>Townsend et al. 1995 showed that postoperative radiotherapy after orthopedic stabilization is important. Postoperative radiotherapy was the only multivariable factor significantly associated with good functional status; it was typically started within 6 weeks after surgery, with median dose 30 Gy. Postoperative radiotherapy improved normal use with or without pain and reduced the need for second surgery. Whole-hardware coverage is also important: MSKCC retrospective data showed lower local recurrence with whole-hardware coverage after propensity-score matching, and in multiple myeloma, less than 80% hardware coverage increased hardware relapse risk.</p>
+<h3>7. Radiotherapy dose for uncomplicated bone metastases</h3>
+<p>RTOG 7402 showed that multiple fractionation schedules provide pain relief. Rich et al. 2018 meta-analysis of 29 randomized trials found similar pain relief and toxicity between single-fraction and multifraction palliative radiotherapy for uncomplicated bone metastases. Overall response, complete response, pathologic fracture, cord compression, and acute toxicity were similar, but retreatment was more common after single-fraction treatment.</p>
+<p>RTOG 9714 compared 8 Gy ×1 with 30 Gy in 10 fractions for painful breast or prostate bone metastases. Overall response was essentially identical, narcotic relief and fracture rates were similar, and late grade 2 or higher toxicity was similar. The 8 Gy arm had less acute grade 2 or higher toxicity but more retreatment.</p>
+<p>The ASTRO 2017 update states that for previously unirradiated bone metastases, 8 Gy in 1 fraction, 24 Gy in 6 fractions, and 30 Gy in 10 fractions provide equivalent pain relief. Single-fraction treatment has higher retreatment rates but does not increase pathologic fracture or late toxicity. Persistent or recurrent pain can be retreated one month after EBRT, while respecting normal tissue constraints. Surgery, radionuclides, bisphosphonates, kyphoplasty, and vertebroplasty do not replace EBRT.</p>
+<h3>8. High-risk asymptomatic bone metastases</h3>
+<p>Radiotherapy is not only for symptomatic lesions. Gillespie et al. 2022 phase II randomized trial compared prophylactic radiotherapy with standard care for high-risk asymptomatic bone metastases. High-risk features included bulky disease ≥2 cm, junctional spine or posterior spinal element disease, hip or sacroiliac joint involvement, and long-bone lesions involving one third to two thirds of cortical thickness. Skeletal-related events were 29% with standard care versus 1.6% with prophylactic radiotherapy; prophylactic radiotherapy also improved time to SRE, hospitalizations, pain, and survival.</p>
+<h3>9. Re-irradiation</h3>
+<p>RTOG 0433 compared 8 Gy in 1 fraction with 20 Gy in 5–8 fractions for reirradiation of painful bone metastases. The primary endpoint was 2-month pain relief. Overall response was similar, while single-fraction treatment had less toxicity, including appetite loss, vomiting, diarrhea, and skin redness.</p>
+<h3>10. Pain flare and dexamethasone</h3>
+<p>Pain flare is transient worsening pain at the treated metastatic bone site. It can occur after EBRT and is even more frequent after SBRT, affecting quality of life and increasing analgesic side effects. Dexamethasone has been studied for prophylaxis, possibly by reducing periosteal edema in treated bone, but optimal dose, frequency, and duration are not established. In the Dutch DEXA study, dexamethasone had an immediate effect on pain, but prophylaxis did not clearly reduce pain flare incidence and may have only postponed it.</p>
+<h3>11. Multiple myeloma bone radiotherapy</h3>
+<p>Multiple myeloma often requires lower BED. Common regimens include 8 Gy in 1 fraction, 20 Gy in 5 fractions, and 20–30 Gy in 10–20 fractions for painful osseous plasmacytomas. Thirty Gy in 10–15 fractions is reserved for bulky masses or spinal cord compression when durable control is needed. Retrospective data suggest that 20 Gy in 10 fractions is common, especially for spine treatment; BED10 below 28 Gy slightly increases reirradiation but overall reirradiation remains low.</p>
+<h3>12. Bone-modifying agents and radiopharmaceuticals</h3>
+<p>Bone-modifying agents include pamidronate and zoledronate, bisphosphonates that inhibit osteoclasts, with risks including osteonecrosis of the jaw and atypical femur fracture. Denosumab is a RANKL inhibitor that blocks osteoclast maturation.</p>
+<p>Unsealed sources include Sr-89, Sm-153, P-32, and Ra-223. P-32 is rarely used because of hematologic toxicity. Sr-89 is a pure beta emitter with a 50.6-day half-life. Sm-153 emits beta radiation with a gamma component, has a 46-hour half-life, is cleared rapidly in urine, and provides relatively rapid pain relief. Ra-223 is an alpha emitter with an 11.4-day half-life. Ra-223 is appropriate for metastatic castration-resistant prostate cancer without myelosuppression, with adequate kidney function, no cord compression or impending fracture, no soft-tissue component, and not combined with abiraterone. ALSYMPCA showed an approximately 3-month survival benefit and delayed first symptomatic skeletal event. Sr-89 and Sm-153 have more marrow toxicity and are most suitable for patients with acceptable blood counts and multifocal painful metastases.</p>
+<p class="clinical-note"><strong>Bone metastases high-yield:</strong> 8 Gy ×1 and 30 Gy in 10 fractions provide similar pain relief. 8 Gy ×1 is convenient and has lower acute toxicity but higher retreatment. Longer courses are used for better prognosis, postoperative settings, complicated lesions, or need for durable control. Cover the entire hardware whenever possible.</p>
+</div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="MSCC 基礎" data-en="MSCC BASICS">MSCC 基礎</div>
+<h2 data-zh="Cord compression / MSCC：anatomy、presentation、pathophysiology、workup、SINS、Bilsky" data-en="Cord compression / MSCC: anatomy, presentation, pathophysiology, workup, SINS, and Bilsky">Cord compression / MSCC：anatomy、presentation、pathophysiology、workup、SINS、Bilsky</h2>
+<div data-lang="zh">
+<p class="section-kicker"><strong>第五部分：Cord Compression / MSCC</strong></p>
+<h3>一、Anatomy and definition</h3>
+<p>Spinal cord 在成人從 foramen magnum 延伸到 L1–L2；cauda equina 是 L1–L2 到 S2 的 lumbar/sacral nerve roots；dural sac 包住 spinal cord，nerve roots lateral exit。MRI 上 T2 CSF bright，T1 CSF dark；T1 abnormal low signal 常表示 normal fatty marrow loss 與 water content increase，T2 abnormal high signal 可能代表 trauma、infection、cancer 等 pathology。</p>
+<p>Cord compression 定義是任何 radiographic compression of spinal cord 或 cauda equina。可分 epidural compression，由 tumor 或 bone fragment 造成；intradural disease；intradural extramedullary，例如 leptomeningeal disease；intramedullary，即 spinal cord 內 tumor deposit。</p>
+<h3>二、Incidence and presentation</h3>
+<p>MSCC 影響約 5–10% cancer patients，是高 morbidity/mortality 的 oncologic emergency；median survival 約 3 months，cord compression 後只有約 1/3 病人活超過 1 年。成人最常造成 MSCC 的癌症是 lung &gt; prostate &gt; multiple myeloma；兒童常見 Ewing sarcoma 與 neuroblastoma。95% 是 epidural，通常因 vertebral body metastasis external compression；thoracic spine 70%、lumbar 20%、cervical 10%；約 25% 病人有 multiple levels involved。</p>
+<p>最常見 presenting symptom 是 back pain，83–95%。Pain 可 localized 或 radicular，常因 recumbency/Valsalva 惡化，夜間或清晨較明顯。Cancer patient 新發 back pain 必須認真評估，因為 back pain 通常比 neurologic symptoms 早數週出現。其他症狀包括 weakness 60–80%、non-ambulatory 48–77%、sensory deficits 約 50%，可呈 band-like、ascending、saddle anesthesia；autonomic dysfunction 40–64%，包括 bowel/bladder dysfunction、urinary retention。</p>
+<h3>三、Pathophysiology</h3>
+<p>MSCC 若 gradual progression，可能先造成 epidural venous congestion → vasogenic edema → demyelination，這部分可能可逆；若進展慢，collaterals may develop。若 rapid progression，可能造成 arterial occlusion → ischemia → infarction，較不可逆。Spinal cord syndromes 包括 transection of cord、ventral cord syndrome、dorsal cord syndrome；transection 會造成所有 sensory modalities loss、下方 weakness、bowel/bladder dysfunction；ventral cord syndrome 造成 weakness 與 pain/temperature loss；dorsal cord syndrome 造成 proprioception/vibration loss、weakness、ataxia。</p>
+<h3>四、Workup</h3>
+<p>Workup 要做 focused CNS/MSK exam，記錄 symptom onset、cancer history、extent of metastatic disease、prior RT、pain、ECOG/KPS。Imaging gold standard 是 MRI whole spine with and without gadolinium，sensitivity 約 93%、specificity 約 97%；要 image entire neuro axis，因為可能有 synchronous multifocal asymptomatic sites。CT 用於 osseous structure 與 disease extent；若 MRI 不能做，例如 metal/pacemaker，可用 CT myelogram，其 sensitivity/specificity 類似。</p>
+<h3>五、SINS score</h3>
+<p>SINS 評估 neoplastic spinal instability，幫助決定 mobilization 或 operative management。Criteria 包括 location、mechanical pain、bone lesion type、spinal alignment、vertebral body collapse、posterolateral involvement。Total score 0–6 是 stable，通常不需手術；7–12 是 potentially unstable，需要進一步評估；13–18 是 unstable，可靠預測需要 surgical stabilization。一般 TS ≥7 就應考慮 neurosurgery consultation。</p>
+<h3>六、Bilsky grading</h3>
+<p>Bilsky grade 是 MRI T2 axial 的 6-point epidural spinal cord compression grading system，用於 surgery/RT decision-making：</p>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Bilsky epidural spinal cord compression grading</caption>
+    <thead><tr><th scope="col">Bilsky grade</th><th scope="col">定義</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>Bone-only disease</td></tr>
+      <tr><td>1a</td><td>Epidural impingement without deformation of thecal sac</td></tr>
+      <tr><td>1b</td><td>Deformation of thecal sac without spinal cord abutment</td></tr>
+      <tr><td>1c</td><td>Deformation of thecal sac with spinal cord abutment</td></tr>
+      <tr><td>2</td><td>Spinal cord compression，但 cord 周圍仍可見 CSF</td></tr>
+      <tr><td>3</td><td>Spinal cord compression，cord 周圍無 CSF</td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div data-lang="en">
+<p class="section-kicker"><strong>Part V. Cord compression / metastatic spinal cord compression</strong></p>
+<h3>1. Anatomy and definition</h3>
+<p>In adults, the spinal cord extends from the foramen magnum to L1–L2. The cauda equina consists of lumbar and sacral nerve roots from L1–L2 to S2. The dural sac surrounds the spinal cord, and nerve roots exit laterally. On MRI, CSF is bright on T2 and dark on T1. Abnormal low T1 signal often indicates loss of normal fatty marrow and increased water content; abnormal high T2 signal can reflect trauma, infection, cancer, or other pathology.</p>
+<p>Cord compression is any radiographic compression of the spinal cord or cauda equina. It can be epidural compression from tumor or bone fragment, intradural disease, intradural extramedullary disease such as leptomeningeal disease, or intramedullary tumor deposit within the spinal cord.</p>
+<h3>2. Incidence and presentation</h3>
+<p>MSCC affects approximately 5–10% of cancer patients and is an oncologic emergency with high morbidity and mortality. Median survival is about 3 months, and only about one third of patients live longer than one year after cord compression. In adults, the most common causes are lung cancer, prostate cancer, and multiple myeloma. In children, Ewing sarcoma and neuroblastoma are common. Most cases are epidural, usually due to vertebral body metastasis causing external compression. The thoracic spine is most common, followed by lumbar and cervical spine, and about one quarter of patients have multiple levels involved.</p>
+<p>The most common presenting symptom is back pain, occurring in 83–95%. Pain may be localized or radicular, often worsens with recumbency or Valsalva, and is often worse at night or early morning. New back pain in a cancer patient must be taken seriously because back pain often precedes neurologic symptoms by weeks. Other symptoms include weakness, non-ambulatory status, sensory deficits such as band-like, ascending, or saddle anesthesia, and autonomic dysfunction including bowel or bladder dysfunction and urinary retention.</p>
+<h3>3. Pathophysiology</h3>
+<p>With gradual progression, MSCC may first cause epidural venous congestion, vasogenic edema, and demyelination, which may be reversible. Slow progression may allow collaterals to develop. Rapid progression can cause arterial occlusion, ischemia, and infarction, which is less reversible. Spinal cord syndromes include cord transection, ventral cord syndrome, and dorsal cord syndrome. Transection causes loss of all sensory modalities below the lesion, weakness, and bowel/bladder dysfunction. Ventral cord syndrome causes weakness and loss of pain and temperature. Dorsal cord syndrome causes loss of proprioception and vibration, weakness, and ataxia.</p>
+<h3>4. Workup</h3>
+<p>Workup requires focused CNS and musculoskeletal examination, documenting symptom onset, cancer history, extent of metastatic disease, prior radiotherapy, pain, and ECOG/KPS. The imaging gold standard is whole-spine MRI with and without gadolinium, with high sensitivity and specificity. Image the entire neuraxis because synchronous multifocal asymptomatic sites can occur. CT is useful for osseous anatomy and disease extent. If MRI cannot be performed, for example because of metal or pacemaker, CT myelogram can be used with similar diagnostic performance.</p>
+<h3>5. SINS score</h3>
+<p>SINS evaluates neoplastic spinal instability and helps guide mobilization and operative management. Criteria include location, mechanical pain, bone lesion type, spinal alignment, vertebral body collapse, and posterolateral involvement. A total score of 0–6 is stable, 7–12 is potentially unstable and needs further evaluation, and 13–18 is unstable and strongly predicts need for surgical stabilization. In general, score ≥7 should prompt neurosurgical consultation.</p>
+<h3>6. Bilsky grading</h3>
+<p>Bilsky grading is a 6-point MRI T2 axial grading system for epidural spinal cord compression and is used for surgery and radiotherapy decision-making.</p>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Bilsky epidural spinal cord compression grading</caption>
+    <thead><tr><th scope="col">Bilsky grade</th><th scope="col">Definition</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>Bone-only disease.</td></tr>
+      <tr><td>1a</td><td>Epidural impingement without deformation of the thecal sac.</td></tr>
+      <tr><td>1b</td><td>Deformation of the thecal sac without spinal cord abutment.</td></tr>
+      <tr><td>1c</td><td>Deformation of the thecal sac with spinal cord abutment.</td></tr>
+      <tr><td>2</td><td>Spinal cord compression, but CSF is still visible around the cord.</td></tr>
+      <tr><td>3</td><td>Spinal cord compression with no CSF visible around the cord.</td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="MSCC 治療" data-en="MSCC MANAGEMENT">MSCC 治療</div>
+<h2 data-zh="MSCC immediate management、steroids、prognosis、RT vs surgery、fractionation、SBRT、NOMS 與 constraints" data-en="MSCC immediate management, steroids, prognosis, radiotherapy versus surgery, fractionation, SBRT, NOMS, and constraints">MSCC immediate management、steroids、prognosis、RT vs surgery、fractionation、SBRT、NOMS 與 constraints</h2>
+<div data-lang="zh">
+<h3>七、Immediate management：steroids first</h3>
+<p>MSCC suspected 時 first step 是 steroids，作為 definitive treatment 前的 bridge。Mechanism 是減少 inflammation 與 cord edema，並對 multiple myeloma/lymphoma 有 direct oncolytic effects。要 monitor hyperglycemia、hypertension，並用 PPI 或 H2 blocker 做 GI prophylaxis。</p>
+<p>High-dose dexamethasone toxicity 很重要。Vecht 1989 比較 100 mg vs 10 mg IV loading 加 16 mg PO daily，pain、ambulation、bladder function 無差異。Heimdal 1992 中 high-dose 96 mg IV daily 發生嚴重 GI bleeding、GI perforation、pneumonia、wound infection、persistent hyperglycemia，支持 lower dose &lt;16 mg/day 已足夠。典型 regimen：dexamethasone 10 mg IV loading，之後 4–6 mg q6–8 hours；24–48 小時後轉 oral，RT 後逐步 taper，例如每 4 天 total dose 減半，並給 GI prophylaxis。</p>
+<h3>八、Prognostication：Rades</h3>
+<p>Rades 2002 顯示 motor deficit development time 是 functional outcome 的重要 prognostic factor。98 位 MSCC with motor deficits 接受 RT 後，若 motor deficit 在 RT 前 1–7 天發展，ambulatory rate 35%、symptom improvement 10%；8–14 天為 55%/29%；&gt;14 天為 86%/86%。結論是：rapid deterioration 代表 irreversible cord infarction 可能性高；gradual ischemia 則可能因 collaterals 而較可逆。</p>
+<p>Rades score 2008 用於預測 RT 後 ambulation 與 survival；2011 validation 將病人分三組：score ≤28 建議 short-course RT for palliation of pain；score 29–37 可考慮 laminectomy + stabilization + RT；score ≥38 則 RT alone 效果可很好。2010 survival validation 也將 OS risk 分成三群，低分病人 6-month OS 很差，高分病人 6-month OS 可接近 80–99%。</p>
+<h3>九、RT vs surgery</h3>
+<p>RT 優點是 well-tolerated、morbidity/mortality 低、對 radiosensitive tumors 特別有效、可重複；缺點是無法 stabilize spine，且需要幾天才有效。Surgery 優點是取得 tissue diagnosis、立即 cord decompression、stabilizes spine/corrects bony deformity；缺點是 elderly、debilitated、systemically ill 病人有 surgical morbidity/mortality。</p>
+<p>Surgery 類型包括 decompression、laminectomy、corpectomy。Decompression 是移除 tumor 並達 immediate circumferential decompression，常以前方 approach，必要時 intraoperative reconstruction。Laminectomy 是移除 posterior arch，但可能 destabilize spine。Corpectomy 是經 thoracotomy 或 retroperitoneal approach 移除 vertebral body，可能需延後 RT 約 6 週等 fusion，較適合 good life expectancy 與 good PS 病人。</p>
+<p>Patchell et al. Lancet 2005 支持 selected patients 接受 direct decompressive surgery + RT。101 位 MSCC 病人，排除 lymphoma、MM、germ cell tumor、CNS primaries，所有人給 dexamethasone；比較 surgery + RT 30 Gy/10 Fx vs RT alone 30 Gy/10 Fx。Ambulatory rates：84% vs 57%；入組時仍能走路者：94% vs 74%，且 walking duration 153 vs 54 days；入組時不能走路者：62% vs 19%，walking duration 59 vs 0 days。也改善 incontinence duration 與 OS。批評點是 RT alone arm 比歷史對照差、18 位 RT alone 有 unstable spine、sample size 小。</p>
+<p>General indications for surgery + RT：single continuous region、good PS、solitary site、no visceral/brain mets、spine instability、age &lt;65、KPS ≥70%、anticipated survival &gt;3 months、non-ambulatory &lt;48 hours、radioresistant tumor。Radiosensitive tumors 如 MM、germ cell tumor、SCLC 可考慮 RT alone；multiple sites 或 non-surgical candidate 也多用 RT alone。</p>
+<h3>十、EBRT fractionation for MSCC</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>EBRT fractionation for MSCC</caption>
+    <thead><tr><th scope="col">Regimen</th><th scope="col">適合情境</th></tr></thead>
+    <tbody>
+      <tr><td>30 Gy/10 Fx</td><td>Postop 或 definitive setting；good PS、longer life expectancy；常視為 standard</td></tr>
+      <tr><td>20 Gy/5 Fx</td><td>Decent PS/life expectancy；inpatient 常用；SCORE-2 中不劣於 30/10</td></tr>
+      <tr><td>8 Gy/1 Fx</td><td>Poor PS、very limited prognosis；SCORAD 未達 non-inferiority，但 poor PS 可考慮</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Rades retrospective 1304 patients 顯示 long-course RT 的 2-year local failure 較低：8 Gy ×1 24%、20 Gy/5 26%、30 Gy/10 14%、37.5 Gy/15 9%、40 Gy/20 7%；但 motor function/ambulation 無差異。2011 prospective nonrandomized study 顯示 1-year local control long-course 81% vs short-course 61%，但 OS 或 motor improvement 無差異。SCORE-2 比較 20/5 vs 30/10，在 poor-intermediate life expectancy 病人中 20/5 對 motor response、ambulation、local PFS、OS 不顯著較差。SCORAD 比較 8/1 vs 20/5，time to loss/recovery of ambulation 或 3-month OS 無差異，但 8 Gy ×1 未達 formal non-inferiority；因此 single fraction 主要保留給 poor PS。</p>
+<h3>十一、Spine SBRT</h3>
+<p>Lancet 2021 multicenter randomized phase 2/3 trial 納入 229 位 painful MRI-confirmed spinal metastasis、≤3 consecutive vertebral body segments、ECOG 0–2、SINS &lt;12、無 prior RT/surgery、無 neurologically involved symptomatic compression 的病人，randomized to 20 Gy/5 Fx vs 24 Gy/2 Fx。24 Gy/2 Fx SBRT 在 3-month complete pain response 上優於 conventional EBRT 20 Gy/5 Fx；G3–4 side effects 為 5% vs 4%，無 grade 5；compression fracture 11% vs 17%。</p>
+<h3>十二、NOMS framework</h3>
+<p>NOMS = Neurologic、Oncologic、Mechanical、Systemic。Neurologic 主要看 Bilsky grade；Oncologic 看 tumor radiosensitivity/radioresistance，例如 HCC、RCC、sarcoma、melanoma 較 radioresistant；Mechanical 看 SINS stability；Systemic 看 prognosis、PS、extent of disease、能否承受 surgery/systemic therapy。簡化理解：Bilsky 0–1 且 spine stable 可偏 RT/SBRT；Bilsky 2–3、radioresistant、或 SINS unstable 要更積極考慮 decompression/stabilization 再 RT/SBRT。</p>
+<h3>十三、Toxicity and technique</h3>
+<p>Radiation myelopathy 是 diagnosis of exclusion，可從輕微 sensory/motor deficits 到完全 paraplegia/quadriplegia 與 autonomic loss。Higher total dose 與 higher dose per fraction 會縮短 latency。Conventional fractionation 後 median onset 約 18 months，reirradiation 約 11 months；SBRT 後 de novo 約 12 months，reirradiation 約 6 months。QUANTEC full-circumference spinal cord constraints roughly：Dmax 45 Gy → grade 2 RM 0.03%、50 Gy → 0.2%、60 Gy → 6%、69 Gy → 50%。HYTEC SBRT point Dmax for 1–5% RM risk：1 Fx 12.4–14 Gy、2 Fx 17–19.3 Gy、3 Fx 20.3–23.1 Gy、4 Fx 23–26.2 Gy、5 Fx 25.3–28.8 Gy。Reirradiation SBRT safety factors include cumulative thecal sac EQD2 Dmax ≤70 Gy、SBRT thecal sac point EQD2 Dmax ≤25 Gy、SBRT/cumulative ratio ≤0.5、minimum interval ≥5 months。</p>
+<p>Palliative spine RT technique：thoracic/lumbar/sacral 常用 AP/PA 或 AP/RPO/LPO；cervical spine 視情況而定，常用 opposed laterals。</p>
+<p class="clinical-note"><strong>MSCC high-yield：</strong>Cancer patient 新背痛要懷疑 MSCC；先 dexamethasone + urgent whole-spine MRI；用 SINS 判斷 stability、Bilsky 判斷 epidural compression、NOMS 決定 surgery/RT/SBRT；30/10 durable、20/5 practical、8/1 for poor PS。</p>
+</div>
+<div data-lang="en">
+<h3>7. Immediate management: steroids first</h3>
+<p>When MSCC is suspected, the first step is steroids as a bridge to definitive treatment. Steroids reduce inflammation and cord edema and may have direct oncolytic effects in multiple myeloma and lymphoma. Monitor hyperglycemia and hypertension, and provide gastrointestinal prophylaxis with a PPI or H2 blocker.</p>
+<p>High-dose dexamethasone toxicity is important. Vecht 1989 compared 100 mg versus 10 mg IV loading followed by 16 mg orally daily and found no difference in pain, ambulation, or bladder function. Heimdal 1992 reported severe toxicity with 96 mg IV daily, including GI bleeding, GI perforation, pneumonia, wound infection, and persistent hyperglycemia, supporting lower-dose regimens below 16 mg/day. A typical regimen is dexamethasone 10 mg IV loading, followed by 4–6 mg every 6–8 hours; after 24–48 hours, switch to oral dosing, then taper after radiotherapy, for example halving the total dose every 4 days, with GI prophylaxis.</p>
+<h3>8. Prognostication: Rades</h3>
+<p>Rades 2002 showed that the time course of motor deficit development is an important prognostic factor for functional outcome. Among patients with motor deficits treated with radiotherapy, ambulatory rates and symptom improvement were much worse when deficits developed within 1–7 days before radiotherapy compared with slower deterioration over more than 14 days. Rapid deterioration suggests irreversible cord infarction; gradual ischemia may be more reversible because collaterals can develop.</p>
+<p>Rades score 2008 predicts post-radiotherapy ambulation and survival. In the 2011 validation, scores ≤28 favored short-course radiotherapy for pain palliation, scores 29–37 could prompt consideration of laminectomy plus stabilization plus radiotherapy, and scores ≥38 had good outcomes with radiotherapy alone. Survival validations similarly separate patients into poor, intermediate, and favorable survival groups.</p>
+<h3>9. Radiotherapy versus surgery</h3>
+<p>Radiotherapy is well tolerated, has low morbidity and mortality, is especially effective for radiosensitive tumors, and can be repeated. Its limitations are inability to stabilize the spine and a delay of several days before effect. Surgery provides tissue diagnosis, immediate cord decompression, spine stabilization, and correction of bony deformity, but elderly, debilitated, and systemically ill patients may face surgical morbidity and mortality.</p>
+<p>Surgical options include decompression, laminectomy, and corpectomy. Decompression removes tumor and provides immediate circumferential decompression, often through an anterior approach with reconstruction when needed. Laminectomy removes the posterior arch but can destabilize the spine. Corpectomy removes the vertebral body through thoracotomy or retroperitoneal approach and may require delaying radiotherapy for about 6 weeks while fusion occurs; it is best suited for patients with good life expectancy and performance status.</p>
+<p>Patchell et al. Lancet 2005 supports direct decompressive surgery plus radiotherapy for selected patients. The trial excluded lymphoma, multiple myeloma, germ-cell tumor, and CNS primaries. All patients received dexamethasone and were randomized to surgery plus 30 Gy in 10 fractions versus radiotherapy alone. Surgery plus radiotherapy improved ambulatory rates, walking duration, recovery of ambulation among non-ambulatory patients, incontinence duration, and survival. Critiques include poor outcomes in the radiotherapy-alone arm, inclusion of unstable spine in that arm, and small sample size.</p>
+<p>General indications for surgery plus radiotherapy include a single continuous region, good performance status, solitary site, no visceral or brain metastases, spinal instability, age below 65, KPS ≥70%, anticipated survival over 3 months, non-ambulatory status less than 48 hours, and radioresistant tumor. Radiosensitive tumors such as multiple myeloma, germ-cell tumor, and SCLC may be treated with radiotherapy alone; multiple sites or nonsurgical candidacy also favor radiotherapy alone.</p>
+<h3>10. EBRT fractionation for MSCC</h3>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>EBRT fractionation for MSCC</caption>
+    <thead><tr><th scope="col">Regimen</th><th scope="col">Suitable situation</th></tr></thead>
+    <tbody>
+      <tr><td>30 Gy in 10 fractions</td><td>Postoperative or definitive setting; good performance status and longer life expectancy; often treated as standard.</td></tr>
+      <tr><td>20 Gy in 5 fractions</td><td>Decent performance status or life expectancy; practical for inpatients; not inferior to 30/10 in SCORE-2.</td></tr>
+      <tr><td>8 Gy in 1 fraction</td><td>Poor performance status and very limited prognosis; SCORAD did not meet formal non-inferiority, but this remains reasonable for poor-performance patients.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Rades retrospective data showed lower 2-year local failure with long-course radiotherapy, but no difference in motor function or ambulation. Prospective nonrandomized data also showed better local control with long-course treatment but no survival or motor improvement. SCORE-2 found 20/5 not significantly worse than 30/10 for motor response, ambulation, local PFS, or OS in poor-intermediate prognosis patients. SCORAD found no difference in time to loss or recovery of ambulation or 3-month OS between 8/1 and 20/5, but 8 Gy ×1 did not meet formal non-inferiority, so single-fraction treatment is mainly reserved for poor performance status.</p>
+<h3>11. Spine SBRT</h3>
+<p>A Lancet 2021 multicenter randomized phase 2/3 trial enrolled patients with painful MRI-confirmed spinal metastases, up to 3 consecutive vertebral body segments, ECOG 0–2, SINS &lt;12, no prior radiotherapy or surgery, and no neurologically involved symptomatic compression. Patients were randomized to 20 Gy in 5 fractions versus 24 Gy in 2 fractions. SBRT 24 Gy in 2 fractions improved 3-month complete pain response compared with conventional EBRT, without excess severe toxicity or grade 5 events.</p>
+<h3>12. NOMS framework</h3>
+<p>NOMS stands for Neurologic, Oncologic, Mechanical, and Systemic. Neurologic assessment mainly uses Bilsky grade. Oncologic assessment evaluates tumor radiosensitivity or radioresistance, with HCC, RCC, sarcoma, and melanoma being more radioresistant. Mechanical assessment uses SINS stability. Systemic assessment considers prognosis, performance status, disease extent, and ability to tolerate surgery or systemic therapy. In simplified form: Bilsky 0–1 and stable spine often favor radiotherapy or SBRT; Bilsky 2–3, radioresistant disease, or unstable SINS should prompt consideration of decompression or stabilization followed by radiotherapy or SBRT.</p>
+<h3>13. Toxicity and technique</h3>
+<p>Radiation myelopathy is a diagnosis of exclusion and can range from mild sensory or motor deficits to complete paraplegia or quadriplegia with autonomic loss. Higher total dose and higher dose per fraction shorten latency. Median onset is about 18 months after conventional fractionation, about 11 months after reirradiation, about 12 months after de novo SBRT, and about 6 months after SBRT reirradiation. QUANTEC full-circumference spinal cord constraints and HYTEC SBRT point maximum dose constraints guide safe treatment. For reirradiation SBRT, safety factors include cumulative thecal sac EQD2 Dmax ≤70 Gy, SBRT thecal sac point EQD2 Dmax ≤25 Gy, SBRT/cumulative ratio ≤0.5, and interval at least 5 months.</p>
+<p>Palliative spine radiotherapy technique often uses AP/PA or AP/RPO/LPO fields for thoracic, lumbar, or sacral spine. Cervical spine technique depends on anatomy and prior treatment, often using opposed laterals.</p>
+<p class="clinical-note"><strong>MSCC high-yield:</strong> New back pain in a cancer patient should raise concern for MSCC. Start dexamethasone and obtain urgent whole-spine MRI. Use SINS for stability, Bilsky for epidural compression, and NOMS to decide surgery, radiotherapy, or SBRT. 30/10 is durable, 20/5 is practical, and 8/1 is for poor performance status.</p>
+</div>
+</section>
+<section class="section">
+<div class="section-label" data-zh="總結表" data-en="SUMMARY TABLE">總結表</div>
+<h2 data-zh="最終高分整理與一句話記憶" data-en="Final high-yield summary and one-sentence memory aid">最終高分整理與一句話記憶</h2>
+<div data-lang="zh">
+<p class="section-kicker"><strong>最終高分整理</strong></p>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Palliative RT / radiation emergency high-yield summary</caption>
+    <thead><tr><th scope="col">臨床問題</th><th scope="col">第一件事</th><th scope="col">RT 角色</th><th scope="col">常用 dose</th></tr></thead>
+    <tbody>
+      <tr><td>SVC syndrome</td><td>評估 airway/neuro/hemodynamic stability；若 unstable 先 stent</td><td>穩定後依 histology，SCLC/NSCLC 可 RT；lymphoma/SCLC/GCT 常 chemo</td><td>3–4 Gy/Fx ×2–3 days 起始，後續依 curative/palliative intent</td></tr>
+      <tr><td>Hemoptysis / airway obstruction</td><td>急性 airway compromise 先 bronchoscopy/stent/laser</td><td>穩定後控制 hemoptysis、cough、dyspnea</td><td>10 Gy ×1、17 Gy/2、20 Gy/5、30 Gy/10、40–45 Gy/15</td></tr>
+      <tr><td>GI/pelvic bleeding</td><td>Stabilize、transfusion/IR/endoscopy if needed</td><td>RT 對 bleeding control 很有效</td><td>8 Gy ×1、14.8 Gy/4 QUADSHOT、20 Gy/5、30 Gy/10</td></tr>
+      <tr><td>H&amp;N bleeding</td><td>先確保 airway 與 hemodynamics</td><td>QUADSHOT 適合 frail / palliative H&amp;N</td><td>14 Gy/4 Fx BID ×2 days，可 q4wk 重複</td></tr>
+      <tr><td>Uncomplicated painful bone mets</td><td>排除 fracture/cord compression</td><td>8 Gy ×1 與 multi-fraction pain relief 相近</td><td>8 Gy ×1、20 Gy/5、24 Gy/6、30 Gy/10</td></tr>
+      <tr><td>Post-op long-bone mets</td><td>Orthopedic stabilization 後</td><td>PORT 改善 function、降低 local recurrence；cover whole hardware</td><td>常 30 Gy/10，或 20–30 Gy 視 prognosis</td></tr>
+      <tr><td>High-risk asymptomatic bone mets</td><td>評估 SRE risk</td><td>可 prophylactic RT</td><td>個別化，依部位/風險</td></tr>
+      <tr><td>MSCC</td><td>Steroids + whole-spine MRI + NSGY/RO assessment</td><td>RT alone 或 surgery + RT，依 SINS/Bilsky/NOMS</td><td>30 Gy/10、20 Gy/5、8 Gy ×1；selected SBRT</td></tr>
+      <tr><td>Spine SBRT</td><td>選 low instability、無 symptomatic compression、good PS</td><td>改善 pain complete response，需嚴守 cord constraints</td><td>24 Gy/2 Fx 等</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="clinical-note"><strong>一句話記憶：</strong>Palliative RT 的核心不是「看到急症就照」，而是先判斷 stability、pathology、prior RT、是否需介入/手術；骨轉移和出血多數可用短療程有效緩解，MSCC 則要立刻 steroid + MRI，依 SINS/Bilsky/NOMS 決定 RT alone、surgery + RT 或 SBRT。</p>
+</div>
+<div data-lang="en">
+<p class="section-kicker"><strong>Final high-yield summary</strong></p>
+<div class="table-wrap">
+  <table class="oncology-table palliative-table">
+    <caption>Palliative radiotherapy / radiation emergency high-yield summary</caption>
+    <thead><tr><th scope="col">Clinical problem</th><th scope="col">First step</th><th scope="col">Role of radiotherapy</th><th scope="col">Common dose</th></tr></thead>
+    <tbody>
+      <tr><td>SVC syndrome</td><td>Assess airway, neurologic, and hemodynamic stability; if unstable, stent first.</td><td>After stabilization, treat according to histology. SCLC/NSCLC can receive radiotherapy; lymphoma, SCLC, and germ-cell tumor often respond to chemotherapy.</td><td>Start with 3–4 Gy/fraction for 2–3 days, then continue according to curative or palliative intent.</td></tr>
+      <tr><td>Hemoptysis / airway obstruction</td><td>For acute airway compromise, bronchoscopy, stent, or laser first.</td><td>After stabilization, radiotherapy controls hemoptysis, cough, and dyspnea.</td><td>10 Gy ×1, 17 Gy in 2 fractions, 20 Gy in 5 fractions, 30 Gy in 10 fractions, 40–45 Gy in 15 fractions.</td></tr>
+      <tr><td>GI / pelvic bleeding</td><td>Stabilize, transfuse, and use IR or endoscopy when needed.</td><td>Radiotherapy is highly effective for bleeding control.</td><td>8 Gy ×1, 14.8 Gy in 4 fractions QUADSHOT, 20 Gy in 5 fractions, 30 Gy in 10 fractions.</td></tr>
+      <tr><td>Head and neck bleeding</td><td>Secure airway and hemodynamics first.</td><td>QUADSHOT is useful for frail or palliative head and neck patients.</td><td>14 Gy in 4 fractions BID over 2 days, repeat every 4 weeks if appropriate.</td></tr>
+      <tr><td>Uncomplicated painful bone metastases</td><td>Exclude fracture and cord compression.</td><td>8 Gy ×1 and multifraction radiotherapy provide similar pain relief.</td><td>8 Gy ×1, 20 Gy in 5 fractions, 24 Gy in 6 fractions, 30 Gy in 10 fractions.</td></tr>
+      <tr><td>Postoperative long-bone metastases</td><td>After orthopedic stabilization.</td><td>Postoperative radiotherapy improves function and reduces local recurrence; cover the whole hardware.</td><td>Often 30 Gy in 10 fractions, or 20–30 Gy depending on prognosis.</td></tr>
+      <tr><td>High-risk asymptomatic bone metastases</td><td>Assess skeletal-related-event risk.</td><td>Prophylactic radiotherapy can be considered.</td><td>Individualized by site and risk.</td></tr>
+      <tr><td>MSCC</td><td>Steroids plus whole-spine MRI plus neurosurgery and radiation oncology assessment.</td><td>Radiotherapy alone or surgery plus radiotherapy, based on SINS, Bilsky, and NOMS.</td><td>30 Gy in 10 fractions, 20 Gy in 5 fractions, 8 Gy ×1; selected SBRT.</td></tr>
+      <tr><td>Spine SBRT</td><td>Select low-instability, no symptomatic compression, good performance status patients.</td><td>Improves complete pain response; strict cord constraints are essential.</td><td>Examples include 24 Gy in 2 fractions.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p class="clinical-note"><strong>One-sentence memory aid:</strong> Palliative radiotherapy is not “treat every emergency immediately”; first decide stability, pathology, prior radiotherapy, and whether intervention or surgery is needed. Bone metastases and bleeding can often be relieved effectively with short-course treatment, while MSCC requires immediate steroids and MRI, then SINS/Bilsky/NOMS-based selection of radiotherapy alone, surgery plus radiotherapy, or SBRT.</p>
+</div>
 </section>
 
 <section class="section"><div class="section-label" data-zh="關鍵試驗" data-en="KEY TRIALS">關鍵試驗</div><h2 data-zh="關鍵臨床試驗 (Estes 2025)" data-en="Key Clinical Trials (Estes 2025)">關鍵臨床試驗</h2><p data-lang="zh">以下為此主題的核心隨機試驗與樞紐研究，資料源自 Estes 2025 Key Studies 資料表，已整合於本章。</p><p data-lang="en">Core randomized trials and pivotal studies for this topic, from the Estes 2025 Key Studies tables, are integrated into this chapter.</p><div class="card" style="margin-bottom:14px">
