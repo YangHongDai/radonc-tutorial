@@ -12340,23 +12340,1149 @@ One-sentence memory: Adult soft-tissue sarcoma requires histology- and risk-adap
     "next": ["skin.html", "皮膚", "Skin"],
 })
 
+# Skin cancer teaching page
+# Add this block to the same Python file that defines PAGES.
 
 PAGES.append({
     "slug": "skin",
-    "emoji": "🧴",
+    "emoji": "☀️",
     "title_zh": "皮膚癌",
     "title_en": "Skin Cancer",
-    "sub_zh": "BCC、cSCC 與黑色素瘤的放射治療原則。",
-    "sub_en": "Radiation for BCC, cSCC, and melanoma.",
+    "sub_zh": "BCC、cSCC、melanoma、Merkel cell carcinoma 的分類、risk stratification、workup、SLNB、RT 劑量、adjuvant/definitive RT 證據與 systemic therapy。",
+    "sub_en": "Basal cell carcinoma, cutaneous squamous cell carcinoma, melanoma, and Merkel cell carcinoma: classification, risk stratification, workup, SLNB, RT dose, adjuvant/definitive RT evidence, and systemic therapy.",
+
     "sections": [
-      {"label_zh":"BCC/SCC","label_en":"BCC/SCC","h2_zh":"BCC 與 cSCC","h2_en":"BCC and cSCC",
-       "body_zh":"<p><strong>手術為主</strong> (Mohs)；<strong>Definitive RT</strong> 用於手術困難位置 (眼瞼、鼻尖、耳廓) 或高齡不宜手術。</p><p><strong>術後 RT 適應:</strong> perineural invasion、切緣陽性 或 大結節性淋巴。</p><p><strong>常用劑量:</strong> 66 Gy/33 fx；elderly 55 Gy/20 fx；palliative 30 Gy/5 fx。</p>",
-       "body_en":"<p><strong>Surgery-first</strong> (Mohs); <strong>definitive RT</strong> for anatomically difficult sites (eyelid, nasal tip, pinna) or elderly non-surgical candidates.</p><p><strong>Adjuvant RT:</strong> perineural invasion, positive margins, or bulky nodal disease.</p><p><strong>Common doses:</strong> 66 Gy/33 fx; elderly 55 Gy/20 fx; palliative 30 Gy/5 fx.</p>"},
-      {"label_zh":"黑色素瘤","label_en":"MELANOMA","h2_zh":"黑色素瘤","h2_en":"Melanoma",
-       "body_zh":"<p><strong>ANZMTG 01.02 / TROG 02.01:</strong> 高風險節區術後 RT 降低 LR (~2×) 但無 OS 好處，副作用明顯。</p><p><strong>IMRT / hypofractionation (30 Gy/5 fx 或 48 Gy/20 fx)</strong> 為常用。</p>",
-       "body_en":"<p><strong>ANZMTG 01.02 / TROG 02.01:</strong> Adjuvant nodal RT halves LR but no OS benefit and meaningful toxicity.</p><p><strong>IMRT / hypofractionation (30 Gy/5 fx or 48 Gy/20 fx)</strong> commonly used.</p>"},
+        {
+            "label_zh": "總論",
+            "label_en": "OVERVIEW",
+            "h2_zh": "Skin cancer 總論",
+            "h2_en": "Skin cancer overview",
+            "body_zh": """
+<p>Skin cancer 是非常常見的癌症。美國約 1 in 5 的人到 70 歲前會得到皮膚癌，每天約 9500 人被診斷為 skin cancer。最常見的是 non-melanomatous skin cancers，佔 96–99%，其中 BCC 約 80%、cSCC 約 20%。Melanoma 約佔 1–4%。其他較少見皮膚癌包括 Merkel cell carcinoma, MCC，以及 cutaneous lymphoma，例如 mycosis fungoides。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>類別</th><th>來源細胞 / 特徵</th><th>常見性</th></tr>
+</thead>
+<tbody>
+<tr><td>Basal cell carcinoma, BCC</td><td>Epidermis 內層 basal cells</td><td>最常見皮膚癌</td></tr>
+<tr><td>Cutaneous squamous cell carcinoma, cSCC</td><td>Epidermis 外層 squamous cells / keratinocyte lineage</td><td>第二常見</td></tr>
+<tr><td>Cutaneous melanoma</td><td>Melanocytes</td><td>少見但侵襲性高</td></tr>
+<tr><td>Merkel cell carcinoma, MCC</td><td>Neuroendocrine skin cancer，Merkel cell progenitors</td><td>很少見但高度侵襲</td></tr>
+<tr><td>Cutaneous lymphoma</td><td>例如 mycosis fungoides</td><td>罕見</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+臨床記憶：低風險 BCC/cSCC 可局部治療或簡單切除；high-risk cSCC 需特別注意 PNI、deep invasion、LN+、recurrent disease；melanoma 與 MCC 更依賴 SLNB、免疫治療與風險導向 RT。
+</div>
+""",
+            "body_en": """
+<p>Skin cancer is very common. In the United States, approximately 1 in 5 people develop skin cancer by age 70, and about 9,500 people are diagnosed with skin cancer each day. Non-melanomatous skin cancers account for 96–99% of cases; among these, BCC accounts for about 80% and cSCC for about 20%. Melanoma accounts for about 1–4%. Other rare skin cancers include Merkel cell carcinoma and cutaneous lymphoma such as mycosis fungoides.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Category</th><th>Cell of origin / feature</th><th>Frequency</th></tr>
+</thead>
+<tbody>
+<tr><td>Basal cell carcinoma, BCC</td><td>Basal cells in the inner epidermis</td><td>Most common skin cancer</td></tr>
+<tr><td>Cutaneous squamous cell carcinoma, cSCC</td><td>Squamous / keratinocyte lineage of the epidermis</td><td>Second most common</td></tr>
+<tr><td>Cutaneous melanoma</td><td>Melanocytes</td><td>Less common but aggressive</td></tr>
+<tr><td>Merkel cell carcinoma, MCC</td><td>Neuroendocrine skin cancer related to Merkel cell progenitors</td><td>Rare but highly aggressive</td></tr>
+<tr><td>Cutaneous lymphoma</td><td>Example: mycosis fungoides</td><td>Rare</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Clinical memory: low-risk BCC/cSCC can often be treated with local therapy or simple excision; high-risk cSCC requires attention to PNI, deep invasion, LN positivity, and recurrence; melanoma and MCC rely heavily on SLNB, immunotherapy, and risk-adapted RT.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "解剖",
+            "label_en": "ANATOMY",
+            "h2_zh": "皮膚解剖與腫瘤來源",
+            "h2_en": "Skin anatomy and tumor origin",
+            "body_zh": """
+<p>皮膚分為三大層：epidermis、dermis、hypodermis / subcutaneous tissue。Epidermis 由外到內分為 stratum corneum、lucidum、granulosum、spinosum、basale。BCC 源自 basal layer 相關細胞；cSCC 源自 squamous / keratinocyte lineage；melanoma 源自 melanocyte；MCC 與 Merkel cell / neuroendocrine lineage 相關。</p>
+
+<div class="table-wrap">
+<table class="oncology-table anatomy-table">
+<thead>
+<tr><th>層次</th><th>組成</th><th>功能</th></tr>
+</thead>
+<tbody>
+<tr><td>Stratum corneum</td><td>Keratin、lipids</td><td>Barrier layer</td></tr>
+<tr><td>Stratum lucidum</td><td>Anucleated keratinocytes</td><td>Thick skin，例如 palms、soles</td></tr>
+<tr><td>Stratum granulosum</td><td>Keratohyalin、lamellar granules</td><td>Water-impermeable barrier</td></tr>
+<tr><td>Stratum spinosum</td><td>Keratinocytes、Langerhans cells</td><td>Tensile strength、immune surveillance</td></tr>
+<tr><td>Stratum basale</td><td>Keratinocytes、melanocytes、Merkel cells</td><td>Stem cell layer、regeneration、sensation</td></tr>
+<tr><td>Papillary dermis</td><td>Collagen、capillaries、nerve endings</td><td>Nutrients、thermoregulation、sensory input</td></tr>
+<tr><td>Reticular dermis</td><td>Collagen、elastin、fibroblasts</td><td>Strength、elasticity、wound repair</td></tr>
+<tr><td>Hypodermis</td><td>Adipocytes、blood vessels、nerves</td><td>Insulation、energy storage、anchoring</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<p>The skin has three major layers: epidermis, dermis, and hypodermis / subcutaneous tissue. From superficial to deep, the epidermis contains the stratum corneum, lucidum, granulosum, spinosum, and basale. BCC arises from basal-layer related cells; cSCC from the squamous / keratinocyte lineage; melanoma from melanocytes; and MCC from the Merkel cell / neuroendocrine lineage.</p>
+
+<div class="table-wrap">
+<table class="oncology-table anatomy-table">
+<thead>
+<tr><th>Layer</th><th>Components</th><th>Function</th></tr>
+</thead>
+<tbody>
+<tr><td>Stratum corneum</td><td>Keratin, lipids</td><td>Barrier layer</td></tr>
+<tr><td>Stratum lucidum</td><td>Anucleated keratinocytes</td><td>Thick skin such as palms and soles</td></tr>
+<tr><td>Stratum granulosum</td><td>Keratohyalin, lamellar granules</td><td>Water-impermeable barrier</td></tr>
+<tr><td>Stratum spinosum</td><td>Keratinocytes, Langerhans cells</td><td>Tensile strength and immune surveillance</td></tr>
+<tr><td>Stratum basale</td><td>Keratinocytes, melanocytes, Merkel cells</td><td>Stem cell layer, regeneration, sensation</td></tr>
+<tr><td>Papillary dermis</td><td>Collagen, capillaries, nerve endings</td><td>Nutrients, thermoregulation, sensory input</td></tr>
+<tr><td>Reticular dermis</td><td>Collagen, elastin, fibroblasts</td><td>Strength, elasticity, wound repair</td></tr>
+<tr><td>Hypodermis</td><td>Adipocytes, blood vessels, nerves</td><td>Insulation, energy storage, anchoring</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "危險因子",
+            "label_en": "RISK / PREVENTION",
+            "h2_zh": "Risk factors 與 prevention",
+            "h2_en": "Risk factors and prevention",
+            "body_zh": """
+<p>皮膚癌最重要的危險因子是 <strong>年齡與 UV exposure</strong>。UVB 波長約 290–320 nm，與 sunburn 和 DNA damage 關係密切；UVA 波長約 320–400 nm，與 photoaging 相關。記憶法：<strong>UVB = Burning，UVA = Aging</strong>。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Risk factor</th><th>相關癌別 / 重點</th></tr>
+</thead>
+<tbody>
+<tr><td>Age</td><td>年紀越大累積 UV damage 越高</td></tr>
+<tr><td>UV exposure</td><td>BCC、cSCC、melanoma 皆重要</td></tr>
+<tr><td>Fair skin</td><td>Fitzpatrick type I–II 與 melanoma 風險相關</td></tr>
+<tr><td>Prior RT exposure</td><td>可增加皮膚癌風險</td></tr>
+<tr><td>Prior phototherapy</td><td>長期 phototherapy 可增加風險</td></tr>
+<tr><td>Chemicals</td><td>Arsenic、coal、tar</td></tr>
+<tr><td>Steroid use</td><td>免疫抑制相關</td></tr>
+<tr><td>Chronic inflammation</td><td>Ulcer、scar，尤其與 cSCC 相關</td></tr>
+<tr><td>Immunosuppression</td><td>cSCC risk 約 65 倍；MCC risk 約 24 倍</td></tr>
+<tr><td>Merkel cell polyomavirus</td><td>與 MCC 相關</td></tr>
+<tr><td>Prior history of skin cancer</td><td>需要 dermatology regular screening</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>遺傳 syndrome：Gorlin syndrome / PTCH gene 與 BCC 相關；CDKN2A、CDK4、XP、BRCA2 與 melanoma 相關；MAGT1、ATM、BRCA1/BRCA2、TP53 與 MCC 相關。</p>
+
+<div class="clinical-note">
+Prevention 核心是 sun protection：避免曬傷與 tanning beds、10 AM–4 PM 尋找 shade、戴寬邊帽與 sunglasses、穿防曬衣、使用 broad-spectrum SPF 30+ sunscreen 並定時補擦。
+</div>
+""",
+            "body_en": """
+<p>The most important skin cancer risk factors are <strong>age and UV exposure</strong>. UVB has a wavelength of about 290–320 nm and is closely linked to sunburn and DNA damage. UVA has a wavelength of about 320–400 nm and is linked to photoaging. Memory aid: <strong>UVB = Burning; UVA = Aging</strong>.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Risk factor</th><th>Relevant cancer / key point</th></tr>
+</thead>
+<tbody>
+<tr><td>Age</td><td>Older age means more cumulative UV damage</td></tr>
+<tr><td>UV exposure</td><td>Important for BCC, cSCC, and melanoma</td></tr>
+<tr><td>Fair skin</td><td>Fitzpatrick type I–II is linked to melanoma risk</td></tr>
+<tr><td>Prior RT exposure</td><td>Can increase skin cancer risk</td></tr>
+<tr><td>Prior phototherapy</td><td>Long-term phototherapy increases risk</td></tr>
+<tr><td>Chemicals</td><td>Arsenic, coal, tar</td></tr>
+<tr><td>Steroid use</td><td>Associated with immunosuppression</td></tr>
+<tr><td>Chronic inflammation</td><td>Ulcers and scars, especially for cSCC</td></tr>
+<tr><td>Immunosuppression</td><td>cSCC risk about 65-fold; MCC risk about 24-fold</td></tr>
+<tr><td>Merkel cell polyomavirus</td><td>Associated with MCC</td></tr>
+<tr><td>Prior history of skin cancer</td><td>Requires regular dermatologic screening</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Genetic syndromes: Gorlin syndrome / PTCH is associated with BCC; CDKN2A, CDK4, XP, and BRCA2 with melanoma; and MAGT1, ATM, BRCA1/BRCA2, and TP53 with MCC.</p>
+
+<div class="clinical-note">
+Prevention centers on sun protection: avoid sunburn and tanning beds, seek shade from 10 AM to 4 PM, wear a wide-brimmed hat and sunglasses, use sun-protective clothing, and apply broad-spectrum SPF 30+ sunscreen regularly.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "臨床表現",
+            "label_en": "PRESENTATION",
+            "h2_zh": "Clinical presentation",
+            "h2_en": "Clinical presentation",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Cancer</th><th>Clinical presentation</th><th>高分重點</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>Pearly pink 或 skin-colored bump，常在 sun-exposed areas</td><td>型態包括 nodular、superficial、pigmented、morpheaform、basosquamous；morpheaform/infiltrative/micronodular/basosquamous 較 aggressive</td></tr>
+<tr><td>cSCC</td><td>Rough、scaly skin patch、crusty lesion、ulcerative lesion、non-healing sore</td><td>常由 actinic keratosis 作為 precursor；rapid growth、pain、numbness、tingling、weakness 可能代表 PNI</td></tr>
+<tr><td>Melanoma</td><td>ABCDE：asymmetry、border irregularity、color variation、diameter &gt;6 mm、evolution</td><td>Subtypes：superficial spreading、nodular、acral lentiginous、lentigo maligna、mucosal melanoma</td></tr>
+<tr><td>MCC</td><td>Rapidly growing、painless、shiny pink/red/blue 或 skin-colored nodule</td><td>長得快，局部與淋巴轉移風險高，SLNB 幾乎 routine 考量</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Cancer</th><th>Clinical presentation</th><th>High-yield point</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>Pearly pink or skin-colored bump, often in sun-exposed areas</td><td>Subtypes include nodular, superficial, pigmented, morpheaform, and basosquamous; morpheaform/infiltrative/micronodular/basosquamous patterns are more aggressive</td></tr>
+<tr><td>cSCC</td><td>Rough scaly patch, crusted lesion, ulcerative lesion, or non-healing sore</td><td>Often arises from actinic keratosis; rapid growth, pain, numbness, tingling, or weakness may indicate PNI</td></tr>
+<tr><td>Melanoma</td><td>ABCDE: asymmetry, border irregularity, color variation, diameter &gt;6 mm, evolution</td><td>Subtypes include superficial spreading, nodular, acral lentiginous, lentigo maligna, and mucosal melanoma</td></tr>
+<tr><td>MCC</td><td>Rapidly growing, painless, shiny pink/red/blue or skin-colored nodule</td><td>Fast-growing with high local and nodal metastatic risk; SLNB is almost routinely considered</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "Workup",
+            "label_en": "WORKUP",
+            "h2_zh": "Workup：H&P、pathology、SLNB 與 imaging",
+            "h2_en": "Workup: H&P, pathology, SLNB, and imaging",
+            "body_zh": """
+<p>Workup 從完整 H&amp;P 開始，包括 prior skin cancer、prior treatments、history of RT、immunosuppression、transplant history、phototherapy、chemical exposure。身體檢查要做 complete skin exam，尋找 skip lesions，並檢查 regional nodes。Head and neck skin cancers 要做 neurological exam，以排除 PNI。</p>
+
+<p>Pathology 可用 punch、shave、excisional 或 incisional biopsy。Melanoma 需要記錄 Breslow depth、ulceration、mitotic rate、margins、regression、microsatellites；melanoma 需做 molecular testing，尤其 BRAF V600 mutation。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Cancer</th><th>SLNB indication</th></tr>
+</thead>
+<tbody>
+<tr><td>Melanoma</td><td>Breslow depth &gt;0.8 mm、ulceration，或 risk factors，例如 age ≥42 years</td></tr>
+<tr><td>MCC</td><td>Always consider / usually always SLNB</td></tr>
+<tr><td>cSCC</td><td>Recurrent 或 very-high-risk 可考慮</td></tr>
+<tr><td>BCC</td><td>極少 nodal spread，只有 very high-risk 或 clinical concern 才評估 nodes</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Imaging：懷疑 PNI、skull base involvement、periorbital involvement，或 lesion fixed to muscle/bone/fascia → MRI with and without contrast。Locally advanced tumor 或 regional lymphadenopathy → contrast CT。High-risk 或 node-positive patients → FDG-PET/CT 排除 distant metastasis。
+</div>
+""",
+            "body_en": """
+<p>Workup begins with full history and physical examination, including prior skin cancer, prior treatments, history of RT, immunosuppression, transplant history, phototherapy, and chemical exposure. Examination requires a complete skin exam, assessment for skip lesions, and regional nodal examination. Head and neck skin cancers require neurologic examination to evaluate for PNI.</p>
+
+<p>Pathology can be obtained by punch, shave, excisional, or incisional biopsy. Melanoma pathology must report Breslow depth, ulceration, mitotic rate, margins, regression, and microsatellites. Melanoma also needs molecular testing, especially BRAF V600 mutation.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Cancer</th><th>SLNB indication</th></tr>
+</thead>
+<tbody>
+<tr><td>Melanoma</td><td>Breslow depth &gt;0.8 mm, ulceration, or risk factors such as age ≥42 years</td></tr>
+<tr><td>MCC</td><td>Always consider / usually always perform SLNB</td></tr>
+<tr><td>cSCC</td><td>Consider for recurrent or very-high-risk disease</td></tr>
+<tr><td>BCC</td><td>Nodal spread is rare; evaluate nodes only for very-high-risk disease or clinical concern</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Imaging: suspected PNI, skull base involvement, periorbital involvement, or fixation to muscle/bone/fascia → MRI with and without contrast. Locally advanced tumor or regional lymphadenopathy → contrast CT. High-risk or node-positive patients → FDG-PET/CT to rule out distant metastatic disease.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "BCC/cSCC 風險",
+            "label_en": "BCC/cSCC RISK",
+            "h2_zh": "BCC 與 cSCC risk stratification",
+            "h2_en": "BCC and cSCC risk stratification",
+            "body_zh": """
+<h3>BCC risk stratification</h3>
+<p>BCC 通常不太會轉移，但局部破壞性與復發風險取決於 location、size、borders、histology、PNI、immunosuppression、prior RT。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Risk factor</th><th>Low risk</th><th>High risk</th></tr>
+</thead>
+<tbody>
+<tr><td>Size & location</td><td>&lt;2 cm in trunk/extremities</td><td>&gt;2 cm trunk/extremities；任何大小在 head/neck、hands/feet、pretibial、anogenital</td></tr>
+<tr><td>Clinical borders</td><td>Well-defined</td><td>Poorly-defined</td></tr>
+<tr><td>Primary vs recurrent</td><td>Primary</td><td>Recurrent</td></tr>
+<tr><td>Immunosuppression</td><td>No</td><td>Yes</td></tr>
+<tr><td>Site of prior RT</td><td>No</td><td>Yes</td></tr>
+<tr><td>Histologic subtype</td><td>Nodular、superficial</td><td>Aggressive growth pattern</td></tr>
+<tr><td>PNI</td><td>No</td><td>Yes</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Area H / M / L</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Area</th><th>位置</th></tr>
+</thead>
+<tbody>
+<tr><td>Area H</td><td>Central face / mask area：nose、eyelids、eyebrows、lips、chin、temples、ears、genitalia、hands、feet、nipples</td></tr>
+<tr><td>Area M</td><td>Cheeks、forehead、scalp、neck、jawline、pretibial surface</td></tr>
+<tr><td>Area L</td><td>Trunk、extremities</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>cSCC risk stratification</h3>
+<p>cSCC 相比 BCC 更容易局部侵犯、PNI、nodal metastasis。Very-high-risk features 包括 &gt;4 cm、poor differentiation、depth &gt;6 mm 或 beyond subQ fat、large-caliber PNI、LVI。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>BWH high-risk factor</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>Tumor size</td><td>≥2 cm</td></tr>
+<tr><td>Differentiation</td><td>Poor differentiation</td></tr>
+<tr><td>PNI</td><td>PNI ≥0.1 mm</td></tr>
+<tr><td>Depth</td><td>Tumor beyond fat</td></tr>
+<tr><td>Bone invasion</td><td>Automatic T3</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>BWH stage</th><th>Definition</th><th>Local recurrence</th></tr>
+</thead>
+<tbody>
+<tr><td>T1</td><td>0 high-risk factor</td><td>2.7%</td></tr>
+<tr><td>T2a</td><td>1 high-risk factor</td><td>7.5%</td></tr>
+<tr><td>T2b</td><td>2–3 high-risk factors</td><td>15.7%</td></tr>
+<tr><td>T3</td><td>≥4 high-risk factors 或 bone invasion</td><td>33.5%</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<h3>BCC risk stratification</h3>
+<p>BCC rarely metastasizes, but local destructiveness and recurrence risk depend on location, size, borders, histology, PNI, immunosuppression, and prior RT.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Risk factor</th><th>Low risk</th><th>High risk</th></tr>
+</thead>
+<tbody>
+<tr><td>Size and location</td><td>&lt;2 cm in trunk/extremities</td><td>&gt;2 cm trunk/extremities; any size in head/neck, hands/feet, pretibial, anogenital</td></tr>
+<tr><td>Clinical borders</td><td>Well-defined</td><td>Poorly-defined</td></tr>
+<tr><td>Primary vs recurrent</td><td>Primary</td><td>Recurrent</td></tr>
+<tr><td>Immunosuppression</td><td>No</td><td>Yes</td></tr>
+<tr><td>Site of prior RT</td><td>No</td><td>Yes</td></tr>
+<tr><td>Histologic subtype</td><td>Nodular, superficial</td><td>Aggressive growth pattern</td></tr>
+<tr><td>PNI</td><td>No</td><td>Yes</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Area H / M / L</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Area</th><th>Location</th></tr>
+</thead>
+<tbody>
+<tr><td>Area H</td><td>Central face / mask area: nose, eyelids, eyebrows, lips, chin, temples, ears, genitalia, hands, feet, nipples</td></tr>
+<tr><td>Area M</td><td>Cheeks, forehead, scalp, neck, jawline, pretibial surface</td></tr>
+<tr><td>Area L</td><td>Trunk, extremities</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>cSCC risk stratification</h3>
+<p>Compared with BCC, cSCC has higher risk of local invasion, PNI, and nodal metastasis. Very-high-risk features include &gt;4 cm, poor differentiation, depth &gt;6 mm or beyond subcutaneous fat, large-caliber PNI, and LVI.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>BWH high-risk factor</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>Tumor size</td><td>≥2 cm</td></tr>
+<tr><td>Differentiation</td><td>Poor differentiation</td></tr>
+<tr><td>PNI</td><td>PNI ≥0.1 mm</td></tr>
+<tr><td>Depth</td><td>Tumor beyond fat</td></tr>
+<tr><td>Bone invasion</td><td>Automatic T3</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>BWH stage</th><th>Definition</th><th>Local recurrence</th></tr>
+</thead>
+<tbody>
+<tr><td>T1</td><td>0 high-risk factor</td><td>2.7%</td></tr>
+<tr><td>T2a</td><td>1 high-risk factor</td><td>7.5%</td></tr>
+<tr><td>T2b</td><td>2–3 high-risk factors</td><td>15.7%</td></tr>
+<tr><td>T3</td><td>≥4 high-risk factors or bone invasion</td><td>33.5%</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "分期",
+            "label_en": "STAGING",
+            "h2_zh": "cSCC、melanoma 與 MCC staging",
+            "h2_en": "cSCC, melanoma, and MCC staging",
+            "body_zh": """
+<h3>Head and neck cSCC AJCC 8th T stage</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>T stage</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>Tis</td><td>In situ</td></tr>
+<tr><td>T1</td><td>≤2 cm</td></tr>
+<tr><td>T2</td><td>2–4 cm</td></tr>
+<tr><td>T3</td><td>&gt;4 cm，或 &gt;6 mm invasion，或 PNI，或 minor bone erosion</td></tr>
+<tr><td>T4a</td><td>Gross cortical marrow invasion</td></tr>
+<tr><td>T4b</td><td>Skull base / neural foramina involvement</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Melanoma T stage</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>T stage</th><th>Thickness / ulceration</th></tr>
+</thead>
+<tbody>
+<tr><td>T1a</td><td>&lt;0.8 mm without ulceration</td></tr>
+<tr><td>T1b</td><td>&lt;0.8 mm with ulceration，或 0.8–1 mm with or without ulceration</td></tr>
+<tr><td>T2a/b</td><td>&gt;1–2 mm without / with ulceration</td></tr>
+<tr><td>T3a/b</td><td>&gt;2–4 mm without / with ulceration</td></tr>
+<tr><td>T4a/b</td><td>&gt;4 mm without / with ulceration</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>MCC staging concept</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>T / M category</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>T1</td><td>≤2 cm</td></tr>
+<tr><td>T2</td><td>2–5 cm</td></tr>
+<tr><td>T3</td><td>&gt;5 cm</td></tr>
+<tr><td>T4</td><td>Invades fascia、muscle、cartilage、bone</td></tr>
+<tr><td>N1</td><td>Regional LN</td></tr>
+<tr><td>N2</td><td>In-transit metastasis without regional LN</td></tr>
+<tr><td>N3</td><td>In-transit metastasis with regional LN</td></tr>
+<tr><td>M1a/b/c</td><td>Skin/subQ/LN；lung；other visceral</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<h3>Head and neck cSCC AJCC 8th T stage</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>T stage</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>Tis</td><td>In situ</td></tr>
+<tr><td>T1</td><td>≤2 cm</td></tr>
+<tr><td>T2</td><td>2–4 cm</td></tr>
+<tr><td>T3</td><td>&gt;4 cm, or &gt;6 mm invasion, or PNI, or minor bone erosion</td></tr>
+<tr><td>T4a</td><td>Gross cortical marrow invasion</td></tr>
+<tr><td>T4b</td><td>Skull base / neural foramina involvement</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Melanoma T stage</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>T stage</th><th>Thickness / ulceration</th></tr>
+</thead>
+<tbody>
+<tr><td>T1a</td><td>&lt;0.8 mm without ulceration</td></tr>
+<tr><td>T1b</td><td>&lt;0.8 mm with ulceration, or 0.8–1 mm with or without ulceration</td></tr>
+<tr><td>T2a/b</td><td>&gt;1–2 mm without / with ulceration</td></tr>
+<tr><td>T3a/b</td><td>&gt;2–4 mm without / with ulceration</td></tr>
+<tr><td>T4a/b</td><td>&gt;4 mm without / with ulceration</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>MCC staging concept</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>T / M category</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>T1</td><td>≤2 cm</td></tr>
+<tr><td>T2</td><td>2–5 cm</td></tr>
+<tr><td>T3</td><td>&gt;5 cm</td></tr>
+<tr><td>T4</td><td>Invades fascia, muscle, cartilage, or bone</td></tr>
+<tr><td>N1</td><td>Regional LN</td></tr>
+<tr><td>N2</td><td>In-transit metastasis without regional LN</td></tr>
+<tr><td>N3</td><td>In-transit metastasis with regional LN</td></tr>
+<tr><td>M1a/b/c</td><td>Skin/subQ/LN; lung; other visceral</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "治療架構",
+            "label_en": "MANAGEMENT",
+            "h2_zh": "治療總架構、resection margins 與 lymph node management",
+            "h2_en": "Overall treatment, resection margins, and lymph-node management",
+            "body_zh": """
+<p>低風險 BCC / cSCC 可用 excision、Mohs 或 alternate focal therapy。Very superficial 或 in situ disease 可考慮 electrodessication & curettage、cryotherapy、superficial radiotherapy、topical 5-FU、imiquimod。</p>
+
+<p>高風險 / very-high-risk BCC 或 cSCC 若 resectable，標準是 WLE 或 Mohs surgery。Adjuvant RT 高風險因素包括 positive lymph nodes、positive margins、vascular invasion、extensive PNI 或 large nerve involvement &gt;0.1 mm、deep tissue invasion、primary tumor &gt;4 cm、recurrent disease。Unresectable disease 可做 definitive RT 或 systemic therapy。</p>
+
+<div class="table-wrap">
+<table class="oncology-table decision-table">
+<thead>
+<tr><th>Cancer</th><th>Resection margin</th><th>Lymph node management</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>4 mm</td><td>Nodal spread 很低；very high-risk 或 clinical concern 才評估 nodes</td></tr>
+<tr><td>cSCC</td><td>4–6 mm</td><td>Recurrent 或 very-high-risk 可考慮 SLNB；node-positive 需處理 nodal basin</td></tr>
+<tr><td>Melanoma ≤1 mm</td><td>0.5–1 cm</td><td>若 ulceration 或 thickness &gt;0.8 mm，SLNB</td></tr>
+<tr><td>Melanoma 1–2 mm</td><td>1 cm</td><td>SLNB if stage IB or higher</td></tr>
+<tr><td>Melanoma &gt;1–2 mm</td><td>1–2 cm</td><td>SLNB</td></tr>
+<tr><td>Melanoma &gt;2–4 mm</td><td>2 cm</td><td>SLNB</td></tr>
+<tr><td>Melanoma &gt;4 mm</td><td>2 cm</td><td>SLNB</td></tr>
+<tr><td>MCC</td><td>1–2 cm，尤其若不做 adjuvant RT</td><td>SLNB always</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<p>Low-risk BCC / cSCC can be treated with excision, Mohs, or alternate focal therapy. Very superficial or in situ disease may be treated with electrodessication and curettage, cryotherapy, superficial radiotherapy, topical 5-FU, or imiquimod.</p>
+
+<p>High-risk / very-high-risk BCC or cSCC, if resectable, is treated with WLE or Mohs surgery. Adjuvant RT risk factors include positive lymph nodes, positive margins, vascular invasion, extensive PNI or large-nerve involvement &gt;0.1 mm, deep tissue invasion, primary tumor &gt;4 cm, and recurrent disease. Unresectable disease may receive definitive RT or systemic therapy.</p>
+
+<div class="table-wrap">
+<table class="oncology-table decision-table">
+<thead>
+<tr><th>Cancer</th><th>Resection margin</th><th>Lymph-node management</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>4 mm</td><td>Nodal spread is very rare; evaluate nodes only for very-high-risk disease or clinical concern</td></tr>
+<tr><td>cSCC</td><td>4–6 mm</td><td>Consider SLNB for recurrent or very-high-risk disease; node-positive disease requires nodal basin treatment</td></tr>
+<tr><td>Melanoma ≤1 mm</td><td>0.5–1 cm</td><td>If ulceration or thickness &gt;0.8 mm, perform SLNB</td></tr>
+<tr><td>Melanoma 1–2 mm</td><td>1 cm</td><td>SLNB if stage IB or higher</td></tr>
+<tr><td>Melanoma &gt;1–2 mm</td><td>1–2 cm</td><td>SLNB</td></tr>
+<tr><td>Melanoma &gt;2–4 mm</td><td>2 cm</td><td>SLNB</td></tr>
+<tr><td>Melanoma &gt;4 mm</td><td>2 cm</td><td>SLNB</td></tr>
+<tr><td>MCC</td><td>1–2 cm, especially if adjuvant RT is omitted</td><td>SLNB always</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "RT 劑量",
+            "label_en": "RT DOSE",
+            "h2_zh": "Radiation therapy dose",
+            "h2_en": "Radiation therapy dose",
+            "body_zh": """
+<h3>BCC / cSCC definitive RT</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Technique</th><th>Example dose</th><th>BED10 concept</th></tr>
+</thead>
+<tbody>
+<tr><td>Conventional fractionation</td><td>60–70 Gy，1.8–2 Gy/Fx</td><td>BED10 70–84 Gy</td></tr>
+<tr><td>Moderate hypofractionation</td><td>50 Gy/20 Fx for ≤2 cm；55 Gy/22 Fx for &gt;2 cm；44 Gy/10 Fx；30–35 Gy/5 Fx</td><td>BED10 48–72 Gy</td></tr>
+<tr><td>Brachytherapy surface mold</td><td>Rx depth ≤5 mm</td><td>39 Gy/16 Fx daily</td></tr>
+<tr><td>Electronic / surface brachytherapy</td><td>—</td><td>40 Gy/8 Fx twice weekly</td></tr>
+<tr><td>Brachytherapy BID option</td><td>—</td><td>44 Gy/10 Fx BID</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>BCC / cSCC adjuvant RT</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Technique</th><th>Example dose</th><th>BED10</th></tr>
+</thead>
+<tbody>
+<tr><td>Conventional fractionation</td><td>60–66 Gy，1.8–2 Gy/Fx</td><td>60–79 Gy</td></tr>
+<tr><td>Moderate hypofractionation</td><td>50 Gy/20 Fx；45–51 Gy/15–17 Fx；30 Gy/5 Fx QOD</td><td>48–70 Gy</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Melanoma RT dose</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Setting</th><th>Dose</th></tr>
+</thead>
+<tbody>
+<tr><td>Definitive / local RT CFx</td><td>64–70 Gy</td></tr>
+<tr><td>HFx</td><td>50–57.5 Gy/20–23 Fx</td></tr>
+<tr><td>Small field &lt;3 cm</td><td>35 Gy/5 Fx over 1 week</td></tr>
+<tr><td>Alternative</td><td>32 Gy/4 Fx over 4 weeks</td></tr>
+<tr><td>Lentigo maligna</td><td>50 Gy/20 Fx commonly used</td></tr>
+<tr><td>Adjuvant</td><td>48 Gy/20 Fx；positive margins 可考慮 51 Gy/21 Fx；30 Gy/5 Fx over 2.5 weeks</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Merkel cell carcinoma RT dose</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Setting</th><th>Dose</th></tr>
+</thead>
+<tbody>
+<tr><td>Negative margins</td><td>50–56 Gy/25–28 Fx</td></tr>
+<tr><td>Microscopic positive margins</td><td>56–60 Gy/28–30 Fx</td></tr>
+<tr><td>Gross residual disease 或 definitive RT</td><td>60–66 Gy/30–33 Fx</td></tr>
+<tr><td>Microscopic node-positive</td><td>50–56 Gy</td></tr>
+<tr><td>ECE</td><td>56–60 Gy</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Cosmetic / OAR-sensitive areas，例如 nose、eyelid、ear，通常 prefer protracted courses，以降低 late toxicity 與 cosmetic compromise。
+</div>
+""",
+            "body_en": """
+<h3>BCC / cSCC definitive RT</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Technique</th><th>Example dose</th><th>BED10 concept</th></tr>
+</thead>
+<tbody>
+<tr><td>Conventional fractionation</td><td>60–70 Gy, 1.8–2 Gy/Fx</td><td>BED10 70–84 Gy</td></tr>
+<tr><td>Moderate hypofractionation</td><td>50 Gy/20 Fx for ≤2 cm; 55 Gy/22 Fx for &gt;2 cm; 44 Gy/10 Fx; 30–35 Gy/5 Fx</td><td>BED10 48–72 Gy</td></tr>
+<tr><td>Surface mold brachytherapy</td><td>Rx depth ≤5 mm</td><td>39 Gy/16 Fx daily</td></tr>
+<tr><td>Electronic / surface brachytherapy</td><td>—</td><td>40 Gy/8 Fx twice weekly</td></tr>
+<tr><td>Brachytherapy BID option</td><td>—</td><td>44 Gy/10 Fx BID</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>BCC / cSCC adjuvant RT</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Technique</th><th>Example dose</th><th>BED10</th></tr>
+</thead>
+<tbody>
+<tr><td>Conventional fractionation</td><td>60–66 Gy, 1.8–2 Gy/Fx</td><td>60–79 Gy</td></tr>
+<tr><td>Moderate hypofractionation</td><td>50 Gy/20 Fx; 45–51 Gy/15–17 Fx; 30 Gy/5 Fx QOD</td><td>48–70 Gy</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Melanoma RT dose</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Setting</th><th>Dose</th></tr>
+</thead>
+<tbody>
+<tr><td>Definitive / local RT CFx</td><td>64–70 Gy</td></tr>
+<tr><td>HFx</td><td>50–57.5 Gy/20–23 Fx</td></tr>
+<tr><td>Small field &lt;3 cm</td><td>35 Gy/5 Fx over 1 week</td></tr>
+<tr><td>Alternative</td><td>32 Gy/4 Fx over 4 weeks</td></tr>
+<tr><td>Lentigo maligna</td><td>50 Gy/20 Fx commonly used</td></tr>
+<tr><td>Adjuvant</td><td>48 Gy/20 Fx; positive margins may use 51 Gy/21 Fx; 30 Gy/5 Fx over 2.5 weeks</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>MCC RT dose</h3>
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Setting</th><th>Dose</th></tr>
+</thead>
+<tbody>
+<tr><td>Negative margins</td><td>50–56 Gy/25–28 Fx</td></tr>
+<tr><td>Microscopic positive margins</td><td>56–60 Gy/28–30 Fx</td></tr>
+<tr><td>Gross residual disease or definitive RT</td><td>60–66 Gy/30–33 Fx</td></tr>
+<tr><td>Microscopic node-positive</td><td>50–56 Gy</td></tr>
+<tr><td>ECE</td><td>56–60 Gy</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Cosmetically or functionally sensitive areas such as nose, eyelid, and ear usually favor more protracted courses to reduce late toxicity and cosmetic compromise.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "RT 證據",
+            "label_en": "RT EVIDENCE",
+            "h2_zh": "Definitive / adjuvant RT evidence for BCC / cSCC",
+            "h2_en": "Definitive and adjuvant RT evidence for BCC / cSCC",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead>
+<tr><th>Study / evidence</th><th>設計</th><th>主要結論</th></tr>
+</thead>
+<tbody>
+<tr><td>Patel et al.</td><td>Stage 0–2 BCC/cSCC，electronic brachytherapy 40 Gy/8 Fx vs Mohs matched cohort</td><td>平均 3.5 年 LC：EBT 99.5% vs Mohs 100%；low-risk early NMSC 可有很好 LC/cosmesis，但為 retrospective data</td></tr>
+<tr><td>Zaorsky meta-analysis</td><td>21 studies，hypofractionated RT for BCC/SCC</td><td>Median 1-year local recurrence 2%，5-year local recurrence 14%；5 年 80% good or better cosmesis</td></tr>
+<tr><td>Brantsch et al.</td><td>615 位 margin-negative excision cSCC，regional recurrence analysis</td><td>Tumor thickness，尤其 &gt;6 mm，與 recurrence 關聯最強；需考慮 imaging、SLNB、nodal basin evaluation</td></tr>
+<tr><td>Harris et al.</td><td>Surgery ± adjuvant RT for cSCC</td><td>Adjuvant RT 改善 OS；LN+ 與 PNI+ subgroup DFS/OS benefit 特別明顯</td></tr>
+<tr><td>Ruiz et al.</td><td>BWH T2b–T3 cSCC，negative margin resection 後 surgery alone vs surgery + adjuvant RT</td><td>Adjuvant RT 降低 LRR；high-risk subgroup 5-year LRR 17% with RT vs 31% without RT</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+High-risk cSCC，尤其 LN+、PNI+、BWH T2b–T3、recurrent 或 very large tumors，adjuvant RT 支持較強。RT 對 low-risk early BCC/cSCC 也可達高 LC，但需謹慎選病人。
+</div>
+""",
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead>
+<tr><th>Study / evidence</th><th>Design</th><th>Main conclusion</th></tr>
+</thead>
+<tbody>
+<tr><td>Patel et al.</td><td>Stage 0–2 BCC/cSCC; electronic brachytherapy 40 Gy/8 Fx vs matched Mohs cohort</td><td>Mean 3.5-year LC: EBT 99.5% vs Mohs 100%; excellent LC/cosmesis in low-risk early NMSC, but retrospective</td></tr>
+<tr><td>Zaorsky meta-analysis</td><td>21 studies of hypofractionated RT for BCC/SCC</td><td>Median 1-year local recurrence 2%, 5-year local recurrence 14%; 80% good or better cosmesis at 5 years</td></tr>
+<tr><td>Brantsch et al.</td><td>615 margin-negative excised cSCC; regional recurrence analysis</td><td>Tumor thickness, especially &gt;6 mm, was most strongly associated with recurrence; consider imaging, SLNB, and nodal basin evaluation</td></tr>
+<tr><td>Harris et al.</td><td>Surgery ± adjuvant RT for cSCC</td><td>Adjuvant RT improved OS; LN+ and PNI+ subgroups had especially clear DFS/OS benefit</td></tr>
+<tr><td>Ruiz et al.</td><td>BWH T2b–T3 cSCC after negative-margin resection, surgery alone vs surgery + adjuvant RT</td><td>Adjuvant RT reduced LRR; high-risk subgroup 5-year LRR 17% with RT vs 31% without RT</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+High-risk cSCC, especially LN+, PNI+, BWH T2b–T3, recurrent, or very large tumors, has stronger support for adjuvant RT. RT can also achieve high LC for selected low-risk early BCC/cSCC, but patient selection is critical.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "ASTRO/TROG",
+            "label_en": "ASTRO / TROG",
+            "h2_zh": "ASTRO guideline 與 concurrent chemotherapy evidence",
+            "h2_en": "ASTRO guideline and concurrent chemotherapy evidence",
+            "body_zh": """
+<h3>ASTRO guideline：cSCC adjuvant RT strong indications</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead><tr><th>cSCC strong indication for adjuvant RT</th></tr></thead>
+<tbody>
+<tr><td>Gross PNI，clinically or radiographically apparent</td></tr>
+<tr><td>Close or positive margins，且無法用 further surgery correction</td></tr>
+<tr><td>Recurrence after prior margin-negative resection</td></tr>
+<tr><td>T3–T4 tumors</td></tr>
+<tr><td>Desmoplastic or infiltrative tumors in chronic immunosuppression</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>BCC conditional adjuvant RT indications</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead><tr><th>BCC conditional indication for adjuvant RT</th></tr></thead>
+<tbody>
+<tr><td>Close or positive margins，且無法 further surgery correction</td></tr>
+<tr><td>Recurrence after prior margin-negative resection</td></tr>
+<tr><td>Locally advanced or neglected tumors involving bone or infiltrating into muscle</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Nodal RT</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Situation</th><th>Recommendation</th></tr>
+</thead>
+<tbody>
+<tr><td>cSCC/BCC clinically apparent regional LN metastasis</td><td>Therapeutic lymphadenectomy → adjuvant RT</td></tr>
+<tr><td>Exception</td><td>Single &lt;3 cm cervical LN without ECE 可例外</td></tr>
+<tr><td>Medically inoperable 或 unresectable nodal disease</td><td>Definitive RT</td></tr>
+<tr><td>After lymphadenectomy adjuvant RT dose</td><td>60–66 Gy，1.8–2 Gy/Fx</td></tr>
+<tr><td>Elective RT without lymphadenectomy</td><td>50–54 Gy，1.8–2 Gy/Fx</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+TROG 05.01：high-risk cSCC 術後 adjuvant RT alone 60–66 Gy vs RT + weekly carboplatin AUC 2。Concurrent carboplatin 沒有改善 DFS 或 OS，因此不建議 routine concurrent carboplatin。
+</div>
+""",
+            "body_en": """
+<h3>ASTRO guideline: strong cSCC indications for adjuvant RT</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead><tr><th>cSCC strong indication for adjuvant RT</th></tr></thead>
+<tbody>
+<tr><td>Gross PNI, clinically or radiographically apparent</td></tr>
+<tr><td>Close or positive margins that cannot be corrected by further surgery</td></tr>
+<tr><td>Recurrence after prior margin-negative resection</td></tr>
+<tr><td>T3–T4 tumors</td></tr>
+<tr><td>Desmoplastic or infiltrative tumors in chronic immunosuppression</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>BCC conditional adjuvant RT indications</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead><tr><th>BCC conditional indication for adjuvant RT</th></tr></thead>
+<tbody>
+<tr><td>Close or positive margins that cannot be corrected by further surgery</td></tr>
+<tr><td>Recurrence after prior margin-negative resection</td></tr>
+<tr><td>Locally advanced or neglected tumors involving bone or infiltrating muscle</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Nodal RT</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Situation</th><th>Recommendation</th></tr>
+</thead>
+<tbody>
+<tr><td>cSCC/BCC clinically apparent regional LN metastasis</td><td>Therapeutic lymphadenectomy → adjuvant RT</td></tr>
+<tr><td>Exception</td><td>Single &lt;3 cm cervical LN without ECE can be an exception</td></tr>
+<tr><td>Medically inoperable or unresectable nodal disease</td><td>Definitive RT</td></tr>
+<tr><td>Adjuvant RT after lymphadenectomy</td><td>60–66 Gy, 1.8–2 Gy/Fx</td></tr>
+<tr><td>Elective RT without lymphadenectomy</td><td>50–54 Gy, 1.8–2 Gy/Fx</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+TROG 05.01: high-risk cSCC after surgery received adjuvant RT alone 60–66 Gy vs RT + weekly carboplatin AUC 2. Concurrent carboplatin did not improve DFS or OS, so routine concurrent carboplatin is not recommended.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "全身治療",
+            "label_en": "SYSTEMIC",
+            "h2_zh": "Locally advanced / metastatic systemic therapy evidence",
+            "h2_en": "Locally advanced / metastatic systemic therapy evidence",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead>
+<tr><th>癌別 / 證據</th><th>重點</th></tr>
+</thead>
+<tbody>
+<tr><td>Neoadjuvant cemiplimab, Gross et al. NEJM 2022</td><td>Resectable stage II–IV cSCC；pCR 51%，major pathologic response 13%，imaging ORR 68%；可能改變 bulky / function-threatening cSCC 策略</td></tr>
+<tr><td>Cemiplimab, Migden et al. NEJM 2018</td><td>Locally advanced / metastatic cSCC；ORR 46%，DCR 69%；第一個 FDA approved advanced cSCC systemic therapy</td></tr>
+<tr><td>Pembrolizumab, KEYNOTE-629</td><td>Recurrent / metastatic cSCC；ORR 34%，DCR 52%</td></tr>
+<tr><td>Vismodegib, ERIVANCE</td><td>Metastatic / locally advanced BCC；ORR metastatic 48.5%，locally advanced 60.3%；resistance 與 toxicity 不少</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Cancer</th><th>Systemic therapy</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>SHH inhibitor：vismodegib、sonidegib</td></tr>
+<tr><td>cSCC</td><td>ICI：cemiplimab、pembrolizumab</td></tr>
+<tr><td>cSCC 若不能 ICI</td><td>Cisplatin ± 5-FU、carboplatin/paclitaxel、EGFR inhibitor 例如 cetuximab</td></tr>
+<tr><td>Melanoma</td><td>Pembrolizumab、ipilimumab/nivolumab；BRAF V600 mutation 可用 dabrafenib/trametinib</td></tr>
+<tr><td>MCC</td><td>Avelumab、pembrolizumab、retifanlimab-dlwr，通常用於 locally advanced disease 且 curative surgery/RT 不可行時</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead>
+<tr><th>Cancer / evidence</th><th>Key point</th></tr>
+</thead>
+<tbody>
+<tr><td>Neoadjuvant cemiplimab, Gross et al. NEJM 2022</td><td>Resectable stage II–IV cSCC; pCR 51%, major pathologic response 13%, imaging ORR 68%; may change strategy for bulky / function-threatening cSCC</td></tr>
+<tr><td>Cemiplimab, Migden et al. NEJM 2018</td><td>Locally advanced / metastatic cSCC; ORR 46%, DCR 69%; first FDA-approved systemic therapy for advanced cSCC</td></tr>
+<tr><td>Pembrolizumab, KEYNOTE-629</td><td>Recurrent / metastatic cSCC; ORR 34%, DCR 52%</td></tr>
+<tr><td>Vismodegib, ERIVANCE</td><td>Metastatic / locally advanced BCC; ORR 48.5% in metastatic and 60.3% in locally advanced BCC; resistance and toxicity are common</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Cancer</th><th>Systemic therapy</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>SHH inhibitors: vismodegib, sonidegib</td></tr>
+<tr><td>cSCC</td><td>PD-1 inhibitors: cemiplimab, pembrolizumab</td></tr>
+<tr><td>cSCC if ICI-ineligible</td><td>Cisplatin ± 5-FU, carboplatin/paclitaxel, EGFR inhibitor such as cetuximab</td></tr>
+<tr><td>Melanoma</td><td>Pembrolizumab, ipilimumab/nivolumab; BRAF V600 mutation can use dabrafenib/trametinib</td></tr>
+<tr><td>MCC</td><td>Avelumab, pembrolizumab, retifanlimab-dlwr, usually when curative surgery/RT is not feasible</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "各癌別處置",
+            "label_en": "DISEASE-SPECIFIC",
+            "h2_zh": "各癌別治療總整理",
+            "h2_en": "Disease-specific management summary",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table decision-table">
+<thead>
+<tr><th>Cancer</th><th>Situation</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>Low-risk</td><td>Excision、Mohs、或 alternate focal therapy</td></tr>
+<tr><td>BCC</td><td>Very superficial / in situ</td><td>EDC、cryotherapy、SRT、5-FU、imiquimod</td></tr>
+<tr><td>BCC</td><td>High-risk resectable</td><td>Mohs 或 WLE；若 margin / PNI / aggressive features → adjuvant RT</td></tr>
+<tr><td>BCC</td><td>Advanced / metastatic</td><td>SHH inhibitor：vismodegib、sonidegib</td></tr>
+<tr><td>cSCC</td><td>Low-risk</td><td>Excision 或 alternate focal therapy</td></tr>
+<tr><td>cSCC</td><td>High-risk / very-high-risk resectable</td><td>WLE 或 Mohs；consider SLNB</td></tr>
+<tr><td>cSCC</td><td>Adjuvant RT indication</td><td>+LN、+margin、vascular invasion、extensive PNI、large nerve involvement &gt;0.1 mm、deep tissue invasion、&gt;4 cm primary、recurrent disease</td></tr>
+<tr><td>cSCC</td><td>Locally advanced / metastatic</td><td>Cemiplimab、pembrolizumab</td></tr>
+<tr><td>Melanoma</td><td>Localized disease</td><td>WLE 根據 Breslow depth 決定 margin；SLNB if ulceration 或 Breslow &gt;0.8 mm</td></tr>
+<tr><td>Melanoma</td><td>Systemic therapy</td><td>PD-1、CTLA-4、BRAF/MEK inhibitors</td></tr>
+<tr><td>MCC</td><td>Localized</td><td>WLE + SLNB；常見 adjuvant RT</td></tr>
+<tr><td>MCC</td><td>Node-positive / advanced</td><td>Nodal surgery ± RT；avelumab、pembrolizumab、retifanlimab-dlwr</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table decision-table">
+<thead>
+<tr><th>Cancer</th><th>Situation</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC</td><td>Low-risk</td><td>Excision, Mohs, or alternate focal therapy</td></tr>
+<tr><td>BCC</td><td>Very superficial / in situ</td><td>EDC, cryotherapy, SRT, 5-FU, imiquimod</td></tr>
+<tr><td>BCC</td><td>High-risk resectable</td><td>Mohs or WLE; if margin / PNI / aggressive features → adjuvant RT</td></tr>
+<tr><td>BCC</td><td>Advanced / metastatic</td><td>SHH inhibitors: vismodegib, sonidegib</td></tr>
+<tr><td>cSCC</td><td>Low-risk</td><td>Excision or alternate focal therapy</td></tr>
+<tr><td>cSCC</td><td>High-risk / very-high-risk resectable</td><td>WLE or Mohs; consider SLNB</td></tr>
+<tr><td>cSCC</td><td>Adjuvant RT indication</td><td>+LN, +margin, vascular invasion, extensive PNI, large-nerve involvement &gt;0.1 mm, deep tissue invasion, &gt;4 cm primary, recurrent disease</td></tr>
+<tr><td>cSCC</td><td>Locally advanced / metastatic</td><td>Cemiplimab, pembrolizumab</td></tr>
+<tr><td>Melanoma</td><td>Localized disease</td><td>WLE margin based on Breslow depth; SLNB if ulceration or Breslow &gt;0.8 mm</td></tr>
+<tr><td>Melanoma</td><td>Systemic therapy</td><td>PD-1, CTLA-4, BRAF/MEK inhibitors</td></tr>
+<tr><td>MCC</td><td>Localized</td><td>WLE + SLNB; adjuvant RT is common</td></tr>
+<tr><td>MCC</td><td>Node-positive / advanced</td><td>Nodal surgery ± RT; avelumab, pembrolizumab, retifanlimab-dlwr</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "劑量表/重點",
+            "label_en": "DOSE / TAKE-HOME",
+            "h2_zh": "最重要 dose table 與最後高分整理",
+            "h2_en": "Key dose table and high-yield take-home messages",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Clinical setting</th><th>Dose</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC / cSCC definitive CFx</td><td>60–70 Gy，1.8–2 Gy/Fx</td></tr>
+<tr><td>BCC / cSCC definitive moderate HFx</td><td>50 Gy/20 Fx；55 Gy/22 Fx；44 Gy/10 Fx；30–35 Gy/5 Fx</td></tr>
+<tr><td>BCC / cSCC electronic brachytherapy</td><td>40 Gy/8 Fx twice weekly</td></tr>
+<tr><td>BCC / cSCC adjuvant CFx</td><td>60–66 Gy，1.8–2 Gy/Fx</td></tr>
+<tr><td>BCC / cSCC adjuvant HFx</td><td>50 Gy/20 Fx；45–51 Gy/15–17 Fx；30 Gy/5 Fx QOD</td></tr>
+<tr><td>Elective nodal RT without lymphadenectomy</td><td>50–54 Gy</td></tr>
+<tr><td>Post-lymphadenectomy adjuvant nodal RT</td><td>60–66 Gy</td></tr>
+<tr><td>Melanoma CFx</td><td>64–70 Gy</td></tr>
+<tr><td>Melanoma adjuvant common</td><td>48 Gy/20 Fx；positive margin 可考慮 51 Gy/21 Fx</td></tr>
+<tr><td>Lentigo maligna</td><td>50 Gy/20 Fx commonly used</td></tr>
+<tr><td>MCC negative margin</td><td>50–56 Gy</td></tr>
+<tr><td>MCC microscopic positive margin</td><td>56–60 Gy</td></tr>
+<tr><td>MCC gross residual / definitive</td><td>60–66 Gy</td></tr>
+<tr><td>MCC microscopic node-positive</td><td>50–56 Gy</td></tr>
+<tr><td>MCC ECE</td><td>56–60 Gy</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>主題</th><th>一句話重點</th></tr>
+</thead>
+<tbody>
+<tr><td>最常見皮膚癌</td><td>Non-melanoma skin cancer 最常見；BCC 約 80%，cSCC 約 20%</td></tr>
+<tr><td>UV</td><td>UVB = Burning；UVA = Aging</td></tr>
+<tr><td>BCC presentation</td><td>Pearly pink 或 skin-colored bump，sun-exposed area</td></tr>
+<tr><td>cSCC presentation</td><td>Actinic keratosis precursor；rough、scaly、crusty、ulcerative、non-healing sore</td></tr>
+<tr><td>Melanoma presentation</td><td>ABCDE：asymmetry、border、color、diameter、evolution</td></tr>
+<tr><td>MCC presentation</td><td>Rapidly growing painless shiny pink/red/blue nodule</td></tr>
+<tr><td>Workup</td><td>Complete skin exam + nodes；H&amp;N 要 neurological exam for PNI</td></tr>
+<tr><td>BCC high-risk</td><td>Head/neck、hands/feet、pretibial、anogenital、poor borders、recurrent、immunosuppression、prior RT、aggressive histology、PNI</td></tr>
+<tr><td>cSCC very high-risk</td><td>&gt;4 cm、poor differentiation、deep invasion &gt;6 mm/beyond fat、PNI ≥0.1 mm、LVI、recurrent、immunosuppressed</td></tr>
+<tr><td>Concurrent chemo</td><td>TROG 05.01 顯示 weekly carboplatin 加 RT 無 benefit；不建議 routine concurrent carboplatin</td></tr>
+<tr><td>cSCC systemic therapy</td><td>PD-1 inhibitors：cemiplimab、pembrolizumab</td></tr>
+<tr><td>BCC systemic therapy</td><td>SHH inhibitors：vismodegib、sonidegib</td></tr>
+<tr><td>RT dose concept</td><td>BCC/cSCC definitive 60–70 Gy or hypoFx；adjuvant 60–66 Gy；cosmetic/OAR-sensitive area prefer protracted course</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+一句話總結：皮膚癌治療必須依 histology + location + risk stratification 決策。Low-risk BCC/cSCC 可用局部治療或簡單切除；high-risk cSCC，尤其 PNI、LN+、deep invasion、large/recurrent disease，需要積極 surgery ± adjuvant RT；definitive RT 是不可手術或想保留功能/外觀時的重要選項；advanced cSCC 進入 PD-1 inhibitor 時代，advanced BCC 則以 SHH inhibitor 為主；melanoma 與 MCC 則更依賴 SLNB、免疫治療與風險導向 RT。
+</div>
+""",
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead>
+<tr><th>Clinical setting</th><th>Dose</th></tr>
+</thead>
+<tbody>
+<tr><td>BCC / cSCC definitive CFx</td><td>60–70 Gy, 1.8–2 Gy/Fx</td></tr>
+<tr><td>BCC / cSCC definitive moderate HFx</td><td>50 Gy/20 Fx; 55 Gy/22 Fx; 44 Gy/10 Fx; 30–35 Gy/5 Fx</td></tr>
+<tr><td>BCC / cSCC electronic brachytherapy</td><td>40 Gy/8 Fx twice weekly</td></tr>
+<tr><td>BCC / cSCC adjuvant CFx</td><td>60–66 Gy, 1.8–2 Gy/Fx</td></tr>
+<tr><td>BCC / cSCC adjuvant HFx</td><td>50 Gy/20 Fx; 45–51 Gy/15–17 Fx; 30 Gy/5 Fx QOD</td></tr>
+<tr><td>Elective nodal RT without lymphadenectomy</td><td>50–54 Gy</td></tr>
+<tr><td>Post-lymphadenectomy adjuvant nodal RT</td><td>60–66 Gy</td></tr>
+<tr><td>Melanoma CFx</td><td>64–70 Gy</td></tr>
+<tr><td>Melanoma adjuvant common</td><td>48 Gy/20 Fx; positive margin may use 51 Gy/21 Fx</td></tr>
+<tr><td>Lentigo maligna</td><td>50 Gy/20 Fx commonly used</td></tr>
+<tr><td>MCC negative margin</td><td>50–56 Gy</td></tr>
+<tr><td>MCC microscopic positive margin</td><td>56–60 Gy</td></tr>
+<tr><td>MCC gross residual / definitive</td><td>60–66 Gy</td></tr>
+<tr><td>MCC microscopic node-positive</td><td>50–56 Gy</td></tr>
+<tr><td>MCC ECE</td><td>56–60 Gy</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Topic</th><th>One-sentence point</th></tr>
+</thead>
+<tbody>
+<tr><td>Most common skin cancer</td><td>Non-melanoma skin cancer is most common; BCC about 80%, cSCC about 20%</td></tr>
+<tr><td>UV</td><td>UVB = Burning; UVA = Aging</td></tr>
+<tr><td>BCC presentation</td><td>Pearly pink or skin-colored bump in sun-exposed areas</td></tr>
+<tr><td>cSCC presentation</td><td>Actinic keratosis precursor; rough, scaly, crusted, ulcerative, non-healing sore</td></tr>
+<tr><td>Melanoma presentation</td><td>ABCDE: asymmetry, border, color, diameter, evolution</td></tr>
+<tr><td>MCC presentation</td><td>Rapidly growing painless shiny pink/red/blue nodule</td></tr>
+<tr><td>Workup</td><td>Complete skin exam and nodes; H&amp;N requires neurologic exam for PNI</td></tr>
+<tr><td>BCC high-risk</td><td>Head/neck, hands/feet, pretibial, anogenital, poor borders, recurrence, immunosuppression, prior RT, aggressive histology, PNI</td></tr>
+<tr><td>cSCC very high-risk</td><td>&gt;4 cm, poor differentiation, deep invasion &gt;6 mm/beyond fat, PNI ≥0.1 mm, LVI, recurrent, immunosuppressed</td></tr>
+<tr><td>Concurrent chemo</td><td>TROG 05.01 showed no benefit to weekly carboplatin with RT; routine concurrent carboplatin is not recommended</td></tr>
+<tr><td>cSCC systemic therapy</td><td>PD-1 inhibitors: cemiplimab, pembrolizumab</td></tr>
+<tr><td>BCC systemic therapy</td><td>SHH inhibitors: vismodegib, sonidegib</td></tr>
+<tr><td>RT dose concept</td><td>BCC/cSCC definitive 60–70 Gy or hypofractionation; adjuvant 60–66 Gy; cosmetic/OAR-sensitive areas prefer protracted treatment</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+One-sentence summary: Skin cancer treatment depends on histology + location + risk stratification. Low-risk BCC/cSCC can use local therapy or simple excision; high-risk cSCC, especially PNI, LN+, deep invasion, large/recurrent disease, needs aggressive surgery ± adjuvant RT; definitive RT is important when surgery is not feasible or when function/cosmesis preservation matters; advanced cSCC is now in the PD-1 inhibitor era, advanced BCC uses SHH inhibition, and melanoma/MCC depend heavily on SLNB, immunotherapy, and risk-adapted RT.
+</div>
+"""
+        },
     ],
+
     "excel_sheet": "Cutaneous",
+
+    "trial_filter": [
+        "skin cancer",
+        "non-melanoma skin cancer",
+        "NMSC",
+        "BCC",
+        "basal cell carcinoma",
+        "cSCC",
+        "cutaneous squamous cell carcinoma",
+        "melanoma",
+        "Merkel cell carcinoma",
+        "MCC",
+        "mycosis fungoides",
+        "lentigo maligna",
+        "actinic keratosis",
+        "perineural invasion",
+        "PNI",
+        "SLNB",
+        "Mohs",
+        "electronic brachytherapy",
+        "Patel",
+        "Zaorsky",
+        "Brantsch",
+        "Harris",
+        "Ruiz",
+        "ASTRO",
+        "TROG 05.01",
+        "Porceddu",
+        "cemiplimab",
+        "Gross",
+        "Migden",
+        "KEYNOTE-629",
+        "pembrolizumab",
+        "ERIVANCE",
+        "vismodegib",
+        "sonidegib",
+        "avelumab",
+        "retifanlimab",
+        "BRAF",
+        "dabrafenib",
+        "trametinib"
+    ],
+
     "prev": ["sarcoma.html", "肉瘤", "Sarcoma"],
     "next": ["peds.html", "兒童", "Peds"],
 })
