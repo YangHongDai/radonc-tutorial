@@ -591,18 +591,6 @@ def build_topic_html(page):
                 關鍵試驗
               </div>
 
-              <h2
-                data-zh="關鍵臨床試驗 (Estes 2025)"
-                data-en="Key Clinical Trials (Estes 2025)"
-              >
-                關鍵臨床試驗
-              </h2>
-
-              <p data-lang="zh">
-                以下為此主題的核心隨機試驗與樞紐研究，資料源自
-                Estes 2025 Key Studies 資料表，已整合於本章。
-              </p>
-
               <p data-lang="en">
                 Core randomized trials and pivotal studies for this
                 topic, from the Estes 2025 Key Studies tables, are

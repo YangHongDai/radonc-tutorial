@@ -1,132 +1,224 @@
-(function(){
-  const SK='radonc_lang';
-  const NAV_SCROLL_EDGE=8;
-  let lang=localStorage.getItem(SK)||'en';
+(function () {
+  "use strict";
 
-  function syncTopNavHeight(){
-    const nav=document.querySelector('.top-nav');
-    if(nav){
-      document.documentElement.style.setProperty('--top-nav-height',`${nav.offsetHeight}px`);
-    }
+  var STORAGE_KEYS = [
+    "radonc-language",
+    "radonc_lang",
+    "language",
+    "lang"
+  ];
+
+  var currentLanguage = "zh";
+  var isInitialised = false;
+
+  function normaliseLanguage(value) {
+    var language = String(value || "").toLowerCase();
+    return language === "en" || language === "english" ? "en" : "zh";
   }
 
-  function apply(l){
-    lang=l; localStorage.setItem(SK,l);
-    document.documentElement.lang=l==='zh'?'zh-Hant':'en';
-    document.querySelectorAll('[data-lang]').forEach(el=>{
-      el.style.display=el.dataset.lang===l?'':'none';
-    });
-    document.querySelectorAll('[data-zh][data-en]').forEach(el=>{
-      el.textContent=el.dataset[l];
-    });
-    const btn=document.getElementById('langToggle');
-    if(btn) btn.textContent=l==='zh'?'EN':'\u4e2d\u6587';
-    syncTopNavHeight();
-    document.dispatchEvent(new CustomEvent('langchange',{detail:{lang:l}}));
-  }
-
-  function toggle(){ apply(lang==='zh'?'en':'zh'); }
-  function get(){ return lang; }
-
-  function markActiveNavLink(){
-    const currentUrl=new URL(window.location.href);
-    document.querySelectorAll('.top-nav-links a[href]').forEach(link=>{
-      let isActive=false;
-      try{
-        const targetUrl=new URL(link.getAttribute('href'),currentUrl.href);
-        isActive=decodeURIComponent(targetUrl.pathname)===decodeURIComponent(currentUrl.pathname);
-      }catch(err){}
-      link.classList.toggle('active',isActive);
-      if(isActive) link.setAttribute('aria-current','page');
-      else link.removeAttribute('aria-current');
-    });
-  }
-
-  function updateTopNavScrollState(rail,links,prev,next){
-    const maxScroll=Math.max(links.scrollWidth-links.clientWidth,0);
-    const canScrollLeft=links.scrollLeft>NAV_SCROLL_EDGE;
-    const canScrollRight=links.scrollLeft<maxScroll-NAV_SCROLL_EDGE;
-    rail.classList.toggle('can-scroll-left',canScrollLeft);
-    rail.classList.toggle('can-scroll-right',canScrollRight);
-    prev.disabled=!canScrollLeft;
-    next.disabled=!canScrollRight;
-  }
-
-  function enhanceTopNav(){
-    const links=document.querySelector('.top-nav-links');
-    if(!links||links.dataset.enhanced==='true') return;
-
-    const rail=document.createElement('div');
-    rail.className='top-nav-rail';
-
-    const prev=document.createElement('button');
-    prev.type='button';
-    prev.className='top-nav-scroll-btn';
-    prev.setAttribute('aria-label','Scroll left');
-    prev.title='Scroll left';
-    prev.innerHTML='&#x2039;';
-
-    const next=document.createElement('button');
-    next.type='button';
-    next.className='top-nav-scroll-btn';
-    next.setAttribute('aria-label','Scroll right');
-    next.title='Scroll right';
-    next.innerHTML='&#x203A;';
-
-    const leftFade=document.createElement('div');
-    leftFade.className='top-nav-fade left';
-    const rightFade=document.createElement('div');
-    rightFade.className='top-nav-fade right';
-
-    links.dataset.enhanced='true';
-    links.parentNode.insertBefore(rail,links);
-    rail.append(prev,leftFade,links,rightFade,next);
-
-    const scrollByStep=direction=>{
-      links.scrollBy({
-        left:direction*Math.max(links.clientWidth*.55,180),
-        behavior:'smooth'
-      });
-    };
-    const update=()=>{
-      updateTopNavScrollState(rail,links,prev,next);
-      syncTopNavHeight();
-    };
-
-    prev.addEventListener('click',()=>scrollByStep(-1));
-    next.addEventListener('click',()=>scrollByStep(1));
-    links.addEventListener('scroll',update,{passive:true});
-    window.addEventListener('resize',update);
-    window.addEventListener('load',update,{once:true});
-    if(document.fonts&&document.fonts.ready){
-      document.fonts.ready.then(update);
-    }
-
-    markActiveNavLink();
-    requestAnimationFrame(()=>{
-      const activeLink=links.querySelector('a.active');
-      if(activeLink){
-        activeLink.scrollIntoView({block:'nearest',inline:'center'});
+  function readStoredLanguage() {
+    try {
+      for (var i = 0; i < STORAGE_KEYS.length; i += 1) {
+        var stored = localStorage.getItem(STORAGE_KEYS[i]);
+        if (stored) {
+          return normaliseLanguage(stored);
+        }
       }
-      update();
+    } catch (error) {
+      // Continue with the default language when storage is unavailable.
+    }
+
+    var rootLanguage =
+      document.documentElement.getAttribute("lang") || "zh-TW";
+
+    return rootLanguage.toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+  }
+
+  function saveLanguage(language) {
+    try {
+      /*
+       * Write both the current key and common legacy keys so old and new
+       * pages remain synchronized.
+       */
+      STORAGE_KEYS.forEach(function (key) {
+        localStorage.setItem(key, language);
+      });
+    } catch (error) {
+      // The switcher still works when localStorage is unavailable.
+    }
+  }
+
+  function setElementVisibility(element, shouldShow) {
+    element.hidden = !shouldShow;
+    element.style.display = shouldShow ? "" : "none";
+    element.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  }
+
+  function updateBilingualText(language) {
+    document.querySelectorAll("[data-zh][data-en]").forEach(function (element) {
+      var value = element.getAttribute(
+        language === "zh" ? "data-zh" : "data-en"
+      );
+
+      if (value !== null) {
+        element.textContent = value;
+      }
     });
   }
 
-  document.addEventListener('DOMContentLoaded',()=>{
-    const nav=document.querySelector('.top-nav-inner');
-    if(nav && !document.getElementById('langToggle')){
-      const btn=document.createElement('button');
-      btn.id='langToggle';
-      btn.className='lang-toggle';
-      btn.type='button';
-      btn.textContent=lang==='zh'?'EN':'\u4e2d\u6587';
-      btn.onclick=toggle;
-      nav.appendChild(btn);
-    }
-    enhanceTopNav();
-    apply(lang);
-    syncTopNavHeight();
-  });
+  function updateLanguageBlocks(language) {
+    document.querySelectorAll("[data-lang]").forEach(function (element) {
+      setElementVisibility(
+        element,
+        normaliseLanguage(element.getAttribute("data-lang")) === language
+      );
+    });
 
-  window.I18n={apply,toggle,get};
+    /*
+     * Backward compatibility for older generated pages that use classes
+     * rather than data-lang attributes.
+     */
+    document.querySelectorAll(
+      ".lang-zh, .zh-content, .content-zh, [data-language='zh']"
+    ).forEach(function (element) {
+      setElementVisibility(element, language === "zh");
+    });
+
+    document.querySelectorAll(
+      ".lang-en, .en-content, .content-en, [data-language='en']"
+    ).forEach(function (element) {
+      setElementVisibility(element, language === "en");
+    });
+  }
+
+  function updateButtons(language) {
+    var buttons = document.querySelectorAll(
+      "#lang-toggle, .lang-toggle, [data-lang-toggle]"
+    );
+
+    buttons.forEach(function (button) {
+      button.textContent = language === "zh" ? "EN" : "中文";
+      button.setAttribute(
+        "aria-label",
+        language === "zh" ? "Switch to English" : "切換至中文"
+      );
+      button.setAttribute("data-current-lang", language);
+      button.setAttribute("type", button.getAttribute("type") || "button");
+    });
+  }
+
+  function updateDocumentState(language) {
+    var root = document.documentElement;
+
+    root.lang = language === "en" ? "en" : "zh-TW";
+    root.setAttribute("data-ui-lang", language);
+
+    document.body.classList.toggle("lang-zh", language === "zh");
+    document.body.classList.toggle("lang-en", language === "en");
+  }
+
+  function applyLanguage(language, persist) {
+    currentLanguage = normaliseLanguage(language);
+
+    updateDocumentState(currentLanguage);
+    updateBilingualText(currentLanguage);
+    updateLanguageBlocks(currentLanguage);
+    updateButtons(currentLanguage);
+
+    if (persist !== false) {
+      saveLanguage(currentLanguage);
+    }
+
+    document.dispatchEvent(
+      new CustomEvent("languagechange", {
+        detail: { language: currentLanguage }
+      })
+    );
+
+    return currentLanguage;
+  }
+
+  function toggleLanguage() {
+    return applyLanguage(
+      currentLanguage === "zh" ? "en" : "zh",
+      true
+    );
+  }
+
+  function ensureLanguageButton() {
+    if (
+      document.querySelector(
+        "#lang-toggle, .lang-toggle, [data-lang-toggle]"
+      )
+    ) {
+      return;
+    }
+
+    var navInner = document.querySelector(".top-nav-inner");
+    if (!navInner) {
+      return;
+    }
+
+    var button = document.createElement("button");
+    button.id = "lang-toggle";
+    button.className = "lang-toggle";
+    button.type = "button";
+    button.setAttribute("data-lang-toggle", "");
+    navInner.appendChild(button);
+  }
+
+  function bindLanguageButtons() {
+    document.querySelectorAll(
+      "#lang-toggle, .lang-toggle, [data-lang-toggle]"
+    ).forEach(function (button) {
+      /*
+       * Do not add another listener when an older page already uses
+       * onclick="toggleLang()", otherwise one click would toggle twice.
+       */
+      var inlineHandler = button.getAttribute("onclick") || "";
+      if (/toggleLang|toggleLanguage/.test(inlineHandler)) {
+        return;
+      }
+
+      if (button.dataset.i18nBound === "true") {
+        return;
+      }
+
+      button.addEventListener("click", toggleLanguage);
+      button.dataset.i18nBound = "true";
+    });
+  }
+
+  function initialiseLanguage() {
+    if (isInitialised) {
+      return;
+    }
+
+    isInitialised = true;
+    ensureLanguageButton();
+    bindLanguageButtons();
+    applyLanguage(readStoredLanguage(), false);
+  }
+
+  /*
+   * Legacy global functions used by older cancer pages.
+   */
+  window.toggleLang = toggleLanguage;
+  window.toggleLanguage = toggleLanguage;
+  window.setLanguage = function (language) {
+    return applyLanguage(language, true);
+  };
+  window.setLang = window.setLanguage;
+  window.applyLanguage = function (language) {
+    return applyLanguage(language, false);
+  };
+  window.getCurrentLanguage = function () {
+    return currentLanguage;
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initialiseLanguage);
+  } else {
+    initialiseLanguage();
+  }
 })();
