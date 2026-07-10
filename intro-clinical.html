@@ -1,74 +1,331 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Introduction to Clinical Radiation Oncology — Rad Onc Tutorial</title>
-<link rel="stylesheet" href="styles.css"></head><body>
-<nav class="top-nav"><div class="top-nav-inner">
-  <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="放射腫瘤學教學" data-en="Rad Onc Tutorial">Rad Onc Tutorial</span></a>
-  <ul class="top-nav-links">
-    <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
-    <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
-    <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
-    <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
-    <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
-    <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
-    <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
-    <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
-    <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
-    <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
-    <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
-    <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
-    <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
-    <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
-    <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
-    <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
-    <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
-    <li><a href="radonc-quiz/index.html" target="_blank" data-zh="📝 考題" data-en="📝 Quiz">📝 Quiz</a></li>
-  </ul>
-</div></nav>
-<div class="progress-bar-container"><div class="progress-bar" id="progressBar"></div></div>
-<header class="page-hero"><div class="step-badge">🩺 INTRODUCTION TO CLINICAL RADIATION ONCOLOGY</div>
-<h1 data-zh="臨床放射腫瘤學導論" data-en="Introduction to Clinical Radiation Oncology">臨床放射腫瘤學導論</h1>
-<p class="subtitle" data-lang="zh">從初診到治療完成——放射腫瘤科的工作流程與角色。</p>
-<p class="subtitle" data-lang="en">From consult to end-of-treatment — the workflow and role of a radiation oncologist.</p>
-</header>
-<main class="content-wrap">
-<section class="section">
-<div class="section-label" data-zh="概觀" data-en="OVERVIEW">概觀</div>
-<h2 data-zh="放射腫瘤科在癌症照護中的角色" data-en="The role of Rad Onc in cancer care">放射腫瘤科在癌症照護中的角色</h2>
-<div data-lang="zh"><p>放射腫瘤科 (Radiation Oncology) 是使用<strong>游離輻射</strong>治療癌症與少數良性疾病的臨床專科。約 50% 的癌症病人在治療歷程中會接受放射治療，貢獻約 40% 的癌症治癒率。</p><p>放射腫瘤醫師與外科、腫瘤內科組成癌症多專科團隊，負責諮商、模擬、勾畫、計畫審核、發放與追蹤。</p></div>
-<div data-lang="en"><p>Radiation Oncology is the medical specialty using <strong>ionizing radiation</strong> to treat cancer and select benign conditions. About 50% of cancer patients receive radiation at some point, and RT contributes ~40% of cancer cures.</p><p>The rad onc physician works alongside surgical and medical oncology in multidisciplinary care, owning the workflow of consultation, simulation, contouring, plan review, on-treatment care, and survivorship follow-up.</p></div>
-</section>
-<section class="section">
-<div class="section-label" data-zh="工作流程" data-en="WORKFLOW">工作流程</div>
-<h2 data-zh="放射治療的完整流程" data-en="The end-to-end RT workflow">放射治療的完整流程</h2>
-<div data-lang="zh"><div class='workflow'><div class='workflow-step' data-step='1'><h4>諮商 (Consultation)</h4><p>檢視病史、影像、病理與分期，決定是否放療、治療目的（根治 vs 姑息）與 informed consent。</p></div><div class='workflow-step' data-step='2'><h4>模擬 (Simulation)</h4><p>以 CT-Sim 取得治療姿勢的定位影像；必要時融合 MRI/PET。使用固定裝置（面罩、真空袋、乳房板等）。</p></div><div class='workflow-step' data-step='3'><h4>勾畫 (Contouring)</h4><p>依 ICRU 定義 GTV → CTV → ITV → PTV；同時勾畫 OARs。近年 AI auto-contouring 已可加速流程但需醫師審核。</p></div><div class='workflow-step' data-step='4'><h4>計畫 (Planning)</h4><p>物理師以 IMRT/VMAT/3DCRT/質子等技術製作劑量分佈；醫師審核並要求 QA。</p></div><div class='workflow-step' data-step='5'><h4>發放 (Delivery)</h4><p>直線加速器或質子機每日發放；每次治療前以 kV/CBCT 進行 image guidance (IGRT)。</p></div><div class='workflow-step' data-step='6'><h4>追蹤 (Follow-up)</h4><p>治療完成後定期評估腫瘤反應與晚期副作用，通常 2 年內每 3 個月，5 年內每 6 個月。</p></div></div></div>
-<div data-lang="en"><div class='workflow'><div class='workflow-step' data-step='1'><h4>Consultation</h4><p>Review history, imaging, pathology, and stage. Decide if RT is indicated, intent (curative vs palliative), and obtain informed consent.</p></div><div class='workflow-step' data-step='2'><h4>Simulation</h4><p>CT-simulation in treatment position; MRI/PET fusion as indicated. Immobilization devices (thermoplastic masks, vac-lok bags, breast boards).</p></div><div class='workflow-step' data-step='3'><h4>Contouring</h4><p>Per ICRU: GTV → CTV → ITV → PTV; contour OARs. AI auto-contouring can accelerate but requires MD review.</p></div><div class='workflow-step' data-step='4'><h4>Planning</h4><p>Medical physicist builds dose distribution with IMRT/VMAT/3DCRT/protons; MD reviews and orders QA.</p></div><div class='workflow-step' data-step='5'><h4>Delivery</h4><p>Daily fractions on a linac or proton unit with image guidance (kV/CBCT) before each treatment.</p></div><div class='workflow-step' data-step='6'><h4>Follow-up</h4><p>Assess tumor response and late toxicity — typically q3 months for 2 years, then q6 months to year 5, then annually.</p></div></div></div>
-</section>
-<section class="section">
-<div class="section-label" data-zh="劑量單位" data-en="DOSE UNITS">劑量單位</div>
-<h2 data-zh="劑量、分次與生物有效劑量" data-en="Dose, fractionation & biologically effective dose">劑量、分次與生物有效劑量</h2>
-<div data-lang="zh"><p><strong>Gy (灰):</strong> 吸收劑量的 SI 單位，1 Gy = 1 J/kg。臨床通常以每日 <strong>分次 (fraction)</strong> 給予，如 2 Gy × 30 次 = 60 Gy。</p><p><strong>BED (生物有效劑量):</strong> BED = nd(1 + d/(α/β))，用於跨分次比較。腫瘤 α/β 通常較高 (~10)，晚期正常組織較低 (~3)，故大分次 (SBRT) 對腫瘤相對有利。</p><p><strong>EQD2:</strong> 等效於每次 2 Gy 的總劑量，臨床最常用來換算。</p></div>
-<div data-lang="en"><p><strong>Gray (Gy):</strong> SI unit of absorbed dose; 1 Gy = 1 J/kg. Clinical RT is delivered in daily <strong>fractions</strong>, e.g., 2 Gy × 30 = 60 Gy total.</p><p><strong>BED:</strong> BED = nd(1 + d/(α/β)) — enables comparison across fractionation schemes. Tumor α/β is typically high (~10) and late-responding normal tissue is low (~3), so hypofractionation (SBRT) can be biologically favorable.</p><p><strong>EQD2:</strong> Total dose expressed as-if delivered in 2 Gy fractions — the most common clinical conversion.</p></div>
-</section>
-<section class="section">
-<div class="section-label" data-zh="治療技術" data-en="MODALITIES">治療技術</div>
-<h2 data-zh="常見治療技術" data-en="Common treatment modalities">常見治療技術</h2>
-<div data-lang="zh"><ul><li><strong>3D-CRT:</strong> 三維適形放射治療，多野合成。</li><li><strong>IMRT:</strong> 強度調控，適合複雜靶區（頭頸、攝護腺）。</li><li><strong>VMAT:</strong> 旋轉式 IMRT，治療時間更短。</li><li><strong>SBRT / SABR:</strong> 立體定位大分次，用於早期肺癌、寡轉移、肝癌等。</li><li><strong>SRS:</strong> 顱內立體定位單次治療，用於腦轉移、AVM、聽神經瘤。</li><li><strong>近接治療 (Brachytherapy):</strong> 放射源直接置入腫瘤（婦科、攝護腺）。</li><li><strong>質子治療 (Proton):</strong> 利用 Bragg peak 減少出射劑量，特別用於兒童與顱底腫瘤。</li></ul></div>
-<div data-lang="en"><ul><li><strong>3D-CRT:</strong> 3D conformal RT, multiple shaped beams.</li><li><strong>IMRT:</strong> Intensity-modulated for complex targets (H&amp;N, prostate).</li><li><strong>VMAT:</strong> Rotational IMRT — faster delivery.</li><li><strong>SBRT / SABR:</strong> Stereotactic body RT, hypofractionated — early lung, oligomets, HCC.</li><li><strong>SRS:</strong> Intracranial single-fraction — brain mets, AVMs, vestibular schwannomas.</li><li><strong>Brachytherapy:</strong> Radioactive sources placed in/near tumor (Gyn, prostate).</li><li><strong>Protons:</strong> Bragg peak reduces exit dose — pediatric, skull-base tumors.</li></ul></div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Introduction to Clinical Radiation Oncology — Rad Onc Tutorial</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  
+
+  
+</head>
+
+<body class="topic-page page-intro-clinical">
+
+  
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <a href="index.html" class="top-nav-brand">
+      <span>☢️</span>
+      <span
+        data-zh="放射腫瘤學教學"
+        data-en="Rad Onc Tutorial"
+      >
+        Rad Onc Tutorial
+      </span>
+    </a>
+
+    <ul class="top-nav-links">
+      <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
+      <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
+      <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
+      <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
+      <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
+      <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
+      <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
+      <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
+      <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
+      <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
+      <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
+      <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
+      <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
+      <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
+      <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
+      <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
+      <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li>
+        <a
+          href="radonc-quiz/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-zh="📝 考題"
+          data-en="📝 Quiz"
+        >
+          📝 Quiz
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
 
 
-<div class="page-nav"><div class="placeholder"></div><a href="physics.html"><span class="nav-dir"><span data-zh="下一章" data-en="Next">下一章</span> →</span><span class="nav-title" data-zh="放射物理學" data-en="Physics">放射物理學</span></a></div>
-</main>
-<footer class="site-footer">© Rad Onc Interactive Tutorial · <a href="index.html" data-zh="返回首頁" data-en="Back to home">Back to home</a></footer>
-<script src="i18n.js"></script>
-<script>
-window.addEventListener('scroll',()=>{
-  const bar=document.getElementById('progressBar');
-  if(!bar) return;
-  const h=document.documentElement,b=document.body;
-  const st='scrollTop',sh='scrollHeight';
-  const p=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;
-  bar.style.width=p+'%';
-});
-</script>
-</body></html>
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header
+    class="page-hero"
+    
+  >
+
+    <div class="step-badge">
+      🩺 INTRODUCTION TO CLINICAL RADIATION ONCOLOGY
+    </div>
+
+    <h1
+      data-zh="臨床放射腫瘤學導論"
+      data-en="Introduction to Clinical Radiation Oncology"
+    >
+      臨床放射腫瘤學導論
+    </h1>
+
+    <p class="subtitle" data-lang="zh">
+      從初診到治療完成——放射腫瘤科的工作流程與角色。
+    </p>
+
+    <p class="subtitle" data-lang="en">
+      From consult to end-of-treatment — the workflow and role of a radiation oncologist.
+    </p>
+
+  </header>
+
+  <main class="content-wrap">
+
+    
+    <section
+      id="section-1"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="概觀"
+        data-en="OVERVIEW"
+      >
+        概觀
+      </div>
+
+      <h2
+        class=""
+        data-zh="放射腫瘤科在癌症照護中的角色"
+        data-en="The role of Rad Onc in cancer care"
+      >
+        放射腫瘤科在癌症照護中的角色
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        <p>放射腫瘤科 (Radiation Oncology) 是使用<strong>游離輻射</strong>治療癌症與少數良性疾病的臨床專科。約 50% 的癌症病人在治療歷程中會接受放射治療，貢獻約 40% 的癌症治癒率。</p><p>放射腫瘤醫師與外科、腫瘤內科組成癌症多專科團隊，負責諮商、模擬、勾畫、計畫審核、發放與追蹤。</p>
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Radiation Oncology is the medical specialty using <strong>ionizing radiation</strong> to treat cancer and select benign conditions. About 50% of cancer patients receive radiation at some point, and RT contributes ~40% of cancer cures.</p><p>The rad onc physician works alongside surgical and medical oncology in multidisciplinary care, owning the workflow of consultation, simulation, contouring, plan review, on-treatment care, and survivorship follow-up.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-2"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="工作流程"
+        data-en="WORKFLOW"
+      >
+        工作流程
+      </div>
+
+      <h2
+        class=""
+        data-zh="放射治療的完整流程"
+        data-en="The end-to-end RT workflow"
+      >
+        放射治療的完整流程
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        <div class='workflow'><div class='workflow-step' data-step='1'><h4>諮商 (Consultation)</h4><p>檢視病史、影像、病理與分期，決定是否放療、治療目的（根治 vs 姑息）與 informed consent。</p></div><div class='workflow-step' data-step='2'><h4>模擬 (Simulation)</h4><p>以 CT-Sim 取得治療姿勢的定位影像；必要時融合 MRI/PET。使用固定裝置（面罩、真空袋、乳房板等）。</p></div><div class='workflow-step' data-step='3'><h4>勾畫 (Contouring)</h4><p>依 ICRU 定義 GTV → CTV → ITV → PTV；同時勾畫 OARs。近年 AI auto-contouring 已可加速流程但需醫師審核。</p></div><div class='workflow-step' data-step='4'><h4>計畫 (Planning)</h4><p>物理師以 IMRT/VMAT/3DCRT/質子等技術製作劑量分佈；醫師審核並要求 QA。</p></div><div class='workflow-step' data-step='5'><h4>發放 (Delivery)</h4><p>直線加速器或質子機每日發放；每次治療前以 kV/CBCT 進行 image guidance (IGRT)。</p></div><div class='workflow-step' data-step='6'><h4>追蹤 (Follow-up)</h4><p>治療完成後定期評估腫瘤反應與晚期副作用，通常 2 年內每 3 個月，5 年內每 6 個月。</p></div></div>
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <div class='workflow'><div class='workflow-step' data-step='1'><h4>Consultation</h4><p>Review history, imaging, pathology, and stage. Decide if RT is indicated, intent (curative vs palliative), and obtain informed consent.</p></div><div class='workflow-step' data-step='2'><h4>Simulation</h4><p>CT-simulation in treatment position; MRI/PET fusion as indicated. Immobilization devices (thermoplastic masks, vac-lok bags, breast boards).</p></div><div class='workflow-step' data-step='3'><h4>Contouring</h4><p>Per ICRU: GTV → CTV → ITV → PTV; contour OARs. AI auto-contouring can accelerate but requires MD review.</p></div><div class='workflow-step' data-step='4'><h4>Planning</h4><p>Medical physicist builds dose distribution with IMRT/VMAT/3DCRT/protons; MD reviews and orders QA.</p></div><div class='workflow-step' data-step='5'><h4>Delivery</h4><p>Daily fractions on a linac or proton unit with image guidance (kV/CBCT) before each treatment.</p></div><div class='workflow-step' data-step='6'><h4>Follow-up</h4><p>Assess tumor response and late toxicity — typically q3 months for 2 years, then q6 months to year 5, then annually.</p></div></div>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-3"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="劑量單位"
+        data-en="DOSE UNITS"
+      >
+        劑量單位
+      </div>
+
+      <h2
+        class=""
+        data-zh="劑量、分次與生物有效劑量"
+        data-en="Dose, fractionation &amp; biologically effective dose"
+      >
+        劑量、分次與生物有效劑量
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        <p><strong>Gy (灰):</strong> 吸收劑量的 SI 單位，1 Gy = 1 J/kg。臨床通常以每日 <strong>分次 (fraction)</strong> 給予，如 2 Gy × 30 次 = 60 Gy。</p><p><strong>BED (生物有效劑量):</strong> BED = nd(1 + d/(α/β))，用於跨分次比較。腫瘤 α/β 通常較高 (~10)，晚期正常組織較低 (~3)，故大分次 (SBRT) 對腫瘤相對有利。</p><p><strong>EQD2:</strong> 等效於每次 2 Gy 的總劑量，臨床最常用來換算。</p>
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p><strong>Gray (Gy):</strong> SI unit of absorbed dose; 1 Gy = 1 J/kg. Clinical RT is delivered in daily <strong>fractions</strong>, e.g., 2 Gy × 30 = 60 Gy total.</p><p><strong>BED:</strong> BED = nd(1 + d/(α/β)) — enables comparison across fractionation schemes. Tumor α/β is typically high (~10) and late-responding normal tissue is low (~3), so hypofractionation (SBRT) can be biologically favorable.</p><p><strong>EQD2:</strong> Total dose expressed as-if delivered in 2 Gy fractions — the most common clinical conversion.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="治療技術"
+        data-en="MODALITIES"
+      >
+        治療技術
+      </div>
+
+      <h2
+        class=""
+        data-zh="常見治療技術"
+        data-en="Common treatment modalities"
+      >
+        常見治療技術
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        <ul><li><strong>3D-CRT:</strong> 三維適形放射治療，多野合成。</li><li><strong>IMRT:</strong> 強度調控，適合複雜靶區（頭頸、攝護腺）。</li><li><strong>VMAT:</strong> 旋轉式 IMRT，治療時間更短。</li><li><strong>SBRT / SABR:</strong> 立體定位大分次，用於早期肺癌、寡轉移、肝癌等。</li><li><strong>SRS:</strong> 顱內立體定位單次治療，用於腦轉移、AVM、聽神經瘤。</li><li><strong>近接治療 (Brachytherapy):</strong> 放射源直接置入腫瘤（婦科、攝護腺）。</li><li><strong>質子治療 (Proton):</strong> 利用 Bragg peak 減少出射劑量，特別用於兒童與顱底腫瘤。</li></ul>
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <ul><li><strong>3D-CRT:</strong> 3D conformal RT, multiple shaped beams.</li><li><strong>IMRT:</strong> Intensity-modulated for complex targets (H&amp;N, prostate).</li><li><strong>VMAT:</strong> Rotational IMRT — faster delivery.</li><li><strong>SBRT / SABR:</strong> Stereotactic body RT, hypofractionated — early lung, oligomets, HCC.</li><li><strong>SRS:</strong> Intracranial single-fraction — brain mets, AVMs, vestibular schwannomas.</li><li><strong>Brachytherapy:</strong> Radioactive sources placed in/near tumor (Gyn, prostate).</li><li><strong>Protons:</strong> Bragg peak reduces exit dose — pediatric, skull-base tumors.</li></ul>
+      </div>
+
+    </section>
+    
+
+    
+
+    <div class="page-nav">
+<div class="placeholder"></div>
+
+        <a href="physics.html" class="page-nav-link page-nav-next">
+          <span class="nav-dir">
+            <span data-zh="下一章" data-en="Next">
+              下一章
+            </span>
+            →
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="放射物理學"
+            data-en="Physics"
+          >
+            放射物理學
+          </span>
+        </a>
+        
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    © Rad Onc Interactive Tutorial ·
+    <a
+      href="index.html"
+      data-zh="返回首頁"
+      data-en="Back to home"
+    >
+      Back to home
+    </a>
+  </footer>
+
+  <script src="i18n.js"></script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const progressBar = document.getElementById("progressBar");
+
+      if (!progressBar) {
+        return;
+      }
+
+      const documentElement = document.documentElement;
+      const body = document.body;
+
+      const scrollTop =
+        documentElement.scrollTop ||
+        body.scrollTop;
+
+      const scrollHeight =
+        documentElement.scrollHeight ||
+        body.scrollHeight;
+
+      const availableScroll =
+        scrollHeight - documentElement.clientHeight;
+
+      const progress =
+        availableScroll > 0
+          ? (scrollTop / availableScroll) * 100
+          : 0;
+
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+
+</body>
+</html>

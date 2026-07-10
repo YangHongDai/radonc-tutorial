@@ -1,74 +1,1869 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Radiation Physics — Rad Onc Tutorial</title>
-<link rel="stylesheet" href="styles.css"></head><body>
-<nav class="top-nav"><div class="top-nav-inner">
-  <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="放射腫瘤學教學" data-en="Rad Onc Tutorial">Rad Onc Tutorial</span></a>
-  <ul class="top-nav-links">
-    <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
-    <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
-    <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
-    <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
-    <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
-    <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
-    <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
-    <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
-    <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
-    <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
-    <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
-    <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
-    <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
-    <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
-    <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
-    <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
-    <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
-    <li><a href="radonc-quiz/index.html" target="_blank" data-zh="📝 考題" data-en="📝 Quiz">📝 Quiz</a></li>
-  </ul>
-</div></nav>
-<div class="progress-bar-container"><div class="progress-bar" id="progressBar"></div></div>
-<header class="page-hero"><div class="step-badge">⚛️ RADIATION PHYSICS</div>
-<h1 data-zh="放射物理學" data-en="Radiation Physics">放射物理學</h1>
-<p class="subtitle" data-lang="zh">光子、電子、質子束的物理性質與臨床應用。</p>
-<p class="subtitle" data-lang="en">Photon, electron, and proton beam properties and clinical applications.</p>
-</header>
-<main class="content-wrap">
-<section class="section">
-<div class="section-label" data-zh="光子束" data-en="PHOTON BEAMS">光子束</div>
-<h2 data-zh="光子束特性" data-en="Photon beam properties">光子束特性</h2>
-<div data-lang="zh"><p><strong>光子束 (X-ray):</strong> 由高速電子撞擊靶產生，屬<strong>間接游離輻射</strong>。臨床常用 6–18 MV。</p><ul><li><strong>Percent Depth Dose (PDD):</strong> 隨能量升高、深度增加而增大 (skin sparing)。6 MV 的 dmax ≈ 1.5 cm，18 MV ≈ 3 cm。</li><li><strong>Buildup region:</strong> 電子平衡未達之前的區域，皮膚劑量較低。</li><li><strong>Beam profile:</strong> 由平坦度 (flatness) 與對稱性 (symmetry) 描述，用 FFF (flattening-filter-free) 可提升劑量率。</li></ul></div>
-<div data-lang="en"><p><strong>Photons (X-rays):</strong> Produced by high-speed electrons striking a target — <strong>indirectly ionizing</strong>. Clinical range 6–18 MV.</p><ul><li><strong>Percent Depth Dose (PDD):</strong> Increases with energy and depth (skin sparing). 6 MV d_max ≈ 1.5 cm; 18 MV ≈ 3 cm.</li><li><strong>Buildup region:</strong> Region prior to electronic equilibrium — lower skin dose.</li><li><strong>Beam profile:</strong> Characterized by flatness and symmetry; FFF (flattening-filter-free) increases dose rate.</li></ul></div>
-</section>
-<section class="section">
-<div class="section-label" data-zh="電子束" data-en="ELECTRON BEAMS">電子束</div>
-<h2 data-zh="電子束特性" data-en="Electron beam properties">電子束特性</h2>
-<div data-lang="zh"><p><strong>電子束:</strong> 直接游離輻射，能量 6–20 MeV，用於皮膚、乳房疤痕、chest wall boost。</p><ul><li><strong>射程 (Range) rule:</strong> R80 (深度到 80% dose) ≈ E/3 cm；R90 ≈ E/4 cm。例如 12 MeV → R80 ≈ 4 cm。</li><li><strong>Practical range Rp:</strong> ≈ E/2 cm。</li><li><strong>Skin dose:</strong> 電子束皮膚劑量較光子高 (80–95%)。</li><li><strong>Bolus:</strong> 用於將 dmax 移至皮膚表面。</li></ul></div>
-<div data-lang="en"><p><strong>Electrons:</strong> Directly ionizing, 6–20 MeV — used for skin, breast scar, chest wall boost.</p><ul><li><strong>Range rule:</strong> R80 ≈ E/3 cm; R90 ≈ E/4 cm. Example: 12 MeV → R80 ≈ 4 cm.</li><li><strong>Practical range Rp:</strong> ≈ E/2 cm.</li><li><strong>Skin dose:</strong> Higher than photons (80–95%).</li><li><strong>Bolus:</strong> Used to shift d_max to the skin surface.</li></ul></div>
-</section>
-<section class="section">
-<div class="section-label" data-zh="質子束" data-en="PROTON BEAMS">質子束</div>
-<h2 data-zh="質子束與 Bragg peak" data-en="Proton beams and the Bragg peak">質子束與 Bragg peak</h2>
-<div data-lang="zh"><p><strong>質子:</strong> 帶正電粒子，能量 70–250 MeV，具有<strong>Bragg peak</strong>——大部分劑量集中在射程末端，之後急劇下降。</p><ul><li><strong>Spread-Out Bragg Peak (SOBP):</strong> 多個能量疊加以覆蓋靶區。</li><li><strong>RBE:</strong> 質子相對光子 RBE ≈ 1.1 (臨床通用值)。</li><li><strong>臨床適用:</strong> 兒童（減少發育中組織的整體劑量）、顱底、脊索瘤、眼部黑色素瘤。</li><li><strong>不確定性:</strong> 射程對 CT HU 換算敏感，需嚴格 QA。</li></ul></div>
-<div data-lang="en"><p><strong>Protons:</strong> Positively charged particles, 70–250 MeV, with a <strong>Bragg peak</strong> — dose is concentrated near the end of range, then falls sharply.</p><ul><li><strong>Spread-Out Bragg Peak (SOBP):</strong> Multiple energies summed to cover a target.</li><li><strong>RBE:</strong> Clinical RBE ≈ 1.1 vs. photons.</li><li><strong>Clinical use:</strong> Pediatrics (reduce integral dose to developing tissues), skull base, chordoma, ocular melanoma.</li><li><strong>Uncertainty:</strong> Range is sensitive to CT HU conversion — rigorous QA required.</li></ul></div>
-</section>
-<section class="section">
-<div class="section-label" data-zh="顱脊照射" data-en="CSI">顱脊照射</div>
-<h2 data-zh="顱脊照射 (Craniospinal Irradiation)" data-en="Craniospinal Irradiation (CSI)">顱脊照射 (Craniospinal Irradiation)</h2>
-<div data-lang="zh"><p>CSI 用於髓母細胞瘤、生殖細胞瘤等需覆蓋整個中樞神經軸的疾病。</p><ul><li><strong>靶區:</strong> 全腦 + 全脊髓 (至 S2/3)。</li><li><strong>技術:</strong> 光子 CSI 需 2–3 個等中心，接合處逐日移位以避免熱點；<strong>質子 CSI</strong> 可用單一 field，並顯著降低出射劑量至心臟、甲狀腺、腸胃道。</li><li><strong>劑量:</strong> 標準風險髓母 23.4 Gy CSI + 後顱窩 boost 至 54 Gy；高風險 36 Gy CSI。</li></ul></div>
-<div data-lang="en"><p>CSI is used for medulloblastoma, germinomas, and other neoplasms requiring coverage of the entire craniospinal axis.</p><ul><li><strong>Target:</strong> Whole brain + entire spinal cord (to S2/3).</li><li><strong>Technique:</strong> Photon CSI requires 2–3 isocenters with daily junction shifts. <strong>Proton CSI</strong> uses a single field and substantially reduces exit dose to heart, thyroid, and bowel.</li><li><strong>Dose:</strong> Average-risk medulloblastoma 23.4 Gy CSI + posterior fossa boost to 54 Gy; high-risk 36 Gy CSI.</li></ul></div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Radiation Physics — Rad Onc Tutorial</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  
+
+  
+</head>
+
+<body class="topic-page page-physics">
+
+  
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <a href="index.html" class="top-nav-brand">
+      <span>☢️</span>
+      <span
+        data-zh="放射腫瘤學教學"
+        data-en="Rad Onc Tutorial"
+      >
+        Rad Onc Tutorial
+      </span>
+    </a>
+
+    <ul class="top-nav-links">
+      <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
+      <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
+      <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
+      <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
+      <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
+      <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
+      <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
+      <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
+      <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
+      <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
+      <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
+      <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
+      <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
+      <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
+      <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
+      <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
+      <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li>
+        <a
+          href="radonc-quiz/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-zh="📝 考題"
+          data-en="📝 Quiz"
+        >
+          📝 Quiz
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
 
 
-<div class="page-nav"><a href="intro-clinical.html"><span class="nav-dir">← <span data-zh="上一章" data-en="Previous">上一章</span></span><span class="nav-title" data-zh="臨床導論" data-en="Clinical Intro">臨床導論</span></a><a href="radbio.html"><span class="nav-dir"><span data-zh="下一章" data-en="Next">下一章</span> →</span><span class="nav-title" data-zh="放射生物" data-en="RadBio">放射生物</span></a></div>
-</main>
-<footer class="site-footer">© Rad Onc Interactive Tutorial · <a href="index.html" data-zh="返回首頁" data-en="Back to home">Back to home</a></footer>
-<script src="i18n.js"></script>
-<script>
-window.addEventListener('scroll',()=>{
-  const bar=document.getElementById('progressBar');
-  if(!bar) return;
-  const h=document.documentElement,b=document.body;
-  const st='scrollTop',sh='scrollHeight';
-  const p=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;
-  bar.style.width=p+'%';
-});
-</script>
-</body></html>
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header
+    class="page-hero"
+    
+  >
+
+    <div class="step-badge">
+      ⚛️ RADIATION PHYSICS
+    </div>
+
+    <h1
+      data-zh="放射物理"
+      data-en="Radiation Physics"
+    >
+      放射物理
+    </h1>
+
+    <p class="subtitle" data-lang="zh">
+      Photon、electron、proton、CSI 技術、beam geometry、dose fall-off、field matching 與臨床選擇。
+    </p>
+
+    <p class="subtitle" data-lang="en">
+      Photons, electrons, protons, CSI technique, beam geometry, dose fall-off, field matching, and clinical modality selection.
+    </p>
+
+  </header>
+
+  <main class="content-wrap">
+
+    
+    <section
+      id="section-1"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="總論"
+        data-en="OVERVIEW"
+      >
+        總論
+      </div>
+
+      <h2
+        class=""
+        data-zh=""
+        data-en=""
+      >
+        
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>Radiation physics 的核心不是只知道<span class="highlight">「哪一種 beam 比較深」</span>，而是理解：不同 radiation beam 的能量沉積方式不同，因此會決定 <strong>skin dose、Dmax、exit dose、field edge、penumbra、OAR dose、setup sensitivity</strong>，以及臨床 technique 的選擇。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Beam type</th><th>核心特色</th><th>臨床用途</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>穿透深、有 exit dose、Compton dominant</td><td>大多數 EBRT</td></tr>
+<tr><td>Electron</td><td>表淺沉積、快速 fall-off</td><td>Skin、chest wall boost、superficial lesion</td></tr>
+<tr><td>Proton</td><td>Bragg peak、低 exit dose、range uncertainty</td><td>Pediatric、base skull、CSI、re-irradiation selected cases</td></tr>
+<tr><td>CSI technique</td><td>多 field matching，避免 junction hot/cold spot</td><td>Medulloblastoma、germ cell tumor、ATRT、leptomeningeal disease</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+一句話整理：beam physics 決定 dose distribution；dose distribution 決定 tumor coverage 與 OAR tradeoff；setup uncertainty 和 tissue density change 會決定 technique 是否安全。
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>The core of radiation physics is not simply knowing which beam penetrates deeper. It is understanding how different radiation beams deposit energy differently, thereby determining <strong>skin dose, Dmax, exit dose, field edge, penumbra, OAR dose, setup sensitivity</strong>, and clinical technique selection.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Beam type</th><th>Core feature</th><th>Clinical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>Deep penetration, exit dose, Compton dominant</td><td>Most EBRT</td></tr>
+<tr><td>Electron</td><td>Superficial deposition, rapid fall-off</td><td>Skin, chest wall boost, superficial lesions</td></tr>
+<tr><td>Proton</td><td>Bragg peak, low exit dose, range uncertainty</td><td>Pediatric, skull base, CSI, selected re-irradiation cases</td></tr>
+<tr><td>CSI technique</td><td>Multi-field matching; avoid junction hot/cold spots</td><td>Medulloblastoma, germ cell tumor, ATRT, leptomeningeal disease</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+One-line memory: beam physics determines dose distribution; dose distribution determines tumor coverage and OAR tradeoffs; setup uncertainty and density change determine whether a technique is safe.
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-2"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Photon 基礎"
+        data-en="PHOTON BASICS"
+      >
+        Photon 基礎
+      </div>
+
+      <h2
+        class=""
+        data-zh="第一部分：Photon beams"
+        data-en="Photon beams"
+      >
+        第一部分：Photon beams
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、Photon 是什麼？</h3>
+<p>Photons 是 massless packets of energy，同時具有 wave-like 和 particle-like properties，是診斷與治療最常使用的 radiation。</p>
+
+<p>在 LINAC 裡，therapeutic photons 通常由 <strong>bremsstrahlung</strong> 產生：electrons 被加速後打到 tungsten target，高 Z material 使 electron 減速或偏折，能量以 X-ray photon 形式釋放。X-ray production efficiency 低，平均 X-ray energy 約為 incoming electron energy 的三分之一。</p>
+
+<h3>二、Photon interactions</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Interaction</th><th>發生機制</th><th>何時重要</th><th>Clinical relevance</th></tr>
+</thead>
+<tbody>
+<tr><td>Coherent scattering</td><td>Elastic scattering，不失去能量</td><td>Very low energy</td><td>診斷影像低能區較相關</td></tr>
+<tr><td>Photoelectric effect</td><td>Photon 把全部能量給 inner shell electron</td><td>Lower energy；機率 ∝ Z³/E³</td><td>Bone / high-Z material dose enhancement</td></tr>
+<tr><td>Compton scattering</td><td>Photon 把部分能量給 outer shell electron，產生 scattered photon</td><td>Therapeutic energy dominant</td><td>MV photon therapy 主要 interaction</td></tr>
+<tr><td>Pair production</td><td>Photon 在 nucleus 附近轉成 electron + positron</td><td>&gt;1.022 MeV；∝ Z</td><td>高能 photon 相關</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Therapeutic photon energies 約 25 keV to 25 MeV 時，<strong>Compton interactions predominates</strong>。</p>
+
+<h3>三、Compton scattering angle</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Scatter angle</th><th>Photon energy behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>0°</td><td>Photon loses no energy</td></tr>
+<tr><td>90°</td><td>Photon retains up to 0.511 MeV</td></tr>
+<tr><td>180° backscatter</td><td>Photon retains up to 0.255 MeV</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Photon energy 越高，scatter direction 越 forward-peaked；但 photons 仍會穿透 target 之後繼續沉積 dose，因此有 exit dose。
+</div>
+
+<h3>四、Direct vs indirect action</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Mechanism</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Direct action</td><td>Radiation directly damages DNA</td></tr>
+<tr><td>Indirect action</td><td>Radiation ionizes water → free radicals → DNA damage</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. What is a photon?</h3>
+<p>Photons are massless packets of energy with both wave-like and particle-like properties. They are the most commonly used radiation type in diagnosis and therapy.</p>
+
+<p>In a LINAC, therapeutic photons are usually produced by <strong>bremsstrahlung</strong>: accelerated electrons strike a tungsten target; the high-Z nucleus decelerates or deflects the electron; energy is released as X-ray photons. X-ray production efficiency is low, with average X-ray energy roughly one third of the incoming electron energy.</p>
+
+<h3>2. Photon interactions</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Interaction</th><th>Mechanism</th><th>When important</th><th>Clinical relevance</th></tr>
+</thead>
+<tbody>
+<tr><td>Coherent scattering</td><td>Elastic scattering without energy loss</td><td>Very low energy</td><td>More relevant in low-energy diagnostic imaging</td></tr>
+<tr><td>Photoelectric effect</td><td>Photon gives all energy to an inner-shell electron</td><td>Lower energy; probability ∝ Z³/E³</td><td>Bone / high-Z material dose enhancement</td></tr>
+<tr><td>Compton scattering</td><td>Photon gives part of its energy to an outer-shell electron and produces a scattered photon</td><td>Dominant at therapeutic energies</td><td>Main interaction for MV photon therapy</td></tr>
+<tr><td>Pair production</td><td>Photon converts into electron + positron near a nucleus</td><td>&gt;1.022 MeV; ∝ Z</td><td>Relevant for high-energy photons</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>For therapeutic photon energies, approximately 25 keV to 25 MeV, <strong>Compton interactions predominate</strong>.</p>
+
+<h3>3. Compton scattering angle</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Scatter angle</th><th>Photon energy behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>0°</td><td>Photon loses no energy</td></tr>
+<tr><td>90°</td><td>Photon retains up to 0.511 MeV</td></tr>
+<tr><td>180° backscatter</td><td>Photon retains up to 0.255 MeV</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Higher-energy photons scatter more forward, but photons still penetrate beyond the target and produce exit dose.
+</div>
+
+<h3>4. Direct versus indirect action</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Mechanism</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Direct action</td><td>Radiation directly damages DNA</td></tr>
+<tr><td>Indirect action</td><td>Radiation ionizes water → free radicals → DNA damage</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-3"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Photon 劑量"
+        data-en="PHOTON DOSE"
+      >
+        Photon 劑量
+      </div>
+
+      <h2
+        class=""
+        data-zh="KERMA、HVL、Dmax、beam profile 與 penumbra"
+        data-en="KERMA, HVL, Dmax, beam profile, and penumbra"
+      >
+        KERMA、HVL、Dmax、beam profile 與 penumbra
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、KERMA vs Dose</h3>
+<p><strong>KERMA</strong> 是 photon 把能量轉移給 charged particles，例如 electrons；<strong>Dose</strong> 是能量真正沉積在 medium 中。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Term</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>KERMA</td><td>Kinetic energy released per unit mass；photon → electron energy transfer</td></tr>
+<tr><td>Dose</td><td>Energy deposited per unit mass；Gy = J/kg</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Region</th><th>Relationship</th></tr>
+</thead>
+<tbody>
+<tr><td>Surface / buildup region</td><td>Dose &lt; KERMA</td></tr>
+<tr><td>Dmax</td><td>Dose reaches maximum</td></tr>
+<tr><td>Equilibrium region</td><td>Dose roughly follows attenuation</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+MV photon 的 skin-sparing effect 來自 buildup region：最大 dose 不是在皮膚表面，而是在一定深度。
+</div>
+
+<h3>二、Attenuation、beam hardening、HVL</h3>
+<div class="formula-box">HVL = ln(2) / μ = 0.693 / μ</div>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Concept</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>HVL</td><td>把 beam intensity 降到一半所需 material thickness</td></tr>
+<tr><td>Monoenergetic beam</td><td>HVL1 = HVL2</td></tr>
+<tr><td>Polyenergetic beam</td><td>HVL2 &gt; HVL1，因為 beam hardening</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、Photon PDD 與 Dmax</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Photon energy</th><th>Approximate Dmax</th></tr>
+</thead>
+<tbody>
+<tr><td>Co-60 γ-rays</td><td>0.5 cm</td></tr>
+<tr><td>6 MV</td><td>1.5 cm</td></tr>
+<tr><td>10 MV</td><td>2.5 cm</td></tr>
+<tr><td>15 MV</td><td>3.0 cm</td></tr>
+<tr><td>18 MV</td><td>3.5 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Rule of thumb：≤10 MV 時 Dmax 約 energy / 4；≥15 MV 時 Dmax 約 energy / 5。Photon energy 越高，Dmax 越深，surface dose 越低。
+</div>
+
+<h3>四、Flattening filter 與 FFF</h3>
+<p>Flattening filter 是高 Z material，用來 flatten photon beam profile。它會濾掉低能 photons，因此 beam intensity 下降但 average energy 上升。FFF beam 移除 flattening filter，dose rate 較高、治療更有效率，常用於 SRS/SBRT，但 average energy 較低、profile 不再平坦。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam type</th><th>Dose rate</th><th>Average energy</th><th>Typical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Flattened beam</td><td>Lower</td><td>Higher</td><td>Conventional RT</td></tr>
+<tr><td>FFF beam</td><td>Higher</td><td>Lower</td><td>SRS/SBRT，high dose-rate treatment</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>五、Penumbra</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Penumbra type</th><th>Cause</th></tr>
+</thead>
+<tbody>
+<tr><td>Transmission penumbra</td><td>Jaw / MLC transmission；MLC rounded leaf edge 可讓 transmission penumbra 更穩定</td></tr>
+<tr><td>Geometric penumbra</td><td>Source size、SSD、SCD / SDD</td></tr>
+<tr><td>Radiological penumbra</td><td>Beam energy、tissue density、scatter</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Geometric penumbra 記法：source size ↑ → penumbra ↑；SSD ↑ → penumbra ↑；SDD / SCD ↑ → penumbra ↓。Field edge 常以 50% prescription dose 定義。
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. KERMA versus dose</h3>
+<p><strong>KERMA</strong> is the energy transferred from photons to charged particles such as electrons. <strong>Dose</strong> is the energy actually deposited in the medium.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Term</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>KERMA</td><td>Kinetic energy released per unit mass; photon → electron energy transfer</td></tr>
+<tr><td>Dose</td><td>Energy deposited per unit mass; Gy = J/kg</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+The skin-sparing effect of MV photons comes from the buildup region: maximum dose is not at the skin surface but at a depth.
+</div>
+
+<h3>2. Attenuation, beam hardening, and HVL</h3>
+<div class="formula-box">HVL = ln(2) / μ = 0.693 / μ</div>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Concept</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>HVL</td><td>Material thickness required to reduce beam intensity by half</td></tr>
+<tr><td>Monoenergetic beam</td><td>HVL1 = HVL2</td></tr>
+<tr><td>Polyenergetic beam</td><td>HVL2 &gt; HVL1 because of beam hardening</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Photon PDD and Dmax</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Photon energy</th><th>Approximate Dmax</th></tr>
+</thead>
+<tbody>
+<tr><td>Co-60 γ-rays</td><td>0.5 cm</td></tr>
+<tr><td>6 MV</td><td>1.5 cm</td></tr>
+<tr><td>10 MV</td><td>2.5 cm</td></tr>
+<tr><td>15 MV</td><td>3.0 cm</td></tr>
+<tr><td>18 MV</td><td>3.5 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Rule of thumb: for ≤10 MV, Dmax is about energy / 4; for ≥15 MV, Dmax is about energy / 5. Higher photon energy means deeper Dmax and lower surface dose.
+</div>
+
+<h3>4. Flattening filter and FFF</h3>
+<p>A flattening filter is a high-Z material that flattens the photon beam profile. It removes low-energy photons, decreasing intensity but increasing average energy. FFF beams remove the flattening filter, increasing dose rate and efficiency, often for SRS/SBRT, but average energy is lower and the profile is not flat.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam type</th><th>Dose rate</th><th>Average energy</th><th>Typical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Flattened beam</td><td>Lower</td><td>Higher</td><td>Conventional RT</td></tr>
+<tr><td>FFF beam</td><td>Higher</td><td>Lower</td><td>SRS/SBRT, high dose-rate treatment</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>5. Penumbra</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Penumbra type</th><th>Cause</th></tr>
+</thead>
+<tbody>
+<tr><td>Transmission penumbra</td><td>Jaw / MLC transmission; rounded MLC leaf edges stabilize transmission penumbra</td></tr>
+<tr><td>Geometric penumbra</td><td>Source size, SSD, SCD / SDD</td></tr>
+<tr><td>Radiological penumbra</td><td>Beam energy, tissue density, scatter</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Geometric penumbra memory: source size ↑ → penumbra ↑; SSD ↑ → penumbra ↑; SDD / SCD ↑ → penumbra ↓. Field edge is commonly defined by the 50% prescription dose line.
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Electron 基礎"
+        data-en="ELECTRON BASICS"
+      >
+        Electron 基礎
+      </div>
+
+      <h2
+        class=""
+        data-zh="第二部分：Electron beams"
+        data-en="Electron beams"
+      >
+        第二部分：Electron beams
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、Electron beam delivery</h3>
+<p>Electron treatment 時，LINAC head 裡的 setup 與 photon 不同：X-ray target removed、scattering foil inserted、electron applicator / cone applied。Scattering foil 讓 electron beam spread 並使 dose distribution 均勻；cone 則限制 beam 大小與形狀，避免 electrons 過度 lateral spread。</p>
+
+<h3>二、Electron fundamentals</h3>
+<p>Electrons 是 charged particles，resting mass energy = 0.511 MeV。Electrons 主要用於 superficial tumors，因為 dose 表淺沉積且快速 fall-off，practical range 約為 E/2。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam</th><th>Depth behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>穿透全身，有 exit dose</td></tr>
+<tr><td>Electron</td><td>表淺沉積，快速 fall-off</td></tr>
+<tr><td>Proton</td><td>Bragg peak，低 distal dose</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、Electron vs photon PDD</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Property</th><th>Photon</th><th>Electron</th></tr>
+</thead>
+<tbody>
+<tr><td>Surface dose with higher energy</td><td>Lower</td><td>Higher</td></tr>
+<tr><td>Dmax with higher energy</td><td>Deeper</td><td>Deeper</td></tr>
+<tr><td>Exit dose</td><td>Present</td><td>Minimal after practical range</td></tr>
+<tr><td>Fall-off</td><td>Gradual</td><td>Rapid distal fall-off</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>四、Electron rules of thumb：「5-4-3-2」</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Electron property</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>90% isodose line</td><td>E / 4；多數來源用 E / 3.2–3.3</td></tr>
+<tr><td>80% isodose line</td><td>E / 3；多數來源用 E / 2.8</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+注意：source example 中 9 MeV 寫 Dmax = 9/5 = ~4.5 cm 應為筆誤；9/5 約 1.8 cm，9/2 = 4.5 cm 才是 practical range。
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. Electron beam delivery</h3>
+<p>Electron delivery uses a different LINAC head setup from photons: the X-ray target is removed, a scattering foil is inserted, and an electron applicator / cone is applied. The scattering foil spreads the electron beam and makes dose more uniform; the cone collimates the field and limits excessive lateral spread.</p>
+
+<h3>2. Electron fundamentals</h3>
+<p>Electrons are charged particles with rest mass energy of 0.511 MeV. They are mainly used for superficial tumors because dose is deposited near the surface with rapid fall-off. Practical range is approximately E/2.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam</th><th>Depth behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>Deep penetration with exit dose</td></tr>
+<tr><td>Electron</td><td>Superficial deposition with rapid fall-off</td></tr>
+<tr><td>Proton</td><td>Bragg peak with low distal dose</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Electron versus photon PDD</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Property</th><th>Photon</th><th>Electron</th></tr>
+</thead>
+<tbody>
+<tr><td>Surface dose with higher energy</td><td>Lower</td><td>Higher</td></tr>
+<tr><td>Dmax with higher energy</td><td>Deeper</td><td>Deeper</td></tr>
+<tr><td>Exit dose</td><td>Present</td><td>Minimal after practical range</td></tr>
+<tr><td>Fall-off</td><td>Gradual</td><td>Rapid distal fall-off</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>4. Electron rules of thumb: “5-4-3-2”</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Electron property</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>90% isodose line</td><td>E / 4; many sources use E / 3.2–3.3</td></tr>
+<tr><td>80% isodose line</td><td>E / 3; many sources use E / 2.8</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Important correction: if a 9 MeV example says Dmax = 9/5 = ~4.5 cm, that is a typo. 9/5 is about 1.8 cm; 9/2 = 4.5 cm is the practical range.
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-5"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Electron 規劃"
+        data-en="ELECTRON PLANNING"
+      >
+        Electron 規劃
+      </div>
+
+      <h2
+        class=""
+        data-zh="Electron field size、angle、bolus 與 shielding"
+        data-en="Electron field size, angle, bolus, and shielding"
+      >
+        Electron field size、angle、bolus 與 shielding
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、其他 electron formula</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Formula</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Stopping power 約 2.33 MeV/cm，也常簡化為 2 MeV/cm</td><td>Electron 在水中每 cm 能量損失</td></tr>
+<tr><td>Depth of lateral equilibrium √E</td><td>建立 lateral equilibrium 的深度概念</td></tr>
+<tr><td>Radius of lateral equilibrium 0.5 × √E</td><td>Field margin / lateral scatter 概念</td></tr>
+<tr><td>Distance from tumor edge 90% IDL to field edge 50% IDL = E / 10</td><td>Electron field edge margin 估算</td></tr>
+<tr><td>Lead shield thickness = E / 2 mm + 1 mm</td><td>Lead shielding 估算</td></tr>
+<tr><td>Cerrobend thickness = lead thickness × 1.2</td><td>Cerrobend shielding 估算</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>二、Electron energy 與 field size effect</h3>
+<p>High-energy electrons 比較 forward-directed；low-energy electrons 比較 lateral scatter。Small field size 會讓 skin dose 較高、Dmax 較淺、PDD fall-off less steep；cutout 越小，dose 越接近 skin surface。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field size</th><th>Skin dose</th><th>Dmax</th><th>PDD fall-off</th></tr>
+</thead>
+<tbody>
+<tr><td>Smaller field</td><td>Higher</td><td>Shallower</td><td>Less steep</td></tr>
+<tr><td>Larger field</td><td>Lower</td><td>Deeper</td><td>Steeper</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、Beam angle：為什麼 electron 要 en face？</h3>
+<p>Electron beam 對 obliquity 很敏感。Incident angle 越斜，isodose lines 會被拉向 surface，造成 deeper target under-coverage。因此 electron 最好 treat <strong>en face</strong>，也就是 beam perpendicular to treatment surface。</p>
+
+<h3>四、Electron planning for skin cancer</h3>
+<ol>
+<li>Measure lesion depth → choose beam energy</li>
+<li>Measure length / width → choose field size</li>
+<li>Margin 常為 1.5–2.5 cm，並考慮 0.5 × √E lateral equilibrium</li>
+<li>Simulation position 要盡量讓 lesion en face</li>
+<li>Face/head-neck lesion 可用 thermoplastic mask</li>
+<li>Bolus 常用 0.5–1.5 cm，依 energy 和 prescription depth</li>
+<li>Eye / oral mucosa 可考慮 lead shielding</li>
+<li>Clinical setup 常 prescribe to 90% isodose line</li>
+</ol>
+
+<h3>五、Lead shield 與 backscatter</h3>
+<p>Lead shield 常用於 eye 或 oral cavity protection。但如果只放 lead，beam side electron backscatter 會增加 dose 並造成 hotspot。因此常用 <strong>wax-coated lead</strong> 來吸收 backscatter。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Shield</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Lead thickness</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Cerrobend thickness</td><td>Lead thickness × 1.2</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. Additional electron formulas</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Formula</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Stopping power about 2.33 MeV/cm, often simplified to 2 MeV/cm</td><td>Approximate electron energy loss per cm in water</td></tr>
+<tr><td>Depth of lateral equilibrium √E</td><td>Depth concept for establishing lateral equilibrium</td></tr>
+<tr><td>Radius of lateral equilibrium 0.5 × √E</td><td>Field margin / lateral scatter concept</td></tr>
+<tr><td>Distance from tumor edge 90% IDL to field edge 50% IDL = E / 10</td><td>Electron field-edge margin estimate</td></tr>
+<tr><td>Lead shield thickness = E / 2 mm + 1 mm</td><td>Lead shielding estimate</td></tr>
+<tr><td>Cerrobend thickness = lead thickness × 1.2</td><td>Cerrobend shielding estimate</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2. Electron energy and field-size effects</h3>
+<p>High-energy electrons are more forward-directed; low-energy electrons scatter more laterally. Smaller field size increases skin dose, makes Dmax shallower, and makes the PDD fall-off less steep. Smaller cutouts shift dose closer to the skin surface.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field size</th><th>Skin dose</th><th>Dmax</th><th>PDD fall-off</th></tr>
+</thead>
+<tbody>
+<tr><td>Smaller field</td><td>Higher</td><td>Shallower</td><td>Less steep</td></tr>
+<tr><td>Larger field</td><td>Lower</td><td>Deeper</td><td>Steeper</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Why treat electrons en face?</h3>
+<p>Electron beams are sensitive to obliquity. The more oblique the incident angle, the more the isodose lines are pulled toward the surface, causing under-coverage of deeper target. Electrons should be treated <strong>en face</strong>, meaning perpendicular to the treatment surface whenever possible.</p>
+
+<h3>4. Electron planning for skin cancer</h3>
+<ol>
+<li>Measure lesion depth → choose beam energy</li>
+<li>Measure lesion length / width → choose field size</li>
+<li>Use margin, often 1.5–2.5 cm, and consider 0.5 × √E lateral equilibrium</li>
+<li>Simulate with lesion as en face as possible</li>
+<li>Use thermoplastic mask for face/head-neck lesions when helpful</li>
+<li>Use bolus, often 0.5–1.5 cm, based on energy and prescription depth</li>
+<li>Consider lead shielding for eye or oral mucosa</li>
+<li>Clinical setup often prescribes to the 90% isodose line</li>
+</ol>
+
+<h3>5. Lead shield and backscatter</h3>
+<p>Lead shielding is commonly used for eye or oral cavity protection. Bare lead increases electron backscatter on the beam side and can create hotspots, so <strong>wax-coated lead</strong> is often used to absorb backscatter.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Shield</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Lead thickness</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Cerrobend thickness</td><td>Lead thickness × 1.2</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-6"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Proton 基礎"
+        data-en="PROTON BASICS"
+      >
+        Proton 基礎
+      </div>
+
+      <h2
+        class=""
+        data-zh="第三部分：Proton beams"
+        data-en="Proton beams"
+      >
+        第三部分：Proton beams
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、Proton basics</h3>
+<p>Proton mass 約為 electron 的 2000 倍。Electron rest mass energy 是 0.511 MeV，proton 約 938 MeV。Protons 通常由 cyclotron 或 synchrotron 產生；cyclotron 讓 particles 走 spiral path，synchrotron 則是 closed loop acceleration。</p>
+
+<h3>二、Proton RBE</h3>
+<div class="formula-box">RBE<sub>proton</sub> = 1.1</div>
+<p>臨床上常用 proton physical dose × 1.1 表示 biological equivalent dose。Dose 可寫成 CGE 或 Gy equivalent，但 ICRU 建議報告 <strong>D<sub>RBE</sub></strong>。Carbon RBE 約 3 或更高。</p>
+
+<h3>三、Bragg peak</h3>
+<p>Proton 穿過 tissue 時會逐漸失去能量；在停止前的深度釋放最大能量，形成 <strong>Bragg peak</strong>。Higher proton energy 會讓 penetration 更深。</p>
+
+<div class="clinical-note">
+Photon 是一路衰減穿過去；proton 是在指定深度爆發後停止。
+</div>
+
+<h3>四、Pristine Bragg peak 與 SOBP</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Bragg type</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Pristine Bragg peak</td><td>單一能量 proton，peak 很窄</td></tr>
+<tr><td>SOBP</td><td>多種能量 proton 疊加，cover 整個 tumor depth</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>五、Passive scattering vs active scanning</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Technique</th><th>Advantage</th><th>Problem</th></tr>
+</thead>
+<tbody>
+<tr><td>Passive scattering</td><td>Robust, simpler historically</td><td>Higher surface dose, patient-specific hardware</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity, IMPT possible</td><td>Motion / interplay / range uncertainty sensitive</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Passive scattering 透過 range shifter、range modulator / wheel / ridge filter、scattering foils、compensator 來改變 beam energy 與 shape。Active scanning 則是 pencil beam technique，用細 beam 逐點 paint target，conformity 較好，但 motion 更需要小心。</p>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. Proton basics</h3>
+<p>A proton is about 2000 times heavier than an electron. Electron rest mass energy is 0.511 MeV, while proton rest mass energy is about 938 MeV. Protons are usually produced by cyclotron or synchrotron. A cyclotron uses a spiral path, whereas a synchrotron uses closed-loop acceleration.</p>
+
+<h3>2. Proton RBE</h3>
+<div class="formula-box">RBE<sub>proton</sub> = 1.1</div>
+<p>Clinically, proton physical dose is often multiplied by 1.1 to express biological equivalent dose. Dose may be written as CGE or Gy equivalent, but ICRU recommends reporting <strong>D<sub>RBE</sub></strong>. Carbon ion RBE is around 3 or higher.</p>
+
+<h3>3. Bragg peak</h3>
+<p>As protons pass through tissue, they gradually lose energy and deposit maximum energy just before stopping, forming the <strong>Bragg peak</strong>. Higher proton energy produces deeper penetration.</p>
+
+<div class="clinical-note">
+Photons attenuate as they pass through; protons deposit a burst of dose at a selected depth and then stop.
+</div>
+
+<h3>4. Pristine Bragg peak and SOBP</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Bragg type</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Pristine Bragg peak</td><td>Single-energy proton beam with a narrow peak</td></tr>
+<tr><td>SOBP</td><td>Multiple proton energies combined to cover the full tumor depth</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>5. Passive scattering versus active scanning</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Technique</th><th>Advantage</th><th>Problem</th></tr>
+</thead>
+<tbody>
+<tr><td>Passive scattering</td><td>Robust and historically simpler</td><td>Higher surface dose, patient-specific hardware</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity and enables IMPT</td><td>Sensitive to motion, interplay, and range uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Passive scattering uses hardware such as range shifters, range modulators / wheels / ridge filters, scattering foils, and compensators to shape beam energy and distribution. Active scanning uses pencil beams to paint the target spot by spot; it improves conformity but is more sensitive to motion.</p>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-7"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Proton uncertainty"
+        data-en="PROTON UNCERTAINTY"
+      >
+        Proton uncertainty
+      </div>
+
+      <h2
+        class=""
+        data-zh="Proton range uncertainty 與臨床限制"
+        data-en="Proton range uncertainty and clinical limitations"
+      >
+        Proton range uncertainty 與臨床限制
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>Proton 最大優勢是 distal fall-off，但最大弱點也是 distal fall-off：range 錯了，target 或 OAR dose 都可能錯。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Uncertainty</th><th>Clinical issue</th></tr>
+</thead>
+<tbody>
+<tr><td>Tissue inhomogeneity</td><td>Bone、air cavity、metal artifact、chemo port 可改變 distal edge</td></tr>
+<tr><td>Anatomical change</td><td>Weight loss、tumor shrinkage 影響 range</td></tr>
+<tr><td>Motion</td><td>Lung / liver tumors 特別重要</td></tr>
+<tr><td>Air / soft tissue interface</td><td>Range calculation uncertainty</td></tr>
+<tr><td>CT HU / density conversion</td><td>Stopping power uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">Distal margin = 0.035 × CTV<sub>distal</sub> + 3 mm</div>
+
+<div class="clinical-note">
+Exact distal margin formula may vary between centers。臨床上 proton planning 必須重視 density change、motion、anatomical adaptation、robust optimization 與 image guidance。
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>The greatest advantage of protons is distal fall-off, but the greatest weakness is also distal fall-off: if range is wrong, target coverage or OAR dose can be wrong.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Uncertainty</th><th>Clinical issue</th></tr>
+</thead>
+<tbody>
+<tr><td>Tissue inhomogeneity</td><td>Bone, air cavity, metal artifact, or chemo port can shift distal edge</td></tr>
+<tr><td>Anatomical change</td><td>Weight loss or tumor shrinkage affects range</td></tr>
+<tr><td>Motion</td><td>Especially important for lung and liver tumors</td></tr>
+<tr><td>Air / soft tissue interface</td><td>Range calculation uncertainty</td></tr>
+<tr><td>CT HU / density conversion</td><td>Stopping-power uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">Distal margin = 0.035 × CTV<sub>distal</sub> + 3 mm</div>
+
+<div class="clinical-note">
+The exact distal-margin formula varies by center. Clinically, proton planning must consider density change, motion, anatomical adaptation, robust optimization, and image guidance.
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-8"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="CSI 基礎"
+        data-en="CSI BASICS"
+      >
+        CSI 基礎
+      </div>
+
+      <h2
+        class=""
+        data-zh="第四部分：Craniospinal irradiation, CSI"
+        data-en="Craniospinal irradiation, CSI"
+      >
+        第四部分：Craniospinal irradiation, CSI
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>CSI 是 radiation physics 與 clinical technique 的高整合應用，核心問題是：很長的 target，需要多個 fields，而且 field junction 不能產生 spinal cord hotspot 或 cold spot。</p>
+
+<h3>一、CSI indications</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Population</th><th>Disease</th></tr>
+</thead>
+<tbody>
+<tr><td>Pediatric CNS tumors</td><td>Medulloblastoma</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Non-germinomatous germ cell tumors</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>ATRT</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Metastatic ependymoma</td></tr>
+<tr><td>Adult CNS</td><td>Metastatic leptomeningeal disease，例如 breast cancer</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>二、CSI simulation</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Step</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td>Position</td><td>Supine</td></tr>
+<tr><td>Neck</td><td>Neck extended，盡量 minimize spine curvature</td></tr>
+<tr><td>Immobilization</td><td>5-point mask secure head and shoulders</td></tr>
+<tr><td>Body</td><td>Large vac-loc，確認 body straight</td></tr>
+<tr><td>Knee sponge</td><td>可減少 lordosis</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、CSI contours</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Target</th><th>Contouring point</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>要 cover cribriform plate / crista galli</td></tr>
+<tr><td>Thecal sac</td><td>MRI 定義，通常到 S1–S2 bottom</td></tr>
+<tr><td>Spine</td><td>Laterally include nerve root extensions</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>四、CSI fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Technique</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>2 opposed lateral beams</td></tr>
+<tr><td>Upper spine</td><td>Single PA field</td></tr>
+<tr><td>Lower spine</td><td>Additional PA field(s)</td></tr>
+</tbody>
+</table>
+</div>
+
+<ol>
+<li>先 plan upper spinal field。</li>
+<li>Upper border 盡量低，例如 C4–C5 / C5–C6 到 L1–L2，但依 child height 而定。</li>
+<li>Neck extended，避免 exit through oral cavity。</li>
+<li>Whole brain opposed laterals 要 cover cribriform plate / crista galli / BOS，避免 entry through shoulders。</li>
+<li>Brain-spine junction 可有 0.5 cm gap。</li>
+<li>Lower spinal field match point of divergence 要在 spinal cord anterior。</li>
+</ol>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>CSI is a high-integration application of radiation physics and clinical technique. The core challenge is a very long target requiring multiple fields, where field junctions must not create spinal cord hot or cold spots.</p>
+
+<h3>1. CSI indications</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Population</th><th>Disease</th></tr>
+</thead>
+<tbody>
+<tr><td>Pediatric CNS tumors</td><td>Medulloblastoma</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Non-germinomatous germ cell tumors</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>ATRT</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Metastatic ependymoma</td></tr>
+<tr><td>Adult CNS</td><td>Metastatic leptomeningeal disease, such as breast cancer</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2. CSI simulation</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Step</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td>Position</td><td>Supine</td></tr>
+<tr><td>Neck</td><td>Extended neck; minimize spine curvature</td></tr>
+<tr><td>Immobilization</td><td>5-point mask securing head and shoulders</td></tr>
+<tr><td>Body</td><td>Large vac-loc; ensure straight body position</td></tr>
+<tr><td>Knee sponge</td><td>Can reduce lordosis</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. CSI contours</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Target</th><th>Contouring point</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>Cover cribriform plate / crista galli</td></tr>
+<tr><td>Thecal sac</td><td>Defined on MRI, usually to S1–S2 bottom</td></tr>
+<tr><td>Spine</td><td>Laterally include nerve root extensions</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>4. CSI fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Technique</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>Two opposed lateral beams</td></tr>
+<tr><td>Upper spine</td><td>Single PA field</td></tr>
+<tr><td>Lower spine</td><td>Additional PA field(s)</td></tr>
+</tbody>
+</table>
+</div>
+
+<ol>
+<li>Plan the upper spinal field first.</li>
+<li>Place the upper border as low as possible, such as C4–C5 / C5–C6 to L1–L2 depending on child height.</li>
+<li>Extend the neck to avoid exit through the oral cavity.</li>
+<li>Whole-brain opposed laterals must cover the cribriform plate / crista galli / BOS and avoid entry through shoulders.</li>
+<li>A 0.5 cm gap can be used at the brain-spine junction.</li>
+<li>The lower spinal field divergence match point should be anterior to the spinal cord.</li>
+</ol>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-9"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="CSI matching"
+        data-en="CSI MATCHING"
+      >
+        CSI matching
+      </div>
+
+      <h2
+        class=""
+        data-zh="CSI field matching、junction 與 feathering"
+        data-en="CSI field matching, junctions, and feathering"
+      >
+        CSI field matching、junction 與 feathering
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、Beam divergence 與 hot/cold spot</h3>
+<p>Beam divergence 指 beam diameter 會隨著離 source 越遠而增加。Field overlap 會造成 hotspot，gap 則可能造成 cold spot。CSI 的危險在於 junction hot spot 落在 spinal cord。</p>
+
+<div class="clinical-note">
+處理原則：match divergence, avoid overlap into neighboring field, feather junction。
+</div>
+
+<h3>二、Matching brain and spine fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Adjustment</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain field</td><td>Rotate collimator to match upward divergence of PA spine field，約 12°</td></tr>
+<tr><td>Spine field</td><td>Kick couch toward head of gantry to match downward divergence of opposed lateral brain fields，約 8°</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">θ = arctan( 1/2 × spine field length / SSD )</div>
+<div class="formula-box">θ = arctan( 1/2 × brain field length / SAD )</div>
+
+<h3>三、Matching multiple spine fields</h3>
+<p>Multiple spine fields 的 junction 要 match anterior to spinal cord，避免 hot spot 在 cord。Therapists 可在 skin 放 marker 檢查 gap。</p>
+
+<div class="formula-box">S = 1/2 × L × (depth / SSD)</div>
+
+<p>其中 S 是 skin separation，L 是 field length。</p>
+
+<h3>四、Feathering the junction</h3>
+<p>即使 junction match 在 cord anterior，posterior spine 仍可能有 cold spot。因此 junction line 要定期移動，讓 cold spot 分散，不集中在同一個位置。Source file 建議 match line superiorly move 0.5–1 cm periodically，通常每 5 fractions 或每 9 Gy，也就是大約每週 feather 一次。</p>
+
+<div class="clinical-note">
+Feathering junction 是把 junction uncertainty 和 cold/hot spot 分散掉，不讓同一段 spinal canal 長期吃到過高或過低 dose。
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. Beam divergence and hot/cold spots</h3>
+<p>Beam divergence means the beam diameter increases with distance from the source. Field overlap creates hotspots, while gaps can create cold spots. The main danger in CSI is a junction hotspot landing in the spinal cord.</p>
+
+<div class="clinical-note">
+Management principle: match divergence, avoid overlap into neighboring fields, and feather the junction.
+</div>
+
+<h3>2. Matching brain and spine fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Adjustment</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain field</td><td>Rotate collimator to match upward divergence of PA spine field, about 12°</td></tr>
+<tr><td>Spine field</td><td>Kick couch toward the head of gantry to match downward divergence of opposed lateral brain fields, about 8°</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">θ = arctan( 1/2 × spine field length / SSD )</div>
+<div class="formula-box">θ = arctan( 1/2 × brain field length / SAD )</div>
+
+<h3>3. Matching multiple spine fields</h3>
+<p>The junction between multiple spine fields should be matched anterior to the spinal cord to avoid a cord hotspot. Therapists can use skin markers to verify the gap.</p>
+
+<div class="formula-box">S = 1/2 × L × (depth / SSD)</div>
+
+<p>Here, S is skin separation and L is field length.</p>
+
+<h3>4. Feathering the junction</h3>
+<p>Even if the junction is matched anterior to the cord, the posterior spine may still have cold spots. The junction line should therefore be moved periodically so that hot/cold uncertainty is distributed rather than concentrated. The source file suggests moving the match line superiorly by 0.5–1 cm periodically, typically every 5 fractions or every 9 Gy, roughly weekly.</p>
+
+<div class="clinical-note">
+Feathering spreads junction uncertainty and hot/cold spots so that the same spinal canal segment does not repeatedly receive too much or too little dose.
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-10"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="CSI toxicity/proton"
+        data-en="CSI TOXICITY / PROTON"
+      >
+        CSI toxicity/proton
+      </div>
+
+      <h2
+        class=""
+        data-zh="Proton CSI 與 CSI toxicity"
+        data-en="Proton CSI and CSI toxicity"
+      >
+        Proton CSI 與 CSI toxicity
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、Protons vs photons for CSI</h3>
+<p>Kahalley et al., JCO 2020 retrospective study 比較 pediatric medulloblastoma protocols 中接受 proton vs photon CSI 的病人。Photon group 的 global IQ、working memory、processing speed 顯著下降；proton group 除 processing speed 外，各 domain scores 較穩定。</p>
+
+<div class="clinical-note">
+CSI 是 proton 最有說服力的適應症之一，因為 proton 可降低 exit dose 與 integral dose，尤其 pediatric patients 對 neurocognitive、endocrine、growth、secondary malignancy 很敏感。
+</div>
+
+<h3>二、CSI toxicity</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Acute toxicity</th><th>Late toxicity</th></tr>
+</thead>
+<tbody>
+<tr><td>Dermatitis</td><td>Neurocognitive dysfunction</td></tr>
+<tr><td>Fatigue</td><td>Decreased IQ</td></tr>
+<tr><td>Alopecia</td><td>Hypopituitarism / endocrinopathy</td></tr>
+<tr><td>Headache</td><td>GH deficiency、hypothyroidism、gonadal dysfunction</td></tr>
+<tr><td>Nausea / vomiting</td><td>Decreased truncal height / growth</td></tr>
+<tr><td>Diarrhea</td><td>Weakness / ataxia</td></tr>
+<tr><td>Cytopenia</td><td>Fracture、stroke、cataracts、hearing loss、necrosis、secondary malignancy、depression / anxiety</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Pediatric CSI 要注意 vertebral bodies dose uniformity，因為不均勻照射可能影響 spinal / truncal growth。
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. Protons versus photons for CSI</h3>
+<p>Kahalley et al., JCO 2020, retrospectively compared pediatric patients treated on medulloblastoma protocols with proton versus photon CSI. The photon group had significant declines in global IQ, working memory, and processing speed, whereas the proton group had relatively stable domains except processing speed.</p>
+
+<div class="clinical-note">
+CSI is one of the strongest indications for protons because protons reduce exit dose and integral dose. This is especially important in pediatric patients who are highly sensitive to neurocognitive, endocrine, growth, and second-malignancy effects.
+</div>
+
+<h3>2. CSI toxicity</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Acute toxicity</th><th>Late toxicity</th></tr>
+</thead>
+<tbody>
+<tr><td>Dermatitis</td><td>Neurocognitive dysfunction</td></tr>
+<tr><td>Fatigue</td><td>Decreased IQ</td></tr>
+<tr><td>Alopecia</td><td>Hypopituitarism / endocrinopathy</td></tr>
+<tr><td>Headache</td><td>GH deficiency, hypothyroidism, gonadal dysfunction</td></tr>
+<tr><td>Nausea / vomiting</td><td>Decreased truncal height / growth</td></tr>
+<tr><td>Diarrhea</td><td>Weakness / ataxia</td></tr>
+<tr><td>Cytopenia</td><td>Fracture, stroke, cataracts, hearing loss, necrosis, secondary malignancy, depression / anxiety</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+In pediatric CSI, vertebral body dose uniformity matters because asymmetric vertebral irradiation can affect spinal and truncal growth.
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-11"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="比較表"
+        data-en="COMPARISON"
+      >
+        比較表
+      </div>
+
+      <h2
+        class=""
+        data-zh="第五部分：Photon vs Electron vs Proton 高分比較"
+        data-en="High-yield comparison: photon versus electron versus proton"
+      >
+        第五部分：Photon vs Electron vs Proton 高分比較
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Feature</th><th>Photon</th><th>Electron</th><th>Proton</th></tr>
+</thead>
+<tbody>
+<tr><td>Particle type</td><td>Massless photon</td><td>Charged electron</td><td>Charged proton</td></tr>
+<tr><td>Mass</td><td>0</td><td>0.511 MeV rest mass</td><td>938 MeV</td></tr>
+<tr><td>Depth-dose pattern</td><td>Build-up then gradual fall-off</td><td>Superficial dose, rapid fall-off</td><td>Bragg peak, sharp distal fall-off</td></tr>
+<tr><td>Exit dose</td><td>Yes</td><td>Minimal after practical range</td><td>Minimal after distal fall-off</td></tr>
+<tr><td>Main use</td><td>Most EBRT</td><td>Superficial targets</td><td>Pediatric, CNS, skull base, selected OAR-sparing cases</td></tr>
+<tr><td>Main weakness</td><td>Integral dose / exit dose</td><td>Obliquity, field size, surface irregularity</td><td>Range uncertainty</td></tr>
+<tr><td>Skin dose with higher energy</td><td>Lower</td><td>Higher</td><td>Depends on technique; passive scattering can increase surface dose</td></tr>
+<tr><td>Planning sensitivity</td><td>Moderate</td><td>Surface angle / field size sensitive</td><td>Highly sensitive to density, motion, anatomy</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Feature</th><th>Photon</th><th>Electron</th><th>Proton</th></tr>
+</thead>
+<tbody>
+<tr><td>Particle type</td><td>Massless photon</td><td>Charged electron</td><td>Charged proton</td></tr>
+<tr><td>Mass</td><td>0</td><td>0.511 MeV rest mass</td><td>938 MeV</td></tr>
+<tr><td>Depth-dose pattern</td><td>Build-up then gradual fall-off</td><td>Superficial dose, rapid fall-off</td><td>Bragg peak, sharp distal fall-off</td></tr>
+<tr><td>Exit dose</td><td>Yes</td><td>Minimal after practical range</td><td>Minimal after distal fall-off</td></tr>
+<tr><td>Main use</td><td>Most EBRT</td><td>Superficial targets</td><td>Pediatric, CNS, skull base, selected OAR-sparing cases</td></tr>
+<tr><td>Main weakness</td><td>Integral dose / exit dose</td><td>Obliquity, field size, surface irregularity</td><td>Range uncertainty</td></tr>
+<tr><td>Skin dose with higher energy</td><td>Lower</td><td>Higher</td><td>Depends on technique; passive scattering can increase surface dose</td></tr>
+<tr><td>Planning sensitivity</td><td>Moderate</td><td>Surface angle / field size sensitive</td><td>Highly sensitive to density, motion, anatomy</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-12"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="臨床選擇"
+        data-en="CLINICAL SELECTION"
+      >
+        臨床選擇
+      </div>
+
+      <h2
+        class=""
+        data-zh="第六部分：Clinical decision translation"
+        data-en="Clinical decision translation"
+      >
+        第六部分：Clinical decision translation
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>一、什麼時候用 photon？</h3>
+<p>Photon 適合大多數 deep targets，因為 penetration 穩定、dose calculation robust、clinical experience 最大。缺點是有 exit dose 與 integral dose。</p>
+
+<h3>二、什麼時候用 electron？</h3>
+<p>Electron 適合 superficial disease，例如 skin cancer、scar boost、chest wall boost、淺層 nodal or subcutaneous lesions。重點是 target depth 要落在 90% IDL 內，並注意 field size、bolus、en face setup、shielding。</p>
+
+<div class="clinical-note">
+Electron 實用選擇：lesion depth 決定 energy；surface dose / Dmax position 決定 bolus；field edge dose fall-off 決定 margin。
+</div>
+
+<h3>三、什麼時候用 proton？</h3>
+<p>Proton 適合 OAR sparing 價值高的情境，例如 pediatric tumors、CSI、base-of-skull tumors、re-irradiation、large-field cases where integral dose matters。缺點是 range uncertainty、motion sensitivity、anatomical change sensitivity。</p>
+
+<h3>四、CSI 為什麼是 physics-heavy technique？</h3>
+<ol>
+<li>Very long target length</li>
+<li>Multiple isocenters</li>
+<li>Divergent field matching</li>
+<li>Junction hot/cold spot</li>
+<li>Feathering</li>
+<li>Pediatric toxicity and growth concerns</li>
+<li>Proton vs photon modality tradeoff</li>
+</ol>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>1. When to use photons?</h3>
+<p>Photons are appropriate for most deep targets because penetration is stable, dose calculation is robust, and clinical experience is extensive. The limitation is exit dose and integral dose.</p>
+
+<h3>2. When to use electrons?</h3>
+<p>Electrons are suitable for superficial disease such as skin cancer, scar boost, chest wall boost, and superficial nodal or subcutaneous lesions. The target depth must lie within the 90% isodose line, and planning must account for field size, bolus, en face setup, and shielding.</p>
+
+<div class="clinical-note">
+Practical electron selection: lesion depth determines energy; surface dose and Dmax determine bolus; field-edge fall-off determines margin.
+</div>
+
+<h3>3. When to use protons?</h3>
+<p>Protons are useful when OAR sparing has high value: pediatric tumors, CSI, skull base tumors, re-irradiation, and large-field cases where integral dose matters. The limitations are range uncertainty, motion sensitivity, and anatomical change sensitivity.</p>
+
+<h3>4. Why is CSI physics-heavy?</h3>
+<ol>
+<li>Very long target length</li>
+<li>Multiple isocenters</li>
+<li>Divergent field matching</li>
+<li>Junction hot/cold spots</li>
+<li>Feathering</li>
+<li>Pediatric toxicity and growth concerns</li>
+<li>Proton versus photon modality tradeoff</li>
+</ol>
+
+      </div>
+
+    </section>
+    
+    <section
+      id="section-13"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="重點表"
+        data-en="TAKE-HOME"
+      >
+        重點表
+      </div>
+
+      <h2
+        class=""
+        data-zh="最後高分記憶表"
+        data-en="High-yield take-home table"
+      >
+        最後高分記憶表
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<h3>Photon</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Main therapeutic interaction</td><td>Compton</td></tr>
+<tr><td>Dmax</td><td>Energy ↑ → Dmax deeper</td></tr>
+<tr><td>Surface dose</td><td>Energy ↑ → surface dose lower</td></tr>
+<tr><td>HVL</td><td>0.693 / μ</td></tr>
+<tr><td>FFF</td><td>High dose rate, lower average energy, non-flat profile</td></tr>
+<tr><td>Penumbra</td><td>Source size / SSD ↑ → penumbra ↑；SDD ↑ → penumbra ↓</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Electron</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Use</td><td>Superficial tumors</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+<tr><td>90% IDL</td><td>E / 3.2–3.3, or rough E / 4</td></tr>
+<tr><td>80% IDL</td><td>E / 2.8, or rough E / 3</td></tr>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>Margin concept</td><td>0.5 × √E</td></tr>
+<tr><td>Lead shield</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Setup</td><td>Treat en face</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Proton</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>RBE</td><td>1.1</td></tr>
+<tr><td>Dose reporting</td><td>D<sub>RBE</sub> preferred by ICRU</td></tr>
+<tr><td>Physics advantage</td><td>Bragg peak, minimal exit dose</td></tr>
+<tr><td>SOBP</td><td>Multiple energies spread out peak</td></tr>
+<tr><td>Passive scattering</td><td>Higher surface dose</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity, motion sensitive</td></tr>
+<tr><td>Main problem</td><td>Range uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>CSI</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Fields</td><td>Opposed lateral brain + PA spine fields</td></tr>
+<tr><td>Junction problem</td><td>Overlap = hot spot；gap = cold spot</td></tr>
+<tr><td>Brain-spine match</td><td>Collimator rotation + couch kick</td></tr>
+<tr><td>Multiple spine fields</td><td>Match anterior to cord</td></tr>
+<tr><td>Feathering</td><td>Move junction 0.5–1 cm every 5 fx / 9 Gy</td></tr>
+<tr><td>Proton CSI</td><td>Lower integral dose, better pediatric late-effect profile</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<h3>Photon</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Main therapeutic interaction</td><td>Compton</td></tr>
+<tr><td>Dmax</td><td>Energy ↑ → deeper Dmax</td></tr>
+<tr><td>Surface dose</td><td>Energy ↑ → lower surface dose</td></tr>
+<tr><td>HVL</td><td>0.693 / μ</td></tr>
+<tr><td>FFF</td><td>High dose rate, lower average energy, non-flat profile</td></tr>
+<tr><td>Penumbra</td><td>Source size / SSD ↑ → penumbra ↑; SDD ↑ → penumbra ↓</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Electron</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Use</td><td>Superficial tumors</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+<tr><td>90% IDL</td><td>E / 3.2–3.3, or rough E / 4</td></tr>
+<tr><td>80% IDL</td><td>E / 2.8, or rough E / 3</td></tr>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>Margin concept</td><td>0.5 × √E</td></tr>
+<tr><td>Lead shield</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Setup</td><td>Treat en face</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Proton</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>RBE</td><td>1.1</td></tr>
+<tr><td>Dose reporting</td><td>D<sub>RBE</sub> preferred by ICRU</td></tr>
+<tr><td>Physics advantage</td><td>Bragg peak, minimal exit dose</td></tr>
+<tr><td>SOBP</td><td>Multiple energies spread out the peak</td></tr>
+<tr><td>Passive scattering</td><td>Higher surface dose</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity, motion sensitive</td></tr>
+<tr><td>Main problem</td><td>Range uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>CSI</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Fields</td><td>Opposed lateral brain + PA spine fields</td></tr>
+<tr><td>Junction problem</td><td>Overlap = hotspot; gap = cold spot</td></tr>
+<tr><td>Brain-spine match</td><td>Collimator rotation + couch kick</td></tr>
+<tr><td>Multiple spine fields</td><td>Match anterior to cord</td></tr>
+<tr><td>Feathering</td><td>Move junction 0.5–1 cm every 5 fx / 9 Gy</td></tr>
+<tr><td>Proton CSI</td><td>Lower integral dose and better pediatric late-effect profile</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+
+    </section>
+    
+
+    
+
+    <div class="page-nav">
+
+        <a href="intro-clinical.html" class="page-nav-link page-nav-prev">
+          <span class="nav-dir">
+            ←
+            <span data-zh="上一章" data-en="Previous">
+              上一章
+            </span>
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="臨床導論"
+            data-en="Clinical Intro"
+          >
+            臨床導論
+          </span>
+        </a>
+        
+
+        <a href="radbio.html" class="page-nav-link page-nav-next">
+          <span class="nav-dir">
+            <span data-zh="下一章" data-en="Next">
+              下一章
+            </span>
+            →
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="放射生物"
+            data-en="RadBio"
+          >
+            放射生物
+          </span>
+        </a>
+        
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    © Rad Onc Interactive Tutorial ·
+    <a
+      href="index.html"
+      data-zh="返回首頁"
+      data-en="Back to home"
+    >
+      Back to home
+    </a>
+  </footer>
+
+  <script src="i18n.js"></script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const progressBar = document.getElementById("progressBar");
+
+      if (!progressBar) {
+        return;
+      }
+
+      const documentElement = document.documentElement;
+      const body = document.body;
+
+      const scrollTop =
+        documentElement.scrollTop ||
+        body.scrollTop;
+
+      const scrollHeight =
+        documentElement.scrollHeight ||
+        body.scrollHeight;
+
+      const availableScroll =
+        scrollHeight - documentElement.clientHeight;
+
+      const progress =
+        availableScroll > 0
+          ? (scrollTop / availableScroll) * 100
+          : 0;
+
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+
+</body>
+</html>

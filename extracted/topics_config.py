@@ -49,89 +49,1864 @@ PAGES.append({
     "next": ["physics.html", "放射物理學", "Physics"],
 })
 
+# Radiation physics teaching page
+# Add this block to the same Python file that defines PAGES.
+
 PAGES.append({
     "slug": "physics",
     "emoji": "⚛️",
-    "title_zh": "放射物理學",
+    "title_zh": "放射物理",
     "title_en": "Radiation Physics",
-    "sub_zh": "光子、電子、質子束的物理性質與臨床應用。",
-    "sub_en": "Photon, electron, and proton beam properties and clinical applications.",
+    "sub_zh": "Photon、electron、proton、CSI 技術、beam geometry、dose fall-off、field matching 與臨床選擇。",
+    "sub_en": "Photons, electrons, protons, CSI technique, beam geometry, dose fall-off, field matching, and clinical modality selection.",
+
     "sections": [
-      {
-        "label_zh": "光子束", "label_en": "PHOTON BEAMS",
-        "h2_zh": "光子束特性",
-        "h2_en": "Photon beam properties",
-        "body_zh": "<p><strong>光子束 (X-ray):</strong> 由高速電子撞擊靶產生，屬<strong>間接游離輻射</strong>。臨床常用 6–18 MV。</p><ul><li><strong>Percent Depth Dose (PDD):</strong> 隨能量升高、深度增加而增大 (skin sparing)。6 MV 的 dmax ≈ 1.5 cm，18 MV ≈ 3 cm。</li><li><strong>Buildup region:</strong> 電子平衡未達之前的區域，皮膚劑量較低。</li><li><strong>Beam profile:</strong> 由平坦度 (flatness) 與對稱性 (symmetry) 描述，用 FFF (flattening-filter-free) 可提升劑量率。</li></ul>",
-        "body_en": "<p><strong>Photons (X-rays):</strong> Produced by high-speed electrons striking a target — <strong>indirectly ionizing</strong>. Clinical range 6–18 MV.</p><ul><li><strong>Percent Depth Dose (PDD):</strong> Increases with energy and depth (skin sparing). 6 MV d_max ≈ 1.5 cm; 18 MV ≈ 3 cm.</li><li><strong>Buildup region:</strong> Region prior to electronic equilibrium — lower skin dose.</li><li><strong>Beam profile:</strong> Characterized by flatness and symmetry; FFF (flattening-filter-free) increases dose rate.</li></ul>"
-      },
-      {
-        "label_zh": "電子束", "label_en": "ELECTRON BEAMS",
-        "h2_zh": "電子束特性",
-        "h2_en": "Electron beam properties",
-        "body_zh": "<p><strong>電子束:</strong> 直接游離輻射，能量 6–20 MeV，用於皮膚、乳房疤痕、chest wall boost。</p><ul><li><strong>射程 (Range) rule:</strong> R80 (深度到 80% dose) ≈ E/3 cm；R90 ≈ E/4 cm。例如 12 MeV → R80 ≈ 4 cm。</li><li><strong>Practical range Rp:</strong> ≈ E/2 cm。</li><li><strong>Skin dose:</strong> 電子束皮膚劑量較光子高 (80–95%)。</li><li><strong>Bolus:</strong> 用於將 dmax 移至皮膚表面。</li></ul>",
-        "body_en": "<p><strong>Electrons:</strong> Directly ionizing, 6–20 MeV — used for skin, breast scar, chest wall boost.</p><ul><li><strong>Range rule:</strong> R80 ≈ E/3 cm; R90 ≈ E/4 cm. Example: 12 MeV → R80 ≈ 4 cm.</li><li><strong>Practical range Rp:</strong> ≈ E/2 cm.</li><li><strong>Skin dose:</strong> Higher than photons (80–95%).</li><li><strong>Bolus:</strong> Used to shift d_max to the skin surface.</li></ul>"
-      },
-      {
-        "label_zh": "質子束", "label_en": "PROTON BEAMS",
-        "h2_zh": "質子束與 Bragg peak",
-        "h2_en": "Proton beams and the Bragg peak",
-        "body_zh": "<p><strong>質子:</strong> 帶正電粒子，能量 70–250 MeV，具有<strong>Bragg peak</strong>——大部分劑量集中在射程末端，之後急劇下降。</p><ul><li><strong>Spread-Out Bragg Peak (SOBP):</strong> 多個能量疊加以覆蓋靶區。</li><li><strong>RBE:</strong> 質子相對光子 RBE ≈ 1.1 (臨床通用值)。</li><li><strong>臨床適用:</strong> 兒童（減少發育中組織的整體劑量）、顱底、脊索瘤、眼部黑色素瘤。</li><li><strong>不確定性:</strong> 射程對 CT HU 換算敏感，需嚴格 QA。</li></ul>",
-        "body_en": "<p><strong>Protons:</strong> Positively charged particles, 70–250 MeV, with a <strong>Bragg peak</strong> — dose is concentrated near the end of range, then falls sharply.</p><ul><li><strong>Spread-Out Bragg Peak (SOBP):</strong> Multiple energies summed to cover a target.</li><li><strong>RBE:</strong> Clinical RBE ≈ 1.1 vs. photons.</li><li><strong>Clinical use:</strong> Pediatrics (reduce integral dose to developing tissues), skull base, chordoma, ocular melanoma.</li><li><strong>Uncertainty:</strong> Range is sensitive to CT HU conversion — rigorous QA required.</li></ul>"
-      },
-      {
-        "label_zh": "顱脊照射", "label_en": "CSI",
-        "h2_zh": "顱脊照射 (Craniospinal Irradiation)",
-        "h2_en": "Craniospinal Irradiation (CSI)",
-        "body_zh": "<p>CSI 用於髓母細胞瘤、生殖細胞瘤等需覆蓋整個中樞神經軸的疾病。</p><ul><li><strong>靶區:</strong> 全腦 + 全脊髓 (至 S2/3)。</li><li><strong>技術:</strong> 光子 CSI 需 2–3 個等中心，接合處逐日移位以避免熱點；<strong>質子 CSI</strong> 可用單一 field，並顯著降低出射劑量至心臟、甲狀腺、腸胃道。</li><li><strong>劑量:</strong> 標準風險髓母 23.4 Gy CSI + 後顱窩 boost 至 54 Gy；高風險 36 Gy CSI。</li></ul>",
-        "body_en": "<p>CSI is used for medulloblastoma, germinomas, and other neoplasms requiring coverage of the entire craniospinal axis.</p><ul><li><strong>Target:</strong> Whole brain + entire spinal cord (to S2/3).</li><li><strong>Technique:</strong> Photon CSI requires 2–3 isocenters with daily junction shifts. <strong>Proton CSI</strong> uses a single field and substantially reduces exit dose to heart, thyroid, and bowel.</li><li><strong>Dose:</strong> Average-risk medulloblastoma 23.4 Gy CSI + posterior fossa boost to 54 Gy; high-risk 36 Gy CSI.</li></ul>"
-      },
+        {
+            "label_zh": "總論",
+            "label_en": "OVERVIEW",
+            "body_zh": """
+<p>Radiation physics 的核心不是只知道<span class="highlight">「哪一種 beam 比較深」</span>，而是理解：不同 radiation beam 的能量沉積方式不同，因此會決定 <strong>skin dose、Dmax、exit dose、field edge、penumbra、OAR dose、setup sensitivity</strong>，以及臨床 technique 的選擇。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Beam type</th><th>核心特色</th><th>臨床用途</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>穿透深、有 exit dose、Compton dominant</td><td>大多數 EBRT</td></tr>
+<tr><td>Electron</td><td>表淺沉積、快速 fall-off</td><td>Skin、chest wall boost、superficial lesion</td></tr>
+<tr><td>Proton</td><td>Bragg peak、低 exit dose、range uncertainty</td><td>Pediatric、base skull、CSI、re-irradiation selected cases</td></tr>
+<tr><td>CSI technique</td><td>多 field matching，避免 junction hot/cold spot</td><td>Medulloblastoma、germ cell tumor、ATRT、leptomeningeal disease</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+一句話整理：beam physics 決定 dose distribution；dose distribution 決定 tumor coverage 與 OAR tradeoff；setup uncertainty 和 tissue density change 會決定 technique 是否安全。
+</div>
+""",
+            "body_en": """
+<p>The core of radiation physics is not simply knowing which beam penetrates deeper. It is understanding how different radiation beams deposit energy differently, thereby determining <strong>skin dose, Dmax, exit dose, field edge, penumbra, OAR dose, setup sensitivity</strong>, and clinical technique selection.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Beam type</th><th>Core feature</th><th>Clinical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>Deep penetration, exit dose, Compton dominant</td><td>Most EBRT</td></tr>
+<tr><td>Electron</td><td>Superficial deposition, rapid fall-off</td><td>Skin, chest wall boost, superficial lesions</td></tr>
+<tr><td>Proton</td><td>Bragg peak, low exit dose, range uncertainty</td><td>Pediatric, skull base, CSI, selected re-irradiation cases</td></tr>
+<tr><td>CSI technique</td><td>Multi-field matching; avoid junction hot/cold spots</td><td>Medulloblastoma, germ cell tumor, ATRT, leptomeningeal disease</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+One-line memory: beam physics determines dose distribution; dose distribution determines tumor coverage and OAR tradeoffs; setup uncertainty and density change determine whether a technique is safe.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "Photon 基礎",
+            "label_en": "PHOTON BASICS",
+            "h2_zh": "第一部分：Photon beams",
+            "h2_en": "Photon beams",
+            "body_zh": """
+<h3>一、Photon 是什麼？</h3>
+<p>Photons 是 massless packets of energy，同時具有 wave-like 和 particle-like properties，是診斷與治療最常使用的 radiation。</p>
+
+<p>在 LINAC 裡，therapeutic photons 通常由 <strong>bremsstrahlung</strong> 產生：electrons 被加速後打到 tungsten target，高 Z material 使 electron 減速或偏折，能量以 X-ray photon 形式釋放。X-ray production efficiency 低，平均 X-ray energy 約為 incoming electron energy 的三分之一。</p>
+
+<h3>二、Photon interactions</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Interaction</th><th>發生機制</th><th>何時重要</th><th>Clinical relevance</th></tr>
+</thead>
+<tbody>
+<tr><td>Coherent scattering</td><td>Elastic scattering，不失去能量</td><td>Very low energy</td><td>診斷影像低能區較相關</td></tr>
+<tr><td>Photoelectric effect</td><td>Photon 把全部能量給 inner shell electron</td><td>Lower energy；機率 ∝ Z³/E³</td><td>Bone / high-Z material dose enhancement</td></tr>
+<tr><td>Compton scattering</td><td>Photon 把部分能量給 outer shell electron，產生 scattered photon</td><td>Therapeutic energy dominant</td><td>MV photon therapy 主要 interaction</td></tr>
+<tr><td>Pair production</td><td>Photon 在 nucleus 附近轉成 electron + positron</td><td>&gt;1.022 MeV；∝ Z</td><td>高能 photon 相關</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Therapeutic photon energies 約 25 keV to 25 MeV 時，<strong>Compton interactions predominates</strong>。</p>
+
+<h3>三、Compton scattering angle</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Scatter angle</th><th>Photon energy behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>0°</td><td>Photon loses no energy</td></tr>
+<tr><td>90°</td><td>Photon retains up to 0.511 MeV</td></tr>
+<tr><td>180° backscatter</td><td>Photon retains up to 0.255 MeV</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Photon energy 越高，scatter direction 越 forward-peaked；但 photons 仍會穿透 target 之後繼續沉積 dose，因此有 exit dose。
+</div>
+
+<h3>四、Direct vs indirect action</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Mechanism</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Direct action</td><td>Radiation directly damages DNA</td></tr>
+<tr><td>Indirect action</td><td>Radiation ionizes water → free radicals → DNA damage</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<h3>1. What is a photon?</h3>
+<p>Photons are massless packets of energy with both wave-like and particle-like properties. They are the most commonly used radiation type in diagnosis and therapy.</p>
+
+<p>In a LINAC, therapeutic photons are usually produced by <strong>bremsstrahlung</strong>: accelerated electrons strike a tungsten target; the high-Z nucleus decelerates or deflects the electron; energy is released as X-ray photons. X-ray production efficiency is low, with average X-ray energy roughly one third of the incoming electron energy.</p>
+
+<h3>2. Photon interactions</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Interaction</th><th>Mechanism</th><th>When important</th><th>Clinical relevance</th></tr>
+</thead>
+<tbody>
+<tr><td>Coherent scattering</td><td>Elastic scattering without energy loss</td><td>Very low energy</td><td>More relevant in low-energy diagnostic imaging</td></tr>
+<tr><td>Photoelectric effect</td><td>Photon gives all energy to an inner-shell electron</td><td>Lower energy; probability ∝ Z³/E³</td><td>Bone / high-Z material dose enhancement</td></tr>
+<tr><td>Compton scattering</td><td>Photon gives part of its energy to an outer-shell electron and produces a scattered photon</td><td>Dominant at therapeutic energies</td><td>Main interaction for MV photon therapy</td></tr>
+<tr><td>Pair production</td><td>Photon converts into electron + positron near a nucleus</td><td>&gt;1.022 MeV; ∝ Z</td><td>Relevant for high-energy photons</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>For therapeutic photon energies, approximately 25 keV to 25 MeV, <strong>Compton interactions predominate</strong>.</p>
+
+<h3>3. Compton scattering angle</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Scatter angle</th><th>Photon energy behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>0°</td><td>Photon loses no energy</td></tr>
+<tr><td>90°</td><td>Photon retains up to 0.511 MeV</td></tr>
+<tr><td>180° backscatter</td><td>Photon retains up to 0.255 MeV</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Higher-energy photons scatter more forward, but photons still penetrate beyond the target and produce exit dose.
+</div>
+
+<h3>4. Direct versus indirect action</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Mechanism</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Direct action</td><td>Radiation directly damages DNA</td></tr>
+<tr><td>Indirect action</td><td>Radiation ionizes water → free radicals → DNA damage</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "Photon 劑量",
+            "label_en": "PHOTON DOSE",
+            "h2_zh": "KERMA、HVL、Dmax、beam profile 與 penumbra",
+            "h2_en": "KERMA, HVL, Dmax, beam profile, and penumbra",
+            "body_zh": """
+<h3>一、KERMA vs Dose</h3>
+<p><strong>KERMA</strong> 是 photon 把能量轉移給 charged particles，例如 electrons；<strong>Dose</strong> 是能量真正沉積在 medium 中。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Term</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>KERMA</td><td>Kinetic energy released per unit mass；photon → electron energy transfer</td></tr>
+<tr><td>Dose</td><td>Energy deposited per unit mass；Gy = J/kg</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Region</th><th>Relationship</th></tr>
+</thead>
+<tbody>
+<tr><td>Surface / buildup region</td><td>Dose &lt; KERMA</td></tr>
+<tr><td>Dmax</td><td>Dose reaches maximum</td></tr>
+<tr><td>Equilibrium region</td><td>Dose roughly follows attenuation</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+MV photon 的 skin-sparing effect 來自 buildup region：最大 dose 不是在皮膚表面，而是在一定深度。
+</div>
+
+<h3>二、Attenuation、beam hardening、HVL</h3>
+<div class="formula-box">HVL = ln(2) / μ = 0.693 / μ</div>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Concept</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>HVL</td><td>把 beam intensity 降到一半所需 material thickness</td></tr>
+<tr><td>Monoenergetic beam</td><td>HVL1 = HVL2</td></tr>
+<tr><td>Polyenergetic beam</td><td>HVL2 &gt; HVL1，因為 beam hardening</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、Photon PDD 與 Dmax</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Photon energy</th><th>Approximate Dmax</th></tr>
+</thead>
+<tbody>
+<tr><td>Co-60 γ-rays</td><td>0.5 cm</td></tr>
+<tr><td>6 MV</td><td>1.5 cm</td></tr>
+<tr><td>10 MV</td><td>2.5 cm</td></tr>
+<tr><td>15 MV</td><td>3.0 cm</td></tr>
+<tr><td>18 MV</td><td>3.5 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Rule of thumb：≤10 MV 時 Dmax 約 energy / 4；≥15 MV 時 Dmax 約 energy / 5。Photon energy 越高，Dmax 越深，surface dose 越低。
+</div>
+
+<h3>四、Flattening filter 與 FFF</h3>
+<p>Flattening filter 是高 Z material，用來 flatten photon beam profile。它會濾掉低能 photons，因此 beam intensity 下降但 average energy 上升。FFF beam 移除 flattening filter，dose rate 較高、治療更有效率，常用於 SRS/SBRT，但 average energy 較低、profile 不再平坦。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam type</th><th>Dose rate</th><th>Average energy</th><th>Typical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Flattened beam</td><td>Lower</td><td>Higher</td><td>Conventional RT</td></tr>
+<tr><td>FFF beam</td><td>Higher</td><td>Lower</td><td>SRS/SBRT，high dose-rate treatment</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>五、Penumbra</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Penumbra type</th><th>Cause</th></tr>
+</thead>
+<tbody>
+<tr><td>Transmission penumbra</td><td>Jaw / MLC transmission；MLC rounded leaf edge 可讓 transmission penumbra 更穩定</td></tr>
+<tr><td>Geometric penumbra</td><td>Source size、SSD、SCD / SDD</td></tr>
+<tr><td>Radiological penumbra</td><td>Beam energy、tissue density、scatter</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Geometric penumbra 記法：source size ↑ → penumbra ↑；SSD ↑ → penumbra ↑；SDD / SCD ↑ → penumbra ↓。Field edge 常以 50% prescription dose 定義。
+</div>
+""",
+            "body_en": """
+<h3>1. KERMA versus dose</h3>
+<p><strong>KERMA</strong> is the energy transferred from photons to charged particles such as electrons. <strong>Dose</strong> is the energy actually deposited in the medium.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Term</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>KERMA</td><td>Kinetic energy released per unit mass; photon → electron energy transfer</td></tr>
+<tr><td>Dose</td><td>Energy deposited per unit mass; Gy = J/kg</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+The skin-sparing effect of MV photons comes from the buildup region: maximum dose is not at the skin surface but at a depth.
+</div>
+
+<h3>2. Attenuation, beam hardening, and HVL</h3>
+<div class="formula-box">HVL = ln(2) / μ = 0.693 / μ</div>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Concept</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>HVL</td><td>Material thickness required to reduce beam intensity by half</td></tr>
+<tr><td>Monoenergetic beam</td><td>HVL1 = HVL2</td></tr>
+<tr><td>Polyenergetic beam</td><td>HVL2 &gt; HVL1 because of beam hardening</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Photon PDD and Dmax</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Photon energy</th><th>Approximate Dmax</th></tr>
+</thead>
+<tbody>
+<tr><td>Co-60 γ-rays</td><td>0.5 cm</td></tr>
+<tr><td>6 MV</td><td>1.5 cm</td></tr>
+<tr><td>10 MV</td><td>2.5 cm</td></tr>
+<tr><td>15 MV</td><td>3.0 cm</td></tr>
+<tr><td>18 MV</td><td>3.5 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Rule of thumb: for ≤10 MV, Dmax is about energy / 4; for ≥15 MV, Dmax is about energy / 5. Higher photon energy means deeper Dmax and lower surface dose.
+</div>
+
+<h3>4. Flattening filter and FFF</h3>
+<p>A flattening filter is a high-Z material that flattens the photon beam profile. It removes low-energy photons, decreasing intensity but increasing average energy. FFF beams remove the flattening filter, increasing dose rate and efficiency, often for SRS/SBRT, but average energy is lower and the profile is not flat.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam type</th><th>Dose rate</th><th>Average energy</th><th>Typical use</th></tr>
+</thead>
+<tbody>
+<tr><td>Flattened beam</td><td>Lower</td><td>Higher</td><td>Conventional RT</td></tr>
+<tr><td>FFF beam</td><td>Higher</td><td>Lower</td><td>SRS/SBRT, high dose-rate treatment</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>5. Penumbra</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Penumbra type</th><th>Cause</th></tr>
+</thead>
+<tbody>
+<tr><td>Transmission penumbra</td><td>Jaw / MLC transmission; rounded MLC leaf edges stabilize transmission penumbra</td></tr>
+<tr><td>Geometric penumbra</td><td>Source size, SSD, SCD / SDD</td></tr>
+<tr><td>Radiological penumbra</td><td>Beam energy, tissue density, scatter</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Geometric penumbra memory: source size ↑ → penumbra ↑; SSD ↑ → penumbra ↑; SDD / SCD ↑ → penumbra ↓. Field edge is commonly defined by the 50% prescription dose line.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "Electron 基礎",
+            "label_en": "ELECTRON BASICS",
+            "h2_zh": "第二部分：Electron beams",
+            "h2_en": "Electron beams",
+            "body_zh": """
+<h3>一、Electron beam delivery</h3>
+<p>Electron treatment 時，LINAC head 裡的 setup 與 photon 不同：X-ray target removed、scattering foil inserted、electron applicator / cone applied。Scattering foil 讓 electron beam spread 並使 dose distribution 均勻；cone 則限制 beam 大小與形狀，避免 electrons 過度 lateral spread。</p>
+
+<h3>二、Electron fundamentals</h3>
+<p>Electrons 是 charged particles，resting mass energy = 0.511 MeV。Electrons 主要用於 superficial tumors，因為 dose 表淺沉積且快速 fall-off，practical range 約為 E/2。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam</th><th>Depth behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>穿透全身，有 exit dose</td></tr>
+<tr><td>Electron</td><td>表淺沉積，快速 fall-off</td></tr>
+<tr><td>Proton</td><td>Bragg peak，低 distal dose</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、Electron vs photon PDD</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Property</th><th>Photon</th><th>Electron</th></tr>
+</thead>
+<tbody>
+<tr><td>Surface dose with higher energy</td><td>Lower</td><td>Higher</td></tr>
+<tr><td>Dmax with higher energy</td><td>Deeper</td><td>Deeper</td></tr>
+<tr><td>Exit dose</td><td>Present</td><td>Minimal after practical range</td></tr>
+<tr><td>Fall-off</td><td>Gradual</td><td>Rapid distal fall-off</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>四、Electron rules of thumb：「5-4-3-2」</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Electron property</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>90% isodose line</td><td>E / 4；多數來源用 E / 3.2–3.3</td></tr>
+<tr><td>80% isodose line</td><td>E / 3；多數來源用 E / 2.8</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+注意：source example 中 9 MeV 寫 Dmax = 9/5 = ~4.5 cm 應為筆誤；9/5 約 1.8 cm，9/2 = 4.5 cm 才是 practical range。
+</div>
+""",
+            "body_en": """
+<h3>1. Electron beam delivery</h3>
+<p>Electron delivery uses a different LINAC head setup from photons: the X-ray target is removed, a scattering foil is inserted, and an electron applicator / cone is applied. The scattering foil spreads the electron beam and makes dose more uniform; the cone collimates the field and limits excessive lateral spread.</p>
+
+<h3>2. Electron fundamentals</h3>
+<p>Electrons are charged particles with rest mass energy of 0.511 MeV. They are mainly used for superficial tumors because dose is deposited near the surface with rapid fall-off. Practical range is approximately E/2.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Beam</th><th>Depth behavior</th></tr>
+</thead>
+<tbody>
+<tr><td>Photon</td><td>Deep penetration with exit dose</td></tr>
+<tr><td>Electron</td><td>Superficial deposition with rapid fall-off</td></tr>
+<tr><td>Proton</td><td>Bragg peak with low distal dose</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Electron versus photon PDD</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Property</th><th>Photon</th><th>Electron</th></tr>
+</thead>
+<tbody>
+<tr><td>Surface dose with higher energy</td><td>Lower</td><td>Higher</td></tr>
+<tr><td>Dmax with higher energy</td><td>Deeper</td><td>Deeper</td></tr>
+<tr><td>Exit dose</td><td>Present</td><td>Minimal after practical range</td></tr>
+<tr><td>Fall-off</td><td>Gradual</td><td>Rapid distal fall-off</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>4. Electron rules of thumb: “5-4-3-2”</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Electron property</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>90% isodose line</td><td>E / 4; many sources use E / 3.2–3.3</td></tr>
+<tr><td>80% isodose line</td><td>E / 3; many sources use E / 2.8</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Important correction: if a 9 MeV example says Dmax = 9/5 = ~4.5 cm, that is a typo. 9/5 is about 1.8 cm; 9/2 = 4.5 cm is the practical range.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "Electron 規劃",
+            "label_en": "ELECTRON PLANNING",
+            "h2_zh": "Electron field size、angle、bolus 與 shielding",
+            "h2_en": "Electron field size, angle, bolus, and shielding",
+            "body_zh": """
+<h3>一、其他 electron formula</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Formula</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Stopping power 約 2.33 MeV/cm，也常簡化為 2 MeV/cm</td><td>Electron 在水中每 cm 能量損失</td></tr>
+<tr><td>Depth of lateral equilibrium √E</td><td>建立 lateral equilibrium 的深度概念</td></tr>
+<tr><td>Radius of lateral equilibrium 0.5 × √E</td><td>Field margin / lateral scatter 概念</td></tr>
+<tr><td>Distance from tumor edge 90% IDL to field edge 50% IDL = E / 10</td><td>Electron field edge margin 估算</td></tr>
+<tr><td>Lead shield thickness = E / 2 mm + 1 mm</td><td>Lead shielding 估算</td></tr>
+<tr><td>Cerrobend thickness = lead thickness × 1.2</td><td>Cerrobend shielding 估算</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>二、Electron energy 與 field size effect</h3>
+<p>High-energy electrons 比較 forward-directed；low-energy electrons 比較 lateral scatter。Small field size 會讓 skin dose 較高、Dmax 較淺、PDD fall-off less steep；cutout 越小，dose 越接近 skin surface。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field size</th><th>Skin dose</th><th>Dmax</th><th>PDD fall-off</th></tr>
+</thead>
+<tbody>
+<tr><td>Smaller field</td><td>Higher</td><td>Shallower</td><td>Less steep</td></tr>
+<tr><td>Larger field</td><td>Lower</td><td>Deeper</td><td>Steeper</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、Beam angle：為什麼 electron 要 en face？</h3>
+<p>Electron beam 對 obliquity 很敏感。Incident angle 越斜，isodose lines 會被拉向 surface，造成 deeper target under-coverage。因此 electron 最好 treat <strong>en face</strong>，也就是 beam perpendicular to treatment surface。</p>
+
+<h3>四、Electron planning for skin cancer</h3>
+<ol>
+<li>Measure lesion depth → choose beam energy</li>
+<li>Measure length / width → choose field size</li>
+<li>Margin 常為 1.5–2.5 cm，並考慮 0.5 × √E lateral equilibrium</li>
+<li>Simulation position 要盡量讓 lesion en face</li>
+<li>Face/head-neck lesion 可用 thermoplastic mask</li>
+<li>Bolus 常用 0.5–1.5 cm，依 energy 和 prescription depth</li>
+<li>Eye / oral mucosa 可考慮 lead shielding</li>
+<li>Clinical setup 常 prescribe to 90% isodose line</li>
+</ol>
+
+<h3>五、Lead shield 與 backscatter</h3>
+<p>Lead shield 常用於 eye 或 oral cavity protection。但如果只放 lead，beam side electron backscatter 會增加 dose 並造成 hotspot。因此常用 <strong>wax-coated lead</strong> 來吸收 backscatter。</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Shield</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Lead thickness</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Cerrobend thickness</td><td>Lead thickness × 1.2</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<h3>1. Additional electron formulas</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Formula</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Stopping power about 2.33 MeV/cm, often simplified to 2 MeV/cm</td><td>Approximate electron energy loss per cm in water</td></tr>
+<tr><td>Depth of lateral equilibrium √E</td><td>Depth concept for establishing lateral equilibrium</td></tr>
+<tr><td>Radius of lateral equilibrium 0.5 × √E</td><td>Field margin / lateral scatter concept</td></tr>
+<tr><td>Distance from tumor edge 90% IDL to field edge 50% IDL = E / 10</td><td>Electron field-edge margin estimate</td></tr>
+<tr><td>Lead shield thickness = E / 2 mm + 1 mm</td><td>Lead shielding estimate</td></tr>
+<tr><td>Cerrobend thickness = lead thickness × 1.2</td><td>Cerrobend shielding estimate</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2. Electron energy and field-size effects</h3>
+<p>High-energy electrons are more forward-directed; low-energy electrons scatter more laterally. Smaller field size increases skin dose, makes Dmax shallower, and makes the PDD fall-off less steep. Smaller cutouts shift dose closer to the skin surface.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field size</th><th>Skin dose</th><th>Dmax</th><th>PDD fall-off</th></tr>
+</thead>
+<tbody>
+<tr><td>Smaller field</td><td>Higher</td><td>Shallower</td><td>Less steep</td></tr>
+<tr><td>Larger field</td><td>Lower</td><td>Deeper</td><td>Steeper</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. Why treat electrons en face?</h3>
+<p>Electron beams are sensitive to obliquity. The more oblique the incident angle, the more the isodose lines are pulled toward the surface, causing under-coverage of deeper target. Electrons should be treated <strong>en face</strong>, meaning perpendicular to the treatment surface whenever possible.</p>
+
+<h3>4. Electron planning for skin cancer</h3>
+<ol>
+<li>Measure lesion depth → choose beam energy</li>
+<li>Measure lesion length / width → choose field size</li>
+<li>Use margin, often 1.5–2.5 cm, and consider 0.5 × √E lateral equilibrium</li>
+<li>Simulate with lesion as en face as possible</li>
+<li>Use thermoplastic mask for face/head-neck lesions when helpful</li>
+<li>Use bolus, often 0.5–1.5 cm, based on energy and prescription depth</li>
+<li>Consider lead shielding for eye or oral mucosa</li>
+<li>Clinical setup often prescribes to the 90% isodose line</li>
+</ol>
+
+<h3>5. Lead shield and backscatter</h3>
+<p>Lead shielding is commonly used for eye or oral cavity protection. Bare lead increases electron backscatter on the beam side and can create hotspots, so <strong>wax-coated lead</strong> is often used to absorb backscatter.</p>
+
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Shield</th><th>Formula</th></tr>
+</thead>
+<tbody>
+<tr><td>Lead thickness</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Cerrobend thickness</td><td>Lead thickness × 1.2</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "Proton 基礎",
+            "label_en": "PROTON BASICS",
+            "h2_zh": "第三部分：Proton beams",
+            "h2_en": "Proton beams",
+            "body_zh": """
+<h3>一、Proton basics</h3>
+<p>Proton mass 約為 electron 的 2000 倍。Electron rest mass energy 是 0.511 MeV，proton 約 938 MeV。Protons 通常由 cyclotron 或 synchrotron 產生；cyclotron 讓 particles 走 spiral path，synchrotron 則是 closed loop acceleration。</p>
+
+<h3>二、Proton RBE</h3>
+<div class="formula-box">RBE<sub>proton</sub> = 1.1</div>
+<p>臨床上常用 proton physical dose × 1.1 表示 biological equivalent dose。Dose 可寫成 CGE 或 Gy equivalent，但 ICRU 建議報告 <strong>D<sub>RBE</sub></strong>。Carbon RBE 約 3 或更高。</p>
+
+<h3>三、Bragg peak</h3>
+<p>Proton 穿過 tissue 時會逐漸失去能量；在停止前的深度釋放最大能量，形成 <strong>Bragg peak</strong>。Higher proton energy 會讓 penetration 更深。</p>
+
+<div class="clinical-note">
+Photon 是一路衰減穿過去；proton 是在指定深度爆發後停止。
+</div>
+
+<h3>四、Pristine Bragg peak 與 SOBP</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Bragg type</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Pristine Bragg peak</td><td>單一能量 proton，peak 很窄</td></tr>
+<tr><td>SOBP</td><td>多種能量 proton 疊加，cover 整個 tumor depth</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>五、Passive scattering vs active scanning</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Technique</th><th>Advantage</th><th>Problem</th></tr>
+</thead>
+<tbody>
+<tr><td>Passive scattering</td><td>Robust, simpler historically</td><td>Higher surface dose, patient-specific hardware</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity, IMPT possible</td><td>Motion / interplay / range uncertainty sensitive</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Passive scattering 透過 range shifter、range modulator / wheel / ridge filter、scattering foils、compensator 來改變 beam energy 與 shape。Active scanning 則是 pencil beam technique，用細 beam 逐點 paint target，conformity 較好，但 motion 更需要小心。</p>
+""",
+            "body_en": """
+<h3>1. Proton basics</h3>
+<p>A proton is about 2000 times heavier than an electron. Electron rest mass energy is 0.511 MeV, while proton rest mass energy is about 938 MeV. Protons are usually produced by cyclotron or synchrotron. A cyclotron uses a spiral path, whereas a synchrotron uses closed-loop acceleration.</p>
+
+<h3>2. Proton RBE</h3>
+<div class="formula-box">RBE<sub>proton</sub> = 1.1</div>
+<p>Clinically, proton physical dose is often multiplied by 1.1 to express biological equivalent dose. Dose may be written as CGE or Gy equivalent, but ICRU recommends reporting <strong>D<sub>RBE</sub></strong>. Carbon ion RBE is around 3 or higher.</p>
+
+<h3>3. Bragg peak</h3>
+<p>As protons pass through tissue, they gradually lose energy and deposit maximum energy just before stopping, forming the <strong>Bragg peak</strong>. Higher proton energy produces deeper penetration.</p>
+
+<div class="clinical-note">
+Photons attenuate as they pass through; protons deposit a burst of dose at a selected depth and then stop.
+</div>
+
+<h3>4. Pristine Bragg peak and SOBP</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Bragg type</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>Pristine Bragg peak</td><td>Single-energy proton beam with a narrow peak</td></tr>
+<tr><td>SOBP</td><td>Multiple proton energies combined to cover the full tumor depth</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>5. Passive scattering versus active scanning</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Technique</th><th>Advantage</th><th>Problem</th></tr>
+</thead>
+<tbody>
+<tr><td>Passive scattering</td><td>Robust and historically simpler</td><td>Higher surface dose, patient-specific hardware</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity and enables IMPT</td><td>Sensitive to motion, interplay, and range uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Passive scattering uses hardware such as range shifters, range modulators / wheels / ridge filters, scattering foils, and compensators to shape beam energy and distribution. Active scanning uses pencil beams to paint the target spot by spot; it improves conformity but is more sensitive to motion.</p>
+"""
+        },
+
+        {
+            "label_zh": "Proton uncertainty",
+            "label_en": "PROTON UNCERTAINTY",
+            "h2_zh": "Proton range uncertainty 與臨床限制",
+            "h2_en": "Proton range uncertainty and clinical limitations",
+            "body_zh": """
+<p>Proton 最大優勢是 distal fall-off，但最大弱點也是 distal fall-off：range 錯了，target 或 OAR dose 都可能錯。</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Uncertainty</th><th>Clinical issue</th></tr>
+</thead>
+<tbody>
+<tr><td>Tissue inhomogeneity</td><td>Bone、air cavity、metal artifact、chemo port 可改變 distal edge</td></tr>
+<tr><td>Anatomical change</td><td>Weight loss、tumor shrinkage 影響 range</td></tr>
+<tr><td>Motion</td><td>Lung / liver tumors 特別重要</td></tr>
+<tr><td>Air / soft tissue interface</td><td>Range calculation uncertainty</td></tr>
+<tr><td>CT HU / density conversion</td><td>Stopping power uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">Distal margin = 0.035 × CTV<sub>distal</sub> + 3 mm</div>
+
+<div class="clinical-note">
+Exact distal margin formula may vary between centers。臨床上 proton planning 必須重視 density change、motion、anatomical adaptation、robust optimization 與 image guidance。
+</div>
+""",
+            "body_en": """
+<p>The greatest advantage of protons is distal fall-off, but the greatest weakness is also distal fall-off: if range is wrong, target coverage or OAR dose can be wrong.</p>
+
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Uncertainty</th><th>Clinical issue</th></tr>
+</thead>
+<tbody>
+<tr><td>Tissue inhomogeneity</td><td>Bone, air cavity, metal artifact, or chemo port can shift distal edge</td></tr>
+<tr><td>Anatomical change</td><td>Weight loss or tumor shrinkage affects range</td></tr>
+<tr><td>Motion</td><td>Especially important for lung and liver tumors</td></tr>
+<tr><td>Air / soft tissue interface</td><td>Range calculation uncertainty</td></tr>
+<tr><td>CT HU / density conversion</td><td>Stopping-power uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">Distal margin = 0.035 × CTV<sub>distal</sub> + 3 mm</div>
+
+<div class="clinical-note">
+The exact distal-margin formula varies by center. Clinically, proton planning must consider density change, motion, anatomical adaptation, robust optimization, and image guidance.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "CSI 基礎",
+            "label_en": "CSI BASICS",
+            "h2_zh": "第四部分：Craniospinal irradiation, CSI",
+            "h2_en": "Craniospinal irradiation, CSI",
+            "body_zh": """
+<p>CSI 是 radiation physics 與 clinical technique 的高整合應用，核心問題是：很長的 target，需要多個 fields，而且 field junction 不能產生 spinal cord hotspot 或 cold spot。</p>
+
+<h3>一、CSI indications</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Population</th><th>Disease</th></tr>
+</thead>
+<tbody>
+<tr><td>Pediatric CNS tumors</td><td>Medulloblastoma</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Non-germinomatous germ cell tumors</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>ATRT</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Metastatic ependymoma</td></tr>
+<tr><td>Adult CNS</td><td>Metastatic leptomeningeal disease，例如 breast cancer</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>二、CSI simulation</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Step</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td>Position</td><td>Supine</td></tr>
+<tr><td>Neck</td><td>Neck extended，盡量 minimize spine curvature</td></tr>
+<tr><td>Immobilization</td><td>5-point mask secure head and shoulders</td></tr>
+<tr><td>Body</td><td>Large vac-loc，確認 body straight</td></tr>
+<tr><td>Knee sponge</td><td>可減少 lordosis</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>三、CSI contours</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Target</th><th>Contouring point</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>要 cover cribriform plate / crista galli</td></tr>
+<tr><td>Thecal sac</td><td>MRI 定義，通常到 S1–S2 bottom</td></tr>
+<tr><td>Spine</td><td>Laterally include nerve root extensions</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>四、CSI fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Technique</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>2 opposed lateral beams</td></tr>
+<tr><td>Upper spine</td><td>Single PA field</td></tr>
+<tr><td>Lower spine</td><td>Additional PA field(s)</td></tr>
+</tbody>
+</table>
+</div>
+
+<ol>
+<li>先 plan upper spinal field。</li>
+<li>Upper border 盡量低，例如 C4–C5 / C5–C6 到 L1–L2，但依 child height 而定。</li>
+<li>Neck extended，避免 exit through oral cavity。</li>
+<li>Whole brain opposed laterals 要 cover cribriform plate / crista galli / BOS，避免 entry through shoulders。</li>
+<li>Brain-spine junction 可有 0.5 cm gap。</li>
+<li>Lower spinal field match point of divergence 要在 spinal cord anterior。</li>
+</ol>
+""",
+            "body_en": """
+<p>CSI is a high-integration application of radiation physics and clinical technique. The core challenge is a very long target requiring multiple fields, where field junctions must not create spinal cord hot or cold spots.</p>
+
+<h3>1. CSI indications</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Population</th><th>Disease</th></tr>
+</thead>
+<tbody>
+<tr><td>Pediatric CNS tumors</td><td>Medulloblastoma</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Non-germinomatous germ cell tumors</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>ATRT</td></tr>
+<tr><td>Pediatric CNS tumors</td><td>Metastatic ependymoma</td></tr>
+<tr><td>Adult CNS</td><td>Metastatic leptomeningeal disease, such as breast cancer</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2. CSI simulation</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Step</th><th>Detail</th></tr>
+</thead>
+<tbody>
+<tr><td>Position</td><td>Supine</td></tr>
+<tr><td>Neck</td><td>Extended neck; minimize spine curvature</td></tr>
+<tr><td>Immobilization</td><td>5-point mask securing head and shoulders</td></tr>
+<tr><td>Body</td><td>Large vac-loc; ensure straight body position</td></tr>
+<tr><td>Knee sponge</td><td>Can reduce lordosis</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>3. CSI contours</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Target</th><th>Contouring point</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>Cover cribriform plate / crista galli</td></tr>
+<tr><td>Thecal sac</td><td>Defined on MRI, usually to S1–S2 bottom</td></tr>
+<tr><td>Spine</td><td>Laterally include nerve root extensions</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>4. CSI fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Technique</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain</td><td>Two opposed lateral beams</td></tr>
+<tr><td>Upper spine</td><td>Single PA field</td></tr>
+<tr><td>Lower spine</td><td>Additional PA field(s)</td></tr>
+</tbody>
+</table>
+</div>
+
+<ol>
+<li>Plan the upper spinal field first.</li>
+<li>Place the upper border as low as possible, such as C4–C5 / C5–C6 to L1–L2 depending on child height.</li>
+<li>Extend the neck to avoid exit through the oral cavity.</li>
+<li>Whole-brain opposed laterals must cover the cribriform plate / crista galli / BOS and avoid entry through shoulders.</li>
+<li>A 0.5 cm gap can be used at the brain-spine junction.</li>
+<li>The lower spinal field divergence match point should be anterior to the spinal cord.</li>
+</ol>
+"""
+        },
+
+        {
+            "label_zh": "CSI matching",
+            "label_en": "CSI MATCHING",
+            "h2_zh": "CSI field matching、junction 與 feathering",
+            "h2_en": "CSI field matching, junctions, and feathering",
+            "body_zh": """
+<h3>一、Beam divergence 與 hot/cold spot</h3>
+<p>Beam divergence 指 beam diameter 會隨著離 source 越遠而增加。Field overlap 會造成 hotspot，gap 則可能造成 cold spot。CSI 的危險在於 junction hot spot 落在 spinal cord。</p>
+
+<div class="clinical-note">
+處理原則：match divergence, avoid overlap into neighboring field, feather junction。
+</div>
+
+<h3>二、Matching brain and spine fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Adjustment</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain field</td><td>Rotate collimator to match upward divergence of PA spine field，約 12°</td></tr>
+<tr><td>Spine field</td><td>Kick couch toward head of gantry to match downward divergence of opposed lateral brain fields，約 8°</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">θ = arctan( 1/2 × spine field length / SSD )</div>
+<div class="formula-box">θ = arctan( 1/2 × brain field length / SAD )</div>
+
+<h3>三、Matching multiple spine fields</h3>
+<p>Multiple spine fields 的 junction 要 match anterior to spinal cord，避免 hot spot 在 cord。Therapists 可在 skin 放 marker 檢查 gap。</p>
+
+<div class="formula-box">S = 1/2 × L × (depth / SSD)</div>
+
+<p>其中 S 是 skin separation，L 是 field length。</p>
+
+<h3>四、Feathering the junction</h3>
+<p>即使 junction match 在 cord anterior，posterior spine 仍可能有 cold spot。因此 junction line 要定期移動，讓 cold spot 分散，不集中在同一個位置。Source file 建議 match line superiorly move 0.5–1 cm periodically，通常每 5 fractions 或每 9 Gy，也就是大約每週 feather 一次。</p>
+
+<div class="clinical-note">
+Feathering junction 是把 junction uncertainty 和 cold/hot spot 分散掉，不讓同一段 spinal canal 長期吃到過高或過低 dose。
+</div>
+""",
+            "body_en": """
+<h3>1. Beam divergence and hot/cold spots</h3>
+<p>Beam divergence means the beam diameter increases with distance from the source. Field overlap creates hotspots, while gaps can create cold spots. The main danger in CSI is a junction hotspot landing in the spinal cord.</p>
+
+<div class="clinical-note">
+Management principle: match divergence, avoid overlap into neighboring fields, and feather the junction.
+</div>
+
+<h3>2. Matching brain and spine fields</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead>
+<tr><th>Field</th><th>Adjustment</th></tr>
+</thead>
+<tbody>
+<tr><td>Whole brain field</td><td>Rotate collimator to match upward divergence of PA spine field, about 12°</td></tr>
+<tr><td>Spine field</td><td>Kick couch toward the head of gantry to match downward divergence of opposed lateral brain fields, about 8°</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="formula-box">θ = arctan( 1/2 × spine field length / SSD )</div>
+<div class="formula-box">θ = arctan( 1/2 × brain field length / SAD )</div>
+
+<h3>3. Matching multiple spine fields</h3>
+<p>The junction between multiple spine fields should be matched anterior to the spinal cord to avoid a cord hotspot. Therapists can use skin markers to verify the gap.</p>
+
+<div class="formula-box">S = 1/2 × L × (depth / SSD)</div>
+
+<p>Here, S is skin separation and L is field length.</p>
+
+<h3>4. Feathering the junction</h3>
+<p>Even if the junction is matched anterior to the cord, the posterior spine may still have cold spots. The junction line should therefore be moved periodically so that hot/cold uncertainty is distributed rather than concentrated. The source file suggests moving the match line superiorly by 0.5–1 cm periodically, typically every 5 fractions or every 9 Gy, roughly weekly.</p>
+
+<div class="clinical-note">
+Feathering spreads junction uncertainty and hot/cold spots so that the same spinal canal segment does not repeatedly receive too much or too little dose.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "CSI toxicity/proton",
+            "label_en": "CSI TOXICITY / PROTON",
+            "h2_zh": "Proton CSI 與 CSI toxicity",
+            "h2_en": "Proton CSI and CSI toxicity",
+            "body_zh": """
+<h3>一、Protons vs photons for CSI</h3>
+<p>Kahalley et al., JCO 2020 retrospective study 比較 pediatric medulloblastoma protocols 中接受 proton vs photon CSI 的病人。Photon group 的 global IQ、working memory、processing speed 顯著下降；proton group 除 processing speed 外，各 domain scores 較穩定。</p>
+
+<div class="clinical-note">
+CSI 是 proton 最有說服力的適應症之一，因為 proton 可降低 exit dose 與 integral dose，尤其 pediatric patients 對 neurocognitive、endocrine、growth、secondary malignancy 很敏感。
+</div>
+
+<h3>二、CSI toxicity</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Acute toxicity</th><th>Late toxicity</th></tr>
+</thead>
+<tbody>
+<tr><td>Dermatitis</td><td>Neurocognitive dysfunction</td></tr>
+<tr><td>Fatigue</td><td>Decreased IQ</td></tr>
+<tr><td>Alopecia</td><td>Hypopituitarism / endocrinopathy</td></tr>
+<tr><td>Headache</td><td>GH deficiency、hypothyroidism、gonadal dysfunction</td></tr>
+<tr><td>Nausea / vomiting</td><td>Decreased truncal height / growth</td></tr>
+<tr><td>Diarrhea</td><td>Weakness / ataxia</td></tr>
+<tr><td>Cytopenia</td><td>Fracture、stroke、cataracts、hearing loss、necrosis、secondary malignancy、depression / anxiety</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+Pediatric CSI 要注意 vertebral bodies dose uniformity，因為不均勻照射可能影響 spinal / truncal growth。
+</div>
+""",
+            "body_en": """
+<h3>1. Protons versus photons for CSI</h3>
+<p>Kahalley et al., JCO 2020, retrospectively compared pediatric patients treated on medulloblastoma protocols with proton versus photon CSI. The photon group had significant declines in global IQ, working memory, and processing speed, whereas the proton group had relatively stable domains except processing speed.</p>
+
+<div class="clinical-note">
+CSI is one of the strongest indications for protons because protons reduce exit dose and integral dose. This is especially important in pediatric patients who are highly sensitive to neurocognitive, endocrine, growth, and second-malignancy effects.
+</div>
+
+<h3>2. CSI toxicity</h3>
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Acute toxicity</th><th>Late toxicity</th></tr>
+</thead>
+<tbody>
+<tr><td>Dermatitis</td><td>Neurocognitive dysfunction</td></tr>
+<tr><td>Fatigue</td><td>Decreased IQ</td></tr>
+<tr><td>Alopecia</td><td>Hypopituitarism / endocrinopathy</td></tr>
+<tr><td>Headache</td><td>GH deficiency, hypothyroidism, gonadal dysfunction</td></tr>
+<tr><td>Nausea / vomiting</td><td>Decreased truncal height / growth</td></tr>
+<tr><td>Diarrhea</td><td>Weakness / ataxia</td></tr>
+<tr><td>Cytopenia</td><td>Fracture, stroke, cataracts, hearing loss, necrosis, secondary malignancy, depression / anxiety</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+In pediatric CSI, vertebral body dose uniformity matters because asymmetric vertebral irradiation can affect spinal and truncal growth.
+</div>
+"""
+        },
+
+        {
+            "label_zh": "比較表",
+            "label_en": "COMPARISON",
+            "h2_zh": "第五部分：Photon vs Electron vs Proton 高分比較",
+            "h2_en": "High-yield comparison: photon versus electron versus proton",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Feature</th><th>Photon</th><th>Electron</th><th>Proton</th></tr>
+</thead>
+<tbody>
+<tr><td>Particle type</td><td>Massless photon</td><td>Charged electron</td><td>Charged proton</td></tr>
+<tr><td>Mass</td><td>0</td><td>0.511 MeV rest mass</td><td>938 MeV</td></tr>
+<tr><td>Depth-dose pattern</td><td>Build-up then gradual fall-off</td><td>Superficial dose, rapid fall-off</td><td>Bragg peak, sharp distal fall-off</td></tr>
+<tr><td>Exit dose</td><td>Yes</td><td>Minimal after practical range</td><td>Minimal after distal fall-off</td></tr>
+<tr><td>Main use</td><td>Most EBRT</td><td>Superficial targets</td><td>Pediatric, CNS, skull base, selected OAR-sparing cases</td></tr>
+<tr><td>Main weakness</td><td>Integral dose / exit dose</td><td>Obliquity, field size, surface irregularity</td><td>Range uncertainty</td></tr>
+<tr><td>Skin dose with higher energy</td><td>Lower</td><td>Higher</td><td>Depends on technique; passive scattering can increase surface dose</td></tr>
+<tr><td>Planning sensitivity</td><td>Moderate</td><td>Surface angle / field size sensitive</td><td>Highly sensitive to density, motion, anatomy</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table">
+<thead>
+<tr><th>Feature</th><th>Photon</th><th>Electron</th><th>Proton</th></tr>
+</thead>
+<tbody>
+<tr><td>Particle type</td><td>Massless photon</td><td>Charged electron</td><td>Charged proton</td></tr>
+<tr><td>Mass</td><td>0</td><td>0.511 MeV rest mass</td><td>938 MeV</td></tr>
+<tr><td>Depth-dose pattern</td><td>Build-up then gradual fall-off</td><td>Superficial dose, rapid fall-off</td><td>Bragg peak, sharp distal fall-off</td></tr>
+<tr><td>Exit dose</td><td>Yes</td><td>Minimal after practical range</td><td>Minimal after distal fall-off</td></tr>
+<tr><td>Main use</td><td>Most EBRT</td><td>Superficial targets</td><td>Pediatric, CNS, skull base, selected OAR-sparing cases</td></tr>
+<tr><td>Main weakness</td><td>Integral dose / exit dose</td><td>Obliquity, field size, surface irregularity</td><td>Range uncertainty</td></tr>
+<tr><td>Skin dose with higher energy</td><td>Lower</td><td>Higher</td><td>Depends on technique; passive scattering can increase surface dose</td></tr>
+<tr><td>Planning sensitivity</td><td>Moderate</td><td>Surface angle / field size sensitive</td><td>Highly sensitive to density, motion, anatomy</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        },
+
+        {
+            "label_zh": "臨床選擇",
+            "label_en": "CLINICAL SELECTION",
+            "h2_zh": "第六部分：Clinical decision translation",
+            "h2_en": "Clinical decision translation",
+            "body_zh": """
+<h3>一、什麼時候用 photon？</h3>
+<p>Photon 適合大多數 deep targets，因為 penetration 穩定、dose calculation robust、clinical experience 最大。缺點是有 exit dose 與 integral dose。</p>
+
+<h3>二、什麼時候用 electron？</h3>
+<p>Electron 適合 superficial disease，例如 skin cancer、scar boost、chest wall boost、淺層 nodal or subcutaneous lesions。重點是 target depth 要落在 90% IDL 內，並注意 field size、bolus、en face setup、shielding。</p>
+
+<div class="clinical-note">
+Electron 實用選擇：lesion depth 決定 energy；surface dose / Dmax position 決定 bolus；field edge dose fall-off 決定 margin。
+</div>
+
+<h3>三、什麼時候用 proton？</h3>
+<p>Proton 適合 OAR sparing 價值高的情境，例如 pediatric tumors、CSI、base-of-skull tumors、re-irradiation、large-field cases where integral dose matters。缺點是 range uncertainty、motion sensitivity、anatomical change sensitivity。</p>
+
+<h3>四、CSI 為什麼是 physics-heavy technique？</h3>
+<ol>
+<li>Very long target length</li>
+<li>Multiple isocenters</li>
+<li>Divergent field matching</li>
+<li>Junction hot/cold spot</li>
+<li>Feathering</li>
+<li>Pediatric toxicity and growth concerns</li>
+<li>Proton vs photon modality tradeoff</li>
+</ol>
+""",
+            "body_en": """
+<h3>1. When to use photons?</h3>
+<p>Photons are appropriate for most deep targets because penetration is stable, dose calculation is robust, and clinical experience is extensive. The limitation is exit dose and integral dose.</p>
+
+<h3>2. When to use electrons?</h3>
+<p>Electrons are suitable for superficial disease such as skin cancer, scar boost, chest wall boost, and superficial nodal or subcutaneous lesions. The target depth must lie within the 90% isodose line, and planning must account for field size, bolus, en face setup, and shielding.</p>
+
+<div class="clinical-note">
+Practical electron selection: lesion depth determines energy; surface dose and Dmax determine bolus; field-edge fall-off determines margin.
+</div>
+
+<h3>3. When to use protons?</h3>
+<p>Protons are useful when OAR sparing has high value: pediatric tumors, CSI, skull base tumors, re-irradiation, and large-field cases where integral dose matters. The limitations are range uncertainty, motion sensitivity, and anatomical change sensitivity.</p>
+
+<h3>4. Why is CSI physics-heavy?</h3>
+<ol>
+<li>Very long target length</li>
+<li>Multiple isocenters</li>
+<li>Divergent field matching</li>
+<li>Junction hot/cold spots</li>
+<li>Feathering</li>
+<li>Pediatric toxicity and growth concerns</li>
+<li>Proton versus photon modality tradeoff</li>
+</ol>
+"""
+        },
+
+        {
+            "label_zh": "重點表",
+            "label_en": "TAKE-HOME",
+            "h2_zh": "最後高分記憶表",
+            "h2_en": "High-yield take-home table",
+            "body_zh": """
+<h3>Photon</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Main therapeutic interaction</td><td>Compton</td></tr>
+<tr><td>Dmax</td><td>Energy ↑ → Dmax deeper</td></tr>
+<tr><td>Surface dose</td><td>Energy ↑ → surface dose lower</td></tr>
+<tr><td>HVL</td><td>0.693 / μ</td></tr>
+<tr><td>FFF</td><td>High dose rate, lower average energy, non-flat profile</td></tr>
+<tr><td>Penumbra</td><td>Source size / SSD ↑ → penumbra ↑；SDD ↑ → penumbra ↓</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Electron</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Use</td><td>Superficial tumors</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+<tr><td>90% IDL</td><td>E / 3.2–3.3, or rough E / 4</td></tr>
+<tr><td>80% IDL</td><td>E / 2.8, or rough E / 3</td></tr>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>Margin concept</td><td>0.5 × √E</td></tr>
+<tr><td>Lead shield</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Setup</td><td>Treat en face</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Proton</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>RBE</td><td>1.1</td></tr>
+<tr><td>Dose reporting</td><td>D<sub>RBE</sub> preferred by ICRU</td></tr>
+<tr><td>Physics advantage</td><td>Bragg peak, minimal exit dose</td></tr>
+<tr><td>SOBP</td><td>Multiple energies spread out peak</td></tr>
+<tr><td>Passive scattering</td><td>Higher surface dose</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity, motion sensitive</td></tr>
+<tr><td>Main problem</td><td>Range uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>CSI</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Fields</td><td>Opposed lateral brain + PA spine fields</td></tr>
+<tr><td>Junction problem</td><td>Overlap = hot spot；gap = cold spot</td></tr>
+<tr><td>Brain-spine match</td><td>Collimator rotation + couch kick</td></tr>
+<tr><td>Multiple spine fields</td><td>Match anterior to cord</td></tr>
+<tr><td>Feathering</td><td>Move junction 0.5–1 cm every 5 fx / 9 Gy</td></tr>
+<tr><td>Proton CSI</td><td>Lower integral dose, better pediatric late-effect profile</td></tr>
+</tbody>
+</table>
+</div>
+""",
+            "body_en": """
+<h3>Photon</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Main therapeutic interaction</td><td>Compton</td></tr>
+<tr><td>Dmax</td><td>Energy ↑ → deeper Dmax</td></tr>
+<tr><td>Surface dose</td><td>Energy ↑ → lower surface dose</td></tr>
+<tr><td>HVL</td><td>0.693 / μ</td></tr>
+<tr><td>FFF</td><td>High dose rate, lower average energy, non-flat profile</td></tr>
+<tr><td>Penumbra</td><td>Source size / SSD ↑ → penumbra ↑; SDD ↑ → penumbra ↓</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Electron</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Use</td><td>Superficial tumors</td></tr>
+<tr><td>Practical range</td><td>E / 2</td></tr>
+<tr><td>90% IDL</td><td>E / 3.2–3.3, or rough E / 4</td></tr>
+<tr><td>80% IDL</td><td>E / 2.8, or rough E / 3</td></tr>
+<tr><td>Dmax</td><td>E / 5</td></tr>
+<tr><td>Margin concept</td><td>0.5 × √E</td></tr>
+<tr><td>Lead shield</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Setup</td><td>Treat en face</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Proton</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>RBE</td><td>1.1</td></tr>
+<tr><td>Dose reporting</td><td>D<sub>RBE</sub> preferred by ICRU</td></tr>
+<tr><td>Physics advantage</td><td>Bragg peak, minimal exit dose</td></tr>
+<tr><td>SOBP</td><td>Multiple energies spread out the peak</td></tr>
+<tr><td>Passive scattering</td><td>Higher surface dose</td></tr>
+<tr><td>Pencil beam scanning</td><td>Better conformity, motion sensitive</td></tr>
+<tr><td>Main problem</td><td>Range uncertainty</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>CSI</h3>
+<div class="table-wrap">
+<table class="oncology-table compact-table">
+<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<tbody>
+<tr><td>Fields</td><td>Opposed lateral brain + PA spine fields</td></tr>
+<tr><td>Junction problem</td><td>Overlap = hotspot; gap = cold spot</td></tr>
+<tr><td>Brain-spine match</td><td>Collimator rotation + couch kick</td></tr>
+<tr><td>Multiple spine fields</td><td>Match anterior to cord</td></tr>
+<tr><td>Feathering</td><td>Move junction 0.5–1 cm every 5 fx / 9 Gy</td></tr>
+<tr><td>Proton CSI</td><td>Lower integral dose and better pediatric late-effect profile</td></tr>
+</tbody>
+</table>
+</div>
+"""
+        }
     ],
-    "excel_sheet": None,
-    "prev": ["intro-clinical.html", "臨床導論", "Clinical Intro"],
+
+    "excel_sheet": "Physics",
+
+    "trial_filter": [
+        "radiation physics",
+        "photon",
+        "electron",
+        "proton",
+        "CSI",
+        "craniospinal irradiation",
+        "Compton",
+        "photoelectric",
+        "pair production",
+        "KERMA",
+        "HVL",
+        "Dmax",
+        "flattening filter",
+        "FFF",
+        "penumbra",
+        "bremsstrahlung",
+        "electron cone",
+        "bolus",
+        "lead shield",
+        "wax-coated lead",
+        "Bragg peak",
+        "SOBP",
+        "pencil beam scanning",
+        "passive scattering",
+        "range uncertainty",
+        "proton RBE",
+        "Kahalley",
+        "medulloblastoma"
+    ],
+
+     "prev": ["intro-clinical.html", "臨床導論", "Clinical Intro"],
     "next": ["radbio.html", "放射生物", "RadBio"],
 })
 
+   
+# Radiobiology teaching page
+# Add this block to the same Python file that defines PAGES.
+
 PAGES.append({
-    "slug": "radbio",
-    "emoji": "🧬",
-    "title_zh": "放射生物學",
-    "title_en": "Radiation Biology",
-    "sub_zh": "DNA 損傷與修復、OER/LET/RBE、分次與晚期毒性。",
-    "sub_en": "DNA damage & repair, OER/LET/RBE, fractionation & late toxicity.",
-    "sections": [
-      {
-        "label_zh": "DNA 損傷", "label_en": "DNA DAMAGE",
-        "h2_zh": "游離輻射的 DNA 損傷機制",
-        "h2_en": "Mechanisms of radiation-induced DNA damage",
-        "body_zh": "<p>游離輻射透過<strong>直接作用</strong>（電子直接撞擊 DNA）與<strong>間接作用</strong>（水解離產生 ·OH 自由基）造成傷害。光子/電子中 ~2/3 為間接作用；高 LET 粒子（α、中子）以直接作用為主。</p><ul><li><strong>單股斷裂 (SSB):</strong> 常見，容易修復。</li><li><strong>雙股斷裂 (DSB):</strong> 較少見但是<strong>細胞死亡的關鍵</strong>。1 Gy 光子造成約 40 個 DSB。</li><li><strong>Base damage / crosslinks / clustered lesions:</strong> 高 LET 造成的複雜傷害修復困難。</li></ul>",
-        "body_en": "<p>Ionizing radiation causes DNA damage via <strong>direct action</strong> (electrons striking DNA) and <strong>indirect action</strong> (water radiolysis producing ·OH radicals). For photons/electrons ~2/3 is indirect; high-LET particles (α, neutrons) are predominantly direct.</p><ul><li><strong>Single-strand breaks (SSB):</strong> Common, easily repaired.</li><li><strong>Double-strand breaks (DSB):</strong> Less common but <strong>the key lesion for cell death</strong>. 1 Gy of photons produces ~40 DSBs.</li><li><strong>Base damage / crosslinks / clustered lesions:</strong> Complex damage from high LET is difficult to repair.</li></ul>"
-      },
-      {
-        "label_zh": "修復路徑", "label_en": "REPAIR PATHWAYS",
-        "h2_zh": "DSB 修復：NHEJ 與 HR",
-        "h2_en": "DSB repair: NHEJ vs. HR",
-        "body_zh": "<p><strong>NHEJ (Non-Homologous End Joining):</strong> 貫穿整個細胞週期，快速但易產生錯誤；由 Ku70/80、DNA-PKcs、Ligase IV 主導。</p><p><strong>HR (Homologous Recombination):</strong> 需要姊妹染色分體作為模板，僅在 S/G2 期進行；由 BRCA1/2、RAD51 主導。BRCA 缺陷腫瘤對<strong>PARP 抑制劑</strong>有 synthetic lethality。</p>",
-        "body_en": "<p><strong>NHEJ (Non-Homologous End Joining):</strong> Active throughout the cell cycle — fast but error-prone. Ku70/80, DNA-PKcs, Ligase IV.</p><p><strong>HR (Homologous Recombination):</strong> Requires a sister chromatid template — only in S/G2. BRCA1/2, RAD51. BRCA-deficient tumors show synthetic lethality with <strong>PARP inhibitors</strong>.</p>"
-      },
-      {
-        "label_zh": "OER · LET · RBE", "label_en": "OER · LET · RBE",
-        "h2_zh": "氧效應、線性能量轉移與相對生物效應",
-        "h2_en": "Oxygen effect, LET, and RBE",
-        "body_zh": "<p><strong>OER (Oxygen Enhancement Ratio):</strong> 有氧比缺氧達到同樣殺傷所需劑量的比值，光子 ~2.5–3.0；粒子 (高 LET) OER 較低 (~1)。</p><p><strong>LET (Linear Energy Transfer):</strong> 單位路徑的能量沉積 (keV/μm)。光子/電子低 LET；α 粒子、中子高 LET。</p><p><strong>RBE (Relative Biological Effectiveness):</strong> 相對於 250 kVp X-ray 產生相同生物效應所需劑量的比值。質子臨床 RBE = 1.1，中子 ≈ 3，碳離子 2–4。</p><p><strong>4 R:</strong> Repair、Reassortment (cell cycle redistribution)、Repopulation、Reoxygenation——分次照射利用這些機制。</p>",
-        "body_en": "<p><strong>OER (Oxygen Enhancement Ratio):</strong> Ratio of dose needed under hypoxia vs. normoxia for the same kill; ~2.5–3.0 for photons; near 1 for high-LET particles.</p><p><strong>LET (Linear Energy Transfer):</strong> Energy deposited per unit path (keV/μm). Photons/electrons are low-LET; α particles and neutrons are high-LET.</p><p><strong>RBE (Relative Biological Effectiveness):</strong> Ratio of doses producing the same biological effect vs. 250 kVp X-ray. Clinical proton RBE = 1.1; neutrons ≈ 3; carbon ions 2–4.</p><p><strong>The 4 R's:</strong> Repair, Reassortment (cell-cycle redistribution), Repopulation, Reoxygenation — fractionation exploits these.</p>"
-      },
-      {
-        "label_zh": "分次照射", "label_en": "FRACTIONATION",
-        "h2_zh": "分次照射與 α/β 比值",
-        "h2_en": "Fractionation and α/β ratio",
-        "body_zh": "<p><strong>Linear-Quadratic model:</strong> S = e^(−αD−βD²)。α/β 描述細胞對分次的敏感度。</p><ul><li><strong>早反應組織 (early)</strong> α/β ~ 10：多數上皮腫瘤、皮膚黏膜。</li><li><strong>晚反應組織 (late)</strong> α/β ~ 3：脊髓、腎、肺、心。</li><li><strong>攝護腺</strong> α/β 罕見地低 ~ 1.5，適合大分次。</li></ul><p><strong>BED = nd(1 + d/(α/β))；EQD2 = D × (d + α/β)/(2 + α/β)</strong></p><h4>常見劑量限制 (QUANTEC 摘要)</h4><ul><li>脊髓：Dmax &lt; 50 Gy（分次 2 Gy）— 1% 骨髓病變。</li><li>肺 (V20)：≤ 30% — pneumonitis ≤ 20%。</li><li>心臟 mean dose：越低越好；乳癌左側目標 &lt; 4–5 Gy。</li><li>Parotid mean：≤ 26 Gy 減少長期口乾。</li><li>直腸 V70：&lt; 20–25%（攝護腺 78–80 Gy 標準分次）。</li></ul>",
-        "body_en": "<p><strong>Linear-Quadratic model:</strong> S = e^(−αD−βD²). α/β describes fractionation sensitivity.</p><ul><li><strong>Early-responding tissues</strong> α/β ~ 10: most epithelial tumors, skin, mucosa.</li><li><strong>Late-responding tissues</strong> α/β ~ 3: spinal cord, kidney, lung, heart.</li><li><strong>Prostate</strong> α/β is unusually low ~ 1.5 — favorable for hypofractionation.</li></ul><p><strong>BED = nd(1 + d/(α/β)); EQD2 = D × (d + α/β)/(2 + α/β)</strong></p><h4>Common constraints (QUANTEC digest)</h4><ul><li>Spinal cord Dmax &lt; 50 Gy (2 Gy/fx) → 1% myelopathy.</li><li>Lung V20 ≤ 30% → pneumonitis ≤ 20%.</li><li>Heart mean: as low as possible; left breast target &lt; 4–5 Gy.</li><li>Parotid mean ≤ 26 Gy to preserve long-term function.</li><li>Rectum V70 &lt; 20–25% (standard-fx prostate 78–80 Gy).</li></ul>"
-      },
+    'slug': 'radbio',
+    'emoji': '🧬',
+    'title_zh': '放射生物學',
+    'title_en': 'Radiobiology',
+    'sub_zh': 'Radiobiology 核心：TCP/NTCP、fractionation、BED/EQD2、4Rs、DNA damage/repair、OER、hypoxia、LET/RBE 與 QUANTEC/HYTEC constraints。',
+    'sub_en': 'Core radiobiology: TCP/NTCP, fractionation, BED/EQD2, the 4 Rs, DNA damage and repair, OER, hypoxia, LET/RBE, and QUANTEC/HYTEC constraints.',
+
+    'sections': [
+        {
+            'label_zh': '總論',
+            'label_en': 'OVERVIEW',
+            'h2_zh': 'Radiobiology 核心總論',
+            'h2_en': 'Core overview of radiobiology',
+            'body_zh': """
+<p>放射治療的核心目標是：<strong>maximize TCP，minimize NTCP</strong>，也就是最大化腫瘤控制、同時最小化正常組織併發症。</p>
+<p>有效放射生物劑量不只取決於 total dose，也取決於 <strong>dose per fraction、α/β ratio、treatment time</strong>，以及正常組織是 <strong>serial organ</strong> 還是 <strong>parallel organ</strong>。</p>
+<div class="clinical-note">一句話理解：RT 殺癌細胞靠 DNA damage；fractionation 的意義是利用正常組織 repair、腫瘤 reoxygenation / redistribution 的差異，讓 TCP 上升但 NTCP 不爆掉。</div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>核心概念</th><th>臨床意義</th></tr></thead><tbody><tr><td>TCP</td><td>Tumor control probability；腫瘤控制機率</td></tr><tr><td>NTCP</td><td>Normal tissue complication probability；正常組織併發症機率</td></tr><tr><td>Fractionation</td><td>利用 repair、reoxygenation、redistribution、repopulation 的差異</td></tr><tr><td>BED / EQD2</td><td>把不同 fractionation 轉換成 biological equivalent dose</td></tr><tr><td>Serial vs parallel organ</td><td>決定 constraint 應重視 Dmax / point dose 還是 mean / volume dose</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<p>The central goal of radiotherapy is to <strong>maximize TCP and minimize NTCP</strong>: maximize tumor control while minimizing normal-tissue complications.</p>
+<p>The effective biological radiation dose depends not only on total dose, but also on <strong>dose per fraction, α/β ratio, total treatment time</strong>, and whether the normal tissue behaves as a <strong>serial organ</strong> or a <strong>parallel organ</strong>.</p>
+<div class="clinical-note">One-sentence memory: RT kills cancer cells through DNA damage. Fractionation exploits differences in normal-tissue repair, tumor reoxygenation, redistribution, and repopulation so that TCP rises without unacceptable NTCP.</div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Core concept</th><th>Clinical meaning</th></tr></thead><tbody><tr><td>TCP</td><td>Tumor control probability</td></tr><tr><td>NTCP</td><td>Normal tissue complication probability</td></tr><tr><td>Fractionation</td><td>Uses repair, reoxygenation, redistribution, and repopulation differences</td></tr><tr><td>BED / EQD2</td><td>Converts different schedules into comparable biological dose</td></tr><tr><td>Serial vs parallel organ</td><td>Determines whether Dmax / point dose or mean / volume dose matters most</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': '分割/劑量',
+            'label_en': 'DOSE / FRACTIONATION',
+            'h2_zh': 'Dose、Fractionation 與 Toxicity',
+            'h2_en': 'Dose, fractionation, and toxicity',
+            'body_zh': """
+<p>Radiation dose 的生物效果取決於四大因素：<strong>total dose、dose per fraction、α/β ratio、total treatment time</strong>。BED 和 EQD2 可以把不同 fractionation 轉換成可比較的 biological dose，但公式本身不直接處理 treatment time。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>因素</th><th>意義</th></tr></thead><tbody><tr><td>Total dose</td><td>總劑量，例如 60 Gy</td></tr><tr><td>Dose per fraction</td><td>每次劑量，例如 2 Gy/Fx 或 10 Gy/Fx</td></tr><tr><td>α/β ratio</td><td>組織對 fraction size 的敏感度</td></tr><tr><td>Total treatment time</td><td>總療程時間，與 repopulation 有關</td></tr></tbody></table></div>
+<h3>Linear-quadratic model</h3>
+<div class="formula-box">SF(D) = e<sup>−αD − βD²</sup></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>參數</th><th>意義</th></tr></thead><tbody><tr><td>α</td><td>linear component；single-hit cell kill</td></tr><tr><td>β</td><td>quadratic component；double-hit cell kill</td></tr><tr><td>α/β</td><td>αD = βD² 時的 dose，也就是 linear killing 和 quadratic killing 相等的劑量</td></tr></tbody></table></div>
+<p>α/β ratio 本質上代表組織對 fractionation 的敏感度。α/β 越低，代表 survival curve 越彎、越容易受到 fraction size 影響。</p>
+<h3>Early vs late responding tissues</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>組織類型</th><th>α/β ratio</th><th>對 fraction size 敏感度</th><th>例子</th></tr></thead><tbody><tr><td>Early responding tissues</td><td>約 10</td><td>較不敏感</td><td>多數腫瘤、skin、intestinal cells、bone marrow</td></tr><tr><td>Late responding tissues</td><td>約 3</td><td>較敏感</td><td>lung、kidney、liver、bladder</td></tr><tr><td>Spinal cord</td><td>約 2</td><td>非常敏感</td><td>spinal cord</td></tr></tbody></table></div>
+<div class="clinical-note">注意：late-responding tissues = low α/β ratio，且對 fraction size 更敏感。若有 slide 寫 late tissue high α/β，應視為筆誤。</div>
+<h3>BED 與 EQD2</h3>
+<div class="formula-box">BED = nd[1 + d/(α/β)]<br>EQD2 = D[(d + α/β)/(2 + α/β)] = BED / [1 + 2/(α/β)]</div>
+<p>Dose per fraction 越大，對低 α/β 組織的 BED / EQD2 增幅越明顯。</p>
+<h3>Acute vs late toxicity</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Toxicity</th><th>特徵</th><th>主要相關因素</th></tr></thead><tbody><tr><td>Acute toxicity</td><td>inflammation</td><td>total dose</td></tr><tr><td>Late toxicity</td><td>fibrosis、sclerosis</td><td>dose per fraction；需要用 BED / EQD2 評估</td></tr></tbody></table></div>
+<div class="clinical-note">簡單記法：Acute 看總量，Late 看單次量。</div>
+""",
+            'body_en': """
+<p>The biological effect of radiation depends on four major factors: <strong>total dose, dose per fraction, α/β ratio, and total treatment time</strong>. BED and EQD2 convert different schedules into comparable biological dose, but the formulas themselves do not directly incorporate treatment time.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>Meaning</th></tr></thead><tbody><tr><td>Total dose</td><td>Total delivered dose, such as 60 Gy</td></tr><tr><td>Dose per fraction</td><td>Dose per treatment, such as 2 Gy/Fx or 10 Gy/Fx</td></tr><tr><td>α/β ratio</td><td>Sensitivity of tissue to fraction size</td></tr><tr><td>Total treatment time</td><td>Overall treatment duration; related to repopulation</td></tr></tbody></table></div>
+<h3>Linear-quadratic model</h3>
+<div class="formula-box">SF(D) = e<sup>−αD − βD²</sup></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Parameter</th><th>Meaning</th></tr></thead><tbody><tr><td>α</td><td>Linear component; single-hit cell kill</td></tr><tr><td>β</td><td>Quadratic component; double-hit cell kill</td></tr><tr><td>α/β</td><td>Dose at which αD equals βD²</td></tr></tbody></table></div>
+<p>The α/β ratio represents sensitivity to fractionation. Lower α/β means a more curved survival curve and greater sensitivity to fraction size.</p>
+<h3>Early versus late responding tissues</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Tissue type</th><th>α/β ratio</th><th>Fraction-size sensitivity</th><th>Examples</th></tr></thead><tbody><tr><td>Early responding tissues</td><td>About 10</td><td>Less sensitive</td><td>Many tumors, skin, intestinal cells, bone marrow</td></tr><tr><td>Late responding tissues</td><td>About 3</td><td>More sensitive</td><td>Lung, kidney, liver, bladder</td></tr><tr><td>Spinal cord</td><td>About 2</td><td>Very sensitive</td><td>Spinal cord</td></tr></tbody></table></div>
+<div class="clinical-note">Correct concept: late-responding tissues have low α/β and are more fraction-size sensitive.</div>
+<h3>BED and EQD2</h3>
+<div class="formula-box">BED = nd[1 + d/(α/β)]<br>EQD2 = D[(d + α/β)/(2 + α/β)] = BED / [1 + 2/(α/β)]</div>
+<p>As dose per fraction increases, BED/EQD2 rises especially strongly for low-α/β tissues.</p>
+<h3>Acute versus late toxicity</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Toxicity</th><th>Feature</th><th>Main driver</th></tr></thead><tbody><tr><td>Acute toxicity</td><td>Inflammation</td><td>Total dose</td></tr><tr><td>Late toxicity</td><td>Fibrosis, sclerosis</td><td>Dose per fraction; evaluate with BED/EQD2</td></tr></tbody></table></div>
+<div class="clinical-note">Simple memory: acute toxicity tracks total dose; late toxicity tracks fraction size.</div>
+""",
+        },
+
+        {
+            'label_zh': '4 Rs',
+            'label_en': '4 RS',
+            'h2_zh': '4 Rs of Radiobiology',
+            'h2_en': 'The 4 Rs of radiobiology',
+            'body_zh': """
+<p>Fractionation 的經典四個 R：</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>4R</th><th>中文意義</th><th>臨床意義</th></tr></thead><tbody><tr><td>Repair</td><td>DNA 損傷修復</td><td>正常組織在 fraction 間修復 sublethal damage</td></tr><tr><td>Repopulation</td><td>再增殖</td><td>腫瘤與正常組織都可能增殖；過長療程可能讓腫瘤 repopulate</td></tr><tr><td>Redistribution</td><td>細胞週期重新分布</td><td>細胞進入較 radiosensitive phase</td></tr><tr><td>Reoxygenation</td><td>再氧合</td><td>hypoxic tumor cells 變得較 radiosensitive</td></tr></tbody></table></div>
+<div class="clinical-note">Fractionation 的生物學效果可整理為：Repair、Repopulation、Redistribution、Reoxygenation。</div>
+""",
+            'body_en': """
+<p>The classic 4 Rs of fractionation are:</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>4R</th><th>Meaning</th><th>Clinical significance</th></tr></thead><tbody><tr><td>Repair</td><td>DNA damage repair</td><td>Normal tissues repair sublethal damage between fractions</td></tr><tr><td>Repopulation</td><td>Cell proliferation during treatment</td><td>Tumors and normal tissues can proliferate; prolonged treatment allows tumor repopulation</td></tr><tr><td>Redistribution</td><td>Cell-cycle redistribution</td><td>Cells may enter more radiosensitive phases</td></tr><tr><td>Reoxygenation</td><td>Improved oxygenation</td><td>Hypoxic tumor cells can become more radiosensitive</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': 'DNA 傷害',
+            'label_en': 'DNA DAMAGE',
+            'h2_zh': 'DNA damage：RT 如何造成細胞死亡？',
+            'h2_en': 'DNA damage: how RT causes cell death',
+            'body_zh': """
+<p>RT 的主要作用機制是造成 DNA damage，尤其是 <strong>DNA double-strand breaks, DSBs</strong>。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage type</th><th>每 1 Gy 大約數量</th><th>生物意義</th></tr></thead><tbody><tr><td>Single-strand breaks, SSBs</td><td>約 1000</td><td>多數容易修復，通常不致命</td></tr><tr><td>Double-strand breaks, DSBs</td><td>約 40</td><td>最重要的 lethal lesion，可導致 chromosome / chromatid aberrations 和 cell death</td></tr></tbody></table></div>
+<h3>直接與間接 DNA damage</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>機制</th><th>說明</th><th>代表 radiation</th></tr></thead><tbody><tr><td>Direct DNA damage</td><td>ionization 直接打到 DNA</td><td>high LET radiation 較重要，例如 α-particles、carbon ions</td></tr><tr><td>Indirect DNA damage</td><td>水分子被 ionized 產生 free radicals，再攻擊 DNA</td><td>low LET photons 較重要，例如 x-rays、γ-rays</td></tr></tbody></table></div>
+<h3>Radiation tracks：spurs、blobs、clustered lesions</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Track structure</th><th>特徵</th></tr></thead><tbody><tr><td>Low LET：x-rays、γ-rays</td><td>Spurs</td><td>約 3 ion pairs、100 eV、直徑約 4 nm</td></tr><tr><td>High LET：neutrons 等</td><td>Blobs</td><td>約 12 ion pairs、100–500 eV、直徑約 7 nm</td></tr></tbody></table></div>
+<p>多個 spurs / blobs 可形成 clustered lesions。Clustered DNA damage 比單一 SSB 更難修復，因此 high LET radiation 通常有較高 biological effectiveness。</p>
+""",
+            'body_en': """
+<p>The main mechanism of RT is DNA damage, especially <strong>DNA double-strand breaks, DSBs</strong>.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage type</th><th>Approximate number per 1 Gy</th><th>Biological significance</th></tr></thead><tbody><tr><td>Single-strand breaks, SSBs</td><td>About 1000</td><td>Usually repaired and often not lethal</td></tr><tr><td>Double-strand breaks, DSBs</td><td>About 40</td><td>The key lethal lesion; can cause chromosome/chromatid aberrations and cell death</td></tr></tbody></table></div>
+<h3>Direct and indirect DNA damage</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Mechanism</th><th>Description</th><th>Representative radiation</th></tr></thead><tbody><tr><td>Direct DNA damage</td><td>Ionization directly hits DNA</td><td>More important for high-LET radiation such as α-particles and carbon ions</td></tr><tr><td>Indirect DNA damage</td><td>Water ionization generates free radicals that attack DNA</td><td>More important for low-LET photons such as x-rays and γ-rays</td></tr></tbody></table></div>
+<h3>Radiation tracks: spurs, blobs, and clustered lesions</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Track structure</th><th>Feature</th></tr></thead><tbody><tr><td>Low LET: x-rays, γ-rays</td><td>Spurs</td><td>About 3 ion pairs, 100 eV, diameter about 4 nm</td></tr><tr><td>High LET: neutrons, etc.</td><td>Blobs</td><td>About 12 ion pairs, 100–500 eV, diameter about 7 nm</td></tr></tbody></table></div>
+<p>Multiple spurs or blobs can form clustered lesions. Clustered DNA damage is harder to repair, so high-LET radiation usually has greater biological effectiveness.</p>
+""",
+        },
+
+        {
+            'label_zh': 'DNA 測量',
+            'label_en': 'DNA DAMAGE ASSAYS',
+            'h2_zh': '如何測量 DNA damage？',
+            'h2_en': 'How DNA damage is measured',
+            'body_zh': """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>方法</th><th>原理</th><th>高分重點</th></tr></thead><tbody><tr><td>PFGE</td><td>依 DNA fragment size 分離 DNA</td><td>DNA fragment 越小，在 agarose gel 中跑得越遠</td></tr><tr><td>Comet assay</td><td>single-cell gel electrophoresis</td><td>DNA damage 形成 comet tail；可在單細胞層級偵測 DNA damage</td></tr><tr><td>Radiation-induced foci assay</td><td>偵測 DNA DSB sites 上 recruit 的蛋白</td><td>γ-H2AX、53BP1 foci 增加代表 DNA damage response</td></tr></tbody></table></div>
+<h3>Comet assay</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>條件</th><th>偵測</th></tr></thead><tbody><tr><td>Alkaline buffer</td><td>偵測 DSBs</td></tr><tr><td>Neutral buffer</td><td>偵測 SSBs</td></tr></tbody></table></div>
+<h3>Radiation-induced foci</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Marker</th><th>意義</th></tr></thead><tbody><tr><td>γ-H2AX</td><td>H2AX 被 phosphorylation 後形成；DNA damage 後 15 分鐘內可偵測；24 小時仍存在通常代表 unrepaired DNA damage</td></tr><tr><td>53BP1</td><td>DNA damage response marker；與 NHEJ 選擇相關</td></tr></tbody></table></div>
+<div class="clinical-note">記法：SNoW DRoP = Southern blot DNA、Northern blot RNA、Western blot Protein。</div>
+""",
+            'body_en': """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Method</th><th>Principle</th><th>High-yield point</th></tr></thead><tbody><tr><td>PFGE</td><td>Separates DNA by fragment size</td><td>Smaller fragments migrate farther through agarose gel</td></tr><tr><td>Comet assay</td><td>Single-cell gel electrophoresis</td><td>DNA damage creates a comet tail; detects damage at single-cell level</td></tr><tr><td>Radiation-induced foci assay</td><td>Detects proteins recruited to DSB sites</td><td>Increased γ-H2AX and 53BP1 foci indicate DNA damage response</td></tr></tbody></table></div>
+<h3>Comet assay</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Condition</th><th>Detects</th></tr></thead><tbody><tr><td>Alkaline buffer</td><td>DSBs</td></tr><tr><td>Neutral buffer</td><td>SSBs</td></tr></tbody></table></div>
+<h3>Radiation-induced foci</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Marker</th><th>Meaning</th></tr></thead><tbody><tr><td>γ-H2AX</td><td>Phosphorylated H2AX; detectable within 15 minutes after DNA damage; persistence at 24 hours suggests unrepaired damage</td></tr><tr><td>53BP1</td><td>DNA damage response marker; related to NHEJ pathway choice</td></tr></tbody></table></div>
+<div class="clinical-note">Memory: SNoW DRoP = Southern blot DNA, Northern blot RNA, Western blot Protein.</div>
+""",
+        },
+
+        {
+            'label_zh': 'DSB signaling',
+            'label_en': 'DSB SIGNALING',
+            'h2_zh': 'DSB 發生後，細胞怎麼感知？',
+            'h2_en': 'How cells sense DSBs',
+            'body_zh': """
+<p>DSB 發生後的核心 signaling cascade：</p>
+<ol>
+<li>DNA DSB occurs</li>
+<li>MRN complex：MRE11 / RAD50 / NBS1 被 recruit 到 damage site</li>
+<li>ATM 被 recruit 並 autophosphorylation</li>
+<li>ATM phosphorylates H2AX → γ-H2AX</li>
+<li>γ-H2AX 作為平台 recruit repair proteins</li>
+<li>ATM phosphorylates CHK2，讓 cell cycle arrest，提供修復時間</li>
+<li>53BP1 促進 NHEJ</li>
+<li>BRCA1 促進 HR</li>
+</ol>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Gene</th><th>Disease</th><th>典型症狀</th></tr></thead><tbody><tr><td>ATM</td><td>Ataxia telangiectasia</td><td>Telangiectasias、neurologic symptoms、RT sensitivity、lymphoma / leukemia / breast cancer risk</td></tr><tr><td>ATR</td><td>Seckel syndrome</td><td>Growth retardation、microcephaly、facial dysmorphism、skeletal abnormalities、immune deficiency</td></tr><tr><td>MRE11</td><td>AT-like disorder</td><td>無 telangiectasia，但有 neurologic symptoms 和 RT sensitivity</td></tr><tr><td>NBS1</td><td>Nijmegen break syndrome</td><td>Growth retardation、microcephaly、cancer risk、RT sensitivity</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<p>The core DSB signaling cascade is:</p>
+<ol>
+<li>DNA DSB occurs</li>
+<li>MRN complex, MRE11 / RAD50 / NBS1, is recruited to the damage site</li>
+<li>ATM is recruited and autophosphorylated</li>
+<li>ATM phosphorylates H2AX to form γ-H2AX</li>
+<li>γ-H2AX acts as a platform to recruit repair proteins</li>
+<li>ATM phosphorylates CHK2, causing cell-cycle arrest and allowing repair time</li>
+<li>53BP1 promotes NHEJ</li>
+<li>BRCA1 promotes HR</li>
+</ol>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Gene</th><th>Disease</th><th>Typical findings</th></tr></thead><tbody><tr><td>ATM</td><td>Ataxia telangiectasia</td><td>Telangiectasias, neurologic symptoms, RT sensitivity, lymphoma/leukemia/breast cancer risk</td></tr><tr><td>ATR</td><td>Seckel syndrome</td><td>Growth retardation, microcephaly, facial dysmorphism, skeletal abnormalities, immune deficiency</td></tr><tr><td>MRE11</td><td>AT-like disorder</td><td>No telangiectasia, but neurologic symptoms and RT sensitivity</td></tr><tr><td>NBS1</td><td>Nijmegen break syndrome</td><td>Growth retardation, microcephaly, cancer risk, RT sensitivity</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': '染色體異常',
+            'label_en': 'ABERRATIONS',
+            'h2_zh': 'Chromosome & chromatid aberrations',
+            'h2_en': 'Chromosome and chromatid aberrations',
+            'body_zh': """
+<p>DSB 的致死效應常不是「斷了就死」，而是錯誤修復後造成 chromosome / chromatid aberrations。某些 chromosome / chromatid aberrations 是 lethal，導致 cell death。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Aberration</th><th>發生時機</th><th>例子</th></tr></thead><tbody><tr><td>Chromosome aberrations</td><td>Early interphase，DNA 尚未 replicated</td><td>Dicentric chromosome、ring chromosome</td></tr><tr><td>Chromatid aberrations</td><td>Late interphase，DNA 已 replicated</td><td>Anaphase bridge</td></tr></tbody></table></div>
+<div class="clinical-note">臨床思維：DSB → misrepair → chromosome aberration → mitotic catastrophe / cell death。</div>
+""",
+            'body_en': """
+<p>The lethal effect of DSBs is often not simply the break itself, but incorrect repair that produces chromosome or chromatid aberrations. Some aberrations are lethal and lead to cell death.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Aberration</th><th>Timing</th><th>Examples</th></tr></thead><tbody><tr><td>Chromosome aberrations</td><td>Early interphase, before DNA replication</td><td>Dicentric chromosome, ring chromosome</td></tr><tr><td>Chromatid aberrations</td><td>Late interphase, after DNA replication</td><td>Anaphase bridge</td></tr></tbody></table></div>
+<div class="clinical-note">Clinical logic: DSB → misrepair → chromosome aberration → mitotic catastrophe / cell death.</div>
+""",
+        },
+
+        {
+            'label_zh': 'DNA repair',
+            'label_en': 'DNA REPAIR',
+            'h2_zh': 'DNA repair mechanisms',
+            'h2_en': 'DNA repair mechanisms',
+            'body_zh': """
+<p>DNA repair 可依 damage type 分類：</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage</th><th>Repair pathway</th></tr></thead><tbody><tr><td>SSB / base error</td><td>BER</td></tr><tr><td>Bulky adduct / pyrimidine dimer</td><td>NER</td></tr><tr><td>Replication mismatch</td><td>MMR</td></tr><tr><td>DSB</td><td>NHEJ、HR</td></tr><tr><td>DNA crosslink</td><td>Crosslink repair，常涉及 NER + HR / Fanconi pathway</td></tr></tbody></table></div>
+<h3>DNA repair 高分總表</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Repair mechanism</th><th>Damage repaired</th><th>Key proteins</th><th>Disease</th><th>Clinical clue</th></tr></thead><tbody><tr><td>BER</td><td>SSB / base errors</td><td>Glycosylase、APE1、XRCC1、PARP、FEN1</td><td>XRCC1 mutation slight radiosensitivity</td><td>通常不明顯 radiosensitive</td></tr><tr><td>NER</td><td>Pyrimidine dimers、bulky adducts</td><td>XPC、XPE、TFIIH、XPA、XPG</td><td>XP、Cockayne、TTD</td><td>UV / photosensitivity</td></tr><tr><td>MMR</td><td>Replication errors</td><td>MLH1、MSH2、MSH6、PMS2</td><td>Lynch syndrome</td><td>Colorectal / endometrial cancer risk</td></tr><tr><td>NHEJ</td><td>DSB，error-prone</td><td>Ku70/80、DNA-PKcs、Artemis、Ligase IV</td><td>SCID、LIG4 syndrome</td><td>Immunodeficiency + radiosensitivity</td></tr><tr><td>HR</td><td>DSB，accurate</td><td>RAD51、RAD52、BRCA1/2</td><td>BRCA mutation</td><td>PARP inhibitor sensitivity</td></tr><tr><td>Crosslink repair</td><td>DNA crosslinks</td><td>FANC proteins</td><td>Fanconi anemia</td><td>Pancytopenia、leukemia</td></tr></tbody></table></div>
+<h3>NHEJ vs HR</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Pathway</th><th>Timing</th><th>Accuracy</th><th>Key proteins</th><th>Clinical association</th></tr></thead><tbody><tr><td>NHEJ</td><td>G1 phase，DNA 尚未複製</td><td>Fast but error-prone</td><td>Ku70/80、DNA-PKcs、Artemis、XRCC4 / Ligase IV</td><td>VDJ recombination；SCID / immunodeficiency</td></tr><tr><td>HR</td><td>Late S / G2 phase，有 sister chromatid</td><td>Slow but accurate</td><td>BRCA1、BRCA2、RAD51、RAD52、MRN</td><td>BRCA mutation；PARP inhibitor synthetic lethality</td></tr></tbody></table></div>
+<div class="clinical-note">PARP inhibitor synthetic lethality：BRCA-mutant tumors 已有 HR defect；PARP inhibitor 阻斷 SSB repair，SSB 在 replication 時轉為 DSB，細胞無法用 HR 修復而死亡。</div>
+""",
+            'body_en': """
+<p>DNA repair can be organized by damage type:</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage</th><th>Repair pathway</th></tr></thead><tbody><tr><td>SSB / base error</td><td>BER</td></tr><tr><td>Bulky adduct / pyrimidine dimer</td><td>NER</td></tr><tr><td>Replication mismatch</td><td>MMR</td></tr><tr><td>DSB</td><td>NHEJ, HR</td></tr><tr><td>DNA crosslink</td><td>Crosslink repair, often involving NER + HR / Fanconi pathway</td></tr></tbody></table></div>
+<h3>High-yield DNA repair table</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Repair mechanism</th><th>Damage repaired</th><th>Key proteins</th><th>Disease</th><th>Clinical clue</th></tr></thead><tbody><tr><td>BER</td><td>SSB / base errors</td><td>Glycosylase, APE1, XRCC1, PARP, FEN1</td><td>XRCC1 mutation with slight radiosensitivity</td><td>Usually not strongly radiosensitive</td></tr><tr><td>NER</td><td>Pyrimidine dimers, bulky adducts</td><td>XPC, XPE, TFIIH, XPA, XPG</td><td>XP, Cockayne, TTD</td><td>UV / photosensitivity</td></tr><tr><td>MMR</td><td>Replication errors</td><td>MLH1, MSH2, MSH6, PMS2</td><td>Lynch syndrome</td><td>Colorectal / endometrial cancer risk</td></tr><tr><td>NHEJ</td><td>DSB, error-prone</td><td>Ku70/80, DNA-PKcs, Artemis, Ligase IV</td><td>SCID, LIG4 syndrome</td><td>Immunodeficiency + radiosensitivity</td></tr><tr><td>HR</td><td>DSB, accurate</td><td>RAD51, RAD52, BRCA1/2</td><td>BRCA mutation</td><td>PARP inhibitor sensitivity</td></tr><tr><td>Crosslink repair</td><td>DNA crosslinks</td><td>FANC proteins</td><td>Fanconi anemia</td><td>Pancytopenia, leukemia</td></tr></tbody></table></div>
+<h3>NHEJ versus HR</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Pathway</th><th>Timing</th><th>Accuracy</th><th>Key proteins</th><th>Clinical association</th></tr></thead><tbody><tr><td>NHEJ</td><td>G1 phase, before DNA replication</td><td>Fast but error-prone</td><td>Ku70/80, DNA-PKcs, Artemis, XRCC4 / Ligase IV</td><td>VDJ recombination; SCID / immunodeficiency</td></tr><tr><td>HR</td><td>Late S / G2 phase, when sister chromatid is available</td><td>Slow but accurate</td><td>BRCA1, BRCA2, RAD51, RAD52, MRN</td><td>BRCA mutation; PARP inhibitor synthetic lethality</td></tr></tbody></table></div>
+<div class="clinical-note">PARP inhibitor synthetic lethality: BRCA-mutant tumors have HR deficiency. PARP inhibition blocks SSB repair; unrepaired SSBs become DSBs during replication, and the cell cannot repair them through HR.</div>
+""",
+        },
+
+        {
+            'label_zh': 'OER',
+            'label_en': 'OER',
+            'h2_zh': 'OER，Oxygen Enhancement Ratio',
+            'h2_en': 'Oxygen enhancement ratio, OER',
+            'body_zh': """
+<div class="formula-box">OER = Dose under hypoxic condition / Dose under aerobic condition</div>
+<p>OER 代表達到相同 biological effect 時，hypoxic condition 需要多少倍 dose。OER 越高，代表 oxygen 越能增強 radiation cell kill。</p>
+<h3>Oxygen fixation hypothesis</h3>
+<p>Oxygen 的作用是把 free radicals 造成的 DNA damage fix 成永久損傷。沒有 oxygen 時，indirect DNA damage 較可能被修復。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>數值</th></tr></thead><tbody><tr><td>Oxygen 必須存在時間</td><td>radiation exposure 當下或 microseconds 內</td></tr><tr><td>Free radical lifespan</td><td>約 10⁻⁵ 到 10⁻⁹ 秒</td></tr></tbody></table></div>
+<h3>不同 radiation 的 OER</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Ionization density</th><th>Approximate OER</th></tr></thead><tbody><tr><td>X-rays / γ-rays / protons</td><td>Sparsely ionizing</td><td>2.5–3</td></tr><tr><td>Neutrons</td><td>Intermediately ionizing</td><td>1.6</td></tr><tr><td>α-particles</td><td>Densely ionizing</td><td>1</td></tr><tr><td>Minimum possible OER</td><td>—</td><td>1</td></tr></tbody></table></div>
+<h3>OER 與 cell cycle</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Cell cycle phase</th><th>OER</th><th>理由</th></tr></thead><tbody><tr><td>G1</td><td>Lowest</td><td>G1 細胞本來就較 radiosensitive</td></tr><tr><td>S phase</td><td>Highest</td><td>S phase 細胞最 radioresistant，因 DNA 已複製、repair 能力較強</td></tr></tbody></table></div>
+<h3>多少 oxygen 可達最大 OER？</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Oxygen concentration</th><th>OER effect</th></tr></thead><tbody><tr><td>0.5% O₂，約 3 mmHg</td><td>約 50% maximum OER</td></tr><tr><td>5% O₂，約 30 mmHg</td><td>約 100% maximum OER</td></tr><tr><td>100% O₂</td><td>不會再進一步增加 OER</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<div class="formula-box">OER = dose under hypoxic condition / dose under aerobic condition</div>
+<p>OER is the dose multiplier required under hypoxic conditions to achieve the same biological effect. Higher OER means oxygen more strongly enhances radiation cell kill.</p>
+<h3>Oxygen fixation hypothesis</h3>
+<p>Oxygen fixes free-radical DNA damage into permanent lesions. Without oxygen, indirect DNA damage is more likely to be repaired.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Value</th></tr></thead><tbody><tr><td>When oxygen must be present</td><td>During radiation exposure or within microseconds</td></tr><tr><td>Free radical lifespan</td><td>About 10⁻⁵ to 10⁻⁹ seconds</td></tr></tbody></table></div>
+<h3>OER by radiation type</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Ionization density</th><th>Approximate OER</th></tr></thead><tbody><tr><td>X-rays / γ-rays / protons</td><td>Sparsely ionizing</td><td>2.5–3</td></tr><tr><td>Neutrons</td><td>Intermediately ionizing</td><td>1.6</td></tr><tr><td>α-particles</td><td>Densely ionizing</td><td>1</td></tr><tr><td>Minimum possible OER</td><td>—</td><td>1</td></tr></tbody></table></div>
+<h3>OER and cell cycle</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Cell-cycle phase</th><th>OER</th><th>Reason</th></tr></thead><tbody><tr><td>G1</td><td>Lowest</td><td>G1 cells are already more radiosensitive</td></tr><tr><td>S phase</td><td>Highest</td><td>S-phase cells are most radioresistant because DNA has replicated and repair capacity is strong</td></tr></tbody></table></div>
+<h3>Oxygen concentration and maximum OER</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Oxygen concentration</th><th>OER effect</th></tr></thead><tbody><tr><td>0.5% O₂, about 3 mmHg</td><td>About 50% of maximum OER</td></tr><tr><td>5% O₂, about 30 mmHg</td><td>About 100% of maximum OER</td></tr><tr><td>100% O₂</td><td>No additional OER increase</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': 'Hypoxia',
+            'label_en': 'HYPOXIA',
+            'h2_zh': 'Tumor hypoxia',
+            'h2_en': 'Tumor hypoxia',
+            'body_zh': """
+<p>Oxygen 只能擴散約 <strong>70–200 μm</strong>，因此只有接近血管的 tumor cells 能維持較好 oxygenation。遠離血管的區域容易 hypoxic 或 necrotic。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Hypoxia type</th><th>成因</th><th>特徵</th><th>Reoxygenation</th></tr></thead><tbody><tr><td>Acute hypoxia</td><td>Temporary vessel closing / blockage</td><td>暫時性低氧</td><td>可快速 reoxygenate</td></tr><tr><td>Chronic hypoxia</td><td>距血管太遠，或 permanent vessel closure</td><td>常伴 necrosis，較 radioresistant</td><td>慢速 reoxygenate</td></tr></tbody></table></div>
+<p>Hypoxia 會限制 RT success，因為 hypoxic cells 對 low LET radiation 較 resistant。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>例子</th><th>意義</th></tr></thead><tbody><tr><td>Hypoxia marker</td><td>Pimonidazole</td><td>2-nitroimidazole，可標記 hypoxic cells</td></tr><tr><td>Hypoxia transcription factor</td><td>HIF-1α</td><td>Hypoxia 時不被 hydroxylated，因此不被 VHL ubiquitination degradation</td></tr><tr><td>Hypoxic radiosensitizer</td><td>Nitroimidazoles</td><td>在 hypoxic cells 中與 macromolecules irreversible binding</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<p>Oxygen diffuses only about <strong>70–200 μm</strong>, so tumor cells near blood vessels have better oxygenation. Regions far from vessels are prone to hypoxia or necrosis.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Hypoxia type</th><th>Cause</th><th>Feature</th><th>Reoxygenation</th></tr></thead><tbody><tr><td>Acute hypoxia</td><td>Temporary vessel closing or blockage</td><td>Transient hypoxia</td><td>Can reoxygenate quickly</td></tr><tr><td>Chronic hypoxia</td><td>Too far from vessels or permanent vessel closure</td><td>Often with necrosis and more radioresistant</td><td>Slow reoxygenation</td></tr></tbody></table></div>
+<p>Hypoxia limits RT success because hypoxic cells are more resistant to low-LET radiation.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Category</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>Hypoxia marker</td><td>Pimonidazole</td><td>2-nitroimidazole marker for hypoxic cells</td></tr><tr><td>Hypoxia transcription factor</td><td>HIF-1α</td><td>Under hypoxia, it is not hydroxylated and avoids VHL-mediated ubiquitination/degradation</td></tr><tr><td>Hypoxic radiosensitizer</td><td>Nitroimidazoles</td><td>Irreversibly bind macromolecules in hypoxic cells</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': 'LET',
+            'label_en': 'LET',
+            'h2_zh': 'LET，Linear Energy Transfer',
+            'h2_en': 'Linear energy transfer, LET',
+            'body_zh': """
+<div class="formula-box">LET = ΔE / ΔL</div>
+<p>LET 是 particle track 每單位長度沉積的平均能量，單位為 keV/μm。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>意義</th></tr></thead><tbody><tr><td>Low LET</td><td>能量沉積稀疏，較依賴 indirect DNA damage 和 oxygen</td></tr><tr><td>High LET</td><td>能量沉積密集，造成 clustered DNA damage，較不依賴 oxygen</td></tr></tbody></table></div>
+<h3>不同 radiation 的 LET</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>LET，keV/μm</th></tr></thead><tbody><tr><td>Cobalt-60 γ-rays，1.1 MV</td><td>0.2</td></tr><tr><td>250 kV x-rays</td><td>2.0</td></tr><tr><td>150 MeV protons</td><td>0.5</td></tr><tr><td>10 MeV protons</td><td>4.7</td></tr><tr><td>2.5 MeV α-particles</td><td>166</td></tr></tbody></table></div>
+<p>高 LET radiation 包括 α-particles、neutrons；一般來說 α-particles / neutrons &gt; protons &gt; x-rays / γ-rays。對同一種 charged particle，能量越低，LET 越高。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>Survival curve</th><th>Biological implication</th></tr></thead><tbody><tr><td>Low LET photons</td><td>有明顯 shoulder</td><td>sublethal damage repair 較重要</td></tr><tr><td>High LET α / carbon ions</td><td>shoulder 小或近乎消失</td><td>單一 track 就可造成 lethal clustered DSB</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<div class="formula-box">LET = ΔE / ΔL</div>
+<p>LET is the average energy deposited per unit track length, measured in keV/μm.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Meaning</th></tr></thead><tbody><tr><td>Low LET</td><td>Sparse energy deposition; more dependent on indirect DNA damage and oxygen</td></tr><tr><td>High LET</td><td>Dense energy deposition; causes clustered DNA damage and is less oxygen-dependent</td></tr></tbody></table></div>
+<h3>LET of different radiation types</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>LET, keV/μm</th></tr></thead><tbody><tr><td>Cobalt-60 γ-rays, 1.1 MV</td><td>0.2</td></tr><tr><td>250 kV x-rays</td><td>2.0</td></tr><tr><td>150 MeV protons</td><td>0.5</td></tr><tr><td>10 MeV protons</td><td>4.7</td></tr><tr><td>2.5 MeV α-particles</td><td>166</td></tr></tbody></table></div>
+<p>High-LET radiation includes α-particles and neutrons. In general: α-particles / neutrons &gt; protons &gt; x-rays / γ-rays. For the same charged particle, lower energy means higher LET.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>Survival curve</th><th>Biological implication</th></tr></thead><tbody><tr><td>Low-LET photons</td><td>Clear shoulder</td><td>Sublethal damage repair is important</td></tr><tr><td>High-LET α / carbon ions</td><td>Small or absent shoulder</td><td>A single track can produce lethal clustered DSBs</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': 'RBE',
+            'label_en': 'RBE',
+            'h2_zh': 'RBE，Relative Biological Effectiveness',
+            'h2_en': 'Relative biological effectiveness, RBE',
+            'body_zh': """
+<div class="formula-box">RBE = D<sub>250 kV x-rays</sub> / D<sub>x</sub></div>
+<p>RBE 是達到相同 biological effect 時，250 kV x-rays 所需 dose 與某 radiation 所需 dose 的比值。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>影響</th></tr></thead><tbody><tr><td>Radiation quality / LET</td><td>LET 越高，通常 RBE 越高，直到 overkill region</td></tr><tr><td>Dose</td><td>不同 dose 水平 RBE 不同</td></tr><tr><td>Number of fractions</td><td>fraction size 會影響 RBE</td></tr><tr><td>Dose rate</td><td>對 low LET radiation 影響較大</td></tr><tr><td>Biological system / endpoint</td><td>不同組織、endpoint 不同</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>重點</th></tr></thead><tbody><tr><td>Tissue type</td><td>Late-responding tissues 的 RBE 較高，因 low LET x-rays 的 shoulder / repair effect 較明顯</td></tr><tr><td>Fraction size</td><td>RBE 在小 fraction size 時較高，在大 fraction size 時下降</td></tr><tr><td>LET</td><td>RBE 隨 LET 增加而上升，到約 100 keV/μm 最高；之後因 overkill effect 下降</td></tr><tr><td>Oxygen</td><td>High LET RBE 在 hypoxic cells 較高，因 reference x-rays 在 hypoxia 中較弱</td></tr></tbody></table></div>
+<h3>OER、LET、RBE 三者關係</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>LET</th><th>OER</th><th>RBE</th></tr></thead><tbody><tr><td>Low LET</td><td>高，約 2.5–3</td><td>較低</td></tr><tr><td>Intermediate LET</td><td>中等，約 1.6</td><td>中等</td></tr><tr><td>High LET</td><td>接近 1</td><td>高，直到 overkill region</td></tr></tbody></table></div>
+<div class="clinical-note">核心記法：LET ↑ → OER ↓ → RBE ↑，但 RBE 到約 100 keV/μm 後因 overkill 下降。</div>
+""",
+            'body_en': """
+<div class="formula-box">RBE = D<sub>250 kV x-rays</sub> / D<sub>x</sub></div>
+<p>RBE is the ratio of the dose of 250 kV x-rays to the dose of another radiation required to produce the same biological effect.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>Effect</th></tr></thead><tbody><tr><td>Radiation quality / LET</td><td>Higher LET usually increases RBE until the overkill region</td></tr><tr><td>Dose</td><td>RBE differs by dose level</td></tr><tr><td>Number of fractions</td><td>Fraction size affects RBE</td></tr><tr><td>Dose rate</td><td>More important for low-LET radiation</td></tr><tr><td>Biological system / endpoint</td><td>Different tissues and endpoints have different RBE</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Tissue type</td><td>RBE is higher in late-responding tissues because low-LET x-rays have more shoulder/repair effect</td></tr><tr><td>Fraction size</td><td>RBE is higher at small fraction size and lower at large fraction size</td></tr><tr><td>LET</td><td>RBE rises with LET up to about 100 keV/μm, then falls due to overkill</td></tr><tr><td>Oxygen</td><td>High-LET RBE is higher in hypoxic cells because reference x-rays are weaker under hypoxia</td></tr></tbody></table></div>
+<h3>Relationship among OER, LET, and RBE</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>LET</th><th>OER</th><th>RBE</th></tr></thead><tbody><tr><td>Low LET</td><td>High, about 2.5–3</td><td>Lower</td></tr><tr><td>Intermediate LET</td><td>Intermediate, about 1.6</td><td>Intermediate</td></tr><tr><td>High LET</td><td>Close to 1</td><td>High until overkill region</td></tr></tbody></table></div>
+<div class="clinical-note">Core memory: LET ↑ → OER ↓ → RBE ↑, but RBE falls after about 100 keV/μm because of overkill.</div>
+""",
+        },
+
+        {
+            'label_zh': 'Constraints 概念',
+            'label_en': 'CONSTRAINT CONCEPTS',
+            'h2_zh': 'Dose constraints 基本概念',
+            'h2_en': 'Basic concepts for dose constraints',
+            'body_zh': """
+<p>Dose constraints 需要考慮 dose per fraction、normal tissue α/β ratio、serial vs parallel organ、prior RT history、disease-site protocol，以及 conventional fractionation vs SRS / SBRT。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Organ type</th><th>Toxicity depends on</th><th>一句話理解</th><th>例子</th></tr></thead><tbody><tr><td>Serial organ</td><td>Max dose / point dose</td><td>戳破一點，整條功能壞掉</td><td>Spinal cord、brainstem、optic nerves、bowel</td></tr><tr><td>Parallel organ</td><td>Mean dose / volume dose</td><td>壞掉足夠多 volume，器官功能才壞</td><td>Lung、liver、kidney、parotid gland</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Constraint</th><th>意義</th></tr></thead><tbody><tr><td>V50% &lt; 50%</td><td>接受 ≥50% prescription dose 的 volume 要 &lt;50%</td></tr><tr><td>V15 Gy &lt; 50%</td><td>接受 ≥15 Gy 的 volume 要 &lt;50%</td></tr><tr><td>Dmax ≤110%</td><td>最大點劑量不能超過 110%</td></tr><tr><td>D0.03cc</td><td>接近 voxel-size 的 small-volume max dose</td></tr><tr><td>D90% ≥100%</td><td>90% target volume 至少接受 100% prescription dose</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<p>Dose constraints depend on dose per fraction, normal-tissue α/β ratio, serial versus parallel organ behavior, prior RT history, disease-site protocol, and whether treatment uses conventional fractionation or SRS/SBRT.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Organ type</th><th>Toxicity depends on</th><th>One-sentence concept</th><th>Examples</th></tr></thead><tbody><tr><td>Serial organ</td><td>Max dose / point dose</td><td>Damage at one critical point can break the whole functional chain</td><td>Spinal cord, brainstem, optic nerves, bowel</td></tr><tr><td>Parallel organ</td><td>Mean dose / volume dose</td><td>Enough functional volume must be damaged before organ function fails</td><td>Lung, liver, kidney, parotid gland</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Constraint</th><th>Meaning</th></tr></thead><tbody><tr><td>V50% &lt; 50%</td><td>Volume receiving ≥50% prescription dose must be &lt;50%</td></tr><tr><td>V15 Gy &lt; 50%</td><td>Volume receiving ≥15 Gy must be &lt;50%</td></tr><tr><td>Dmax ≤110%</td><td>Maximum point dose must not exceed 110%</td></tr><tr><td>D0.03cc</td><td>Small-volume maximum dose near voxel-size</td></tr><tr><td>D90% ≥100%</td><td>At least 90% of target volume receives 100% of prescription dose</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': 'QUANTEC',
+            'label_en': 'QUANTEC',
+            'h2_zh': 'Common QUANTEC constraints，2 Gy/Fx conventional fractionation',
+            'h2_en': 'Common QUANTEC constraints for 2 Gy/Fx conventional fractionation',
+            'body_zh': """
+<div class="table-wrap"><table class="oncology-table dose-table"><thead><tr><th>Organ</th><th>Constraint</th><th>Approximate risk</th></tr></thead><tbody><tr><td>Brain</td><td>Max &lt;60 Gy</td><td>&lt;3% symptomatic necrosis</td></tr><tr><td>Brainstem</td><td>Max &lt;54 Gy</td><td>&lt;5% neuropathy or necrosis</td></tr><tr><td>Optic nerves / chiasm</td><td>Max &lt;55 Gy</td><td>&lt;3% optic neuropathy</td></tr><tr><td>Spinal cord</td><td>Max &lt;50 Gy</td><td>&lt;0.3% myelopathy</td></tr><tr><td>Cochlea</td><td>Mean ≤45 Gy</td><td>&lt;30% sensorineural hearing loss</td></tr><tr><td>Bilateral parotid</td><td>Mean &lt;26 Gy</td><td>&lt;25% long-term salivary dysfunction</td></tr><tr><td>Lung</td><td>V20 ≤30%</td><td>&lt;20% symptomatic pneumonitis</td></tr><tr><td>Esophagus</td><td>Mean &lt;34 Gy</td><td>5–20% grade 3+ esophagitis</td></tr><tr><td>Heart</td><td>Mean &lt;26 Gy</td><td>&lt;15% pericarditis</td></tr><tr><td>Bilateral kidney</td><td>Mean &lt;15–18 Gy</td><td>&lt;5% clinical dysfunction</td></tr><tr><td>Stomach</td><td>Max &lt;45 Gy</td><td>&lt;7% ulceration</td></tr><tr><td>Small bowel / peritoneal cavity</td><td>V45 Gy &lt;195 cc</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Rectum</td><td>V75 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Bladder</td><td>V80 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Penile bulb</td><td>Mean &lt;50 Gy</td><td>&lt;35% severe erectile dysfunction</td></tr></tbody></table></div>
+<h3>Spinal cord QUANTEC risk</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Spinal cord total dose，2 Gy/Fx</th><th>Risk of myelopathy</th></tr></thead><tbody><tr><td>50 Gy</td><td>0.2%</td></tr><tr><td>60 Gy</td><td>6%</td></tr><tr><td>69 Gy</td><td>50%</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<div class="table-wrap"><table class="oncology-table dose-table"><thead><tr><th>Organ</th><th>Constraint</th><th>Approximate risk</th></tr></thead><tbody><tr><td>Brain</td><td>Max &lt;60 Gy</td><td>&lt;3% symptomatic necrosis</td></tr><tr><td>Brainstem</td><td>Max &lt;54 Gy</td><td>&lt;5% neuropathy or necrosis</td></tr><tr><td>Optic nerves / chiasm</td><td>Max &lt;55 Gy</td><td>&lt;3% optic neuropathy</td></tr><tr><td>Spinal cord</td><td>Max &lt;50 Gy</td><td>&lt;0.3% myelopathy</td></tr><tr><td>Cochlea</td><td>Mean ≤45 Gy</td><td>&lt;30% sensorineural hearing loss</td></tr><tr><td>Bilateral parotid</td><td>Mean &lt;26 Gy</td><td>&lt;25% long-term salivary dysfunction</td></tr><tr><td>Lung</td><td>V20 ≤30%</td><td>&lt;20% symptomatic pneumonitis</td></tr><tr><td>Esophagus</td><td>Mean &lt;34 Gy</td><td>5–20% grade 3+ esophagitis</td></tr><tr><td>Heart</td><td>Mean &lt;26 Gy</td><td>&lt;15% pericarditis</td></tr><tr><td>Bilateral kidney</td><td>Mean &lt;15–18 Gy</td><td>&lt;5% clinical dysfunction</td></tr><tr><td>Stomach</td><td>Max &lt;45 Gy</td><td>&lt;7% ulceration</td></tr><tr><td>Small bowel / peritoneal cavity</td><td>V45 Gy &lt;195 cc</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Rectum</td><td>V75 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Bladder</td><td>V80 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Penile bulb</td><td>Mean &lt;50 Gy</td><td>&lt;35% severe erectile dysfunction</td></tr></tbody></table></div>
+<h3>Spinal cord QUANTEC risk</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Spinal cord total dose, 2 Gy/Fx</th><th>Risk of myelopathy</th></tr></thead><tbody><tr><td>50 Gy</td><td>0.2%</td></tr><tr><td>60 Gy</td><td>6%</td></tr><tr><td>69 Gy</td><td>50%</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': 'HYTEC',
+            'label_en': 'HYTEC',
+            'h2_zh': 'HYTEC constraints for SRS / SBRT',
+            'h2_en': 'HYTEC constraints for SRS / SBRT',
+            'body_zh': """
+<p>HYTEC 是 SRS / SBRT constraints 的常用 reference。Spinal cord constraints 約對應 1–5% myelopathy risk。</p>
+<div class="table-wrap"><table class="oncology-table dose-table compact-table"><thead><tr><th>Fractions</th><th>Spinal cord Dmax</th><th>Risk</th></tr></thead><tbody><tr><td>1</td><td>12.4 Gy</td><td>1–5%</td></tr><tr><td>2</td><td>17 Gy</td><td>1–5%</td></tr><tr><td>3</td><td>20.3 Gy</td><td>1–5%</td></tr><tr><td>4</td><td>23 Gy</td><td>1–5%</td></tr><tr><td>5</td><td>25.3 Gy</td><td>1–5%</td></tr></tbody></table></div>
+<div class="clinical-note">臨床提醒：SBRT / SRS 不能只看 physical dose，要轉 BED / EQD2 並結合 organ-specific tolerance、prior RT、fractionation、hot spot location。QUANTEC 適合 conventional RT，HYTEC 適合 SRS / SBRT，但最終仍應看 disease-site protocol。</div>
+""",
+            'body_en': """
+<p>HYTEC is a common reference for SRS / SBRT constraints. The spinal cord constraints below correspond roughly to 1–5% myelopathy risk.</p>
+<div class="table-wrap"><table class="oncology-table dose-table compact-table"><thead><tr><th>Fractions</th><th>Spinal cord Dmax</th><th>Risk</th></tr></thead><tbody><tr><td>1</td><td>12.4 Gy</td><td>1–5%</td></tr><tr><td>2</td><td>17 Gy</td><td>1–5%</td></tr><tr><td>3</td><td>20.3 Gy</td><td>1–5%</td></tr><tr><td>4</td><td>23 Gy</td><td>1–5%</td></tr><tr><td>5</td><td>25.3 Gy</td><td>1–5%</td></tr></tbody></table></div>
+<div class="clinical-note">Clinical reminder: SRS/SBRT cannot be judged by physical dose alone. Convert using BED/EQD2 and integrate organ-specific tolerance, prior RT, fractionation, and hotspot location. QUANTEC is most relevant for conventional RT; HYTEC is used for SRS/SBRT; disease-site protocol still matters.</div>
+""",
+        },
+
+        {
+            'label_zh': '臨床轉譯',
+            'label_en': 'CLINICAL TRANSLATION',
+            'h2_zh': 'Radiobiology clinical translation',
+            'h2_en': 'Clinical translation of radiobiology',
+            'body_zh': """
+<h3>一、為什麼 hypoxia 讓 RT 失效？</h3>
+<p>Low LET photons 很依賴 indirect free radical damage；oxygen 會把 radical-induced damage 固定成 permanent lesion。Hypoxia 時這些 lesion 較可能被 repair，因此 cell kill 下降。Photon OER 約 2.5–3，代表 hypoxic cells 可能需要約 2.5–3 倍 dose 才達到相同效果。</p>
+
+<h3>二、為什麼高 LET radiation 對 hypoxic tumors 有吸引力？</h3>
+<p>High LET radiation 造成 dense ionization 和 clustered DNA damage，較不依賴 oxygen，所以 OER 較低。α-particles 的 OER 約 1，代表幾乎沒有 oxygen enhancement effect。因此 hypoxic tumors 理論上較適合 high LET approaches，例如 carbon ions 或 alpha-emitter radiopharmaceutical therapy。</p>
+
+<h3>三、為什麼 fractionation 可保護正常組織？</h3>
+<p>Fractionation 讓正常組織有時間修復 sublethal damage，尤其是 late-responding tissues。Late tissues 低 α/β，對 fraction size 敏感，所以減小 dose per fraction 可以大幅降低 late toxicity BED。</p>
+
+<h3>四、為什麼 SBRT late toxicity 特別需要小心？</h3>
+<p>SBRT dose per fraction 高，對低 α/β tissues 的 BED 增幅很大。Serial organs 如 spinal cord、brainstem、optic apparatus 只要小 volume hot spot 過高就可能造成嚴重 toxicity，因此看 Dmax / D0.03cc 特別重要。</p>
+""",
+            'body_en': """
+<h3>1. Why does hypoxia reduce RT effectiveness?</h3>
+<p>Low-LET photons depend heavily on indirect free-radical damage. Oxygen fixes radical-induced damage into permanent lesions. Under hypoxia, these lesions are more likely to be repaired, reducing cell kill. Photon OER is about 2.5–3, meaning hypoxic cells may need 2.5–3 times the dose to achieve the same effect.</p>
+
+<h3>2. Why is high-LET radiation attractive for hypoxic tumors?</h3>
+<p>High-LET radiation creates dense ionization and clustered DNA damage, making it less dependent on oxygen. α-particles have OER around 1, meaning almost no oxygen enhancement effect. Hypoxic tumors may therefore be theoretically suited to high-LET approaches such as carbon ions or alpha-emitter radiopharmaceutical therapy.</p>
+
+<h3>3. Why does fractionation protect normal tissue?</h3>
+<p>Fractionation allows normal tissues to repair sublethal damage, especially late-responding tissues. Late tissues have low α/β and are sensitive to fraction size, so reducing dose per fraction can substantially reduce late-toxicity BED.</p>
+
+<h3>4. Why is SBRT late toxicity especially important?</h3>
+<p>SBRT uses high dose per fraction, which sharply increases BED in low-α/β tissues. Serial organs such as spinal cord, brainstem, and optic apparatus can be severely damaged by a small-volume hotspot, so Dmax / D0.03cc is critical.</p>
+""",
+        },
+
+        {
+            'label_zh': '高分表',
+            'label_en': 'HIGH-YIELD TABLES',
+            'h2_zh': '高分記憶表',
+            'h2_en': 'High-yield memory tables',
+            'body_zh': """
+<h3>α/β</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>記憶點</th><th>內容</th></tr></thead><tbody><tr><td>Early = high α/β</td><td>約 10；多數腫瘤、skin、GI、bone marrow</td></tr><tr><td>Late = low α/β</td><td>約 3；lung、kidney、liver、bladder</td></tr><tr><td>Cord = very low</td><td>約 2</td></tr><tr><td>Fraction size ↑</td><td>Late toxicity 特別 ↑</td></tr></tbody></table></div>
+<h3>DNA repair</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Damage</th><th>Repair</th><th>Key words</th></tr></thead><tbody><tr><td>Base error / SSB</td><td>BER</td><td>Glycosylase、APE1、PARP、XRCC1</td></tr><tr><td>Bulky adduct / UV dimer</td><td>NER</td><td>XP、Cockayne、TFIIH</td></tr><tr><td>Replication mismatch</td><td>MMR</td><td>Lynch、MLH1/MSH2/MSH6/PMS2</td></tr><tr><td>DSB fast / G1</td><td>NHEJ</td><td>Ku70/80、DNA-PKcs、Artemis、Ligase IV</td></tr><tr><td>DSB accurate / S-G2</td><td>HR</td><td>BRCA1/2、RAD51</td></tr><tr><td>Crosslink</td><td>Fanconi pathway</td><td>Fanconi anemia</td></tr></tbody></table></div>
+<h3>OER / LET / RBE</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>OER</td><td>Hypoxic dose / aerobic dose</td></tr><tr><td>Photon OER</td><td>2.5–3</td></tr><tr><td>Neutron OER</td><td>1.6</td></tr><tr><td>α-particle OER</td><td>1</td></tr><tr><td>LET</td><td>Energy deposited per unit track length</td></tr><tr><td>LET ↑</td><td>OER ↓，RBE ↑，survival curve shoulder ↓</td></tr><tr><td>RBE peak</td><td>約 100 keV/μm</td></tr><tr><td>RBE after peak</td><td>Overkill → RBE 下降</td></tr></tbody></table></div>
+<h3>Dose constraints</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Serial organ</td><td>Dmax / point dose matters</td></tr><tr><td>Parallel organ</td><td>Mean / Vx matters</td></tr><tr><td>Conventional constraints</td><td>QUANTEC</td></tr><tr><td>SRS / SBRT constraints</td><td>HYTEC</td></tr><tr><td>Re-irradiation</td><td>要非常小心，尤其 prior RT within last year</td></tr></tbody></table></div>
+""",
+            'body_en': """
+<h3>α/β</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Memory point</th><th>Content</th></tr></thead><tbody><tr><td>Early = high α/β</td><td>About 10; many tumors, skin, GI, bone marrow</td></tr><tr><td>Late = low α/β</td><td>About 3; lung, kidney, liver, bladder</td></tr><tr><td>Cord = very low</td><td>About 2</td></tr><tr><td>Fraction size ↑</td><td>Late toxicity especially ↑</td></tr></tbody></table></div>
+<h3>DNA repair</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Damage</th><th>Repair</th><th>Key words</th></tr></thead><tbody><tr><td>Base error / SSB</td><td>BER</td><td>Glycosylase, APE1, PARP, XRCC1</td></tr><tr><td>Bulky adduct / UV dimer</td><td>NER</td><td>XP, Cockayne, TFIIH</td></tr><tr><td>Replication mismatch</td><td>MMR</td><td>Lynch, MLH1/MSH2/MSH6/PMS2</td></tr><tr><td>DSB fast / G1</td><td>NHEJ</td><td>Ku70/80, DNA-PKcs, Artemis, Ligase IV</td></tr><tr><td>DSB accurate / S-G2</td><td>HR</td><td>BRCA1/2, RAD51</td></tr><tr><td>Crosslink</td><td>Fanconi pathway</td><td>Fanconi anemia</td></tr></tbody></table></div>
+<h3>OER / LET / RBE</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>OER</td><td>Hypoxic dose / aerobic dose</td></tr><tr><td>Photon OER</td><td>2.5–3</td></tr><tr><td>Neutron OER</td><td>1.6</td></tr><tr><td>α-particle OER</td><td>1</td></tr><tr><td>LET</td><td>Energy deposited per unit track length</td></tr><tr><td>LET ↑</td><td>OER ↓, RBE ↑, survival curve shoulder ↓</td></tr><tr><td>RBE peak</td><td>About 100 keV/μm</td></tr><tr><td>RBE after peak</td><td>Overkill → RBE falls</td></tr></tbody></table></div>
+<h3>Dose constraints</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Serial organ</td><td>Dmax / point dose matters</td></tr><tr><td>Parallel organ</td><td>Mean / Vx matters</td></tr><tr><td>Conventional constraints</td><td>QUANTEC</td></tr><tr><td>SRS / SBRT constraints</td><td>HYTEC</td></tr><tr><td>Re-irradiation</td><td>Be very careful, especially if prior RT was within the last year</td></tr></tbody></table></div>
+""",
+        },
+
+        {
+            'label_zh': '總結',
+            'label_en': 'TAKE-HOME',
+            'h2_zh': '最後總結',
+            'h2_en': 'Final take-home summary',
+            'body_zh': """
+<p>Radiobiology 可以用一條線串起來：</p>
+<div class="clinical-note">Radiation → direct / indirect DNA damage → DSB → ATM / γ-H2AX / 53BP1 / BRCA signaling → NHEJ or HR repair；若 repair failed 或 misrepair → chromosome aberration → cell death。</div>
+<p>Dose fractionation 的臨床意義是：用 BED / EQD2 把不同 fractionation 轉換成 biological dose；低 α/β late tissues 對大 fraction 特別敏感，所以 SBRT / hypofractionation 必須嚴格看 OAR constraints。</p>
+<p>OER、LET、RBE 的核心關係是：hypoxia 讓 low LET photons 變弱；LET 越高，oxygen dependency 越低，RBE 越高，但 RBE 在約 100 keV/μm 後因 overkill 下降。</p>
+<div class="clinical-note">臨床最重要的一句話：好的放射治療計畫不是只把 tumor dose 開高，而是在 TCP、NTCP、fractionation biology、oxygenation、DNA repair capacity、serial/parallel organ constraints 之間取得最佳平衡。</div>
+""",
+            'body_en': """
+<p>Radiobiology can be connected as one chain:</p>
+<div class="clinical-note">Radiation → direct / indirect DNA damage → DSB → ATM / γ-H2AX / 53BP1 / BRCA signaling → NHEJ or HR repair. If repair fails or misrepair occurs → chromosome aberration → cell death.</div>
+<p>The clinical meaning of dose fractionation is to convert different schedules into biological dose using BED/EQD2. Low-α/β late tissues are especially sensitive to large fractions, so SBRT/hypofractionation requires strict OAR constraints.</p>
+<p>The core relationship among OER, LET, and RBE is: hypoxia weakens low-LET photons; as LET increases, oxygen dependency falls and RBE rises, but RBE falls after about 100 keV/μm because of overkill.</p>
+<div class="clinical-note">The most important clinical sentence: a good radiotherapy plan is not simply dose escalation to the tumor; it is the optimal balance among TCP, NTCP, fractionation biology, oxygenation, DNA repair capacity, and serial/parallel organ constraints.</div>
+""",
+        },
+
     ],
-    "excel_sheet": None,
+
+    'excel_sheet': 'Radiobiology',
+
+    'trial_filter': [
+        'radiobiology',
+        'TCP',
+        'NTCP',
+        'fractionation',
+        'linear quadratic model',
+        'LQ model',
+        'BED',
+        'EQD2',
+        'alpha beta',
+        'α/β',
+        '4 Rs',
+        'repair',
+        'repopulation',
+        'redistribution',
+        'reoxygenation',
+        'DNA damage',
+        'double strand break',
+        'DSB',
+        'single strand break',
+        'SSB',
+        'gamma H2AX',
+        'γ-H2AX',
+        '53BP1',
+        'ATM',
+        'MRN',
+        'MRE11',
+        'RAD50',
+        'NBS1',
+        'CHK2',
+        'BRCA1',
+        'BRCA2',
+        'RAD51',
+        'NHEJ',
+        'homologous recombination',
+        'HR',
+        'BER',
+        'NER',
+        'MMR',
+        'PARP inhibitor',
+        'Fanconi',
+        'OER',
+        'oxygen enhancement ratio',
+        'hypoxia',
+        'pimonidazole',
+        'HIF-1 alpha',
+        'LET',
+        'linear energy transfer',
+        'RBE',
+        'relative biological effectiveness',
+        'QUANTEC',
+        'HYTEC',
+        'serial organ',
+        'parallel organ',
+        'SBRT',
+        'SRS',
+    ],
+
     "prev": ["physics.html", "物理", "Physics"],
     "next": ["cns.html", "CNS", "CNS"],
 })
+
 
 PAGES.append({
     "slug": "lingo",
