@@ -1,8 +1,8 @@
 """Extract Estes 2025 trials Excel into structured JSON."""
 import openpyxl, json, os, re
 
-SRC = r"C:\Users\ydai\Desktop\RT2\Rad Onc Tables - Key Studies Estes 2025.xlsx"
-OUT = r"C:\Users\ydai\Desktop\RT2\radonc-tutorial\data\trials.json"
+SRC = r"/Users/arthurdai/Desktop/radonc-tutorial/Rad Onc Tables - Key Studies Estes 2025.xlsx"
+OUT = r"/Users/arthurdai/Desktop/radonc-tutorial/radonc-tutorial-main/data/trials.json"
 
 FIELDS = {
     8: "topic", 9: "subtopic", 10: "trial", 11: "citation",

@@ -53,38 +53,37 @@ PAGES.append({
 # Add this block to the same Python file that defines PAGES.
 
 PAGES.append({
-    "slug": "physics",
-    "emoji": "⚛️",
-    "title_zh": "放射物理",
-    "title_en": "Radiation Physics",
-    "sub_zh": "Photon、electron、proton、CSI 技術、beam geometry、dose fall-off、field matching 與臨床選擇。",
-    "sub_en": "Photons, electrons, protons, CSI technique, beam geometry, dose fall-off, field matching, and clinical modality selection.",
-
+    'slug': 'physics',
+    'emoji': '⚛️',
+    'title_zh': '放射物理',
+    'title_en': 'Radiation Physics',
+    'sub_zh': '光子、電子、質子、全腦全脊髓照射技術、射束幾何、劑量遞減、照野銜接與臨床治療選擇。',
+    'sub_en': 'Photons, electrons, protons, CSI technique, beam geometry, dose fall-off, field matching, and clinical modality selection.',
     "sections": [
         {
-            "label_zh": "總論",
-            "label_en": "OVERVIEW",
+            "label_zh": '總論：光子、電子、質子與全腦全脊髓照射',
+            "label_en": 'OVERVIEW: Photons, electrons, protons, and CSI',
             "body_zh": """
-<p>Radiation physics 的核心不是只知道<span class="highlight">「哪一種 beam 比較深」</span>，而是理解：不同 radiation beam 的能量沉積方式不同，因此會決定 <strong>skin dose、Dmax、exit dose、field edge、penumbra、OAR dose、setup sensitivity</strong>，以及臨床 technique 的選擇。</p>
+<p>放射物理的核心不只是判斷<span class="highlight">「哪一種射束穿透得比較深」</span>，而是理解不同射束如何在人體內傳遞並沉積能量。這些物理特性會直接決定皮膚劑量、最大劑量深度（D<sub>max</sub>）、出口劑量、照野邊緣、半影、危及器官劑量，以及治療對擺位誤差與組織密度變化的敏感程度。</p>
 
 <div class="table-wrap">
 <table class="oncology-table">
 <thead>
-<tr><th>Beam type</th><th>核心特色</th><th>臨床用途</th></tr>
+<tr><th>射束種類</th><th>核心物理特性</th><th>常見臨床用途</th></tr>
 </thead>
 <tbody>
-<tr><td>Photon</td><td>穿透深、有 exit dose、Compton dominant</td><td>大多數 EBRT</td></tr>
-<tr><td>Electron</td><td>表淺沉積、快速 fall-off</td><td>Skin、chest wall boost、superficial lesion</td></tr>
-<tr><td>Proton</td><td>Bragg peak、低 exit dose、range uncertainty</td><td>Pediatric、base skull、CSI、re-irradiation selected cases</td></tr>
-<tr><td>CSI technique</td><td>多 field matching，避免 junction hot/cold spot</td><td>Medulloblastoma、germ cell tumor、ATRT、leptomeningeal disease</td></tr>
+<tr><td>光子（photon）</td><td>穿透深、具有出口劑量；百萬伏特能量下以康普頓散射為主</td><td>絕大多數體外放射治療</td></tr>
+<tr><td>電子（electron）</td><td>能量主要沉積於表淺組織，之後快速下降</td><td>皮膚腫瘤、胸壁或手術疤痕加量、其他表淺病灶</td></tr>
+<tr><td>質子（proton）</td><td>具有布拉格峰、遠端出口劑量低，但存在射程不確定性</td><td>兒童腫瘤、顱底腫瘤、全腦全脊髓照射及部分再照射病例</td></tr>
+<tr><td>全腦全脊髓照射（CSI）</td><td>靶區很長，通常需要多照野銜接，必須避免接合區過熱或劑量不足</td><td>髓母細胞瘤、生殖細胞瘤、非典型畸胎樣／橫紋肌樣瘤及軟腦膜播散</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="clinical-note">
-一句話整理：beam physics 決定 dose distribution；dose distribution 決定 tumor coverage 與 OAR tradeoff；setup uncertainty 和 tissue density change 會決定 technique 是否安全。
+<span class="highlight">射束物理特性決定劑量分布；劑量分布決定腫瘤覆蓋與危及器官之間的取捨；擺位誤差、器官移動與組織密度變化則決定治療技術是否安全。</span>
 </div>
-""",
+            """,
             "body_en": """
 <p>The core of radiation physics is not simply knowing which beam penetrates deeper. It is understanding how different radiation beams deposit energy differently, thereby determining <strong>skin dose, Dmax, exit dose, field edge, penumbra, OAR dose, setup sensitivity</strong>, and clinical technique selection.</p>
 
@@ -105,68 +104,65 @@ PAGES.append({
 <div class="clinical-note">
 One-line memory: beam physics determines dose distribution; dose distribution determines tumor coverage and OAR tradeoffs; setup uncertainty and density change determine whether a technique is safe.
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "Photon 基礎",
-            "label_en": "PHOTON BASICS",
-            "h2_zh": "第一部分：Photon beams",
-            "h2_en": "Photon beams",
+            "label_zh": '光子基礎：光子束的產生與交互作用',
+            "label_en": 'PHOTON BASICS: Photon production and interactions',
             "body_zh": """
-<h3>一、Photon 是什麼？</h3>
-<p>Photons 是 massless packets of energy，同時具有 wave-like 和 particle-like properties，是診斷與治療最常使用的 radiation。</p>
+<h3>一、什麼是光子？</h3>
+<p>光子是<span class="highlight">沒有靜止質量的能量量子</span>，同時具有波動性與粒子性，是診斷影像與放射治療最常使用的輻射形式。</p>
 
-<p>在 LINAC 裡，therapeutic photons 通常由 <strong>bremsstrahlung</strong> 產生：electrons 被加速後打到 tungsten target，高 Z material 使 electron 減速或偏折，能量以 X-ray photon 形式釋放。X-ray production efficiency 低，平均 X-ray energy 約為 incoming electron energy 的三分之一。</p>
+<p>在線性加速器（LINAC）中，治療用光子通常由<strong>制動輻射（bremsstrahlung）</strong>產生。高速電子撞擊鎢靶等高原子序材料後，受到原子核電場作用而減速或偏轉，部分動能便轉換成 X 光光子。X 光產生效率並不高，而產生的光子具有連續能譜，其平均能量通常約為入射電子最大能量的三分之一。</p>
 
-<h3>二、Photon interactions</h3>
+<h3>二、光子與物質的交互作用</h3>
 <div class="table-wrap">
 <table class="oncology-table">
 <thead>
-<tr><th>Interaction</th><th>發生機制</th><th>何時重要</th><th>Clinical relevance</th></tr>
+<tr><th>交互作用</th><th>發生機制</th><th>主要能量範圍</th><th>臨床意義</th></tr>
 </thead>
 <tbody>
-<tr><td>Coherent scattering</td><td>Elastic scattering，不失去能量</td><td>Very low energy</td><td>診斷影像低能區較相關</td></tr>
-<tr><td>Photoelectric effect</td><td>Photon 把全部能量給 inner shell electron</td><td>Lower energy；機率 ∝ Z³/E³</td><td>Bone / high-Z material dose enhancement</td></tr>
-<tr><td>Compton scattering</td><td>Photon 把部分能量給 outer shell electron，產生 scattered photon</td><td>Therapeutic energy dominant</td><td>MV photon therapy 主要 interaction</td></tr>
-<tr><td>Pair production</td><td>Photon 在 nucleus 附近轉成 electron + positron</td><td>&gt;1.022 MeV；∝ Z</td><td>高能 photon 相關</td></tr>
+<tr><td>相干散射</td><td>光子改變方向，但幾乎不損失能量，也不造成游離</td><td>極低能量</td><td>主要與低能量診斷影像有關</td></tr>
+<tr><td>光電效應</td><td>光子將全部能量轉移給內層軌域電子並使其逸出</td><td>較低能量；發生機率約與 Z³/E³ 成正比</td><td>高原子序物質與骨骼可產生較明顯的劑量增強</td></tr>
+<tr><td>康普頓散射</td><td>光子將部分能量轉移給外層電子，並形成能量較低的散射光子</td><td>百萬伏特治療能量最重要</td><td><span class="highlight">百萬伏特光子治療的主要交互作用</span></td></tr>
+<tr><td>成對產生</td><td>光子在原子核附近轉換成電子與正子</td><td>能量必須大於 1.022 MeV；發生率隨 Z 增加</td><td>高能量光子束中才具有明顯意義</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>Therapeutic photon energies 約 25 keV to 25 MeV 時，<strong>Compton interactions predominates</strong>。</p>
+<p>在約 25 keV 至 25 MeV 的治療相關能量範圍內，人體軟組織中的主要交互作用通常是<span class="highlight">康普頓散射</span>。</p>
 
-<h3>三、Compton scattering angle</h3>
+<h3>三、康普頓散射角度與散射光子能量</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Scatter angle</th><th>Photon energy behavior</th></tr>
+<tr><th>散射角度</th><th>散射光子的能量特性</th></tr>
 </thead>
 <tbody>
-<tr><td>0°</td><td>Photon loses no energy</td></tr>
-<tr><td>90°</td><td>Photon retains up to 0.511 MeV</td></tr>
-<tr><td>180° backscatter</td><td>Photon retains up to 0.255 MeV</td></tr>
+<tr><td>0°</td><td>光子方向不變，理論上幾乎不損失能量</td></tr>
+<tr><td>90°</td><td>在高入射能量極限下，散射光子能量最高趨近 0.511 MeV</td></tr>
+<tr><td>180° 反向散射</td><td>在高入射能量極限下，散射光子能量最高趨近 0.255 MeV</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="clinical-note">
-Photon energy 越高，scatter direction 越 forward-peaked；但 photons 仍會穿透 target 之後繼續沉積 dose，因此有 exit dose。
+光子能量越高，散射方向越偏向前方；但光子仍會穿過靶區並在其後方繼續沉積能量，因此<span class="highlight">光子治療具有出口劑量</span>。
 </div>
 
-<h3>四、Direct vs indirect action</h3>
+<h3>四、直接作用與間接作用</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Mechanism</th><th>Meaning</th></tr>
+<tr><th>作用機制</th><th>意義</th></tr>
 </thead>
 <tbody>
-<tr><td>Direct action</td><td>Radiation directly damages DNA</td></tr>
-<tr><td>Indirect action</td><td>Radiation ionizes water → free radicals → DNA damage</td></tr>
+<tr><td>直接作用</td><td>輻射直接與 DNA 交互作用並造成損傷</td></tr>
+<tr><td>間接作用</td><td>輻射先使水分子游離，產生活性自由基，再進一步損傷 DNA</td></tr>
 </tbody>
 </table>
 </div>
-""",
+            """,
             "body_en": """
 <h3>1. What is a photon?</h3>
 <p>Photons are massless packets of energy with both wave-like and particle-like properties. They are the most commonly used radiation type in diagnosis and therapy.</p>
@@ -220,26 +216,23 @@ Higher-energy photons scatter more forward, but photons still penetrate beyond t
 </tbody>
 </table>
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "Photon 劑量",
-            "label_en": "PHOTON DOSE",
-            "h2_zh": "KERMA、HVL、Dmax、beam profile 與 penumbra",
-            "h2_en": "KERMA, HVL, Dmax, beam profile, and penumbra",
+            "label_zh": '光子劑量學：KERMA、半值層、最大劑量深度、射束輪廓與半影',
+            "label_en": 'PHOTON DOSIMETRY: KERMA, HVL, Dmax, beam profile, and penumbra',
             "body_zh": """
-<h3>一、KERMA vs Dose</h3>
-<p><strong>KERMA</strong> 是 photon 把能量轉移給 charged particles，例如 electrons；<strong>Dose</strong> 是能量真正沉積在 medium 中。</p>
+<h3>一、KERMA 與吸收劑量的差異</h3>
+<p><strong>KERMA</strong>（單位質量所釋放的動能）描述光子將能量轉移給電子等帶電粒子的過程；<strong>吸收劑量（dose）</strong>則描述這些能量最後真正沉積在介質中的程度。</p>
 
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Term</th><th>Definition</th></tr>
+<tr><th>名詞</th><th>定義</th></tr>
 </thead>
 <tbody>
-<tr><td>KERMA</td><td>Kinetic energy released per unit mass；photon → electron energy transfer</td></tr>
-<tr><td>Dose</td><td>Energy deposited per unit mass；Gy = J/kg</td></tr>
+<tr><td>KERMA</td><td>單位質量中由非帶電粒子轉移給帶電粒子的初始動能</td></tr>
+<tr><td>吸收劑量</td><td>單位質量實際吸收的能量；1 Gy = 1 J/kg</td></tr>
 </tbody>
 </table>
 </div>
@@ -247,44 +240,44 @@ Higher-energy photons scatter more forward, but photons still penetrate beyond t
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Region</th><th>Relationship</th></tr>
+<tr><th>區域</th><th>KERMA 與劑量的關係</th></tr>
 </thead>
 <tbody>
-<tr><td>Surface / buildup region</td><td>Dose &lt; KERMA</td></tr>
-<tr><td>Dmax</td><td>Dose reaches maximum</td></tr>
-<tr><td>Equilibrium region</td><td>Dose roughly follows attenuation</td></tr>
+<tr><td>皮膚表面／劑量建立區</td><td>次級電子尚未完全建立平衡，因此吸收劑量通常小於 KERMA</td></tr>
+<tr><td>最大劑量深度</td><td>次級電子建立最充分，吸收劑量達到最高值</td></tr>
+<tr><td>近似帶電粒子平衡區</td><td>深度劑量大致隨光子衰減而下降</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="clinical-note">
-MV photon 的 skin-sparing effect 來自 buildup region：最大 dose 不是在皮膚表面，而是在一定深度。
+<span class="highlight">百萬伏特光子的皮膚保護效應來自劑量建立區：最大劑量不位於皮膚表面，而是在一定深度的 D<sub>max</sub>。</span>
 </div>
 
-<h3>二、Attenuation、beam hardening、HVL</h3>
+<h3>二、衰減、射束硬化與半值層</h3>
 <div class="formula-box">HVL = ln(2) / μ = 0.693 / μ</div>
 
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Concept</th><th>Meaning</th></tr>
+<tr><th>概念</th><th>意義</th></tr>
 </thead>
 <tbody>
-<tr><td>HVL</td><td>把 beam intensity 降到一半所需 material thickness</td></tr>
-<tr><td>Monoenergetic beam</td><td>HVL1 = HVL2</td></tr>
-<tr><td>Polyenergetic beam</td><td>HVL2 &gt; HVL1，因為 beam hardening</td></tr>
+<tr><td>半值層（HVL）</td><td>使射束強度降低至原來一半所需的材料厚度</td></tr>
+<tr><td>單能射束</td><td>第一半值層與第二半值層相同</td></tr>
+<tr><td>多能射束</td><td>第二半值層通常大於第一半值層，因低能光子先被濾除而產生射束硬化</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>三、Photon PDD 與 Dmax</h3>
+<h3>三、光子百分深度劑量與最大劑量深度</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Photon energy</th><th>Approximate Dmax</th></tr>
+<tr><th>光子能量</th><th>約略最大劑量深度</th></tr>
 </thead>
 <tbody>
-<tr><td>Co-60 γ-rays</td><td>0.5 cm</td></tr>
+<tr><td>鈷-60 γ 射線</td><td>0.5 cm</td></tr>
 <tr><td>6 MV</td><td>1.5 cm</td></tr>
 <tr><td>10 MV</td><td>2.5 cm</td></tr>
 <tr><td>15 MV</td><td>3.0 cm</td></tr>
@@ -294,42 +287,42 @@ MV photon 的 skin-sparing effect 來自 buildup region：最大 dose 不是在�
 </div>
 
 <div class="clinical-note">
-Rule of thumb：≤10 MV 時 Dmax 約 energy / 4；≥15 MV 時 Dmax 約 energy / 5。Photon energy 越高，Dmax 越深，surface dose 越低。
+常用粗略估算：能量不高於 10 MV 時，D<sub>max</sub>（cm）約為能量（MV）除以 4；能量至少 15 MV 時約除以 5。<span class="highlight">光子能量越高，D<sub>max</sub> 越深，表面劑量通常越低。</span>
 </div>
 
-<h3>四、Flattening filter 與 FFF</h3>
-<p>Flattening filter 是高 Z material，用來 flatten photon beam profile。它會濾掉低能 photons，因此 beam intensity 下降但 average energy 上升。FFF beam 移除 flattening filter，dose rate 較高、治療更有效率，常用於 SRS/SBRT，但 average energy 較低、profile 不再平坦。</p>
+<h3>四、均整濾器與無均整濾器射束</h3>
+<p>均整濾器（flattening filter）由高原子序材料製成，用於使光子射束橫向輪廓在參考深度附近較為平坦。它會優先移除較多中央軸與低能量光子，因此降低輸出率，但提高射束的平均能量。無均整濾器（FFF）射束移除該濾器，可提供更高劑量率並縮短治療時間，常用於立體定位放射手術或立體定位身體放射治療；其代價是射束輪廓不再平坦，且平均能量較低。</p>
 
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Beam type</th><th>Dose rate</th><th>Average energy</th><th>Typical use</th></tr>
+<tr><th>射束型態</th><th>劑量率</th><th>平均能量</th><th>常見用途</th></tr>
 </thead>
 <tbody>
-<tr><td>Flattened beam</td><td>Lower</td><td>Higher</td><td>Conventional RT</td></tr>
-<tr><td>FFF beam</td><td>Higher</td><td>Lower</td><td>SRS/SBRT，high dose-rate treatment</td></tr>
+<tr><td>具有均整濾器的射束</td><td>較低</td><td>較高</td><td>一般分次放射治療</td></tr>
+<tr><td>FFF 射束</td><td><span class="highlight">較高</span></td><td>較低</td><td>SRS、SBRT 與其他高劑量率治療</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>五、Penumbra</h3>
+<h3>五、半影</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Penumbra type</th><th>Cause</th></tr>
+<tr><th>半影類型</th><th>主要成因</th></tr>
 </thead>
 <tbody>
-<tr><td>Transmission penumbra</td><td>Jaw / MLC transmission；MLC rounded leaf edge 可讓 transmission penumbra 更穩定</td></tr>
-<tr><td>Geometric penumbra</td><td>Source size、SSD、SCD / SDD</td></tr>
-<tr><td>Radiological penumbra</td><td>Beam energy、tissue density、scatter</td></tr>
+<tr><td>穿透半影</td><td>準直器或多葉準直器的有限厚度與穿透；圓弧形葉片末端可使不同位置的穿透半影較一致</td></tr>
+<tr><td>幾何半影</td><td>有效射源大小、射源至皮膚距離，以及射源至準直器或偵測平面的距離</td></tr>
+<tr><td>放射學半影</td><td>射束能量、組織密度與側向散射</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="clinical-note">
-Geometric penumbra 記法：source size ↑ → penumbra ↑；SSD ↑ → penumbra ↑；SDD / SCD ↑ → penumbra ↓。Field edge 常以 50% prescription dose 定義。
+幾何半影的高頻記憶：<span class="highlight">射源越大或 SSD 越大，半影越寬；射源至準直器／偵測平面的距離越大，半影越窄。</span>照野邊緣通常以中央軸劑量的 50% 等劑量線定義。
 </div>
-""",
+            """,
             "body_en": """
 <h3>1. KERMA versus dose</h3>
 <p><strong>KERMA</strong> is the energy transferred from photons to charged particles such as electrons. <strong>Dose</strong> is the energy actually deposited in the medium.</p>
@@ -418,68 +411,65 @@ Rule of thumb: for ≤10 MV, Dmax is about energy / 4; for ≥15 MV, Dmax is abo
 <div class="clinical-note">
 Geometric penumbra memory: source size ↑ → penumbra ↑; SSD ↑ → penumbra ↑; SDD / SCD ↑ → penumbra ↓. Field edge is commonly defined by the 50% prescription dose line.
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "Electron 基礎",
-            "label_en": "ELECTRON BASICS",
-            "h2_zh": "第二部分：Electron beams",
-            "h2_en": "Electron beams",
+            "label_zh": '電子束基礎：電子束產生、深度劑量與常用估算公式',
+            "label_en": 'ELECTRON BASICS: Production, depth dose, and rules of thumb',
             "body_zh": """
-<h3>一、Electron beam delivery</h3>
-<p>Electron treatment 時，LINAC head 裡的 setup 與 photon 不同：X-ray target removed、scattering foil inserted、electron applicator / cone applied。Scattering foil 讓 electron beam spread 並使 dose distribution 均勻；cone 則限制 beam 大小與形狀，避免 electrons 過度 lateral spread。</p>
+<h3>一、電子束如何由直線加速器輸出？</h3>
+<p>使用電子束治療時，直線加速器機頭的設定與光子模式不同：X 光靶會移出射束路徑，改放入散射箔，並加裝電子束照射筒或錐形準直器。散射箔可使原本狹窄的電子束展開並改善橫向均勻度；照射筒則限制照野大小與形狀，減少電子過度向側方散射。</p>
 
-<h3>二、Electron fundamentals</h3>
-<p>Electrons 是 charged particles，resting mass energy = 0.511 MeV。Electrons 主要用於 superficial tumors，因為 dose 表淺沉積且快速 fall-off，practical range 約為 E/2。</p>
+<h3>二、電子束的基本特性</h3>
+<p>電子是帶負電的粒子，靜止質量能量為 0.511 MeV。由於電子在組織中持續發生碰撞與散射，其劑量主要沉積於表淺區域，之後快速下降，因此最適合治療表淺腫瘤。<span class="highlight">電子束的實用射程約為能量 E（MeV）除以 2，單位為公分。</span></p>
 
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Beam</th><th>Depth behavior</th></tr>
+<tr><th>射束</th><th>深度劑量特性</th></tr>
 </thead>
 <tbody>
-<tr><td>Photon</td><td>穿透全身，有 exit dose</td></tr>
-<tr><td>Electron</td><td>表淺沉積，快速 fall-off</td></tr>
-<tr><td>Proton</td><td>Bragg peak，低 distal dose</td></tr>
+<tr><td>光子</td><td>可穿透深部組織，靶區後方仍有出口劑量</td></tr>
+<tr><td>電子</td><td>表淺劑量高，超過實用射程後迅速下降</td></tr>
+<tr><td>質子</td><td>在特定深度形成布拉格峰，遠端劑量快速下降</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>三、Electron vs photon PDD</h3>
+<h3>三、電子束與光子束的百分深度劑量比較</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Property</th><th>Photon</th><th>Electron</th></tr>
+<tr><th>特性</th><th>光子</th><th>電子</th></tr>
 </thead>
 <tbody>
-<tr><td>Surface dose with higher energy</td><td>Lower</td><td>Higher</td></tr>
-<tr><td>Dmax with higher energy</td><td>Deeper</td><td>Deeper</td></tr>
-<tr><td>Exit dose</td><td>Present</td><td>Minimal after practical range</td></tr>
-<tr><td>Fall-off</td><td>Gradual</td><td>Rapid distal fall-off</td></tr>
+<tr><td>能量增加時的表面劑量</td><td>通常下降</td><td>通常上升</td></tr>
+<tr><td>能量增加時的 D<sub>max</sub></td><td>變深</td><td>變深</td></tr>
+<tr><td>出口劑量</td><td>存在</td><td>超過實用射程後極低</td></tr>
+<tr><td>遠端劑量遞減</td><td>較緩慢</td><td><span class="highlight">快速下降</span></td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>四、Electron rules of thumb：「5-4-3-2」</h3>
+<h3>四、電子束「5－4－3－2」快速估算法</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Electron property</th><th>Formula</th></tr>
+<tr><th>電子束參數</th><th>常用估算</th></tr>
 </thead>
 <tbody>
-<tr><td>Dmax</td><td>E / 5</td></tr>
-<tr><td>90% isodose line</td><td>E / 4；多數來源用 E / 3.2–3.3</td></tr>
-<tr><td>80% isodose line</td><td>E / 3；多數來源用 E / 2.8</td></tr>
-<tr><td>Practical range</td><td>E / 2</td></tr>
+<tr><td>最大劑量深度</td><td>E / 5</td></tr>
+<tr><td>90% 等劑量深度</td><td>粗略估算 E / 4；較常用的經驗值約為 E / 3.2–3.3</td></tr>
+<tr><td>80% 等劑量深度</td><td>粗略估算 E / 3；較常用的經驗值約為 E / 2.8</td></tr>
+<tr><td>實用射程</td><td><span class="highlight">E / 2</span></td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="clinical-note">
-注意：source example 中 9 MeV 寫 Dmax = 9/5 = ~4.5 cm 應為筆誤；9/5 約 1.8 cm，9/2 = 4.5 cm 才是 practical range。
+原始資料若寫成「9 MeV 的 D<sub>max</sub> = 9/5 ≈ 4.5 cm」屬於計算錯誤。正確為 9/5 ≈ 1.8 cm；9/2 = 4.5 cm 才是實用射程。
 </div>
-""",
+            """,
             "body_en": """
 <h3>1. Electron beam delivery</h3>
 <p>Electron delivery uses a different LINAC head setup from photons: the X-ray target is removed, a scattering foil is inserted, and an electron applicator / cone is applied. The scattering foil spreads the electron beam and makes dose more uniform; the cone collimates the field and limits excessive lateral spread.</p>
@@ -533,77 +523,78 @@ Geometric penumbra memory: source size ↑ → penumbra ↑; SSD ↑ → penumbr
 <div class="clinical-note">
 Important correction: if a 9 MeV example says Dmax = 9/5 = ~4.5 cm, that is a typo. 9/5 is about 1.8 cm; 9/2 = 4.5 cm is the practical range.
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "Electron 規劃",
-            "label_en": "ELECTRON PLANNING",
-            "h2_zh": "Electron field size、angle、bolus 與 shielding",
-            "h2_en": "Electron field size, angle, bolus, and shielding",
+            "label_zh": '電子束規劃：照野大小、入射角度、組織補償物與屏蔽',
+            "label_en": 'ELECTRON PLANNING: Field size, angle, bolus, and shielding',
             "body_zh": """
-<h3>一、其他 electron formula</h3>
+<h3>一、其他常用電子束估算公式</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Formula</th><th>Meaning</th></tr>
+<tr><th>公式</th><th>臨床意義</th></tr>
 </thead>
 <tbody>
-<tr><td>Stopping power 約 2.33 MeV/cm，也常簡化為 2 MeV/cm</td><td>Electron 在水中每 cm 能量損失</td></tr>
-<tr><td>Depth of lateral equilibrium √E</td><td>建立 lateral equilibrium 的深度概念</td></tr>
-<tr><td>Radius of lateral equilibrium 0.5 × √E</td><td>Field margin / lateral scatter 概念</td></tr>
-<tr><td>Distance from tumor edge 90% IDL to field edge 50% IDL = E / 10</td><td>Electron field edge margin 估算</td></tr>
-<tr><td>Lead shield thickness = E / 2 mm + 1 mm</td><td>Lead shielding 估算</td></tr>
-<tr><td>Cerrobend thickness = lead thickness × 1.2</td><td>Cerrobend shielding 估算</td></tr>
+<tr><td>阻止本領約 2.33 MeV/cm，常簡化為 2 MeV/cm</td><td>估算電子在水或軟組織中每公分損失的能量</td></tr>
+<tr><td>側向電子平衡深度約為 √E</td><td>建立足夠側向散射平衡所需的深度概念</td></tr>
+<tr><td>側向電子平衡半徑約為 0.5 × √E</td><td>估算照野邊界與側向散射所需的安全邊界</td></tr>
+<tr><td>腫瘤邊緣的 90% 等劑量線至照野 50% 邊緣約為 E / 10</td><td>電子束照野邊界的粗略估算</td></tr>
+<tr><td>鉛屏蔽厚度約為 E / 2 mm + 1 mm</td><td>估算阻擋電子束所需的鉛厚度</td></tr>
+<tr><td>Cerrobend 厚度約為鉛厚度 × 1.2</td><td>估算低熔點合金屏蔽厚度</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>二、Electron energy 與 field size effect</h3>
-<p>High-energy electrons 比較 forward-directed；low-energy electrons 比較 lateral scatter。Small field size 會讓 skin dose 較高、Dmax 較淺、PDD fall-off less steep；cutout 越小，dose 越接近 skin surface。</p>
+<h3>二、電子能量與照野大小的影響</h3>
+<p>高能電子的運動方向較集中於前方；低能電子則具有較明顯的側向散射。當照野或 cutout 過小時，側向電子平衡可能不足，使深度劑量分布改變。一般而言，小照野會使表面劑量升高、D<sub>max</sub> 變淺，且遠端劑量下降變得較不陡峭。</p>
 
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Field size</th><th>Skin dose</th><th>Dmax</th><th>PDD fall-off</th></tr>
+<tr><th>照野大小</th><th>表面劑量</th><th>D<sub>max</sub></th><th>遠端劑量下降</th></tr>
 </thead>
 <tbody>
-<tr><td>Smaller field</td><td>Higher</td><td>Shallower</td><td>Less steep</td></tr>
-<tr><td>Larger field</td><td>Lower</td><td>Deeper</td><td>Steeper</td></tr>
+<tr><td>較小照野</td><td>較高</td><td>較淺</td><td>較不陡峭</td></tr>
+<tr><td>較大照野</td><td>較低</td><td>較深</td><td>較陡峭</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>三、Beam angle：為什麼 electron 要 en face？</h3>
-<p>Electron beam 對 obliquity 很敏感。Incident angle 越斜，isodose lines 會被拉向 surface，造成 deeper target under-coverage。因此 electron 最好 treat <strong>en face</strong>，也就是 beam perpendicular to treatment surface。</p>
+<h3>三、為什麼電子束應盡量正面入射？</h3>
+<p>電子束對斜向入射非常敏感。入射角越斜，等劑量線越容易向皮膚表面拉近，造成深部靶區劑量不足與表面熱點。因此，電子束應盡量採用<strong>正面入射（en face）</strong>，也就是使射束近似垂直於治療表面。<span class="highlight">電子束規劃最忌諱明顯斜入射與不規則表面。</span></p>
 
-<h3>四、Electron planning for skin cancer</h3>
+<h3>四、皮膚腫瘤的電子束規劃流程</h3>
 <ol>
-<li>Measure lesion depth → choose beam energy</li>
-<li>Measure length / width → choose field size</li>
-<li>Margin 常為 1.5–2.5 cm，並考慮 0.5 × √E lateral equilibrium</li>
-<li>Simulation position 要盡量讓 lesion en face</li>
-<li>Face/head-neck lesion 可用 thermoplastic mask</li>
-<li>Bolus 常用 0.5–1.5 cm，依 energy 和 prescription depth</li>
-<li>Eye / oral mucosa 可考慮 lead shielding</li>
-<li>Clinical setup 常 prescribe to 90% isodose line</li>
+<li>測量病灶深度，據此選擇電子能量。</li>
+<li>測量病灶長度與寬度，決定照野及 cutout 大小。</li>
+<li>臨床邊界常取 1.5–2.5 cm，並納入 0.5 × √E 的側向電子平衡概念。</li>
+<li>模擬定位時盡量使病灶表面與射束垂直。</li>
+<li>顏面或頭頸部病灶可使用熱塑面膜固定。</li>
+<li>依能量與處方深度使用約 0.5–1.5 cm 的組織補償物（bolus）。</li>
+<li>靠近眼球或口腔黏膜時，可考慮內置鉛屏蔽。</li>
+<li>臨床上常將處方劑量給在<span class="highlight">90% 等劑量線</span>。</li>
 </ol>
 
-<h3>五、Lead shield 與 backscatter</h3>
-<p>Lead shield 常用於 eye 或 oral cavity protection。但如果只放 lead，beam side electron backscatter 會增加 dose 並造成 hotspot。因此常用 <strong>wax-coated lead</strong> 來吸收 backscatter。</p>
+<h3>五、鉛屏蔽與電子反向散射</h3>
+<p>鉛屏蔽常用於保護眼球或口腔黏膜。然而，裸露鉛片的射束入射側會產生明顯電子反向散射，使鄰近組織劑量升高並形成熱點。因此臨床上常在鉛片表面覆蓋蠟或壓克力等低原子序材料，以吸收反向散射電子。</p>
 
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Shield</th><th>Formula</th></tr>
+<tr><th>屏蔽材料</th><th>厚度估算</th></tr>
 </thead>
 <tbody>
-<tr><td>Lead thickness</td><td>E / 2 mm + 1 mm</td></tr>
-<tr><td>Cerrobend thickness</td><td>Lead thickness × 1.2</td></tr>
+<tr><td>鉛</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>Cerrobend</td><td>鉛厚度 × 1.2</td></tr>
 </tbody>
 </table>
 </div>
-""",
+
+<div class="clinical-note">
+<span class="highlight">使用內置鉛屏蔽時，必須同時處理鉛片前方的電子反向散射；不能只考慮穿透屏蔽所需的厚度。</span>
+</div>
+            """,
             "body_en": """
 <h3>1. Additional electron formulas</h3>
 <div class="table-wrap">
@@ -666,57 +657,54 @@ Important correction: if a 9 MeV example says Dmax = 9/5 = ~4.5 cm, that is a ty
 </tbody>
 </table>
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "Proton 基礎",
-            "label_en": "PROTON BASICS",
-            "h2_zh": "第三部分：Proton beams",
-            "h2_en": "Proton beams",
+            "label_zh": '質子基礎：相對生物效應、布拉格峰與射束傳遞技術',
+            "label_en": 'PROTON BASICS: RBE, Bragg peak, and delivery techniques',
             "body_zh": """
-<h3>一、Proton basics</h3>
-<p>Proton mass 約為 electron 的 2000 倍。Electron rest mass energy 是 0.511 MeV，proton 約 938 MeV。Protons 通常由 cyclotron 或 synchrotron 產生；cyclotron 讓 particles 走 spiral path，synchrotron 則是 closed loop acceleration。</p>
+<h3>一、質子的基本物理特性</h3>
+<p>質子的質量約為電子的 1836 倍，臨床教學常近似記為 2000 倍。電子的靜止質量能量為 0.511 MeV，質子則約為 938 MeV。治療用質子通常由迴旋加速器或同步加速器產生：迴旋加速器使粒子沿逐漸擴大的螺旋路徑加速；同步加速器則讓粒子在固定環形軌道中反覆加速。</p>
 
-<h3>二、Proton RBE</h3>
+<h3>二、質子的相對生物效應</h3>
 <div class="formula-box">RBE<sub>proton</sub> = 1.1</div>
-<p>臨床上常用 proton physical dose × 1.1 表示 biological equivalent dose。Dose 可寫成 CGE 或 Gy equivalent，但 ICRU 建議報告 <strong>D<sub>RBE</sub></strong>。Carbon RBE 約 3 或更高。</p>
+<p>臨床上通常以質子物理劑量乘以 1.1，表示其相對於高能光子的生物效應。歷史上可見 CGE 或 Gy equivalent 等寫法，但國際輻射單位與測量委員會建議以 <strong>D<sub>RBE</sub></strong> 表示。<span class="highlight">臨床質子治療一般採固定 RBE = 1.1</span>，但實際 RBE 會受線性能量轉移、分次劑量與組織生物學影響，尤其在布拉格峰遠端可能上升。</p>
 
-<h3>三、Bragg peak</h3>
-<p>Proton 穿過 tissue 時會逐漸失去能量；在停止前的深度釋放最大能量，形成 <strong>Bragg peak</strong>。Higher proton energy 會讓 penetration 更深。</p>
+<h3>三、布拉格峰</h3>
+<p>質子穿過組織時會逐漸減速，並在即將停止前於特定深度釋放最大能量，形成<strong>布拉格峰（Bragg peak）</strong>。質子能量越高，射程越深。布拉格峰之後的遠端劑量快速下降，因此可大幅減少靶區後方的出口劑量。</p>
 
 <div class="clinical-note">
-Photon 是一路衰減穿過去；proton 是在指定深度爆發後停止。
+<span class="highlight">光子沿路逐漸衰減並穿出人體；質子則在設定深度形成高劑量峰值，之後迅速停止。</span>
 </div>
 
-<h3>四、Pristine Bragg peak 與 SOBP</h3>
+<h3>四、單一布拉格峰與展寬布拉格峰</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Bragg type</th><th>Meaning</th></tr>
+<tr><th>型態</th><th>意義</th></tr>
 </thead>
 <tbody>
-<tr><td>Pristine Bragg peak</td><td>單一能量 proton，peak 很窄</td></tr>
-<tr><td>SOBP</td><td>多種能量 proton 疊加，cover 整個 tumor depth</td></tr>
+<tr><td>單一布拉格峰</td><td>由單一能量質子形成，峰值狹窄，只能覆蓋有限深度</td></tr>
+<tr><td>展寬布拉格峰（SOBP）</td><td>疊加多種能量的質子峰值，使高劑量區覆蓋整個腫瘤厚度</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>五、Passive scattering vs active scanning</h3>
+<h3>五、被動散射與主動掃描</h3>
 <div class="table-wrap">
 <table class="oncology-table">
 <thead>
-<tr><th>Technique</th><th>Advantage</th><th>Problem</th></tr>
+<tr><th>技術</th><th>優點</th><th>主要限制</th></tr>
 </thead>
 <tbody>
-<tr><td>Passive scattering</td><td>Robust, simpler historically</td><td>Higher surface dose, patient-specific hardware</td></tr>
-<tr><td>Pencil beam scanning</td><td>Better conformity, IMPT possible</td><td>Motion / interplay / range uncertainty sensitive</td></tr>
+<tr><td>被動散射</td><td>技術成熟、歷史上較簡單且對部分誤差較穩健</td><td>表面與非靶區劑量較高，並需要病人專用硬體</td></tr>
+<tr><td>鉛筆束掃描</td><td>順形度較佳，可進行強度調控質子治療</td><td>對呼吸移動、交互效應與射程不確定性較敏感</td></tr>
 </tbody>
 </table>
 </div>
 
-<p>Passive scattering 透過 range shifter、range modulator / wheel / ridge filter、scattering foils、compensator 來改變 beam energy 與 shape。Active scanning 則是 pencil beam technique，用細 beam 逐點 paint target，conformity 較好，但 motion 更需要小心。</p>
-""",
+<p>被動散射使用射程移位器、射程調制器、脊形濾器、散射箔與補償器等硬體調整能量與劑量形狀。主動掃描則以細小鉛筆束逐點描繪靶區，順形度較高，但對器官移動與治療時序更敏感。</p>
+            """,
             "body_en": """
 <h3>1. Proton basics</h3>
 <p>A proton is about 2000 times heavier than an electron. Electron rest mass energy is 0.511 MeV, while proton rest mass energy is about 938 MeV. Protons are usually produced by cyclotron or synchrotron. A cyclotron uses a spiral path, whereas a synchrotron uses closed-loop acceleration.</p>
@@ -759,38 +747,35 @@ Photons attenuate as they pass through; protons deposit a burst of dose at a sel
 </div>
 
 <p>Passive scattering uses hardware such as range shifters, range modulators / wheels / ridge filters, scattering foils, and compensators to shape beam energy and distribution. Active scanning uses pencil beams to paint the target spot by spot; it improves conformity but is more sensitive to motion.</p>
-"""
+            """
         },
-
         {
-            "label_zh": "Proton uncertainty",
-            "label_en": "PROTON UNCERTAINTY",
-            "h2_zh": "Proton range uncertainty 與臨床限制",
-            "h2_en": "Proton range uncertainty and clinical limitations",
+            "label_zh": '質子治療限制：射程不確定性與臨床風險',
+            "label_en": 'PROTON LIMITATIONS: Range uncertainty and clinical risks',
             "body_zh": """
-<p>Proton 最大優勢是 distal fall-off，但最大弱點也是 distal fall-off：range 錯了，target 或 OAR dose 都可能錯。</p>
+<p>質子治療最大的優勢是遠端劑量快速下降，但這同時也是其最大弱點：<span class="highlight">一旦射程估算錯誤，高劑量區可能停在腫瘤之前，或延伸進入遠端危及器官。</span></p>
 
 <div class="table-wrap">
 <table class="oncology-table">
 <thead>
-<tr><th>Uncertainty</th><th>Clinical issue</th></tr>
+<tr><th>不確定性來源</th><th>可能造成的臨床問題</th></tr>
 </thead>
 <tbody>
-<tr><td>Tissue inhomogeneity</td><td>Bone、air cavity、metal artifact、chemo port 可改變 distal edge</td></tr>
-<tr><td>Anatomical change</td><td>Weight loss、tumor shrinkage 影響 range</td></tr>
-<tr><td>Motion</td><td>Lung / liver tumors 特別重要</td></tr>
-<tr><td>Air / soft tissue interface</td><td>Range calculation uncertainty</td></tr>
-<tr><td>CT HU / density conversion</td><td>Stopping power uncertainty</td></tr>
+<tr><td>組織不均質</td><td>骨骼、含氣腔室、金屬偽影或靜脈輸液座均可能改變遠端射程</td></tr>
+<tr><td>解剖構造改變</td><td>體重減輕、腫瘤縮小或積液變化會改變水等效路徑長度</td></tr>
+<tr><td>器官移動</td><td>肺與肝臟腫瘤尤其重要，可能同時造成射程變化與鉛筆束交互效應</td></tr>
+<tr><td>空氣與軟組織交界</td><td>密度突變使射程計算更加不穩定</td></tr>
+<tr><td>CT 值至阻止本領的轉換</td><td>校正誤差會直接轉化為質子射程誤差</td></tr>
 </tbody>
 </table>
 </div>
 
-<div class="formula-box">Distal margin = 0.035 × CTV<sub>distal</sub> + 3 mm</div>
+<div class="formula-box">遠端邊界 = 0.035 × CTV<sub>distal</sub> + 3 mm</div>
 
 <div class="clinical-note">
-Exact distal margin formula may vary between centers。臨床上 proton planning 必須重視 density change、motion、anatomical adaptation、robust optimization 與 image guidance。
+上述遠端邊界公式僅為傳統經驗估算，各中心可能採用不同模型。現代質子規劃必須整合<span class="highlight">穩健最佳化、密度與解剖變化評估、器官移動管理、影像導引及必要時的適應性重規劃</span>。
 </div>
-""",
+            """,
             "body_en": """
 <p>The greatest advantage of protons is distal fall-off, but the greatest weakness is also distal fall-off: if range is wrong, target coverage or OAR dose can be wrong.</p>
 
@@ -814,86 +799,83 @@ Exact distal margin formula may vary between centers。臨床上 proton planning
 <div class="clinical-note">
 The exact distal-margin formula varies by center. Clinically, proton planning must consider density change, motion, anatomical adaptation, robust optimization, and image guidance.
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "CSI 基礎",
-            "label_en": "CSI BASICS",
-            "h2_zh": "第四部分：Craniospinal irradiation, CSI",
-            "h2_en": "Craniospinal irradiation, CSI",
+            "label_zh": '全腦全脊髓照射基礎：適應症、模擬定位、靶區與照野設計',
+            "label_en": 'CSI BASICS: Indications, simulation, targets, and field design',
             "body_zh": """
-<p>CSI 是 radiation physics 與 clinical technique 的高整合應用，核心問題是：很長的 target，需要多個 fields，而且 field junction 不能產生 spinal cord hotspot 或 cold spot。</p>
+<p>全腦全脊髓照射（craniospinal irradiation, CSI）是放射物理與臨床技術高度整合的治療。其核心挑戰是靶區從顱內延伸至整個脊髓蛛網膜下腔，長度通常超過單一照野可涵蓋的範圍，因此必須使用多個照野或多個等中心，同時避免接合區在脊髓內形成熱點或冷點。</p>
 
-<h3>一、CSI indications</h3>
+<h3>一、常見適應症</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Population</th><th>Disease</th></tr>
+<tr><th>族群</th><th>疾病</th></tr>
 </thead>
 <tbody>
-<tr><td>Pediatric CNS tumors</td><td>Medulloblastoma</td></tr>
-<tr><td>Pediatric CNS tumors</td><td>Non-germinomatous germ cell tumors</td></tr>
-<tr><td>Pediatric CNS tumors</td><td>ATRT</td></tr>
-<tr><td>Pediatric CNS tumors</td><td>Metastatic ependymoma</td></tr>
-<tr><td>Adult CNS</td><td>Metastatic leptomeningeal disease，例如 breast cancer</td></tr>
+<tr><td>兒童中樞神經腫瘤</td><td>髓母細胞瘤</td></tr>
+<tr><td>兒童中樞神經腫瘤</td><td>非生殖細胞瘤型生殖細胞腫瘤</td></tr>
+<tr><td>兒童中樞神經腫瘤</td><td>非典型畸胎樣／橫紋肌樣瘤</td></tr>
+<tr><td>兒童中樞神經腫瘤</td><td>發生腦脊髓播散的室管膜瘤</td></tr>
+<tr><td>成人中樞神經疾病</td><td>轉移性軟腦膜疾病，例如乳癌軟腦膜轉移</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>二、CSI simulation</h3>
+<h3>二、模擬定位</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Step</th><th>Detail</th></tr>
+<tr><th>步驟</th><th>重點</th></tr>
 </thead>
 <tbody>
-<tr><td>Position</td><td>Supine</td></tr>
-<tr><td>Neck</td><td>Neck extended，盡量 minimize spine curvature</td></tr>
-<tr><td>Immobilization</td><td>5-point mask secure head and shoulders</td></tr>
-<tr><td>Body</td><td>Large vac-loc，確認 body straight</td></tr>
-<tr><td>Knee sponge</td><td>可減少 lordosis</td></tr>
+<tr><td>治療姿勢</td><td>現代多採仰臥位，以利固定、麻醉與影像導引</td></tr>
+<tr><td>頸部</td><td>適度伸展，盡量減少脊柱彎曲並避免腦部側照野穿過口腔</td></tr>
+<tr><td>頭肩固定</td><td>使用五點式熱塑面膜固定頭部與肩膀</td></tr>
+<tr><td>身體固定</td><td>使用大型真空墊，確認軀幹與骨盆保持正直</td></tr>
+<tr><td>膝下墊</td><td>可減少腰椎前凸並提升舒適度與重現性</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>三、CSI contours</h3>
+<h3>三、靶區勾畫</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Target</th><th>Contouring point</th></tr>
+<tr><th>靶區</th><th>勾畫重點</th></tr>
 </thead>
 <tbody>
-<tr><td>Whole brain</td><td>要 cover cribriform plate / crista galli</td></tr>
-<tr><td>Thecal sac</td><td>MRI 定義，通常到 S1–S2 bottom</td></tr>
-<tr><td>Spine</td><td>Laterally include nerve root extensions</td></tr>
+<tr><td>全腦</td><td><span class="highlight">必須涵蓋篩板與雞冠附近的腦膜隱窩</span></td></tr>
+<tr><td>硬膜囊</td><td>依 MRI 定義，通常延伸至 S1–S2 水平的硬膜囊末端</td></tr>
+<tr><td>脊髓與神經根</td><td>側方應涵蓋神經根延伸區，避免只勾畫椎管中央</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>四、CSI fields</h3>
+<h3>四、傳統照野設計</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Field</th><th>Technique</th></tr>
+<tr><th>照射區域</th><th>常用技術</th></tr>
 </thead>
 <tbody>
-<tr><td>Whole brain</td><td>2 opposed lateral beams</td></tr>
-<tr><td>Upper spine</td><td>Single PA field</td></tr>
-<tr><td>Lower spine</td><td>Additional PA field(s)</td></tr>
+<tr><td>全腦</td><td>左右對向側照野</td></tr>
+<tr><td>上段脊椎</td><td>單一後前向照野</td></tr>
+<tr><td>下段脊椎</td><td>一個或多個額外後前向照野</td></tr>
 </tbody>
 </table>
 </div>
 
 <ol>
-<li>先 plan upper spinal field。</li>
-<li>Upper border 盡量低，例如 C4–C5 / C5–C6 到 L1–L2，但依 child height 而定。</li>
-<li>Neck extended，避免 exit through oral cavity。</li>
-<li>Whole brain opposed laterals 要 cover cribriform plate / crista galli / BOS，避免 entry through shoulders。</li>
-<li>Brain-spine junction 可有 0.5 cm gap。</li>
-<li>Lower spinal field match point of divergence 要在 spinal cord anterior。</li>
+<li>可先規劃上段脊椎照野，再處理腦部與下段脊椎的銜接。</li>
+<li>上段脊椎照野的上緣應盡量降低，以減少腦脊髓接合區落在頸髓高風險位置；實際位置取決於病人體型。</li>
+<li>適度伸展頸部，以避免腦部側照野的出口穿過口腔。</li>
+<li>全腦對向側照野必須涵蓋篩板、雞冠與顱底，同時避免由肩膀進入。</li>
+<li>傳統幾何式規劃可在腦脊髓接合處保留小間隙，但必須依射束發散精確計算。</li>
+<li>多個脊椎照野的發散交會點應設於<span class="highlight">脊髓前方</span>，以降低脊髓熱點風險。</li>
 </ol>
-""",
+            """,
             "body_en": """
 <p>CSI is a high-integration application of radiation physics and clinical technique. The core challenge is a very long target requiring multiple fields, where field junctions must not create spinal cord hot or cold spots.</p>
 
@@ -965,52 +947,49 @@ The exact distal-margin formula varies by center. Clinically, proton planning mu
 <li>A 0.5 cm gap can be used at the brain-spine junction.</li>
 <li>The lower spinal field divergence match point should be anterior to the spinal cord.</li>
 </ol>
-"""
+            """
         },
-
         {
-            "label_zh": "CSI matching",
-            "label_en": "CSI MATCHING",
-            "h2_zh": "CSI field matching、junction 與 feathering",
-            "h2_en": "CSI field matching, junctions, and feathering",
+            "label_zh": '全腦全脊髓照射銜接：射束發散、接合區與羽化技術',
+            "label_en": 'CSI MATCHING: Divergence, junctions, and feathering',
             "body_zh": """
-<h3>一、Beam divergence 與 hot/cold spot</h3>
-<p>Beam divergence 指 beam diameter 會隨著離 source 越遠而增加。Field overlap 會造成 hotspot，gap 則可能造成 cold spot。CSI 的危險在於 junction hot spot 落在 spinal cord。</p>
+<h3>一、射束發散與接合區熱點／冷點</h3>
+<p>射束離開射源後會逐漸發散，因此照野尺寸會隨深度增加。兩個照野在接合區重疊時會形成熱點；間隙過大則會形成冷點。CSI 最危險的情況是接合區熱點落在脊髓內，造成局部過量照射。</p>
 
 <div class="clinical-note">
-處理原則：match divergence, avoid overlap into neighboring field, feather junction。
+<span class="highlight">CSI 接合的核心原則是匹配射束發散、避免相鄰照野重疊，並以接合區羽化分散殘餘誤差。</span>
 </div>
 
-<h3>二、Matching brain and spine fields</h3>
+<h3>二、腦部與脊椎照野的銜接</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
 <thead>
-<tr><th>Field</th><th>Adjustment</th></tr>
+<tr><th>照野</th><th>調整方式</th></tr>
 </thead>
 <tbody>
-<tr><td>Whole brain field</td><td>Rotate collimator to match upward divergence of PA spine field，約 12°</td></tr>
-<tr><td>Spine field</td><td>Kick couch toward head of gantry to match downward divergence of opposed lateral brain fields，約 8°</td></tr>
+<tr><td>全腦側照野</td><td>旋轉準直器，使其下緣與後前向脊椎照野向上的發散角一致；傳統教學值約 12°</td></tr>
+<tr><td>脊椎照野</td><td>將治療床向機架頭端旋轉，使脊椎照野與腦部側照野向下的發散角一致；傳統教學值約 8°</td></tr>
 </tbody>
 </table>
 </div>
 
-<div class="formula-box">θ = arctan( 1/2 × spine field length / SSD )</div>
-<div class="formula-box">θ = arctan( 1/2 × brain field length / SAD )</div>
+<div class="formula-box">θ = arctan[(1/2 × 脊椎照野長度) / SSD]</div>
+<div class="formula-box">θ = arctan[(1/2 × 腦部照野長度) / SAD]</div>
 
-<h3>三、Matching multiple spine fields</h3>
-<p>Multiple spine fields 的 junction 要 match anterior to spinal cord，避免 hot spot 在 cord。Therapists 可在 skin 放 marker 檢查 gap。</p>
+<h3>三、多個脊椎照野的銜接</h3>
+<p>多個後前向脊椎照野的發散交會點應設在脊髓前方，使任何幾何重疊盡量不落入脊髓。治療師可在皮膚表面放置標記，以確認每日接合間隙與位置。</p>
 
-<div class="formula-box">S = 1/2 × L × (depth / SSD)</div>
+<div class="formula-box">S = 1/2 × L × (深度 / SSD)</div>
 
-<p>其中 S 是 skin separation，L 是 field length。</p>
+<p>其中 S 為皮膚表面的照野間距，L 為照野長度。此公式是傳統幾何式照野銜接的近似估算。</p>
 
-<h3>四、Feathering the junction</h3>
-<p>即使 junction match 在 cord anterior，posterior spine 仍可能有 cold spot。因此 junction line 要定期移動，讓 cold spot 分散，不集中在同一個位置。Source file 建議 match line superiorly move 0.5–1 cm periodically，通常每 5 fractions 或每 9 Gy，也就是大約每週 feather 一次。</p>
+<h3>四、接合區羽化</h3>
+<p>即使將照野發散交會點設在脊髓前方，脊椎後方仍可能產生冷點；每日擺位誤差也可能使原本理想的接合變成重疊或間隙。因此需定期移動接合線，將可能的過高或過低劑量分散到不同脊椎節段。傳統作法可每 5 次分次治療或約每 9 Gy，將接合線移動 0.5–1 cm。</p>
 
 <div class="clinical-note">
-Feathering junction 是把 junction uncertainty 和 cold/hot spot 分散掉，不讓同一段 spinal canal 長期吃到過高或過低 dose。
+<span class="highlight">羽化不是消除接合誤差，而是把接合區的不確定性分散，避免同一段脊髓或椎管在整個療程中反覆承受過高或過低劑量。</span>
 </div>
-""",
+            """,
             "body_en": """
 <h3>1. Beam divergence and hot/cold spots</h3>
 <p>Beam divergence means the beam diameter increases with distance from the source. Field overlap creates hotspots, while gaps can create cold spots. The main danger in CSI is a junction hotspot landing in the spinal cord.</p>
@@ -1048,44 +1027,41 @@ Management principle: match divergence, avoid overlap into neighboring fields, a
 <div class="clinical-note">
 Feathering spreads junction uncertainty and hot/cold spots so that the same spinal canal segment does not repeatedly receive too much or too little dose.
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "CSI toxicity/proton",
-            "label_en": "CSI TOXICITY / PROTON",
-            "h2_zh": "Proton CSI 與 CSI toxicity",
-            "h2_en": "Proton CSI and CSI toxicity",
+            "label_zh": '質子全腦全脊髓照射與治療毒性',
+            "label_en": 'PROTON CSI AND TOXICITY',
             "body_zh": """
-<h3>一、Protons vs photons for CSI</h3>
-<p>Kahalley et al., JCO 2020 retrospective study 比較 pediatric medulloblastoma protocols 中接受 proton vs photon CSI 的病人。Photon group 的 global IQ、working memory、processing speed 顯著下降；proton group 除 processing speed 外，各 domain scores 較穩定。</p>
+<h3>一、質子與光子全腦全脊髓照射的比較</h3>
+<p>Kahalley 等人在 2020 年《Journal of Clinical Oncology》發表的回溯性研究，比較接受髓母細胞瘤治療方案之兒童使用質子或光子 CSI 後的神經認知結果。光子組的整體智商、工作記憶與處理速度明顯下降；質子組除處理速度外，多數認知領域相對維持穩定。</p>
 
 <div class="clinical-note">
-CSI 是 proton 最有說服力的適應症之一，因為 proton 可降低 exit dose 與 integral dose，尤其 pediatric patients 對 neurocognitive、endocrine、growth、secondary malignancy 很敏感。
+<span class="highlight">CSI 是質子治療最具說服力的適應症之一</span>，因為質子可大幅降低出口劑量與全身積分劑量；對於容易發生神經認知障礙、內分泌失調、生長遲滯與第二原發癌的兒童尤其重要。
 </div>
 
-<h3>二、CSI toxicity</h3>
+<h3>二、全腦全脊髓照射的毒性</h3>
 <div class="table-wrap">
 <table class="oncology-table">
 <thead>
-<tr><th>Acute toxicity</th><th>Late toxicity</th></tr>
+<tr><th>急性毒性</th><th>晚期毒性</th></tr>
 </thead>
 <tbody>
-<tr><td>Dermatitis</td><td>Neurocognitive dysfunction</td></tr>
-<tr><td>Fatigue</td><td>Decreased IQ</td></tr>
-<tr><td>Alopecia</td><td>Hypopituitarism / endocrinopathy</td></tr>
-<tr><td>Headache</td><td>GH deficiency、hypothyroidism、gonadal dysfunction</td></tr>
-<tr><td>Nausea / vomiting</td><td>Decreased truncal height / growth</td></tr>
-<tr><td>Diarrhea</td><td>Weakness / ataxia</td></tr>
-<tr><td>Cytopenia</td><td>Fracture、stroke、cataracts、hearing loss、necrosis、secondary malignancy、depression / anxiety</td></tr>
+<tr><td>放射性皮膚炎</td><td>神經認知功能障礙</td></tr>
+<tr><td>疲倦</td><td>智商下降</td></tr>
+<tr><td>掉髮</td><td>腦下垂體功能低下與其他內分泌病變</td></tr>
+<tr><td>頭痛</td><td>生長激素缺乏、甲狀腺功能低下與性腺功能障礙</td></tr>
+<tr><td>噁心、嘔吐</td><td>軀幹高度降低與生長遲滯</td></tr>
+<tr><td>腹瀉</td><td>肌力下降或共濟失調</td></tr>
+<tr><td>血球低下</td><td>骨折、中風、白內障、聽力損失、組織壞死、第二原發癌、憂鬱或焦慮</td></tr>
 </tbody>
 </table>
 </div>
 
 <div class="clinical-note">
-Pediatric CSI 要注意 vertebral bodies dose uniformity，因為不均勻照射可能影響 spinal / truncal growth。
+兒童 CSI 必須注意<span class="highlight">椎體劑量的對稱性與均勻性</span>；不對稱或不均勻照射可能造成椎體生長不一致，進而影響脊柱與軀幹發育。
 </div>
-""",
+            """,
             "body_en": """
 <h3>1. Protons versus photons for CSI</h3>
 <p>Kahalley et al., JCO 2020, retrospectively compared pediatric patients treated on medulloblastoma protocols with proton versus photon CSI. The photon group had significant declines in global IQ, working memory, and processing speed, whereas the proton group had relatively stable domains except processing speed.</p>
@@ -1115,33 +1091,34 @@ CSI is one of the strongest indications for protons because protons reduce exit 
 <div class="clinical-note">
 In pediatric CSI, vertebral body dose uniformity matters because asymmetric vertebral irradiation can affect spinal and truncal growth.
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "比較表",
-            "label_en": "COMPARISON",
-            "h2_zh": "第五部分：Photon vs Electron vs Proton 高分比較",
-            "h2_en": "High-yield comparison: photon versus electron versus proton",
+            "label_zh": '光子、電子與質子的高頻比較',
+            "label_en": 'HIGH-YIELD COMPARISON: Photon versus electron versus proton',
             "body_zh": """
 <div class="table-wrap">
 <table class="oncology-table">
 <thead>
-<tr><th>Feature</th><th>Photon</th><th>Electron</th><th>Proton</th></tr>
+<tr><th>比較項目</th><th>光子</th><th>電子</th><th>質子</th></tr>
 </thead>
 <tbody>
-<tr><td>Particle type</td><td>Massless photon</td><td>Charged electron</td><td>Charged proton</td></tr>
-<tr><td>Mass</td><td>0</td><td>0.511 MeV rest mass</td><td>938 MeV</td></tr>
-<tr><td>Depth-dose pattern</td><td>Build-up then gradual fall-off</td><td>Superficial dose, rapid fall-off</td><td>Bragg peak, sharp distal fall-off</td></tr>
-<tr><td>Exit dose</td><td>Yes</td><td>Minimal after practical range</td><td>Minimal after distal fall-off</td></tr>
-<tr><td>Main use</td><td>Most EBRT</td><td>Superficial targets</td><td>Pediatric, CNS, skull base, selected OAR-sparing cases</td></tr>
-<tr><td>Main weakness</td><td>Integral dose / exit dose</td><td>Obliquity, field size, surface irregularity</td><td>Range uncertainty</td></tr>
-<tr><td>Skin dose with higher energy</td><td>Lower</td><td>Higher</td><td>Depends on technique; passive scattering can increase surface dose</td></tr>
-<tr><td>Planning sensitivity</td><td>Moderate</td><td>Surface angle / field size sensitive</td><td>Highly sensitive to density, motion, anatomy</td></tr>
+<tr><td>粒子性質</td><td>無靜止質量的光子</td><td>帶負電的電子</td><td>帶正電的質子</td></tr>
+<tr><td>靜止質量能量</td><td>0</td><td>0.511 MeV</td><td>約 938 MeV</td></tr>
+<tr><td>深度劑量分布</td><td>先建立至 D<sub>max</sub>，再逐漸下降</td><td>表淺劑量高，之後快速下降</td><td>於特定深度形成布拉格峰，遠端快速下降</td></tr>
+<tr><td>出口劑量</td><td>存在</td><td>超過實用射程後極低</td><td>布拉格峰遠端極低</td></tr>
+<tr><td>主要用途</td><td>大多數體外放射治療</td><td>表淺靶區</td><td>兒童腫瘤、中樞神經腫瘤、顱底病灶與高度重視危及器官保護的病例</td></tr>
+<tr><td>主要弱點</td><td>出口劑量與全身積分劑量</td><td>對入射角、照野大小與表面不規則高度敏感</td><td><span class="highlight">射程不確定性</span></td></tr>
+<tr><td>能量增加時的皮膚劑量</td><td>通常下降</td><td>通常上升</td><td>取決於傳遞技術；被動散射可能增加表面劑量</td></tr>
+<tr><td>規劃敏感性</td><td>中等</td><td>對表面角度、照野大小與不均質敏感</td><td>對組織密度、器官移動與解剖變化高度敏感</td></tr>
 </tbody>
 </table>
 </div>
-""",
+
+<div class="clinical-note">
+<span class="highlight">光子勝在穩健與適用範圍廣；電子勝在表淺劑量集中；質子勝在遠端劑量低，但需付出更高的射程與移動管理成本。</span>
+</div>
+            """,
             "body_en": """
 <div class="table-wrap">
 <table class="oncology-table">
@@ -1160,39 +1137,36 @@ In pediatric CSI, vertebral body dose uniformity matters because asymmetric vert
 </tbody>
 </table>
 </div>
-"""
+            """
         },
-
         {
-            "label_zh": "臨床選擇",
-            "label_en": "CLINICAL SELECTION",
-            "h2_zh": "第六部分：Clinical decision translation",
-            "h2_en": "Clinical decision translation",
+            "label_zh": '臨床治療選擇：何時使用光子、電子、質子與全腦全脊髓照射',
+            "label_en": 'CLINICAL SELECTION: Choosing photons, electrons, protons, and CSI',
             "body_zh": """
-<h3>一、什麼時候用 photon？</h3>
-<p>Photon 適合大多數 deep targets，因為 penetration 穩定、dose calculation robust、clinical experience 最大。缺點是有 exit dose 與 integral dose。</p>
+<h3>一、何時使用光子？</h3>
+<p>光子適合絕大多數深部靶區，因為穿透穩定、治療計畫計算成熟、對組織不均質與小幅解剖變化相對穩健，且臨床經驗最完整。主要缺點是靶區後方仍有出口劑量，並增加正常組織的積分劑量。</p>
 
-<h3>二、什麼時候用 electron？</h3>
-<p>Electron 適合 superficial disease，例如 skin cancer、scar boost、chest wall boost、淺層 nodal or subcutaneous lesions。重點是 target depth 要落在 90% IDL 內，並注意 field size、bolus、en face setup、shielding。</p>
+<h3>二、何時使用電子？</h3>
+<p>電子適合治療表淺病灶，例如皮膚癌、手術疤痕加量、胸壁加量，以及表淺淋巴結或皮下病灶。選擇時必須確認靶區最深處仍位於治療所需的等劑量線內，並同時考慮照野大小、組織補償物、正面入射與屏蔽設計。</p>
 
 <div class="clinical-note">
-Electron 實用選擇：lesion depth 決定 energy；surface dose / Dmax position 決定 bolus；field edge dose fall-off 決定 margin。
+電子束的實務選擇可記為：<span class="highlight">病灶深度決定能量；表面劑量與 D<sub>max</sub> 位置決定是否使用 bolus；照野邊緣的劑量遞減決定臨床邊界。</span>
 </div>
 
-<h3>三、什麼時候用 proton？</h3>
-<p>Proton 適合 OAR sparing 價值高的情境，例如 pediatric tumors、CSI、base-of-skull tumors、re-irradiation、large-field cases where integral dose matters。缺點是 range uncertainty、motion sensitivity、anatomical change sensitivity。</p>
+<h3>三、何時使用質子？</h3>
+<p>當降低危及器官劑量與全身積分劑量具有高度臨床價值時，可考慮質子治療，例如兒童腫瘤、CSI、顱底腫瘤、部分再照射病例，以及大範圍照野。使用前必須評估射程不確定性、呼吸或器官移動，以及治療期間的解剖變化。</p>
 
-<h3>四、CSI 為什麼是 physics-heavy technique？</h3>
+<h3>四、為什麼 CSI 特別依賴放射物理？</h3>
 <ol>
-<li>Very long target length</li>
-<li>Multiple isocenters</li>
-<li>Divergent field matching</li>
-<li>Junction hot/cold spot</li>
-<li>Feathering</li>
-<li>Pediatric toxicity and growth concerns</li>
-<li>Proton vs photon modality tradeoff</li>
+<li>靶區長度非常大。</li>
+<li>常需要多個等中心或多段照野。</li>
+<li>必須處理不同照野的射束發散。</li>
+<li>接合區可能形成熱點或冷點。</li>
+<li>需要接合區羽化或現代強度調控技術降低不確定性。</li>
+<li>兒童病人必須兼顧神經認知、內分泌、生長與第二原發癌風險。</li>
+<li>需在光子與質子之間權衡穩健性、劑量降低幅度、可近性與成本。</li>
 </ol>
-""",
+            """,
             "body_en": """
 <h3>1. When to use photons?</h3>
 <p>Photons are appropriate for most deep targets because penetration is stable, dose calculation is robust, and clinical experience is extensive. The limitation is exit dose and integral dose.</p>
@@ -1217,78 +1191,75 @@ Practical electron selection: lesion depth determines energy; surface dose and D
 <li>Pediatric toxicity and growth concerns</li>
 <li>Proton versus photon modality tradeoff</li>
 </ol>
-"""
+            """
         },
-
         {
-            "label_zh": "重點表",
-            "label_en": "TAKE-HOME",
-            "h2_zh": "最後高分記憶表",
-            "h2_en": "High-yield take-home table",
+            "label_zh": '放射物理高頻考點總整理',
+            "label_en": 'HIGH-YIELD RADIATION PHYSICS TAKE-HOME TABLES',
             "body_zh": """
-<h3>Photon</h3>
+<h3>光子高頻考點</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
-<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<thead><tr><th>考點</th><th>重點記憶</th></tr></thead>
 <tbody>
-<tr><td>Main therapeutic interaction</td><td>Compton</td></tr>
-<tr><td>Dmax</td><td>Energy ↑ → Dmax deeper</td></tr>
-<tr><td>Surface dose</td><td>Energy ↑ → surface dose lower</td></tr>
-<tr><td>HVL</td><td>0.693 / μ</td></tr>
-<tr><td>FFF</td><td>High dose rate, lower average energy, non-flat profile</td></tr>
-<tr><td>Penumbra</td><td>Source size / SSD ↑ → penumbra ↑；SDD ↑ → penumbra ↓</td></tr>
+<tr><td>治療能量下的主要交互作用</td><td><span class="highlight">康普頓散射</span></td></tr>
+<tr><td>最大劑量深度</td><td>能量增加 → D<sub>max</sub> 變深</td></tr>
+<tr><td>表面劑量</td><td>能量增加 → 表面劑量通常下降</td></tr>
+<tr><td>半值層</td><td>0.693 / μ</td></tr>
+<tr><td>FFF 射束</td><td>劑量率高、平均能量較低、射束輪廓不平坦</td></tr>
+<tr><td>幾何半影</td><td>射源大小或 SSD 增加 → 半影增加；SDD 增加 → 半影減少</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>Electron</h3>
+<h3>電子高頻考點</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
-<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<thead><tr><th>考點</th><th>重點記憶</th></tr></thead>
 <tbody>
-<tr><td>Use</td><td>Superficial tumors</td></tr>
-<tr><td>Practical range</td><td>E / 2</td></tr>
-<tr><td>90% IDL</td><td>E / 3.2–3.3, or rough E / 4</td></tr>
-<tr><td>80% IDL</td><td>E / 2.8, or rough E / 3</td></tr>
-<tr><td>Dmax</td><td>E / 5</td></tr>
-<tr><td>Margin concept</td><td>0.5 × √E</td></tr>
-<tr><td>Lead shield</td><td>E / 2 mm + 1 mm</td></tr>
-<tr><td>Setup</td><td>Treat en face</td></tr>
+<tr><td>主要用途</td><td>表淺腫瘤</td></tr>
+<tr><td>實用射程</td><td><span class="highlight">E / 2</span></td></tr>
+<tr><td>90% 等劑量深度</td><td>約 E / 3.2–3.3；粗略可記 E / 4</td></tr>
+<tr><td>80% 等劑量深度</td><td>約 E / 2.8；粗略可記 E / 3</td></tr>
+<tr><td>D<sub>max</sub></td><td>E / 5</td></tr>
+<tr><td>側向邊界概念</td><td>0.5 × √E</td></tr>
+<tr><td>鉛屏蔽厚度</td><td>E / 2 mm + 1 mm</td></tr>
+<tr><td>擺位</td><td><span class="highlight">盡量正面入射</span></td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>Proton</h3>
+<h3>質子高頻考點</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
-<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<thead><tr><th>考點</th><th>重點記憶</th></tr></thead>
 <tbody>
-<tr><td>RBE</td><td>1.1</td></tr>
-<tr><td>Dose reporting</td><td>D<sub>RBE</sub> preferred by ICRU</td></tr>
-<tr><td>Physics advantage</td><td>Bragg peak, minimal exit dose</td></tr>
-<tr><td>SOBP</td><td>Multiple energies spread out peak</td></tr>
-<tr><td>Passive scattering</td><td>Higher surface dose</td></tr>
-<tr><td>Pencil beam scanning</td><td>Better conformity, motion sensitive</td></tr>
-<tr><td>Main problem</td><td>Range uncertainty</td></tr>
+<tr><td>臨床相對生物效應</td><td>1.1</td></tr>
+<tr><td>劑量報告</td><td>ICRU 建議使用 D<sub>RBE</sub></td></tr>
+<tr><td>物理優勢</td><td><span class="highlight">布拉格峰與極低遠端出口劑量</span></td></tr>
+<tr><td>展寬布拉格峰</td><td>以多種能量疊加，覆蓋完整腫瘤厚度</td></tr>
+<tr><td>被動散射</td><td>表面與非靶區劑量較高，需病人專用硬體</td></tr>
+<tr><td>鉛筆束掃描</td><td>順形度較佳，但對移動與交互效應敏感</td></tr>
+<tr><td>主要限制</td><td>射程不確定性</td></tr>
 </tbody>
 </table>
 </div>
 
-<h3>CSI</h3>
+<h3>全腦全脊髓照射高頻考點</h3>
 <div class="table-wrap">
 <table class="oncology-table compact-table">
-<thead><tr><th>Key point</th><th>Memory</th></tr></thead>
+<thead><tr><th>考點</th><th>重點記憶</th></tr></thead>
 <tbody>
-<tr><td>Fields</td><td>Opposed lateral brain + PA spine fields</td></tr>
-<tr><td>Junction problem</td><td>Overlap = hot spot；gap = cold spot</td></tr>
-<tr><td>Brain-spine match</td><td>Collimator rotation + couch kick</td></tr>
-<tr><td>Multiple spine fields</td><td>Match anterior to cord</td></tr>
-<tr><td>Feathering</td><td>Move junction 0.5–1 cm every 5 fx / 9 Gy</td></tr>
-<tr><td>Proton CSI</td><td>Lower integral dose, better pediatric late-effect profile</td></tr>
+<tr><td>傳統照野</td><td>左右對向全腦側照野＋後前向脊椎照野</td></tr>
+<tr><td>接合問題</td><td><span class="highlight">重疊形成熱點；間隙形成冷點</span></td></tr>
+<tr><td>腦脊髓銜接</td><td>準直器旋轉＋治療床旋轉以匹配射束發散</td></tr>
+<tr><td>多段脊椎照野</td><td>發散交會點設於脊髓前方</td></tr>
+<tr><td>接合區羽化</td><td>每 5 次治療或約 9 Gy 移動 0.5–1 cm</td></tr>
+<tr><td>質子 CSI</td><td>降低出口劑量與積分劑量，可能減少兒童晚期毒性</td></tr>
 </tbody>
 </table>
 </div>
-""",
+            """,
             "body_en": """
 <h3>Photon</h3>
 <div class="table-wrap">
@@ -1352,11 +1323,10 @@ Practical electron selection: lesion depth determines energy; surface dose and D
 </tbody>
 </table>
 </div>
-"""
+            """
         }
     ],
-
-    "excel_sheet": "Physics",
+     "excel_sheet": "Physics",
 
     "trial_filter": [
         "radiation physics",
@@ -1393,7 +1363,7 @@ Practical electron selection: lesion depth determines energy; surface dose and D
     "next": ["radbio.html", "放射生物", "RadBio"],
 })
 
-   
+
 # Radiobiology teaching page
 # Add this block to the same Python file that defines PAGES.
 
@@ -1909,47 +1879,483 @@ PAGES.append({
 
 
 PAGES.append({
-    "slug": "lingo",
-    "emoji": "📚",
-    "title_zh": "縮寫與術語速查",
-    "title_en": "Acronyms & Lingo",
-    "sub_zh": "放射腫瘤科常見縮寫與臨床術語速查表。",
-    "sub_en": "Quick-reference glossary of common Rad Onc acronyms and terminology.",
-    "sections": [
-      {
-        "label_zh": "體積與靶區", "label_en": "VOLUMES",
-        "h2_zh": "靶區與體積術語 (ICRU 50/62/83)",
-        "h2_en": "Target and volume terminology (ICRU 50/62/83)",
-        "body_zh": "<ul><li><strong>GTV</strong> Gross Tumor Volume — 影像/臨床可見腫瘤</li><li><strong>CTV</strong> Clinical Target Volume — GTV + 亞臨床散佈</li><li><strong>ITV</strong> Internal Target Volume — CTV + 內部器官運動</li><li><strong>PTV</strong> Planning Target Volume — ITV + set-up 誤差</li><li><strong>OAR</strong> Organ At Risk</li><li><strong>PRV</strong> Planning Risk Volume — OAR + margin</li></ul>",
-        "body_en": "<ul><li><strong>GTV</strong> Gross Tumor Volume — clinically/radiographically visible tumor</li><li><strong>CTV</strong> Clinical Target Volume — GTV + subclinical microscopic spread</li><li><strong>ITV</strong> Internal Target Volume — CTV + internal motion</li><li><strong>PTV</strong> Planning Target Volume — ITV + set-up uncertainty</li><li><strong>OAR</strong> Organ At Risk</li><li><strong>PRV</strong> Planning Risk Volume — OAR + margin</li></ul>"
-      },
-      {
-        "label_zh": "劑量學", "label_en": "DOSIMETRY",
-        "h2_zh": "劑量與計畫縮寫",
-        "h2_en": "Dose & planning acronyms",
-        "body_zh": "<ul><li><strong>Gy</strong> Gray；<strong>cGy</strong> centigray（1 Gy = 100 cGy）</li><li><strong>Dmax / Dmin / Dmean</strong> 最大 / 最小 / 平均劑量</li><li><strong>V20 / V70</strong> 接受 ≥ 20 Gy / ≥ 70 Gy 的體積百分比</li><li><strong>D95</strong> 覆蓋 95% 體積的劑量</li><li><strong>CI / HI</strong> Conformity Index / Homogeneity Index</li><li><strong>BED / EQD2</strong> 生物有效劑量 / 等效 2 Gy 分次總劑量</li><li><strong>DVH</strong> Dose Volume Histogram</li></ul>",
-        "body_en": "<ul><li><strong>Gy</strong> Gray; <strong>cGy</strong> centigray (1 Gy = 100 cGy)</li><li><strong>Dmax / Dmin / Dmean</strong> Max / min / mean dose</li><li><strong>V20 / V70</strong> Volume % receiving ≥ 20 Gy / ≥ 70 Gy</li><li><strong>D95</strong> Dose covering 95% of volume</li><li><strong>CI / HI</strong> Conformity Index / Homogeneity Index</li><li><strong>BED / EQD2</strong> Biologically effective dose / equivalent 2 Gy total dose</li><li><strong>DVH</strong> Dose Volume Histogram</li></ul>"
-      },
-      {
-        "label_zh": "治療技術", "label_en": "TECHNIQUES",
-        "h2_zh": "治療技術縮寫",
-        "h2_en": "Modality acronyms",
-        "body_zh": "<ul><li><strong>3D-CRT</strong> 3D conformal RT</li><li><strong>IMRT / VMAT</strong> 強度調控 / 弧形</li><li><strong>SBRT / SABR</strong> 立體定位大分次</li><li><strong>SRS</strong> 立體定位放射手術（顱內單次）</li><li><strong>IGRT</strong> Image-Guided RT</li><li><strong>DIBH</strong> Deep Inspiration Breath Hold（左乳）</li><li><strong>Brachytherapy: LDR / HDR / PDR</strong></li><li><strong>SIB</strong> Simultaneous Integrated Boost</li></ul>",
-        "body_en": "<ul><li><strong>3D-CRT</strong> 3D conformal RT</li><li><strong>IMRT / VMAT</strong> Intensity-modulated / rotational</li><li><strong>SBRT / SABR</strong> Stereotactic body / ablative RT</li><li><strong>SRS</strong> Stereotactic radiosurgery (intracranial, single fx)</li><li><strong>IGRT</strong> Image-Guided RT</li><li><strong>DIBH</strong> Deep Inspiration Breath Hold (left breast)</li><li><strong>Brachytherapy: LDR / HDR / PDR</strong></li><li><strong>SIB</strong> Simultaneous Integrated Boost</li></ul>"
-      },
-      {
-        "label_zh": "臨床評估", "label_en": "CLINICAL",
-        "h2_zh": "臨床評估與副作用分級",
-        "h2_en": "Clinical scales & toxicity grading",
-        "body_zh": "<ul><li><strong>KPS</strong> Karnofsky Performance Status (0–100)</li><li><strong>ECOG</strong> 0–4 (0 = fully active, 4 = bedridden)</li><li><strong>CTCAE</strong> NCI 副作用分級 1–5 版</li><li><strong>RTOG toxicity</strong> 急性與晚期分級</li><li><strong>RECIST 1.1</strong> 實體瘤反應標準 (CR/PR/SD/PD)</li></ul>",
-        "body_en": "<ul><li><strong>KPS</strong> Karnofsky Performance Status (0–100)</li><li><strong>ECOG</strong> 0–4 (0 = fully active, 4 = bedridden)</li><li><strong>CTCAE</strong> NCI toxicity grading v1–5</li><li><strong>RTOG toxicity</strong> acute and late</li><li><strong>RECIST 1.1</strong> Solid tumor response criteria (CR/PR/SD/PD)</li></ul>"
-      },
+    'slug': 'radbio',
+    'emoji': '🧬',
+    'title_zh': '放射生物學',
+    'title_en': 'Radiobiology',
+    'sub_zh': '放射生物學核心：TCP／NTCP、分割治療、BED／EQD2、4R、DNA 損傷與修復、OER、腫瘤缺氧、LET／RBE，以及 QUANTEC／HYTEC 劑量限制。',
+    'sub_en': 'Core radiobiology: TCP/NTCP, fractionation, BED/EQD2, the 4 Rs, DNA damage and repair, OER, hypoxia, LET/RBE, and QUANTEC/HYTEC constraints.',
+
+
+    'sections': [
+        {
+            'label_zh': '總論：放射生物學核心概念',
+            'label_en': 'OVERVIEW: Core Concepts of Radiobiology',
+            'body_zh':             """
+<p>放射治療的核心目標，是在提高腫瘤控制率的同時，盡可能降低正常組織併發症。換言之，就是 <span class="highlight">提高腫瘤控制機率（TCP），並降低正常組織併發症機率（NTCP）</span>。</p>
+<p>放射線的生物效應不只取決於總劑量，還受到 <span class="highlight">單次分次劑量、組織的 α/β 比值、總療程時間</span>，以及正常組織屬於串聯型器官或平行型器官等因素影響。</p>
+<div class="clinical-note">一句話理解：放射治療主要藉由 DNA 損傷殺死腫瘤細胞；分割治療則利用正常組織修復能力，以及腫瘤再氧合與細胞週期重新分布的差異，改善治療比。</div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>核心概念</th><th>臨床意義</th></tr></thead><tbody><tr><td>TCP</td><td>腫瘤控制機率（tumor control probability）</td></tr><tr><td>NTCP</td><td>正常組織併發症機率（normal tissue complication probability）</td></tr><tr><td>分割治療</td><td>利用修復、再增殖、重新分布與再氧合的差異，提高治療比</td></tr><tr><td>BED／EQD2</td><td>將不同分割方式換算成可比較的生物效應劑量</td></tr><tr><td>串聯型與平行型器官</td><td>決定限制條件應著重最大／點劑量，或平均／體積劑量</td></tr></tbody></table></div>
+            """,
+            'body_en':             """
+<p>The central goal of radiotherapy is to <strong>maximize TCP and minimize NTCP</strong>: maximize tumor control while minimizing normal-tissue complications.</p>
+<p>The effective biological radiation dose depends not only on total dose, but also on <strong>dose per fraction, α/β ratio, total treatment time</strong>, and whether the normal tissue behaves as a <strong>serial organ</strong> or a <strong>parallel organ</strong>.</p>
+<div class="clinical-note">One-sentence memory: RT kills cancer cells through DNA damage. Fractionation exploits differences in normal-tissue repair, tumor reoxygenation, redistribution, and repopulation so that TCP rises without unacceptable NTCP.</div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Core concept</th><th>Clinical meaning</th></tr></thead><tbody><tr><td>TCP</td><td>Tumor control probability</td></tr><tr><td>NTCP</td><td>Normal tissue complication probability</td></tr><tr><td>Fractionation</td><td>Uses repair, reoxygenation, redistribution, and repopulation differences</td></tr><tr><td>BED / EQD2</td><td>Converts different schedules into comparable biological dose</td></tr><tr><td>Serial vs parallel organ</td><td>Determines whether Dmax / point dose or mean / volume dose matters most</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': '劑量與分割：LQ 模型、BED、EQD2 與毒性',
+            'label_en': 'DOSE / FRACTIONATION: LQ Model, BED, EQD2, and Toxicity',
+            'body_zh':             """
+<p>放射線的生物效應主要由四項因素共同決定：<span class="highlight">總劑量、單次分次劑量、α/β 比值與總療程時間</span>。BED 與 EQD2 可將不同分割方式換算成可比較的生物效應劑量，但標準公式本身並未直接納入療程延長所造成的再增殖效應。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>因素</th><th>意義</th></tr></thead><tbody><tr><td>總劑量</td><td>整個療程累積給予的劑量，例如 60 Gy</td></tr><tr><td>單次分次劑量</td><td>每次治療給予的劑量，例如 2 Gy／次或 10 Gy／次</td></tr><tr><td>α/β 比值</td><td>反映組織對單次分次劑量變化的敏感程度</td></tr><tr><td>總療程時間</td><td>與腫瘤及正常組織的再增殖有關</td></tr></tbody></table></div>
+<h3>線性－二次模型（linear-quadratic model）</h3>
+<div class="formula-box">SF(D) = e<sup>−αD − βD²</sup></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>參數</th><th>意義</th></tr></thead><tbody><tr><td>α</td><td>線性殺傷成分，可視為單一放射事件所造成的致死性損傷</td></tr><tr><td>β</td><td>二次方殺傷成分，反映兩個次致死性損傷交互作用後形成致死性損傷</td></tr><tr><td>α/β</td><td>當 αD = βD² 時的劑量，即線性與二次方殺傷效應相等的劑量</td></tr></tbody></table></div>
+<p><span class="highlight">α/β 比值越低，組織越容易受到單次分次劑量大小的影響</span>；因此提高單次劑量時，低 α/β 組織的生物效應增加得更明顯。</p>
+<h3>早期反應與晚期反應組織</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>組織類型</th><th>典型 α/β 比值</th><th>對單次劑量的敏感度</th><th>常見例子</th></tr></thead><tbody><tr><td>早期反應組織</td><td>約 10 Gy</td><td>相對較低</td><td>多數腫瘤、皮膚、腸道黏膜、骨髓</td></tr><tr><td>晚期反應組織</td><td>約 3 Gy</td><td>較高</td><td>肺、腎臟、肝臟、膀胱等晚期正常組織終點</td></tr><tr><td>脊髓</td><td>約 2 Gy</td><td>非常高</td><td>放射性脊髓病變</td></tr></tbody></table></div>
+<div class="clinical-note"><span class="highlight">晚期反應組織具有較低的 α/β 比值，且對單次分次劑量更敏感</span>。若教材將晚期組織寫成高 α/β，應視為概念錯誤。</div>
+<h3>BED 與 EQD2</h3>
+<div class="formula-box">BED = nd[1 + d/(α/β)]<br>EQD2 = D[(d + α/β)/(2 + α/β)] = BED / [1 + 2/(α/β)]</div>
+<p>在總劑量相近時，單次分次劑量越大，低 α/β 組織的 BED 與 EQD2 增幅越明顯。</p>
+<h3>急性毒性與晚期毒性</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>毒性類型</th><th>典型表現</th><th>主要影響因素</th></tr></thead><tbody><tr><td>急性毒性</td><td>發炎、黏膜炎、皮膚炎及骨髓抑制</td><td>總劑量、照射體積、總療程時間及組織再增殖</td></tr><tr><td>晚期毒性</td><td>纖維化、硬化、壞死及血管損傷</td><td>尤其受單次分次劑量影響，常需以 BED／EQD2 評估</td></tr></tbody></table></div>
+<div class="clinical-note">高頻記憶：<span class="highlight">晚期毒性對單次分次劑量特別敏感</span>；不能只以物理總劑量比較不同分割療程。</div>
+            """,
+            'body_en':             """
+<p>The biological effect of radiation depends on four major factors: <strong>total dose, dose per fraction, α/β ratio, and total treatment time</strong>. BED and EQD2 convert different schedules into comparable biological dose, but the formulas themselves do not directly incorporate treatment time.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>Meaning</th></tr></thead><tbody><tr><td>Total dose</td><td>Total delivered dose, such as 60 Gy</td></tr><tr><td>Dose per fraction</td><td>Dose per treatment, such as 2 Gy/Fx or 10 Gy/Fx</td></tr><tr><td>α/β ratio</td><td>Sensitivity of tissue to fraction size</td></tr><tr><td>Total treatment time</td><td>Overall treatment duration; related to repopulation</td></tr></tbody></table></div>
+<h3>Linear-quadratic model</h3>
+<div class="formula-box">SF(D) = e<sup>−αD − βD²</sup></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Parameter</th><th>Meaning</th></tr></thead><tbody><tr><td>α</td><td>Linear component; single-hit cell kill</td></tr><tr><td>β</td><td>Quadratic component; double-hit cell kill</td></tr><tr><td>α/β</td><td>Dose at which αD equals βD²</td></tr></tbody></table></div>
+<p>The α/β ratio represents sensitivity to fractionation. Lower α/β means a more curved survival curve and greater sensitivity to fraction size.</p>
+<h3>Early versus late responding tissues</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Tissue type</th><th>α/β ratio</th><th>Fraction-size sensitivity</th><th>Examples</th></tr></thead><tbody><tr><td>Early responding tissues</td><td>About 10</td><td>Less sensitive</td><td>Many tumors, skin, intestinal cells, bone marrow</td></tr><tr><td>Late responding tissues</td><td>About 3</td><td>More sensitive</td><td>Lung, kidney, liver, bladder</td></tr><tr><td>Spinal cord</td><td>About 2</td><td>Very sensitive</td><td>Spinal cord</td></tr></tbody></table></div>
+<div class="clinical-note">Correct concept: late-responding tissues have low α/β and are more fraction-size sensitive.</div>
+<h3>BED and EQD2</h3>
+<div class="formula-box">BED = nd[1 + d/(α/β)]<br>EQD2 = D[(d + α/β)/(2 + α/β)] = BED / [1 + 2/(α/β)]</div>
+<p>As dose per fraction increases, BED/EQD2 rises especially strongly for low-α/β tissues.</p>
+<h3>Acute versus late toxicity</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Toxicity</th><th>Feature</th><th>Main driver</th></tr></thead><tbody><tr><td>Acute toxicity</td><td>Inflammation</td><td>Total dose</td></tr><tr><td>Late toxicity</td><td>Fibrosis, sclerosis</td><td>Dose per fraction; evaluate with BED/EQD2</td></tr></tbody></table></div>
+<div class="clinical-note">Simple memory: acute toxicity tracks total dose; late toxicity tracks fraction size.</div>
+            """,
+        },
+
+        {
+            'label_zh': '放射生物學的 4R',
+            'label_en': 'THE 4 RS OF RADIOBIOLOGY',
+            'body_zh':             """
+<p>分割治療的經典放射生物學基礎可整理為四個 R：</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>4R</th><th>中文意義</th><th>臨床意義</th></tr></thead><tbody><tr><td>Repair</td><td>損傷修復</td><td>正常組織可在兩次照射之間修復次致死性 DNA 損傷</td></tr><tr><td>Repopulation</td><td>再增殖</td><td>腫瘤與正常組織都可能在療程中增殖；療程過度延長可能增加腫瘤再增殖</td></tr><tr><td>Redistribution</td><td>細胞週期重新分布</td><td>存活細胞可能進入較具放射敏感性的細胞週期階段</td></tr><tr><td>Reoxygenation</td><td>再氧合</td><td>原本缺氧且較具抗性的腫瘤細胞，在後續分次前可能重新獲得氧氣而提高敏感性</td></tr></tbody></table></div>
+<div class="clinical-note"><span class="highlight">4R = Repair、Repopulation、Redistribution、Reoxygenation</span>。其中修復通常有利於正常組織；再氧合與重新分布通常有利於腫瘤控制；再增殖則可能抵銷治療效果。</div>
+            """,
+            'body_en':             """
+<p>The classic 4 Rs of fractionation are:</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>4R</th><th>Meaning</th><th>Clinical significance</th></tr></thead><tbody><tr><td>Repair</td><td>DNA damage repair</td><td>Normal tissues repair sublethal damage between fractions</td></tr><tr><td>Repopulation</td><td>Cell proliferation during treatment</td><td>Tumors and normal tissues can proliferate; prolonged treatment allows tumor repopulation</td></tr><tr><td>Redistribution</td><td>Cell-cycle redistribution</td><td>Cells may enter more radiosensitive phases</td></tr><tr><td>Reoxygenation</td><td>Improved oxygenation</td><td>Hypoxic tumor cells can become more radiosensitive</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': 'DNA 損傷：放射線如何造成細胞死亡',
+            'label_en': 'DNA DAMAGE: How Radiation Causes Cell Death',
+            'body_zh':             """
+<p>放射治療最重要的細胞靶點是 DNA，其中以 <span class="highlight">DNA 雙股斷裂（double-strand break, DSB）</span> 最具致死性。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>損傷類型</th><th>每 1 Gy 約產生的數量</th><th>生物學意義</th></tr></thead><tbody><tr><td>DNA 單股斷裂（SSB）</td><td>約 1,000 個</td><td>多數可被修復，單獨存在時通常不致死</td></tr><tr><td>DNA 雙股斷裂（DSB）</td><td>約 40 個</td><td>最重要的致死性病灶，可造成染色體異常、基因體不穩定與細胞死亡</td></tr></tbody></table></div>
+<h3>直接與間接 DNA 損傷</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>機制</th><th>說明</th><th>代表性放射線</th></tr></thead><tbody><tr><td>直接作用</td><td>放射線直接使 DNA 分子游離或激發，形成化學鍵斷裂</td><td>高 LET 放射線較重要，例如 α 粒子與碳離子</td></tr><tr><td>間接作用</td><td>放射線使水分子游離，產生自由基，再由自由基攻擊 DNA</td><td>低 LET 光子較重要，例如 X 射線與 γ 射線</td></tr></tbody></table></div>
+<h3>放射徑跡：spurs、blobs 與群聚性損傷</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>放射線類型</th><th>徑跡結構</th><th>特徵</th></tr></thead><tbody><tr><td>低 LET：X 射線、γ 射線</td><td>Spurs</td><td>約 3 個離子對、約 100 eV，直徑約 4 nm</td></tr><tr><td>較高 LET：中子等</td><td>Blobs</td><td>約 12 個離子對、100–500 eV，直徑約 7 nm</td></tr></tbody></table></div>
+<p>多個 spur 或 blob 聚集後可形成群聚性 DNA 損傷。<span class="highlight">群聚性損傷比單一單股斷裂更難正確修復</span>，因此高 LET 放射線通常具有較高的生物效應。</p>
+            """,
+            'body_en':             """
+<p>The main mechanism of RT is DNA damage, especially <strong>DNA double-strand breaks, DSBs</strong>.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage type</th><th>Approximate number per 1 Gy</th><th>Biological significance</th></tr></thead><tbody><tr><td>Single-strand breaks, SSBs</td><td>About 1000</td><td>Usually repaired and often not lethal</td></tr><tr><td>Double-strand breaks, DSBs</td><td>About 40</td><td>The key lethal lesion; can cause chromosome/chromatid aberrations and cell death</td></tr></tbody></table></div>
+<h3>Direct and indirect DNA damage</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Mechanism</th><th>Description</th><th>Representative radiation</th></tr></thead><tbody><tr><td>Direct DNA damage</td><td>Ionization directly hits DNA</td><td>More important for high-LET radiation such as α-particles and carbon ions</td></tr><tr><td>Indirect DNA damage</td><td>Water ionization generates free radicals that attack DNA</td><td>More important for low-LET photons such as x-rays and γ-rays</td></tr></tbody></table></div>
+<h3>Radiation tracks: spurs, blobs, and clustered lesions</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Track structure</th><th>Feature</th></tr></thead><tbody><tr><td>Low LET: x-rays, γ-rays</td><td>Spurs</td><td>About 3 ion pairs, 100 eV, diameter about 4 nm</td></tr><tr><td>High LET: neutrons, etc.</td><td>Blobs</td><td>About 12 ion pairs, 100–500 eV, diameter about 7 nm</td></tr></tbody></table></div>
+<p>Multiple spurs or blobs can form clustered lesions. Clustered DNA damage is harder to repair, so high-LET radiation usually has greater biological effectiveness.</p>
+            """,
+        },
+
+        {
+            'label_zh': 'DNA 損傷的檢測方法',
+            'label_en': 'DNA DAMAGE ASSAYS',
+            'body_zh':             """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>方法</th><th>原理</th><th>高頻考點</th></tr></thead><tbody><tr><td>脈衝場凝膠電泳（PFGE）</td><td>依 DNA 片段大小進行分離</td><td>DNA 片段越小，在瓊脂糖膠中遷移得越遠；可用於評估大量 DNA 雙股斷裂</td></tr><tr><td>彗星試驗（comet assay）</td><td>單細胞凝膠電泳</td><td>受損 DNA 形成彗星尾，可在單細胞層級量化 DNA 損傷</td></tr><tr><td>放射誘發焦點試驗</td><td>偵測聚集於 DNA 雙股斷裂位置的修復與訊號蛋白</td><td>γ-H2AX 或 53BP1 焦點增加，代表 DNA 損傷反應被啟動</td></tr></tbody></table></div>
+<h3>彗星試驗</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>條件</th><th>主要偵測內容</th></tr></thead><tbody><tr><td>鹼性彗星試驗</td><td><span class="highlight">主要偵測 DNA 單股斷裂、鹼敏感位點，並可包含部分雙股斷裂訊號</span></td></tr><tr><td>中性彗星試驗</td><td><span class="highlight">主要用於評估 DNA 雙股斷裂</span></td></tr></tbody></table></div>
+<h3>放射誘發焦點</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>標記</th><th>意義</th></tr></thead><tbody><tr><td>γ-H2AX</td><td>H2AX 磷酸化後形成；DNA 損傷後數分鐘內即可出現。若 24 小時後仍持續存在，通常提示仍有未修復或修復困難的損傷</td></tr><tr><td>53BP1</td><td>重要的 DNA 損傷反應蛋白，參與雙股斷裂訊號傳遞及 NHEJ 路徑選擇</td></tr></tbody></table></div>
+<div class="clinical-note">記憶口訣：SNoW DRoP——Southern blot 看 DNA、Northern blot 看 RNA、Western blot 看蛋白質。</div>
+            """,
+            'body_en':             """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Method</th><th>Principle</th><th>High-yield point</th></tr></thead><tbody><tr><td>PFGE</td><td>Separates DNA by fragment size</td><td>Smaller fragments migrate farther through agarose gel</td></tr><tr><td>Comet assay</td><td>Single-cell gel electrophoresis</td><td>DNA damage creates a comet tail; detects damage at single-cell level</td></tr><tr><td>Radiation-induced foci assay</td><td>Detects proteins recruited to DSB sites</td><td>Increased γ-H2AX and 53BP1 foci indicate DNA damage response</td></tr></tbody></table></div>
+<h3>Comet assay</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Condition</th><th>Detects</th></tr></thead><tbody><tr><td>Alkaline buffer</td><td>Primarily SSBs and alkali-labile sites, with some DSB contribution</td></tr><tr><td>Neutral buffer</td><td>Primarily DSBs</td></tr></tbody></table></div>
+<h3>Radiation-induced foci</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Marker</th><th>Meaning</th></tr></thead><tbody><tr><td>γ-H2AX</td><td>Phosphorylated H2AX; detectable within 15 minutes after DNA damage; persistence at 24 hours suggests unrepaired damage</td></tr><tr><td>53BP1</td><td>DNA damage response marker; related to NHEJ pathway choice</td></tr></tbody></table></div>
+<div class="clinical-note">Memory: SNoW DRoP = Southern blot DNA, Northern blot RNA, Western blot Protein.</div>
+            """,
+        },
+
+        {
+            'label_zh': '雙股斷裂訊號傳遞：細胞如何感知 DNA 損傷',
+            'label_en': 'DSB SIGNALING: How Cells Sense DNA Damage',
+            'body_zh':             """
+<p>DNA 雙股斷裂發生後，細胞會依序啟動損傷感知、訊號放大、細胞週期停止與修復路徑選擇：</p>
+<ol>
+<li>DNA 發生雙股斷裂。</li>
+<li><span class="highlight">MRN 複合體（MRE11／RAD50／NBS1）</span> 聚集至損傷位置。</li>
+<li>ATM 被招募並發生自體磷酸化而活化。</li>
+<li>ATM 磷酸化 H2AX，形成 γ-H2AX。</li>
+<li>γ-H2AX 建立訊號平台，進一步招募 DNA 修復蛋白。</li>
+<li>ATM 磷酸化 CHK2，使細胞週期暫停，爭取修復時間。</li>
+<li>53BP1 通常促進非同源末端連接（NHEJ）。</li>
+<li>BRCA1 則有利於同源重組修復（HR）。</li>
+</ol>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>基因</th><th>相關疾病</th><th>典型表現</th></tr></thead><tbody><tr><td>ATM</td><td>共濟失調－微血管擴張症</td><td>微血管擴張、神經症狀、顯著放射敏感性，以及淋巴瘤、白血病與乳癌風險增加</td></tr><tr><td>ATR</td><td>Seckel 症候群</td><td>生長遲滯、小頭症、顏面異常、骨骼異常與免疫缺陷</td></tr><tr><td>MRE11</td><td>類共濟失調－微血管擴張症</td><td>通常無微血管擴張，但可有神經症狀與放射敏感性</td></tr><tr><td>NBS1</td><td>Nijmegen 斷裂症候群</td><td>生長遲滯、小頭症、癌症風險增加與放射敏感性</td></tr></tbody></table></div>
+<div class="clinical-note">高頻路徑：<span class="highlight">DSB → MRN → ATM → γ-H2AX／CHK2 → 細胞週期停止與修復</span>。</div>
+            """,
+            'body_en':             """
+<p>The core DSB signaling cascade is:</p>
+<ol>
+<li>DNA DSB occurs</li>
+<li>MRN complex, MRE11 / RAD50 / NBS1, is recruited to the damage site</li>
+<li>ATM is recruited and autophosphorylated</li>
+<li>ATM phosphorylates H2AX to form γ-H2AX</li>
+<li>γ-H2AX acts as a platform to recruit repair proteins</li>
+<li>ATM phosphorylates CHK2, causing cell-cycle arrest and allowing repair time</li>
+<li>53BP1 promotes NHEJ</li>
+<li>BRCA1 promotes HR</li>
+</ol>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Gene</th><th>Disease</th><th>Typical findings</th></tr></thead><tbody><tr><td>ATM</td><td>Ataxia telangiectasia</td><td>Telangiectasias, neurologic symptoms, RT sensitivity, lymphoma/leukemia/breast cancer risk</td></tr><tr><td>ATR</td><td>Seckel syndrome</td><td>Growth retardation, microcephaly, facial dysmorphism, skeletal abnormalities, immune deficiency</td></tr><tr><td>MRE11</td><td>AT-like disorder</td><td>No telangiectasia, but neurologic symptoms and RT sensitivity</td></tr><tr><td>NBS1</td><td>Nijmegen break syndrome</td><td>Growth retardation, microcephaly, cancer risk, RT sensitivity</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': '染色體與染色單體異常',
+            'label_en': 'CHROMOSOME AND CHROMATID ABERRATIONS',
+            'body_zh':             """
+<p>DNA 雙股斷裂的致死效應，往往不是單純因為 DNA 斷裂，而是因為錯誤修復後形成染色體或染色單體異常，最終造成有絲分裂災難與細胞死亡。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>異常類型</th><th>發生時機</th><th>常見例子</th></tr></thead><tbody><tr><td>染色體型異常</td><td>發生於 DNA 尚未複製的早期間期，因此同一染色體的兩條染色單體均受到影響</td><td>雙著絲點染色體、環狀染色體</td></tr><tr><td>染色單體型異常</td><td>發生於 DNA 已完成複製的晚期間期，通常只影響其中一條染色單體</td><td>後期橋</td></tr></tbody></table></div>
+<div class="clinical-note"><span class="highlight">DSB → 錯誤修復 → 染色體異常 → 有絲分裂災難／細胞死亡</span>。</div>
+            """,
+            'body_en':             """
+<p>The lethal effect of DSBs is often not simply the break itself, but incorrect repair that produces chromosome or chromatid aberrations. Some aberrations are lethal and lead to cell death.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Aberration</th><th>Timing</th><th>Examples</th></tr></thead><tbody><tr><td>Chromosome aberrations</td><td>Early interphase, before DNA replication</td><td>Dicentric chromosome, ring chromosome</td></tr><tr><td>Chromatid aberrations</td><td>Late interphase, after DNA replication</td><td>Anaphase bridge</td></tr></tbody></table></div>
+<div class="clinical-note">Clinical logic: DSB → misrepair → chromosome aberration → mitotic catastrophe / cell death.</div>
+            """,
+        },
+
+        {
+            'label_zh': 'DNA 修復機制：BER、NER、MMR、NHEJ 與 HR',
+            'label_en': 'DNA REPAIR: BER, NER, MMR, NHEJ, and HR',
+            'body_zh':             """
+<p>DNA 修復路徑可依損傷類型整理如下：</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>DNA 損傷</th><th>主要修復路徑</th></tr></thead><tbody><tr><td>單股斷裂／鹼基損傷</td><td>鹼基切除修復（BER）</td></tr><tr><td>大型加合物／嘧啶二聚體</td><td>核苷酸切除修復（NER）</td></tr><tr><td>DNA 複製錯配</td><td>錯配修復（MMR）</td></tr><tr><td>雙股斷裂</td><td>非同源末端連接（NHEJ）或同源重組修復（HR）</td></tr><tr><td>DNA 鏈間交聯</td><td>常需 Fanconi 路徑協同 NER 與 HR 處理</td></tr></tbody></table></div>
+<h3>DNA 修復高頻總表</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>修復機制</th><th>主要修復損傷</th><th>關鍵蛋白</th><th>相關疾病</th><th>臨床線索</th></tr></thead><tbody><tr><td>BER</td><td>單股斷裂與鹼基損傷</td><td>Glycosylase、APE1、XRCC1、PARP、FEN1</td><td>部分 XRCC1 異常可造成輕度放射敏感性</td><td>通常不會造成極端放射敏感性</td></tr><tr><td>NER</td><td>嘧啶二聚體與大型加合物</td><td>XPC、XPE、TFIIH、XPA、XPG</td><td>著色性乾皮症、Cockayne 症候群、毛髮硫營養不良症</td><td>紫外線敏感與光敏感</td></tr><tr><td>MMR</td><td>DNA 複製錯配</td><td>MLH1、MSH2、MSH6、PMS2</td><td>Lynch 症候群</td><td>大腸癌與子宮內膜癌風險增加</td></tr><tr><td>NHEJ</td><td>雙股斷裂，速度快但較易出錯</td><td>Ku70/80、DNA-PKcs、Artemis、Ligase IV</td><td>SCID、LIG4 症候群</td><td>免疫缺陷合併放射敏感性</td></tr><tr><td>HR</td><td>雙股斷裂，修復較精確</td><td>RAD51、RAD52、BRCA1/2</td><td>BRCA1/2 相關腫瘤</td><td>對 PARP 抑制劑敏感</td></tr><tr><td>交聯修復</td><td>DNA 鏈間交聯</td><td>FANC 蛋白</td><td>Fanconi 貧血</td><td>全血球低下與白血病風險</td></tr></tbody></table></div>
+<h3>NHEJ 與 HR 的比較</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>路徑</th><th>主要時期</th><th>精確度</th><th>關鍵蛋白</th><th>臨床關聯</th></tr></thead><tbody><tr><td>NHEJ</td><td>可發生於整個細胞週期，尤其 G1 期重要</td><td>速度快，但較容易產生序列缺失或錯誤連接</td><td>Ku70/80、DNA-PKcs、Artemis、XRCC4／Ligase IV</td><td>參與 V(D)J 重組；缺陷可造成 SCID 與放射敏感性</td></tr><tr><td>HR</td><td>主要發生於晚期 S 期與 G2 期，需有姊妹染色單體作為模板</td><td>速度較慢，但修復較精確</td><td>BRCA1、BRCA2、RAD51、RAD52、MRN</td><td>BRCA 缺陷與 PARP 抑制劑的合成致死</td></tr></tbody></table></div>
+<div class="clinical-note"><span class="highlight">PARP 抑制劑的合成致死</span>：BRCA 缺陷腫瘤已失去 HR 修復能力；抑制 PARP 後，未修復的單股斷裂在 DNA 複製時轉化為雙股斷裂，腫瘤細胞因無法有效修復而死亡。</div>
+            """,
+            'body_en':             """
+<p>DNA repair can be organized by damage type:</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage</th><th>Repair pathway</th></tr></thead><tbody><tr><td>SSB / base error</td><td>BER</td></tr><tr><td>Bulky adduct / pyrimidine dimer</td><td>NER</td></tr><tr><td>Replication mismatch</td><td>MMR</td></tr><tr><td>DSB</td><td>NHEJ, HR</td></tr><tr><td>DNA crosslink</td><td>Crosslink repair, often involving NER + HR / Fanconi pathway</td></tr></tbody></table></div>
+<h3>High-yield DNA repair table</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Repair mechanism</th><th>Damage repaired</th><th>Key proteins</th><th>Disease</th><th>Clinical clue</th></tr></thead><tbody><tr><td>BER</td><td>SSB / base errors</td><td>Glycosylase, APE1, XRCC1, PARP, FEN1</td><td>XRCC1 mutation with slight radiosensitivity</td><td>Usually not strongly radiosensitive</td></tr><tr><td>NER</td><td>Pyrimidine dimers, bulky adducts</td><td>XPC, XPE, TFIIH, XPA, XPG</td><td>XP, Cockayne, TTD</td><td>UV / photosensitivity</td></tr><tr><td>MMR</td><td>Replication errors</td><td>MLH1, MSH2, MSH6, PMS2</td><td>Lynch syndrome</td><td>Colorectal / endometrial cancer risk</td></tr><tr><td>NHEJ</td><td>DSB, error-prone</td><td>Ku70/80, DNA-PKcs, Artemis, Ligase IV</td><td>SCID, LIG4 syndrome</td><td>Immunodeficiency + radiosensitivity</td></tr><tr><td>HR</td><td>DSB, accurate</td><td>RAD51, RAD52, BRCA1/2</td><td>BRCA mutation</td><td>PARP inhibitor sensitivity</td></tr><tr><td>Crosslink repair</td><td>DNA crosslinks</td><td>FANC proteins</td><td>Fanconi anemia</td><td>Pancytopenia, leukemia</td></tr></tbody></table></div>
+<h3>NHEJ versus HR</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Pathway</th><th>Timing</th><th>Accuracy</th><th>Key proteins</th><th>Clinical association</th></tr></thead><tbody><tr><td>NHEJ</td><td>G1 phase, before DNA replication</td><td>Fast but error-prone</td><td>Ku70/80, DNA-PKcs, Artemis, XRCC4 / Ligase IV</td><td>VDJ recombination; SCID / immunodeficiency</td></tr><tr><td>HR</td><td>Late S / G2 phase, when sister chromatid is available</td><td>Slow but accurate</td><td>BRCA1, BRCA2, RAD51, RAD52, MRN</td><td>BRCA mutation; PARP inhibitor synthetic lethality</td></tr></tbody></table></div>
+<div class="clinical-note">PARP inhibitor synthetic lethality: BRCA-mutant tumors have HR deficiency. PARP inhibition blocks SSB repair; unrepaired SSBs become DSBs during replication, and the cell cannot repair them through HR.</div>
+            """,
+        },
+
+        {
+            'label_zh': '氧增強比：OER 與氧固定假說',
+            'label_en': 'OER: Oxygen Enhancement Ratio and Oxygen Fixation',
+            'body_zh':             """
+<div class="formula-box">OER = 缺氧條件下達到相同效應所需劑量／有氧條件下所需劑量</div>
+<p>氧增強比（oxygen enhancement ratio, OER）表示：為了達到相同生物效應，缺氧環境需要比有氧環境多多少倍的放射劑量。OER 越高，代表氧氣對放射殺傷的增強作用越明顯。</p>
+<h3>氧固定假說</h3>
+<p>氧氣可與放射線產生的自由基反應，將原本可能可逆的 DNA 自由基損傷「固定」成永久性化學損傷。缺乏氧氣時，這些間接損傷較有機會被還原或修復。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>重點</th></tr></thead><tbody><tr><td>氧氣必須存在的時間</td><td>必須在照射當下或照射後極短的微秒尺度內存在</td></tr><tr><td>自由基壽命</td><td>約 10⁻⁵ 至 10⁻⁹ 秒</td></tr></tbody></table></div>
+<h3>不同放射線的 OER</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>放射線類型</th><th>游離密度</th><th>約略 OER</th></tr></thead><tbody><tr><td>X 射線／γ 射線／臨床質子束</td><td>稀疏游離</td><td><span class="highlight">約 2.5–3</span></td></tr><tr><td>中子</td><td>中等密度游離</td><td>約 1.6</td></tr><tr><td>α 粒子</td><td>高密度游離</td><td><span class="highlight">約 1</span></td></tr><tr><td>OER 理論最低值</td><td>—</td><td>1</td></tr></tbody></table></div>
+<h3>OER 與細胞週期</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>細胞週期</th><th>相對 OER</th><th>概念</th></tr></thead><tbody><tr><td>G1 期</td><td>較低</td><td>細胞本身相對較具放射敏感性，氧氣所帶來的額外增強比例較小</td></tr><tr><td>S 期</td><td>較高</td><td>S 期細胞通常最具放射抗性，氧氣可帶來較明顯的增敏效果</td></tr></tbody></table></div>
+<h3>氧濃度與最大 OER</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>氧濃度</th><th>OER 效應</th></tr></thead><tbody><tr><td>0.5% O₂，約 3 mmHg</td><td>約達最大 OER 的 50%</td></tr><tr><td>5% O₂，約 30 mmHg</td><td>接近最大 OER</td></tr><tr><td>100% O₂</td><td>通常不會再明顯增加 OER</td></tr></tbody></table></div>
+<div class="clinical-note">高頻概念：<span class="highlight">低 LET 放射線較依賴氧氣；高 LET 放射線的 OER 趨近 1</span>。</div>
+            """,
+            'body_en':             """
+<div class="formula-box">OER = dose under hypoxic condition / dose under aerobic condition</div>
+<p>OER is the dose multiplier required under hypoxic conditions to achieve the same biological effect. Higher OER means oxygen more strongly enhances radiation cell kill.</p>
+<h3>Oxygen fixation hypothesis</h3>
+<p>Oxygen fixes free-radical DNA damage into permanent lesions. Without oxygen, indirect DNA damage is more likely to be repaired.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Value</th></tr></thead><tbody><tr><td>When oxygen must be present</td><td>During radiation exposure or within microseconds</td></tr><tr><td>Free radical lifespan</td><td>About 10⁻⁵ to 10⁻⁹ seconds</td></tr></tbody></table></div>
+<h3>OER by radiation type</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Ionization density</th><th>Approximate OER</th></tr></thead><tbody><tr><td>X-rays / γ-rays / protons</td><td>Sparsely ionizing</td><td>2.5–3</td></tr><tr><td>Neutrons</td><td>Intermediately ionizing</td><td>1.6</td></tr><tr><td>α-particles</td><td>Densely ionizing</td><td>1</td></tr><tr><td>Minimum possible OER</td><td>—</td><td>1</td></tr></tbody></table></div>
+<h3>OER and cell cycle</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Cell-cycle phase</th><th>OER</th><th>Reason</th></tr></thead><tbody><tr><td>G1</td><td>Lowest</td><td>G1 cells are already more radiosensitive</td></tr><tr><td>S phase</td><td>Highest</td><td>S-phase cells are most radioresistant because DNA has replicated and repair capacity is strong</td></tr></tbody></table></div>
+<h3>Oxygen concentration and maximum OER</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Oxygen concentration</th><th>OER effect</th></tr></thead><tbody><tr><td>0.5% O₂, about 3 mmHg</td><td>About 50% of maximum OER</td></tr><tr><td>5% O₂, about 30 mmHg</td><td>About 100% of maximum OER</td></tr><tr><td>100% O₂</td><td>No additional OER increase</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': '腫瘤缺氧與再氧合',
+            'label_en': 'TUMOR HYPOXIA AND REOXYGENATION',
+            'body_zh':             """
+<p>氧氣在組織中的有效擴散距離約為 <span class="highlight">70–200 μm</span>。因此靠近血管的腫瘤細胞通常氧合較佳；距離血管較遠的區域則容易出現缺氧，甚至壞死。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>缺氧類型</th><th>主要成因</th><th>特徵</th><th>再氧合</th></tr></thead><tbody><tr><td>急性缺氧</td><td>血管暫時性閉合、阻塞或灌流波動</td><td>屬於短暫性的灌流性缺氧</td><td>血流恢復後可快速再氧合</td></tr><tr><td>慢性缺氧</td><td>細胞距離功能性血管過遠，或血管永久閉塞</td><td>常伴隨壞死，且對低 LET 放射線較具抗性</td><td>再氧合通常較慢</td></tr></tbody></table></div>
+<p><span class="highlight">缺氧會降低低 LET 放射線的治療效果</span>，因為間接自由基損傷較難被氧氣固定為永久性 DNA 損傷。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>代表例子</th><th>意義</th></tr></thead><tbody><tr><td>缺氧標記</td><td>Pimonidazole</td><td>屬於 2-nitroimidazole，可在缺氧細胞中形成加合物並用於組織染色</td></tr><tr><td>缺氧轉錄因子</td><td>HIF-1α</td><td>缺氧時無法正常羥化，因此逃避免 VHL 所介導的泛素化與降解</td></tr><tr><td>缺氧放射增敏劑</td><td>Nitroimidazoles</td><td>可在缺氧細胞中被還原並與大分子形成不可逆結合，模擬氧固定效應</td></tr></tbody></table></div>
+<div class="clinical-note">分割治療可使原本存活的缺氧腫瘤細胞在後續分次前重新獲得氧氣，稱為 <span class="highlight">再氧合（reoxygenation）</span>。</div>
+            """,
+            'body_en':             """
+<p>Oxygen diffuses only about <strong>70–200 μm</strong>, so tumor cells near blood vessels have better oxygenation. Regions far from vessels are prone to hypoxia or necrosis.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Hypoxia type</th><th>Cause</th><th>Feature</th><th>Reoxygenation</th></tr></thead><tbody><tr><td>Acute hypoxia</td><td>Temporary vessel closing or blockage</td><td>Transient hypoxia</td><td>Can reoxygenate quickly</td></tr><tr><td>Chronic hypoxia</td><td>Too far from vessels or permanent vessel closure</td><td>Often with necrosis and more radioresistant</td><td>Slow reoxygenation</td></tr></tbody></table></div>
+<p>Hypoxia limits RT success because hypoxic cells are more resistant to low-LET radiation.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Category</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>Hypoxia marker</td><td>Pimonidazole</td><td>2-nitroimidazole marker for hypoxic cells</td></tr><tr><td>Hypoxia transcription factor</td><td>HIF-1α</td><td>Under hypoxia, it is not hydroxylated and avoids VHL-mediated ubiquitination/degradation</td></tr><tr><td>Hypoxic radiosensitizer</td><td>Nitroimidazoles</td><td>Irreversibly bind macromolecules in hypoxic cells</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': '線性能量轉移：LET',
+            'label_en': 'LET: Linear Energy Transfer',
+            'body_zh':             """
+<div class="formula-box">LET = ΔE / ΔL</div>
+<p>線性能量轉移（linear energy transfer, LET）是帶電粒子沿徑跡每單位長度平均沉積的能量，常用單位為 keV／μm。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>生物學意義</th></tr></thead><tbody><tr><td>低 LET</td><td>能量沉積較稀疏，較依賴水的游離、自由基與氧氣所造成的間接 DNA 損傷</td></tr><tr><td>高 LET</td><td>能量沉積密集，容易形成群聚性 DNA 損傷，對氧氣的依賴較低</td></tr></tbody></table></div>
+<h3>不同放射線的 LET</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>放射線</th><th>LET（keV／μm）</th></tr></thead><tbody><tr><td>鈷-60 γ 射線，約 1.1 MV</td><td>0.2</td></tr><tr><td>250 kV X 射線</td><td>2.0</td></tr><tr><td>150 MeV 質子</td><td>0.5</td></tr><tr><td>10 MeV 質子</td><td>4.7</td></tr><tr><td>2.5 MeV α 粒子</td><td>166</td></tr></tbody></table></div>
+<p>高 LET 放射線包括 α 粒子與中子；一般可概略理解為 α 粒子／中子高於質子，而質子通常高於光子。<span class="highlight">對同一種帶電粒子而言，能量越低、速度越慢，LET 通常越高</span>。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>放射線</th><th>細胞存活曲線</th><th>生物學意義</th></tr></thead><tbody><tr><td>低 LET 光子</td><td>具有明顯肩部</td><td>次致死性損傷修復對存活曲線影響較大</td></tr><tr><td>高 LET α 粒子／碳離子</td><td>肩部縮小或近乎消失</td><td>單一粒子徑跡即可造成難以修復的致死性群聚雙股斷裂</td></tr></tbody></table></div>
+<div class="clinical-note"><span class="highlight">LET 越高，損傷越集中、OER 越低，細胞存活曲線的肩部越小</span>。</div>
+            """,
+            'body_en':             """
+<div class="formula-box">LET = ΔE / ΔL</div>
+<p>LET is the average energy deposited per unit track length, measured in keV/μm.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Meaning</th></tr></thead><tbody><tr><td>Low LET</td><td>Sparse energy deposition; more dependent on indirect DNA damage and oxygen</td></tr><tr><td>High LET</td><td>Dense energy deposition; causes clustered DNA damage and is less oxygen-dependent</td></tr></tbody></table></div>
+<h3>LET of different radiation types</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>LET, keV/μm</th></tr></thead><tbody><tr><td>Cobalt-60 γ-rays, 1.1 MV</td><td>0.2</td></tr><tr><td>250 kV x-rays</td><td>2.0</td></tr><tr><td>150 MeV protons</td><td>0.5</td></tr><tr><td>10 MeV protons</td><td>4.7</td></tr><tr><td>2.5 MeV α-particles</td><td>166</td></tr></tbody></table></div>
+<p>High-LET radiation includes α-particles and neutrons. In general: α-particles / neutrons &gt; protons &gt; x-rays / γ-rays. For the same charged particle, lower energy means higher LET.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>Survival curve</th><th>Biological implication</th></tr></thead><tbody><tr><td>Low-LET photons</td><td>Clear shoulder</td><td>Sublethal damage repair is important</td></tr><tr><td>High-LET α / carbon ions</td><td>Small or absent shoulder</td><td>A single track can produce lethal clustered DSBs</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': '相對生物效應：RBE',
+            'label_en': 'RBE: Relative Biological Effectiveness',
+            'body_zh':             """
+<div class="formula-box">RBE = D<sub>250 kV X-rays</sub> / D<sub>x</sub></div>
+<p>相對生物效應（relative biological effectiveness, RBE）是指：為達到相同生物終點，參考放射線 250 kV X 射線所需劑量，除以待測放射線所需劑量。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>影響因素</th><th>對 RBE 的影響</th></tr></thead><tbody><tr><td>放射線品質／LET</td><td>LET 增加時 RBE 通常上升，直到進入過度殺傷區</td></tr><tr><td>劑量</td><td>不同劑量水平可能得到不同 RBE</td></tr><tr><td>分次數與單次劑量</td><td>低 LET 參考放射線的修復效應會隨分割方式改變，因此 RBE 也會改變</td></tr><tr><td>劑量率</td><td>對低 LET 放射線影響通常較大</td></tr><tr><td>生物系統與評估終點</td><td>不同細胞、組織與生物終點可具有不同 RBE</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>重點</th></tr></thead><tbody><tr><td>組織類型</td><td>晚期反應組織的 RBE 往往較高，因低 LET 參考放射線在此類組織具有較明顯的肩部與修復效應</td></tr><tr><td>單次分次劑量</td><td>RBE 通常在小分次劑量時較高，在大分次劑量時下降</td></tr><tr><td>LET</td><td><span class="highlight">RBE 約在 100 keV／μm 左右達到高峰</span>，之後因過度殺傷效應而下降</td></tr><tr><td>氧氣</td><td>在缺氧細胞中，高 LET 放射線相對於參考 X 射線的優勢更明顯，因此估計 RBE 可較高</td></tr></tbody></table></div>
+<h3>OER、LET 與 RBE 的關係</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>LET</th><th>OER</th><th>RBE</th></tr></thead><tbody><tr><td>低 LET</td><td>高，約 2.5–3</td><td>較低</td></tr><tr><td>中等 LET</td><td>中等，約 1.6</td><td>中等</td></tr><tr><td>高 LET</td><td>接近 1</td><td>較高，直到過度殺傷區</td></tr></tbody></table></div>
+<div class="clinical-note">核心記憶：<span class="highlight">LET ↑ → OER ↓ → RBE ↑</span>；但 RBE 在約 100 keV／μm 達高峰後，會因過度殺傷而下降。</div>
+            """,
+            'body_en':             """
+<div class="formula-box">RBE = D<sub>250 kV x-rays</sub> / D<sub>x</sub></div>
+<p>RBE is the ratio of the dose of 250 kV x-rays to the dose of another radiation required to produce the same biological effect.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>Effect</th></tr></thead><tbody><tr><td>Radiation quality / LET</td><td>Higher LET usually increases RBE until the overkill region</td></tr><tr><td>Dose</td><td>RBE differs by dose level</td></tr><tr><td>Number of fractions</td><td>Fraction size affects RBE</td></tr><tr><td>Dose rate</td><td>More important for low-LET radiation</td></tr><tr><td>Biological system / endpoint</td><td>Different tissues and endpoints have different RBE</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Tissue type</td><td>RBE is higher in late-responding tissues because low-LET x-rays have more shoulder/repair effect</td></tr><tr><td>Fraction size</td><td>RBE is higher at small fraction size and lower at large fraction size</td></tr><tr><td>LET</td><td>RBE rises with LET up to about 100 keV/μm, then falls due to overkill</td></tr><tr><td>Oxygen</td><td>High-LET RBE is higher in hypoxic cells because reference x-rays are weaker under hypoxia</td></tr></tbody></table></div>
+<h3>Relationship among OER, LET, and RBE</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>LET</th><th>OER</th><th>RBE</th></tr></thead><tbody><tr><td>Low LET</td><td>High, about 2.5–3</td><td>Lower</td></tr><tr><td>Intermediate LET</td><td>Intermediate, about 1.6</td><td>Intermediate</td></tr><tr><td>High LET</td><td>Close to 1</td><td>High until overkill region</td></tr></tbody></table></div>
+<div class="clinical-note">Core memory: LET ↑ → OER ↓ → RBE ↑, but RBE falls after about 100 keV/μm because of overkill.</div>
+            """,
+        },
+
+        {
+            'label_zh': '劑量限制：串聯型與平行型器官',
+            'label_en': 'DOSE CONSTRAINTS: Serial and Parallel Organs',
+            'body_zh':             """
+<p>正常組織劑量限制的判讀，必須同時考慮單次分次劑量、正常組織 α/β 比值、器官的功能架構、既往放射治療史、疾病部位專屬流程，以及使用傳統分割或 SRS／SBRT。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>器官類型</th><th>毒性主要取決於</th><th>概念</th><th>常見例子</th></tr></thead><tbody><tr><td>串聯型器官</td><td><span class="highlight">最大劑量或小體積高劑量</span></td><td>功能單位依序串聯；關鍵位置受損即可造成整條功能中斷</td><td>脊髓、腦幹、視神經與視交叉</td></tr><tr><td>平行型器官</td><td><span class="highlight">平均劑量或受照體積</span></td><td>器官具有多個相對獨立的功能單位；需損失足夠大的功能體積才出現明顯衰竭</td><td>肺、肝臟、腎臟、腮腺</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>限制指標</th><th>意義</th></tr></thead><tbody><tr><td>V50% &lt; 50%</td><td>接受至少處方劑量 50% 的器官體積必須小於 50%</td></tr><tr><td>V15 Gy &lt; 50%</td><td>接受至少 15 Gy 的器官體積必須小於 50%</td></tr><tr><td>Dmax ≤110%</td><td>最大劑量不得超過處方劑量的 110%</td></tr><tr><td>D0.03 cc</td><td>接近體素尺度的小體積近似最大劑量，常用於避免單一點劑量的不穩定性</td></tr><tr><td>D90% ≥100%</td><td>至少 90% 的目標體積應接受完整處方劑量</td></tr></tbody></table></div>
+<div class="clinical-note">高頻判讀：<span class="highlight">串聯型器官看 Dmax／D0.03 cc；平行型器官看平均劑量與 Vx</span>。</div>
+            """,
+            'body_en':             """
+<p>Dose constraints depend on dose per fraction, normal-tissue α/β ratio, serial versus parallel organ behavior, prior RT history, disease-site protocol, and whether treatment uses conventional fractionation or SRS/SBRT.</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Organ type</th><th>Toxicity depends on</th><th>One-sentence concept</th><th>Examples</th></tr></thead><tbody><tr><td>Serial organ</td><td>Max dose / point dose</td><td>Damage at one critical point can break the whole functional chain</td><td>Spinal cord, brainstem, optic nerves, bowel</td></tr><tr><td>Parallel organ</td><td>Mean dose / volume dose</td><td>Enough functional volume must be damaged before organ function fails</td><td>Lung, liver, kidney, parotid gland</td></tr></tbody></table></div>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Constraint</th><th>Meaning</th></tr></thead><tbody><tr><td>V50% &lt; 50%</td><td>Volume receiving ≥50% prescription dose must be &lt;50%</td></tr><tr><td>V15 Gy &lt; 50%</td><td>Volume receiving ≥15 Gy must be &lt;50%</td></tr><tr><td>Dmax ≤110%</td><td>Maximum point dose must not exceed 110%</td></tr><tr><td>D0.03cc</td><td>Small-volume maximum dose near voxel-size</td></tr><tr><td>D90% ≥100%</td><td>At least 90% of target volume receives 100% of prescription dose</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': 'QUANTEC：傳統分割常用正常組織限制',
+            'label_en': 'QUANTEC: Conventional-Fractionation Constraints',
+            'body_zh':             """
+<p>下表整理常見的 QUANTEC 傳統分割正常組織限制。這些數值適用於約 2 Gy／次的情境，實際使用時仍應依治療部位、照射體積、合併治療與個別病人條件調整。</p>
+<div class="table-wrap"><table class="oncology-table dose-table"><thead><tr><th>器官</th><th>常用限制</th><th>約略風險</th></tr></thead><tbody><tr><td>腦</td><td>最大劑量 &lt;60 Gy</td><td>&lt;3% 症狀性腦壞死</td></tr><tr><td>腦幹</td><td>最大劑量 &lt;54 Gy</td><td>&lt;5% 神經病變或壞死</td></tr><tr><td>視神經／視交叉</td><td>最大劑量 &lt;55 Gy</td><td>&lt;3% 放射性視神經病變</td></tr><tr><td>脊髓</td><td><span class="highlight">最大劑量 &lt;50 Gy</span></td><td>&lt;0.3% 放射性脊髓病變</td></tr><tr><td>耳蝸</td><td>平均劑量 ≤45 Gy</td><td>&lt;30% 感音神經性聽力損失</td></tr><tr><td>雙側腮腺</td><td><span class="highlight">平均劑量 &lt;26 Gy</span></td><td>&lt;25% 長期唾液功能障礙</td></tr><tr><td>肺</td><td><span class="highlight">V20 ≤30%</span></td><td>&lt;20% 症狀性放射性肺炎</td></tr><tr><td>食道</td><td>平均劑量 &lt;34 Gy</td><td>約 5–20% 第 3 級以上食道炎</td></tr><tr><td>心臟</td><td>平均劑量 &lt;26 Gy</td><td>&lt;15% 心包膜炎</td></tr><tr><td>雙側腎臟</td><td>平均劑量 &lt;15–18 Gy</td><td>&lt;5% 臨床腎功能障礙</td></tr><tr><td>胃</td><td>最大劑量 &lt;45 Gy</td><td>&lt;7% 潰瘍</td></tr><tr><td>小腸／腹膜腔</td><td>V45 Gy &lt;195 cc</td><td>&lt;10% 第 3 級以上毒性</td></tr><tr><td>直腸</td><td>V75 Gy &lt;15%</td><td>&lt;10% 第 3 級以上毒性</td></tr><tr><td>膀胱</td><td>V80 Gy &lt;15%</td><td>&lt;10% 第 3 級以上毒性</td></tr><tr><td>陰莖球</td><td>平均劑量 &lt;50 Gy</td><td>&lt;35% 嚴重勃起功能障礙</td></tr></tbody></table></div>
+<h3>脊髓 QUANTEC 風險</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>脊髓總劑量（2 Gy／次）</th><th>脊髓病變風險</th></tr></thead><tbody><tr><td>50 Gy</td><td>約 0.2%</td></tr><tr><td>60 Gy</td><td>約 6%</td></tr><tr><td>69 Gy</td><td>約 50%</td></tr></tbody></table></div>
+<div class="clinical-note">QUANTEC 數值主要用於傳統分割，<span class="highlight">不可直接套用至 SRS、SBRT 或再照射</span>。</div>
+            """,
+            'body_en':             """
+<div class="table-wrap"><table class="oncology-table dose-table"><thead><tr><th>Organ</th><th>Constraint</th><th>Approximate risk</th></tr></thead><tbody><tr><td>Brain</td><td>Max &lt;60 Gy</td><td>&lt;3% symptomatic necrosis</td></tr><tr><td>Brainstem</td><td>Max &lt;54 Gy</td><td>&lt;5% neuropathy or necrosis</td></tr><tr><td>Optic nerves / chiasm</td><td>Max &lt;55 Gy</td><td>&lt;3% optic neuropathy</td></tr><tr><td>Spinal cord</td><td>Max &lt;50 Gy</td><td>&lt;0.3% myelopathy</td></tr><tr><td>Cochlea</td><td>Mean ≤45 Gy</td><td>&lt;30% sensorineural hearing loss</td></tr><tr><td>Bilateral parotid</td><td>Mean &lt;26 Gy</td><td>&lt;25% long-term salivary dysfunction</td></tr><tr><td>Lung</td><td>V20 ≤30%</td><td>&lt;20% symptomatic pneumonitis</td></tr><tr><td>Esophagus</td><td>Mean &lt;34 Gy</td><td>5–20% grade 3+ esophagitis</td></tr><tr><td>Heart</td><td>Mean &lt;26 Gy</td><td>&lt;15% pericarditis</td></tr><tr><td>Bilateral kidney</td><td>Mean &lt;15–18 Gy</td><td>&lt;5% clinical dysfunction</td></tr><tr><td>Stomach</td><td>Max &lt;45 Gy</td><td>&lt;7% ulceration</td></tr><tr><td>Small bowel / peritoneal cavity</td><td>V45 Gy &lt;195 cc</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Rectum</td><td>V75 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Bladder</td><td>V80 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Penile bulb</td><td>Mean &lt;50 Gy</td><td>&lt;35% severe erectile dysfunction</td></tr></tbody></table></div>
+<h3>Spinal cord QUANTEC risk</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Spinal cord total dose, 2 Gy/Fx</th><th>Risk of myelopathy</th></tr></thead><tbody><tr><td>50 Gy</td><td>0.2%</td></tr><tr><td>60 Gy</td><td>6%</td></tr><tr><td>69 Gy</td><td>50%</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': 'HYTEC：SRS／SBRT 常用正常組織限制',
+            'label_en': 'HYTEC: SRS / SBRT Constraints',
+            'body_zh':             """
+<p>HYTEC 是評估 SRS／SBRT 正常組織耐受度的重要參考。下列脊髓最大劑量約對應 1–5% 的放射性脊髓病變風險。</p>
+<div class="table-wrap"><table class="oncology-table dose-table compact-table"><thead><tr><th>分次數</th><th>脊髓最大劑量</th><th>約略風險</th></tr></thead><tbody><tr><td>1 次</td><td>12.4 Gy</td><td>1–5%</td></tr><tr><td>2 次</td><td>17 Gy</td><td>1–5%</td></tr><tr><td>3 次</td><td>20.3 Gy</td><td>1–5%</td></tr><tr><td>4 次</td><td>23 Gy</td><td>1–5%</td></tr><tr><td>5 次</td><td>25.3 Gy</td><td>1–5%</td></tr></tbody></table></div>
+<div class="clinical-note">臨床提醒：SRS／SBRT 不能只比較物理劑量，必須同時評估 BED／EQD2、器官特異性耐受度、既往照射劑量、分次方式與熱點位置。<span class="highlight">QUANTEC 主要用於傳統分割；HYTEC 主要用於 SRS／SBRT</span>，最終仍應遵循疾病部位與機構流程。</div>
+            """,
+            'body_en':             """
+<p>HYTEC is a common reference for SRS / SBRT constraints. The spinal cord constraints below correspond roughly to 1–5% myelopathy risk.</p>
+<div class="table-wrap"><table class="oncology-table dose-table compact-table"><thead><tr><th>Fractions</th><th>Spinal cord Dmax</th><th>Risk</th></tr></thead><tbody><tr><td>1</td><td>12.4 Gy</td><td>1–5%</td></tr><tr><td>2</td><td>17 Gy</td><td>1–5%</td></tr><tr><td>3</td><td>20.3 Gy</td><td>1–5%</td></tr><tr><td>4</td><td>23 Gy</td><td>1–5%</td></tr><tr><td>5</td><td>25.3 Gy</td><td>1–5%</td></tr></tbody></table></div>
+<div class="clinical-note">Clinical reminder: SRS/SBRT cannot be judged by physical dose alone. Convert using BED/EQD2 and integrate organ-specific tolerance, prior RT, fractionation, and hotspot location. QUANTEC is most relevant for conventional RT; HYTEC is used for SRS/SBRT; disease-site protocol still matters.</div>
+            """,
+        },
+
+        {
+            'label_zh': '臨床轉譯：缺氧、分割與高 LET 放射線',
+            'label_en': 'CLINICAL TRANSLATION: Hypoxia, Fractionation, and High LET',
+            'body_zh':             """
+<h3>一、為什麼缺氧會降低放射治療效果？</h3>
+<p>低 LET 光子高度依賴水分子游離所產生的間接自由基損傷；氧氣可將自由基造成的 DNA 損傷固定成永久性病灶。缺氧時，這些損傷較容易被還原或修復，因此細胞殺傷下降。<span class="highlight">光子的 OER 約為 2.5–3</span>，代表缺氧細胞可能需要約 2.5–3 倍劑量才能達到相同生物效應。</p>
+<h3>二、為什麼高 LET 放射線對缺氧腫瘤具有吸引力？</h3>
+<p>高 LET 放射線會產生高密度游離與群聚性 DNA 損傷，對氧氣的依賴較低，因此 OER 較小。α 粒子的 OER 約為 1，表示氧氣增強效應幾乎消失。因此，缺氧腫瘤在理論上可能更適合碳離子或 α 放射核種治療等高 LET 策略。</p>
+<h3>三、為什麼分割治療能保護正常組織？</h3>
+<p>兩次照射之間的時間可讓正常組織修復次致死性損傷。晚期反應組織具有較低 α/β 比值，對單次分次劑量特別敏感，因此降低單次劑量可顯著減少晚期正常組織的 BED。</p>
+<h3>四、為什麼 SBRT 的晚期毒性必須特別小心？</h3>
+<p>SBRT 的單次分次劑量很高，會大幅提高低 α/β 正常組織的 BED。脊髓、腦幹與視覺路徑等串聯型器官，即使只有很小體積出現高劑量熱點，也可能造成嚴重且不可逆的傷害，因此 <span class="highlight">Dmax 與 D0.03 cc</span> 特別重要。</p>
+            """,
+            'body_en':             """
+<h3>1. Why does hypoxia reduce RT effectiveness?</h3>
+<p>Low-LET photons depend heavily on indirect free-radical damage. Oxygen fixes radical-induced damage into permanent lesions. Under hypoxia, these lesions are more likely to be repaired, reducing cell kill. Photon OER is about 2.5–3, meaning hypoxic cells may need 2.5–3 times the dose to achieve the same effect.</p>
+
+<h3>2. Why is high-LET radiation attractive for hypoxic tumors?</h3>
+<p>High-LET radiation creates dense ionization and clustered DNA damage, making it less dependent on oxygen. α-particles have OER around 1, meaning almost no oxygen enhancement effect. Hypoxic tumors may therefore be theoretically suited to high-LET approaches such as carbon ions or alpha-emitter radiopharmaceutical therapy.</p>
+
+<h3>3. Why does fractionation protect normal tissue?</h3>
+<p>Fractionation allows normal tissues to repair sublethal damage, especially late-responding tissues. Late tissues have low α/β and are sensitive to fraction size, so reducing dose per fraction can substantially reduce late-toxicity BED.</p>
+
+<h3>4. Why is SBRT late toxicity especially important?</h3>
+<p>SBRT uses high dose per fraction, which sharply increases BED in low-α/β tissues. Serial organs such as spinal cord, brainstem, and optic apparatus can be severely damaged by a small-volume hotspot, so Dmax / D0.03cc is critical.</p>
+            """,
+        },
+
+        {
+            'label_zh': '高頻考點總表',
+            'label_en': 'HIGH-YIELD REVIEW TABLES',
+            'body_zh':             """
+<h3>α/β 比值</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>記憶點</th><th>內容</th></tr></thead><tbody><tr><td>早期反應組織＝高 α/β</td><td>約 10 Gy；多數腫瘤、皮膚、腸胃黏膜與骨髓</td></tr><tr><td>晚期反應組織＝低 α/β</td><td>約 3 Gy；多數晚期正常組織終點</td></tr><tr><td>脊髓 α/β 很低</td><td>約 2 Gy</td></tr><tr><td>單次分次劑量增加</td><td><span class="highlight">晚期毒性增加尤其明顯</span></td></tr></tbody></table></div>
+<h3>DNA 修復</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>損傷</th><th>修復路徑</th><th>關鍵字</th></tr></thead><tbody><tr><td>鹼基損傷／SSB</td><td>BER</td><td>Glycosylase、APE1、PARP、XRCC1</td></tr><tr><td>大型加合物／紫外線二聚體</td><td>NER</td><td>著色性乾皮症、Cockayne、TFIIH</td></tr><tr><td>DNA 複製錯配</td><td>MMR</td><td>Lynch、MLH1／MSH2／MSH6／PMS2</td></tr><tr><td>DSB，快速修復，G1 期重要</td><td>NHEJ</td><td>Ku70/80、DNA-PKcs、Artemis、Ligase IV</td></tr><tr><td>DSB，精確修復，S／G2 期</td><td>HR</td><td>BRCA1/2、RAD51</td></tr><tr><td>DNA 鏈間交聯</td><td>Fanconi 路徑</td><td>Fanconi 貧血</td></tr></tbody></table></div>
+<h3>OER／LET／RBE</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>概念</th><th>高頻重點</th></tr></thead><tbody><tr><td>OER</td><td>缺氧條件所需劑量／有氧條件所需劑量</td></tr><tr><td>光子 OER</td><td>約 2.5–3</td></tr><tr><td>中子 OER</td><td>約 1.6</td></tr><tr><td>α 粒子 OER</td><td>約 1</td></tr><tr><td>LET</td><td>沿粒子徑跡每單位長度沉積的能量</td></tr><tr><td>LET 增加</td><td><span class="highlight">OER 下降、RBE 上升、存活曲線肩部縮小</span></td></tr><tr><td>RBE 高峰</td><td>約 100 keV／μm</td></tr><tr><td>超過高峰後</td><td>過度殺傷使 RBE 下降</td></tr></tbody></table></div>
+<h3>劑量限制</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>概念</th><th>高頻重點</th></tr></thead><tbody><tr><td>串聯型器官</td><td>Dmax／小體積最大劑量最重要</td></tr><tr><td>平行型器官</td><td>平均劑量與 Vx 最重要</td></tr><tr><td>傳統分割限制</td><td>QUANTEC</td></tr><tr><td>SRS／SBRT 限制</td><td>HYTEC</td></tr><tr><td>再照射</td><td>必須整合既往劑量、時間間隔、器官恢復與累積 BED／EQD2，不能只看是否在一年內</td></tr></tbody></table></div>
+            """,
+            'body_en':             """
+<h3>α/β</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Memory point</th><th>Content</th></tr></thead><tbody><tr><td>Early = high α/β</td><td>About 10; many tumors, skin, GI, bone marrow</td></tr><tr><td>Late = low α/β</td><td>About 3; lung, kidney, liver, bladder</td></tr><tr><td>Cord = very low</td><td>About 2</td></tr><tr><td>Fraction size ↑</td><td>Late toxicity especially ↑</td></tr></tbody></table></div>
+<h3>DNA repair</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Damage</th><th>Repair</th><th>Key words</th></tr></thead><tbody><tr><td>Base error / SSB</td><td>BER</td><td>Glycosylase, APE1, PARP, XRCC1</td></tr><tr><td>Bulky adduct / UV dimer</td><td>NER</td><td>XP, Cockayne, TFIIH</td></tr><tr><td>Replication mismatch</td><td>MMR</td><td>Lynch, MLH1/MSH2/MSH6/PMS2</td></tr><tr><td>DSB fast / G1</td><td>NHEJ</td><td>Ku70/80, DNA-PKcs, Artemis, Ligase IV</td></tr><tr><td>DSB accurate / S-G2</td><td>HR</td><td>BRCA1/2, RAD51</td></tr><tr><td>Crosslink</td><td>Fanconi pathway</td><td>Fanconi anemia</td></tr></tbody></table></div>
+<h3>OER / LET / RBE</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>OER</td><td>Hypoxic dose / aerobic dose</td></tr><tr><td>Photon OER</td><td>2.5–3</td></tr><tr><td>Neutron OER</td><td>1.6</td></tr><tr><td>α-particle OER</td><td>1</td></tr><tr><td>LET</td><td>Energy deposited per unit track length</td></tr><tr><td>LET ↑</td><td>OER ↓, RBE ↑, survival curve shoulder ↓</td></tr><tr><td>RBE peak</td><td>About 100 keV/μm</td></tr><tr><td>RBE after peak</td><td>Overkill → RBE falls</td></tr></tbody></table></div>
+<h3>Dose constraints</h3>
+<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Serial organ</td><td>Dmax / point dose matters</td></tr><tr><td>Parallel organ</td><td>Mean / Vx matters</td></tr><tr><td>Conventional constraints</td><td>QUANTEC</td></tr><tr><td>SRS / SBRT constraints</td><td>HYTEC</td></tr><tr><td>Re-irradiation</td><td>Be very careful, especially if prior RT was within the last year</td></tr></tbody></table></div>
+            """,
+        },
+
+        {
+            'label_zh': '總結：從 DNA 損傷到臨床治療比',
+            'label_en': 'TAKE-HOME SUMMARY: From DNA Damage to Therapeutic Ratio',
+            'body_zh':             """
+<p>放射生物學可用一條完整路徑串連：</p>
+<div class="clinical-note"><span class="highlight">放射線 → 直接或間接 DNA 損傷 → DSB → MRN／ATM／γ-H2AX／53BP1／BRCA 訊號 → NHEJ 或 HR 修復；若修復失敗或錯誤修復 → 染色體異常 → 有絲分裂災難與細胞死亡</span>。</div>
+<p>分割治療的臨床意義，是利用 BED 與 EQD2 比較不同療程的生物效應，並利用正常組織修復、腫瘤再氧合與細胞週期重新分布來改善治療比。低 α/β 的晚期正常組織對大分次特別敏感，因此低分次與 SBRT 必須嚴格遵守器官限制。</p>
+<p>OER、LET 與 RBE 的核心關係是：缺氧會削弱低 LET 光子的效果；LET 越高，對氧氣的依賴越低，RBE 通常越高，但在約 100 keV／μm 後會因過度殺傷而下降。</p>
+<div class="clinical-note">臨床最重要的觀念：好的放射治療計畫不是單純提高腫瘤劑量，而是要在 <span class="highlight">TCP、NTCP、分割生物學、氧合狀態、DNA 修復能力，以及串聯型／平行型器官限制</span> 之間取得最佳平衡。</div>
+            """,
+            'body_en':             """
+<p>Radiobiology can be connected as one chain:</p>
+<div class="clinical-note">Radiation → direct / indirect DNA damage → DSB → ATM / γ-H2AX / 53BP1 / BRCA signaling → NHEJ or HR repair. If repair fails or misrepair occurs → chromosome aberration → cell death.</div>
+<p>The clinical meaning of dose fractionation is to convert different schedules into biological dose using BED/EQD2. Low-α/β late tissues are especially sensitive to large fractions, so SBRT/hypofractionation requires strict OAR constraints.</p>
+<p>The core relationship among OER, LET, and RBE is: hypoxia weakens low-LET photons; as LET increases, oxygen dependency falls and RBE rises, but RBE falls after about 100 keV/μm because of overkill.</p>
+<div class="clinical-note">The most important clinical sentence: a good radiotherapy plan is not simply dose escalation to the tumor; it is the optimal balance among TCP, NTCP, fractionation biology, oxygenation, DNA repair capacity, and serial/parallel organ constraints.</div>
+            """,
+        },
+
     ],
-    "excel_sheet": None,
-    "prev": ["radbio.html", "放射生物", "RadBio"],
+
+    'excel_sheet': 'Radiobiology',
+
+    'trial_filter': [
+        'radiobiology',
+        'TCP',
+        'NTCP',
+        'fractionation',
+        'linear quadratic model',
+        'LQ model',
+        'BED',
+        'EQD2',
+        'alpha beta',
+        'α/β',
+        '4 Rs',
+        'repair',
+        'repopulation',
+        'redistribution',
+        'reoxygenation',
+        'DNA damage',
+        'double strand break',
+        'DSB',
+        'single strand break',
+        'SSB',
+        'gamma H2AX',
+        'γ-H2AX',
+        '53BP1',
+        'ATM',
+        'MRN',
+        'MRE11',
+        'RAD50',
+        'NBS1',
+        'CHK2',
+        'BRCA1',
+        'BRCA2',
+        'RAD51',
+        'NHEJ',
+        'homologous recombination',
+        'HR',
+        'BER',
+        'NER',
+        'MMR',
+        'PARP inhibitor',
+        'Fanconi',
+        'OER',
+        'oxygen enhancement ratio',
+        'hypoxia',
+        'pimonidazole',
+        'HIF-1 alpha',
+        'LET',
+        'linear energy transfer',
+        'RBE',
+        'relative biological effectiveness',
+        'QUANTEC',
+        'HYTEC',
+        'serial organ',
+        'parallel organ',
+        'SBRT',
+        'SRS',
+    ],
+
+    "prev": ["physics.html", "物理", "Physics"],
     "next": ["cns.html", "CNS", "CNS"],
 })
-
 # ============================================================
 # DISEASE SITES
 # ============================================================
@@ -9390,67 +9796,57 @@ PAGES.append(
  'emoji': '♂️',
  'title_zh': '攝護腺癌',
  'title_en': 'Prostate Cancer',
- 'sub_zh': '攝護腺癌總論、workup、Gleason/Grade Group、risk stratification、localized RT、hypofractionation、SBRT、ADT、術後 '
-           'salvage、mCSPC、mCRPC、MDT 與 radiopharmaceutical therapy。',
+ 'sub_zh': '攝護腺癌總論、診斷評估、Gleason '
+           '分數與分級群組、風險分層、局限性疾病治療、低分次放射治療、立體定位放射治療、雄性素剝奪治療、術後早期救援治療、轉移性去勢敏感性與去勢抗性攝護腺癌、轉移灶導向治療，以及放射藥物治療。',
  'sub_en': 'Prostate cancer overview, workup, Gleason/Grade Group, risk stratification, localized RT, '
            'hypofractionation, SBRT, ADT, postoperative salvage, mCSPC, mCRPC, MDT, and radiopharmaceutical therapy.',
- 'sections': [{'label_zh': '攝護腺總論',
-               'label_en': 'PCA OVERVIEW',
-               'h2_zh': '攝護腺癌流行病學、臨床表現、解剖與 androgen axis',
-               'h2_en': 'Prostate cancer epidemiology, presentation, anatomy, and androgen axis',
-               'body_zh': '<p class="section-kicker"><strong>第一部分：攝護腺癌總論</strong></p>\n'
-                          '<h3>一、流行病學與臨床重要性</h3>\n'
-                          '<p>攝護腺癌是美國男性最常見的惡性腫瘤，若排除 non-melanoma skin cancers，男性一生罹患風險約為 1 in '
-                          '8。它也是男性第二常見癌症死因，第一名是肺癌。多數攝護腺癌診斷時仍屬 localized 或 regional disease，因此治療重點不只是「能不能治癒」，更是如何根據 '
-                          'risk group，在癌症控制、尿路功能、性功能、腸胃毒性、ADT 副作用、病人年齡與 competing mortality 之間取得平衡。</p>\n'
-                          '<p>Source file 的圖表也強調，攝護腺癌大多在 localized stage 被診斷；localized 和 regional disease 的 5-year '
-                          'relative survival 幾乎非常高，但 distant disease 的 survival 明顯下降。因此 localized disease '
-                          '的治療強度要依風險分層決定，而 metastatic disease 則要再依 castration-sensitive vs '
-                          'castration-resistant、low-volume vs high-volume、PSMA status、prior therapy 來決定。</p>\n'
-                          '<h3>二、Clinical presentation</h3>\n'
-                          '<p>攝護腺癌通常沒有症狀，最常因 PSA screening 發現。若有症狀，多數是 lower urinary tract symptoms，包括 '
-                          'frequency、urgency、nocturia、hesitancy，也可能出現 hematuria 或 hematospermia。PSA screening 的核心是 '
-                          'shared decision-making，因為 randomized trials 和 meta-analyses 沒有顯示明確 overall mortality '
-                          'reduction，但 ERSPC 顯示 screening 可能降低 distant-stage prostate cancer incidence；同時必須考慮 '
-                          'over-diagnosis、over-treatment、biopsy complications、治療後尿路/性功能/腸胃毒性，以及病人焦慮。</p>\n'
+ 'sections': [{'label_zh': '攝護腺癌總論：流行病學、臨床表現、解剖與雄性素訊號軸',
+               'label_en': 'OVERVIEW: Epidemiology, presentation, anatomy, and androgen axis',
+               'body_zh': '<h3>一、流行病學與臨床重要性</h3>\n'
+                          '<p>攝護腺癌是男性最常見的惡性腫瘤之一。若排除非黑色素瘤皮膚癌，美國男性一生罹患攝護腺癌的風險約為 <span '
+                          'class="highlight">1/8</span>；它也是男性第二常見的癌症死因，僅次於肺癌。多數患者診斷時仍屬局限性或區域性疾病，因此治療決策不只考量腫瘤控制，也必須平衡尿路功能、性功能、腸胃道毒性、ADT '
+                          '副作用、患者年齡及競爭性死亡風險。</p>\n'
+                          '<p><span class="highlight">局限性與區域性攝護腺癌的 5 '
+                          '年相對存活率極高</span>，但遠端轉移疾病的預後明顯較差。局限性疾病應依風險分層決定治療強度；轉移性疾病則需進一步區分去勢敏感性或去勢抗性、低疾病量或高疾病量、PSMA '
+                          '表現，以及既往治療。</p>\n'
+                          '\n'
+                          '<h3>二、臨床表現與 PSA 篩檢</h3>\n'
+                          '<p>早期攝護腺癌通常沒有症狀，最常因 PSA 篩檢而發現。若出現症狀，多為下泌尿道症狀，例如頻尿、急尿、夜尿及排尿遲疑，也可能出現血尿或血精。PSA '
+                          '篩檢應採醫病共享決策，因為篩檢可能降低晚期疾病的發生，但也會造成過度診斷、過度治療、切片併發症及治療相關功能損害。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>AUA screening concept</caption>\n'
-                          '    <thead><tr><th scope="col">年齡/族群</th><th scope="col">Screening 建議</th></tr></thead>\n'
+                          '    <caption>AUA 篩檢原則</caption>\n'
+                          '    <thead><tr><th scope="col">年齡／族群</th><th scope="col">建議</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>&lt;40 歲</td><td>不建議 routine screening</td></tr>\n'
-                          '      <tr><td>40–54 歲</td><td>主要 screen higher-risk patients，例如 Black race 或 family '
-                          'history</td></tr>\n'
-                          '      <tr><td>55–69 歲</td><td>Shared decision-making</td></tr>\n'
-                          '      <tr><td>部分 &gt;70 歲且健康狀況好</td><td>可個案化討論</td></tr>\n'
-                          '      <tr><td>&gt;70 歲且 life expectancy &lt;10–15 年</td><td>通常不 screen</td></tr>\n'
+                          '      <tr><td>&lt;40 歲</td><td>不建議常規篩檢</td></tr>\n'
+                          '      <tr><td>40–54 歲</td><td>主要針對較高風險族群，例如非裔男性或有家族史者</td></tr>\n'
+                          '      <tr><td>55–69 歲</td><td><span class="highlight">以醫病共享決策為核心</span></td></tr>\n'
+                          '      <tr><td>部分 &gt;70 歲且健康狀況良好者</td><td>可個別化討論</td></tr>\n'
+                          '      <tr><td>&gt;70 歲且預期壽命 &lt;10–15 年</td><td>通常不建議篩檢</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
+                          '\n'
                           '<h3>三、攝護腺解剖</h3>\n'
-                          '<p>攝護腺約 1/3 是 fibromuscular stroma，主要包含 anterior zone；約 2/3 是 glandular elements，包含 central '
-                          'zone、transition zone、peripheral zone。Transition zone 是 BPH 常見位置；peripheral zone '
-                          '是多數攝護腺癌發生位置。這點對 DRE、MRI interpretation、biopsy targeting 很重要，因為 posterior/peripheral lesions '
-                          '比較容易被 DRE 或 systematic posterior biopsy 偵測。</p>\n'
+                          '<p>攝護腺約三分之一為前方纖維肌肉基質，約三分之二為腺體成分，包括中央區、移行區與周邊區。<span '
+                          'class="highlight">移行區是良性攝護腺肥大最常見的位置；周邊區則是多數攝護腺癌的起源處</span>。因此後方或周邊區病灶較容易由肛門指診或系統性後方切片偵測，而前方病灶較可能被標準切片漏診。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>攝護腺區域與臨床意義</caption>\n'
+                          '    <caption>攝護腺分區與臨床意義</caption>\n'
                           '    <thead><tr><th scope="col">區域</th><th scope="col">臨床意義</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Peripheral zone</td><td>大多數 prostate cancer 起源處</td></tr>\n'
-                          '      <tr><td>Transition zone</td><td>BPH 常見部位</td></tr>\n'
-                          '      <tr><td>Central zone</td><td>位於 ejaculatory ducts 周圍</td></tr>\n'
-                          '      <tr><td>Anterior fibromuscular stroma</td><td>非 glandular dominant；前方病灶有時 biopsy '
-                          '較容易漏掉</td></tr>\n'
+                          '      <tr><td>周邊區</td><td>多數攝護腺癌的起源處</td></tr>\n'
+                          '      <tr><td>移行區</td><td>良性攝護腺肥大的常見部位</td></tr>\n'
+                          '      <tr><td>中央區</td><td>位於射精管周圍</td></tr>\n'
+                          '      <tr><td>前方纖維肌肉基質</td><td>以非腺體組織為主；前方病灶可能被標準切片漏診</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>四、攝護腺生理與 androgen axis</h3>\n'
-                          '<p>攝護腺參與 seminal fluid production，約 30% seminal fluid 來自 prostate，約 70% 來自 seminal '
-                          'vesicles、testes、bulbourethral glands。攝護腺生長與攝護腺癌存活高度依賴 androgen regulation：LH 促進 testes 製造 '
-                          'testosterone；ACTH 促進 adrenals 產生 DHEA，再轉成 testosterone；testosterone 經 5-α reductase 轉成 '
-                          'DHT，DHT 與 androgen receptor 結合後促進 prostate survival、growth、PSA secretion。這就是 ADT、AR '
-                          'inhibitors、CYP17 inhibitors 的生物學基礎。</p>',
+                          '\n'
+                          '<h3>四、雄性素訊號軸</h3>\n'
+                          '<p>攝護腺生長與攝護腺癌細胞存活高度依賴雄性素。LH 促進睪丸製造睪固酮；腎上腺亦可產生 DHEA，並轉換為睪固酮。睪固酮經 5-α 還原酶轉換為 DHT，DHT '
+                          '與雄性素受體結合後促進細胞存活、生長與 PSA 分泌。<span class="highlight">此訊號軸是 ADT、雄性素受體抑制劑與 CYP17 '
+                          '抑制劑的生物學基礎</span>。</p>',
                'body_en': '<p class="section-kicker"><strong>Part I. Prostate Cancer Overview</strong></p>\n'
                           '<h3>1. Epidemiology and clinical importance</h3>\n'
                           '<p>Prostate cancer is the most common malignancy in men in the United States if '
@@ -9516,111 +9912,78 @@ PAGES.append(
                           'reductase, and DHT activates the androgen receptor to promote prostate survival, growth, '
                           'and PSA secretion. This is the biologic basis for ADT, androgen receptor inhibitors, and '
                           'CYP17 inhibitors.</p>'},
-              {'label_zh': 'Workup',
-               'label_en': 'WORKUP',
-               'h2_zh': 'Initial workup、IPSS/SHIM、PSA metrics、MRI、systemic imaging 與 biopsy',
-               'h2_en': 'Initial workup, IPSS/SHIM, PSA metrics, MRI, systemic imaging, and biopsy',
-               'body_zh': '<p class="section-kicker"><strong>第三部分：Workup 細節</strong></p>\n'
-                          '<h3>一、Initial clinical workup</h3>\n'
-                          '<p>Workup 包括 H&P、labs、imaging、pathology。H&P 要特別評估 urinary、sexual、bowel symptoms，並記錄 IPSS 和 '
-                          'SHIM scores。DRE 用於評估 palpable nodule、induration、T-stage suspicion。Labs 包括 PSA 和 serum '
-                          'testosterone；testosterone 對日後 ADT response、是否達到 castration level，以及 castration-resistant '
-                          'disease definition 很重要。</p>\n'
+              {'label_zh': '診斷評估：初始檢查、IPSS／SHIM、PSA 指標、MRI、全身影像與切片',
+               'label_en': 'WORKUP: Initial assessment, IPSS/SHIM, PSA metrics, MRI, systemic imaging, and biopsy',
+               'body_zh': '<h3>一、初始臨床評估</h3>\n'
+                          '<p>診斷評估包括病史與身體檢查、實驗室檢查、影像檢查及病理確認。病史應特別評估泌尿道、性功能與腸道症狀，並記錄 IPSS 與 SHIM。肛門指診可評估可觸及結節、硬化與臨床 T '
+                          '分期；實驗室檢查包括 PSA 與血清睪固酮。睪固酮數值對後續判定 ADT 反應、是否達到去勢濃度，以及是否為去勢抗性疾病均相當重要。</p>\n'
+                          '\n'
                           '<h3>二、IPSS 與 SHIM</h3>\n'
-                          '<p>IPSS（International Prostate Symptom Score）用於量化 urinary symptoms，包括 incomplete '
-                          'emptying、frequency、intermittency、urgency、weak stream、straining、nocturia。</p>\n'
+                          '<p>IPSS（國際攝護腺症狀評分）用於量化排尿不完全感、頻尿、尿流中斷、急尿、尿流細弱、需用力排尿及夜尿。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
                           '    <caption>IPSS 嚴重程度</caption>\n'
                           '    <thead><tr><th scope="col">IPSS</th><th scope="col">嚴重程度</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>1–7</td><td>Mild</td></tr>\n'
-                          '      <tr><td>8–19</td><td>Moderate</td></tr>\n'
-                          '      <tr><td>20–35</td><td>Severe</td></tr>\n'
+                          '      <tr><td>1–7</td><td>輕度</td></tr>\n'
+                          '      <tr><td>8–19</td><td>中度</td></tr>\n'
+                          '      <tr><td>20–35</td><td>重度</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<p>IPSS 對 radiation decision 很重要。若 baseline IPSS 很高，尤其 obstructive symptoms '
-                          '明顯，brachytherapy 或 SBRT 後 urinary flare/retention risk 可能較高，需先處理 BPH 或慎選治療方式。</p>\n'
-                          '<p>SHIM（Sexual Health Inventory for Men）用於評估 erectile function。它可協助治療前 counseling，因為 '
-                          'surgery、RT、ADT 都可能影響 erectile function，但機轉與時間軸不同：surgery 可能較早出現 erectile dysfunction；RT 相關 '
-                          'ED 常較漸進；ADT 則可造成 libido 降低與 erectile dysfunction。</p>\n'
-                          '<h3>三、PSA metrics</h3>\n'
-                          '<p>PSA &gt;2.5–4 ng/mL 代表 prostate cancer risk 增加，但 normal PSA 會受年齡與族群影響。PSA false positive '
-                          'causes 包括 manipulation/biopsy、BPH、prostatitis、urinary retention、trauma、ejaculation，因此單一 '
-                          'isolated PSA value 不容易判讀。</p>\n'
+                          '<p><span class="highlight">治療前 IPSS 偏高，尤其有明顯阻塞性症狀時，近接治療或 SBRT '
+                          '後的尿滯留與泌尿道症狀急性加劇風險較高</span>，應先處理良性攝護腺阻塞或慎選治療方式。</p>\n'
+                          '<p>SHIM（男性性健康量表）用於評估勃起功能。手術、放射治療及 ADT '
+                          '均可能影響性功能，但時間軸不同：手術後勃起功能障礙可能較早出現；放射治療相關勃起功能障礙通常逐漸發生；ADT 則會降低性慾與勃起功能。</p>\n'
+                          '\n'
+                          '<h3>三、常用 PSA 指標</h3>\n'
+                          '<p>PSA 升高會增加攝護腺癌的可能性，但單次數值易受良性攝護腺肥大、攝護腺炎、尿滯留、近期射精、外傷或攝護腺操作影響，因此應結合趨勢、攝護腺體積與臨床情境判讀。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>常用 PSA metrics</caption>\n'
+                          '    <caption>常用 PSA 指標</caption>\n'
                           '    <thead><tr><th scope="col">指標</th><th scope="col">定義</th><th '
                           'scope="col">高風險概念</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>PSA density</td><td>serum PSA / prostate volume</td><td>&gt;0.15 ng/mL² '
-                          'suggests higher risk</td></tr>\n'
-                          '      <tr><td>PSA velocity</td><td>PSA over time 的變化速度</td><td>&gt;0.75 ng/mL/year suggests '
-                          'higher risk</td></tr>\n'
-                          '      <tr><td>PSA doubling time</td><td>PSA doubling 所需時間</td><td>&lt;12 months suggests '
-                          'higher risk</td></tr>\n'
-                          '      <tr><td>Free PSA / total PSA ratio</td><td>游離 PSA 比例</td><td>&lt;25% suggests higher '
-                          'risk</td></tr>\n'
+                          '      <tr><td>PSA 密度</td><td>血清 PSA／攝護腺體積</td><td><span class="highlight">&gt;0.15 '
+                          'ng/mL/cm³</span> 提示風險增加</td></tr>\n'
+                          '      <tr><td>PSA 上升速率</td><td>PSA 隨時間的變化速率</td><td>&gt;0.75 ng/mL/年提示風險增加</td></tr>\n'
+                          '      <tr><td>PSA 倍增時間</td><td>PSA 增加一倍所需時間</td><td>&lt;12 個月提示較高風險</td></tr>\n'
+                          '      <tr><td>游離 PSA／總 PSA 比值</td><td>游離 PSA 所占比例</td><td>&lt;25% 提示風險增加</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>四、MRI and systemic imaging</h3>\n'
-                          '<p>NCCN strongly recommends prostate MRI before biopsy，以利 image-guided '
-                          'biopsy。Multiparametric MRI 至少包含 T2 sequence 和一個 functional sequence，例如 DWI 或 dynamic '
-                          'contrast-enhanced imaging。MRI 可用於 visualizing intraprostatic disease、評估 extracapsular '
-                          'extension、seminal vesicle invasion、lesion targeting、prostate volume，以及 RT planning。</p>\n'
+                          '\n'
+                          '<h3>四、MRI 與全身性影像檢查</h3>\n'
+                          '<p><span class="highlight">應在攝護腺切片前考慮多參數 MRI</span>，以協助病灶定位與影像導引切片。多參數 MRI 至少包括 T2 '
+                          '加權影像及一項功能性序列，例如擴散加權影像或動態對比增強影像。MRI 可顯示攝護腺內病灶、包膜外侵犯、儲精囊侵犯、攝護腺體積，並可用於放射治療計畫。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>MRI sequences 的基本 interpretation</caption>\n'
-                          '    <thead><tr><th scope="col">MRI sequence</th><th scope="col">主要用途</th></tr></thead>\n'
+                          '    <caption>MRI 序列的基本判讀</caption>\n'
+                          '    <thead><tr><th scope="col">MRI 序列</th><th scope="col">主要用途</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>T1-weighted image</td><td>看 prostate/SV hemorrhage、lymph node '
-                          'enlargement</td></tr>\n'
-                          '      <tr><td>T2-weighted image</td><td>看 prostate volume、zonal anatomy；focal circumscribed '
-                          'moderately hypointense lesions suspicious</td></tr>\n'
-                          '      <tr><td>DWI / ADC</td><td>高 cellularity 的癌細胞會 restrict diffusion；high b-value '
-                          'hyperintensity + ADC hypointensity suspicious</td></tr>\n'
-                          '      <tr><td>Dynamic contrast-enhanced</td><td>早期 enhancement 可支持 suspicious lesion，但通常輔助 '
-                          'DWI/T2</td></tr>\n'
+                          '      <tr><td>T1 加權影像</td><td>評估攝護腺／儲精囊出血及淋巴結腫大</td></tr>\n'
+                          '      <tr><td>T2 加權影像</td><td>評估攝護腺體積與分區解剖；局部低訊號病灶需提高警覺</td></tr>\n'
+                          '      <tr><td>DWI／ADC</td><td>高細胞密度腫瘤常呈高 b 值高訊號與 ADC 低訊號</td></tr>\n'
+                          '      <tr><td>動態對比增強影像</td><td>早期增強可支持可疑病灶，通常作為 T2／DWI 的輔助資訊</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<p>對 unfavorable intermediate-risk、high-risk 或更高 risk disease，要 rule out metastatic '
-                          'disease。可用 Tc-99m bone scan 評估 bone metastases；soft tissue imaging 可用 PSMA PET/CT 或 CT '
-                          'C/A/P。Source file 特別提到 proPSMA study：PSMA PET 對 nodal/distant metastases detection 的 '
-                          'accuracy 比 conventional CT 高，92% vs 65%。</p>\n'
+                          '<p>不利型中度風險、高風險或更高風險疾病應排除轉移。骨轉移可用 Tc-99m 骨骼掃描評估；軟組織分期可使用 PSMA PET/CT 或胸腹骨盆 CT。proPSMA '
+                          '研究顯示，PSMA PET 偵測淋巴結與遠端轉移的準確度高於傳統影像。</p>\n'
+                          '\n'
+                          '<h3>五、切片</h3>\n'
+                          '<p>病理診斷可使用經直腸超音波導引切片，途徑可為經直腸或經會陰。<span '
+                          'class="highlight">經會陰切片的敗血症風險較低，且較容易取樣前方病灶</span>。MRI 顯示 PI-RADS 可疑病灶時，應結合 MRI '
+                          '標靶切片與系統性切片，以降低漏診臨床顯著癌症的風險。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>NCCN imaging triggers in the file</caption>\n'
-                          '    <thead><tr><th scope="col">Imaging 建議情境</th></tr></thead>\n'
+                          '    <caption>切片方式與優點</caption>\n'
+                          '    <thead><tr><th scope="col">切片方式</th><th scope="col">優點</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>PSA &gt;20 ng/mL</td></tr>\n'
-                          '      <tr><td>GG2 且 PSA &gt;10</td></tr>\n'
-                          '      <tr><td>GG3 or higher</td></tr>\n'
-                          '      <tr><td>T3–T4 disease</td></tr>\n'
-                          '      <tr><td>≥50% positive biopsy cores</td></tr>\n'
-                          '      <tr><td>PSA &gt;10 且 T2b/T2c</td></tr>\n'
-                          '    </tbody>\n'
-                          '  </table>\n'
-                          '</div>\n'
-                          '<h3>五、Biopsy</h3>\n'
-                          '<p>Pathologic diagnosis 來自 prostate biopsy。可用 transrectal ultrasound-guided biopsy，route 可為 '
-                          'transrectal 或 transperineal。Source file 指出 transperineal approach preferred，因為 sepsis risk '
-                          '較低。若可行，MRI-fusion biopsy preferred，尤其 MRI 有 PI-RADS suspicious lesion 時。</p>\n'
-                          '<div class="table-wrap">\n'
-                          '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Biopsy type 與優點</caption>\n'
-                          '    <thead><tr><th scope="col">Biopsy type</th><th scope="col">優點</th></tr></thead>\n'
-                          '    <tbody>\n'
-                          '      <tr><td>Systematic biopsy</td><td>可偵測 MRI occult disease；提供 core positivity '
-                          '分層</td></tr>\n'
-                          '      <tr><td>MRI-targeted biopsy</td><td>提高 clinically significant cancer '
-                          'detection</td></tr>\n'
-                          '      <tr><td>Transperineal biopsy</td><td>Sepsis risk 較低；anterior lesion access '
-                          '較佳</td></tr>\n'
-                          '      <tr><td>Transrectal biopsy</td><td>傳統常用；但感染風險較高</td></tr>\n'
+                          '      <tr><td>系統性切片</td><td>可偵測 MRI 未顯示的病灶，並提供陽性針比例</td></tr>\n'
+                          '      <tr><td>MRI 標靶切片</td><td>提高臨床顯著攝護腺癌的偵測率</td></tr>\n'
+                          '      <tr><td>經會陰切片</td><td>敗血症風險較低，前方病灶取樣較佳</td></tr>\n'
+                          '      <tr><td>經直腸切片</td><td>傳統常用，但感染風險較高</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>',
@@ -9736,65 +10099,58 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': '分級與風險',
-               'label_en': 'GRADE/RISK',
-               'h2_zh': 'Gleason score、Grade Group 與 localized risk grouping',
-               'h2_en': 'Gleason score, Grade Group, and localized risk grouping',
-               'body_zh': '<p class="section-kicker"><strong>第四部分：Gleason score、Grade Group 與 risk group</strong></p>\n'
-                          '<h3>一、Gleason / Grade Group</h3>\n'
-                          '<p>攝護腺腺癌 grading 使用 Gleason pattern 和 Grade Group。Source file 的整理如下：</p>\n'
+              {'label_zh': '分級與風險分層：Gleason 分數、分級群組與局限性攝護腺癌風險分類',
+               'label_en': 'GRADE/RISK: Gleason score, Grade Group, and localized risk grouping',
+               'body_zh': '<h3>一、Gleason 分數與分級群組</h3>\n'
+                          '<p>攝護腺腺癌以 Gleason 型態及分級群組（Grade Group, GG）進行分級。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Gleason score 與 Grade Group</caption>\n'
-                          '    <thead><tr><th scope="col">Grade Group</th><th scope="col">Gleason score</th><th '
+                          '    <caption>Gleason 分數與分級群組</caption>\n'
+                          '    <thead><tr><th scope="col">分級群組</th><th scope="col">Gleason 分數</th><th '
                           'scope="col">臨床意義</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>GG1</td><td>Gleason ≤6</td><td>通常 very low / low risk</td></tr>\n'
-                          '      <tr><td>GG2</td><td>Gleason 3+4=7</td><td>通常 favorable intermediate</td></tr>\n'
-                          '      <tr><td>GG3</td><td>Gleason 4+3=7</td><td>通常 unfavorable intermediate</td></tr>\n'
-                          '      <tr><td>GG4</td><td>Gleason 8</td><td>High risk</td></tr>\n'
-                          '      <tr><td>GG5</td><td>Gleason 9–10</td><td>Very high-risk biology</td></tr>\n'
+                          '      <tr><td>GG1</td><td>Gleason ≤6</td><td>通常屬極低或低風險</td></tr>\n'
+                          '      <tr><td>GG2</td><td>Gleason 3+4=7</td><td>通常屬有利型中度風險</td></tr>\n'
+                          '      <tr><td>GG3</td><td>Gleason 4+3=7</td><td>通常屬不利型中度風險</td></tr>\n'
+                          '      <tr><td>GG4</td><td>Gleason 8</td><td>高風險</td></tr>\n'
+                          '      <tr><td>GG5</td><td>Gleason 9–10</td><td>極高風險生物學特徵</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<div class="clinical-note">高分記憶：3+4 和 4+3 都是 7，但臨床意義不同。3+4 代表 pattern 3 predominant，較 '
-                          'favorable；4+3 代表 pattern 4 predominant，較 aggressive，因此歸 unfavorable intermediate。</div>\n'
-                          '<h3>二、Risk grouping</h3>\n'
-                          '<p>Risk stratification 會影響 staging、prognosis 與 treatment paradigm。Source file 的 risk '
-                          'grouping 可整理如下：</p>\n'
+                          '<div class="clinical-note"><span class="highlight">Gleason 3+4 與 4+3 雖然總分皆為 '
+                          '7，但並不等價</span>：3+4 以型態 3 為主，預後較佳；4+3 以型態 4 為主，侵襲性較高。</div>\n'
+                          '\n'
+                          '<h3>二、局限性攝護腺癌風險分層</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Localized prostate cancer risk grouping</caption>\n'
-                          '    <thead><tr><th scope="col">Risk group</th><th scope="col">Definition</th></tr></thead>\n'
+                          '    <caption>局限性攝護腺癌風險分層</caption>\n'
+                          '    <thead><tr><th scope="col">風險群組</th><th scope="col">定義</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Very low risk</td><td>T1c、GG1、PSA &lt;10；&lt;3 positive cores 且每個 core '
-                          '&lt;50% involvement</td></tr>\n'
-                          '      <tr><td>Low risk</td><td>T2a、GG1、PSA &lt;10</td></tr>\n'
-                          '      <tr><td>Favorable intermediate risk</td><td>只有一個 intermediate-risk '
-                          'factor：T2b–T2c、GG2、或 PSA 10–20，且 &lt;50% biopsy cores positive</td></tr>\n'
-                          '      <tr><td>Unfavorable intermediate risk</td><td>GG3 或超過一個 intermediate-risk '
-                          'factor</td></tr>\n'
-                          '      <tr><td>High risk</td><td>T3a、GG4/GG5、或 PSA &gt;20</td></tr>\n'
-                          '      <tr><td>Very high risk</td><td>T3b–T4、primary Gleason pattern 5、&gt;4 cores with '
-                          'GG4/5、或 &gt;1 high-risk factor</td></tr>\n'
+                          '      <tr><td>極低風險</td><td>T1c、GG1、PSA &lt;10；陽性切片 &lt;3 針，且每針腫瘤侵犯 &lt;50%</td></tr>\n'
+                          '      <tr><td>低風險</td><td>T2a、GG1、PSA &lt;10</td></tr>\n'
+                          '      <tr><td>有利型中度風險</td><td>僅有一項中度風險因子：T2b–T2c、GG2 或 PSA 10–20，且陽性切片比例 &lt;50%</td></tr>\n'
+                          '      <tr><td>不利型中度風險</td><td><span class="highlight">GG3，或具有超過一項中度風險因子</span></td></tr>\n'
+                          '      <tr><td>高風險</td><td><span class="highlight">T3a、GG4／GG5 或 PSA '
+                          '&gt;20</span></td></tr>\n'
+                          '      <tr><td>極高風險</td><td>T3b–T4、主要 Gleason 型態 5、&gt;4 針為 GG4／GG5，或具有超過一項高風險因子</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>三、Risk-stratified localized management</h3>\n'
+                          '\n'
+                          '<h3>三、依風險分層的治療原則</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Localized management summary</caption>\n'
-                          '    <thead><tr><th scope="col">Risk group</th><th scope="col">Typical '
-                          'management</th></tr></thead>\n'
+                          '    <caption>局限性疾病治療概念</caption>\n'
+                          '    <thead><tr><th scope="col">風險分層</th><th scope="col">治療原則</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Low risk</td><td>Active surveillance 或 monotherapy：surgery 或 RT</td></tr>\n'
-                          '      <tr><td>Favorable intermediate</td><td>Monotherapy</td></tr>\n'
-                          '      <tr><td>Unfavorable intermediate</td><td>Surgery 或 prostate RT + ST-ADT 4–6 '
-                          'months</td></tr>\n'
-                          '      <tr><td>High risk</td><td>考慮 pelvic RT + LT-ADT 18–36 months，或 surgery</td></tr>\n'
-                          '      <tr><td>Very high risk</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone，或 selected '
-                          'surgery</td></tr>\n'
-                          '      <tr><td>Node positive</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone</td></tr>\n'
+                          '      <tr><td>低風險</td><td>主動監測；需治療時可選手術或單一放射治療</td></tr>\n'
+                          '      <tr><td>有利型中度風險</td><td>通常採單一局部治療</td></tr>\n'
+                          '      <tr><td>不利型中度風險</td><td>手術，或攝護腺放射治療 + <span class="highlight">短期 ADT 4–6 '
+                          '個月</span></td></tr>\n'
+                          '      <tr><td>高風險</td><td>手術，或攝護腺／骨盆放射治療 + <span class="highlight">長期 ADT 18–36 '
+                          '個月</span></td></tr>\n'
+                          '      <tr><td>極高風險</td><td>骨盆放射治療 + 長期 ADT + abiraterone／prednisone；少數患者可考慮手術</td></tr>\n'
+                          '      <tr><td>淋巴結陽性</td><td>骨盆放射治療 + 長期 ADT + abiraterone／prednisone</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>',
@@ -9864,51 +10220,41 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': '局部治療',
-               'label_en': 'LOCAL TX',
-               'h2_zh': 'Localized prostate cancer treatment options 與 radiobiology',
-               'h2_en': 'Localized prostate cancer treatment options and radiobiology',
-               'body_zh': '<p class="section-kicker"><strong>第五部分：Localized prostate cancer treatment '
-                          'options</strong></p>\n'
-                          '<h3>一、Local therapy options</h3>\n'
-                          '<p>Localized prostate cancer treatment 是 risk-adapted。Local therapy 包括 radical '
-                          'prostatectomy、EBRT alone、brachytherapy alone、EBRT + brachytherapy boost、moderate '
-                          'hypofractionation、SBRT、以及 focal intraprostatic boost。若 pelvic nodal involvement risk '
-                          '高，手術可考慮 PLND；放療可考慮 pelvic EBRT。Systemic therapy 以 ADT 為核心：unfavorable intermediate-risk 用 '
-                          'ST-ADT 4–6 months；high-risk 或更高風險用 LT-ADT 18–36 months。</p>\n'
-                          '<h3>二、Surgery</h3>\n'
-                          '<p>Radical prostatectomy 移除 prostate 與 seminal vesicles，常合併 risk-adapted pelvic lymph node '
-                          'dissection。優點是可獲得 pathologic staging、margin status、nodal status，且術後 PSA endpoint 清楚：PSA '
-                          '應該變成 undetectable。缺點包括 urinary incontinence、erectile dysfunction、perioperative risk，以及若有 '
-                          'adverse pathology 或 PSA recurrence，後續可能仍需 salvage RT ± ADT。</p>\n'
-                          '<h3>三、Radiation</h3>\n'
+              {'label_zh': '局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部加量',
+               'label_en': 'LOCAL THERAPY: Surgery, EBRT, brachytherapy, hypofractionation, SBRT, focal boost, and '
+                           'radiobiology',
+               'body_zh': '<h3>一、局部治療選項</h3>\n'
+                          '<p><span '
+                          'class="highlight">局限性攝護腺癌的治療應依風險分層與患者特徵個別化規劃</span>。局部治療包括根治性攝護腺切除術、單獨體外放射治療（EBRT）、單獨近接治療、EBRT '
+                          '合併近接治療加量、中度低分次放射治療、SBRT，以及攝護腺內局部病灶加量。骨盆淋巴結轉移風險較高時，手術可考慮骨盆淋巴結廓清術；放射治療可考慮加入骨盆淋巴結照射。</p>\n'
+                          '<p>全身性治療以 ADT 為核心：<span class="highlight">不利型中度風險合併短期 ADT 4–6 個月；高風險或更高風險合併長期 ADT 18–36 '
+                          '個月</span>。</p>\n'
+                          '\n'
+                          '<h3>二、手術</h3>\n'
+                          '<p>根治性攝護腺切除術會移除攝護腺與儲精囊，並依風險決定是否進行骨盆淋巴結廓清。優點包括取得完整病理分期、切緣及淋巴結狀態，且術後 PSA '
+                          '應降至無法測得。缺點包括尿失禁、勃起功能障礙、手術周邊風險，以及若出現不良病理特徵或 PSA 復發，後續仍可能需要救援放射治療 ± ADT。</p>\n'
+                          '\n'
+                          '<h3>三、放射治療選項</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Radiation options</caption>\n'
-                          '    <thead><tr><th scope="col">RT modality</th><th scope="col">常見用途</th></tr></thead>\n'
+                          '    <caption>局限性攝護腺癌的放射治療方式</caption>\n'
+                          '    <thead><tr><th scope="col">治療方式</th><th scope="col">常見用途</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Conventional dose-escalated EBRT</td><td>傳統 definitive RT；現代常用 78–79.2 '
-                          'Gy</td></tr>\n'
-                          '      <tr><td>Moderate hypofractionation</td><td>60 Gy/20 Fx 或 70 Gy/28 '
-                          'Fx；現代標準之一</td></tr>\n'
-                          '      <tr><td>SBRT / ultra-hypofractionation</td><td>36.25 Gy/5 Fx 等；適合 selected '
-                          'low/intermediate risk，也可用於部分 high-risk protocols</td></tr>\n'
-                          '      <tr><td>LDR/HDR brachytherapy</td><td>Low/FIR 可 monotherapy；UIR/HR 可 boost</td></tr>\n'
-                          '      <tr><td>EBRT + brachytherapy boost</td><td>強化 biochemical control，特別 UIR/HR，但 GU '
-                          'toxicity 較高</td></tr>\n'
-                          '      <tr><td>FLAME-style focal boost</td><td>MRI-defined dominant intraprostatic lesion '
-                          'isotoxic boost</td></tr>\n'
-                          '      <tr><td>Pelvic nodal RT</td><td>High-risk / VHR / N+ 或 high nodal-risk 情境</td></tr>\n'
+                          '      <tr><td>傳統分次劑量升階 EBRT</td><td>根治性治療；現代常用總劑量約 78–79.2 Gy</td></tr>\n'
+                          '      <tr><td>中度低分次放射治療</td><td>60 Gy／20 次或 70 Gy／28 次；現代標準之一</td></tr>\n'
+                          '      <tr><td>SBRT／超低分次放射治療</td><td>例如 36.25 Gy／5 次；主要用於經選擇的低／中度風險患者</td></tr>\n'
+                          '      <tr><td>LDR／HDR 近接治療</td><td>低風險或有利型中度風險可單獨治療；不利型中度風險／高風險可作為加量</td></tr>\n'
+                          '      <tr><td>EBRT + 近接治療加量</td><td>可加強生化控制，但泌尿生殖系統毒性較高</td></tr>\n'
+                          '      <tr><td>FLAME 式局部病灶加量</td><td>對 MRI 定義的攝護腺內主要病灶進行等毒性限制下加量</td></tr>\n'
+                          '      <tr><td>骨盆淋巴結放射治療</td><td>高風險、極高風險、N+ 或淋巴結轉移風險較高的情境</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<p class="section-kicker"><strong>第六部分：攝護腺癌 radiobiology 與 fractionation</strong></p>\n'
-                          '<h3>四、為什麼 prostate cancer 適合 hypofractionation？</h3>\n'
-                          '<p>α/β ratio 是 linear component 與 quadratic component cell killing 相等時的 dose。High α/β '
-                          'tissues 對 fraction size 較不敏感，通常是 rapidly proliferating tumors；low α/β tissues 對 dose per '
-                          'fraction 較敏感，通常是 late-responding tissues。攝護腺癌 estimated α/β ratio 約 1.5–3，比許多腫瘤低，代表較大的 '
-                          'fraction size 可能對腫瘤更有利。Source file 因此提出三個策略：conventional dose escalation、moderate '
-                          'hypofractionation、ultra-hypofractionation/SBRT。</p>',
+                          '\n'
+                          '<h3>四、為何攝護腺癌適合低分次治療？</h3>\n'
+                          '<p>α／β 比值反映組織對單次分次劑量的敏感度。高 α／β 比值組織對分次大小較不敏感；低 α／β 比值組織則對較大的單次劑量更敏感。<span '
+                          'class="highlight">攝護腺癌推估 α／β 比值約為 1.5–3 Gy</span>，低於多數腫瘤，因此增加單次分次劑量可能提高治療效益，構成中度低分次與 SBRT '
+                          '的放射生物學基礎。</p>',
                'body_en': '<p class="section-kicker"><strong>Part V. Localized Prostate Cancer Treatment '
                           'Options</strong></p>\n'
                           '<h3>1. Local therapy options</h3>\n'
@@ -9960,66 +10306,43 @@ PAGES.append(
                           'ratio of about 1.5–3, lower than many tumors, so larger fraction sizes may be advantageous. '
                           'This supports conventional dose escalation, moderate hypofractionation, and '
                           'ultra-hypofractionation/SBRT.</p>'},
-              {'label_zh': '劑量升階',
-               'label_en': 'DOSE ESC',
-               'h2_zh': 'Conventional dose escalation、FLAME 與 ASCENDE-RT',
-               'h2_en': 'Conventional dose escalation, FLAME, and ASCENDE-RT',
-               'body_zh': '<p class="section-kicker"><strong>第七部分：Dose escalation evidence</strong></p>\n'
-                          '<h3>一、Conventional dose escalation</h3>\n'
-                          '<p>多個 randomized trials 比較 conventional-dose RT 與 dose-escalated RT。整體結論是：dose escalation '
-                          '改善 biochemical control，但多數舊 trial 沒有改善 OS。Source file 列出的 trials 包括：</p>\n'
+              {'label_zh': '劑量升階：傳統劑量升階、FLAME 腫瘤內局部加量與 ASCENDE-RT 近接治療加量',
+               'label_en': 'DOSE ESCALATION: Conventional escalation, FLAME, and ASCENDE-RT',
+               'body_zh': '<h3>一、傳統分次劑量升階</h3>\n'
+                          '<p>多項隨機試驗比較傳統劑量與劑量升階放射治療。整體結論為：<span '
+                          'class="highlight">劑量升階可改善生化控制，但多數早期試驗未顯示整體存活改善</span>。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Conventional dose escalation trials</caption>\n'
-                          '    <thead><tr><th scope="col">Trial</th><th scope="col">Dose</th><th '
-                          'scope="col">ADT?</th><th scope="col">Biochemical control</th></tr></thead>\n'
+                          '    <caption>傳統劑量升階試驗</caption>\n'
+                          '    <thead><tr><th scope="col">試驗</th><th scope="col">劑量</th><th scope="col">ADT</th><th '
+                          'scope="col">生化控制</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>MDACC / Pasalic et al.</td><td>70 vs 78 Gy</td><td>No</td><td>81% vs '
-                          '88%</td></tr>\n'
-                          '      <tr><td>MGH / Zietman et al.</td><td>70.2 vs 79.2 Gy</td><td>No</td><td>68% vs '
-                          '83%</td></tr>\n'
-                          '      <tr><td>Dutch / Heemsbergen et al.</td><td>68 vs 78 Gy</td><td>Yes</td><td>43% vs '
-                          '49%</td></tr>\n'
-                          '      <tr><td>MRC RT01 / Dearnaley et al.</td><td>64 vs 74 Gy</td><td>Yes</td><td>43% vs '
-                          '55%</td></tr>\n'
-                          '      <tr><td>RTOG 0126 / Michalski et al.</td><td>70.2 vs 79.2 Gy</td><td>No</td><td>55% '
-                          'vs 70%</td></tr>\n'
+                          '      <tr><td>MDACC</td><td>70 vs 78 Gy</td><td>否</td><td>81% vs 88%</td></tr>\n'
+                          '      <tr><td>MGH</td><td>70.2 vs 79.2 Gy</td><td>否</td><td>68% vs 83%</td></tr>\n'
+                          '      <tr><td>Dutch trial</td><td>68 vs 78 Gy</td><td>是</td><td>43% vs 49%</td></tr>\n'
+                          '      <tr><td>MRC RT01</td><td>64 vs 74 Gy</td><td>是</td><td>43% vs 55%</td></tr>\n'
+                          '      <tr><td>RTOG 0126</td><td>70.2 vs 79.2 Gy</td><td>否</td><td>55% vs 70%</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<p>臨床解讀：現代 definitive EBRT 應使用 dose-escalated conventional dose 或透過 hypofractionation 達成 '
-                          'biologic dose escalation。傳統 66–70 Gy 對 definitive localized disease，尤其 '
-                          'intermediate/high-risk disease，通常已不算現代標準。</p>\n'
-                          '<h3>二、FLAME trial：focal intraprostatic boost</h3>\n'
-                          '<p>FLAME 是 phase III superiority randomized trial，納入 intermediate- 和 high-risk prostate '
-                          'cancer。Standard arm 給 prostate 77 Gy/35 Fx；boost arm 給 prostate 77 Gy/35 Fx，並對 macroscopic '
-                          'tumor 給 up to 95 Gy simultaneous integrated boost。病人中約 85% 是 high-risk，約 15% 是 '
-                          'intermediate-risk；兩組約 65% 接受 ADT。</p>\n'
-                          '<p>Planning concept 是 isotoxic boost：OAR constraints 優先於 95 Gy boost coverage；兩組都沒有 pelvic '
-                          'nodal RT；使用 IMRT 或 VMAT；放置 gold fiducials；experimental arm 的 boost volume 沒有 CTV/PTV '
-                          'margin；若 PTV overlap rectum，該 overlap 區域 prescribed 70 Gy。Key OAR constraints 包括 rectum V77 '
-                          'Gy &lt;1 cc、bladder V80 Gy &lt;1 cc，後續 protocols 加入 urethra V80 Gy &lt;0.1 cc。</p>\n'
-                          '<p>FLAME 結果：intraprostatic boost 改善 5-year bDFS，standard arm 85% vs boost arm 92%，且沒有顯著增加 '
-                          'late GU 或 GI toxicity。Late G2+ GU toxicity 約 23% vs 28%；late G2+ GI toxicity 約 12% vs '
-                          '13%。OS、DMFS、PCSS 無差異。Post-hoc pattern-of-failure analysis 顯示，GTV D98% 與 local '
-                          'failure、regional/distant metastasis-free survival 有 dose-response relationship；focal boost '
-                          'dose ≥85 Gy 時，local failure 接近 zero，regional/distant metastasis &lt;10%。</p>\n'
-                          '<div class="clinical-note">臨床解讀：FLAME 的重點不是盲目把 visible lesion 打到 95 Gy，而是 MRI-visible '
-                          'dominant intraprostatic lesion 的 isotoxic dose escalation。若有高品質 MRI、image guidance、良好 OAR '
-                          'sparing，FLAME-style boost 是很有力的 dose intensification strategy。</div>\n'
-                          '<h3>三、ASCENDE-RT：EBRT boost vs LDR brachytherapy boost</h3>\n'
-                          '<p>ASCENDE-RT 是 phase III randomized trial，納入 intermediate- 和 high-risk prostate cancer；約 '
-                          '69% high-risk，31% intermediate-risk，大多數 intermediate-risk 是 unfavorable '
-                          'intermediate-risk。所有病人接受 12 months ADT，以及 46 Gy/23 Fx to prostate、SV、pelvis。之後 '
-                          'randomization：dose-escalated EBRT boost arm 給 EBRT boost 至 total 78 Gy；LDR boost arm 給 '
-                          'I-125 LDR prostate brachytherapy boost 115 Gy minimum peripheral dose。</p>\n'
-                          '<p>結果顯示 LDR prostate brachytherapy boost 明顯改善 long-term biochemical control。15-year bPFS 約 '
-                          '80% with LDR boost vs 53% with dose-escalated EBRT。但 OS、CSS、DMFS 沒有顯著差異。代價是 GU toxicity '
-                          '增加：grade 3+ GU toxicity 約 18% vs 5%，並增加 urethral stricture、pad use、late '
-                          'catheterization。</p>\n'
-                          '<div class="clinical-note">臨床解讀：Brachytherapy boost 是 UIR/HR disease 最強的 biochemical '
-                          'intensification 方法之一，但 patient selection 非常重要。Baseline urinary function、IPSS、prostate '
-                          'size、median lobe、prior TURP、anatomy、病人對 GU toxicity 的接受度，都會影響是否適合。</div>',
+                          '<p>現代根治性 EBRT 應採用劑量升階傳統分次，或透過低分次治療達到生物等效劑量升階；66–70 Gy 通常已不屬於現代局限性疾病的標準根治劑量。</p>\n'
+                          '\n'
+                          '<h3>二、FLAME：攝護腺內局部病灶加量</h3>\n'
+                          '<p>FLAME 為第三期隨機試驗，納入中度與高風險患者。標準組對攝護腺給予 77 Gy／35 次；實驗組另對影像可見腫瘤進行最高 95 Gy '
+                          '的同步整合加量。治療計畫採等毒性限制策略：危險器官限制優先於完整覆蓋 95 Gy 加量區。</p>\n'
+                          '<p><span class="highlight">FLAME 將 5 年無生化疾病存活由約 85% 提高至 '
+                          '92%</span>，且未顯著增加晚期泌尿生殖或腸胃道毒性；但整體存活、無遠端轉移存活及攝護腺癌特異性存活無顯著差異。</p>\n'
+                          '<div class="clinical-note">FLAME 的重點不是將所有可見病灶固定照射至 95 Gy，而是在高品質 '
+                          'MRI、影像導引與危險器官保護下，對主要攝護腺內病灶進行個別化等毒性加量。</div>\n'
+                          '\n'
+                          '<h3>三、ASCENDE-RT：EBRT 加量與 LDR 近接治療加量</h3>\n'
+                          '<p>ASCENDE-RT 納入中度與高風險患者。所有患者接受 12 個月 ADT，以及攝護腺、儲精囊與骨盆 46 Gy／23 次；之後隨機分派至 EBRT 加量至總劑量 78 '
+                          'Gy，或 I-125 LDR 近接治療加量 115 Gy。</p>\n'
+                          '<p><span class="highlight">15 年 bPFS 約為 LDR 加量 80%，EBRT 加量 '
+                          '53%</span>；但整體存活、癌症特異性存活與無遠端轉移存活無顯著差異。LDR 加量的代價是較高的泌尿生殖系統毒性，<span class="highlight">第 3 級以上 '
+                          'GU 毒性約 18% vs 5%</span>，並增加尿道狹窄、尿墊使用與晚期導尿需求。</p>\n'
+                          '<div class="clinical-note">近接治療加量是強力的生化控制強化策略，但必須審慎評估治療前 IPSS、攝護腺大小、中葉突出、既往 TURP、解剖條件及患者對 '
+                          'GU 毒性的接受度。</div>',
                'body_en': '<p class="section-kicker"><strong>Part VII. Dose Escalation Evidence</strong></p>\n'
                           '<h3>1. Conventional dose escalation</h3>\n'
                           '<p>Multiple randomized trials compared conventional-dose RT with dose-escalated RT. The '
@@ -10080,59 +10403,46 @@ PAGES.append(
                           'strongest biochemical intensification strategies for UIR/HR disease, but selection is '
                           'critical. Baseline urinary function, IPSS, prostate size, median lobe, prior TURP, anatomy, '
                           'and patient tolerance for GU toxicity all matter.</div>'},
-              {'label_zh': '分割治療',
-               'label_en': 'FRACTIONATION',
-               'h2_zh': 'Moderate hypofractionation 與 SBRT evidence',
-               'h2_en': 'Moderate hypofractionation and SBRT evidence',
-               'body_zh': '<p class="section-kicker"><strong>第八部分：Moderate hypofractionation</strong></p>\n'
-                          '<h3>一、RTOG 0415</h3>\n'
-                          '<p>RTOG 0415 納入 low-risk prostate cancer，randomized conventional RT 73.8 Gy/41 Fx vs '
-                          'hypofractionated RT 70 Gy/28 Fx。結果 hypofractionated RT 對 DFS 和 biochemical failure 達到 '
-                          'non-inferiority；5-year DFS 約 85% vs 86%，biochemical failure 約 6% vs 8%。早期報告中 '
-                          'hypofractionation 的 late grade 2–3 GI/GU events 較高，但 patient-reported QoL 沒有差異，long-term '
-                          'grade 3+ toxicity 也沒有顯著差異。</p>\n'
+              {'label_zh': '分次治療：中度低分次放射治療與立體定位放射治療的臨床證據',
+               'label_en': 'FRACTIONATION: Moderate hypofractionation and SBRT evidence',
+               'body_zh': '<h3>一、RTOG 0415</h3>\n'
+                          '<p>RTOG 0415 納入低風險患者，比較 73.8 Gy／41 次與 70 Gy／28 次。低分次治療在無疾病存活與生化失敗方面達到不劣性；5 年 DFS 約 '
+                          '85%–86%。早期報告顯示低分次組晚期第 2–3 級 GI／GU 事件略高，但病人回報生活品質與長期第 3 級以上毒性無顯著差異。</p>\n'
+                          '\n'
                           '<h3>二、PROFIT</h3>\n'
-                          '<p>PROFIT 納入 intermediate-risk patients，randomized 78 Gy/39 Fx vs 60 Gy/20 Fx，且不允許 '
-                          'ADT。5-year biochemical PFS 兩組皆約 85%，顯示 60 Gy/20 Fx non-inferior。GU toxicity 無顯著差異；acute '
-                          'grade 2+ toxicity 在 hypofractionation 較高，而 late grade 2+ toxicity 在 conventional RT '
-                          '較高。</p>\n'
+                          '<p>PROFIT 納入中度風險患者，比較 78 Gy／39 次與 60 Gy／20 次，且不使用 ADT。兩組 5 年生化無惡化存活均約 85%，證實 <span '
+                          'class="highlight">60 Gy／20 次不劣於傳統分次治療</span>。</p>\n'
+                          '\n'
                           '<h3>三、CHHiP</h3>\n'
-                          '<p>CHHiP 與 PROFIT 一起支持 60 Gy/20 Fx 作為常用 standard moderate hypofractionation regimen。實務上 60 '
-                          'Gy/20 Fx 是非常常用的 prostate regimen，因為療程短、radiobiologically rational，且有 randomized evidence '
-                          '支持。</p>\n'
+                          '<p>CHHiP 與 PROFIT 共同支持 60 Gy／20 次作為常用中度低分次療程。<span '
+                          'class="highlight">中度低分次放射治療已是標準治療，而非實驗性治療</span>。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Moderate hypofractionation high-yield</caption>\n'
-                          '    <thead><tr><th scope="col">Regimen</th><th scope="col">常見情境</th></tr></thead>\n'
+                          '    <caption>中度低分次放射治療高頻考點</caption>\n'
+                          '    <thead><tr><th scope="col">療程</th><th scope="col">常見情境</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>70 Gy/28 Fx</td><td>Low-risk evidence strong</td></tr>\n'
-                          '      <tr><td>60 Gy/20 Fx</td><td>Intermediate/high-risk 常用；現代標準之一</td></tr>\n'
+                          '      <tr><td>70 Gy／28 次</td><td>低風險疾病具有強力隨機證據</td></tr>\n'
+                          '      <tr><td>60 Gy／20 次</td><td>中度與高風險疾病常用；現代標準之一</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<div class="clinical-note">一句話：Moderate hypofractionation 已是標準，不是 experimental。</div>\n'
-                          '<p class="section-kicker"><strong>第九部分：Extreme hypofractionation / SBRT</strong></p>\n'
+                          '\n'
                           '<h3>四、HYPO-RT-PC</h3>\n'
-                          '<p>HYPO-RT-PC randomized intermediate- 到 high-risk patients，比較 78 Gy/39 Fx vs 42.7 Gy/7 Fx '
-                          'over 1–2 weeks。Trial 不允許 ADT。Ultra-hypofractionation 對 failure-free survival 達到 '
-                          'non-inferiority，FFS 約 84% vs 84%。Acute GI/GU toxicity 和 1-year urinary toxicity 在 '
-                          'ultra-hypofractionation 較高，但 5-year toxicity 兩組相等。重要 caveat 是：trial 使用 7 mm PTV margins all '
-                          'directions，且 80% plans 使用 3D-CRT，因此毒性資料不完全等同現代 MRI-guided/IGRT SBRT。</p>\n'
+                          '<p>HYPO-RT-PC 比較 78 Gy／39 次與 42.7 Gy／7 次，未使用 ADT。超低分次治療在無失敗存活方面達到不劣性，兩組約 84%。超低分次組急性 GI／GU '
+                          '毒性及一年泌尿道毒性較高，但 5 年毒性相近。需注意試驗使用較大的 PTV 邊界，且多數計畫採較舊的 3D-CRT 技術。</p>\n'
+                          '\n'
                           '<h3>五、PACE-B</h3>\n'
-                          '<p>PACE-B randomized low/intermediate-risk patients 至 conventional/moderate fractionation '
-                          'vs SBRT 36.25 Gy/5 Fx，且 prostate CTV boost 到 40 Gy。Trial 不允許 ADT。SBRT 可以 daily 或 every '
-                          'other day；margins 4–5 mm，posterior 3–5 mm。Toxicity 兩組相似，但 SBRT acute symptoms 較早在 1–2 weeks '
-                          'peak。5-year bPFS 兩組皆約 95%，達到 non-inferiority。</p>\n'
+                          '<p>PACE-B 納入低／中度風險患者，比較傳統或中度低分次治療與 SBRT 36.25 Gy／5 次，未使用 ADT。<span class="highlight">兩組 5 年 '
+                          'bPFS 均約 95%，SBRT 達到不劣性</span>。SBRT 的急性症狀通常較早於治療後 1–2 週達高峰。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>SBRT high-yield</caption>\n'
-                          '    <thead><tr><th scope="col">Trial</th><th scope="col">Regimen</th><th '
+                          '    <caption>SBRT 高頻考點</caption>\n'
+                          '    <thead><tr><th scope="col">試驗</th><th scope="col">療程</th><th '
                           'scope="col">重點</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>HYPO-RT-PC</td><td>42.7 Gy/7 Fx</td><td>Non-inferior，但 older technique、較多 '
-                          'acute toxicity</td></tr>\n'
-                          '      <tr><td>PACE-B</td><td>36.25 Gy/5 Fx with 40 Gy CTV boost</td><td>Modern '
-                          'low/intermediate-risk SBRT evidence；5-year bPFS 約 95%</td></tr>\n'
+                          '      <tr><td>HYPO-RT-PC</td><td>42.7 Gy／7 次</td><td>不劣性成立，但技術較舊、急性毒性較多</td></tr>\n'
+                          '      <tr><td>PACE-B</td><td>36.25 Gy／5 次</td><td>現代低／中度風險 SBRT 證據；5 年 bPFS 約 '
+                          '95%</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>',
@@ -10196,38 +10506,32 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': '骨盆淋巴',
-               'label_en': 'PELVIC NODES',
-               'h2_zh': 'Elective pelvic nodal RT 與 POP-RT',
-               'h2_en': 'Elective pelvic nodal RT and POP-RT',
-               'body_zh': '<p class="section-kicker"><strong>第十部分：Elective pelvic nodal RT</strong></p>\n'
-                          '<h3>一、為何要考慮 pelvic nodes？</h3>\n'
-                          '<p>Pelvic nodal RT 主要用於 high-risk 或 very high-risk prostate cancer，尤其 occult nodal '
-                          'involvement risk 高的病人。決策取決於 nodal risk estimate、PSA、GG/Gleason、T stage、positive core '
-                          'percentage、影像品質、是否使用 ADT、以及是 definitive 還是 postoperative setting。</p>\n'
+              {'label_zh': '骨盆淋巴結照射：預防性骨盆淋巴結放射治療與 POP-RT',
+               'label_en': 'PELVIC NODES: Elective pelvic nodal RT and POP-RT',
+               'body_zh': '<h3>一、為何考慮骨盆淋巴結照射？</h3>\n'
+                          '<p>預防性骨盆淋巴結放射治療主要用於高風險或極高風險攝護腺癌，尤其隱匿性淋巴結侵犯風險較高者。決策應綜合 PSA、Gleason／GG、T 分期、陽性切片比例、影像品質、ADT '
+                          '使用，以及根治性或術後治療情境。</p>\n'
+                          '\n'
                           '<h3>二、POP-RT</h3>\n'
-                          '<p>POP-RT 納入 high-risk patients，且 by Roach formula estimated LN involvement risk '
-                          '≥20%。Randomized WPRT vs prostate-only RT。WPRT 給 pelvic nodes 50 Gy/25 Fx，包括 common '
-                          'iliacs，並以 SIB 給 prostate 68 Gy；PO-RT 給 prostate 68 Gy/25 Fx。所有病人至少接受 2 years ADT，且約 80% 接受 '
-                          'PSMA PET 排除 N+ disease。</p>\n'
+                          '<p>POP-RT 納入依 Roach 公式推估淋巴結侵犯風險 <span class="highlight">≥20%</span> '
+                          '的高風險患者，比較全骨盆放射治療與僅攝護腺放射治療。全骨盆組對骨盆淋巴結給予 50 Gy／25 次，並以同步整合加量對攝護腺給予 68 Gy；所有患者至少接受 2 年 '
+                          'ADT。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
                           '    <caption>POP-RT 主要結果</caption>\n'
-                          '    <thead><tr><th scope="col">Endpoint</th><th scope="col">WPRT</th><th '
-                          'scope="col">Prostate-only RT</th><th scope="col">解讀</th></tr></thead>\n'
+                          '    <thead><tr><th scope="col">終點</th><th scope="col">全骨盆 RT</th><th scope="col">僅攝護腺 '
+                          'RT</th><th scope="col">解讀</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>5-year BFFS</td><td>約 95%</td><td>約 81%</td><td>WPRT 改善 biochemical '
-                          'control</td></tr>\n'
-                          '      <tr><td>5-year DFS</td><td>約 90%</td><td>約 77%</td><td>WPRT 改善 DFS</td></tr>\n'
-                          '      <tr><td>5-year DMFS</td><td>約 96%</td><td>約 89%</td><td>WPRT 改善 distant '
-                          'control</td></tr>\n'
-                          '      <tr><td>5-year OS</td><td>約 93%</td><td>約 91%</td><td>未改善 OS</td></tr>\n'
-                          '      <tr><td>Late grade 2+ GU toxicity</td><td>19%</td><td>8%</td><td>WPRT 較高</td></tr>\n'
+                          '      <tr><td>5 年 BFFS</td><td>約 95%</td><td>約 81%</td><td>全骨盆 RT 改善生化控制</td></tr>\n'
+                          '      <tr><td>5 年 DFS</td><td>約 90%</td><td>約 77%</td><td>全骨盆 RT 改善 DFS</td></tr>\n'
+                          '      <tr><td>5 年 DMFS</td><td>約 96%</td><td>約 89%</td><td>全骨盆 RT 改善遠端控制</td></tr>\n'
+                          '      <tr><td>5 年 OS</td><td>約 93%</td><td>約 91%</td><td><span '
+                          'class="highlight">未顯示整體存活改善</span></td></tr>\n'
+                          '      <tr><td>晚期第 2 級以上 GU 毒性</td><td>19%</td><td>8%</td><td>全骨盆 RT 較高</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<div class="clinical-note">臨床解讀：High-risk/VHR 且 nodal risk 高者，pelvic nodal RT 合理，尤其搭配 '
-                          'modern IMRT 和 ADT。主要 benefit 是 biochemical control、DFS、DMFS，目前不是明確 OS benefit。</div>',
+                          '<p>臨床上，高風險／極高風險且淋巴結轉移風險較高者，可考慮現代 IMRT 骨盆淋巴結照射合併 ADT；主要效益為生化控制、DFS 與 DMFS，而非已確立的 OS 效益。</p>',
                'body_en': '<p class="section-kicker"><strong>Part X. Elective Pelvic Nodal RT</strong></p>\n'
                           '<h3>1. Why consider pelvic nodes?</h3>\n'
                           '<p>Pelvic nodal RT is mainly used for high-risk or very high-risk prostate cancer, '
@@ -10264,50 +10568,44 @@ PAGES.append(
                           'patients with high nodal risk, pelvic nodal RT is reasonable, especially with modern IMRT '
                           'and ADT. The main benefit is biochemical control, DFS, and DMFS, not a proven OS '
                           'benefit.</div>'},
-              {'label_zh': 'ADT',
-               'label_en': 'ADT',
-               'h2_zh': 'Localized prostate cancer 的 ADT 策略與常用藥物',
-               'h2_en': 'ADT strategy and common drugs in localized prostate cancer',
-               'body_zh': '<p class="section-kicker"><strong>第十一部分：Localized prostate cancer 的 systemic '
-                          'therapy</strong></p>\n'
-                          '<h3>一、ADT by risk group</h3>\n'
-                          '<p>攝護腺癌是 androgen-driven cancer。Source file 的 systemic therapy summary：</p>\n'
+              {'label_zh': '雄性素剝奪治療：局限性攝護腺癌的風險分層策略與常用藥物',
+               'label_en': 'ADT: Risk-adapted strategy and common drugs in localized disease',
+               'body_zh': '<h3>一、依風險分層使用 ADT</h3>\n'
+                          '<p>攝護腺癌為雄性素驅動型腫瘤，局限性疾病是否合併 ADT 主要取決於風險分層。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>ADT by risk group</caption>\n'
-                          '    <thead><tr><th scope="col">Risk group</th><th scope="col">ADT '
-                          'strategy</th></tr></thead>\n'
+                          '    <caption>局限性攝護腺癌的 ADT 策略</caption>\n'
+                          '    <thead><tr><th scope="col">風險群組</th><th scope="col">ADT 策略</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Low risk</td><td>No ADT</td></tr>\n'
-                          '      <tr><td>Favorable intermediate risk</td><td>No ADT</td></tr>\n'
-                          '      <tr><td>Unfavorable intermediate risk</td><td>ST-ADT 4–6 months</td></tr>\n'
-                          '      <tr><td>High risk</td><td>LT-ADT 18–24 months，部分 trial 用 28–36 months</td></tr>\n'
-                          '      <tr><td>Very high risk / N+</td><td>LT-ADT + abiraterone/prednisolone for 2 '
-                          'years</td></tr>\n'
+                          '      <tr><td>低風險</td><td>不使用 ADT</td></tr>\n'
+                          '      <tr><td>有利型中度風險</td><td>通常不使用 ADT</td></tr>\n'
+                          '      <tr><td>不利型中度風險</td><td><span class="highlight">短期 ADT 4–6 個月</span></td></tr>\n'
+                          '      <tr><td>高風險</td><td><span class="highlight">長期 ADT 約 18–24 個月；部分試驗使用 28–36 '
+                          '個月</span></td></tr>\n'
+                          '      <tr><td>極高風險／N+</td><td>長期 ADT + abiraterone／prednisolone 2 年</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<div class="clinical-note">一句話演算法：LR/FIR no ADT → UIR RT + ST-ADT 4–6 months → HR RT + '
-                          'LT-ADT 18–24 months → VHR/N+ RT + LT-ADT + abiraterone/prednisolone 2 years。</div>\n'
-                          '<h3>二、Common ADT drugs and mechanisms</h3>\n'
+                          '<div class="clinical-note">記憶法：低風險／有利型中度風險不加 ADT；不利型中度風險加短期 ADT；高風險加長期 ADT；極高風險／淋巴結陽性再加入 '
+                          'abiraterone。</div>\n'
+                          '\n'
+                          '<h3>二、常用藥物與作用機轉</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Common ADT drugs and mechanisms</caption>\n'
-                          '    <thead><tr><th scope="col">Drug</th><th scope="col">Mechanism</th><th '
-                          'scope="col">Typical role</th><th scope="col">Key adverse effects</th></tr></thead>\n'
+                          '    <caption>常用 ADT 藥物</caption>\n'
+                          '    <thead><tr><th scope="col">藥物</th><th scope="col">作用機轉</th><th scope="col">常見用途</th><th '
+                          'scope="col">主要不良反應</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Leuprolide / goserelin</td><td>LHRH agonist</td><td>每幾個月 injection；常用 '
-                          'ADT</td><td>Hot flashes、erectile dysfunction、bone loss、cardiac toxicity</td></tr>\n'
-                          '      <tr><td>Relugolix</td><td>LHRH antagonist</td><td>Daily oral ADT</td><td>Faster '
-                          'on/off，cardiac toxicity 較少</td></tr>\n'
-                          '      <tr><td>Bicalutamide</td><td>First-generation AR antagonist，有 partial agonist '
-                          'activity</td><td>常與 LHRH agonist 初期併用，防 testosterone flare</td><td>Gynecomastia</td></tr>\n'
-                          '      <tr><td>Enzalutamide</td><td>Pure androgen receptor antagonist</td><td>主要 metastatic '
-                          'disease 或 intensification contexts</td><td>Hot flashes、bone loss、cardiac '
-                          'toxicity</td></tr>\n'
-                          '      <tr><td>Abiraterone + prednisolone/prednisone</td><td>CYP17 inhibitor，阻斷 adrenal '
-                          'androgen synthesis</td><td>VHR localized、N+、metastatic '
-                          'disease</td><td>Hypertension、elevated LFTs；需 steroid 避免 mineralocorticoid excess</td></tr>\n'
+                          '      <tr><td>Leuprolide／goserelin</td><td>LHRH 促效劑</td><td>常用注射型 '
+                          'ADT</td><td>熱潮紅、勃起功能障礙、骨質流失、代謝與心血管風險</td></tr>\n'
+                          '      <tr><td>Relugolix</td><td>LHRH 拮抗劑</td><td>每日口服 '
+                          'ADT；起效與恢復較快</td><td>熱潮紅、性功能下降；部分研究顯示心血管事件較少</td></tr>\n'
+                          '      <tr><td>Bicalutamide</td><td>第一代雄性素受體拮抗劑</td><td>可於 LHRH '
+                          '促效劑初期使用以預防睪固酮急升</td><td>男性女乳症、乳房疼痛</td></tr>\n'
+                          '      '
+                          '<tr><td>Enzalutamide</td><td>雄性素受體訊號抑制劑</td><td>轉移性疾病或治療強化</td><td>疲倦、跌倒、高血壓及心血管風險</td></tr>\n'
+                          '      <tr><td>Abiraterone + prednisone／prednisolone</td><td>CYP17 '
+                          '抑制劑，降低腎上腺與腫瘤內雄性素合成</td><td>極高風險局限性、N+ 或轉移性疾病</td><td>高血壓、低血鉀、液體滯留、肝功能異常；需合併類固醇</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>',
@@ -10360,41 +10658,30 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': 'ST-ADT 證據',
-               'label_en': 'ST-ADT',
-               'h2_zh': 'Unfavorable intermediate-risk disease 的 ST-ADT 證據',
-               'h2_en': 'Evidence for short-term ADT in unfavorable intermediate-risk disease',
-               'body_zh': '<p class="section-kicker"><strong>第十二部分：ST-ADT for unfavorable intermediate-risk '
-                          'disease</strong></p>\n'
-                          '<h3>一、RTOG 9408</h3>\n'
-                          '<p>RTOG 9408 randomized 2028 位 cT1b–T2b N0、PSA ≤20 prostate cancer patients 至 66.6 Gy RT '
-                          'alone vs 66.6 Gy RT + 4 months ADT。ADT 為 flutamide + goserelin 或 leuprolide。病人約 36% '
-                          'low-risk、54% intermediate-risk、10% high-risk。</p>\n'
-                          '<p>ST-ADT 改善 10-year OS、CSS、biochemical failure、distant metastasis 和 pathologic tumor '
-                          'clearance。10-year OS：RT alone 57% vs RT + ADT 62%。但 18-year OS benefit 消失，兩組 OS 均約 23%；不過 '
-                          'biochemical failure 和 distant metastasis benefit 仍存在。這可能因為 18 年時很多死亡來自 competing '
-                          'causes。</p>\n'
-                          '<p>Post-hoc subgroup analysis 顯示，ADT benefit 主要集中在 intermediate-risk subgroup；low-risk '
-                          'disease-specific mortality 很低，因此可省略 ADT；high-risk 則可能需要更長 ADT。雖然 RTOG 9408 使用的 RT dose '
-                          '比現代低，但它建立了 intermediate-risk prostate cancer 使用 short-term ADT 的重要基礎。</p>\n'
-                          '<h3>二、Favorable vs unfavorable intermediate-risk 的重要性</h3>\n'
-                          '<p>RTOG 9408 secondary analysis 將 intermediate-risk 分成 FIR 與 UIR。UIR 整體 DM、PCSM、ACM '
-                          '風險較高。ADT 在 UIR 中改善 DM、PCSM、ACM，但在 FIR 中沒有明顯 benefit。這就是現代臨床上 FIR 通常不加 ADT，UIR 加 4–6 months '
-                          'ADT 的理由。</p>\n'
-                          '<h3>三、Harvard / D’Amico trial</h3>\n'
-                          '<p>D’Amico trial 比較 70 Gy RT alone vs 70 Gy RT + 6 months ADT，納入 cT1b–T2b、PSA ≥10 或 GS ≥7 '
-                          '的病人，其中約 75% 是 intermediate-risk。結果 6 months ADT 改善 OS：5-year OS 78% vs 88%，也改善 freedom from '
-                          'salvage ADT。Toxicity 方面 ADT group 有較多 grade 1–2 gynecomastia 和 grade 3 impotence。</p>\n'
+              {'label_zh': '短期雄性素剝奪治療證據：不利型中度風險攝護腺癌',
+               'label_en': 'SHORT-TERM ADT: Evidence in unfavorable intermediate-risk disease',
+               'body_zh': '<h3>一、RTOG 9408</h3>\n'
+                          '<p>RTOG 9408 將 cT1b–T2b、N0、PSA ≤20 的患者隨機分派至 66.6 Gy 單獨 RT，或 RT + 4 個月 ADT。短期 ADT 改善 10 '
+                          '年整體存活、癌症特異性存活、生化失敗與遠端轉移；10 年 OS 約為 57% vs 62%。18 年時 OS 差異消失，但疾病控制效益仍存在。</p>\n'
+                          '<p>次群組分析顯示，<span class="highlight">ADT 的主要效益集中於中度風險患者；低風險患者通常可省略 '
+                          'ADT，而高風險患者可能需要更長療程</span>。</p>\n'
+                          '\n'
+                          '<h3>二、有利型與不利型中度風險</h3>\n'
+                          '<p>RTOG 9408 次級分析顯示，不利型中度風險患者的遠端轉移、攝護腺癌特異性死亡與全因死亡風險較高。ADT '
+                          '可改善不利型中度風險患者的多項終點，但在有利型中度風險患者中未見明顯效益。這構成現代臨床上 <span class="highlight">FIR 通常不加 ADT，UIR 加 '
+                          '4–6 個月 ADT</span> 的重要依據。</p>\n'
+                          '\n'
+                          '<h3>三、D’Amico 試驗</h3>\n'
+                          '<p>D’Amico 試驗比較 70 Gy 單獨 RT 與 RT + 6 個月 ADT。約四分之三患者屬中度風險；6 個月 ADT 改善 5 年 OS（約 78% vs '
+                          '88%），亦延後後續救援 ADT。</p>\n'
+                          '\n'
                           '<h3>四、RTOG 0815</h3>\n'
-                          '<p>RTOG 0815 測試 modern dose-escalated RT 79.2 Gy ± 6 months ADT in intermediate-risk '
-                          'prostate cancer。ST-ADT 改善 PSA failure、DM、PCSM、salvage therapy use，但未改善 OS：5-year OS 約 90% '
-                          'vs 91%。Acute grade 3+ toxicity 在 ADT arm 較高，2% vs 12%，但 late grade 3+ toxicity 類似。</p>\n'
-                          '<div class="clinical-note">臨床解讀：即使在 modern dose-escalated RT 下，ST-ADT 仍改善 disease-control '
-                          'endpoints，但 OS benefit 可能小，因此要根據 FIR vs UIR、Decipher、病人年齡、心血管風險與 preference 個案化。</div>\n'
+                          '<p>RTOG 0815 在現代劑量升階 RT 下比較是否加入 6 個月 ADT。短期 ADT 改善 PSA 失敗、遠端轉移、攝護腺癌特異性死亡與後續救援治療使用率，但未改善 5 年 '
+                          'OS。<span class="highlight">即使使用現代劑量升階 RT，短期 ADT 仍可改善疾病控制，但 OS 效益可能很小</span>。</p>\n'
+                          '\n'
                           '<h3>五、NRG-GU010</h3>\n'
-                          '<p>NRG-GU010 是 ongoing trial，使用 Decipher risk score personalize UIR disease。低 Decipher '
-                          'score 病人測試 de-escalation：RT + 6 months ADT vs RT alone；較高 Decipher score 病人測試 escalation：RT '
-                          '+ 6 months ADT vs RT + 6 months ADT + 6 months darolutamide。</p>',
+                          '<p>NRG-GU010 使用 Decipher 分數個人化不利型中度風險疾病：低分患者評估能否省略 ADT；較高分患者則評估在 RT + 6 個月 ADT 的基礎上加入 '
+                          'darolutamide。</p>',
                'body_en': '<p class="section-kicker"><strong>Part XII. Short-Term ADT for Unfavorable '
                           'Intermediate-Risk Disease</strong></p>\n'
                           '<h3>1. RTOG 9408</h3>\n'
@@ -10435,48 +10722,33 @@ PAGES.append(
                           'score patients are tested for de-escalation with RT plus 6 months ADT versus RT alone, '
                           'while higher Decipher score patients are tested for escalation with RT plus ADT versus RT '
                           'plus ADT plus darolutamide.</p>'},
-              {'label_zh': 'LT-ADT / VHR',
-               'label_en': 'LT-ADT/VHR',
-               'h2_zh': 'High-risk LT-ADT 與 very high-risk / node-positive intensification',
-               'h2_en': 'Long-term ADT for high-risk and intensification for very high-risk / node-positive disease',
-               'body_zh': '<p class="section-kicker"><strong>第十三部分：LT-ADT for high-risk disease</strong></p>\n'
-                          '<h3>一、RTOG 9202</h3>\n'
-                          '<p>RTOG 9202 randomized mostly high-risk patients 至 RT + 4 months ADT vs RT + 28 months '
-                          'ADT。LT-ADT 改善多項 long-term disease control endpoints，最大 benefit 出現在 Gleason 8–10 patients，包括 '
-                          'OS benefit。Late grade 3+ GI toxicity 在 LT-ADT 稍高。Source file summary：LT-ADT superior to '
-                          'ST-ADT，greatest benefit in GS 8–10。</p>\n'
+              {'label_zh': '長期雄性素剝奪治療與強化治療：高風險、極高風險及淋巴結陽性疾病',
+               'label_en': 'LONG-TERM ADT / INTENSIFICATION: High-risk, very high-risk, and node-positive disease',
+               'body_zh': '<h3>一、RTOG 9202</h3>\n'
+                          '<p>RTOG 9202 比較 RT + 4 個月 ADT 與 RT + 28 個月 ADT。長期 ADT 改善多項長期疾病控制終點，最大效益出現在 Gleason 8–10 '
+                          '患者，並可改善整體存活。<span class="highlight">高風險疾病中，長期 ADT 優於短期 ADT</span>。</p>\n'
+                          '\n'
                           '<h3>二、EORTC 22961</h3>\n'
-                          '<p>EORTC 22961 比較 70 Gy RT + 6 months ADT vs 70 Gy RT + 36 months ADT，病人多為 high-risk。ST-ADT '
-                          '未能對 LT-ADT 達到 non-inferiority for prostate cancer mortality。5-year prostate cancer '
-                          'mortality 約 4.7% with ST-ADT vs 3.5% with LT-ADT。LT-ADT hot flashes 和 sexual side effects '
-                          '較明顯，但 cardiac-related deaths 沒有顯著增加。</p>\n'
+                          '<p>EORTC 22961 比較 6 個月與 36 個月 ADT。短期 ADT 在攝護腺癌死亡率方面未能證明不劣於長期 ADT，支持高風險患者使用較長療程。</p>\n'
+                          '\n'
                           '<h3>三、DART01/05 GICOR</h3>\n'
-                          '<p>DART01/05 GICOR 測試 dose-escalated RT 76–82 Gy + 4 months ADT vs 28 months ADT。5-year '
-                          'results 顯示 LT-ADT 改善 bDFS，90% vs 81%，且 high-risk subgroup 有 OS/DM benefit。10-year results '
-                          '中，整體 bDFS improvement 不完全維持，但 high-risk patients 仍有 improved 10-year bDFS，67% vs 54%。這代表 '
-                          'dose-escalated RT 並不能完全取代 LT-ADT 在 high-risk disease 的作用。</p>\n'
-                          '<h3>四、PCS IV concept</h3>\n'
-                          '<p>PCS IV 支持許多 high-risk patients 可用 18 months 而不是 36 months ADT。36 months 沒有優於 18 months '
-                          'OS，且 QoL 與 testosterone recovery 較差。因此現代實務常把 LT-ADT 設為 18–24 months，雖然舊 trials 常用 24–36 '
-                          'months。</p>\n'
-                          '<h3>五、NRG-GU009 / PREDICT-RT</h3>\n'
-                          '<p>NRG-GU009 使用 Decipher personalize high-risk treatment。Decipher ≤0.85 patients randomized '
-                          'between standard RT + 24 months ADT vs de-escalated RT + 12 months ADT。Decipher &gt;0.85 或 '
-                          'CT/MRI node-positive patients randomized between RT + 24 months ADT vs RT + 24 months ADT + '
-                          'apalutamide。</p>\n'
-                          '<p class="section-kicker"><strong>第十四部分：Very high-risk / node-positive localized '
-                          'disease</strong></p>\n'
-                          '<h3>六、STAMPEDE abiraterone</h3>\n'
-                          '<p>STAMPEDE meta-analysis 測試 abiraterone ± enzalutamide in nonmetastatic high-risk '
-                          'patients。納入條件包括 node-positive，或至少 2 個 high-risk factors：T3–T4、GS ≥8、PSA ≥40，或 high-risk '
-                          'relapsing features。Treatment 比較 74 Gy RT + 3 years ADT alone vs 同樣治療加 2 years '
-                          'abiraterone/prednisolone，另一 trial 加入 enzalutamide。</p>\n'
-                          '<p>Abiraterone 改善 DMFS、OS、BFS、PFS；加 enzalutamide 沒有額外 benefit。6-year DMFS 約 82% with '
-                          'abiraterone vs 69% with ADT alone。Toxicities 包括 hypertension 和 elevated LFTs。</p>\n'
-                          '<div class="clinical-note">臨床解讀：Node-positive 或 very high-risk nonmetastatic '
-                          'patients，definitive pelvic RT + LT-ADT + abiraterone/prednisone 是重要 intensification '
-                          'strategy。Source file 的 summary 明確指出 VHR/N+ → LT-ADT + abiraterone/prednisolone for 2 '
-                          'years。</div>',
+                          '<p>在 76–82 Gy 劑量升階 RT 下，28 個月 ADT 相較 4 個月 ADT 改善早期 bDFS；高風險次群組仍可見較長期疾病控制效益，顯示劑量升階不能完全取代長期 '
+                          'ADT。</p>\n'
+                          '\n'
+                          '<h3>四、PCS IV</h3>\n'
+                          '<p>PCS IV 支持部分高風險患者可使用 18 個月而非 36 個月 ADT。<span class="highlight">36 個月 ADT 的整體存活未優於 18 '
+                          '個月，且生活品質與睪固酮恢復較差</span>。因此現代實務常採 18–24 個月，但仍需依疾病風險與患者耐受度調整。</p>\n'
+                          '\n'
+                          '<h3>五、NRG-GU009／PREDICT-RT</h3>\n'
+                          '<p>此試驗以 Decipher 個人化高風險治療：較低分患者比較 24 個月與 12 個月 ADT；高分或影像顯示淋巴結陽性的患者則評估加入 apalutamide '
+                          '的治療強化。</p>\n'
+                          '\n'
+                          '<h3>六、STAMPEDE：abiraterone 強化治療</h3>\n'
+                          '<p>STAMPEDE 在非轉移性高風險患者中評估 abiraterone ± enzalutamide。標準治療為 RT + 3 年 ADT，實驗組另加 2 年 '
+                          'abiraterone／prednisolone。Abiraterone 改善 DMFS、OS、BFS 與 PFS；<span class="highlight">再加入 '
+                          'enzalutamide 未帶來額外效益</span>。6 年 DMFS 約為 82% vs 69%。</p>\n'
+                          '<div class="clinical-note">對極高風險或淋巴結陽性、非轉移性患者，骨盆 RT + 長期 ADT + abiraterone／prednisone '
+                          '是重要的治療強化策略。</div>',
                'body_en': '<p class="section-kicker"><strong>Part XIII. Long-Term ADT for High-Risk '
                           'Disease</strong></p>\n'
                           '<h3>1. RTOG 9202</h3>\n'
@@ -10520,74 +10792,46 @@ PAGES.append(
                           '<div class="clinical-note">Clinical interpretation: for node-positive or very high-risk '
                           'nonmetastatic patients, definitive pelvic RT plus long-term ADT plus abiraterone/prednisone '
                           'is an important intensification strategy.</div>'},
-              {'label_zh': '術後處理',
-               'label_en': 'POST-RP',
-               'h2_zh': 'Post-prostatectomy management、adjuvant RT 與 early salvage RT',
-               'h2_en': 'Post-prostatectomy management, adjuvant RT, and early salvage RT',
-               'body_zh': '<p class="section-kicker"><strong>第十五部分：Post-prostatectomy management</strong></p>\n'
-                          '<h3>一、Biochemical recurrence definitions</h3>\n'
-                          '<p>RP 後 PSA 應該變成 undetectable。AUA biochemical recurrence definition 是 PSA &gt;0.2 ng/mL on '
-                          '2 consecutive readings。使用 ultrasensitive PSA 時，也常接受 2 consecutive rises of PSA &gt;0.1 '
-                          'ng/mL。Definitive RT 後 PSA 會慢慢下降至 nadir；post-RT biochemical recurrence 使用 Phoenix '
-                          'criteria：PSA rise ≥2 ng/mL above nadir，也就是 nadir + 2。</p>\n'
+              {'label_zh': '攝護腺切除術後處置：輔助放射治療與早期救援放射治療',
+               'label_en': 'POST-PROSTATECTOMY: Adjuvant RT and early salvage RT',
+               'body_zh': '<h3>一、生化復發定義</h3>\n'
+                          '<p>根治性攝護腺切除術後，PSA 應降至無法測得。AUA 生化復發定義為 <span class="highlight">PSA &gt;0.2 '
+                          'ng/mL，且連續兩次檢測確認</span>。使用超敏感 PSA 時，也可關注 PSA &gt;0.1 ng/mL 且連續上升。</p>\n'
+                          '<p>根治性放射治療後，PSA 會逐漸下降至最低值。放射治療後生化復發使用 <span class="highlight">Phoenix 標準：PSA 最低值 + 2 '
+                          'ng/mL</span>。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>BCR definition</caption>\n'
-                          '    <thead><tr><th scope="col">情境</th><th scope="col">BCR definition</th></tr></thead>\n'
+                          '    <caption>生化復發定義</caption>\n'
+                          '    <thead><tr><th scope="col">治療情境</th><th scope="col">生化復發定義</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Post-prostatectomy</td><td>PSA &gt;0.2 ng/mL on 2 consecutive readings；或 '
-                          'ultrasensitive PSA 下 2 consecutive rises &gt;0.1</td></tr>\n'
-                          '      <tr><td>Post-radiotherapy</td><td>Phoenix criteria：nadir + 2 ng/mL</td></tr>\n'
+                          '      <tr><td>攝護腺切除術後</td><td>PSA &gt;0.2 ng/mL，連續兩次確認</td></tr>\n'
+                          '      <tr><td>放射治療後</td><td>Phoenix 標準：PSA 最低值 + 2 ng/mL</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>二、Historical adjuvant RT trials</h3>\n'
-                          '<p>Historical trials 顯示 high-risk post-prostatectomy patients，尤其 positive surgical '
-                          'margin、pT3a extracapsular extension、pT3b seminal vesicle invasion，可從 adjuvant RT 得到 bPFS '
-                          'benefit。SWOG 8794、EORTC 22911、ARO 96-02 都支持 adjuvant RT 改善 bPFS；SWOG 8794 還顯示 DMFS 和 OS '
-                          'benefit。</p>\n'
+                          '\n'
+                          '<h3>二、早期輔助放射治療試驗</h3>\n'
+                          '<p>SWOG 8794、EORTC 22911 與 ARO 96-02 顯示，對手術切緣陽性、pT3a 包膜外侵犯或 pT3b 儲精囊侵犯患者，輔助 RT 可改善生化控制；SWOG '
+                          '8794 亦報告 DMFS 與 OS 改善。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Historical adjuvant RT trials</caption>\n'
-                          '    <thead><tr><th scope="col">Trial</th><th scope="col">Population</th><th '
-                          'scope="col">Intervention</th><th scope="col">10-year results / '
-                          'conclusion</th></tr></thead>\n'
+                          '    <caption>歷史性輔助 RT 試驗</caption>\n'
+                          '    <thead><tr><th scope="col">試驗</th><th scope="col">治療</th><th '
+                          'scope="col">主要結論</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>SWOG 8794</td><td>RP 後 +SM 或 pT3N0；非低風險、非 node positive</td><td>Observation '
-                          'vs prostate fossa RT 60–64 Gy/30–32 Fx；no ADT</td><td>DMFS 71% vs 61%；OS 74% vs 66%；bPFS '
-                          '58% vs 28%；adjuvant RT improves bPFS, OS, DMFS</td></tr>\n'
-                          '      <tr><td>EORTC 22911</td><td>RP 後 +SM 或 pT3N0</td><td>Observation vs prostate fossa RT '
-                          '60 Gy/30 Fx</td><td>bPFS 62% vs 39%；OS/DM similar；adjuvant RT improves bPFS</td></tr>\n'
-                          '      <tr><td>ARO 96-02</td><td>RP 後 pT3N0、PSA &lt;0.1</td><td>Observation vs prostate '
-                          'fossa RT 60 Gy/30 Fx</td><td>bPFS 56% vs 35%；adjuvant RT improves bPFS</td></tr>\n'
+                          '      <tr><td>SWOG 8794</td><td>觀察 vs 攝護腺床 RT 60–64 Gy</td><td>改善 bPFS、DMFS 與 OS</td></tr>\n'
+                          '      <tr><td>EORTC 22911</td><td>觀察 vs 攝護腺床 RT 60 Gy</td><td>改善 bPFS；OS／DM '
+                          '無顯著差異</td></tr>\n'
+                          '      <tr><td>ARO 96-02</td><td>觀察 vs 攝護腺床 RT 60 Gy</td><td>改善 bPFS</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>三、Adjuvant RT vs early salvage RT</h3>\n'
-                          '<p>較新的 trials 比較 routine adjuvant RT vs early salvage RT。RAVES、RADICALS-RT、GETUG-AFU 17 顯示 '
-                          'adjuvant 與 early salvage strategy 的 bPFS/EFS 沒有明顯差異，而且 early salvage approach 可以讓約 50% 病人避免 '
-                          'postoperative RT。ARTISTIC meta-analysis 也 confirmed similar EFS，兩組約 88–89%。</p>\n'
-                          '<div class="table-wrap">\n'
-                          '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Adjuvant RT vs early salvage RT trials</caption>\n'
-                          '    <thead><tr><th scope="col">Trial</th><th scope="col">Patients</th><th '
-                          'scope="col">Salvage threshold</th><th scope="col">Intervention</th><th scope="col">5-year '
-                          'result</th></tr></thead>\n'
-                          '    <tbody>\n'
-                          '      <tr><td>RAVES</td><td>RP 後 +SM 或 pT3；post-op PSA &lt;0.1</td><td>PSA '
-                          '≥0.2</td><td>Prostate fossa RT 64 Gy；no ADT/WPRT</td><td>bPFS 86% sRT vs 87% aRT</td></tr>\n'
-                          '      <tr><td>RADICALS-RT</td><td>RP 後 +SM、pT3–T4、GS 7–10、或 pre-op PSA ≥10；post-op PSA '
-                          '≤0.2</td><td>PSA &gt;0.1 and rising x2，或 consecutive rises x3</td><td>66 Gy/33 Fx 或 52.5 '
-                          'Gy/20 Fx；WPRT optional</td><td>bPFS 88% sRT vs 85% aRT</td></tr>\n'
-                          '      <tr><td>GETUG-AFU 17</td><td>RP 後 +SM and pT3–4；post-op PSA ≤0.1</td><td>PSA &gt;0.2 '
-                          'and rising</td><td>66 Gy/33 Fx + 6 months ADT for all；WPRT optional</td><td>EFS 90% sRT vs '
-                          '92% aRT</td></tr>\n'
-                          '    </tbody>\n'
-                          '  </table>\n'
-                          '</div>\n'
-                          '<div class="clinical-note">臨床解讀：對多數 RP 後 adverse pathology 但 PSA undetectable 的病人，偏向 '
-                          'observation + early salvage RT，而非 routine adjuvant RT。Adjuvant RT 保留給 selected very '
-                          'high-risk、persistent PSA、多重 adverse features、或 pN1 disease。</div>',
+                          '\n'
+                          '<h3>三、輔助 RT 與早期救援 RT</h3>\n'
+                          '<p>RAVES、RADICALS-RT、GETUG-AFU 17 與 ARTISTIC 統合分析顯示，常規輔助 RT 與觀察後早期救援 RT '
+                          '的事件控制相近；早期救援策略可讓約一半患者避免術後 RT。<span class="highlight">因此多數術後 PSA '
+                          '無法測得但具有不良病理特徵的患者，優先採觀察追蹤與早期救援 RT，而非常規輔助 RT</span>。</p>\n'
+                          '<p>輔助 RT 可保留給經選擇的極高風險患者，例如 PSA 持續可測得、多項不良病理特徵或 pN1 疾病。</p>',
                'body_en': '<p class="section-kicker"><strong>Part XV. Post-Prostatectomy Management</strong></p>\n'
                           '<h3>1. Biochemical recurrence definitions</h3>\n'
                           '<p>After radical prostatectomy, PSA should become undetectable. The AUA biochemical '
@@ -10660,63 +10904,40 @@ PAGES.append(
                           'pathology but undetectable PSA after prostatectomy, observation plus early salvage RT is '
                           'preferred over routine adjuvant RT. Adjuvant RT is reserved for selected very high-risk '
                           'disease, persistent PSA, multiple adverse features, or pN1 disease.</div>'},
-              {'label_zh': 'Salvage RT',
-               'label_en': 'SALVAGE RT',
-               'h2_zh': 'Salvage RT 加 ADT、pelvic nodes、Decipher 與 pN1 disease',
-               'h2_en': 'Salvage RT with ADT, pelvic nodes, Decipher, and pN1 disease',
-               'body_zh': '<p class="section-kicker"><strong>第十六部分：Salvage RT 加 ADT 與 pelvic nodes</strong></p>\n'
-                          '<h3>一、RTOG 9601</h3>\n'
-                          '<p>RTOG 9601 randomized post-RP patients with PSA 0.2–4 ng/mL to salvage RT alone vs '
-                          'salvage RT + 2 years bicalutamide 150 mg daily。RT 是 prostate bed 64.8 Gy/36 Fx；因病人都有 '
-                          'negative LND，所以沒有 pelvic nodes。12-year results 顯示加 ADT 改善 OS 76% vs 71%、PCSM 6% vs 13%、DM '
-                          '15% vs 23%、second biochemical failure 44% vs 68%。Bicalutamide toxicity 主要是 gynecomastia，70% '
-                          'vs 11%。</p>\n'
-                          '<p>重要 nuance：secondary analysis 顯示 ADT benefit 主要在 PSA &gt;0.6 ng/mL 的 salvage setting；若 '
-                          'PSA 很低時 salvage，long-course antiandrogen benefit 可能小，且可能增加 non-cancer harm。因此 salvage ADT '
-                          '要根據 PSA、PSA doubling time、GG、margin、pT stage、Decipher 等 risk-adapted。</p>\n'
+              {'label_zh': '救援放射治療：合併 ADT、骨盆淋巴結照射、Decipher 與 pN1 疾病',
+               'label_en': 'SALVAGE RT: ADT, pelvic nodes, Decipher, and pN1 disease',
+               'body_zh': '<h3>一、RTOG 9601</h3>\n'
+                          '<p>RTOG 9601 將術後 PSA 0.2–4 ng/mL 的患者隨機分派至救援 RT，或救援 RT + 2 年 bicalutamide。12 '
+                          '年結果顯示合併抗雄性素治療可改善 OS、攝護腺癌特異性死亡、遠端轉移與第二次生化失敗。</p>\n'
+                          '<p>次級分析顯示，<span class="highlight">長期抗雄性素治療的效益主要出現在救援時 PSA &gt;0.6 ng/mL 的患者</span>；若 PSA '
+                          '很低即開始救援，治療效益較小，且可能增加非癌症相關傷害。</p>\n'
+                          '\n'
                           '<h3>二、GETUG-AFU 16</h3>\n'
-                          '<p>GETUG-AFU 16 randomized PSA 0.2–2.0 ng/mL post-RP rising PSA patients to prostate fossa '
-                          'RT 66 Gy/33 Fx ± 6 months goserelin。10-year bPFS 和 DMFS 都因 ADT 改善：bPFS 64% vs 49%；DMFS 75% '
-                          'vs 69%；OS 無改變。Toxicity 和 QoL 沒有顯著差異。</p>\n'
-                          '<div class="clinical-note">臨床解讀：Short-course ADT in salvage RT 可以改善 biochemical and '
-                          'metastatic control，特別是 higher-risk salvage patients。</div>\n'
-                          '<h3>三、SPPORT / RTOG 0534</h3>\n'
-                          '<p>SPPORT / RTOG 0534 支持在 selected salvage setting 加入 pelvic nodal RT 與 '
-                          'ST-ADT。整體概念是：prostate bed RT alone &lt; prostate bed RT + ST-ADT &lt; prostate bed RT + '
-                          'pelvic nodal RT + ST-ADT，尤其 PSA 較高、nodal risk 較高者 benefit 更明顯。</p>\n'
+                          '<p>GETUG-AFU 16 比較攝護腺床 RT 66 Gy／33 次 ± 6 個月 goserelin。10 年 bPFS 約為 64% vs 49%，DMFS 約為 75% '
+                          'vs 69%；OS 無顯著差異。短期 ADT 可改善較高風險救援患者的生化與轉移控制。</p>\n'
+                          '\n'
+                          '<h3>三、SPPORT／RTOG 0534</h3>\n'
+                          '<p>SPPORT 支持經選擇的患者在攝護腺床 RT 之外加入短期 ADT 與骨盆淋巴結照射。整體疾病控制趨勢為：<span class="highlight">攝護腺床 RT '
+                          '單獨治療 &lt; 攝護腺床 RT + 短期 ADT &lt; 攝護腺床 RT + 骨盆淋巴結 RT + 短期 ADT</span>。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Salvage RT decision</caption>\n'
-                          '    <thead><tr><th scope="col">Salvage option</th><th scope="col">適合情境</th></tr></thead>\n'
+                          '    <caption>救援 RT 的風險調整選擇</caption>\n'
+                          '    <thead><tr><th scope="col">治療方式</th><th scope="col">較適合的情境</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Prostate bed RT alone</td><td>低 PSA、低 risk、PSA doubling time 長、Decipher '
-                          'low</td></tr>\n'
-                          '      <tr><td>Prostate bed RT + ST-ADT</td><td>UIR/high-risk pathology、PSA 較高、PSADT '
-                          '短</td></tr>\n'
-                          '      <tr><td>Prostate bed + pelvic nodes + ST-ADT</td><td>Nodal risk 高、PSA 較高、Decipher '
-                          'high、其他 high-risk features</td></tr>\n'
+                          '      <tr><td>攝護腺床 RT</td><td>PSA 低、PSA 倍增時間長、整體風險低、Decipher 低分</td></tr>\n'
+                          '      <tr><td>攝護腺床 RT + 短期 ADT</td><td>較高風險病理、PSA 較高或 PSA 倍增時間較短</td></tr>\n'
+                          '      <tr><td>攝護腺床 + 骨盆淋巴結 RT + 短期 ADT</td><td>淋巴結風險高、Decipher 高分或其他高風險特徵</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
+                          '\n'
                           '<h3>四、RADICALS-HD</h3>\n'
-                          '<p>RADICALS-HD 0 vs 6 months ADT 顯示，在多數 intermediate-risk postoperative RT patients '
-                          '中，ST-ADT 沒有顯著改善 10-year DMFS：79% no ADT vs 80% ST-ADT。不過 secondary endpoints 如 clinical PFS '
-                          '和 time to salvage ADT 有改善。</p>\n'
-                          '<p>RADICALS-HD 6 vs 24 months ADT 納入較高風險病人，顯示 LT-ADT 改善 10-year DMFS，78% vs 72%，但代價是更長時間 '
-                          'hormonal side effects。</p>\n'
-                          '<h3>五、Decipher genomic classifier</h3>\n'
-                          '<p>Decipher 是 22-gene genomic classifier，score 0–1。RTOG 9601 validation 顯示 Decipher 與 '
-                          'bPFS、DMFS、OS 相關，可協助個人化 salvage RT 是否加 ADT、以及治療強度。Source file 分類：low &lt;0.45、intermediate '
-                          '0.45–0.6、high &gt;0.6。</p>\n'
-                          '<h3>六、pN1 after prostatectomy</h3>\n'
-                          '<p>對 pN1 disease，retrospective data 支持 selected patients 可從 adjuvant RT 受益。Abdollah et al. '
-                          '顯示 cancer-specific mortality benefit 主要在兩群：1–2 nodes 且 GS 7–10 加 pT3b–4 或 positive '
-                          'margin；以及 3–4 positive nodes。Tilki et al. 顯示 adjuvant RT 相較 salvage RT 可降低 all-cause '
-                          'mortality，benefit 隨 positive nodes 數目增加而更明顯，尤其 ≥4 nodes。</p>\n'
-                          '<div class="clinical-note">Post-RP high-yield：多數 adverse pathology + undetectable PSA → '
-                          'observation + early salvage。PSA detectable/rising → early salvage RT。Higher-risk salvage → '
-                          '加 ADT，並考慮 pelvic nodes。pN1，尤其 ≥4 nodes 或 adverse features → 更支持 adjuvant RT + systemic '
-                          'therapy。</div>',
+                          '<p>0 vs 6 個月 ADT 的比較未顯示 10 年 DMFS 明顯改善；6 vs 24 個月 ADT 的較高風險族群則顯示長期 ADT 可改善 '
+                          'DMFS，但會延長荷爾蒙治療副作用。</p>\n'
+                          '\n'
+                          '<h3>五、Decipher 與 pN1</h3>\n'
+                          '<p><span class="highlight">Decipher 是 22 基因的基因體分類器</span>，可協助預測 bPFS、DMFS 與 OS，並個人化救援 RT '
+                          '是否合併 ADT。術後 pN1 患者若陽性淋巴結數較多或合併高風險病理特徵，更支持輔助 RT + 全身性治療。</p>',
                'body_en': '<p class="section-kicker"><strong>Part XVI. Salvage RT with ADT and Pelvic '
                           'Nodes</strong></p>\n'
                           '<h3>1. RTOG 9601</h3>\n'
@@ -10776,52 +10997,39 @@ PAGES.append(
                           '→ observation plus early salvage. Detectable or rising PSA → early salvage RT. Higher-risk '
                           'salvage → add ADT and consider pelvic nodes. pN1, especially ≥4 nodes or adverse features → '
                           'stronger support for adjuvant RT plus systemic therapy.</div>'},
-              {'label_zh': '轉移性疾病',
-               'label_en': 'METASTATIC',
-               'h2_zh': 'Metastatic prostate cancer framework、mCSPC 與 mCRPC',
-               'h2_en': 'Metastatic prostate cancer framework, mCSPC, and mCRPC',
-               'body_zh': '<p class="section-kicker"><strong>第十七部分：Metastatic prostate cancer framework</strong></p>\n'
-                          '<h3>一、Castration-sensitive vs castration-resistant</h3>\n'
-                          '<p>Castration-sensitive prostate cancer 表示 disease 仍對 ADT 有反應。Castration-resistant prostate '
-                          'cancer 表示在 castrate testosterone environment 中仍有 clinical 或 biochemical '
-                          'progression。Castrate testosterone 定義為 serum testosterone &lt;50 ng/dL 或 1.7 nmol/L。CRPC '
-                          'diagnosis based on rising PSA in the setting of adequately suppressed testosterone。</p>\n'
-                          '<h3>二、Low-volume vs high-volume mCSPC</h3>\n'
+              {'label_zh': '轉移性攝護腺癌：mCSPC、mCRPC、疾病量與全身性治療架構',
+               'label_en': 'METASTATIC DISEASE: mCSPC, mCRPC, disease volume, and systemic therapy',
+               'body_zh': '<h3>一、去勢敏感性與去勢抗性</h3>\n'
+                          '<p>去勢敏感性攝護腺癌表示疾病仍對 ADT 有反應。去勢抗性攝護腺癌則表示在睪固酮已充分抑制的情況下，仍出現 PSA 上升、影像惡化或臨床進展。<span '
+                          'class="highlight">傳統去勢濃度定義為血清睪固酮 &lt;50 ng/dL（1.7 nmol/L）</span>。</p>\n'
+                          '\n'
+                          '<h3>二、低疾病量與高疾病量 mCSPC</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>mCSPC volume definition</caption>\n'
-                          '    <thead><tr><th scope="col">Low-volume disease</th><th scope="col">High-volume '
-                          'disease</th></tr></thead>\n'
+                          '    <caption>CHAARTED 疾病量概念</caption>\n'
+                          '    <thead><tr><th scope="col">低疾病量</th><th scope="col">高疾病量</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>≤3 bone metastases total</td><td>Presence of visceral metastases</td></tr>\n'
-                          '      <tr><td>Bone mets only involving vertebral bodies or pelvis</td><td>≥4 bone '
-                          'lesions，且至少一個在 vertebral bodies 或 pelvis 之外</td></tr>\n'
-                          '      <tr><td>Any number of pelvic nodal metastases 在 revised STAMPEDE context 可視為 '
-                          'low-volume</td><td>—</td></tr>\n'
+                          '      <tr><td>不符合高疾病量定義</td><td><span class="highlight">存在內臟轉移，或 ≥4 '
+                          '個骨轉移且至少一個位於椎體或骨盆以外</span></td></tr>\n'
+                          '      <tr><td>通常包括 ≤3 個骨轉移</td><td>疾病負荷較高，通常需更積極全身性治療</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<p>注意：CHAARTED 原始定義沒有把 pelvic nodal metastases 納入 bone lesion count，但 revised STAMPEDE '
-                          'context 中 pelvic nodal metastases 可被視為 low-volume metastatic disease。</p>\n'
-                          '<h3>三、Management summary</h3>\n'
+                          '\n'
+                          '<h3>三、治療總覽</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Metastatic management summary</caption>\n'
-                          '    <thead><tr><th scope="col">Disease state</th><th scope="col">Treatment '
-                          'concept</th></tr></thead>\n'
+                          '    <caption>轉移性攝護腺癌治療概念</caption>\n'
+                          '    <thead><tr><th scope="col">疾病狀態</th><th scope="col">治療概念</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Low-volume mCSPC</td><td>Doublet therapy：ADT + abiraterone、apalutamide 或 '
-                          'enzalutamide；加 prostate-directed RT 有 OS benefit；≤5 metastases 可考慮 MDT/SBRT 或 surgery，主要 '
-                          'PFS benefit</td></tr>\n'
-                          '      <tr><td>High-volume mCSPC</td><td>Triplet therapy：ADT + docetaxel + abiraterone 或 '
-                          'darolutamide</td></tr>\n'
-                          '      <tr><td>mCRPC adenocarcinoma</td><td>依 prior therapy 與 '
-                          'biomarker：abiraterone、docetaxel、enzalutamide、olaparib for BRCA mutation、pembrolizumab for '
-                          'MSI-H/dMMR、cabazitaxel 或 docetaxel rechallenge</td></tr>\n'
-                          '      <tr><td>mCRPC radiopharmaceuticals</td><td>Ra-223 for bone-only '
-                          'metastases；Lu-177-PSMA-617 for PSMA-positive disease</td></tr>\n'
-                          '      <tr><td>Neuroendocrine differentiation</td><td>Cisplatin/etoposide 或 '
-                          'carboplatin/etoposide</td></tr>\n'
+                          '      <tr><td>低疾病量 mCSPC</td><td>ADT + ARSI 雙藥治療；<span class="highlight">可加入攝護腺原發腫瘤 RT 改善 '
+                          'OS</span>；寡轉移可考慮 MDT</td></tr>\n'
+                          '      <tr><td>高疾病量 mCSPC</td><td>適合時考慮 ADT + docetaxel + abiraterone 或 darolutamide '
+                          '三藥治療</td></tr>\n'
+                          '      <tr><td>mCRPC 腺癌</td><td>依既往治療與生物標記選擇 ARSI、taxane、PARP 抑制劑、免疫治療或其他藥物</td></tr>\n'
+                          '      <tr><td>mCRPC 放射藥物</td><td>Ra-223 用於符合條件的骨轉移疾病；Lu-177-PSMA-617 用於 PSMA '
+                          '陽性疾病</td></tr>\n'
+                          '      <tr><td>神經內分泌分化</td><td>cisplatin／etoposide 或 carboplatin／etoposide</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>',
@@ -10873,55 +11081,31 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': 'mCSPC/MDT',
-               'label_en': 'mCSPC/MDT',
-               'h2_zh': 'Prostate-directed RT in metastatic CSPC 與 oligometastatic MDT',
-               'h2_en': 'Prostate-directed RT in metastatic CSPC and oligometastatic MDT',
-               'body_zh': '<p class="section-kicker"><strong>第十八部分：Prostate-directed RT in metastatic '
-                          'CSPC</strong></p>\n'
-                          '<h3>一、STAMPEDE</h3>\n'
-                          '<p>STAMPEDE 測試 de novo metastatic prostate cancer 中，對 primary prostate 加 RT 是否有 benefit。病人依 '
-                          'CHAARTED burden 用 CT/MRI 分層，不是 PSMA PET。High metastatic burden 定義為 ≥4 bone metastases 且至少 1 '
-                          '個在 vertebral bodies 或 pelvis 之外，或有 visceral metastases。Low metastatic burden 則是其餘病人，包括 ≤3 '
-                          'bone metastases，或 bone mets only involving vertebral bodies/pelvis。</p>\n'
-                          '<p>Randomization：standard arm 為 lifelong ADT，部分病人後來接受 docetaxel；experimental arm 則在 '
-                          'systemic therapy 上加 prostate RT。RT regimen 有兩種：55 Gy/20 Fx daily over 4 weeks，或 36 Gy/6 Fx '
-                          'weekly over 6 weeks。</p>\n'
-                          '<p>結果：low metastatic burden patients 有 OS benefit。5-year OS：without RT 53% vs with RT '
-                          '65%。High burden patients 沒有 benefit：without RT 35% vs with RT 30%。Failure-free survival '
-                          '在所有病人改善。QoL 沒有顯著差異，5 年 overall G3+ toxicity 類似，1 年 grade 3+ urinary toxicity 約 2%，grade 3+ '
-                          'bowel toxicity 約 3%。</p>\n'
-                          '<h3>二、STOPCAP meta-analysis</h3>\n'
-                          '<p>STOPCAP prospective meta-analysis 合併 STAMPEDE 和 HORRAD。STAMPEDE 使用 55 Gy/20 Fx 或 36 Gy/6 '
-                          'Fx；HORRAD 使用 70 Gy/35 Fx 或 57.76 Gy/19 Fx。STOPCAP 顯示 prostate-directed RT 在 &lt;5 bone '
-                          'lesions patients 中改善 OS；3-year OS 約 70% → 77%。Unselected metastatic patients 沒有 OS '
-                          'benefit，但 failure-free survival 和 biochemical PFS 有約 10% benefit，且 effect size 依 metastatic '
-                          'burden 不同。</p>\n'
+              {'label_zh': '轉移性去勢敏感性疾病：攝護腺原發腫瘤放射治療與寡轉移灶導向治療',
+               'label_en': 'mCSPC / MDT: Prostate-directed RT and oligometastatic therapy',
+               'body_zh': '<h3>一、STAMPEDE：攝護腺原發腫瘤 RT</h3>\n'
+                          '<p>STAMPEDE 評估初診即轉移的攝護腺癌，在標準全身性治療之外加入攝護腺 RT 是否有益。試驗依傳統 CT／MRI 及 CHAARTED 疾病量分層；RT 可使用 55 '
+                          'Gy／20 次每日治療，或 36 Gy／6 次每週治療。</p>\n'
+                          '<p><span class="highlight">低轉移負荷患者具有整體存活效益：5 年 OS 約由 53% 提高至 65%</span>；高疾病量患者則未見 OS '
+                          '改善。所有患者的無失敗存活可改善，且治療相關嚴重毒性可接受。</p>\n'
+                          '\n'
+                          '<h3>二、STOPCAP 統合分析</h3>\n'
+                          '<p>STOPCAP 合併 STAMPEDE 與 HORRAD，顯示攝護腺原發腫瘤 RT 對骨轉移數較少的患者較有利；未依疾病量篩選的整體轉移族群並無明確 OS 效益。</p>\n'
+                          '\n'
                           '<h3>三、PEACE-1</h3>\n'
-                          '<p>PEACE-1 是 de novo mCSPC trial，採 2×2 factorial design，比較 SOC、SOC + abiraterone、SOC + '
-                          'prostate RT 74 Gy/37 Fx、SOC + abiraterone + prostate RT。SOC 包含 ADT ± docetaxel。Abiraterone '
-                          '加到 SOC 明顯改善 rPFS 和 OS。Low-volume population 中，SOC + abiraterone + prostate RT 改善 rPFS，7.5 '
-                          'years with RT vs 4.4 years without RT，但未見 OS benefit。在 overall population，prostate RT 改善 '
-                          'time to serious GU events 和 castration-resistance-free survival，但 time to GU event 較難解讀，因為 '
-                          'receiving prostate RT 本身也被定義為 GU event。</p>\n'
-                          '<div class="clinical-note">Metastatic prostate RT high-yield：Low-volume de novo mCSPC → '
-                          'prostate RT 應強烈考慮。STAMPEDE regimen：55 Gy/20 Fx daily 或 36 Gy/6 weekly fractions。PSMA PET '
-                          'era 要小心：STAMPEDE 用 CT/MRI 分層，今天用 PSMA PET 可能把原本 CT low-volume 的病人 upstage。</div>\n'
-                          '<p class="section-kicker"><strong>第十九部分：Oligometastatic prostate cancer 的 MDT</strong></p>\n'
-                          '<h3>四、STOMP and ORIOLE concept</h3>\n'
-                          '<p>Oligometastatic prostate cancer 中，MDT/SBRT 可延後 progression 和 ADT initiation。STOMP 和 '
-                          'ORIOLE 都支持 selected oligometastatic patients 使用 MDT。Pooled ORIOLE + STOMP analysis 顯示 '
-                          'median PFS 11.9 months with MDT vs 5.9 months with observation。Source file 將此總結為 MDT 對 ≤3 '
-                          'metastases 可改善 PFS。</p>\n'
+                          '<p>PEACE-1 採 2×2 因子設計，評估 abiraterone 與攝護腺 RT。Abiraterone 明顯改善 rPFS 與 OS；低疾病量患者加入攝護腺 RT 可改善 '
+                          'rPFS，但尚未證實 OS 改善。攝護腺 RT 亦可延後嚴重泌尿生殖系統事件與去勢抗性疾病。</p>\n'
+                          '<div class="clinical-note">STAMPEDE 使用 CT／MRI 定義疾病量。在 PSMA PET '
+                          '時代，部分傳統影像低疾病量患者可能因更敏感的影像而被重新分期，解讀時需特別注意。</div>\n'
+                          '\n'
+                          '<h3>四、STOMP 與 ORIOLE</h3>\n'
+                          '<p>對經選擇的寡轉移患者，轉移灶導向治療（MDT／SBRT）可延後疾病惡化與開始 ADT。STOMP 與 ORIOLE 合併分析顯示，<span '
+                          'class="highlight">中位 PFS 約為 MDT 11.9 個月，觀察追蹤 5.9 個月</span>。</p>\n'
+                          '\n'
                           '<h3>五、EXTEND</h3>\n'
-                          '<p>EXTEND randomized oligometastatic mCSPC patients with ≤5 metastases and receiving ADT 至 '
-                          'continued ADT alone vs ADT + SBRT to all metastatic lesions。SBRT 改善 PFS：ADT alone median '
-                          'PFS 15.8 months，ADT + SBRT arm median PFS not reached。也改善 eugonadal PFS after testosterone '
-                          'recovery，代表 MDT 可能幫助 intermittent ADT strategy。Correlative immune assays 顯示 ADT + SBRT arm '
-                          '有 increased T-cell activation、proliferation、clonal expansion。</p>\n'
-                          '<div class="clinical-note">MDT high-yield：對 ≤3–5 metastases，特別是 PSMA PET-detected '
-                          'oligometastatic disease，SBRT/MDT 可改善 PFS、延後 systemic escalation 或 ADT，但 OS benefit '
-                          '仍未完全確立。</div>',
+                          '<p>EXTEND 將具有 ≤5 個轉移灶且接受 ADT 的患者隨機分派至持續 ADT，或 ADT + 對所有轉移灶施行 SBRT。SBRT 改善 PFS，並可能支持間歇性 ADT '
+                          '策略。<span class="highlight">對 ≤3–5 個轉移灶，SBRT／MDT 可改善 PFS 並延後全身性治療升階，但 OS '
+                          '效益尚未完全確立</span>。</p>',
                'body_en': '<p class="section-kicker"><strong>Part XVIII. Prostate-Directed RT in Metastatic '
                           'CSPC</strong></p>\n'
                           '<h3>1. STAMPEDE</h3>\n'
@@ -10973,43 +11157,34 @@ PAGES.append(
                           '<div class="clinical-note">MDT high-yield: for ≤3–5 metastases, especially PSMA '
                           'PET-detected oligometastatic disease, SBRT/MDT can improve PFS and delay systemic '
                           'escalation or ADT, but OS benefit is not fully established.</div>'},
-              {'label_zh': '放射藥物',
-               'label_en': 'RPT',
-               'h2_zh': 'Radiopharmaceutical therapy in metastatic prostate cancer',
-               'h2_en': 'Radiopharmaceutical therapy in metastatic prostate cancer',
-               'body_zh': '<p class="section-kicker"><strong>第二十部分：Radiopharmaceutical therapy in metastatic prostate '
-                          'cancer</strong></p>\n'
-                          '<h3>一、Ra-223 vs Lu-177-PSMA-617</h3>\n'
+              {'label_zh': '放射藥物治療：Ra-223 與 Lu-177-PSMA-617',
+               'label_en': 'RADIOPHARMACEUTICAL THERAPY: Ra-223 and Lu-177-PSMA-617',
+               'body_zh': '<h3>一、Ra-223 與 Lu-177-PSMA-617</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Ra-223 vs Lu-177-PSMA-617</caption>\n'
-                          '    <thead><tr><th scope="col">Feature</th><th scope="col">Ra-223 / Xofigo</th><th '
-                          'scope="col">Lu-177-PSMA-617 / Pluvicto</th></tr></thead>\n'
+                          '    <caption>Ra-223 與 Lu-177-PSMA-617 比較</caption>\n'
+                          '    <thead><tr><th scope="col">特徵</th><th scope="col">Ra-223</th><th '
+                          'scope="col">Lu-177-PSMA-617</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>放射型態</td><td>α-particle emitter</td><td>β-particle + γ emission</td></tr>\n'
-                          '      <tr><td>射程</td><td>很短，&lt;0.1 mm，約 8 cells</td><td>較長，約 0.25 mm，約 125 '
-                          'cells</td></tr>\n'
-                          '      <tr><td>Mechanism</td><td>Calcium mimic，進入 osteoblastic bone metastases</td><td>被 '
-                          'PSMA-expressing prostate cancer cells uptake</td></tr>\n'
-                          '      <tr><td>Indication</td><td>mCRPC with bone-only metastases，尤其 symptomatic bone '
-                          'mets</td><td>PSMA-positive mCRPC，可包含 bone 和 visceral metastases</td></tr>\n'
-                          '      <tr><td>Toxicities</td><td>Myelosuppression、GI '
-                          'toxicity、edema</td><td>Myelosuppression，尤其 thrombocytopenia</td></tr>\n'
+                          '      <tr><td>放射型態</td><td>α 粒子放射核種</td><td>β 粒子放射核種，並伴隨 γ 射線</td></tr>\n'
+                          '      <tr><td>作用方式</td><td>模擬鈣離子，聚集於成骨性骨轉移病灶</td><td>由表現 PSMA 的腫瘤細胞攝取</td></tr>\n'
+                          '      <tr><td>典型適應情境</td><td>有症狀、以骨轉移為主且無內臟轉移的 mCRPC</td><td>PSMA 陽性 '
+                          'mCRPC，可治療骨、淋巴結與內臟病灶</td></tr>\n'
+                          '      <tr><td>主要毒性</td><td>骨髓抑制、腸胃道毒性、水腫</td><td>骨髓抑制，尤其血小板低下；亦可有口乾與疲倦</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
+                          '\n'
                           '<h3>二、ALSYMPCA：Ra-223</h3>\n'
-                          '<p>ALSYMPCA 建立 Ra-223 用於 symptomatic bone-metastatic mCRPC。Trial 顯示 OS benefit：14.9 vs 11.3 '
-                          'months，並延長 time to first symptomatic skeletal event：15.6 vs 9.8 months。Clinical '
-                          'selection：Ra-223 最適合 bone-predominant 或 bone-only mCRPC，無 visceral disease，marrow reserve '
-                          '足夠，沒有 urgent cord compression/impending fracture，且沒有 major soft tissue component 的病人。</p>\n'
+                          '<p>ALSYMPCA 確立 Ra-223 用於有症狀骨轉移的 mCRPC。Ra-223 改善中位 OS（14.9 vs 11.3 個月），並延長至首次有症狀骨骼事件的時間（15.6 '
+                          'vs 9.8 個月）。<span class="highlight">最適合無內臟轉移、骨髓儲備足夠且沒有急迫脊髓壓迫或即將骨折的患者</span>。</p>\n'
+                          '\n'
                           '<h3>三、VISION：Lu-177-PSMA-617</h3>\n'
-                          '<p>VISION randomized PSMA PET-positive mCRPC patients to Lu-177-PSMA-617 7.5 GBq every 6 '
-                          'weeks for 4–6 cycles + SOC vs SOC alone。Lu-177 改善 median OS：15.3 vs 11.3 months，也改善 '
-                          'image-based PFS：8.7 vs 3.4 months。Grade 3+ toxicity 較高，53% vs 38%，但 QoL 沒有明顯惡化。</p>\n'
-                          '<div class="clinical-note">RPT high-yield：Ra-223 = α emitter，適合 symptomatic bone-only '
-                          'mCRPC。Lu-177-PSMA = PSMA-targeted β emitter，適合 PSMA-positive mCRPC，若符合條件可治療 '
-                          'bone、nodal、visceral disease。</div>',
+                          '<p>VISION 將 PSMA PET 陽性 mCRPC 患者隨機分派至標準治療，或標準治療 + Lu-177-PSMA-617 7.4–7.5 GBq、每 6 週一次、共 4–6 '
+                          '個療程。<span class="highlight">Lu-177-PSMA-617 改善中位 OS（15.3 vs 11.3 個月）與影像判定 PFS（8.7 vs 3.4 '
+                          '個月）</span>。</p>\n'
+                          '<div class="clinical-note">記憶法：Ra-223 是骨標靶 α 放射核種，適合有症狀、無內臟轉移的骨轉移 mCRPC；Lu-177-PSMA-617 是 '
+                          'PSMA 標靶 β 放射核種，適合 PSMA 陽性 mCRPC。</div>',
                'body_en': '<p class="section-kicker"><strong>Part XX. Radiopharmaceutical Therapy in Metastatic '
                           'Prostate Cancer</strong></p>\n'
                           '<h3>1. Ra-223 versus Lu-177-PSMA-617</h3>\n'
@@ -11047,99 +11222,75 @@ PAGES.append(
                           '<div class="clinical-note">RPT high-yield: Ra-223 is an alpha emitter for symptomatic '
                           'bone-only mCRPC. Lu-177-PSMA is a PSMA-targeted beta emitter for PSMA-positive mCRPC and '
                           'can treat bone, nodal, and visceral disease if eligibility criteria are met.</div>'},
-              {'label_zh': 'Dose/演算法',
-               'label_en': 'DOSE/ALGO',
-               'h2_zh': '重要 RT dose table 與 risk-adapted treatment algorithm',
-               'h2_en': 'Important RT dose table and risk-adapted treatment algorithm',
-               'body_zh': '<p class="section-kicker"><strong>第二十一部分：重要 RT dose table</strong></p>\n'
+              {'label_zh': '重要放射治療劑量與風險調整治療演算法',
+               'label_en': 'DOSES / ALGORITHM: Key RT regimens and risk-adapted treatment pathways',
+               'body_zh': '<h3>一、重要放射治療劑量</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Prostate cancer RT dose table</caption>\n'
-                          '    <thead><tr><th scope="col">Clinical setting</th><th scope="col">Regimen / '
-                          'dose</th></tr></thead>\n'
+                          '    <caption>攝護腺癌常用放射治療劑量</caption>\n'
+                          '    <thead><tr><th scope="col">臨床情境</th><th scope="col">常用療程</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Conventional dose-escalated definitive EBRT</td><td>78–79.2 Gy in 39–44 '
-                          'Fx</td></tr>\n'
-                          '      <tr><td>Moderate hypofractionation</td><td>70 Gy/28 Fx；60 Gy/20 Fx</td></tr>\n'
-                          '      <tr><td>SBRT / ultra-hypofractionation</td><td>36.25 Gy/5 Fx，常 prostate CTV boost to '
-                          '40 Gy；HYPO-RT-PC 為 42.7 Gy/7 Fx</td></tr>\n'
-                          '      <tr><td>FLAME-style intraprostatic boost</td><td>77 Gy/35 Fx to prostate + up to 95 '
-                          'Gy SIB to MRI-defined GTV</td></tr>\n'
-                          '      <tr><td>ASCENDE-RT EBRT boost</td><td>Pelvis/prostate/SV 46 Gy/23 Fx → EBRT boost to '
-                          'total 78 Gy</td></tr>\n'
-                          '      <tr><td>ASCENDE-RT LDR boost</td><td>Pelvis/prostate/SV 46 Gy/23 Fx → I-125 LDR boost '
-                          '115 Gy</td></tr>\n'
-                          '      <tr><td>POP-RT pelvic nodes</td><td>Pelvic nodes 50 Gy/25 Fx + prostate SIB 68 '
-                          'Gy</td></tr>\n'
-                          '      <tr><td>Post-prostatectomy prostate bed</td><td>常 64–66 Gy；部分 modern regimen 用 52.5 '
-                          'Gy/20 Fx</td></tr>\n'
-                          '      <tr><td>RTOG 9601 salvage prostate bed</td><td>64.8 Gy/36 Fx</td></tr>\n'
-                          '      <tr><td>GETUG-AFU 16 salvage prostate bed</td><td>66 Gy/33 Fx</td></tr>\n'
-                          '      <tr><td>STAMPEDE metastatic primary prostate RT</td><td>55 Gy/20 Fx daily 或 36 Gy/6 '
-                          'Fx weekly</td></tr>\n'
-                          '      <tr><td>Oligometastatic MDT</td><td>SBRT dose 依部位/OAR；可行時 treat all visible '
-                          'lesions</td></tr>\n'
-                          '      <tr><td>Painful uncomplicated bone metastasis</td><td>8 Gy ×1、20 Gy/5 Fx、30 Gy/10 Fx '
-                          '等</td></tr>\n'
+                          '      <tr><td>傳統分次劑量升階 EBRT</td><td>78–79.2 Gy／39–44 次</td></tr>\n'
+                          '      <tr><td>中度低分次放射治療</td><td><span class="highlight">70 Gy／28 次；60 Gy／20 '
+                          '次</span></td></tr>\n'
+                          '      <tr><td>SBRT／超低分次放射治療</td><td><span class="highlight">36.25 Gy／5 次</span>；HYPO-RT-PC '
+                          '為 42.7 Gy／7 次</td></tr>\n'
+                          '      <tr><td>FLAME 式局部加量</td><td>攝護腺 77 Gy／35 次 + MRI 定義病灶最高 95 Gy SIB</td></tr>\n'
+                          '      <tr><td>ASCENDE-RT EBRT 加量</td><td>骨盆／攝護腺／儲精囊 46 Gy／23 次 → EBRT 加量至 78 Gy</td></tr>\n'
+                          '      <tr><td>ASCENDE-RT LDR 加量</td><td>46 Gy／23 次 → I-125 LDR 加量 115 Gy</td></tr>\n'
+                          '      <tr><td>POP-RT 骨盆淋巴結</td><td>骨盆淋巴結 50 Gy／25 次 + 攝護腺 SIB 68 Gy</td></tr>\n'
+                          '      <tr><td>術後攝護腺床</td><td>常用 64–66 Gy；部分現代療程使用 52.5 Gy／20 次</td></tr>\n'
+                          '      <tr><td>STAMPEDE 轉移性原發腫瘤 RT</td><td><span class="highlight">55 Gy／20 次每日治療，或 36 Gy／6 '
+                          '次每週治療</span></td></tr>\n'
+                          '      <tr><td>無複雜情況的疼痛性骨轉移</td><td>8 Gy／1 次、20 Gy／5 次或 30 Gy／10 次</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<p class="section-kicker"><strong>第二十二部分：Risk-adapted treatment algorithm</strong></p>\n'
-                          '<h3>一、Localized disease</h3>\n'
+                          '\n'
+                          '<h3>二、局限性疾病演算法</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Localized disease algorithm</caption>\n'
-                          '    <thead><tr><th scope="col">Clinical situation</th><th scope="col">Preferred conceptual '
-                          'approach</th></tr></thead>\n'
+                          '    <caption>局限性疾病治療演算法</caption>\n'
+                          '    <thead><tr><th scope="col">臨床情境</th><th scope="col">建議概念</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Very low / low risk</td><td>多數可 active surveillance；若治療可選 surgery 或 RT '
-                          'monotherapy</td></tr>\n'
-                          '      <tr><td>Favorable intermediate</td><td>Monotherapy：surgery、EBRT、SBRT、brachytherapy，依 '
-                          'anatomy/preference</td></tr>\n'
-                          '      <tr><td>Unfavorable intermediate</td><td>Surgery 或 RT + 4–6 months ADT；selected '
-                          'patients 可考慮 dose intensification</td></tr>\n'
-                          '      <tr><td>High risk</td><td>EBRT ± pelvic nodes + LT-ADT 18–24 months；可考慮 BT boost 或 '
-                          'focal boost；selected surgery</td></tr>\n'
-                          '      <tr><td>Very high risk</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone；selected '
-                          'surgery 但常需 multimodality</td></tr>\n'
-                          '      <tr><td>cN1 M0</td><td>Pelvic RT + LT-ADT + abiraterone/prednisone</td></tr>\n'
+                          '      <tr><td>極低／低風險</td><td>多數採主動監測；需治療時可選手術或單一 RT</td></tr>\n'
+                          '      <tr><td>有利型中度風險</td><td>手術、EBRT、SBRT 或近接治療等單一治療</td></tr>\n'
+                          '      <tr><td>不利型中度風險</td><td>手術，或 RT + 4–6 個月 ADT；經選擇患者可考慮劑量強化</td></tr>\n'
+                          '      <tr><td>高風險</td><td>EBRT ± 骨盆淋巴結照射 + 18–24 個月 ADT；可考慮近接治療或局部病灶加量</td></tr>\n'
+                          '      <tr><td>極高風險</td><td>骨盆 RT + 長期 ADT + abiraterone／prednisone；通常需要多模式治療</td></tr>\n'
+                          '      <tr><td>cN1 M0</td><td>骨盆 RT + 長期 ADT + abiraterone／prednisone</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>二、Post-prostatectomy</h3>\n'
+                          '\n'
+                          '<h3>三、攝護腺切除術後演算法</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Post-prostatectomy algorithm</caption>\n'
-                          '    <thead><tr><th scope="col">Clinical situation</th><th '
-                          'scope="col">Approach</th></tr></thead>\n'
+                          '    <caption>術後治療演算法</caption>\n'
+                          '    <thead><tr><th scope="col">臨床情境</th><th scope="col">處置</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Undetectable PSA + adverse pathology</td><td>多數 observation + early salvage '
-                          'RT</td></tr>\n'
-                          '      <tr><td>PSA detectable/rising</td><td>Early salvage RT to prostate bed</td></tr>\n'
-                          '      <tr><td>Higher-risk salvage</td><td>加 ADT；考慮 pelvic nodal RT</td></tr>\n'
-                          '      <tr><td>pN1</td><td>Consider adjuvant RT + systemic therapy，尤其 ≥4 nodes 或 adverse '
-                          'features</td></tr>\n'
-                          '      <tr><td>Decipher high</td><td>更支持 treatment intensification</td></tr>\n'
+                          '      <tr><td>PSA 無法測得 + 不良病理特徵</td><td>多數採觀察追蹤 + 早期救援 RT</td></tr>\n'
+                          '      <tr><td><span class="highlight">PSA 可測得或持續上升</span></td><td>儘早施行攝護腺床救援 RT</td></tr>\n'
+                          '      <tr><td>較高風險救援情境</td><td>加入 ADT，並考慮骨盆淋巴結 RT</td></tr>\n'
+                          '      <tr><td>pN1</td><td>考慮輔助 RT + 全身性治療，尤其陽性淋巴結較多或具有其他高風險特徵</td></tr>\n'
+                          '      <tr><td>Decipher 高分</td><td>更支持治療強化</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<h3>三、Metastatic disease</h3>\n'
+                          '\n'
+                          '<h3>四、轉移性疾病演算法</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>Metastatic disease algorithm</caption>\n'
-                          '    <thead><tr><th scope="col">Clinical situation</th><th '
-                          'scope="col">Approach</th></tr></thead>\n'
+                          '    <caption>轉移性疾病治療演算法</caption>\n'
+                          '    <thead><tr><th scope="col">臨床情境</th><th scope="col">處置</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Low-volume de novo mCSPC</td><td>ADT + ARSI doublet；prostate RT；selected '
-                          'MDT</td></tr>\n'
-                          '      <tr><td>High-volume mCSPC</td><td>ADT + docetaxel + abiraterone/darolutamide '
-                          'triplet；prostate RT 主要是 GU-event/rPFS rationale，非確立 OS benefit</td></tr>\n'
-                          '      <tr><td>Oligometastatic recurrence</td><td>MDT/SBRT 可改善 PFS、延後 systemic '
-                          'escalation</td></tr>\n'
-                          '      <tr><td>mCRPC bone-only symptomatic</td><td>Ra-223 if eligible</td></tr>\n'
-                          '      <tr><td>mCRPC PSMA-positive</td><td>Lu-177-PSMA-617 if eligible</td></tr>\n'
-                          '      <tr><td>Neuroendocrine/small-cell transformation</td><td>Platinum/etoposide-based '
-                          'therapy</td></tr>\n'
+                          '      <tr><td>低疾病量初診 mCSPC</td><td>ADT + ARSI；加入攝護腺 RT；經選擇患者考慮 MDT</td></tr>\n'
+                          '      <tr><td>高疾病量 mCSPC</td><td>適合時採 ADT + docetaxel + abiraterone／darolutamide '
+                          '三藥治療</td></tr>\n'
+                          '      <tr><td>寡轉移復發</td><td>MDT／SBRT 可改善 PFS 並延後全身性治療升階</td></tr>\n'
+                          '      <tr><td>有症狀、骨轉移為主的 mCRPC</td><td>符合條件時使用 Ra-223</td></tr>\n'
+                          '      <tr><td>PSMA 陽性 mCRPC</td><td>符合條件時使用 Lu-177-PSMA-617</td></tr>\n'
+                          '      <tr><td>神經內分泌／小細胞轉化</td><td>含鉑藥物 + etoposide 為基礎的治療</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>',
@@ -11236,57 +11387,40 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': '重點整理',
-               'label_en': 'TAKE HOME',
-               'h2_zh': '攝護腺癌最終高分整理',
-               'h2_en': 'High-yield take-home summary for prostate cancer',
-               'body_zh': '<p class="section-kicker"><strong>最終高分整理</strong></p>\n'
+              {'label_zh': '攝護腺癌高頻考點總整理',
+               'label_en': 'HIGH-YIELD SUMMARY: Prostate cancer take-home points',
+               'body_zh': '<h3>最終高頻考點</h3>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
-                          '    <caption>High-yield summary</caption>\n'
+                          '    <caption>攝護腺癌重點總結</caption>\n'
                           '    <thead><tr><th scope="col">主題</th><th scope="col">最重要結論</th></tr></thead>\n'
                           '    <tbody>\n'
-                          '      <tr><td>Biology</td><td>Prostate cancer is androgen-driven，常為 peripheral-zone '
-                          'adenocarcinoma，PSA-secreting</td></tr>\n'
-                          '      <tr><td>Workup</td><td>H&P + IPSS/SHIM/DRE、PSA/testosterone、biopsy 前 prostate '
-                          'MRI、MRI-fusion biopsy preferred、依 risk 做 metastatic imaging</td></tr>\n'
-                          '      <tr><td>PSA recurrence</td><td>Post-RP：PSA &gt;0.2 twice；Post-RT：nadir + 2</td></tr>\n'
-                          '      <tr><td>Risk grouping</td><td>GG、PSA、T-stage、core positivity 決定 '
-                          'low/FIR/UIR/HR/VHR</td></tr>\n'
-                          '      <tr><td>ADT</td><td>LR/FIR 不加 ADT；UIR 加 4–6 months；HR 加 18–24 months；VHR/N+ 加 '
-                          'abiraterone</td></tr>\n'
-                          '      <tr><td>Radiobiology</td><td>Prostate α/β 約 1.5–3，因此 moderate hypofractionation 和 '
-                          'SBRT 有生物學合理性</td></tr>\n'
-                          '      <tr><td>Moderate hypo</td><td>60 Gy/20 Fx 和 70 Gy/28 Fx 是主要 standard '
-                          'regimens</td></tr>\n'
-                          '      <tr><td>SBRT</td><td>PACE-B 支持 36.25 Gy/5 Fx，5-year bPFS 約 95%</td></tr>\n'
-                          '      <tr><td>Dose escalation</td><td>改善 biochemical control；FLAME boost 改善 bDFS 且不增加 late '
-                          'GU/GI toxicity</td></tr>\n'
-                          '      <tr><td>Brachy boost</td><td>ASCENDE-RT 改善 bPFS，但增加 grade 3+ GU '
-                          'toxicity/stricture</td></tr>\n'
-                          '      <tr><td>Pelvic nodes</td><td>POP-RT 在 high-risk nodal-risk patients 改善 '
-                          'BFFS/DFS/DMFS，但未改善 OS</td></tr>\n'
-                          '      <tr><td>Post-RP</td><td>多數選 early salvage RT，而非 routine adjuvant RT；可避免約 50% 病人接受 '
-                          'RT</td></tr>\n'
-                          '      <tr><td>Salvage ADT</td><td>RTOG 9601 和 GETUG-AFU 16 支持 selected salvage RT 加 '
-                          'ADT</td></tr>\n'
-                          '      <tr><td>Salvage PLNRT</td><td>SPPORT 支持 higher-risk salvage patients 加 pelvic nodes + '
-                          'ST-ADT</td></tr>\n'
-                          '      <tr><td>mCSPC primary RT</td><td>STAMPEDE 支持 low-burden metastatic disease 加 prostate '
-                          'RT 改善 OS</td></tr>\n'
-                          '      <tr><td>MDT</td><td>STOMP/ORIOLE/EXTEND 支持 oligometastatic disease 用 SBRT/MDT 改善 '
-                          'PFS</td></tr>\n'
-                          '      <tr><td>Radiopharmaceuticals</td><td>Ra-223 for bone-only mCRPC；Lu-177-PSMA for '
-                          'PSMA-positive mCRPC</td></tr>\n'
+                          '      <tr><td>生物學</td><td>攝護腺癌多為雄性素驅動、起源於周邊區且可分泌 PSA 的腺癌</td></tr>\n'
+                          '      <tr><td>診斷評估</td><td>病史／身體檢查 + IPSS／SHIM／DRE、PSA／睪固酮、切片前 MRI、標靶與系統性切片</td></tr>\n'
+                          '      <tr><td>PSA 復發</td><td>術後：PSA &gt;0.2 ng/mL 且連續兩次；RT 後：PSA 最低值 + 2 ng/mL</td></tr>\n'
+                          '      <tr><td>風險分層</td><td>GG、PSA、T 分期與陽性切片比例共同決定低風險、FIR、UIR、高風險與極高風險</td></tr>\n'
+                          '      <tr><td>ADT</td><td><span class="highlight">低風險／FIR 通常不加 ADT；UIR 加 4–6 個月；高風險加 18–24 '
+                          '個月；極高風險／N+ 可加入 abiraterone</span></td></tr>\n'
+                          '      <tr><td>放射生物學</td><td>攝護腺癌 α／β 約 1.5–3 Gy，因此適合中度低分次與 SBRT</td></tr>\n'
+                          '      <tr><td>中度低分次</td><td>60 Gy／20 次與 70 Gy／28 次是主要標準療程</td></tr>\n'
+                          '      <tr><td>SBRT</td><td>PACE-B 支持 36.25 Gy／5 次，5 年 bPFS 約 95%</td></tr>\n'
+                          '      <tr><td>劑量升階</td><td>改善生化控制；FLAME 局部加量改善 bDFS，未顯著增加晚期 GU／GI 毒性</td></tr>\n'
+                          '      <tr><td>近接治療加量</td><td>ASCENDE-RT 改善 bPFS，但增加第 3 級以上 GU 毒性與尿道狹窄</td></tr>\n'
+                          '      <tr><td>骨盆淋巴結</td><td>POP-RT 改善 BFFS／DFS／DMFS，但未顯示 OS 改善</td></tr>\n'
+                          '      <tr><td>術後 RT</td><td><span class="highlight">多數患者採早期救援 RT，而非常規輔助 '
+                          'RT</span></td></tr>\n'
+                          '      <tr><td>救援 RT + ADT</td><td>RTOG 9601 與 GETUG-AFU 16 支持經選擇的較高風險患者合併 ADT</td></tr>\n'
+                          '      <tr><td>低疾病量 mCSPC</td><td>STAMPEDE 支持加入攝護腺原發腫瘤 RT 改善 OS</td></tr>\n'
+                          '      <tr><td>寡轉移 MDT</td><td>STOMP、ORIOLE 與 EXTEND 支持 SBRT／MDT 改善 PFS</td></tr>\n'
+                          '      <tr><td>放射藥物</td><td>Ra-223 用於符合條件的骨轉移 mCRPC；Lu-177-PSMA-617 用於 PSMA 陽性 '
+                          'mCRPC</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>\n'
-                          '<div class="clinical-note">一句話總結：攝護腺癌治療核心是 risk-adapted and hormone-integrated '
-                          'management：low/FIR 可常常避免 ADT，UIR 需 definitive RT + short-course ADT，high-risk 需 LT-ADT 並考慮 '
-                          'pelvic/dose intensification，VHR/N+ 可加入 abiraterone；RP 後多數採 early salvage 而非 routine '
-                          'adjuvant RT；metastatic disease 則整合 systemic intensification、low-volume mCSPC 的 '
-                          'prostate-directed RT、oligometastatic MDT，以及 selected mCRPC 的 radiopharmaceutical '
-                          'therapy。</div>',
+                          '<p><span class="highlight">攝護腺癌治療核心是依風險調整，並整合局部治療與荷爾蒙治療</span>：低風險與有利型中度風險通常可避免 '
+                          'ADT；不利型中度風險使用根治性 RT + 短期 ADT；高風險使用長期 ADT 並考慮骨盆淋巴結或劑量強化；極高風險／N+ 可加入 '
+                          'abiraterone。術後多數採早期救援而非常規輔助 RT；轉移性疾病則整合全身性治療強化、低疾病量 mCSPC 的攝護腺 RT、寡轉移 MDT，以及 mCRPC '
+                          '的放射藥物治療。</p>',
                'body_en': '<p class="section-kicker"><strong>Final High-Yield Summary</strong></p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
@@ -11338,10 +11472,9 @@ PAGES.append(
                           'early salvage rather than routine adjuvant RT. Metastatic disease integrates systemic '
                           'intensification, prostate-directed RT for low-volume mCSPC, oligometastatic MDT, and '
                           'selected radiopharmaceutical therapy for mCRPC.</div>'}],
-    "excel_sheet": "Prostate",
-    "prev": ["gu.html", "泌尿", "GU"],
-    "next": ["gyn.html", "婦科", "Gyn"],
-                          }
+ 'excel_sheet': 'Prostate',
+ 'prev': ['gu.html', '泌尿', 'GU'],
+ 'next': ['gyn.html', '婦科', 'Gyn']}
 )
 
 

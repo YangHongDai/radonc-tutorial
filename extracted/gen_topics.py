@@ -16,7 +16,7 @@ import os
 import html
 
 
-ROOT = r"C:\Users\ydai\Desktop\RT2\radonc-tutorial"
+ROOT = r"/Users/arthurdai/Desktop/radonc-tutorial/radonc-tutorial-main"
 
 TRIALS_PATH = os.path.join(ROOT, "data", "trials.json")
 
