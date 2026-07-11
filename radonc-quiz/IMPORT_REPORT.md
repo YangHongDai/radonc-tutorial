@@ -1,0 +1,252 @@
+# Quiz Import Report
+
+- Extracted readable files: 456
+- Imported questions: 1609
+- Duplicate questions removed: 772
+- Parsed candidates discarded for invalid/missing answers: 9
+
+## Extraction Stats
+
+- empty_doc: 3
+- empty_image-ocr: 381
+- empty_pdf: 4
+- empty_ppt: 12
+- extracted_doc: 334
+- extracted_pdf: 99
+- extracted_ppt: 13
+- extracted_sheet: 2
+- extracted_text: 8
+- skipped_.dcm: 130
+- skipped_.gif: 11
+- skipped_.numbers: 1
+- skipped_.pages: 2
+- skipped_.rar: 4
+- skipped_.tmp: 1
+- skipped_.zip: 1
+- skipped_note_folder: 140
+- skipped_temp: 33
+
+## Section Counts
+
+- 中樞神經系統 / 原發性 CNS 腫瘤: 75
+- 乳癌與消化道 / 乳癌: 84
+- 乳癌與消化道 / 消化道癌症: 375
+- 兒童與緩和 / 兒童放射腫瘤: 17
+- 兒童與緩和 / 緩和放射治療: 25
+- 基礎入門 / 放射物理學: 66
+- 基礎入門 / 放射生物學: 154
+- 泌尿與婦科 / 婦科腫瘤: 158
+- 泌尿與婦科 / 泌尿生殖癌: 245
+- 淋巴瘤、肉瘤與皮膚 / 淋巴瘤: 95
+- 淋巴瘤、肉瘤與皮膚 / 皮膚癌: 16
+- 淋巴瘤、肉瘤與皮膚 / 軟組織肉瘤: 42
+- 綜合題庫 / 未分類考題: 10
+- 頭頸與胸腔 / 肺癌: 104
+- 頭頸與胸腔 / 頭頸部癌症: 143
+
+## Source Files With Imported Questions
+
+- `2020考專準備/GI/GI 消化道考古題-歷年.doc`: 50
+- `2020考專準備/實際考題/物理生物舊題/台大生物考古分享/2018-生物-55題-2瑕.doc`: 39
+- `2020考專準備/實際考題/物理生物舊題/古老筆試題 (分領域)/Lung cancer.docx`: 38
+- `2020考專準備/GYN/2014 GYN all 北榮.doc`: 28
+- `2020考專準備/GYN/4-30-2018-GYN.doc`: 24
+- `2020考專準備/生物/2018輻射生物 recall (感謝許家容).doc`: 23
+- `2020考專準備/實際考題/物理生物舊題/古老筆試題 (分領域)/2011(100)_physics.pdf`: 21
+- `2020考專準備/GYN/2018 GYN 高醫.doc`: 20
+- `2020考專準備/GYN/74907_2018 GYNOK.doc`: 20
+- `2020考專準備/GU/2018 GU 3 中南.doc`: 18
+- `2020考專準備/GU/74025_URO 2018OK.doc`: 18
+- `2020考專準備/HN/5-30-2018-HN.docx`: 18
+- `2020考專準備/LUNG/Lung.pdf`: 18
+- `2020考專準備/GI/2013_GI_中榮.doc`: 17
+- `2020考專準備/GI/2016UGI_TMU.doc`: 17
+- `2022/111.ureter & testis 趙興隆_20220618.doc`: 17
+- `2020考專準備/GI/2018-2019GI/19/0-1.GI-2019-HCC.docx`: 16
+- `2020考專準備/HEMA_SARCOMA/104 HD CTCL.doc`: 16
+- `2020考專準備/HEMA_SARCOMA/NHL2.doc`: 16
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/103-breast and skin 劉岱瑋.doc`: 15
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014 breast and palliation.doc`: 15
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014-Skin,breasr, palliation(1).doc`: 15
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014_Breast, Skin, Benign disease , Palliative_.doc`: 15
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014_Breast, Skin, Benign disease , Palliative_高醫黃志仁.doc`: 15
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014_breast and palliation_高醫.doc`: 15
+- `2020考專準備/CNS/2014 專科考試-神經系統、小兒腫瘤-成大.doc`: 15
+- `2020考專準備/CNS/2014_CNS & Pediatric-成大陳海雯.doc`: 15
+- `2020考專準備/CNS/20150620CNS.doc`: 15
+- `2020考專準備/CNS/2017 脊髓神經系統腫瘤.doc`: 15
+- `2020考專準備/GI/2008 GI.doc`: 15
+- `2020考專準備/GI/2010_GI_嘉長陳文政.doc`: 15
+- `2020考專準備/GI/2013 GI_北榮.doc`: 15
+- `2020考專準備/GI/2013_GI_成大.doc`: 15
+- `2020考專準備/GI/2015_Gastric Ca.doc`: 15
+- `2020考專準備/GI/2018-2019GI/19/0-1.GI-Eso-2019.docx`: 15
+- `2020考專準備/GI/2019GI/14. 2019GI.docx`: 15
+- `2020考專準備/GU/106/2012 GU 嘉長 陳文政.doc`: 15
+- `2020考專準備/GU/74701_GUOK.docx`: 15
+- `2020考專準備/GYN/2014 TASTRO Gyn Test.doc`: 15
+- `2020考專準備/GYN/2014 VGHTPE GYN part 2.doc`: 15
+- `2020考專準備/GYN/2014_GYN_三總趙興隆.doc`: 15
+- `2020考專準備/GYN/2014_GYN_北榮顏上惠 part 2.doc`: 15
+- `2020考專準備/GYN/2017-ENDOMETRIAL-CANCER.docx`: 15
+- `2020考專準備/GYN/2017TASTRO考試-GYN.doc`: 15
+- `2020考專準備/HEMA_SARCOMA/hema(HD cutaneous).docx`: 15
+- `2020考專準備/HN/2015_Head and neck.doc`: 15
+- `2020考專準備/HN/2017 HN_Thyroid.doc`: 15
+- `2020考專準備/HN/2019HN_試題.doc`: 15
+- `2020考專準備/HN/H&N.doc`: 15
+- `2020考專準備/PED/2014專科考試-神經系統、小兒腫瘤-成大.doc`: 15
+- `2020考專準備/物理/2003 Physics.doc`: 15
+- `2021考題/110年甄審考前出題HNC科目.pdf`: 15
+- `2021考題/2021 北醫 GYN 15題.docx`: 15
+- `2021考題/2021 馬偕 H&N 15題.pdf`: 15
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2013 BrCa_三總.doc`: 14
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014_Breast-Skin- Benign disease,Palliation_北醫丘仲峰 (1).doc`: 14
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/2014_Skin,Breast, Benign disease- Palliation(2).doc`: 14
+- `2020考專準備/GI/103-01 GI 許文林.doc`: 14
+- `2020考專準備/GI/2014-GI/2014-GI.doc`: 14
+- `2020考專準備/GI/2014-GI.doc`: 14
+- `2020考專準備/GI/2018-2019GI/19/0-2018 GI_Benign 北.doc`: 14
+- `2020考專準備/GI/2018-食道胃良性-考題ok.doc`: 14
+- `2020考專準備/GU/106/2008 GU 考題.doc`: 14
+- `2020考專準備/GU/2014_GU.doc`: 14
+- `2020考專準備/GU/2014_GU_仁愛呂志得.doc`: 14
+- `2020考專準備/GYN/113683_2018 GYN 南OK.doc`: 14
+- `2020考專準備/GYN/2018 GYN 南(同高長).doc`: 14
+- `2020考專準備/GYN/2018 GYN 高長.doc`: 14
+- `2020考專準備/GYN/2019婦科.docx`: 14
+- `2020考專準備/GYN/GYN.docx`: 14
+- `2020考專準備/HEMA_SARCOMA/2016 NHL.doc`: 14
+- `2020考專準備/HN/2014-頭頸甲狀腺_.doc`: 14
+- `2020考專準備/HN/2014_Head &neck and Thyroid_雙和蔡若婷.doc`: 14
+- `2020考專準備/HN/2014專科醫師-頭頸甲狀腺_.doc`: 14
+- `2020考專準備/LUNG/2014 (奇美)lung.doc`: 14
+- `2020考專準備/LUNG/2014 Lung NTUH.doc`: 14
+- `2020考專準備/LUNG/2014 lung  奇美.doc`: 14
+- `2020考專準備/LUNG/2014_Chest, STS, RES_NTUH.doc`: 14
+- `2020考專準備/LUNG/2014_Chest, STS, RES_奇美.doc`: 14
+- `2020考專準備/生物/2014 biology 嘉義長庚/103_0_ 密嘉長Radiobiologyk(跟pdf檔長得不太一樣).doc`: 14
+- `2020考專準備/生物/2014 biology 馬偕.doc`: 14
+- `2020考專準備/生物/2014_Radiobiology all 陳裕仁.doc`: 14
+- `2020考專準備/生物/2014_Radiobiology board exam.doc`: 14
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/16574_乳癌15題.doc`: 13
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/Breast.doc`: 13
+- `2020考專準備/GI/2010_GI_高長方富民.doc`: 13
+- `2020考專準備/GI/2011 GI MMH_吳主任.doc`: 13
+- `2020考專準備/GI/2011_GI_MMH--1.doc`: 13
+- `2020考專準備/GU/2019 GU,生殖泌尿癌.doc`: 13
+- `2020考專準備/GYN/2014 VGHTPE GYN part 1.doc`: 13
+- `2020考專準備/GYN/2014_GYN_北榮顏上惠 part 1.doc`: 13
+- `2020考專準備/HEMA_SARCOMA/NHL_TSGH.doc`: 13
+- `2020考專準備/HN/2014_Head &neck and Thyroid_中榮林進清.doc`: 13
+- `2020考專準備/HN/2014_頭頸+甲狀腺_TCVGH.doc`: 13
+- `2020考專準備/HN/2014專科醫師考題_頭頸+甲狀腺_TCVGH.doc`: 13
+- `2020考專準備/HN/2014專科醫師考題_頭頸+甲狀腺_TCVGH中榮.doc`: 13
+- `2020考專準備/PED/小兒與良性.DOC`: 13
+- `2020考專準備/生物/2015 生物2.doc`: 13
+- `2020考專準備/生物/2019生物.docx`: 13
+- `2021考題/110年放射腫瘤科專科醫師甄審出題-台大-bladder.pdf`: 13
+- `2021考題/2021 高醫 RES 15題.doc`: 13
+- `2022/2022 北榮 Bladder Cancer.docx`: 13
+- `2020考專準備/CNS/2-30-2018-CNS.docx`: 12
+- `2020考專準備/GI/2006-GI.doc`: 12
+- `2020考專準備/GI/2013 GI 台大.doc`: 12
+- `2020考專準備/GU/106/2010 GU MMH 吳主任.doc`: 12
+- `2020考專準備/GU/106/2010 GU吳主任考題.doc`: 12
+- `2020考專準備/GU/2019-北區__ＧＵ.doc`: 12
+- `2020考專準備/HN/2018 HN - 彰基 2018題目有出現類似的但被修改過細節.docx`: 12
+- `2020考專準備/HN/73932_2018 HNC+thyroidok.docx`: 12
+- `2020考專準備/實際考題/物理生物舊題/台大生物考古分享/2015_Radiobiology_II.doc`: 12
+- `2020考專準備/生物/2018 輻射生物學 中南.doc`: 12
+- `2020考專準備/生物/99167_2018 輻射生物學 中南已印OK.doc`: 12
+- `2021考題/2021膽管.doc`: 12
+- `2022/111.stomach & esophagus 林昆澤_20220624.doc`: 12
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/6-30-2018-乳癌.docx`: 11
+- `2020考專準備/GI/2018-2019GI/19/0-1.GI-Rectal-Anal.doc`: 11
+- `2020考專準備/GI/2019GI/10. Rectal, Anal.doc`: 11
+- `2020考專準備/GU/2017 GU 02.doc`: 11
+- `2020考專準備/LUNG/2019 LUNG-Med-戒菸護一生11.doc`: 11
+- `2020考專準備/LUNG/75319_2018 lungOK.pdf`: 11
+- `2020考專準備/生物/2012_Radiobiology-board exam-by Yu-Jen Chen_Final-Chinese.doc`: 11
+- `2020考專準備/生物/2014 biology 陳尚文.doc`: 11
+- `2021考題/2021 花慈 大腸直腸癌 12題.doc`: 11
+- `2020考專準備/CNS/104-CNS.doc`: 10
+- `2020考專準備/GI/2010 GI 台大成家憲.doc`: 10
+- `2020考專準備/GI/2018-2019GI/0-2018 GI - Low GI 北.docx`: 10
+- `2020考專準備/GI/85383_2018 pancreasOK.docx`: 10
+- `2020考專準備/GU/20150812 GU.docx`: 10
+- `2020考專準備/GU/2018 GU 2 中區 ver A.docx`: 10
+- `2020考專準備/HN/2018 HN - 10題 北.doc`: 10
+- `2020考專準備/HN/76345_頭頸癌10題OK.doc`: 10
+- `2020考專準備/LUNG/2017 chest.docx`: 10
+- `2020考專準備/LUNG/2018 Chest 成大.doc`: 10
+- `2020考專準備/實際考題/物理生物舊題/台大生物考古分享/2017-生物-30題.docx`: 10
+- `2020考專準備/生物/106672_2017-Biology已印OK.doc`: 10
+- `2020考專準備/生物/2013 Biology 密.doc`: 10
+- `2020考專準備/生物/2013 TASTRO radiobiology exam Eric Shen.doc`: 10
+- `2020考專準備/生物/2017-Biology已印.doc`: 10
+- `2021考題/2021 成大 NPC 10題.doc`: 10
+- `2021考題/2021_新光GU_考古重複率高請小心.pdf`: 10
+- `2022/2022 神經腫瘤 中國.pdf`: 10
+- `2022/2022 高長 頭頸癌.docx`: 10
+- `2020考專準備/GU/2014 CGMH Fang GU.doc`: 9
+- `2020考專準備/GU/2014_GU_高長方富民.doc`: 9
+- `2020考專準備/GU/2018 GU 2 中區 ver B.docx`: 9
+- `2020考專準備/HEMA_SARCOMA/2019 sarcoma 新.doc`: 9
+- `2020考專準備/HEMA_SARCOMA/2019 sarcoma-STrek9-星艦奇航9.doc`: 9
+- `2020考專準備/實際考題/物理生物舊題/古老筆試題 (分領域)/Pediatric.docx`: 9
+- `2020考專準備/物理/2011 Physics.doc`: 9
+- `2020考專準備/物理/2011 鄭秀成_物理.doc`: 9
+- `2021考題/2021_高長_Bone.pdf`: 9
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/Frank生日禮物!-Breast.doc`: 8
+- `2020考專準備/GI/2014 Upper GI 新光.doc`: 8
+- `2020考專準備/GI/2014-GI/2014 Upper GI 新光.doc`: 8
+- `2020考專準備/GI/2014_GI_新光季匡華.doc`: 8
+- `2020考專準備/GU/2019 GU 考題.docx`: 8
+- `2020考專準備/LUNG/7-30-2018-LungMediastinum.docx`: 8
+- `2020考專準備/生物/2013 Biology KSVGH.docx`: 8
+- `2021考題/110年放射腫瘤科專科醫師甄審出題乳房良性病灶放射治療.doc`: 8
+- `2021考題/2020 生物考後修正版 (修正有出但被改過的一題).doc`: 8
+- `2021考題/2020-GU題目新光13題.docx`: 8
+- `2020考專準備/BREAST_PALLIATION_SKIN_BENIGN/Frank生日禮物-2-良性.doc`: 6
+- `2020考專準備/GI/2018-2019GI/0-2018 GI - Liver 奇美.doc`: 6
+- `2020考專準備/GI/74888_Liver 南區OK.doc`: 6
+- `2020考專準備/GU/2017 GU 01.doc`: 6
+- `2020考專準備/GU/2018 GU 1 中區.docx`: 6
+- `2020考專準備/實際考題/物理生物舊題/台大生物考古分享/2017-Biology 2.doc`: 6
+- `2020考專準備/生物/2017 Biology 北榮.doc`: 6
+- `2021考題/2021 雙和 Benign.doc`: 6
+- `2020考專準備/GU/106/2012 GU 北醫 邱仲峯.doc`: 5
+- `2020考專準備/GYN/2018 GYN 北 (無詳解).docx`: 5
+- `2020考專準備/HEMA_SARCOMA/7-30-2018-HES.docx`: 5
+- `2020考專準備/LUNG/103年甄審試題 lung(奇美).docx`: 5
+- `2020考專準備/PED/2-30-2018-PED.docx`: 5
+- `2020考專準備/物理/2011 選取的筆試題目.docx`: 5
+- `2020考專準備/生物/2018 Radiobiology 北榮2.doc`: 5
+- `2021考題/2021 中榮 breast 9題.doc`: 5
+- `2021考題/2021_高長_Ped.pdf`: 5
+- `2020考專準備/CNS/2014 Pediatic & CNS.doc`: 4
+- `2020考專準備/GI/2018-2019GI/19/0-1.GI.docx`: 4
+- `2020考專準備/GI/2019GI/5. GI.docx`: 4
+- `2020考專準備/GYN/Gyn.doc`: 4
+- `2020考專準備/PED/2014 Pediatic & CNS 成大final版.doc`: 4
+- `2020考專準備/PED/2014 Pediatic & CNS.doc`: 4
+- `2020考專準備/PED/2019 pediatric-PCN5-眼球中央電視台幼幼班5.doc`: 4
+- `2021 生物 Recall.docx`: 4
+- `2021考題/2021 奇美 Liver 10題.docx`: 4
+- `2021考題/新光-GU-4題.docx`: 4
+- `2020考專準備/GI/2012 GI.doc`: 3
+- `2020考專準備/GI/2017_Esophagus.doc`: 3
+- `2020考專準備/生物/2014 biology Fructose 完整.doc`: 3
+- `2020考專準備/生物/2018 Radiobiology 北榮1.doc`: 3
+- `2021考題/2021 中榮 benign 3題.doc`: 3
+- `2020考專準備/物理/2017-物理-(Chap13計算題) (純) done.docx`: 2
+- `2020考專準備/物理/2017-物理-(Chap13計算題) (純).docx`: 2
+- `2020考專準備/生物/高醫 2019 輻生 chap8,9 考題.doc`: 2
+- `2021考題/2021 雙和 Palliative.doc`: 2
+- `2021考題/2021中山 輻生.doc`: 2
+- `2020考專準備/實際考題/物理生物舊題/2020放射師考題/109100_5309_第二次放射治療原理.pdf`: 1
+- `2020考專準備/實際考題/物理生物舊題/古老筆試題 (分領域)/CNS_completed.docx`: 1
+- `2020考專準備/實際考題/物理生物舊題/古老筆試題 (分領域)/Sarcoma_completed.docx`: 1
+- `2021考題/110放射師考題/109-2/109100_55_放射線治療原理與技術.pdf`: 1
+- `2021考題/110放射師考題/110-1/110020_22_醫學物理學與輻射安全.pdf`: 1
