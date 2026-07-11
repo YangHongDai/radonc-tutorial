@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Acronyms &amp; Lingo — Rad Onc Tutorial</title>
+  <title>Acronyms &amp; Lingo — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-lingo">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">

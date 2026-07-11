@@ -1,0 +1,13 @@
+評估治療計畫方法
+
+Coverage (DVH)
+=> GTV/CTV-H V95-100: 97-100% (95-100% prescribed dose cover 97-100% GTV/CTV-H); 
+   PTV V95-100:93-97% (95-100% prescribed dose cover 93-97% PTV)
+=> CI, HI 接近1好 (尤其SBRT)
+
+Cold Spot / Hot Spot (看每一片CT)
+=>PTV內不要有<90-93% dose的地方 / PTV外不要有2cc以上 >107-110%的地方
+
+符合Normal Organ Constrain
+
+以上若衝突 優先順序 Critical organ => coverage => 其他normal organ

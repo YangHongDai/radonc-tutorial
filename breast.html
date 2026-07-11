@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Breast Cancer — Rad Onc Tutorial</title>
+  <title>Breast Cancer — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-breast">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -718,9 +738,9 @@
               <tr><th scope="col">Trial</th><th scope="col">治療設計</th><th scope="col">Any IBTR</th><th scope="col">Invasive recurrence</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>NSABP B-17, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，90% 加量。</td><td><span class="highlight">35% → 20%</span></td><td><span class="highlight">20% → 10%</span></td></tr>
-              <tr><td><strong>SweDCIS, 20-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，no 加量。</td><td><span class="highlight">32% → 20%</span></td><td>20% → 15%</td></tr>
-              <tr><td><strong>EORTC 10853, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，少數 加量。</td><td><span class="highlight">31% → 18%</span></td><td>16% → 10%</td></tr>
+              <tr><td><strong>NSABP B-17, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，90% boost。</td><td><span class="highlight">35% → 20%</span></td><td><span class="highlight">20% → 10%</span></td></tr>
+              <tr><td><strong>SweDCIS, 20-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，no boost。</td><td><span class="highlight">32% → 20%</span></td><td>20% → 15%</td></tr>
+              <tr><td><strong>EORTC 10853, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，少數 boost。</td><td><span class="highlight">31% → 18%</span></td><td>16% → 10%</td></tr>
               <tr><td><strong>UK/ANZ, 12-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI；± tamoxifen。</td><td><span class="highlight">20% → 7%</span></td><td>9% → 3%</td></tr>
             </tbody>
           </table>
@@ -802,27 +822,27 @@
         <p>早期乳癌接受保乳手術後，輔助 RT 可大幅降低同側乳房復發。<strong>NSABP B-06</strong> 納入 stage I–II breast cancer，隨機分派 total 乳房切除術 + ALND、乳房腫瘤切除術 + ALND、乳房腫瘤切除術 + ALND + RT。20 年結果顯示，<span class="highlight">RT 將 ipsilateral breast recurrence 從 39% 降到 14%</span>，且不受 nodal status 影響；三組 DFS 與 OS 沒有顯著差異。</p>
         <ul>
           <li><strong>EBCTCG meta-analysis</strong>：納入 17 個 試驗、10,801 位病人，顯示 <span class="highlight">BCS 後 RT 將 10 年 recurrence 從 35% 降到 19%</span>。整體概念是：<span class="highlight">每避免 4 個 10 年內 recurrence，約可避免 1 個 15 年 乳癌死亡</span>。</li>
-          <li><strong>現代 recurrence risk</strong>：過去 BCS alone 復發約 30%，加 RT 降至約 15%；現代大約是無 RT 15%、有 RT 8%、RT + ET 2–3%。原因包括 mammographic 篩檢、image-guided surgery、adequate margins、radiation 加量、以及更好的 全身治療。</li>
-          <li><span class="highlight"><strong>Tumor bed 加量</strong>：可降低 IBTR，但代價是 fibrosis 增加</span>。</li>
-          <li><strong>EORTC 22881</strong>：切緣陰性的病人 中，50 Gy/25 Fx 後加 15–16 Gy 加量，可將 <span class="highlight">10 年 LR 從 10% 降到 6%，20 年 LR 從 16% 降到 12%</span>；但 severe fibrosis 也增加。</li>
+          <li><strong>現代 recurrence risk</strong>：過去 BCS alone 復發約 30%，加 RT 降至約 15%；現代大約是無 RT 15%、有 RT 8%、RT + ET 2–3%。原因包括 mammographic 篩檢、image-guided surgery、adequate margins、radiation boost、以及更好的 全身治療。</li>
+          <li><span class="highlight"><strong>Tumor bed boost</strong>：可降低 IBTR，但代價是 fibrosis 增加</span>。</li>
+          <li><strong>EORTC 22881</strong>：切緣陰性的病人 中，50 Gy/25 Fx 後加 15–16 Gy boost，可將 <span class="highlight">10 年 LR 從 10% 降到 6%，20 年 LR 從 16% 降到 12%</span>；但 severe fibrosis 也增加。</li>
           <li><strong>Boost 效益 較大的族群</strong>：<span class="highlight">age &lt;50、high grade、adjacent DCIS</span>。</li>
         </ul>
         <div class="table-wrap">
           <table class="oncology-table decision-table">
-            <caption>Tumor bed 加量 建議情境</caption>
+            <caption>Tumor bed boost 建議情境</caption>
             <thead>
               <tr><th scope="col">情境</th><th scope="col">Boost 建議</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>年齡 ≤50</strong></td><td>建議或強烈考慮 加量。</td></tr>
-              <tr><td><strong>年齡 51–70 且 high grade</strong></td><td>建議或強烈考慮 加量。</td></tr>
-              <tr><td><strong>Positive margin</strong></td><td>應優先 re-excision；若無法 re-excision，可考慮 加量。</td></tr>
-              <tr><td><strong>年輕、high grade、TNBC、HER2+、淋巴結陽性、接受 化學治療</strong></td><td>傾向 加量。</td></tr>
-              <tr><td><strong>&gt;70、HR+、low/intermediate grade、margin &gt;2 mm</strong></td><td>通常可不加 加量。</td></tr>
+              <tr><td><strong>年齡 ≤50</strong></td><td>建議或強烈考慮 boost。</td></tr>
+              <tr><td><strong>年齡 51–70 且 high grade</strong></td><td>建議或強烈考慮 boost。</td></tr>
+              <tr><td><strong>Positive margin</strong></td><td>應優先 re-excision；若無法 re-excision，可考慮 boost。</td></tr>
+              <tr><td><strong>年輕、high grade、TNBC、HER2+、淋巴結陽性、接受 化學治療</strong></td><td>傾向 boost。</td></tr>
+              <tr><td><strong>&gt;70、HR+、low/intermediate grade、margin &gt;2 mm</strong></td><td>通常可不加 boost。</td></tr>
             </tbody>
           </table>
         </div>
-        <p>常見 sequential 加量 劑量可用 <span class="highlight"><strong>10 Gy/4 Fx</strong> 或 <strong>12.5 Gy/5 Fx</strong></span>。若使用 simultaneous integrated 加量, SIB，可在 15 次 內完成 WBI + 加量。</p>
+        <p>常見 sequential boost 劑量可用 <span class="highlight"><strong>10 Gy/4 Fx</strong> 或 <strong>12.5 Gy/5 Fx</strong></span>。若使用 simultaneous integrated boost, SIB，可在 15 次 內完成 WBI + boost。</p>
         
             
       </div>
@@ -956,7 +976,7 @@
           <li><strong>CALGB 9343</strong>：納入 ≥70 歲、stage I、ER+，乳房腫瘤切除術 後 隨機分派 tamoxifen ± RT；RT 將 <span class="highlight">10 年 LRR 從 10% 降到 2%</span>，但 OS、DFS、乳房切除術-free survival 無差異。</li>
           <li><strong>PRIME II</strong>：納入 ≥65 歲、stage I、ER/PR+、tumor ≤3 cm、切緣陰性；<span class="highlight">10 年 LR 約為 ET alone 10% vs ET + RT 1%</span>，同樣沒有 OS 效益。</li>
           <li><strong>臨床重點</strong>：<span class="highlight">省略 RT 不是因為 RT 沒有效</span>，而是因為在高齡、低風險、HR+、願意吃 ET 的病人中，局部復發 效益 可能不轉化成 OS 效益。</li>
-          <li><strong>通常不適合省略 RT</strong>：<span class="highlight">年輕、high grade、TNBC、HER2+、切緣陽性、需要 加量 的族群</span>。</li>
+          <li><strong>通常不適合省略 RT</strong>：<span class="highlight">年輕、high grade、TNBC、HER2+、切緣陽性、需要 boost 的族群</span>。</li>
         </ul>
         
             
@@ -1374,8 +1394,8 @@
       >
         
         <ul>
-          <li><strong>SIB</strong>：可以把 WBI + 加量 從傳統 15–16 Fx 加 4–5 Fx 加量，<span class="highlight">縮短為 3 週完成</span>。</li>
-          <li><strong>RTOG 1005</strong>：比較 sequential 加量 vs WBI 40 Gy/15 Fx + SIB to 48 Gy/15 Fx，結果達到 不劣於ity，<span class="highlight">5 年 IBTR 約 2.0% vs 2.2%</span>，毒性 與 美容結果 也沒有明顯差異。</li>
+          <li><strong>SIB</strong>：可以把 WBI + boost 從傳統 15–16 Fx 加 4–5 Fx boost，<span class="highlight">縮短為 3 週完成</span>。</li>
+          <li><strong>RTOG 1005</strong>：比較 sequential boost vs WBI 40 Gy/15 Fx + SIB to 48 Gy/15 Fx，結果達到 不劣於ity，<span class="highlight">5 年 IBTR 約 2.0% vs 2.2%</span>，毒性 與 美容結果 也沒有明顯差異。</li>
           <li><strong>UK FAST</strong>：支持 <span class="highlight">28.5 Gy/5 Fx weekly 可用於低風險族群</span>，而 30 Gy/5 Fx 毒性 較高。</li>
           <li><strong>UK FAST Forward</strong>：<span class="highlight">26 Gy/5 Fx daily over 1 week 在 局部控制 上 不劣於</span>，且 毒性 可接受；27 Gy/5 Fx 雖 局部控制 也可，但 正常組織毒性 較高，因此較不偏好。</li>
         </ul>
@@ -1481,7 +1501,7 @@
               <tr><td><strong>DCIS after 乳房切除術</strong></td><td><span class="highlight">通常 觀察，即使 近切緣／切緣陽性；乳房切除術 時做 SLNB</span>。</td></tr>
               <tr><td><strong>Early-stage invasive after BCS</strong></td><td><span class="highlight">WBI 標準；特定 低風險 可 PBI</span>。</td></tr>
               <tr><td><strong>Elderly 低風險 HR+ T1N0 after BCS</strong></td><td><span class="highlight">可省略 RT，但需 ET；IBTR 約 10% 降至 1–2% 是 RT 效益</span>。</td></tr>
-              <tr><td><strong>年輕、高 grade、切緣陽性、adjacent DCIS</strong></td><td>考慮 加量。</td></tr>
+              <tr><td><strong>年輕、高 grade、切緣陽性、adjacent DCIS</strong></td><td>考慮 boost。</td></tr>
               <tr><td><strong>Limited positive SLN after BCS</strong></td><td><span class="highlight">多可省略 completion ALND</span>；依 Z0011/AMAROS context 考慮 tangents/RNI。</td></tr>
               <tr><td><strong>Node-positive 或 高風險 淋巴結陰性</strong></td><td><span class="highlight">考慮 RNI</span>。</td></tr>
               <tr><td><strong>Mastectomy T3–T4、≥4 nodes、切緣陽性</strong></td><td><span class="highlight">PMRT + RNI</span>。</td></tr>
@@ -1491,7 +1511,7 @@
               <tr><td><strong>cN1 → ypN0 after NAC</strong></td><td><span class="highlight">B-51 suggests omission may be safe；臨床實務仍在演變</span>。</td></tr>
               <tr><td><strong>Skin involvement / inflammatory disease / 前方切緣陽性</strong></td><td>Selective bolus。</td></tr>
               <tr><td><strong>Low-risk WBI</strong></td><td><span class="highlight">40 Gy/15 Fx、42.56 Gy/16 Fx、或 26 Gy/5 Fx</span>。</td></tr>
-              <tr><td><strong>WBI + 加量</strong></td><td><span class="highlight">Sequential 10 Gy/4 Fx、12.5 Gy/5 Fx，或 SIB 48 Gy/15 Fx</span>。</td></tr>
+              <tr><td><strong>WBI + boost</strong></td><td><span class="highlight">Sequential 10 Gy/4 Fx、12.5 Gy/5 Fx，或 SIB 48 Gy/15 Fx</span>。</td></tr>
               <tr><td><strong>Suitable PBI</strong></td><td>30 Gy/5 Fx、40 Gy/15 Fx mini-tangents 等。</td></tr>
               <tr><td><strong>Prior WBI 後同側復發</strong></td><td><span class="highlight">Selected cases 可 部分乳房 再照射 45 Gy/30 Fx BID</span>。</td></tr>
             </tbody>
@@ -1572,7 +1592,7 @@
           <li><strong>DCIS</strong>：<span class="highlight">DCIS 乳房腫瘤切除術 後 RT 可使 局部復發 風險約減半</span>，包括 invasive recurrence，但沒有 OS 效益。即使 低風險 DCIS，復發風險仍會隨時間累積，因此省略 RT 必須是 個人化決策。<span class="highlight">Mastectomy 後 DCIS 通常不需 PMRT</span>。</li>
           <li><strong>Early-stage 侵襲性乳癌</strong>：<span class="highlight">接受 BCS 後，RT 是降低 IBTR 的核心工具</span>。Boost 可進一步降低局部復發，尤其年輕與 高風險 病人，但會增加 fibrosis。Elderly 低風險 HR+ 病人可以考慮省略 RT，但必須理解 <span class="highlight">RT 仍能把 10 年 IBTR 從約 10% 降到 1–2%</span>。</li>
           <li><strong>Locally advanced 或 高風險 breast cancer</strong>：<span class="highlight">PMRT + RNI 可改善 LRR</span>，且在 淋巴結陽性、T3–T4、skin/pectoral fascia invasion、臨床分期 III 等族群可改善 OS。DBCG 82b/82c、British Columbia、EBCTCG 是 PMRT/RNI 的核心證據。</li>
-          <li><strong>現代乳癌放療趨勢</strong>：<span class="highlight">40 Gy/15 Fx 或 42.56 Gy/16 Fx 已是成熟方案</span>；<span class="highlight">26 Gy/5 Fx 有 FAST Forward 支持</span>；SIB 可 3 週完成 WBI + 加量；PBI 適合 特定 低風險 病人；特定 ipsilateral recurrence 可考慮 部分乳房 再照射。</li>
+          <li><strong>現代乳癌放療趨勢</strong>：<span class="highlight">40 Gy/15 Fx 或 42.56 Gy/16 Fx 已是成熟方案</span>；<span class="highlight">26 Gy/5 Fx 有 FAST Forward 支持</span>；SIB 可 3 週完成 WBI + boost；PBI 適合 特定 低風險 病人；特定 ipsilateral recurrence 可考慮 部分乳房 再照射。</li>
         </ul>
         
             

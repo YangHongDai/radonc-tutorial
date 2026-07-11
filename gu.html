@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Genitourinary Cancers — Rad Onc Tutorial</title>
+  <title>Genitourinary Cancers — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-gu">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -650,10 +670,10 @@
           <li><strong><span class="highlight">同步化學治療</span></strong>：常用 <span class="highlight">5-FU＋絲裂黴素 C（MMC）</span>、單用順鉑、低劑量吉西他濱。</li>
           <li><strong>5-FU／絲裂黴素 C（MMC） 方案</strong>：5-FU 500 mg/m² 第 1–5 天與第 16–20 天，加 MMC 12 mg/m² 第 1 天。</li>
           <li><strong><span class="highlight">放療劑量</span></strong>：<span class="highlight">64 Gy／32 次 或 55 Gy／20 次</span>。</li>
-          <li><strong>照射範圍</strong>：通常照 全膀胱；部分膀胱加量 可考慮用於達成 腸道劑量限制，但 BC2001 顯示全膀胱放射治療 與 部分膀胱加量 在治療結果與毒性上沒有明顯差異。</li>
+          <li><strong>照射範圍</strong>：通常照 全膀胱；部分膀胱boost 可考慮用於達成 腸道劑量限制，但 BC2001 顯示全膀胱放射治療 與 部分膀胱boost 在治療結果與毒性上沒有明顯差異。</li>
           <li><strong>選擇性淋巴結照射</strong>：具爭議，依機構而異；若 高風險，例如小細胞癌，或 cN+，可考慮。</li>
-          <li><strong>小骨盆照野</strong>：包含 遠端內髂／外髂、薦前、膀胱周圍與閉孔淋巴結；若 N+，可加 總髂淋巴結 並 對肉眼可見淋巴結加量，視 腸道耐受劑量 調整。</li>
-          <li><strong><span class="highlight">治療中期膀胱鏡</span></strong>：對 可手術病人，可考慮在傳統分割放射治療 至 <span class="highlight">40–45 Gy</span> 後做 再分期膀胱鏡：若 cT0/Ta/Tis，繼續 加量至 64 Gy；若 ≥T1，考慮 救援性膀胱切除術。非手術候選人通常不需要 治療中期膀胱鏡。</li>
+          <li><strong>小骨盆照野</strong>：包含 遠端內髂／外髂、薦前、膀胱周圍與閉孔淋巴結；若 N+，可加 總髂淋巴結 並 對肉眼可見淋巴結boost，視 腸道耐受劑量 調整。</li>
+          <li><strong><span class="highlight">治療中期膀胱鏡</span></strong>：對 可手術病人，可考慮在傳統分割放射治療 至 <span class="highlight">40–45 Gy</span> 後做 再分期膀胱鏡：若 cT0/Ta/Tis，繼續 boost至 64 Gy；若 ≥T1，考慮 救援性膀胱切除術。非手術候選人通常不需要 治療中期膀胱鏡。</li>
           <li><strong><span class="highlight">局部晚期／轉移性第一線治療</span></strong>：<span class="highlight">恩福妥單抗維多汀＋帕博利珠單抗</span> 每 3 週一次。恩福妥單抗維多汀（EV）是 針對 nectin-4 的抗體藥物複合體（ADC）；帕博利珠單抗 是 PD-1 抑制劑。若為局部晚期疾病，可在 2–3 個療程 後評估 治療反應，再重新考慮 根治性局部治療。</li>
         </ul>
         
@@ -722,9 +742,9 @@
           <li><strong><span class="highlight">RTOG 整合分析</span></strong>：Mak et al. JCO 2014 整合 6 個 RTOG 膀胱保留研究，共 468 位 MIBC 病人。<span class="highlight">5 年整體存活（OS） 57%、疾病特異性存活（DSS） 71%</span>、肌層侵犯性局部失敗 13%、非肌層侵犯性局部失敗 31%、遠端轉移 31%；10 年整體存活（OS） 36%、疾病特異性存活（DSS） 65%。<span class="highlight">晚期第 3 級以上泌尿生殖毒性 6%，腸胃道毒性 2%</span>。</li>
           <li><strong><span class="highlight">RTOG 整合分析結論</span></strong>：長期結果可與根除性膀胱切除術相當，根治性同步放化療 是可行替代方案，尤其適合 高齡病人 或 體能狀態不佳的病人。</li>
           <li><strong>RTOG 8903</strong>：T2–T4a NX M0 膀胱癌，2 個療程 MCV → 39.6 Gy 同步順鉑 對比 無 術前輔助治療 直接 39.6 Gy 同步順鉑。5 年整體存活（OS） 48% 對比 49%，遠端轉移 33% 對比 39%，5 年 無膀胱切除存活 36% 對比 40%，均無顯著改善。</li>
-          <li><strong><span class="highlight">BC2001</span></strong>：T2–T4a N0 M0，2×2 因子設計 比較 單獨放射治療對比放射治療（RT）＋同步 5-FU／絲裂黴素 C（MMC），以及 全膀胱放射治療對比 部分膀胱加量。放射治療（RT）可用 64 Gy／32 次 或 55 Gy／20 次；5-FU 500 mg/m² 第 1–5 次與第 16–20 次，MMC 12 mg/m² 第 1 天。</li>
-          <li><strong><span class="highlight">BC2001 結果</span></strong>：同步化學治療（CHT） 改善 <span class="highlight">2 年局部區域無復發存活（LRFS），67% 對比 54%</span>，p=0.03；<span class="highlight">5 年膀胱切除率 15% 對比 22%</span>，p=0.034。全膀胱照射與部分膀胱加量 無顯著 局部區域無復發存活（LRFS） 差異，也沒有降低 第 3–4 級急性或晚期毒性。</li>
-          <li><strong><span class="highlight">BC2001 結論</span></strong>：放射治療（RT）加 同步 5-FU／絲裂黴素 C（MMC） 是<span class="highlight">標準 膀胱保留方案</span>；部分膀胱加量 不會明顯改善 治療結果 或 毒性。</li>
+          <li><strong><span class="highlight">BC2001</span></strong>：T2–T4a N0 M0，2×2 因子設計 比較 單獨放射治療對比放射治療（RT）＋同步 5-FU／絲裂黴素 C（MMC），以及 全膀胱放射治療對比 部分膀胱boost。放射治療（RT）可用 64 Gy／32 次 或 55 Gy／20 次；5-FU 500 mg/m² 第 1–5 次與第 16–20 次，MMC 12 mg/m² 第 1 天。</li>
+          <li><strong><span class="highlight">BC2001 結果</span></strong>：同步化學治療（CHT） 改善 <span class="highlight">2 年局部區域無復發存活（LRFS），67% 對比 54%</span>，p=0.03；<span class="highlight">5 年膀胱切除率 15% 對比 22%</span>，p=0.034。全膀胱照射與部分膀胱boost 無顯著 局部區域無復發存活（LRFS） 差異，也沒有降低 第 3–4 級急性或晚期毒性。</li>
+          <li><strong><span class="highlight">BC2001 結論</span></strong>：放射治療（RT）加 同步 5-FU／絲裂黴素 C（MMC） 是<span class="highlight">標準 膀胱保留方案</span>；部分膀胱boost 不會明顯改善 治療結果 或 毒性。</li>
           <li><strong><span class="highlight">RTOG 0712</span></strong>：第二期試驗，70 位 MIBC，FCT 組 使用 5-FU／順鉑＋每日兩次放射治療，總劑量 骨盆 44.8 Gy、膀胱 52.3 Gy、腫瘤 64.3 Gy；GD 組 使用 吉西他濱＋每日一次放射治療，總劑量 骨盆 44 Gy、膀胱 52 Gy、腫瘤 64 Gy。</li>
           <li><strong><span class="highlight">RTOG 0712 治療結果</span></strong>：3 年無遠端轉移存活（DMFS） FCT 組 78%、GD 組 84%；保留膀胱的無遠端轉移存活（DMFS） 67% 對比 72%。此試驗不是直接比較兩組，而是顯示 5-FU／順鉑 與 吉西他濱 都可作同步放化療選項。</li>
         </ul>
@@ -978,8 +998,8 @@
             <thead><tr><th scope="col">分期</th><th scope="col">治療選項</th></tr></thead>
             <tbody>
               <tr><td><strong><span class="highlight">第一期</span></strong></td><td><span class="highlight">優先採主動監測</span>；或 卡鉑 AUC 7 ×1–2 個療程；或 <span class="highlight">PAS 放射治療 20 Gy／10 次</span>。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td><span class="highlight">改良狗腿照野放射治療 20 Gy／10 次＋加量至 30 Gy</span>。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 B</span></strong></td><td>優先：<span class="highlight">EP ×4 或 BEP ×3</span>；特定非巨大淋巴結 ≤3 cm 可 改良狗腿照野放射治療 20 Gy＋加量至 30–36 Gy。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td><span class="highlight">改良狗腿照野放射治療 20 Gy／10 次＋boost至 30 Gy</span>。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 B</span></strong></td><td>優先：<span class="highlight">EP ×4 或 BEP ×3</span>；特定非巨大淋巴結 ≤3 cm 可 改良狗腿照野放射治療 20 Gy＋boost至 30–36 Gy。</td></tr>
               <tr><td><strong><span class="highlight">第二期 C</span></strong></td><td>EP ×4 或 BEP ×3；放射治療或手術多用於救援。</td></tr>
               <tr><td><strong><span class="highlight">第三期</span></strong></td><td>EP ×4 或 BEP ×3；放射治療或手術多用於救援。</td></tr>
             </tbody>
@@ -989,12 +1009,12 @@
           <li><strong>臨床重點</strong>：第一期精原細胞瘤 多數不會復發，因此 優先採主動監測；第二期 A 可使用放射治療；第二期 B 以上，尤其 巨大淋巴結 或 &gt;3 cm，化療通常更合適。</li>
           <li><strong><span class="highlight">第一期放射治療</span></strong>：20 Gy／10 次 至 主動脈旁條帶照野（PAS）。三維治療計畫 的 上／下界 是 T11 下緣 到 L5 下緣，10 cm 寬的主動脈旁條帶，涵蓋 椎體橫突。</li>
           <li><strong><span class="highlight">腎臟劑量限制</span></strong>：<span class="highlight">D50% ≤8 Gy</span>；若只有單側腎，則 <span class="highlight">D15% ≤20 Gy</span>。</li>
-          <li><strong><span class="highlight">第二期放射治療</span></strong>：20 Gy／10 次 至 改良狗腿照野 → 加量至 30–36 Gy。若淋巴結 1–2 cm，加量 10 Gy，總劑量 30 Gy；若淋巴結 2–3 cm，加量 16 Gy，總劑量 36 Gy。</li>
+          <li><strong><span class="highlight">第二期放射治療</span></strong>：20 Gy／10 次 至 改良狗腿照野 → boost至 30–36 Gy。若淋巴結 1–2 cm，boost 10 Gy，總劑量 30 Gy；若淋巴結 2–3 cm，boost 16 Gy，總劑量 36 Gy。</li>
           <li><strong>改良狗腿照野</strong>：包含 主動脈旁與同側髂淋巴結，範圍從 T11 下緣 到 髖臼上緣。治療時需保護 腎臟，並使用 蛤殼式鉛罩 保護 對側睪丸。</li>
           <li><strong>第一期勾畫</strong>：右側精原細胞瘤 應包含 腔靜脈旁、腔靜脈前、主動脈與腔靜脈間 淋巴結；左側至少包含 主動脈外側、主動脈前 淋巴結。</li>
           <li><strong>依血管勾畫</strong>：下腔靜脈（IVC）與主動脈 從 腎臟上緣 下方 勾畫 到 血管終點，下腔靜脈（IVC）外擴 1.2 cm、主動脈 擴 1.9 cm，並從 骨骼／腸道 中裁切。</li>
           <li><strong>第二期勾畫</strong>：再 勾畫 同側總髂、外髂與近端內髂血管 到 髖臼上緣，髂血管 擴 1.2 cm。</li>
-          <li><strong><span class="highlight">加量體積</span></strong>：<span class="highlight">肉眼腫瘤體積（GTV）外擴 8 mm 成臨床靶體積（CTV）</span>，再外擴 5–7 mm 成計畫靶體積（PTV）。</li>
+          <li><strong><span class="highlight">boost體積</span></strong>：<span class="highlight">肉眼腫瘤體積（GTV）外擴 8 mm 成臨床靶體積（CTV）</span>，再外擴 5–7 mm 成計畫靶體積（PTV）。</li>
         </ul>
         
             
@@ -1167,8 +1187,8 @@
               <tr><td><strong>禁忌</strong></td><td>經陰囊切片／經陰囊睪丸切除術。</td></tr>
               <tr><td><strong><span class="highlight">第一期精原細胞瘤</span></strong></td><td><span class="highlight">優先採主動監測</span>；或 卡鉑 AUC 7 ×1–2；或 PAS 放射治療 20 Gy／10 次。</td></tr>
               <tr><td><strong>第一期放射治療照野</strong></td><td><span class="highlight">PAS，T11–L5；20 Gy／10 次</span>。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td>改良狗腿照野放射治療 20 Gy＋加量至 30 Gy。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 B 非巨大淋巴結 ≤3 cm</span></strong></td><td>優先化學治療；特定病人可接受放射治療加量至 30–36 Gy。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td>改良狗腿照野放射治療 20 Gy＋boost至 30 Gy。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 B 非巨大淋巴結 ≤3 cm</span></strong></td><td>優先化學治療；特定病人可接受放射治療boost至 30–36 Gy。</td></tr>
               <tr><td><strong><span class="highlight">第二期 B 巨大淋巴結／第二期 C／第三期</span></strong></td><td><span class="highlight">EP ×4 或 BEP ×3</span>。</td></tr>
               <tr><td><strong>復發型態</strong></td><td>主動監測／卡鉑常見 後腹膜復發；PAS 放射治療可能 骨盆 或 縱膈／頸部復發。</td></tr>
               <tr><td><strong>追蹤</strong></td><td><span class="highlight">前 2 年最關鍵</span>，但 復發可發生至 5 年後，需長期監測。</td></tr>

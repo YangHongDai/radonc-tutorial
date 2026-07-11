@@ -1,8 +1,30 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Head and Neck Cancers — Rad Onc Tutorial</title>
-<link rel="stylesheet" href="styles.css"></head><body>
+<title>Head and Neck Cancers — OncoBeam</title>
+<link rel="stylesheet" href="styles.css">  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
+</head><body>
 <nav class="top-nav"><div class="top-nav-inner">
-  <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="放射腫瘤學教學" data-en="Rad Onc Tutorial">Rad Onc Tutorial</span></a>
+  <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="OncoBeam" data-en="OncoBeam">OncoBeam</span></a>
   <ul class="top-nav-links">
     <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
     <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>

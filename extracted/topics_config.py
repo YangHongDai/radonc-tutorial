@@ -19,14 +19,14 @@ PAGES.append({
         "label_zh": "概觀", "label_en": "OVERVIEW",
         "h2_zh": "放射腫瘤科在癌症照護中的角色",
         "h2_en": "The role of Rad Onc in cancer care",
-        "body_zh": "<p>放射腫瘤科 (Radiation Oncology) 是使用<strong>游離輻射</strong>治療癌症與少數良性疾病的臨床專科。約 50% 的癌症病人在治療歷程中會接受放射治療，貢獻約 40% 的癌症治癒率。</p><p>放射腫瘤醫師與外科、腫瘤內科組成癌症多專科團隊，負責諮商、模擬、勾畫、計畫審核、發放與追蹤。</p>",
+        "body_zh": "<p>放射腫瘤科 (Radiation Oncology) 是使用<strong>游離輻射</strong>治療癌症與少數良性疾病的臨床專科。約 50% 的癌症病人在治療歷程中會接受放射治療，貢獻約 40% 的癌症治癒率。</p><p>放射腫瘤醫師與外科、腫瘤內科組成癌症多專科團隊，負責諮商、模擬、勾畫、計畫審核、治療執行與追蹤。</p>",
         "body_en": "<p>Radiation Oncology is the medical specialty using <strong>ionizing radiation</strong> to treat cancer and select benign conditions. About 50% of cancer patients receive radiation at some point, and RT contributes ~40% of cancer cures.</p><p>The rad onc physician works alongside surgical and medical oncology in multidisciplinary care, owning the workflow of consultation, simulation, contouring, plan review, on-treatment care, and survivorship follow-up.</p>"
       },
       {
         "label_zh": "工作流程", "label_en": "WORKFLOW",
         "h2_zh": "放射治療的完整流程",
         "h2_en": "The end-to-end RT workflow",
-        "body_zh": "<div class='workflow'><div class='workflow-step' data-step='1'><h4>諮商 (Consultation)</h4><p>檢視病史、影像、病理與分期，決定是否放療、治療目的（根治 vs 姑息）與 informed consent。</p></div><div class='workflow-step' data-step='2'><h4>模擬 (Simulation)</h4><p>以 CT-Sim 取得治療姿勢的定位影像；必要時融合 MRI/PET。使用固定裝置（面罩、真空袋、乳房板等）。</p></div><div class='workflow-step' data-step='3'><h4>勾畫 (Contouring)</h4><p>依 ICRU 定義 GTV → CTV → ITV → PTV；同時勾畫 OARs。近年 AI auto-contouring 已可加速流程但需醫師審核。</p></div><div class='workflow-step' data-step='4'><h4>計畫 (Planning)</h4><p>物理師以 IMRT/VMAT/3DCRT/質子等技術製作劑量分佈；醫師審核並要求 QA。</p></div><div class='workflow-step' data-step='5'><h4>發放 (Delivery)</h4><p>直線加速器或質子機每日發放；每次治療前以 kV/CBCT 進行 image guidance (IGRT)。</p></div><div class='workflow-step' data-step='6'><h4>追蹤 (Follow-up)</h4><p>治療完成後定期評估腫瘤反應與晚期副作用，通常 2 年內每 3 個月，5 年內每 6 個月。</p></div></div>",
+        "body_zh": "<div class='workflow'><div class='workflow-step' data-step='1'><h4>諮商 (Consultation)</h4><p>檢視病史、影像、病理與分期，決定是否放療、治療目的（根治 vs 姑息）與 informed consent。</p></div><div class='workflow-step' data-step='2'><h4>模擬 (Simulation)</h4><p>以 CT-Sim 取得治療姿勢的定位影像；必要時融合 MRI/PET。使用固定裝置（面罩、真空袋、乳房板等）。</p></div><div class='workflow-step' data-step='3'><h4>勾畫 (Contouring)</h4><p>依 ICRU 定義 GTV → CTV → ITV → PTV；同時勾畫 OARs。近年 AI auto-contouring 已可加速流程但需醫師審核。</p></div><div class='workflow-step' data-step='4'><h4>計畫 (Planning)</h4><p>物理師以 IMRT/VMAT/3DCRT/質子等技術製作劑量分佈；醫師審核並要求 QA。</p></div><div class='workflow-step' data-step='5'><h4>治療執行 (Delivery)</h4><p>直線加速器或質子機每日治療；每次治療前以 kV/CBCT 進行 image guidance (IGRT)。</p></div><div class='workflow-step' data-step='6'><h4>追蹤 (Follow-up)</h4><p>治療完成後定期評估腫瘤反應與晚期副作用，通常 2 年內每 3 個月，5 年內每 6 個月。</p></div></div>",
         "body_en": "<div class='workflow'><div class='workflow-step' data-step='1'><h4>Consultation</h4><p>Review history, imaging, pathology, and stage. Decide if RT is indicated, intent (curative vs palliative), and obtain informed consent.</p></div><div class='workflow-step' data-step='2'><h4>Simulation</h4><p>CT-simulation in treatment position; MRI/PET fusion as indicated. Immobilization devices (thermoplastic masks, vac-lok bags, breast boards).</p></div><div class='workflow-step' data-step='3'><h4>Contouring</h4><p>Per ICRU: GTV → CTV → ITV → PTV; contour OARs. AI auto-contouring can accelerate but requires MD review.</p></div><div class='workflow-step' data-step='4'><h4>Planning</h4><p>Medical physicist builds dose distribution with IMRT/VMAT/3DCRT/protons; MD reviews and orders QA.</p></div><div class='workflow-step' data-step='5'><h4>Delivery</h4><p>Daily fractions on a linac or proton unit with image guidance (kV/CBCT) before each treatment.</p></div><div class='workflow-step' data-step='6'><h4>Follow-up</h4><p>Assess tumor response and late toxicity — typically q3 months for 2 years, then q6 months to year 5, then annually.</p></div></div>"
       },
       {
@@ -73,7 +73,7 @@ PAGES.append({
 </thead>
 <tbody>
 <tr><td>光子（photon）</td><td>穿透深、具有出口劑量；百萬伏特能量下以康普頓散射為主</td><td>絕大多數體外放射治療</td></tr>
-<tr><td>電子（electron）</td><td>能量主要沉積於表淺組織，之後快速下降</td><td>皮膚腫瘤、胸壁或手術疤痕加量、其他表淺病灶</td></tr>
+<tr><td>電子（electron）</td><td>能量主要沉積於表淺組織，之後快速下降</td><td>皮膚腫瘤、胸壁或手術疤痕boost、其他表淺病灶</td></tr>
 <tr><td>質子（proton）</td><td>具有布拉格峰、遠端出口劑量低，但存在射程不確定性</td><td>兒童腫瘤、顱底腫瘤、全腦全脊髓照射及部分再照射病例</td></tr>
 <tr><td>全腦全脊髓照射（CSI）</td><td>靶區很長，通常需要多照野銜接，必須避免接合區過熱或劑量不足</td><td>髓母細胞瘤、生殖細胞瘤、非典型畸胎樣／橫紋肌樣瘤及軟腦膜播散</td></tr>
 </tbody>
@@ -1147,7 +1147,7 @@ In pediatric CSI, vertebral body dose uniformity matters because asymmetric vert
 <p>光子適合絕大多數深部靶區，因為穿透穩定、治療計畫計算成熟、對組織不均質與小幅解剖變化相對穩健，且臨床經驗最完整。主要缺點是靶區後方仍有出口劑量，並增加正常組織的積分劑量。</p>
 
 <h3>二、何時使用電子？</h3>
-<p>電子適合治療表淺病灶，例如皮膚癌、手術疤痕加量、胸壁加量，以及表淺淋巴結或皮下病灶。選擇時必須確認靶區最深處仍位於治療所需的等劑量線內，並同時考慮照野大小、組織補償物、正面入射與屏蔽設計。</p>
+<p>電子適合治療表淺病灶，例如皮膚癌、手術疤痕boost、胸壁boost，以及表淺淋巴結或皮下病灶。選擇時必須確認靶區最深處仍位於治療所需的等劑量線內，並同時考慮照野大小、組織補償物、正面入射與屏蔽設計。</p>
 
 <div class="clinical-note">
 電子束的實務選擇可記為：<span class="highlight">病灶深度決定能量；表面劑量與 D<sub>max</sub> 位置決定是否使用 bolus；照野邊緣的劑量遞減決定臨床邊界。</span>
@@ -3177,8 +3177,8 @@ PAGES.append({
         "body_zh": """
         <ul>
           <li><strong><span class="highlight">不建議常規升劑量</span></strong>：18F-DOPA-PET 引導升劑量研究顯示部分訊號，但 NRG-BN001 初步結果未顯示 75 Gy / 30 次相較 60 Gy / 30 次有無進展或總生存期效益。<span class="highlight">臨床試驗外不應常規使用強度調控升劑量</span>。</li>
-          <li><strong><span class="highlight">不建議常規 SRS 加量</span></strong>：RTOG 9305 比較 SRS 加量 加放療與 BCNU 對比標準放療加 BCNU，中位總生存期幾乎相同，13.5 對 13.6 個月。</li>
-          <li><strong>不建議常規近接治療 加量</strong>：BTSG NIH Trial 87-01 與 Laperriere 隨機試驗未顯示明確效益。</li>
+          <li><strong><span class="highlight">不建議常規 SRS boost</span></strong>：RTOG 9305 比較 SRS boost 加放療與 BCNU 對比標準放療加 BCNU，中位總生存期幾乎相同，13.5 對 13.6 個月。</li>
+          <li><strong>不建議常規近接治療 boost</strong>：BTSG NIH Trial 87-01 與 Laperriere 隨機試驗未顯示明確效益。</li>
         </ul>
 
         <div class="table-wrap">
@@ -3188,7 +3188,7 @@ PAGES.append({
             <tbody>
               <tr><td><strong>EORTC / Stupp</strong></td><td>肉眼腫瘤體積為術後 T1 腔或殘存病灶；臨床靶體積為肉眼腫瘤體積加 2 公分；計畫靶體積再加 0.5 公分。</td><td>60 Gy。</td></tr>
               <tr><td><strong>RTOG 第一階段</strong></td><td>第一肉眼腫瘤體積為 T2/FLAIR 水腫；第一臨床靶體積加 2 公分；第一計畫靶體積再加 0.3–0.5 公分。</td><td>46 Gy / 23 次。</td></tr>
-              <tr><td><strong>RTOG 加量階段</strong></td><td>第二肉眼腫瘤體積為術後 T1 腔或增強病灶；第二臨床靶體積加 2 公分；第二計畫靶體積再加 0.3–0.5 公分。</td><td>再加 14 Gy / 7 次，總劑量 60 Gy。</td></tr>
+              <tr><td><strong>RTOG boost階段</strong></td><td>第二肉眼腫瘤體積為術後 T1 腔或增強病灶；第二臨床靶體積加 2 公分；第二計畫靶體積再加 0.3–0.5 公分。</td><td>再加 14 Gy / 7 次，總劑量 60 Gy。</td></tr>
             </tbody>
           </table>
         </div>
@@ -3301,7 +3301,7 @@ PAGES.append({
           <li><strong>第三級星形重點是 CATNON</strong>：IDH 突變、1p/19q 未共同缺失、ATRX 或 TP53 改變；真正提供總生存期效益的是輔助 TMZ，而不是同步 TMZ。</li>
           <li><strong>GBM 標準治療</strong>：最大安全切除後 60 Gy / 30 次放療合併同步 TMZ，再接輔助 TMZ，可依情境討論電場治療。</li>
           <li><strong>高齡或虛弱 GBM</strong>：需個人化，可使用 40/15、34/10、25/5，並依 MGMT 啟動子甲基化決定 TMZ 的價值。</li>
-          <li><strong>GBM 不常規升劑量或 加量</strong>：放療升劑量、立體定位加量或近接治療加量的隨機證據未顯示明確生存效益。</li>
+          <li><strong>GBM 不常規升劑量或 boost</strong>：放療升劑量、立體定位boost或近接治療boost的隨機證據未顯示明確生存效益。</li>
           <li><strong>復發 GBM</strong>：<span class="highlight">必須先區分真正復發、假性進展與放射性壞死</span>；治療選項包括臨床試驗、再次切除、再次照射、bevacizumab 與症狀導向處置。</li>
         </ul>
         """,
@@ -3481,7 +3481,7 @@ PAGES.append({
 <tr><td><strong>Patchell II</strong></td><td>單一腦轉移切除後，術後 WBRT 50.4 Gy / 28 次，對照 觀察。</td><td>原病灶位置復發 10% 對 46%；其他腦區復發 14% 對 37%；神經學死亡 14% 對 44%；總生存期無差異。</td><td><span class="highlight">術後 WBRT 可改善顱內控制並降低神經學死亡，但不改善總生存期</span>。</td></tr>
 <tr><td><strong>QUARTZ</strong></td><td>非小細胞肺癌腦轉移，不適合手術/SRS；dexamethasone 合併 WBRT 20 Gy / 5 次，對照 單純支持性照護。</td><td>總生存期與品質調整生命年 沒有顯著差異；中位總生存期約 2 個月。</td><td>預期存活期有限、體能狀態不佳、轉移性非小細胞肺癌腦轉移，<span class="highlight">最佳支持性照護／安寧緩和醫療是合理選項</span>，不應自動給 WBRT。</td></tr>
 <tr><td><strong>RTOG 6901 / RTOG 7361</strong></td><td>WBRT 劑量研究。</td><td>建立 30 Gy / 10 次 為最常用 WBRT 方案；20 Gy / 5 次 可提供相近的症狀緩解效果。</td><td>標準 WBRT 劑量 = 30 Gy / 10 次。</td></tr>
-<tr><td><strong>RTOG 9104</strong></td><td>30 Gy / 10 次 對 加速超分次治療 32 Gy / 20 次 後續加量至 54.4 Gy / 34 次 每日兩次。</td><td>沒有存活或毒性效益；加速超分次組有嚴重耳毒性與致命性腦水腫。</td><td>不支持加速超分次全腦放療。</td></tr>
+<tr><td><strong>RTOG 9104</strong></td><td>30 Gy / 10 次 對 加速超分次治療 32 Gy / 20 次 後續boost至 54.4 Gy / 34 次 每日兩次。</td><td>沒有存活或毒性效益；加速超分次組有嚴重耳毒性與致命性腦水腫。</td><td>不支持加速超分次全腦放療。</td></tr>
 </tbody>
 </table>
 </div>
@@ -5381,7 +5381,7 @@ PAGES.append({
   <caption>臨床試驗重點</caption>
   <thead><tr><th scope="col">試驗</th><th scope="col">設計</th><th scope="col">結果</th></tr></thead>
   <tbody>
-   <tr><td>EORTC 08941</td><td>誘導含鉑化學治療後，手術 vs RT 60–62.5 Gy</td><td>OS/PFS 無差異；手術未改善治療結果</td></tr><tr><td>INT 0139</td><td>45 Gy 同步 CRT → 手術 vs 61 Gy 根治性 CRT</td><td>手術改善 PFS，但 OS 無顯著差異；事後分析肺葉切除亞組可能較佳</td></tr><tr><td>ESPATUE</td><td>誘導化學放射治療後，手術 vs CRT 加量</td><td>OS/PFS 無顯著差異；統計檢定力不足</td></tr>
+   <tr><td>EORTC 08941</td><td>誘導含鉑化學治療後，手術 vs RT 60–62.5 Gy</td><td>OS/PFS 無差異；手術未改善治療結果</td></tr><tr><td>INT 0139</td><td>45 Gy 同步 CRT → 手術 vs 61 Gy 根治性 CRT</td><td>手術改善 PFS，但 OS 無顯著差異；事後分析肺葉切除亞組可能較佳</td></tr><tr><td>ESPATUE</td><td>誘導化學放射治療後，手術 vs CRT boost</td><td>OS/PFS 無顯著差異；統計檢定力不足</td></tr>
   </tbody>
  </table>
 </div>
@@ -5424,7 +5424,7 @@ PAGES.append({
   </tbody>
  </table>
 </div>
-<p>RTOG 1106/ECOG-ACRIN 6697 測試 PET-guided adaptive 劑量提升，最高可到 80.4 Gy，但未改善局部控制。NRG LU008 則研究第 II 期/III NSCLC 先對原發腫瘤 SBRT 加量再做 mediastinal 化學放射治療 + 免疫維持治療。</p>
+<p>RTOG 1106/ECOG-ACRIN 6697 測試 PET-guided adaptive 劑量提升，最高可到 80.4 Gy，但未改善局部控制。NRG LU008 則研究第 II 期/III NSCLC 先對原發腫瘤 SBRT boost再做 mediastinal 化學放射治療 + 免疫維持治療。</p>
 <h3>六、體能狀態不佳的加速低分割放射治療</h3>
 <p>UTSW 試驗比較 60 Gy/30 次 vs 60 Gy/15 次，用於第 II 期/III NSCLC 且體能狀態不佳、體重下降或不適合同步化療的病人。<span class="highlight">60/15 並未優於 60/30</span>，但可作為體能狀態不佳、無法承受根治性同步化學放射治療病人的選項。</p>
             """,
@@ -5593,7 +5593,7 @@ PAGES.append({
   <caption>常用劑量與臨床定位</caption>
   <thead><tr><th scope="col">劑量</th><th scope="col">地位</th></tr></thead>
   <tbody>
-   <tr><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span></td><td>首選療程</td></tr><tr><td>GTV 加量至 54 Gy 每日兩次（BID）</td><td>可考慮，但需依劑量限制</td></tr><tr><td><span class="highlight">66 Gy/33 次每日一次</span></td><td>無法接受每日兩次（BID） 時可接受替代方案</td></tr><tr><td>60 Gy/40 次每日兩次（BID）</td><td>THORA 第 II 期顯示 OS 效益，但需第 III 期驗證</td></tr>
+   <tr><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span></td><td>首選療程</td></tr><tr><td>GTV boost至 54 Gy 每日兩次（BID）</td><td>可考慮，但需依劑量限制</td></tr><tr><td><span class="highlight">66 Gy/33 次每日一次</span></td><td>無法接受每日兩次（BID） 時可接受替代方案</td></tr><tr><td>60 Gy/40 次每日兩次（BID）</td><td>THORA 第 II 期顯示 OS 效益，但需第 III 期驗證</td></tr>
   </tbody>
  </table>
 </div>
@@ -5604,7 +5604,7 @@ PAGES.append({
   <caption>臨床試驗重點</caption>
   <thead><tr><th scope="col">試驗</th><th scope="col">設計</th><th scope="col">結論</th></tr></thead>
   <tbody>
-   <tr><td>Ontario / French 統合分析</td><td>化學治療單獨 vs 化學放射治療</td><td>加 RT 約帶來 5% OS 效益</td></tr><tr><td>RTOG 8815/INT 0096</td><td>45 Gy 每日一次 vs <span class="highlight">45 Gy/30 次每日兩次（BID）</span></td><td>每日兩次（BID） 改善中位總生存期 23 vs 19 個月、<span class="highlight">5 年 OS 26% vs 16%</span>，但第 3 級以上食道炎較高</td></tr><tr><td>CONVERT</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> vs <span class="highlight">66 Gy/33 次每日一次</span></td><td><span class="highlight">66 Gy 每日一次未優於每日兩次（BID）</span>；每日兩次（BID） 仍標準，每日一次可替代</td></tr><tr><td>CALGB 30610</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> vs 70 Gy/35 次每日一次</td><td>70 Gy 每日一次未優於每日兩次（BID）</td></tr><tr><td>THORA</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> vs 60 Gy/40 次每日兩次（BID）</td><td>60 Gy 每日兩次（BID） 改善 OS，但第 II 期，需驗證</td></tr><tr><td>Chinese 第 III 期</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> PTV vs 54 Gy/30 次 GTV 加量</td><td>54 Gy 加量改善 OS/PFS，毒性未增加，但外推需謹慎</td></tr>
+   <tr><td>Ontario / French 統合分析</td><td>化學治療單獨 vs 化學放射治療</td><td>加 RT 約帶來 5% OS 效益</td></tr><tr><td>RTOG 8815/INT 0096</td><td>45 Gy 每日一次 vs <span class="highlight">45 Gy/30 次每日兩次（BID）</span></td><td>每日兩次（BID） 改善中位總生存期 23 vs 19 個月、<span class="highlight">5 年 OS 26% vs 16%</span>，但第 3 級以上食道炎較高</td></tr><tr><td>CONVERT</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> vs <span class="highlight">66 Gy/33 次每日一次</span></td><td><span class="highlight">66 Gy 每日一次未優於每日兩次（BID）</span>；每日兩次（BID） 仍標準，每日一次可替代</td></tr><tr><td>CALGB 30610</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> vs 70 Gy/35 次每日一次</td><td>70 Gy 每日一次未優於每日兩次（BID）</td></tr><tr><td>THORA</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> vs 60 Gy/40 次每日兩次（BID）</td><td>60 Gy 每日兩次（BID） 改善 OS，但第 II 期，需驗證</td></tr><tr><td>Chinese 第 III 期</td><td><span class="highlight">45 Gy/30 次每日兩次（BID）</span> PTV vs 54 Gy/30 次 GTV boost</td><td>54 Gy boost改善 OS/PFS，毒性未增加，但外推需謹慎</td></tr>
   </tbody>
  </table>
 </div>
@@ -6206,9 +6206,9 @@ PAGES.append({
               <tr><th scope="col">Trial</th><th scope="col">治療設計</th><th scope="col">Any IBTR</th><th scope="col">Invasive recurrence</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>NSABP B-17, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，90% 加量。</td><td><span class="highlight">35% → 20%</span></td><td><span class="highlight">20% → 10%</span></td></tr>
-              <tr><td><strong>SweDCIS, 20-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，no 加量。</td><td><span class="highlight">32% → 20%</span></td><td>20% → 15%</td></tr>
-              <tr><td><strong>EORTC 10853, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，少數 加量。</td><td><span class="highlight">31% → 18%</span></td><td>16% → 10%</td></tr>
+              <tr><td><strong>NSABP B-17, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，90% boost。</td><td><span class="highlight">35% → 20%</span></td><td><span class="highlight">20% → 10%</span></td></tr>
+              <tr><td><strong>SweDCIS, 20-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，no boost。</td><td><span class="highlight">32% → 20%</span></td><td>20% → 15%</td></tr>
+              <tr><td><strong>EORTC 10853, 15-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI 50 Gy/25 Fx，少數 boost。</td><td><span class="highlight">31% → 18%</span></td><td>16% → 10%</td></tr>
               <tr><td><strong>UK/ANZ, 12-year</strong></td><td>DCIS 乳房腫瘤切除術 ± WBI；± tamoxifen。</td><td><span class="highlight">20% → 7%</span></td><td>9% → 3%</td></tr>
             </tbody>
           </table>
@@ -6258,27 +6258,27 @@ PAGES.append({
         <p>早期乳癌接受保乳手術後，輔助 RT 可大幅降低同側乳房復發。<strong>NSABP B-06</strong> 納入 stage I–II breast cancer，隨機分派 total 乳房切除術 + ALND、乳房腫瘤切除術 + ALND、乳房腫瘤切除術 + ALND + RT。20 年結果顯示，<span class="highlight">RT 將 ipsilateral breast recurrence 從 39% 降到 14%</span>，且不受 nodal status 影響；三組 DFS 與 OS 沒有顯著差異。</p>
         <ul>
           <li><strong>EBCTCG meta-analysis</strong>：納入 17 個 試驗、10,801 位病人，顯示 <span class="highlight">BCS 後 RT 將 10 年 recurrence 從 35% 降到 19%</span>。整體概念是：<span class="highlight">每避免 4 個 10 年內 recurrence，約可避免 1 個 15 年 乳癌死亡</span>。</li>
-          <li><strong>現代 recurrence risk</strong>：過去 BCS alone 復發約 30%，加 RT 降至約 15%；現代大約是無 RT 15%、有 RT 8%、RT + ET 2–3%。原因包括 mammographic 篩檢、image-guided surgery、adequate margins、radiation 加量、以及更好的 全身治療。</li>
-          <li><span class="highlight"><strong>Tumor bed 加量</strong>：可降低 IBTR，但代價是 fibrosis 增加</span>。</li>
-          <li><strong>EORTC 22881</strong>：切緣陰性的病人 中，50 Gy/25 Fx 後加 15–16 Gy 加量，可將 <span class="highlight">10 年 LR 從 10% 降到 6%，20 年 LR 從 16% 降到 12%</span>；但 severe fibrosis 也增加。</li>
+          <li><strong>現代 recurrence risk</strong>：過去 BCS alone 復發約 30%，加 RT 降至約 15%；現代大約是無 RT 15%、有 RT 8%、RT + ET 2–3%。原因包括 mammographic 篩檢、image-guided surgery、adequate margins、radiation boost、以及更好的 全身治療。</li>
+          <li><span class="highlight"><strong>Tumor bed boost</strong>：可降低 IBTR，但代價是 fibrosis 增加</span>。</li>
+          <li><strong>EORTC 22881</strong>：切緣陰性的病人 中，50 Gy/25 Fx 後加 15–16 Gy boost，可將 <span class="highlight">10 年 LR 從 10% 降到 6%，20 年 LR 從 16% 降到 12%</span>；但 severe fibrosis 也增加。</li>
           <li><strong>Boost 效益 較大的族群</strong>：<span class="highlight">age &lt;50、high grade、adjacent DCIS</span>。</li>
         </ul>
         <div class="table-wrap">
           <table class="oncology-table decision-table">
-            <caption>Tumor bed 加量 建議情境</caption>
+            <caption>Tumor bed boost 建議情境</caption>
             <thead>
               <tr><th scope="col">情境</th><th scope="col">Boost 建議</th></tr>
             </thead>
             <tbody>
-              <tr><td><strong>年齡 ≤50</strong></td><td>建議或強烈考慮 加量。</td></tr>
-              <tr><td><strong>年齡 51–70 且 high grade</strong></td><td>建議或強烈考慮 加量。</td></tr>
-              <tr><td><strong>Positive margin</strong></td><td>應優先 re-excision；若無法 re-excision，可考慮 加量。</td></tr>
-              <tr><td><strong>年輕、high grade、TNBC、HER2+、淋巴結陽性、接受 化學治療</strong></td><td>傾向 加量。</td></tr>
-              <tr><td><strong>&gt;70、HR+、low/intermediate grade、margin &gt;2 mm</strong></td><td>通常可不加 加量。</td></tr>
+              <tr><td><strong>年齡 ≤50</strong></td><td>建議或強烈考慮 boost。</td></tr>
+              <tr><td><strong>年齡 51–70 且 high grade</strong></td><td>建議或強烈考慮 boost。</td></tr>
+              <tr><td><strong>Positive margin</strong></td><td>應優先 re-excision；若無法 re-excision，可考慮 boost。</td></tr>
+              <tr><td><strong>年輕、high grade、TNBC、HER2+、淋巴結陽性、接受 化學治療</strong></td><td>傾向 boost。</td></tr>
+              <tr><td><strong>&gt;70、HR+、low/intermediate grade、margin &gt;2 mm</strong></td><td>通常可不加 boost。</td></tr>
             </tbody>
           </table>
         </div>
-        <p>常見 sequential 加量 劑量可用 <span class="highlight"><strong>10 Gy/4 Fx</strong> 或 <strong>12.5 Gy/5 Fx</strong></span>。若使用 simultaneous integrated 加量, SIB，可在 15 次 內完成 WBI + 加量。</p>
+        <p>常見 sequential boost 劑量可用 <span class="highlight"><strong>10 Gy/4 Fx</strong> 或 <strong>12.5 Gy/5 Fx</strong></span>。若使用 simultaneous integrated boost, SIB，可在 15 次 內完成 WBI + boost。</p>
         
             """,
             "body_en": """
@@ -6348,7 +6348,7 @@ PAGES.append({
           <li><strong>CALGB 9343</strong>：納入 ≥70 歲、stage I、ER+，乳房腫瘤切除術 後 隨機分派 tamoxifen ± RT；RT 將 <span class="highlight">10 年 LRR 從 10% 降到 2%</span>，但 OS、DFS、乳房切除術-free survival 無差異。</li>
           <li><strong>PRIME II</strong>：納入 ≥65 歲、stage I、ER/PR+、tumor ≤3 cm、切緣陰性；<span class="highlight">10 年 LR 約為 ET alone 10% vs ET + RT 1%</span>，同樣沒有 OS 效益。</li>
           <li><strong>臨床重點</strong>：<span class="highlight">省略 RT 不是因為 RT 沒有效</span>，而是因為在高齡、低風險、HR+、願意吃 ET 的病人中，局部復發 效益 可能不轉化成 OS 效益。</li>
-          <li><strong>通常不適合省略 RT</strong>：<span class="highlight">年輕、high grade、TNBC、HER2+、切緣陽性、需要 加量 的族群</span>。</li>
+          <li><strong>通常不適合省略 RT</strong>：<span class="highlight">年輕、high grade、TNBC、HER2+、切緣陽性、需要 boost 的族群</span>。</li>
         </ul>
         
             """,
@@ -6574,8 +6574,8 @@ PAGES.append({
             "label_en": "SIB, 5-fraction RT, PBI, and reirradiation",
             "body_zh": """
         <ul>
-          <li><strong>SIB</strong>：可以把 WBI + 加量 從傳統 15–16 Fx 加 4–5 Fx 加量，<span class="highlight">縮短為 3 週完成</span>。</li>
-          <li><strong>RTOG 1005</strong>：比較 sequential 加量 vs WBI 40 Gy/15 Fx + SIB to 48 Gy/15 Fx，結果達到 不劣於ity，<span class="highlight">5 年 IBTR 約 2.0% vs 2.2%</span>，毒性 與 美容結果 也沒有明顯差異。</li>
+          <li><strong>SIB</strong>：可以把 WBI + boost 從傳統 15–16 Fx 加 4–5 Fx boost，<span class="highlight">縮短為 3 週完成</span>。</li>
+          <li><strong>RTOG 1005</strong>：比較 sequential boost vs WBI 40 Gy/15 Fx + SIB to 48 Gy/15 Fx，結果達到 不劣於ity，<span class="highlight">5 年 IBTR 約 2.0% vs 2.2%</span>，毒性 與 美容結果 也沒有明顯差異。</li>
           <li><strong>UK FAST</strong>：支持 <span class="highlight">28.5 Gy/5 Fx weekly 可用於低風險族群</span>，而 30 Gy/5 Fx 毒性 較高。</li>
           <li><strong>UK FAST Forward</strong>：<span class="highlight">26 Gy/5 Fx daily over 1 week 在 局部控制 上 不劣於</span>，且 毒性 可接受；27 Gy/5 Fx 雖 局部控制 也可，但 正常組織毒性 較高，因此較不偏好。</li>
         </ul>
@@ -6649,7 +6649,7 @@ PAGES.append({
               <tr><td><strong>DCIS after 乳房切除術</strong></td><td><span class="highlight">通常 觀察，即使 近切緣／切緣陽性；乳房切除術 時做 SLNB</span>。</td></tr>
               <tr><td><strong>Early-stage invasive after BCS</strong></td><td><span class="highlight">WBI 標準；特定 低風險 可 PBI</span>。</td></tr>
               <tr><td><strong>Elderly 低風險 HR+ T1N0 after BCS</strong></td><td><span class="highlight">可省略 RT，但需 ET；IBTR 約 10% 降至 1–2% 是 RT 效益</span>。</td></tr>
-              <tr><td><strong>年輕、高 grade、切緣陽性、adjacent DCIS</strong></td><td>考慮 加量。</td></tr>
+              <tr><td><strong>年輕、高 grade、切緣陽性、adjacent DCIS</strong></td><td>考慮 boost。</td></tr>
               <tr><td><strong>Limited positive SLN after BCS</strong></td><td><span class="highlight">多可省略 completion ALND</span>；依 Z0011/AMAROS context 考慮 tangents/RNI。</td></tr>
               <tr><td><strong>Node-positive 或 高風險 淋巴結陰性</strong></td><td><span class="highlight">考慮 RNI</span>。</td></tr>
               <tr><td><strong>Mastectomy T3–T4、≥4 nodes、切緣陽性</strong></td><td><span class="highlight">PMRT + RNI</span>。</td></tr>
@@ -6659,7 +6659,7 @@ PAGES.append({
               <tr><td><strong>cN1 → ypN0 after NAC</strong></td><td><span class="highlight">B-51 suggests omission may be safe；臨床實務仍在演變</span>。</td></tr>
               <tr><td><strong>Skin involvement / inflammatory disease / 前方切緣陽性</strong></td><td>Selective bolus。</td></tr>
               <tr><td><strong>Low-risk WBI</strong></td><td><span class="highlight">40 Gy/15 Fx、42.56 Gy/16 Fx、或 26 Gy/5 Fx</span>。</td></tr>
-              <tr><td><strong>WBI + 加量</strong></td><td><span class="highlight">Sequential 10 Gy/4 Fx、12.5 Gy/5 Fx，或 SIB 48 Gy/15 Fx</span>。</td></tr>
+              <tr><td><strong>WBI + boost</strong></td><td><span class="highlight">Sequential 10 Gy/4 Fx、12.5 Gy/5 Fx，或 SIB 48 Gy/15 Fx</span>。</td></tr>
               <tr><td><strong>Suitable PBI</strong></td><td>30 Gy/5 Fx、40 Gy/15 Fx mini-tangents 等。</td></tr>
               <tr><td><strong>Prior WBI 後同側復發</strong></td><td><span class="highlight">Selected cases 可 部分乳房 再照射 45 Gy/30 Fx BID</span>。</td></tr>
             </tbody>
@@ -6708,7 +6708,7 @@ PAGES.append({
           <li><strong>DCIS</strong>：<span class="highlight">DCIS 乳房腫瘤切除術 後 RT 可使 局部復發 風險約減半</span>，包括 invasive recurrence，但沒有 OS 效益。即使 低風險 DCIS，復發風險仍會隨時間累積，因此省略 RT 必須是 個人化決策。<span class="highlight">Mastectomy 後 DCIS 通常不需 PMRT</span>。</li>
           <li><strong>Early-stage 侵襲性乳癌</strong>：<span class="highlight">接受 BCS 後，RT 是降低 IBTR 的核心工具</span>。Boost 可進一步降低局部復發，尤其年輕與 高風險 病人，但會增加 fibrosis。Elderly 低風險 HR+ 病人可以考慮省略 RT，但必須理解 <span class="highlight">RT 仍能把 10 年 IBTR 從約 10% 降到 1–2%</span>。</li>
           <li><strong>Locally advanced 或 高風險 breast cancer</strong>：<span class="highlight">PMRT + RNI 可改善 LRR</span>，且在 淋巴結陽性、T3–T4、skin/pectoral fascia invasion、臨床分期 III 等族群可改善 OS。DBCG 82b/82c、British Columbia、EBCTCG 是 PMRT/RNI 的核心證據。</li>
-          <li><strong>現代乳癌放療趨勢</strong>：<span class="highlight">40 Gy/15 Fx 或 42.56 Gy/16 Fx 已是成熟方案</span>；<span class="highlight">26 Gy/5 Fx 有 FAST Forward 支持</span>；SIB 可 3 週完成 WBI + 加量；PBI 適合 特定 低風險 病人；特定 ipsilateral recurrence 可考慮 部分乳房 再照射。</li>
+          <li><strong>現代乳癌放療趨勢</strong>：<span class="highlight">40 Gy/15 Fx 或 42.56 Gy/16 Fx 已是成熟方案</span>；<span class="highlight">26 Gy/5 Fx 有 FAST Forward 支持</span>；SIB 可 3 週完成 WBI + boost；PBI 適合 特定 低風險 病人；特定 ipsilateral recurrence 可考慮 部分乳房 再照射。</li>
         </ul>
         
             """,
@@ -7285,13 +7285,13 @@ PAGES.append({
           <li><strong>CAPEOX</strong>：capecitabine 第 1–14 天，每 3 週一循環，合併靜脈 oxaliplatin。</li>
           <li><strong>轉移性微衛星穩定／錯配修復正常疾病</strong>：FOLFOX 或 CAPEOX，可加或不加 bevacizumab。</li>
           <li><strong>轉移性錯配修復缺陷／微衛星高度不穩定或 POLE／POLD 突變</strong>：第一線可用免疫檢查點抑制劑，如 ipilimumab／nivolumab、pembrolizumab、dostarlimab。</li>
-          <li><strong><span class="highlight">長程同步放化療</span></strong>：<span class="highlight">選擇性淋巴結體積 45 Gy</span>；受侵犯直腸繫膜與淋巴結加量至 50.4–54 Gy；同步 5-FU 或 capecitabine。</li>
+          <li><strong><span class="highlight">長程同步放化療</span></strong>：<span class="highlight">選擇性淋巴結體積 45 Gy</span>；受侵犯直腸繫膜與淋巴結boost至 50.4–54 Gy；同步 5-FU 或 capecitabine。</li>
           <li><strong>Capecitabine 放射增敏</strong>：875 mg/m² 口服每日兩次，週一至週五，僅放療日服用。</li>
           <li><strong>5-FU 放射增敏</strong>：每日 225 mg/m² 或連續輸注。</li>
           <li><strong>手術時間</strong>：通常在術前同步放化療後 5–12 週。</li>
           <li><strong><span class="highlight">短程放療</span></strong>：25 Gy／5 次。</li>
           <li><strong>三維順形或強度調控放療</strong>：皆可使用；強度調控放療有助於降低腸道、膀胱與股骨頭劑量。</li>
-          <li><strong>靶區涵蓋</strong>：整個直腸繫膜、骶前、內髂與直腸繫膜淋巴結照射至 45 Gy；前方侵犯時納入外髂；受侵犯直腸繫膜或淋巴結加量至 50.4 Gy，有時 54 Gy。</li>
+          <li><strong>靶區涵蓋</strong>：整個直腸繫膜、骶前、內髂與直腸繫膜淋巴結照射至 45 Gy；前方侵犯時納入外髂；受侵犯直腸繫膜或淋巴結boost至 50.4 Gy，有時 54 Gy。</li>
           <li><strong>三維照野邊界</strong>：上界 L5-S1；側界超出骨盆最寬處 2 公分；下界低於原發腫瘤 3–5 公分，或遠端腫瘤至肛門緣標記。</li>
         </ul>
         
@@ -7372,7 +7372,7 @@ PAGES.append({
           <li><strong><span class="highlight">FFCD 9203</span></strong>：術前放療 45 Gy／25 次對比術前同步放化療合併 bolus 5-FU／leucovorin。總生存未改善，但 <span class="highlight">5 年局部復發 16% 降至 8%</span>，p=0.004；病理完全緩解 4% 升至 11%，p&lt;0.0001。</li>
           <li><strong>EORTC 22921</strong>：長程放療中加入同步化療可改善局部復發；術前同步放化療加術後化療的 5 年局部復發約 7.6%，術前單純放療約 17.1%。</li>
           <li><strong>German CAO/ARO/AIO-94</strong>：823 位距肛門緣小於 16 公分的直腸腺癌，比較術前同步放化療 → 全直腸繫膜切除 → 輔助 5-FU，與全直腸繫膜切除 → 術後同步放化療 → 輔助 5-FU。</li>
-          <li><strong>德國試驗方案</strong>：50.4 Gy／28 次加 120 小時 5-FU 輸注；術後組另加術後腫瘤床加量 5.4 Gy。</li>
+          <li><strong>德國試驗方案</strong>：50.4 Gy／28 次加 120 小時 5-FU 輸注；術後組另加術後腫瘤床boost 5.4 Gy。</li>
           <li><strong>德國試驗注意事項</strong>：屬於磁振影像廣泛使用前時代；術後組有 18% 後來發現為 T1–2N0，意味術前組可能約 20% 過度治療。</li>
           <li><strong><span class="highlight">德國試驗結果</span></strong>：<span class="highlight">5 年局部復發 6% 對 13%</span>，p=0.006；10 年局部復發 7% 對 10%，p=0.048；5 年總生存 76% 對 74%，p=0.80。</li>
           <li><strong>降期與保留括約肌</strong>：術前病理完全緩解約 8%；術後組第三期 40% 對術前組 25%。原預計腹會陰切除病人中，術前組 40% 可保留括約肌，術後組 20%。</li>
@@ -7415,8 +7415,8 @@ PAGES.append({
           <li><strong>較偏向長程同步放化療的情境</strong>：T4 原發、淋巴結陽性尤其直腸繫膜外淋巴結、直腸繫膜筋膜受侵犯、低位腫瘤、下三分之一腫瘤、括約肌或肛管侵犯，或計畫觀察等待。</li>
           <li><strong>OPRA</strong>：324 位第二至第三期病人，比較誘導 FOLFOX／CAPEOX 後接長程同步放化療，與長程同步放化療後接鞏固 FOLFOX／CAPEOX。8–12 週以肛門指診、軟式乙狀結腸鏡與磁振影像重新評估；完全或近完全反應者進入觀察等待。</li>
           <li><strong><span class="highlight">OPRA 結果</span></strong>：74% 進入觀察等待；再生長多在 2 年內且可用全直腸繫膜切除救援。3 年無病生存約 75%，局部無復發生存約 95%，遠端無轉移生存約 83%，總生存約 94%。<span class="highlight">器官保留 41% 對 53%</span>，鞏固化療較佳。</li>
-          <li><strong>OPERA</strong>：低至中段 T2–T3、N0 或小 N1、腫瘤小於 5 公分；45 Gy／25 次加 capecitabine 後，比較外照射加量 9 Gy／5 次與接觸式 X 光近接治療加量 90 Gy／3 次。3 年器官保留 59% 對 81%；腫瘤小於 3 公分者 63% 對 97%。</li>
-          <li><strong>MORPHEUS</strong>：第二／三期高劑量率近接治療加量試驗，基礎為 45 Gy／25 次外照射加 capecitabine 或 5-FU。期中結果：臨床完全緩解 50% 對 90%，2 年免全直腸繫膜切除生存 39% 對 77%。</li>
+          <li><strong>OPERA</strong>：低至中段 T2–T3、N0 或小 N1、腫瘤小於 5 公分；45 Gy／25 次加 capecitabine 後，比較外照射boost 9 Gy／5 次與接觸式 X 光近接治療boost 90 Gy／3 次。3 年器官保留 59% 對 81%；腫瘤小於 3 公分者 63% 對 97%。</li>
+          <li><strong>MORPHEUS</strong>：第二／三期高劑量率近接治療boost試驗，基礎為 45 Gy／25 次外照射加 capecitabine 或 5-FU。期中結果：臨床完全緩解 50% 對 90%，2 年免全直腸繫膜切除生存 39% 對 77%。</li>
           <li><strong>JANUS</strong>：長程同步放化療後接 mFOLFOX6／CAPEOX，對比長程同步放化療後接 mFOLFIRINOX；檢驗加強化療是否提高臨床完全緩解、器官保留與無病生存。</li>
           <li><strong>PROSPECT</strong>：1194 位嚴格篩選、適合保留括約肌全直腸繫膜切除的 T2N+ 或 T3N0/+ 病人。先給 FOLFOX6 6 次；若反應至少 20% 則直接手術，反應不足再放療；對比標準術前同步放化療。</li>
           <li><strong><span class="highlight">PROSPECT 結果</span></strong>：<span class="highlight">5 年無病生存 80.8% 對 78.6%</span>；總生存 89.5% 對 90.2%；局部復發 1.8% 對 1.6%；R0 切除 90.4% 對 91.2%。支持嚴格篩選中等風險病人可先化療並在反應良好時省略放療。</li>
@@ -7864,8 +7864,8 @@ PAGES.append({
           <li><strong>Mitomycin-C 劑量</strong>：10 mg/m² 靜脈推注，每 4 週一循環，共 2 循環。</li>
           <li><strong>5-FU 機轉與毒性</strong>：抑制胸苷酸合成酶；常見黏膜炎、口腔炎、噁心、嘔吐與腹瀉。</li>
           <li><strong>Mitomycin-C 機轉與毒性</strong>：DNA 交聯型烷化劑，低氧下活化；主要毒性為嗜中性白血球低下。</li>
-          <li><strong><span class="highlight">RTOG 0529 T1–T2N0</span></strong>：<span class="highlight">原發腫瘤 50.4 Gy／28 次；骨盆 42 Gy／28 次</span>；無淋巴結加量。</li>
-          <li><strong><span class="highlight">RTOG 0529 T3–T4N0</span></strong>：<span class="highlight">原發腫瘤 54 Gy／30 次；骨盆 45 Gy／30 次</span>；無淋巴結加量。</li>
+          <li><strong><span class="highlight">RTOG 0529 T1–T2N0</span></strong>：<span class="highlight">原發腫瘤 50.4 Gy／28 次；骨盆 42 Gy／28 次</span>；無淋巴結boost。</li>
+          <li><strong><span class="highlight">RTOG 0529 T3–T4N0</span></strong>：<span class="highlight">原發腫瘤 54 Gy／30 次；骨盆 45 Gy／30 次</span>；無淋巴結boost。</li>
           <li><strong>RTOG 0529 N1</strong>：原發腫瘤 54 Gy／30 次；骨盆 45 Gy／30 次；淋巴結小於等於 3 公分給 50.4 Gy／28 次，大於 3 公分給 54 Gy／30 次。</li>
           <li><strong><span class="highlight">反應評估</span></strong>：不要太早判定治療失敗。ACT II 事後分析顯示，<span class="highlight">許多 11 週時未完全緩解的病人會在 26 週達臨床完全緩解</span>。</li>
           <li><strong>實務時間點</strong>：若臨床安全，約於放療後 26 週，也就是約 6.5 個月評估反應。</li>
@@ -7913,7 +7913,7 @@ PAGES.append({
           <li><strong><span class="highlight">ACT II 事後分析</span></strong>：於 11、18、26 週評估臨床完全緩解；許多病人到 26 週才延遲達完全緩解；避免過早救援性腹會陰切除。</li>
           <li><strong>RTOG 9811</strong>：同步 5-FU／mitomycin-C 放化療，對比誘導 5-FU／cisplatin 後接 5-FU／cisplatin 同步放化療。</li>
           <li><strong>RTOG 9811 結果</strong>：5 年總生存 78% 對 71%；無病生存 68% 對 58%；無造口生存 72% 對 65%；支持避免誘導 cisplatin 策略。</li>
-          <li><strong>ACCORD 03</strong>：腫瘤至少 4 公分或淋巴結陽性；測試誘導 5-FU／cisplatin 與高劑量加量。無明確無造口生存效益；高劑量加量僅有未達顯著的趨勢。</li>
+          <li><strong>ACCORD 03</strong>：腫瘤至少 4 公分或淋巴結陽性；測試誘導 5-FU／cisplatin 與高劑量boost。無明確無造口生存效益；高劑量boost僅有未達顯著的趨勢。</li>
           <li><strong><span class="highlight">RTOG 0529</span></strong>：第二期劑量繪製強度調控放療；主要終點未達成，但降低急性血液毒性、第 3 級以上皮膚毒性與胃腸毒性。</li>
           <li><strong>RTOG 0529 計畫提醒</strong>：中央審查後 <span class="highlight">81% 需要重新計畫</span>，表示肛門癌強度調控放療的輪廓描繪、劑量繪製、淋巴結涵蓋與正常器官保護需要高度專業。</li>
           <li><strong>PLATO ACT III</strong>：T1N0/NX 局部切除後，測試小型肛門邊緣腫瘤是否可選擇性同步放化療；主要終點為 3 年局部區域無失敗生存 90%。</li>
@@ -7958,7 +7958,7 @@ PAGES.append({
           <li><strong><span class="highlight">食道癌根治性同步放化療</span></strong>：<span class="highlight">50.4 Gy／28 次</span>合併同步化療；不常規升劑量。</li>
           <li><strong>頸段食道癌</strong>：常用 66–70 Gy，接近頭頸癌劑量。</li>
           <li><strong>食道癌原發臨床靶體積</strong>：原發腫瘤上下各加 3–4 公分；若延伸到胃，可用 2 公分；徑向加 1 公分並依解剖修正。</li>
-          <li><strong>直腸癌長程同步放化療</strong>：選擇性骨盆 45 Gy，加量至 50.4–54 Gy，合併 capecitabine 或 5-FU。</li>
+          <li><strong>直腸癌長程同步放化療</strong>：選擇性骨盆 45 Gy，boost至 50.4–54 Gy，合併 capecitabine 或 5-FU。</li>
           <li><strong><span class="highlight">直腸癌短程放療</span></strong>：<span class="highlight">25 Gy／5 次</span>。</li>
           <li><strong>直腸癌觀察等待追蹤</strong>：肛門指診、軟式乙狀結腸鏡與癌胚抗原前 2 年每 3 個月一次，之後每 6 個月至第 5 年；磁振影像每 6 個月一次共 3 年；胸腹骨盆電腦斷層每 6 個月一次共 5 年。</li>
           <li><strong>胰臟癌術後同步放化療</strong>：45–50.4 Gy／25–28 次，加 5-FU 或 capecitabine。</li>
@@ -8549,10 +8549,10 @@ PAGES.append({
           <li><strong><span class="highlight">同步化學治療</span></strong>：常用 <span class="highlight">5-FU＋絲裂黴素 C（MMC）</span>、單用順鉑、低劑量吉西他濱。</li>
           <li><strong>5-FU／絲裂黴素 C（MMC） 方案</strong>：5-FU 500 mg/m² 第 1–5 天與第 16–20 天，加 MMC 12 mg/m² 第 1 天。</li>
           <li><strong><span class="highlight">放療劑量</span></strong>：<span class="highlight">64 Gy／32 次 或 55 Gy／20 次</span>。</li>
-          <li><strong>照射範圍</strong>：通常照 全膀胱；部分膀胱加量 可考慮用於達成 腸道劑量限制，但 BC2001 顯示全膀胱放射治療 與 部分膀胱加量 在治療結果與毒性上沒有明顯差異。</li>
+          <li><strong>照射範圍</strong>：通常照 全膀胱；部分膀胱boost 可考慮用於達成 腸道劑量限制，但 BC2001 顯示全膀胱放射治療 與 部分膀胱boost 在治療結果與毒性上沒有明顯差異。</li>
           <li><strong>選擇性淋巴結照射</strong>：具爭議，依機構而異；若 高風險，例如小細胞癌，或 cN+，可考慮。</li>
-          <li><strong>小骨盆照野</strong>：包含 遠端內髂／外髂、薦前、膀胱周圍與閉孔淋巴結；若 N+，可加 總髂淋巴結 並 對肉眼可見淋巴結加量，視 腸道耐受劑量 調整。</li>
-          <li><strong><span class="highlight">治療中期膀胱鏡</span></strong>：對 可手術病人，可考慮在傳統分割放射治療 至 <span class="highlight">40–45 Gy</span> 後做 再分期膀胱鏡：若 cT0/Ta/Tis，繼續 加量至 64 Gy；若 ≥T1，考慮 救援性膀胱切除術。非手術候選人通常不需要 治療中期膀胱鏡。</li>
+          <li><strong>小骨盆照野</strong>：包含 遠端內髂／外髂、薦前、膀胱周圍與閉孔淋巴結；若 N+，可加 總髂淋巴結 並 對肉眼可見淋巴結boost，視 腸道耐受劑量 調整。</li>
+          <li><strong><span class="highlight">治療中期膀胱鏡</span></strong>：對 可手術病人，可考慮在傳統分割放射治療 至 <span class="highlight">40–45 Gy</span> 後做 再分期膀胱鏡：若 cT0/Ta/Tis，繼續 boost至 64 Gy；若 ≥T1，考慮 救援性膀胱切除術。非手術候選人通常不需要 治療中期膀胱鏡。</li>
           <li><strong><span class="highlight">局部晚期／轉移性第一線治療</span></strong>：<span class="highlight">恩福妥單抗維多汀＋帕博利珠單抗</span> 每 3 週一次。恩福妥單抗維多汀（EV）是 針對 nectin-4 的抗體藥物複合體（ADC）；帕博利珠單抗 是 PD-1 抑制劑。若為局部晚期疾病，可在 2–3 個療程 後評估 治療反應，再重新考慮 根治性局部治療。</li>
         </ul>
         
@@ -8589,9 +8589,9 @@ PAGES.append({
           <li><strong><span class="highlight">RTOG 整合分析</span></strong>：Mak et al. JCO 2014 整合 6 個 RTOG 膀胱保留研究，共 468 位 MIBC 病人。<span class="highlight">5 年整體存活（OS） 57%、疾病特異性存活（DSS） 71%</span>、肌層侵犯性局部失敗 13%、非肌層侵犯性局部失敗 31%、遠端轉移 31%；10 年整體存活（OS） 36%、疾病特異性存活（DSS） 65%。<span class="highlight">晚期第 3 級以上泌尿生殖毒性 6%，腸胃道毒性 2%</span>。</li>
           <li><strong><span class="highlight">RTOG 整合分析結論</span></strong>：長期結果可與根除性膀胱切除術相當，根治性同步放化療 是可行替代方案，尤其適合 高齡病人 或 體能狀態不佳的病人。</li>
           <li><strong>RTOG 8903</strong>：T2–T4a NX M0 膀胱癌，2 個療程 MCV → 39.6 Gy 同步順鉑 對比 無 術前輔助治療 直接 39.6 Gy 同步順鉑。5 年整體存活（OS） 48% 對比 49%，遠端轉移 33% 對比 39%，5 年 無膀胱切除存活 36% 對比 40%，均無顯著改善。</li>
-          <li><strong><span class="highlight">BC2001</span></strong>：T2–T4a N0 M0，2×2 因子設計 比較 單獨放射治療對比放射治療（RT）＋同步 5-FU／絲裂黴素 C（MMC），以及 全膀胱放射治療對比 部分膀胱加量。放射治療（RT）可用 64 Gy／32 次 或 55 Gy／20 次；5-FU 500 mg/m² 第 1–5 次與第 16–20 次，MMC 12 mg/m² 第 1 天。</li>
-          <li><strong><span class="highlight">BC2001 結果</span></strong>：同步化學治療（CHT） 改善 <span class="highlight">2 年局部區域無復發存活（LRFS），67% 對比 54%</span>，p=0.03；<span class="highlight">5 年膀胱切除率 15% 對比 22%</span>，p=0.034。全膀胱照射與部分膀胱加量 無顯著 局部區域無復發存活（LRFS） 差異，也沒有降低 第 3–4 級急性或晚期毒性。</li>
-          <li><strong><span class="highlight">BC2001 結論</span></strong>：放射治療（RT）加 同步 5-FU／絲裂黴素 C（MMC） 是<span class="highlight">標準 膀胱保留方案</span>；部分膀胱加量 不會明顯改善 治療結果 或 毒性。</li>
+          <li><strong><span class="highlight">BC2001</span></strong>：T2–T4a N0 M0，2×2 因子設計 比較 單獨放射治療對比放射治療（RT）＋同步 5-FU／絲裂黴素 C（MMC），以及 全膀胱放射治療對比 部分膀胱boost。放射治療（RT）可用 64 Gy／32 次 或 55 Gy／20 次；5-FU 500 mg/m² 第 1–5 次與第 16–20 次，MMC 12 mg/m² 第 1 天。</li>
+          <li><strong><span class="highlight">BC2001 結果</span></strong>：同步化學治療（CHT） 改善 <span class="highlight">2 年局部區域無復發存活（LRFS），67% 對比 54%</span>，p=0.03；<span class="highlight">5 年膀胱切除率 15% 對比 22%</span>，p=0.034。全膀胱照射與部分膀胱boost 無顯著 局部區域無復發存活（LRFS） 差異，也沒有降低 第 3–4 級急性或晚期毒性。</li>
+          <li><strong><span class="highlight">BC2001 結論</span></strong>：放射治療（RT）加 同步 5-FU／絲裂黴素 C（MMC） 是<span class="highlight">標準 膀胱保留方案</span>；部分膀胱boost 不會明顯改善 治療結果 或 毒性。</li>
           <li><strong><span class="highlight">RTOG 0712</span></strong>：第二期試驗，70 位 MIBC，FCT 組 使用 5-FU／順鉑＋每日兩次放射治療，總劑量 骨盆 44.8 Gy、膀胱 52.3 Gy、腫瘤 64.3 Gy；GD 組 使用 吉西他濱＋每日一次放射治療，總劑量 骨盆 44 Gy、膀胱 52 Gy、腫瘤 64 Gy。</li>
           <li><strong><span class="highlight">RTOG 0712 治療結果</span></strong>：3 年無遠端轉移存活（DMFS） FCT 組 78%、GD 組 84%；保留膀胱的無遠端轉移存活（DMFS） 67% 對比 72%。此試驗不是直接比較兩組，而是顯示 5-FU／順鉑 與 吉西他濱 都可作同步放化療選項。</li>
         </ul>
@@ -8749,8 +8749,8 @@ PAGES.append({
             <thead><tr><th scope="col">分期</th><th scope="col">治療選項</th></tr></thead>
             <tbody>
               <tr><td><strong><span class="highlight">第一期</span></strong></td><td><span class="highlight">優先採主動監測</span>；或 卡鉑 AUC 7 ×1–2 個療程；或 <span class="highlight">PAS 放射治療 20 Gy／10 次</span>。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td><span class="highlight">改良狗腿照野放射治療 20 Gy／10 次＋加量至 30 Gy</span>。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 B</span></strong></td><td>優先：<span class="highlight">EP ×4 或 BEP ×3</span>；特定非巨大淋巴結 ≤3 cm 可 改良狗腿照野放射治療 20 Gy＋加量至 30–36 Gy。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td><span class="highlight">改良狗腿照野放射治療 20 Gy／10 次＋boost至 30 Gy</span>。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 B</span></strong></td><td>優先：<span class="highlight">EP ×4 或 BEP ×3</span>；特定非巨大淋巴結 ≤3 cm 可 改良狗腿照野放射治療 20 Gy＋boost至 30–36 Gy。</td></tr>
               <tr><td><strong><span class="highlight">第二期 C</span></strong></td><td>EP ×4 或 BEP ×3；放射治療或手術多用於救援。</td></tr>
               <tr><td><strong><span class="highlight">第三期</span></strong></td><td>EP ×4 或 BEP ×3；放射治療或手術多用於救援。</td></tr>
             </tbody>
@@ -8760,12 +8760,12 @@ PAGES.append({
           <li><strong>臨床重點</strong>：第一期精原細胞瘤 多數不會復發，因此 優先採主動監測；第二期 A 可使用放射治療；第二期 B 以上，尤其 巨大淋巴結 或 &gt;3 cm，化療通常更合適。</li>
           <li><strong><span class="highlight">第一期放射治療</span></strong>：20 Gy／10 次 至 主動脈旁條帶照野（PAS）。三維治療計畫 的 上／下界 是 T11 下緣 到 L5 下緣，10 cm 寬的主動脈旁條帶，涵蓋 椎體橫突。</li>
           <li><strong><span class="highlight">腎臟劑量限制</span></strong>：<span class="highlight">D50% ≤8 Gy</span>；若只有單側腎，則 <span class="highlight">D15% ≤20 Gy</span>。</li>
-          <li><strong><span class="highlight">第二期放射治療</span></strong>：20 Gy／10 次 至 改良狗腿照野 → 加量至 30–36 Gy。若淋巴結 1–2 cm，加量 10 Gy，總劑量 30 Gy；若淋巴結 2–3 cm，加量 16 Gy，總劑量 36 Gy。</li>
+          <li><strong><span class="highlight">第二期放射治療</span></strong>：20 Gy／10 次 至 改良狗腿照野 → boost至 30–36 Gy。若淋巴結 1–2 cm，boost 10 Gy，總劑量 30 Gy；若淋巴結 2–3 cm，boost 16 Gy，總劑量 36 Gy。</li>
           <li><strong>改良狗腿照野</strong>：包含 主動脈旁與同側髂淋巴結，範圍從 T11 下緣 到 髖臼上緣。治療時需保護 腎臟，並使用 蛤殼式鉛罩 保護 對側睪丸。</li>
           <li><strong>第一期勾畫</strong>：右側精原細胞瘤 應包含 腔靜脈旁、腔靜脈前、主動脈與腔靜脈間 淋巴結；左側至少包含 主動脈外側、主動脈前 淋巴結。</li>
           <li><strong>依血管勾畫</strong>：下腔靜脈（IVC）與主動脈 從 腎臟上緣 下方 勾畫 到 血管終點，下腔靜脈（IVC）外擴 1.2 cm、主動脈 擴 1.9 cm，並從 骨骼／腸道 中裁切。</li>
           <li><strong>第二期勾畫</strong>：再 勾畫 同側總髂、外髂與近端內髂血管 到 髖臼上緣，髂血管 擴 1.2 cm。</li>
-          <li><strong><span class="highlight">加量體積</span></strong>：<span class="highlight">肉眼腫瘤體積（GTV）外擴 8 mm 成臨床靶體積（CTV）</span>，再外擴 5–7 mm 成計畫靶體積（PTV）。</li>
+          <li><strong><span class="highlight">boost體積</span></strong>：<span class="highlight">肉眼腫瘤體積（GTV）外擴 8 mm 成臨床靶體積（CTV）</span>，再外擴 5–7 mm 成計畫靶體積（PTV）。</li>
         </ul>
         
             """,
@@ -8874,8 +8874,8 @@ PAGES.append({
               <tr><td><strong>禁忌</strong></td><td>經陰囊切片／經陰囊睪丸切除術。</td></tr>
               <tr><td><strong><span class="highlight">第一期精原細胞瘤</span></strong></td><td><span class="highlight">優先採主動監測</span>；或 卡鉑 AUC 7 ×1–2；或 PAS 放射治療 20 Gy／10 次。</td></tr>
               <tr><td><strong>第一期放射治療照野</strong></td><td><span class="highlight">PAS，T11–L5；20 Gy／10 次</span>。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td>改良狗腿照野放射治療 20 Gy＋加量至 30 Gy。</td></tr>
-              <tr><td><strong><span class="highlight">第二期 B 非巨大淋巴結 ≤3 cm</span></strong></td><td>優先化學治療；特定病人可接受放射治療加量至 30–36 Gy。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 A</span></strong></td><td>改良狗腿照野放射治療 20 Gy＋boost至 30 Gy。</td></tr>
+              <tr><td><strong><span class="highlight">第二期 B 非巨大淋巴結 ≤3 cm</span></strong></td><td>優先化學治療；特定病人可接受放射治療boost至 30–36 Gy。</td></tr>
               <tr><td><strong><span class="highlight">第二期 B 巨大淋巴結／第二期 C／第三期</span></strong></td><td><span class="highlight">EP ×4 或 BEP ×3</span>。</td></tr>
               <tr><td><strong>復發型態</strong></td><td>主動監測／卡鉑常見 後腹膜復發；PAS 放射治療可能 骨盆 或 縱膈／頸部復發。</td></tr>
               <tr><td><strong>追蹤</strong></td><td><span class="highlight">前 2 年最關鍵</span>，但 復發可發生至 5 年後，需長期監測。</td></tr>
@@ -9471,13 +9471,13 @@ PAGES.append(
                           '    </tbody>\n'
                           '  </table>\n'
                           '</div>'},
-              {'label_zh': '局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部加量',
+              {'label_zh': '局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部boost',
                'label_en': 'LOCAL THERAPY: Surgery, EBRT, brachytherapy, hypofractionation, SBRT, focal boost, and '
                            'radiobiology',
                'body_zh': '<h3>一、局部治療選項</h3>\n'
                           '<p><span '
                           'class="highlight">局限性攝護腺癌的治療應依風險分層與患者特徵個別化規劃</span>。局部治療包括根治性攝護腺切除術、單獨體外放射治療（EBRT）、單獨近接治療、EBRT '
-                          '合併近接治療加量、中度低分次放射治療、SBRT，以及攝護腺內局部病灶加量。骨盆淋巴結轉移風險較高時，手術可考慮骨盆淋巴結廓清術；放射治療可考慮加入骨盆淋巴結照射。</p>\n'
+                          '合併近接治療boost、中度低分次放射治療、SBRT，以及攝護腺內局部病灶boost。骨盆淋巴結轉移風險較高時，手術可考慮骨盆淋巴結廓清術；放射治療可考慮加入骨盆淋巴結照射。</p>\n'
                           '<p>全身性治療以 ADT 為核心：<span class="highlight">不利型中度風險合併短期 ADT 4–6 個月；高風險或更高風險合併長期 ADT 18–36 '
                           '個月</span>。</p>\n'
                           '\n'
@@ -9494,9 +9494,9 @@ PAGES.append(
                           '      <tr><td>傳統分次劑量升階 EBRT</td><td>根治性治療；現代常用總劑量約 78–79.2 Gy</td></tr>\n'
                           '      <tr><td>中度低分次放射治療</td><td>60 Gy／20 次或 70 Gy／28 次；現代標準之一</td></tr>\n'
                           '      <tr><td>SBRT／超低分次放射治療</td><td>例如 36.25 Gy／5 次；主要用於經選擇的低／中度風險患者</td></tr>\n'
-                          '      <tr><td>LDR／HDR 近接治療</td><td>低風險或有利型中度風險可單獨治療；不利型中度風險／高風險可作為加量</td></tr>\n'
-                          '      <tr><td>EBRT + 近接治療加量</td><td>可加強生化控制，但泌尿生殖系統毒性較高</td></tr>\n'
-                          '      <tr><td>FLAME 式局部病灶加量</td><td>對 MRI 定義的攝護腺內主要病灶進行等毒性限制下加量</td></tr>\n'
+                          '      <tr><td>LDR／HDR 近接治療</td><td>低風險或有利型中度風險可單獨治療；不利型中度風險／高風險可作為boost</td></tr>\n'
+                          '      <tr><td>EBRT + 近接治療boost</td><td>可加強生化控制，但泌尿生殖系統毒性較高</td></tr>\n'
+                          '      <tr><td>FLAME 式局部病灶boost</td><td>對 MRI 定義的攝護腺內主要病灶進行等毒性限制下boost</td></tr>\n'
                           '      <tr><td>骨盆淋巴結放射治療</td><td>高風險、極高風險、N+ 或淋巴結轉移風險較高的情境</td></tr>\n'
                           '    </tbody>\n'
                           '  </table>\n'
@@ -9557,7 +9557,7 @@ PAGES.append(
                           'ratio of about 1.5–3, lower than many tumors, so larger fraction sizes may be advantageous. '
                           'This supports conventional dose escalation, moderate hypofractionation, and '
                           'ultra-hypofractionation/SBRT.</p>'},
-              {'label_zh': '劑量升階：傳統劑量升階、FLAME 腫瘤內局部加量與 ASCENDE-RT 近接治療加量',
+              {'label_zh': '劑量升階：傳統劑量升階、FLAME 腫瘤內局部boost與 ASCENDE-RT 近接治療boost',
                'label_en': 'DOSE ESCALATION: Conventional escalation, FLAME, and ASCENDE-RT',
                'body_zh': '<h3>一、傳統分次劑量升階</h3>\n'
                           '<p>多項隨機試驗比較傳統劑量與劑量升階放射治療。整體結論為：<span '
@@ -9578,21 +9578,21 @@ PAGES.append(
                           '</div>\n'
                           '<p>現代根治性 EBRT 應採用劑量升階傳統分次，或透過低分次治療達到生物等效劑量升階；66–70 Gy 通常已不屬於現代局限性疾病的標準根治劑量。</p>\n'
                           '\n'
-                          '<h3>二、FLAME：攝護腺內局部病灶加量</h3>\n'
+                          '<h3>二、FLAME：攝護腺內局部病灶boost</h3>\n'
                           '<p>FLAME 為第三期隨機試驗，納入中度與高風險患者。標準組對攝護腺給予 77 Gy／35 次；實驗組另對影像可見腫瘤進行最高 95 Gy '
-                          '的同步整合加量。治療計畫採等毒性限制策略：危險器官限制優先於完整覆蓋 95 Gy 加量區。</p>\n'
+                          '的同步整合boost。治療計畫採等毒性限制策略：危險器官限制優先於完整覆蓋 95 Gy boost區。</p>\n'
                           '<p><span class="highlight">FLAME 將 5 年無生化疾病存活由約 85% 提高至 '
                           '92%</span>，且未顯著增加晚期泌尿生殖或腸胃道毒性；但整體存活、無遠端轉移存活及攝護腺癌特異性存活無顯著差異。</p>\n'
                           '<div class="clinical-note">FLAME 的重點不是將所有可見病灶固定照射至 95 Gy，而是在高品質 '
-                          'MRI、影像導引與危險器官保護下，對主要攝護腺內病灶進行個別化等毒性加量。</div>\n'
+                          'MRI、影像導引與危險器官保護下，對主要攝護腺內病灶進行個別化等毒性boost。</div>\n'
                           '\n'
-                          '<h3>三、ASCENDE-RT：EBRT 加量與 LDR 近接治療加量</h3>\n'
-                          '<p>ASCENDE-RT 納入中度與高風險患者。所有患者接受 12 個月 ADT，以及攝護腺、儲精囊與骨盆 46 Gy／23 次；之後隨機分派至 EBRT 加量至總劑量 78 '
-                          'Gy，或 I-125 LDR 近接治療加量 115 Gy。</p>\n'
-                          '<p><span class="highlight">15 年 bPFS 約為 LDR 加量 80%，EBRT 加量 '
-                          '53%</span>；但整體存活、癌症特異性存活與無遠端轉移存活無顯著差異。LDR 加量的代價是較高的泌尿生殖系統毒性，<span class="highlight">第 3 級以上 '
+                          '<h3>三、ASCENDE-RT：EBRT boost與 LDR 近接治療boost</h3>\n'
+                          '<p>ASCENDE-RT 納入中度與高風險患者。所有患者接受 12 個月 ADT，以及攝護腺、儲精囊與骨盆 46 Gy／23 次；之後隨機分派至 EBRT boost至總劑量 78 '
+                          'Gy，或 I-125 LDR 近接治療boost 115 Gy。</p>\n'
+                          '<p><span class="highlight">15 年 bPFS 約為 LDR boost 80%，EBRT boost '
+                          '53%</span>；但整體存活、癌症特異性存活與無遠端轉移存活無顯著差異。LDR boost的代價是較高的泌尿生殖系統毒性，<span class="highlight">第 3 級以上 '
                           'GU 毒性約 18% vs 5%</span>，並增加尿道狹窄、尿墊使用與晚期導尿需求。</p>\n'
-                          '<div class="clinical-note">近接治療加量是強力的生化控制強化策略，但必須審慎評估治療前 IPSS、攝護腺大小、中葉突出、既往 TURP、解剖條件及患者對 '
+                          '<div class="clinical-note">近接治療boost是強力的生化控制強化策略，但必須審慎評估治療前 IPSS、攝護腺大小、中葉突出、既往 TURP、解剖條件及患者對 '
                           'GU 毒性的接受度。</div>',
                'body_en': '<p class="section-kicker"><strong>Part VII. Dose Escalation Evidence</strong></p>\n'
                           '<h3>1. Conventional dose escalation</h3>\n'
@@ -9765,7 +9765,7 @@ PAGES.append(
                           '\n'
                           '<h3>二、POP-RT</h3>\n'
                           '<p>POP-RT 納入依 Roach 公式推估淋巴結侵犯風險 <span class="highlight">≥20%</span> '
-                          '的高風險患者，比較全骨盆放射治療與僅攝護腺放射治療。全骨盆組對骨盆淋巴結給予 50 Gy／25 次，並以同步整合加量對攝護腺給予 68 Gy；所有患者至少接受 2 年 '
+                          '的高風險患者，比較全骨盆放射治療與僅攝護腺放射治療。全骨盆組對骨盆淋巴結給予 50 Gy／25 次，並以同步整合boost對攝護腺給予 68 Gy；所有患者至少接受 2 年 '
                           'ADT。</p>\n'
                           '<div class="table-wrap">\n'
                           '  <table class="oncology-table pca-table">\n'
@@ -10486,9 +10486,9 @@ PAGES.append(
                           '次</span></td></tr>\n'
                           '      <tr><td>SBRT／超低分次放射治療</td><td><span class="highlight">36.25 Gy／5 次</span>；HYPO-RT-PC '
                           '為 42.7 Gy／7 次</td></tr>\n'
-                          '      <tr><td>FLAME 式局部加量</td><td>攝護腺 77 Gy／35 次 + MRI 定義病灶最高 95 Gy SIB</td></tr>\n'
-                          '      <tr><td>ASCENDE-RT EBRT 加量</td><td>骨盆／攝護腺／儲精囊 46 Gy／23 次 → EBRT 加量至 78 Gy</td></tr>\n'
-                          '      <tr><td>ASCENDE-RT LDR 加量</td><td>46 Gy／23 次 → I-125 LDR 加量 115 Gy</td></tr>\n'
+                          '      <tr><td>FLAME 式局部boost</td><td>攝護腺 77 Gy／35 次 + MRI 定義病灶最高 95 Gy SIB</td></tr>\n'
+                          '      <tr><td>ASCENDE-RT EBRT boost</td><td>骨盆／攝護腺／儲精囊 46 Gy／23 次 → EBRT boost至 78 Gy</td></tr>\n'
+                          '      <tr><td>ASCENDE-RT LDR boost</td><td>46 Gy／23 次 → I-125 LDR boost 115 Gy</td></tr>\n'
                           '      <tr><td>POP-RT 骨盆淋巴結</td><td>骨盆淋巴結 50 Gy／25 次 + 攝護腺 SIB 68 Gy</td></tr>\n'
                           '      <tr><td>術後攝護腺床</td><td>常用 64–66 Gy；部分現代療程使用 52.5 Gy／20 次</td></tr>\n'
                           '      <tr><td>STAMPEDE 轉移性原發腫瘤 RT</td><td><span class="highlight">55 Gy／20 次每日治療，或 36 Gy／6 '
@@ -10507,7 +10507,7 @@ PAGES.append(
                           '      <tr><td>極低／低風險</td><td>多數採主動監測；需治療時可選手術或單一 RT</td></tr>\n'
                           '      <tr><td>有利型中度風險</td><td>手術、EBRT、SBRT 或近接治療等單一治療</td></tr>\n'
                           '      <tr><td>不利型中度風險</td><td>手術，或 RT + 4–6 個月 ADT；經選擇患者可考慮劑量強化</td></tr>\n'
-                          '      <tr><td>高風險</td><td>EBRT ± 骨盆淋巴結照射 + 18–24 個月 ADT；可考慮近接治療或局部病灶加量</td></tr>\n'
+                          '      <tr><td>高風險</td><td>EBRT ± 骨盆淋巴結照射 + 18–24 個月 ADT；可考慮近接治療或局部病灶boost</td></tr>\n'
                           '      <tr><td>極高風險</td><td>骨盆 RT + 長期 ADT + abiraterone／prednisone；通常需要多模式治療</td></tr>\n'
                           '      <tr><td>cN1 M0</td><td>骨盆 RT + 長期 ADT + abiraterone／prednisone</td></tr>\n'
                           '    </tbody>\n'
@@ -10655,8 +10655,8 @@ PAGES.append(
                           '      <tr><td>放射生物學</td><td>攝護腺癌 α／β 約 1.5–3 Gy，因此適合中度低分次與 SBRT</td></tr>\n'
                           '      <tr><td>中度低分次</td><td>60 Gy／20 次與 70 Gy／28 次是主要標準療程</td></tr>\n'
                           '      <tr><td>SBRT</td><td>PACE-B 支持 36.25 Gy／5 次，5 年 bPFS 約 95%</td></tr>\n'
-                          '      <tr><td>劑量升階</td><td>改善生化控制；FLAME 局部加量改善 bDFS，未顯著增加晚期 GU／GI 毒性</td></tr>\n'
-                          '      <tr><td>近接治療加量</td><td>ASCENDE-RT 改善 bPFS，但增加第 3 級以上 GU 毒性與尿道狹窄</td></tr>\n'
+                          '      <tr><td>劑量升階</td><td>改善生化控制；FLAME 局部boost改善 bDFS，未顯著增加晚期 GU／GI 毒性</td></tr>\n'
+                          '      <tr><td>近接治療boost</td><td>ASCENDE-RT 改善 bPFS，但增加第 3 級以上 GU 毒性與尿道狹窄</td></tr>\n'
                           '      <tr><td>骨盆淋巴結</td><td>POP-RT 改善 BFFS／DFS／DMFS，但未顯示 OS 改善</td></tr>\n'
                           '      <tr><td>術後 RT</td><td><span class="highlight">多數患者採早期救援 RT，而非常規輔助 '
                           'RT</span></td></tr>\n'
@@ -11952,9 +11952,9 @@ PAGES.append({
     <caption>結外淋巴瘤的放射治療與治療概念</caption>
     <thead><tr><th scope="col">結外淋巴瘤</th><th scope="col">放射治療（RT）／治療</th></tr></thead>
     <tbody>
-      <tr><td>原發性中樞神經系統淋巴瘤（PCNSL）</td><td>化學治療（CHT）後達完全緩解（CR）可<span class="highlight">全腦放射治療（WBRT） 24 Gy</span>；部分緩解（PR）可 30–36 Gy；涉及部位加量無獲益；腦脊髓液疾病用鞘內化學治療，不是全腦全脊髓照射（CSI）</td></tr>
+      <tr><td>原發性中樞神經系統淋巴瘤（PCNSL）</td><td>化學治療（CHT）後達完全緩解（CR）可<span class="highlight">全腦放射治療（WBRT） 24 Gy</span>；部分緩解（PR）可 30–36 Gy；涉及部位boost無獲益；腦脊髓液疾病用鞘內化學治療，不是全腦全脊髓照射（CSI）</td></tr>
       <tr><td>眼眶淋巴瘤</td><td>依組織型：惰性 24 Gy；DLBCL 30–36 Gy</td></tr>
-      <tr><td>鼻型結外 NK／T 細胞淋巴瘤</td><td>侵襲性，需要高劑量與特殊化學治療（CHT）；<span class="highlight">SMILE → 45–50.4 Gy</span>，<span class="highlight">GELOX → 56 Gy</span>，<span class="highlight">DeVIC 同步 50 Gy</span>，或放射治療（RT）單獨治療 50 Gy；50 Gy 後評估，殘存疾病加量 5–10 Gy</td></tr>
+      <tr><td>鼻型結外 NK／T 細胞淋巴瘤</td><td>侵襲性，需要高劑量與特殊化學治療（CHT）；<span class="highlight">SMILE → 45–50.4 Gy</span>，<span class="highlight">GELOX → 56 Gy</span>，<span class="highlight">DeVIC 同步 50 Gy</span>，或放射治療（RT）單獨治療 50 Gy；50 Gy 後評估，殘存疾病boost 5–10 Gy</td></tr>
       <tr><td>胃黏膜相關淋巴組織淋巴瘤（胃 MALT）</td><td>幽門螺旋桿菌（H. pylori）陽性先抗生素治療；放射治療（RT）為涉及部位放射治療（ISRT） 30 Gy，常 1.5 Gy／次，照整個胃</td></tr>
       <tr><td>睪丸淋巴瘤</td><td>庇護部位；需接受中樞神經系統（CNS）預防治療（MTX）與<span class="highlight">對側睪丸預防性放射治療 24–30 Gy</span>，不論化學治療反應</td></tr>
     </tbody>
@@ -11969,7 +11969,7 @@ PAGES.append({
     <tbody>
       <tr><td>原發性皮膚濾泡中心淋巴瘤／MZL／間變性大型細胞淋巴瘤</td><td>病灶涉及部位放射治療 24–30 Gy</td></tr>
       <tr><td>原發性皮膚瀰漫性大型 B 細胞淋巴瘤，下肢型</td><td>R-CHOP ×6 → 36–40 Gy；若無全身治療可 40 Gy</td></tr>
-      <tr><td>原發性皮膚鼻型結外 NK／T 細胞淋巴瘤</td><td>初始病灶 50 Gy + 殘存病灶加量 5–10 Gy</td></tr>
+      <tr><td>原發性皮膚鼻型結外 NK／T 細胞淋巴瘤</td><td>初始病灶 50 Gy + 殘存病灶boost 5–10 Gy</td></tr>
       <tr><td>蕈樣肉芽腫緩和性</td><td>8–12 Gy，3–5 Gy／次，例如 8 Gy／2 次或 12 Gy／3 次</td></tr>
       <tr><td>蕈樣肉芽腫單一病灶可用根治性放射治療</td><td>24–30 Gy</td></tr>
       <tr><td>廣泛皮膚侵犯</td><td><span class="highlight">全身皮膚電子束治療（TSEBT）</span>；歷史上 30–36 Gy 每日兩次、共 9 週，現代常 10–12 Gy，可重複治療難治性疾病</td></tr>
@@ -12498,7 +12498,7 @@ Any soft-tissue mass that is <strong>&gt;5 cm, deep to fascia, rapidly growing, 
 <tr><td>標準術後放射治療</td><td><span class="highlight">60 Gy／30 次</span></td></tr>
 <tr><td>術後切緣陽性</td><td><span class="highlight">66 Gy／33 次</span></td></tr>
 <tr><td>肉眼殘存疾病</td><td><span class="highlight">70–76 Gy，部分情境可用 70–80 Gy</span></td></tr>
-<tr><td>術前放射治療後切緣陽性的 RTOG 0630 加量</td><td><span class="highlight">16 Gy／8 次</span></td></tr>
+<tr><td>術前放射治療後切緣陽性的 RTOG 0630 boost</td><td><span class="highlight">16 Gy／8 次</span></td></tr>
 <tr><td>硬纖維瘤根治性放射治療</td><td><span class="highlight">56 Gy／28 次</span></td></tr>
 <tr><td>惡性葉狀腫瘤輔助放射治療</td><td><span class="highlight">50–60 Gy</span></td></tr>
 </tbody>
@@ -12751,7 +12751,7 @@ Preop RT in RPS must be histology-specific. WDLPS or G1–2 DDLPS can be conside
 <tr><td>第 1 級軀幹／肢體軟組織肉瘤</td><td><span class="highlight">通常單獨手術</span>；僅在特殊切緣或復發情境考慮放射治療</td></tr>
 <tr><td>第 2–3 級、第 II–III 期軟組織肉瘤</td><td><span class="highlight">放射治療加保肢手術</span></td></tr>
 <tr><td>可切除的高惡性度肢體軟組織肉瘤</td><td><span class="highlight">優先術前放射治療，再進行手術</span></td></tr>
-<tr><td>手術後切緣陽性</td><td><span class="highlight">可行時再次切除</span>；否則考慮輔助放射治療或加量</td></tr>
+<tr><td>手術後切緣陽性</td><td><span class="highlight">可行時再次切除</span>；否則考慮輔助放射治療或boost</td></tr>
 <tr><td>腫瘤大、深層、高惡性度或高轉移風險</td><td>由多專科團隊討論全身治療</td></tr>
 <tr><td>第 III 期、&gt;5 cm 的 UPS／DDLPS／多形性脂肪肉瘤</td><td>可考慮<span class="highlight">SARC032 模式：帕博利珠單抗＋放射治療＋手術＋術後帕博利珠單抗</span></td></tr>
 <tr><td>寡轉移性肺轉移</td><td>經多專科團隊篩選後，可考慮轉移灶切除或立體定位放射治療（SBRT）</td></tr>
@@ -14035,7 +14035,7 @@ PAGES.append(
 
 <p>因此，兒童放射治療（RT）的核心並非單純提高劑量，而是採用<span class="highlight">多模式、風險調整治療</span>，在治癒與長期毒性之間取得精確平衡。治療時應使用最小必要照射體積與最低有效劑量，並優先考量<span class="highlight">生長發育、神經認知、內分泌功能、生育功能與第二原發惡性腫瘤</span>。若手術或化學治療（CHT）已能達成控制，應避免過度放射治療；但也不能為了降階治療而犧牲疾病控制。</p>
 
-<p>此原則貫穿所有兒童腫瘤：髓母細胞瘤試圖降低顱脊髓照射（CSI）劑量，但<span class="highlight">3–7 歲標準風險病人使用 18 Gy CSI 會降低事件無存活（EFS）與整體存活（OS）</span>；室管膜瘤最重要的預後因子是手術切除程度，但<span class="highlight">不應僅因年齡 &lt;3 歲而一律延後放射治療</span>；神經母細胞瘤以<span class="highlight">21.6 Gy 為標準劑量，對肉眼殘存病灶加量未改善結果</span>；Wilms 腫瘤則要求<span class="highlight">術後第 10–14 天內開始放射治療</span>，因治療時序會影響局部控制。</p>
+<p>此原則貫穿所有兒童腫瘤：髓母細胞瘤試圖降低顱脊髓照射（CSI）劑量，但<span class="highlight">3–7 歲標準風險病人使用 18 Gy CSI 會降低事件無存活（EFS）與整體存活（OS）</span>；室管膜瘤最重要的預後因子是手術切除程度，但<span class="highlight">不應僅因年齡 &lt;3 歲而一律延後放射治療</span>；神經母細胞瘤以<span class="highlight">21.6 Gy 為標準劑量，對肉眼殘存病灶boost未改善結果</span>；Wilms 腫瘤則要求<span class="highlight">術後第 10–14 天內開始放射治療</span>，因治療時序會影響局部控制。</p>
 
 <p class="section-kicker"><strong>第二部分：兒童中樞神經系統腫瘤與顱脊髓照射</strong></p>
 
@@ -14072,13 +14072,13 @@ PAGES.append(
 <caption>兒童 CNS 腫瘤的放射治療與全身治療概覽</caption>
 <thead><tr><th scope="col">腫瘤類型</th><th scope="col">放射治療</th><th scope="col">全身治療</th></tr></thead>
 <tbody>
-<tr><td>髓母細胞瘤</td><td>標準風險：<span class="highlight">23.4 Gy CSI＋腫瘤床加量至 54 Gy</span>；高風險：<span class="highlight">36 Gy CSI＋後顱窩加量至 55.8 Gy</span>；轉移病灶依位置加量至 39.6／45／50.4 Gy</td><td>同步長春新鹼；輔助順鉑為基礎的化學治療，最多 9 個療程</td></tr>
+<tr><td>髓母細胞瘤</td><td>標準風險：<span class="highlight">23.4 Gy CSI＋腫瘤床boost至 54 Gy</span>；高風險：<span class="highlight">36 Gy CSI＋後顱窩boost至 55.8 Gy</span>；轉移病灶依位置boost至 39.6／45／50.4 Gy</td><td>同步長春新鹼；輔助順鉑為基礎的化學治療，最多 9 個療程</td></tr>
 <tr><td>室管膜瘤</td><td>腫瘤床 54–59.4 Gy；只有轉移性疾病且年齡 &gt;3 歲時使用 36 Gy CSI</td><td>主要用於將次全切除轉化為可再次切除的疾病</td></tr>
 <tr><td>低惡性度膠質瘤</td><td>即使為次全切除，也可觀察至疾病進展</td><td>標靶治療的重要性逐漸增加</td></tr>
 <tr><td>高惡性度膠質瘤</td><td>全切除後 54 Gy；次全切除後 59.4 Gy</td><td>化學治療效益有限，優先考慮臨床試驗</td></tr>
 <tr><td>顱咽管瘤</td><td>全切除後觀察；否則 54 Gy／30 次，或選擇性立體定位放射手術（SRS）</td><td>不適用</td></tr>
-<tr><td>生殖瘤</td><td>全腦室照射（WVI）加原發病灶加量；化療後完全緩解（CR）使用 18 Gy WVI，部分緩解（PR）使用 24 Gy WVI，再加量 12 Gy</td><td>卡鉑／依托泊苷</td></tr>
-<tr><td>非生殖瘤性生殖細胞腫瘤（NGGCT）</td><td>36 Gy CSI＋原發病灶加量 18 Gy，總劑量 54 Gy</td><td>卡鉑／依托泊苷＋異環磷醯胺／依托泊苷</td></tr>
+<tr><td>生殖瘤</td><td>全腦室照射（WVI）加原發病灶boost；化療後完全緩解（CR）使用 18 Gy WVI，部分緩解（PR）使用 24 Gy WVI，再boost 12 Gy</td><td>卡鉑／依托泊苷</td></tr>
+<tr><td>非生殖瘤性生殖細胞腫瘤（NGGCT）</td><td>36 Gy CSI＋原發病灶boost 18 Gy，總劑量 54 Gy</td><td>卡鉑／依托泊苷＋異環磷醯胺／依托泊苷</td></tr>
 <tr><td>非典型畸胎樣／橫紋樣腫瘤（ATRT）</td><td>年齡 &lt;3 歲時原發病灶 50.4 Gy；年齡 &gt;3 歲可考慮 36 Gy CSI</td><td>依機構治療方案決定</td></tr>
 </tbody>
 </table>
@@ -14191,7 +14191,7 @@ PAGES.append(
 <ol>
 <li>最大安全切除，目標為全切除（GTR）或近全切除（NTR），殘存病灶 &lt;1.5 cm²。</li>
 <li>完整分期：術後 48–72 小時腦部 MRI、脊椎 MRI 與 LP。</li>
-<li>年齡 &gt;3 歲：CSI 加局部加量。</li>
+<li>年齡 &gt;3 歲：CSI 加局部boost。</li>
 <li>同步每週長春新鹼，必要時合併卡鉑。</li>
 <li>輔助順鉑為基礎的維持化學治療。</li>
 </ol>
@@ -14202,7 +14202,7 @@ PAGES.append(
 <div class="table-wrap">
 <table class="oncology-table dose-table">
 <caption>髓母細胞瘤放射治療劑量</caption>
-<thead><tr><th scope="col">風險群／病灶</th><th scope="col">CSI 劑量</th><th scope="col">加量範圍</th><th scope="col">加量後總劑量</th></tr></thead>
+<thead><tr><th scope="col">風險群／病灶</th><th scope="col">CSI 劑量</th><th scope="col">boost範圍</th><th scope="col">boost後總劑量</th></tr></thead>
 <tbody>
 <tr><td>標準風險</td><td><span class="highlight">23.4 Gy</span></td><td>腫瘤床／涉及部位</td><td><span class="highlight">54 Gy</span></td></tr>
 <tr><td>高風險</td><td><span class="highlight">36 Gy</span></td><td>後顱窩</td><td><span class="highlight">55.8 Gy</span></td></tr>
@@ -14213,15 +14213,15 @@ PAGES.append(
 </table>
 </div>
 
-<p>標準風險治療為 23.4 Gy CSI、腫瘤床加量至 54 Gy、同步長春新鹼與維持化學治療。高風險治療為 36 Gy CSI、後顱窩加量至 55.8 Gy，並依轉移病灶位置追加劑量。</p>
+<p>標準風險治療為 23.4 Gy CSI、腫瘤床boost至 54 Gy、同步長春新鹼與維持化學治療。高風險治療為 36 Gy CSI、後顱窩boost至 55.8 Gy，並依轉移病灶位置追加劑量。</p>
 
 <h3>六、關鍵證據</h3>
-<p><span class="highlight">ACNS 0331</span> 評估兩個降階問題：標準風險病人能否將後顱窩加量縮小為涉及部位放射治療，以及 3–7 歲病人的 CSI 能否由 23.4 Gy 降為 18 Gy。結果顯示，涉及部位加量不會降低 EFS／OS；但<span class="highlight">18 Gy CSI 顯著劣於 23.4 Gy：EFS 71% 對 83%，OS 78% 對 87%</span>。</p>
+<p><span class="highlight">ACNS 0331</span> 評估兩個降階問題：標準風險病人能否將後顱窩boost縮小為涉及部位放射治療，以及 3–7 歲病人的 CSI 能否由 23.4 Gy 降為 18 Gy。結果顯示，涉及部位boost不會降低 EFS／OS；但<span class="highlight">18 Gy CSI 顯著劣於 23.4 Gy：EFS 71% 對 83%，OS 78% 對 87%</span>。</p>
 
-<p><span class="highlight">ACNS 0332</span> 納入 3–21 歲高風險髓母細胞瘤，包括轉移性疾病、間變型病理或殘存 &gt;1.5 cm²。所有病人接受 36 Gy CSI、後顱窩加量至 55.8 Gy，以及長春新鹼／順鉑／環磷醯胺維持治療。試驗評估放射治療期間同步卡鉑與維持期異維 A 酸；異維 A 酸組因無效而提早關閉。</p>
+<p><span class="highlight">ACNS 0332</span> 納入 3–21 歲高風險髓母細胞瘤，包括轉移性疾病、間變型病理或殘存 &gt;1.5 cm²。所有病人接受 36 Gy CSI、後顱窩boost至 55.8 Gy，以及長春新鹼／順鉑／環磷醯胺維持治療。試驗評估放射治療期間同步卡鉑與維持期異維 A 酸；異維 A 酸組因無效而提早關閉。</p>
 
 <div class="clinical-note">
-高頻考點：標準風險使用<span class="highlight">23.4 Gy CSI＋腫瘤床加量至 54 Gy</span>，不能將 3–7 歲標準風險病人的 CSI 降至 18 Gy；高風險使用<span class="highlight">36 Gy CSI＋後顱窩加量至 55.8 Gy</span>，轉移病灶再依位置加量。
+高頻考點：標準風險使用<span class="highlight">23.4 Gy CSI＋腫瘤床boost至 54 Gy</span>，不能將 3–7 歲標準風險病人的 CSI 降至 18 Gy；高風險使用<span class="highlight">36 Gy CSI＋後顱窩boost至 55.8 Gy</span>，轉移病灶再依位置boost。
 </div>
             """,
             "body_en": """
@@ -14451,10 +14451,10 @@ PAGES.append(
 </div>
 
 <h3>八、關鍵證據：ANBL 0532</h3>
-<p><span class="highlight">ANBL 0532</span> 納入高風險神經母細胞瘤，接受誘導化療、手術、單次或串聯移植與放射治療。<span class="highlight">串聯移植改善 EFS：62% 對 48%，但未改善 OS</span>。放射治療部分使用術前腫瘤體積 21.6 Gy，並對肉眼殘存病灶追加 14.4 Gy，與歷史上單獨 21.6 Gy 比較；<span class="highlight">加量未改善局部進展、EFS 或 OS，因此 21.6 Gy 仍是標準</span>。</p>
+<p><span class="highlight">ANBL 0532</span> 納入高風險神經母細胞瘤，接受誘導化療、手術、單次或串聯移植與放射治療。<span class="highlight">串聯移植改善 EFS：62% 對 48%，但未改善 OS</span>。放射治療部分使用術前腫瘤體積 21.6 Gy，並對肉眼殘存病灶追加 14.4 Gy，與歷史上單獨 21.6 Gy 比較；<span class="highlight">boost未改善局部進展、EFS 或 OS，因此 21.6 Gy 仍是標準</span>。</p>
 
 <div class="clinical-note">
-高頻考點：嬰幼兒、帶鈣化且跨越中線的腫塊、HVA／VMA 升高，應想到神經母細胞瘤。高風險治療順序為<span class="highlight">化療 → 手術 → 幹細胞移植 → 21.6 Gy 放射治療 → 抗 GD2／異維 A 酸</span>；21.6 Gy 後不常規對肉眼殘存病灶加量。
+高頻考點：嬰幼兒、帶鈣化且跨越中線的腫塊、HVA／VMA 升高，應想到神經母細胞瘤。高風險治療順序為<span class="highlight">化療 → 手術 → 幹細胞移植 → 21.6 Gy 放射治療 → 抗 GD2／異維 A 酸</span>；21.6 Gy 後不常規對肉眼殘存病灶boost。
 </div>
             """,
             "body_en": """
@@ -14721,7 +14721,7 @@ PAGES.append(
 <tr><td>延遲原發病灶切除後完全切除</td><td>36 Gy</td></tr>
 <tr><td>延遲切除後顯微殘存</td><td>41.4 Gy</td></tr>
 <tr><td>延遲切除後肉眼殘存</td><td>50.4–59.4 Gy</td></tr>
-<tr><td>第 IV 期肺轉移</td><td>WLI 12–15 Gy，每次 1.5 Gy；再將腫瘤加量至 41.4 Gy</td></tr>
+<tr><td>第 IV 期肺轉移</td><td>WLI 12–15 Gy，每次 1.5 Gy；再將腫瘤boost至 41.4 Gy</td></tr>
 <tr><td>骨轉移</td><td>&lt;5 cm 可用立體定位放射治療（SBRT）；否則 50.4 Gy</td></tr>
 </tbody>
 </table>
@@ -14871,15 +14871,15 @@ PAGES.append(
 <thead><tr><th scope="col">臨床情境</th><th scope="col">劑量</th><th scope="col">靶區概念</th></tr></thead>
 <tbody>
 <tr><td>術前放射治療</td><td><span class="highlight">36 Gy</span></td><td>化療前 GTV</td></tr>
-<tr><td>術前放療後 R1，術後加量</td><td><span class="highlight">總劑量 50.4 Gy</span></td><td>對殘存或高風險切緣加量</td></tr>
-<tr><td>術前放療後 R2，術後加量</td><td><span class="highlight">總劑量 55.8 Gy</span></td><td>肉眼殘存病灶</td></tr>
-<tr><td>根治性放射治療</td><td><span class="highlight">45 Gy＋加量至 55.8 Gy</span></td><td>45 Gy 涵蓋化療前體積；加量涵蓋化療後殘存</td></tr>
+<tr><td>術前放療後 R1，術後boost</td><td><span class="highlight">總劑量 50.4 Gy</span></td><td>對殘存或高風險切緣boost</td></tr>
+<tr><td>術前放療後 R2，術後boost</td><td><span class="highlight">總劑量 55.8 Gy</span></td><td>肉眼殘存病灶</td></tr>
+<tr><td>根治性放射治療</td><td><span class="highlight">45 Gy＋boost至 55.8 Gy</span></td><td>45 Gy 涵蓋化療前體積；boost涵蓋化療後殘存</td></tr>
 <tr><td>選擇性不可切除疾病的根治性治療</td><td>70.2 Gy</td><td>Tata Memorial 升劑量策略</td></tr>
 <tr><td>術後 R1</td><td>50.4 Gy</td><td>依壞死程度使用化療後或化療前體積</td></tr>
 <tr><td>術後 R2</td><td>55.8 Gy</td><td>肉眼殘存病灶</td></tr>
-<tr><td>肺轉移</td><td><span class="highlight">全肺照射 15 Gy，每次 1.5 Gy</span></td><td>殘存病灶加量至約 50 Gy</td></tr>
+<tr><td>肺轉移</td><td><span class="highlight">全肺照射 15 Gy，每次 1.5 Gy</span></td><td>殘存病灶boost至約 50 Gy</td></tr>
 <tr><td>骨轉移</td><td>45–55.8 Gy</td><td>可考慮 SBRT</td></tr>
-<tr><td>椎體</td><td>45 Gy＋加量至 50.4 Gy</td><td>整個椎體加適當邊界</td></tr>
+<tr><td>椎體</td><td>45 Gy＋boost至 50.4 Gy</td><td>整個椎體加適當邊界</td></tr>
 <tr><td>腹膜轉移／惡性腹水</td><td>24 Gy，每次 1.5 Gy</td><td>全腹照射</td></tr>
 </tbody>
 </table>
@@ -14895,7 +14895,7 @@ PAGES.append(
 <p><span class="highlight">AEWS1221</span> 比較轉移性尤文肉瘤使用 VDC／IE 合併或不合併 ganitumab。Ganitumab 未改善 EFS 或 OS，並可能增加毒性，包括胸部放射治療後肺炎。</p>
 
 <div class="clinical-note">
-高頻考點：尤文肉瘤是具放射敏感性的骨幹小圓藍細胞腫瘤，具有 EWSR1 融合。標準全身治療是間隔壓縮 VDC／IE；第 13 週進行局部治療；根治性放射治療為<span class="highlight">化療前體積 45 Gy，再將化療後殘存加量至 55.8 Gy</span>；肺轉移使用全肺照射 15 Gy／10 次。
+高頻考點：尤文肉瘤是具放射敏感性的骨幹小圓藍細胞腫瘤，具有 EWSR1 融合。標準全身治療是間隔壓縮 VDC／IE；第 13 週進行局部治療；根治性放射治療為<span class="highlight">化療前體積 45 Gy，再將化療後殘存boost至 55.8 Gy</span>；肺轉移使用全肺照射 15 Gy／10 次。
 </div>
             """,
             "body_en": """
@@ -14971,11 +14971,11 @@ PAGES.append(
 <caption>兒童腫瘤高頻放射治療劑量</caption>
 <thead><tr><th scope="col">疾病／臨床情境</th><th scope="col">標準或常用劑量</th></tr></thead>
 <tbody>
-<tr><td>標準風險髓母細胞瘤</td><td><span class="highlight">23.4 Gy CSI＋腫瘤床加量至 54 Gy</span></td></tr>
-<tr><td>高風險髓母細胞瘤</td><td><span class="highlight">36 Gy CSI＋後顱窩加量至 55.8 Gy</span></td></tr>
+<tr><td>標準風險髓母細胞瘤</td><td><span class="highlight">23.4 Gy CSI＋腫瘤床boost至 54 Gy</span></td></tr>
+<tr><td>高風險髓母細胞瘤</td><td><span class="highlight">36 Gy CSI＋後顱窩boost至 55.8 Gy</span></td></tr>
 <tr><td>髓母細胞瘤局部轉移</td><td>脊髓內 45 Gy；脊髓末端以下 50.4 Gy</td></tr>
 <tr><td>局限性室管膜瘤</td><td><span class="highlight">腫瘤床 59.4 Gy；年齡 &lt;18 個月且 GTR 可用 54 Gy</span></td></tr>
-<tr><td>轉移性室管膜瘤</td><td>36 Gy CSI＋局部加量</td></tr>
+<tr><td>轉移性室管膜瘤</td><td>36 Gy CSI＋局部boost</td></tr>
 <tr><td>高風險神經母細胞瘤</td><td><span class="highlight">原發病灶與持續轉移病灶 21.6 Gy／12 次</span></td></tr>
 <tr><td>神經母細胞瘤緊急肝腫大</td><td>全肝 4.5 Gy／3 次</td></tr>
 <tr><td>Wilms 腫瘤側腹</td><td><span class="highlight">10.8 Gy／6 次</span></td></tr>
@@ -15041,12 +15041,12 @@ PAGES.append(
 <thead><tr><th scope="col">疾病</th><th scope="col">核心特徵</th><th scope="col">重要檢查</th><th scope="col">治療主軸</th><th scope="col">放射治療角色</th></tr></thead>
 <tbody>
 <tr><td>兒童 CNS 腫瘤</td><td>多位於幕下；症狀由解剖位置決定</td><td><span class="highlight">腦／脊椎 MRI、術後 48–72 小時 MRI、術後 10–14 天 LP</span></td><td>除生殖細胞腫瘤通常只切片外，多數先行最大安全切除</td><td>依疾病使用 CSI 或局部放射治療</td></tr>
-<tr><td>髓母細胞瘤</td><td>後顱窩胚胎性腫瘤，可經 CSF 播散與下墜轉移</td><td>脊椎 MRI 與 CSF 細胞學都需要</td><td>手術 → CSI／加量 → 順鉑為基礎的化療</td><td><span class="highlight">標準風險 23.4／54 Gy；高風險 36／55.8 Gy</span></td></tr>
+<tr><td>髓母細胞瘤</td><td>後顱窩胚胎性腫瘤，可經 CSF 播散與下墜轉移</td><td>脊椎 MRI 與 CSF 細胞學都需要</td><td>手術 → CSI／boost → 順鉑為基礎的化療</td><td><span class="highlight">標準風險 23.4／54 Gy；高風險 36／55.8 Gy</span></td></tr>
 <tr><td>室管膜瘤</td><td>第四腦室／後顱窩腫瘤，以局部失敗為主</td><td>腦／脊椎 MRI、LP</td><td><span class="highlight">GTR 是最重要因素，之後接受局部放射治療</span></td><td>局部 59.4 Gy；只有轉移性疾病使用 CSI</td></tr>
 <tr><td>神經母細胞瘤</td><td>嬰幼兒神經脊腫瘤；HVA／VMA 升高；常跨越中線</td><td>CT／MRI、MIBG、尿液兒茶酚胺與骨髓評估</td><td>化療 → 手術 → 移植 → 抗 GD2／異維 A 酸</td><td><span class="highlight">高風險原發病灶與持續轉移病灶 21.6 Gy</span></td></tr>
 <tr><td>Wilms 腫瘤</td><td>腎臟內生腫瘤，好發 3–4 歲，較少跨越中線</td><td>影像＋美國策略的先行腎切除與淋巴結取樣</td><td>手術＋風險調整化療</td><td><span class="highlight">第 10–14 天開始；側腹 10.8 Gy、全腹 10.5 Gy、全肺 12 Gy</span></td></tr>
 <tr><td>橫紋肌肉瘤</td><td>兒童最常見軟組織肉瘤</td><td>原發病灶 MRI／CT、全身分期、骨髓與部位特異淋巴結評估</td><td>手術／切片＋VAC 或 VAC／VI</td><td><span class="highlight">只有第 I 組胚胎型可省略；其餘依分組與殘存程度給予放療</span></td></tr>
-<tr><td>尤文肉瘤</td><td>具放射敏感性的骨幹骨腫瘤，帶有 EWSR1 融合</td><td>原發病灶 MRI、胸部 CT／PET／骨與骨髓評估</td><td>VDC／IE → 第 13 週局部治療 → VDC／IE</td><td><span class="highlight">根治性 45 Gy 加量至 55.8 Gy；WLI 15 Gy</span></td></tr>
+<tr><td>尤文肉瘤</td><td>具放射敏感性的骨幹骨腫瘤，帶有 EWSR1 融合</td><td>原發病灶 MRI、胸部 CT／PET／骨與骨髓評估</td><td>VDC／IE → 第 13 週局部治療 → VDC／IE</td><td><span class="highlight">根治性 45 Gy boost至 55.8 Gy；WLI 15 Gy</span></td></tr>
 </tbody>
 </table>
 </div>

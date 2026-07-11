@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Central Nervous System Tumors — Rad Onc Tutorial</title>
+  <title>Central Nervous System Tumors — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-cns">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -1275,8 +1295,8 @@
         
         <ul>
           <li><strong><span class="highlight">不建議常規升劑量</span></strong>：18F-DOPA-PET 引導升劑量研究顯示部分訊號，但 NRG-BN001 初步結果未顯示 75 Gy / 30 次相較 60 Gy / 30 次有無進展或總生存期效益。<span class="highlight">臨床試驗外不應常規使用強度調控升劑量</span>。</li>
-          <li><strong><span class="highlight">不建議常規 SRS 加量</span></strong>：RTOG 9305 比較 SRS 加量 加放療與 BCNU 對比標準放療加 BCNU，中位總生存期幾乎相同，13.5 對 13.6 個月。</li>
-          <li><strong>不建議常規近接治療 加量</strong>：BTSG NIH Trial 87-01 與 Laperriere 隨機試驗未顯示明確效益。</li>
+          <li><strong><span class="highlight">不建議常規 SRS boost</span></strong>：RTOG 9305 比較 SRS boost 加放療與 BCNU 對比標準放療加 BCNU，中位總生存期幾乎相同，13.5 對 13.6 個月。</li>
+          <li><strong>不建議常規近接治療 boost</strong>：BTSG NIH Trial 87-01 與 Laperriere 隨機試驗未顯示明確效益。</li>
         </ul>
 
         <div class="table-wrap">
@@ -1286,7 +1306,7 @@
             <tbody>
               <tr><td><strong>EORTC / Stupp</strong></td><td>肉眼腫瘤體積為術後 T1 腔或殘存病灶；臨床靶體積為肉眼腫瘤體積加 2 公分；計畫靶體積再加 0.5 公分。</td><td>60 Gy。</td></tr>
               <tr><td><strong>RTOG 第一階段</strong></td><td>第一肉眼腫瘤體積為 T2/FLAIR 水腫；第一臨床靶體積加 2 公分；第一計畫靶體積再加 0.3–0.5 公分。</td><td>46 Gy / 23 次。</td></tr>
-              <tr><td><strong>RTOG 加量階段</strong></td><td>第二肉眼腫瘤體積為術後 T1 腔或增強病灶；第二臨床靶體積加 2 公分；第二計畫靶體積再加 0.3–0.5 公分。</td><td>再加 14 Gy / 7 次，總劑量 60 Gy。</td></tr>
+              <tr><td><strong>RTOG boost階段</strong></td><td>第二肉眼腫瘤體積為術後 T1 腔或增強病灶；第二臨床靶體積加 2 公分；第二計畫靶體積再加 0.3–0.5 公分。</td><td>再加 14 Gy / 7 次，總劑量 60 Gy。</td></tr>
             </tbody>
           </table>
         </div>
@@ -1430,7 +1450,7 @@
           <li><strong>第三級星形重點是 CATNON</strong>：IDH 突變、1p/19q 未共同缺失、ATRX 或 TP53 改變；真正提供總生存期效益的是輔助 TMZ，而不是同步 TMZ。</li>
           <li><strong>GBM 標準治療</strong>：最大安全切除後 60 Gy / 30 次放療合併同步 TMZ，再接輔助 TMZ，可依情境討論電場治療。</li>
           <li><strong>高齡或虛弱 GBM</strong>：需個人化，可使用 40/15、34/10、25/5，並依 MGMT 啟動子甲基化決定 TMZ 的價值。</li>
-          <li><strong>GBM 不常規升劑量或 加量</strong>：放療升劑量、立體定位加量或近接治療加量的隨機證據未顯示明確生存效益。</li>
+          <li><strong>GBM 不常規升劑量或 boost</strong>：放療升劑量、立體定位boost或近接治療boost的隨機證據未顯示明確生存效益。</li>
           <li><strong>復發 GBM</strong>：<span class="highlight">必須先區分真正復發、假性進展與放射性壞死</span>；治療選項包括臨床試驗、再次切除、再次照射、bevacizumab 與症狀導向處置。</li>
         </ul>
         

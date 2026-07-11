@@ -112,6 +112,7 @@
 
     root.lang = language === "en" ? "en" : "zh-TW";
     root.setAttribute("data-ui-lang", language);
+    root.classList.remove("i18n-pending");
 
     document.body.classList.toggle("lang-zh", language === "zh");
     document.body.classList.toggle("lang-en", language === "en");
@@ -167,6 +168,31 @@
     navInner.appendChild(button);
   }
 
+  function ensureLiteratureNavLink() {
+    document.querySelectorAll(".top-nav-links").forEach(function (navLinks) {
+      if (navLinks.querySelector('a[href="literature/index.html"]')) {
+        return;
+      }
+
+      var quizLink = navLinks.querySelector('a[href="radonc-quiz/index.html"]');
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+
+      link.href = "literature/index.html";
+      link.setAttribute("data-zh", "📖 文獻");
+      link.setAttribute("data-en", "📖 Literature");
+      link.textContent = currentLanguage === "en" ? "📖 Literature" : "📖 文獻";
+
+      item.appendChild(link);
+
+      if (quizLink && quizLink.parentElement) {
+        navLinks.insertBefore(item, quizLink.parentElement);
+      } else {
+        navLinks.appendChild(item);
+      }
+    });
+  }
+
   function bindLanguageButtons() {
     document.querySelectorAll(
       "#lang-toggle, .lang-toggle, [data-lang-toggle]"
@@ -195,6 +221,7 @@
     }
 
     isInitialised = true;
+    ensureLiteratureNavLink();
     ensureLanguageButton();
     bindLanguageButtons();
     applyLanguage(readStoredLanguage(), false);

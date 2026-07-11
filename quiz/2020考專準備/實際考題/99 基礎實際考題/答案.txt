@@ -1,0 +1,13 @@
+1  BDDAA
+6  CDBBA
+11 BBDAC
+16 BACDB  
+21 DCBCD
+26 CBCDC   
+31 AADCC
+36 DDBAB    
+41 BABDC
+46 DADDC
+
+19題應該是A吧??(An x-ray beam flattening filter used in radiation therapy for providing uniform radiation intensity distribution across large linear accelerator produced x-ray fields.)
+19選錯的 選D

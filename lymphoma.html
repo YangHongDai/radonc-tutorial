@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Lymphoma — Rad Onc Tutorial</title>
+  <title>Lymphoma — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-lymphoma">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -636,9 +656,9 @@
     <caption>結外淋巴瘤的放射治療與治療概念</caption>
     <thead><tr><th scope="col">結外淋巴瘤</th><th scope="col">放射治療（RT）／治療</th></tr></thead>
     <tbody>
-      <tr><td>原發性中樞神經系統淋巴瘤（PCNSL）</td><td>化學治療（CHT）後達完全緩解（CR）可<span class="highlight">全腦放射治療（WBRT） 24 Gy</span>；部分緩解（PR）可 30–36 Gy；涉及部位加量無獲益；腦脊髓液疾病用鞘內化學治療，不是全腦全脊髓照射（CSI）</td></tr>
+      <tr><td>原發性中樞神經系統淋巴瘤（PCNSL）</td><td>化學治療（CHT）後達完全緩解（CR）可<span class="highlight">全腦放射治療（WBRT） 24 Gy</span>；部分緩解（PR）可 30–36 Gy；涉及部位boost無獲益；腦脊髓液疾病用鞘內化學治療，不是全腦全脊髓照射（CSI）</td></tr>
       <tr><td>眼眶淋巴瘤</td><td>依組織型：惰性 24 Gy；DLBCL 30–36 Gy</td></tr>
-      <tr><td>鼻型結外 NK／T 細胞淋巴瘤</td><td>侵襲性，需要高劑量與特殊化學治療（CHT）；<span class="highlight">SMILE → 45–50.4 Gy</span>，<span class="highlight">GELOX → 56 Gy</span>，<span class="highlight">DeVIC 同步 50 Gy</span>，或放射治療（RT）單獨治療 50 Gy；50 Gy 後評估，殘存疾病加量 5–10 Gy</td></tr>
+      <tr><td>鼻型結外 NK／T 細胞淋巴瘤</td><td>侵襲性，需要高劑量與特殊化學治療（CHT）；<span class="highlight">SMILE → 45–50.4 Gy</span>，<span class="highlight">GELOX → 56 Gy</span>，<span class="highlight">DeVIC 同步 50 Gy</span>，或放射治療（RT）單獨治療 50 Gy；50 Gy 後評估，殘存疾病boost 5–10 Gy</td></tr>
       <tr><td>胃黏膜相關淋巴組織淋巴瘤（胃 MALT）</td><td>幽門螺旋桿菌（H. pylori）陽性先抗生素治療；放射治療（RT）為涉及部位放射治療（ISRT） 30 Gy，常 1.5 Gy／次，照整個胃</td></tr>
       <tr><td>睪丸淋巴瘤</td><td>庇護部位；需接受中樞神經系統（CNS）預防治療（MTX）與<span class="highlight">對側睪丸預防性放射治療 24–30 Gy</span>，不論化學治療反應</td></tr>
     </tbody>
@@ -653,7 +673,7 @@
     <tbody>
       <tr><td>原發性皮膚濾泡中心淋巴瘤／MZL／間變性大型細胞淋巴瘤</td><td>病灶涉及部位放射治療 24–30 Gy</td></tr>
       <tr><td>原發性皮膚瀰漫性大型 B 細胞淋巴瘤，下肢型</td><td>R-CHOP ×6 → 36–40 Gy；若無全身治療可 40 Gy</td></tr>
-      <tr><td>原發性皮膚鼻型結外 NK／T 細胞淋巴瘤</td><td>初始病灶 50 Gy + 殘存病灶加量 5–10 Gy</td></tr>
+      <tr><td>原發性皮膚鼻型結外 NK／T 細胞淋巴瘤</td><td>初始病灶 50 Gy + 殘存病灶boost 5–10 Gy</td></tr>
       <tr><td>蕈樣肉芽腫緩和性</td><td>8–12 Gy，3–5 Gy／次，例如 8 Gy／2 次或 12 Gy／3 次</td></tr>
       <tr><td>蕈樣肉芽腫單一病灶可用根治性放射治療</td><td>24–30 Gy</td></tr>
       <tr><td>廣泛皮膚侵犯</td><td><span class="highlight">全身皮膚電子束治療（TSEBT）</span>；歷史上 30–36 Gy 每日兩次、共 9 週，現代常 10–12 Gy，可重複治療難治性疾病</td></tr>

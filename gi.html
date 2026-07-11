@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Gastrointestinal Cancers — Rad Onc Tutorial</title>
+  <title>Gastrointestinal Cancers — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-gi">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -870,13 +890,13 @@
           <li><strong>CAPEOX</strong>：capecitabine 第 1–14 天，每 3 週一循環，合併靜脈 oxaliplatin。</li>
           <li><strong>轉移性微衛星穩定／錯配修復正常疾病</strong>：FOLFOX 或 CAPEOX，可加或不加 bevacizumab。</li>
           <li><strong>轉移性錯配修復缺陷／微衛星高度不穩定或 POLE／POLD 突變</strong>：第一線可用免疫檢查點抑制劑，如 ipilimumab／nivolumab、pembrolizumab、dostarlimab。</li>
-          <li><strong><span class="highlight">長程同步放化療</span></strong>：<span class="highlight">選擇性淋巴結體積 45 Gy</span>；受侵犯直腸繫膜與淋巴結加量至 50.4–54 Gy；同步 5-FU 或 capecitabine。</li>
+          <li><strong><span class="highlight">長程同步放化療</span></strong>：<span class="highlight">選擇性淋巴結體積 45 Gy</span>；受侵犯直腸繫膜與淋巴結boost至 50.4–54 Gy；同步 5-FU 或 capecitabine。</li>
           <li><strong>Capecitabine 放射增敏</strong>：875 mg/m² 口服每日兩次，週一至週五，僅放療日服用。</li>
           <li><strong>5-FU 放射增敏</strong>：每日 225 mg/m² 或連續輸注。</li>
           <li><strong>手術時間</strong>：通常在術前同步放化療後 5–12 週。</li>
           <li><strong><span class="highlight">短程放療</span></strong>：25 Gy／5 次。</li>
           <li><strong>三維順形或強度調控放療</strong>：皆可使用；強度調控放療有助於降低腸道、膀胱與股骨頭劑量。</li>
-          <li><strong>靶區涵蓋</strong>：整個直腸繫膜、骶前、內髂與直腸繫膜淋巴結照射至 45 Gy；前方侵犯時納入外髂；受侵犯直腸繫膜或淋巴結加量至 50.4 Gy，有時 54 Gy。</li>
+          <li><strong>靶區涵蓋</strong>：整個直腸繫膜、骶前、內髂與直腸繫膜淋巴結照射至 45 Gy；前方侵犯時納入外髂；受侵犯直腸繫膜或淋巴結boost至 50.4 Gy，有時 54 Gy。</li>
           <li><strong>三維照野邊界</strong>：上界 L5-S1；側界超出骨盆最寬處 2 公分；下界低於原發腫瘤 3–5 公分，或遠端腫瘤至肛門緣標記。</li>
         </ul>
         
@@ -1021,7 +1041,7 @@
           <li><strong><span class="highlight">FFCD 9203</span></strong>：術前放療 45 Gy／25 次對比術前同步放化療合併 bolus 5-FU／leucovorin。總生存未改善，但 <span class="highlight">5 年局部復發 16% 降至 8%</span>，p=0.004；病理完全緩解 4% 升至 11%，p&lt;0.0001。</li>
           <li><strong>EORTC 22921</strong>：長程放療中加入同步化療可改善局部復發；術前同步放化療加術後化療的 5 年局部復發約 7.6%，術前單純放療約 17.1%。</li>
           <li><strong>German CAO/ARO/AIO-94</strong>：823 位距肛門緣小於 16 公分的直腸腺癌，比較術前同步放化療 → 全直腸繫膜切除 → 輔助 5-FU，與全直腸繫膜切除 → 術後同步放化療 → 輔助 5-FU。</li>
-          <li><strong>德國試驗方案</strong>：50.4 Gy／28 次加 120 小時 5-FU 輸注；術後組另加術後腫瘤床加量 5.4 Gy。</li>
+          <li><strong>德國試驗方案</strong>：50.4 Gy／28 次加 120 小時 5-FU 輸注；術後組另加術後腫瘤床boost 5.4 Gy。</li>
           <li><strong>德國試驗注意事項</strong>：屬於磁振影像廣泛使用前時代；術後組有 18% 後來發現為 T1–2N0，意味術前組可能約 20% 過度治療。</li>
           <li><strong><span class="highlight">德國試驗結果</span></strong>：<span class="highlight">5 年局部復發 6% 對 13%</span>，p=0.006；10 年局部復發 7% 對 10%，p=0.048；5 年總生存 76% 對 74%，p=0.80。</li>
           <li><strong>降期與保留括約肌</strong>：術前病理完全緩解約 8%；術後組第三期 40% 對術前組 25%。原預計腹會陰切除病人中，術前組 40% 可保留括約肌，術後組 20%。</li>
@@ -1096,8 +1116,8 @@
           <li><strong>較偏向長程同步放化療的情境</strong>：T4 原發、淋巴結陽性尤其直腸繫膜外淋巴結、直腸繫膜筋膜受侵犯、低位腫瘤、下三分之一腫瘤、括約肌或肛管侵犯，或計畫觀察等待。</li>
           <li><strong>OPRA</strong>：324 位第二至第三期病人，比較誘導 FOLFOX／CAPEOX 後接長程同步放化療，與長程同步放化療後接鞏固 FOLFOX／CAPEOX。8–12 週以肛門指診、軟式乙狀結腸鏡與磁振影像重新評估；完全或近完全反應者進入觀察等待。</li>
           <li><strong><span class="highlight">OPRA 結果</span></strong>：74% 進入觀察等待；再生長多在 2 年內且可用全直腸繫膜切除救援。3 年無病生存約 75%，局部無復發生存約 95%，遠端無轉移生存約 83%，總生存約 94%。<span class="highlight">器官保留 41% 對 53%</span>，鞏固化療較佳。</li>
-          <li><strong>OPERA</strong>：低至中段 T2–T3、N0 或小 N1、腫瘤小於 5 公分；45 Gy／25 次加 capecitabine 後，比較外照射加量 9 Gy／5 次與接觸式 X 光近接治療加量 90 Gy／3 次。3 年器官保留 59% 對 81%；腫瘤小於 3 公分者 63% 對 97%。</li>
-          <li><strong>MORPHEUS</strong>：第二／三期高劑量率近接治療加量試驗，基礎為 45 Gy／25 次外照射加 capecitabine 或 5-FU。期中結果：臨床完全緩解 50% 對 90%，2 年免全直腸繫膜切除生存 39% 對 77%。</li>
+          <li><strong>OPERA</strong>：低至中段 T2–T3、N0 或小 N1、腫瘤小於 5 公分；45 Gy／25 次加 capecitabine 後，比較外照射boost 9 Gy／5 次與接觸式 X 光近接治療boost 90 Gy／3 次。3 年器官保留 59% 對 81%；腫瘤小於 3 公分者 63% 對 97%。</li>
+          <li><strong>MORPHEUS</strong>：第二／三期高劑量率近接治療boost試驗，基礎為 45 Gy／25 次外照射加 capecitabine 或 5-FU。期中結果：臨床完全緩解 50% 對 90%，2 年免全直腸繫膜切除生存 39% 對 77%。</li>
           <li><strong>JANUS</strong>：長程同步放化療後接 mFOLFOX6／CAPEOX，對比長程同步放化療後接 mFOLFIRINOX；檢驗加強化療是否提高臨床完全緩解、器官保留與無病生存。</li>
           <li><strong>PROSPECT</strong>：1194 位嚴格篩選、適合保留括約肌全直腸繫膜切除的 T2N+ 或 T3N0/+ 病人。先給 FOLFOX6 6 次；若反應至少 20% 則直接手術，反應不足再放療；對比標準術前同步放化療。</li>
           <li><strong><span class="highlight">PROSPECT 結果</span></strong>：<span class="highlight">5 年無病生存 80.8% 對 78.6%</span>；總生存 89.5% 對 90.2%；局部復發 1.8% 對 1.6%；R0 切除 90.4% 對 91.2%。支持嚴格篩選中等風險病人可先化療並在反應良好時省略放療。</li>
@@ -1737,8 +1757,8 @@
           <li><strong>Mitomycin-C 劑量</strong>：10 mg/m² 靜脈推注，每 4 週一循環，共 2 循環。</li>
           <li><strong>5-FU 機轉與毒性</strong>：抑制胸苷酸合成酶；常見黏膜炎、口腔炎、噁心、嘔吐與腹瀉。</li>
           <li><strong>Mitomycin-C 機轉與毒性</strong>：DNA 交聯型烷化劑，低氧下活化；主要毒性為嗜中性白血球低下。</li>
-          <li><strong><span class="highlight">RTOG 0529 T1–T2N0</span></strong>：<span class="highlight">原發腫瘤 50.4 Gy／28 次；骨盆 42 Gy／28 次</span>；無淋巴結加量。</li>
-          <li><strong><span class="highlight">RTOG 0529 T3–T4N0</span></strong>：<span class="highlight">原發腫瘤 54 Gy／30 次；骨盆 45 Gy／30 次</span>；無淋巴結加量。</li>
+          <li><strong><span class="highlight">RTOG 0529 T1–T2N0</span></strong>：<span class="highlight">原發腫瘤 50.4 Gy／28 次；骨盆 42 Gy／28 次</span>；無淋巴結boost。</li>
+          <li><strong><span class="highlight">RTOG 0529 T3–T4N0</span></strong>：<span class="highlight">原發腫瘤 54 Gy／30 次；骨盆 45 Gy／30 次</span>；無淋巴結boost。</li>
           <li><strong>RTOG 0529 N1</strong>：原發腫瘤 54 Gy／30 次；骨盆 45 Gy／30 次；淋巴結小於等於 3 公分給 50.4 Gy／28 次，大於 3 公分給 54 Gy／30 次。</li>
           <li><strong><span class="highlight">反應評估</span></strong>：不要太早判定治療失敗。ACT II 事後分析顯示，<span class="highlight">許多 11 週時未完全緩解的病人會在 26 週達臨床完全緩解</span>。</li>
           <li><strong>實務時間點</strong>：若臨床安全，約於放療後 26 週，也就是約 6.5 個月評估反應。</li>
@@ -1818,7 +1838,7 @@
           <li><strong><span class="highlight">ACT II 事後分析</span></strong>：於 11、18、26 週評估臨床完全緩解；許多病人到 26 週才延遲達完全緩解；避免過早救援性腹會陰切除。</li>
           <li><strong>RTOG 9811</strong>：同步 5-FU／mitomycin-C 放化療，對比誘導 5-FU／cisplatin 後接 5-FU／cisplatin 同步放化療。</li>
           <li><strong>RTOG 9811 結果</strong>：5 年總生存 78% 對 71%；無病生存 68% 對 58%；無造口生存 72% 對 65%；支持避免誘導 cisplatin 策略。</li>
-          <li><strong>ACCORD 03</strong>：腫瘤至少 4 公分或淋巴結陽性；測試誘導 5-FU／cisplatin 與高劑量加量。無明確無造口生存效益；高劑量加量僅有未達顯著的趨勢。</li>
+          <li><strong>ACCORD 03</strong>：腫瘤至少 4 公分或淋巴結陽性；測試誘導 5-FU／cisplatin 與高劑量boost。無明確無造口生存效益；高劑量boost僅有未達顯著的趨勢。</li>
           <li><strong><span class="highlight">RTOG 0529</span></strong>：第二期劑量繪製強度調控放療；主要終點未達成，但降低急性血液毒性、第 3 級以上皮膚毒性與胃腸毒性。</li>
           <li><strong>RTOG 0529 計畫提醒</strong>：中央審查後 <span class="highlight">81% 需要重新計畫</span>，表示肛門癌強度調控放療的輪廓描繪、劑量繪製、淋巴結涵蓋與正常器官保護需要高度專業。</li>
           <li><strong>PLATO ACT III</strong>：T1N0/NX 局部切除後，測試小型肛門邊緣腫瘤是否可選擇性同步放化療；主要終點為 3 年局部區域無失敗生存 90%。</li>
@@ -1895,7 +1915,7 @@
           <li><strong><span class="highlight">食道癌根治性同步放化療</span></strong>：<span class="highlight">50.4 Gy／28 次</span>合併同步化療；不常規升劑量。</li>
           <li><strong>頸段食道癌</strong>：常用 66–70 Gy，接近頭頸癌劑量。</li>
           <li><strong>食道癌原發臨床靶體積</strong>：原發腫瘤上下各加 3–4 公分；若延伸到胃，可用 2 公分；徑向加 1 公分並依解剖修正。</li>
-          <li><strong>直腸癌長程同步放化療</strong>：選擇性骨盆 45 Gy，加量至 50.4–54 Gy，合併 capecitabine 或 5-FU。</li>
+          <li><strong>直腸癌長程同步放化療</strong>：選擇性骨盆 45 Gy，boost至 50.4–54 Gy，合併 capecitabine 或 5-FU。</li>
           <li><strong><span class="highlight">直腸癌短程放療</span></strong>：<span class="highlight">25 Gy／5 次</span>。</li>
           <li><strong>直腸癌觀察等待追蹤</strong>：肛門指診、軟式乙狀結腸鏡與癌胚抗原前 2 年每 3 個月一次，之後每 6 個月至第 5 年；磁振影像每 6 個月一次共 3 年；胸腹骨盆電腦斷層每 6 個月一次共 5 年。</li>
           <li><strong>胰臟癌術後同步放化療</strong>：45–50.4 Gy／25–28 次，加 5-FU 或 capecitabine。</li>

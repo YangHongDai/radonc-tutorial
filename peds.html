@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Pediatric Radiation Oncology — Rad Onc Tutorial</title>
+  <title>Pediatric Radiation Oncology — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-peds">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -138,7 +158,7 @@
 
 <p>因此，兒童放射治療（RT）的核心並非單純提高劑量，而是採用<span class="highlight">多模式、風險調整治療</span>，在治癒與長期毒性之間取得精確平衡。治療時應使用最小必要照射體積與最低有效劑量，並優先考量<span class="highlight">生長發育、神經認知、內分泌功能、生育功能與第二原發惡性腫瘤</span>。若手術或化學治療（CHT）已能達成控制，應避免過度放射治療；但也不能為了降階治療而犧牲疾病控制。</p>
 
-<p>此原則貫穿所有兒童腫瘤：髓母細胞瘤試圖降低顱脊髓照射（CSI）劑量，但<span class="highlight">3–7 歲標準風險病人使用 18 Gy CSI 會降低事件無存活（EFS）與整體存活（OS）</span>；室管膜瘤最重要的預後因子是手術切除程度，但<span class="highlight">不應僅因年齡 &lt;3 歲而一律延後放射治療</span>；神經母細胞瘤以<span class="highlight">21.6 Gy 為標準劑量，對肉眼殘存病灶加量未改善結果</span>；Wilms 腫瘤則要求<span class="highlight">術後第 10–14 天內開始放射治療</span>，因治療時序會影響局部控制。</p>
+<p>此原則貫穿所有兒童腫瘤：髓母細胞瘤試圖降低顱脊髓照射（CSI）劑量，但<span class="highlight">3–7 歲標準風險病人使用 18 Gy CSI 會降低事件無存活（EFS）與整體存活（OS）</span>；室管膜瘤最重要的預後因子是手術切除程度，但<span class="highlight">不應僅因年齡 &lt;3 歲而一律延後放射治療</span>；神經母細胞瘤以<span class="highlight">21.6 Gy 為標準劑量，對肉眼殘存病灶boost未改善結果</span>；Wilms 腫瘤則要求<span class="highlight">術後第 10–14 天內開始放射治療</span>，因治療時序會影響局部控制。</p>
 
 <p class="section-kicker"><strong>第二部分：兒童中樞神經系統腫瘤與顱脊髓照射</strong></p>
 
@@ -175,13 +195,13 @@
 <caption>兒童 CNS 腫瘤的放射治療與全身治療概覽</caption>
 <thead><tr><th scope="col">腫瘤類型</th><th scope="col">放射治療</th><th scope="col">全身治療</th></tr></thead>
 <tbody>
-<tr><td>髓母細胞瘤</td><td>標準風險：<span class="highlight">23.4 Gy CSI＋腫瘤床加量至 54 Gy</span>；高風險：<span class="highlight">36 Gy CSI＋後顱窩加量至 55.8 Gy</span>；轉移病灶依位置加量至 39.6／45／50.4 Gy</td><td>同步長春新鹼；輔助順鉑為基礎的化學治療，最多 9 個療程</td></tr>
+<tr><td>髓母細胞瘤</td><td>標準風險：<span class="highlight">23.4 Gy CSI＋腫瘤床boost至 54 Gy</span>；高風險：<span class="highlight">36 Gy CSI＋後顱窩boost至 55.8 Gy</span>；轉移病灶依位置boost至 39.6／45／50.4 Gy</td><td>同步長春新鹼；輔助順鉑為基礎的化學治療，最多 9 個療程</td></tr>
 <tr><td>室管膜瘤</td><td>腫瘤床 54–59.4 Gy；只有轉移性疾病且年齡 &gt;3 歲時使用 36 Gy CSI</td><td>主要用於將次全切除轉化為可再次切除的疾病</td></tr>
 <tr><td>低惡性度膠質瘤</td><td>即使為次全切除，也可觀察至疾病進展</td><td>標靶治療的重要性逐漸增加</td></tr>
 <tr><td>高惡性度膠質瘤</td><td>全切除後 54 Gy；次全切除後 59.4 Gy</td><td>化學治療效益有限，優先考慮臨床試驗</td></tr>
 <tr><td>顱咽管瘤</td><td>全切除後觀察；否則 54 Gy／30 次，或選擇性立體定位放射手術（SRS）</td><td>不適用</td></tr>
-<tr><td>生殖瘤</td><td>全腦室照射（WVI）加原發病灶加量；化療後完全緩解（CR）使用 18 Gy WVI，部分緩解（PR）使用 24 Gy WVI，再加量 12 Gy</td><td>卡鉑／依托泊苷</td></tr>
-<tr><td>非生殖瘤性生殖細胞腫瘤（NGGCT）</td><td>36 Gy CSI＋原發病灶加量 18 Gy，總劑量 54 Gy</td><td>卡鉑／依托泊苷＋異環磷醯胺／依托泊苷</td></tr>
+<tr><td>生殖瘤</td><td>全腦室照射（WVI）加原發病灶boost；化療後完全緩解（CR）使用 18 Gy WVI，部分緩解（PR）使用 24 Gy WVI，再boost 12 Gy</td><td>卡鉑／依托泊苷</td></tr>
+<tr><td>非生殖瘤性生殖細胞腫瘤（NGGCT）</td><td>36 Gy CSI＋原發病灶boost 18 Gy，總劑量 54 Gy</td><td>卡鉑／依托泊苷＋異環磷醯胺／依托泊苷</td></tr>
 <tr><td>非典型畸胎樣／橫紋樣腫瘤（ATRT）</td><td>年齡 &lt;3 歲時原發病灶 50.4 Gy；年齡 &gt;3 歲可考慮 36 Gy CSI</td><td>依機構治療方案決定</td></tr>
 </tbody>
 </table>
@@ -326,7 +346,7 @@
 <ol>
 <li>最大安全切除，目標為全切除（GTR）或近全切除（NTR），殘存病灶 &lt;1.5 cm²。</li>
 <li>完整分期：術後 48–72 小時腦部 MRI、脊椎 MRI 與 LP。</li>
-<li>年齡 &gt;3 歲：CSI 加局部加量。</li>
+<li>年齡 &gt;3 歲：CSI 加局部boost。</li>
 <li>同步每週長春新鹼，必要時合併卡鉑。</li>
 <li>輔助順鉑為基礎的維持化學治療。</li>
 </ol>
@@ -337,7 +357,7 @@
 <div class="table-wrap">
 <table class="oncology-table dose-table">
 <caption>髓母細胞瘤放射治療劑量</caption>
-<thead><tr><th scope="col">風險群／病灶</th><th scope="col">CSI 劑量</th><th scope="col">加量範圍</th><th scope="col">加量後總劑量</th></tr></thead>
+<thead><tr><th scope="col">風險群／病灶</th><th scope="col">CSI 劑量</th><th scope="col">boost範圍</th><th scope="col">boost後總劑量</th></tr></thead>
 <tbody>
 <tr><td>標準風險</td><td><span class="highlight">23.4 Gy</span></td><td>腫瘤床／涉及部位</td><td><span class="highlight">54 Gy</span></td></tr>
 <tr><td>高風險</td><td><span class="highlight">36 Gy</span></td><td>後顱窩</td><td><span class="highlight">55.8 Gy</span></td></tr>
@@ -348,15 +368,15 @@
 </table>
 </div>
 
-<p>標準風險治療為 23.4 Gy CSI、腫瘤床加量至 54 Gy、同步長春新鹼與維持化學治療。高風險治療為 36 Gy CSI、後顱窩加量至 55.8 Gy，並依轉移病灶位置追加劑量。</p>
+<p>標準風險治療為 23.4 Gy CSI、腫瘤床boost至 54 Gy、同步長春新鹼與維持化學治療。高風險治療為 36 Gy CSI、後顱窩boost至 55.8 Gy，並依轉移病灶位置追加劑量。</p>
 
 <h3>六、關鍵證據</h3>
-<p><span class="highlight">ACNS 0331</span> 評估兩個降階問題：標準風險病人能否將後顱窩加量縮小為涉及部位放射治療，以及 3–7 歲病人的 CSI 能否由 23.4 Gy 降為 18 Gy。結果顯示，涉及部位加量不會降低 EFS／OS；但<span class="highlight">18 Gy CSI 顯著劣於 23.4 Gy：EFS 71% 對 83%，OS 78% 對 87%</span>。</p>
+<p><span class="highlight">ACNS 0331</span> 評估兩個降階問題：標準風險病人能否將後顱窩boost縮小為涉及部位放射治療，以及 3–7 歲病人的 CSI 能否由 23.4 Gy 降為 18 Gy。結果顯示，涉及部位boost不會降低 EFS／OS；但<span class="highlight">18 Gy CSI 顯著劣於 23.4 Gy：EFS 71% 對 83%，OS 78% 對 87%</span>。</p>
 
-<p><span class="highlight">ACNS 0332</span> 納入 3–21 歲高風險髓母細胞瘤，包括轉移性疾病、間變型病理或殘存 &gt;1.5 cm²。所有病人接受 36 Gy CSI、後顱窩加量至 55.8 Gy，以及長春新鹼／順鉑／環磷醯胺維持治療。試驗評估放射治療期間同步卡鉑與維持期異維 A 酸；異維 A 酸組因無效而提早關閉。</p>
+<p><span class="highlight">ACNS 0332</span> 納入 3–21 歲高風險髓母細胞瘤，包括轉移性疾病、間變型病理或殘存 &gt;1.5 cm²。所有病人接受 36 Gy CSI、後顱窩boost至 55.8 Gy，以及長春新鹼／順鉑／環磷醯胺維持治療。試驗評估放射治療期間同步卡鉑與維持期異維 A 酸；異維 A 酸組因無效而提早關閉。</p>
 
 <div class="clinical-note">
-高頻考點：標準風險使用<span class="highlight">23.4 Gy CSI＋腫瘤床加量至 54 Gy</span>，不能將 3–7 歲標準風險病人的 CSI 降至 18 Gy；高風險使用<span class="highlight">36 Gy CSI＋後顱窩加量至 55.8 Gy</span>，轉移病灶再依位置加量。
+高頻考點：標準風險使用<span class="highlight">23.4 Gy CSI＋腫瘤床boost至 54 Gy</span>，不能將 3–7 歲標準風險病人的 CSI 降至 18 Gy；高風險使用<span class="highlight">36 Gy CSI＋後顱窩boost至 55.8 Gy</span>，轉移病灶再依位置boost。
 </div>
             
       </div>
@@ -650,10 +670,10 @@
 </div>
 
 <h3>八、關鍵證據：ANBL 0532</h3>
-<p><span class="highlight">ANBL 0532</span> 納入高風險神經母細胞瘤，接受誘導化療、手術、單次或串聯移植與放射治療。<span class="highlight">串聯移植改善 EFS：62% 對 48%，但未改善 OS</span>。放射治療部分使用術前腫瘤體積 21.6 Gy，並對肉眼殘存病灶追加 14.4 Gy，與歷史上單獨 21.6 Gy 比較；<span class="highlight">加量未改善局部進展、EFS 或 OS，因此 21.6 Gy 仍是標準</span>。</p>
+<p><span class="highlight">ANBL 0532</span> 納入高風險神經母細胞瘤，接受誘導化療、手術、單次或串聯移植與放射治療。<span class="highlight">串聯移植改善 EFS：62% 對 48%，但未改善 OS</span>。放射治療部分使用術前腫瘤體積 21.6 Gy，並對肉眼殘存病灶追加 14.4 Gy，與歷史上單獨 21.6 Gy 比較；<span class="highlight">boost未改善局部進展、EFS 或 OS，因此 21.6 Gy 仍是標準</span>。</p>
 
 <div class="clinical-note">
-高頻考點：嬰幼兒、帶鈣化且跨越中線的腫塊、HVA／VMA 升高，應想到神經母細胞瘤。高風險治療順序為<span class="highlight">化療 → 手術 → 幹細胞移植 → 21.6 Gy 放射治療 → 抗 GD2／異維 A 酸</span>；21.6 Gy 後不常規對肉眼殘存病灶加量。
+高頻考點：嬰幼兒、帶鈣化且跨越中線的腫塊、HVA／VMA 升高，應想到神經母細胞瘤。高風險治療順序為<span class="highlight">化療 → 手術 → 幹細胞移植 → 21.6 Gy 放射治療 → 抗 GD2／異維 A 酸</span>；21.6 Gy 後不常規對肉眼殘存病灶boost。
 </div>
             
       </div>
@@ -984,7 +1004,7 @@
 <tr><td>延遲原發病灶切除後完全切除</td><td>36 Gy</td></tr>
 <tr><td>延遲切除後顯微殘存</td><td>41.4 Gy</td></tr>
 <tr><td>延遲切除後肉眼殘存</td><td>50.4–59.4 Gy</td></tr>
-<tr><td>第 IV 期肺轉移</td><td>WLI 12–15 Gy，每次 1.5 Gy；再將腫瘤加量至 41.4 Gy</td></tr>
+<tr><td>第 IV 期肺轉移</td><td>WLI 12–15 Gy，每次 1.5 Gy；再將腫瘤boost至 41.4 Gy</td></tr>
 <tr><td>骨轉移</td><td>&lt;5 cm 可用立體定位放射治療（SBRT）；否則 50.4 Gy</td></tr>
 </tbody>
 </table>
@@ -1166,15 +1186,15 @@
 <thead><tr><th scope="col">臨床情境</th><th scope="col">劑量</th><th scope="col">靶區概念</th></tr></thead>
 <tbody>
 <tr><td>術前放射治療</td><td><span class="highlight">36 Gy</span></td><td>化療前 GTV</td></tr>
-<tr><td>術前放療後 R1，術後加量</td><td><span class="highlight">總劑量 50.4 Gy</span></td><td>對殘存或高風險切緣加量</td></tr>
-<tr><td>術前放療後 R2，術後加量</td><td><span class="highlight">總劑量 55.8 Gy</span></td><td>肉眼殘存病灶</td></tr>
-<tr><td>根治性放射治療</td><td><span class="highlight">45 Gy＋加量至 55.8 Gy</span></td><td>45 Gy 涵蓋化療前體積；加量涵蓋化療後殘存</td></tr>
+<tr><td>術前放療後 R1，術後boost</td><td><span class="highlight">總劑量 50.4 Gy</span></td><td>對殘存或高風險切緣boost</td></tr>
+<tr><td>術前放療後 R2，術後boost</td><td><span class="highlight">總劑量 55.8 Gy</span></td><td>肉眼殘存病灶</td></tr>
+<tr><td>根治性放射治療</td><td><span class="highlight">45 Gy＋boost至 55.8 Gy</span></td><td>45 Gy 涵蓋化療前體積；boost涵蓋化療後殘存</td></tr>
 <tr><td>選擇性不可切除疾病的根治性治療</td><td>70.2 Gy</td><td>Tata Memorial 升劑量策略</td></tr>
 <tr><td>術後 R1</td><td>50.4 Gy</td><td>依壞死程度使用化療後或化療前體積</td></tr>
 <tr><td>術後 R2</td><td>55.8 Gy</td><td>肉眼殘存病灶</td></tr>
-<tr><td>肺轉移</td><td><span class="highlight">全肺照射 15 Gy，每次 1.5 Gy</span></td><td>殘存病灶加量至約 50 Gy</td></tr>
+<tr><td>肺轉移</td><td><span class="highlight">全肺照射 15 Gy，每次 1.5 Gy</span></td><td>殘存病灶boost至約 50 Gy</td></tr>
 <tr><td>骨轉移</td><td>45–55.8 Gy</td><td>可考慮 SBRT</td></tr>
-<tr><td>椎體</td><td>45 Gy＋加量至 50.4 Gy</td><td>整個椎體加適當邊界</td></tr>
+<tr><td>椎體</td><td>45 Gy＋boost至 50.4 Gy</td><td>整個椎體加適當邊界</td></tr>
 <tr><td>腹膜轉移／惡性腹水</td><td>24 Gy，每次 1.5 Gy</td><td>全腹照射</td></tr>
 </tbody>
 </table>
@@ -1190,7 +1210,7 @@
 <p><span class="highlight">AEWS1221</span> 比較轉移性尤文肉瘤使用 VDC／IE 合併或不合併 ganitumab。Ganitumab 未改善 EFS 或 OS，並可能增加毒性，包括胸部放射治療後肺炎。</p>
 
 <div class="clinical-note">
-高頻考點：尤文肉瘤是具放射敏感性的骨幹小圓藍細胞腫瘤，具有 EWSR1 融合。標準全身治療是間隔壓縮 VDC／IE；第 13 週進行局部治療；根治性放射治療為<span class="highlight">化療前體積 45 Gy，再將化療後殘存加量至 55.8 Gy</span>；肺轉移使用全肺照射 15 Gy／10 次。
+高頻考點：尤文肉瘤是具放射敏感性的骨幹小圓藍細胞腫瘤，具有 EWSR1 融合。標準全身治療是間隔壓縮 VDC／IE；第 13 週進行局部治療；根治性放射治療為<span class="highlight">化療前體積 45 Gy，再將化療後殘存boost至 55.8 Gy</span>；肺轉移使用全肺照射 15 Gy／10 次。
 </div>
             
       </div>
@@ -1298,11 +1318,11 @@
 <caption>兒童腫瘤高頻放射治療劑量</caption>
 <thead><tr><th scope="col">疾病／臨床情境</th><th scope="col">標準或常用劑量</th></tr></thead>
 <tbody>
-<tr><td>標準風險髓母細胞瘤</td><td><span class="highlight">23.4 Gy CSI＋腫瘤床加量至 54 Gy</span></td></tr>
-<tr><td>高風險髓母細胞瘤</td><td><span class="highlight">36 Gy CSI＋後顱窩加量至 55.8 Gy</span></td></tr>
+<tr><td>標準風險髓母細胞瘤</td><td><span class="highlight">23.4 Gy CSI＋腫瘤床boost至 54 Gy</span></td></tr>
+<tr><td>高風險髓母細胞瘤</td><td><span class="highlight">36 Gy CSI＋後顱窩boost至 55.8 Gy</span></td></tr>
 <tr><td>髓母細胞瘤局部轉移</td><td>脊髓內 45 Gy；脊髓末端以下 50.4 Gy</td></tr>
 <tr><td>局限性室管膜瘤</td><td><span class="highlight">腫瘤床 59.4 Gy；年齡 &lt;18 個月且 GTR 可用 54 Gy</span></td></tr>
-<tr><td>轉移性室管膜瘤</td><td>36 Gy CSI＋局部加量</td></tr>
+<tr><td>轉移性室管膜瘤</td><td>36 Gy CSI＋局部boost</td></tr>
 <tr><td>高風險神經母細胞瘤</td><td><span class="highlight">原發病灶與持續轉移病灶 21.6 Gy／12 次</span></td></tr>
 <tr><td>神經母細胞瘤緊急肝腫大</td><td>全肝 4.5 Gy／3 次</td></tr>
 <tr><td>Wilms 腫瘤側腹</td><td><span class="highlight">10.8 Gy／6 次</span></td></tr>
@@ -1400,12 +1420,12 @@
 <thead><tr><th scope="col">疾病</th><th scope="col">核心特徵</th><th scope="col">重要檢查</th><th scope="col">治療主軸</th><th scope="col">放射治療角色</th></tr></thead>
 <tbody>
 <tr><td>兒童 CNS 腫瘤</td><td>多位於幕下；症狀由解剖位置決定</td><td><span class="highlight">腦／脊椎 MRI、術後 48–72 小時 MRI、術後 10–14 天 LP</span></td><td>除生殖細胞腫瘤通常只切片外，多數先行最大安全切除</td><td>依疾病使用 CSI 或局部放射治療</td></tr>
-<tr><td>髓母細胞瘤</td><td>後顱窩胚胎性腫瘤，可經 CSF 播散與下墜轉移</td><td>脊椎 MRI 與 CSF 細胞學都需要</td><td>手術 → CSI／加量 → 順鉑為基礎的化療</td><td><span class="highlight">標準風險 23.4／54 Gy；高風險 36／55.8 Gy</span></td></tr>
+<tr><td>髓母細胞瘤</td><td>後顱窩胚胎性腫瘤，可經 CSF 播散與下墜轉移</td><td>脊椎 MRI 與 CSF 細胞學都需要</td><td>手術 → CSI／boost → 順鉑為基礎的化療</td><td><span class="highlight">標準風險 23.4／54 Gy；高風險 36／55.8 Gy</span></td></tr>
 <tr><td>室管膜瘤</td><td>第四腦室／後顱窩腫瘤，以局部失敗為主</td><td>腦／脊椎 MRI、LP</td><td><span class="highlight">GTR 是最重要因素，之後接受局部放射治療</span></td><td>局部 59.4 Gy；只有轉移性疾病使用 CSI</td></tr>
 <tr><td>神經母細胞瘤</td><td>嬰幼兒神經脊腫瘤；HVA／VMA 升高；常跨越中線</td><td>CT／MRI、MIBG、尿液兒茶酚胺與骨髓評估</td><td>化療 → 手術 → 移植 → 抗 GD2／異維 A 酸</td><td><span class="highlight">高風險原發病灶與持續轉移病灶 21.6 Gy</span></td></tr>
 <tr><td>Wilms 腫瘤</td><td>腎臟內生腫瘤，好發 3–4 歲，較少跨越中線</td><td>影像＋美國策略的先行腎切除與淋巴結取樣</td><td>手術＋風險調整化療</td><td><span class="highlight">第 10–14 天開始；側腹 10.8 Gy、全腹 10.5 Gy、全肺 12 Gy</span></td></tr>
 <tr><td>橫紋肌肉瘤</td><td>兒童最常見軟組織肉瘤</td><td>原發病灶 MRI／CT、全身分期、骨髓與部位特異淋巴結評估</td><td>手術／切片＋VAC 或 VAC／VI</td><td><span class="highlight">只有第 I 組胚胎型可省略；其餘依分組與殘存程度給予放療</span></td></tr>
-<tr><td>尤文肉瘤</td><td>具放射敏感性的骨幹骨腫瘤，帶有 EWSR1 融合</td><td>原發病灶 MRI、胸部 CT／PET／骨與骨髓評估</td><td>VDC／IE → 第 13 週局部治療 → VDC／IE</td><td><span class="highlight">根治性 45 Gy 加量至 55.8 Gy；WLI 15 Gy</span></td></tr>
+<tr><td>尤文肉瘤</td><td>具放射敏感性的骨幹骨腫瘤，帶有 EWSR1 融合</td><td>原發病灶 MRI、胸部 CT／PET／骨與骨髓評估</td><td>VDC／IE → 第 13 週局部治療 → VDC／IE</td><td><span class="highlight">根治性 45 Gy boost至 55.8 Gy；WLI 15 Gy</span></td></tr>
 </tbody>
 </table>
 </div>

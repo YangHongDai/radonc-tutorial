@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Brain Metastases — Rad Onc Tutorial</title>
+  <title>Brain Metastases — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-brain-mets">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -299,7 +319,7 @@
 <tr><td><strong>Patchell II</strong></td><td>單一腦轉移切除後，術後 WBRT 50.4 Gy / 28 次，對照 觀察。</td><td>原病灶位置復發 10% 對 46%；其他腦區復發 14% 對 37%；神經學死亡 14% 對 44%；總生存期無差異。</td><td><span class="highlight">術後 WBRT 可改善顱內控制並降低神經學死亡，但不改善總生存期</span>。</td></tr>
 <tr><td><strong>QUARTZ</strong></td><td>非小細胞肺癌腦轉移，不適合手術/SRS；dexamethasone 合併 WBRT 20 Gy / 5 次，對照 單純支持性照護。</td><td>總生存期與品質調整生命年 沒有顯著差異；中位總生存期約 2 個月。</td><td>預期存活期有限、體能狀態不佳、轉移性非小細胞肺癌腦轉移，<span class="highlight">最佳支持性照護／安寧緩和醫療是合理選項</span>，不應自動給 WBRT。</td></tr>
 <tr><td><strong>RTOG 6901 / RTOG 7361</strong></td><td>WBRT 劑量研究。</td><td>建立 30 Gy / 10 次 為最常用 WBRT 方案；20 Gy / 5 次 可提供相近的症狀緩解效果。</td><td>標準 WBRT 劑量 = 30 Gy / 10 次。</td></tr>
-<tr><td><strong>RTOG 9104</strong></td><td>30 Gy / 10 次 對 加速超分次治療 32 Gy / 20 次 後續加量至 54.4 Gy / 34 次 每日兩次。</td><td>沒有存活或毒性效益；加速超分次組有嚴重耳毒性與致命性腦水腫。</td><td>不支持加速超分次全腦放療。</td></tr>
+<tr><td><strong>RTOG 9104</strong></td><td>30 Gy / 10 次 對 加速超分次治療 32 Gy / 20 次 後續boost至 54.4 Gy / 34 次 每日兩次。</td><td>沒有存活或毒性效益；加速超分次組有嚴重耳毒性與致命性腦水腫。</td><td>不支持加速超分次全腦放療。</td></tr>
 </tbody>
 </table>
 </div>

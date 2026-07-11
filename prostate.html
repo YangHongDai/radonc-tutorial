@@ -9,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Prostate Cancer — Rad Onc Tutorial</title>
+  <title>Prostate Cancer — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -18,6 +18,28 @@
   
 
   
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 </head>
 
 <body class="topic-page page-prostate">
@@ -29,11 +51,9 @@
     <a href="index.html" class="top-nav-brand">
       <span>☢️</span>
       <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
+        data-zh="OncoBeam"
+        data-en="OncoBeam"
+      >OncoBeam</span>
     </a>
 
     <ul class="top-nav-links">
@@ -527,10 +547,10 @@
 
       <div
         class="section-label "
-        data-zh="局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部加量"
+        data-zh="局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部boost"
         data-en="LOCAL THERAPY: Surgery, EBRT, brachytherapy, hypofractionation, SBRT, focal boost, and radiobiology"
       >
-        局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部加量
+        局部治療與放射生物學：手術、體外放射治療、近接治療、低分次治療與局部boost
       </div>
 
       <h2
@@ -546,7 +566,7 @@
         data-lang="zh"
       >
         <h3>一、局部治療選項</h3>
-<p><span class="highlight">局限性攝護腺癌的治療應依風險分層與患者特徵個別化規劃</span>。局部治療包括根治性攝護腺切除術、單獨體外放射治療（EBRT）、單獨近接治療、EBRT 合併近接治療加量、中度低分次放射治療、SBRT，以及攝護腺內局部病灶加量。骨盆淋巴結轉移風險較高時，手術可考慮骨盆淋巴結廓清術；放射治療可考慮加入骨盆淋巴結照射。</p>
+<p><span class="highlight">局限性攝護腺癌的治療應依風險分層與患者特徵個別化規劃</span>。局部治療包括根治性攝護腺切除術、單獨體外放射治療（EBRT）、單獨近接治療、EBRT 合併近接治療boost、中度低分次放射治療、SBRT，以及攝護腺內局部病灶boost。骨盆淋巴結轉移風險較高時，手術可考慮骨盆淋巴結廓清術；放射治療可考慮加入骨盆淋巴結照射。</p>
 <p>全身性治療以 ADT 為核心：<span class="highlight">不利型中度風險合併短期 ADT 4–6 個月；高風險或更高風險合併長期 ADT 18–36 個月</span>。</p>
 
 <h3>二、手術</h3>
@@ -561,9 +581,9 @@
       <tr><td>傳統分次劑量升階 EBRT</td><td>根治性治療；現代常用總劑量約 78–79.2 Gy</td></tr>
       <tr><td>中度低分次放射治療</td><td>60 Gy／20 次或 70 Gy／28 次；現代標準之一</td></tr>
       <tr><td>SBRT／超低分次放射治療</td><td>例如 36.25 Gy／5 次；主要用於經選擇的低／中度風險患者</td></tr>
-      <tr><td>LDR／HDR 近接治療</td><td>低風險或有利型中度風險可單獨治療；不利型中度風險／高風險可作為加量</td></tr>
-      <tr><td>EBRT + 近接治療加量</td><td>可加強生化控制，但泌尿生殖系統毒性較高</td></tr>
-      <tr><td>FLAME 式局部病灶加量</td><td>對 MRI 定義的攝護腺內主要病灶進行等毒性限制下加量</td></tr>
+      <tr><td>LDR／HDR 近接治療</td><td>低風險或有利型中度風險可單獨治療；不利型中度風險／高風險可作為boost</td></tr>
+      <tr><td>EBRT + 近接治療boost</td><td>可加強生化控制，但泌尿生殖系統毒性較高</td></tr>
+      <tr><td>FLAME 式局部病灶boost</td><td>對 MRI 定義的攝護腺內主要病灶進行等毒性限制下boost</td></tr>
       <tr><td>骨盆淋巴結放射治療</td><td>高風險、極高風險、N+ 或淋巴結轉移風險較高的情境</td></tr>
     </tbody>
   </table>
@@ -613,10 +633,10 @@
 
       <div
         class="section-label "
-        data-zh="劑量升階：傳統劑量升階、FLAME 腫瘤內局部加量與 ASCENDE-RT 近接治療加量"
+        data-zh="劑量升階：傳統劑量升階、FLAME 腫瘤內局部boost與 ASCENDE-RT 近接治療boost"
         data-en="DOSE ESCALATION: Conventional escalation, FLAME, and ASCENDE-RT"
       >
-        劑量升階：傳統劑量升階、FLAME 腫瘤內局部加量與 ASCENDE-RT 近接治療加量
+        劑量升階：傳統劑量升階、FLAME 腫瘤內局部boost與 ASCENDE-RT 近接治療boost
       </div>
 
       <h2
@@ -648,15 +668,15 @@
 </div>
 <p>現代根治性 EBRT 應採用劑量升階傳統分次，或透過低分次治療達到生物等效劑量升階；66–70 Gy 通常已不屬於現代局限性疾病的標準根治劑量。</p>
 
-<h3>二、FLAME：攝護腺內局部病灶加量</h3>
-<p>FLAME 為第三期隨機試驗，納入中度與高風險患者。標準組對攝護腺給予 77 Gy／35 次；實驗組另對影像可見腫瘤進行最高 95 Gy 的同步整合加量。治療計畫採等毒性限制策略：危險器官限制優先於完整覆蓋 95 Gy 加量區。</p>
+<h3>二、FLAME：攝護腺內局部病灶boost</h3>
+<p>FLAME 為第三期隨機試驗，納入中度與高風險患者。標準組對攝護腺給予 77 Gy／35 次；實驗組另對影像可見腫瘤進行最高 95 Gy 的同步整合boost。治療計畫採等毒性限制策略：危險器官限制優先於完整覆蓋 95 Gy boost區。</p>
 <p><span class="highlight">FLAME 將 5 年無生化疾病存活由約 85% 提高至 92%</span>，且未顯著增加晚期泌尿生殖或腸胃道毒性；但整體存活、無遠端轉移存活及攝護腺癌特異性存活無顯著差異。</p>
-<div class="clinical-note">FLAME 的重點不是將所有可見病灶固定照射至 95 Gy，而是在高品質 MRI、影像導引與危險器官保護下，對主要攝護腺內病灶進行個別化等毒性加量。</div>
+<div class="clinical-note">FLAME 的重點不是將所有可見病灶固定照射至 95 Gy，而是在高品質 MRI、影像導引與危險器官保護下，對主要攝護腺內病灶進行個別化等毒性boost。</div>
 
-<h3>三、ASCENDE-RT：EBRT 加量與 LDR 近接治療加量</h3>
-<p>ASCENDE-RT 納入中度與高風險患者。所有患者接受 12 個月 ADT，以及攝護腺、儲精囊與骨盆 46 Gy／23 次；之後隨機分派至 EBRT 加量至總劑量 78 Gy，或 I-125 LDR 近接治療加量 115 Gy。</p>
-<p><span class="highlight">15 年 bPFS 約為 LDR 加量 80%，EBRT 加量 53%</span>；但整體存活、癌症特異性存活與無遠端轉移存活無顯著差異。LDR 加量的代價是較高的泌尿生殖系統毒性，<span class="highlight">第 3 級以上 GU 毒性約 18% vs 5%</span>，並增加尿道狹窄、尿墊使用與晚期導尿需求。</p>
-<div class="clinical-note">近接治療加量是強力的生化控制強化策略，但必須審慎評估治療前 IPSS、攝護腺大小、中葉突出、既往 TURP、解剖條件及患者對 GU 毒性的接受度。</div>
+<h3>三、ASCENDE-RT：EBRT boost與 LDR 近接治療boost</h3>
+<p>ASCENDE-RT 納入中度與高風險患者。所有患者接受 12 個月 ADT，以及攝護腺、儲精囊與骨盆 46 Gy／23 次；之後隨機分派至 EBRT boost至總劑量 78 Gy，或 I-125 LDR 近接治療boost 115 Gy。</p>
+<p><span class="highlight">15 年 bPFS 約為 LDR boost 80%，EBRT boost 53%</span>；但整體存活、癌症特異性存活與無遠端轉移存活無顯著差異。LDR boost的代價是較高的泌尿生殖系統毒性，<span class="highlight">第 3 級以上 GU 毒性約 18% vs 5%</span>，並增加尿道狹窄、尿墊使用與晚期導尿需求。</p>
+<div class="clinical-note">近接治療boost是強力的生化控制強化策略，但必須審慎評估治療前 IPSS、攝護腺大小、中葉突出、既往 TURP、解剖條件及患者對 GU 毒性的接受度。</div>
       </div>
 
       <div
@@ -826,7 +846,7 @@
 <p>預防性骨盆淋巴結放射治療主要用於高風險或極高風險攝護腺癌，尤其隱匿性淋巴結侵犯風險較高者。決策應綜合 PSA、Gleason／GG、T 分期、陽性切片比例、影像品質、ADT 使用，以及根治性或術後治療情境。</p>
 
 <h3>二、POP-RT</h3>
-<p>POP-RT 納入依 Roach 公式推估淋巴結侵犯風險 <span class="highlight">≥20%</span> 的高風險患者，比較全骨盆放射治療與僅攝護腺放射治療。全骨盆組對骨盆淋巴結給予 50 Gy／25 次，並以同步整合加量對攝護腺給予 68 Gy；所有患者至少接受 2 年 ADT。</p>
+<p>POP-RT 納入依 Roach 公式推估淋巴結侵犯風險 <span class="highlight">≥20%</span> 的高風險患者，比較全骨盆放射治療與僅攝護腺放射治療。全骨盆組對骨盆淋巴結給予 50 Gy／25 次，並以同步整合boost對攝護腺給予 68 Gy；所有患者至少接受 2 年 ADT。</p>
 <div class="table-wrap">
   <table class="oncology-table pca-table">
     <caption>POP-RT 主要結果</caption>
@@ -1573,9 +1593,9 @@
       <tr><td>傳統分次劑量升階 EBRT</td><td>78–79.2 Gy／39–44 次</td></tr>
       <tr><td>中度低分次放射治療</td><td><span class="highlight">70 Gy／28 次；60 Gy／20 次</span></td></tr>
       <tr><td>SBRT／超低分次放射治療</td><td><span class="highlight">36.25 Gy／5 次</span>；HYPO-RT-PC 為 42.7 Gy／7 次</td></tr>
-      <tr><td>FLAME 式局部加量</td><td>攝護腺 77 Gy／35 次 + MRI 定義病灶最高 95 Gy SIB</td></tr>
-      <tr><td>ASCENDE-RT EBRT 加量</td><td>骨盆／攝護腺／儲精囊 46 Gy／23 次 → EBRT 加量至 78 Gy</td></tr>
-      <tr><td>ASCENDE-RT LDR 加量</td><td>46 Gy／23 次 → I-125 LDR 加量 115 Gy</td></tr>
+      <tr><td>FLAME 式局部boost</td><td>攝護腺 77 Gy／35 次 + MRI 定義病灶最高 95 Gy SIB</td></tr>
+      <tr><td>ASCENDE-RT EBRT boost</td><td>骨盆／攝護腺／儲精囊 46 Gy／23 次 → EBRT boost至 78 Gy</td></tr>
+      <tr><td>ASCENDE-RT LDR boost</td><td>46 Gy／23 次 → I-125 LDR boost 115 Gy</td></tr>
       <tr><td>POP-RT 骨盆淋巴結</td><td>骨盆淋巴結 50 Gy／25 次 + 攝護腺 SIB 68 Gy</td></tr>
       <tr><td>術後攝護腺床</td><td>常用 64–66 Gy；部分現代療程使用 52.5 Gy／20 次</td></tr>
       <tr><td>STAMPEDE 轉移性原發腫瘤 RT</td><td><span class="highlight">55 Gy／20 次每日治療，或 36 Gy／6 次每週治療</span></td></tr>
@@ -1593,7 +1613,7 @@
       <tr><td>極低／低風險</td><td>多數採主動監測；需治療時可選手術或單一 RT</td></tr>
       <tr><td>有利型中度風險</td><td>手術、EBRT、SBRT 或近接治療等單一治療</td></tr>
       <tr><td>不利型中度風險</td><td>手術，或 RT + 4–6 個月 ADT；經選擇患者可考慮劑量強化</td></tr>
-      <tr><td>高風險</td><td>EBRT ± 骨盆淋巴結照射 + 18–24 個月 ADT；可考慮近接治療或局部病灶加量</td></tr>
+      <tr><td>高風險</td><td>EBRT ± 骨盆淋巴結照射 + 18–24 個月 ADT；可考慮近接治療或局部病灶boost</td></tr>
       <tr><td>極高風險</td><td>骨盆 RT + 長期 ADT + abiraterone／prednisone；通常需要多模式治療</td></tr>
       <tr><td>cN1 M0</td><td>骨盆 RT + 長期 ADT + abiraterone／prednisone</td></tr>
     </tbody>
@@ -1747,8 +1767,8 @@
       <tr><td>放射生物學</td><td>攝護腺癌 α／β 約 1.5–3 Gy，因此適合中度低分次與 SBRT</td></tr>
       <tr><td>中度低分次</td><td>60 Gy／20 次與 70 Gy／28 次是主要標準療程</td></tr>
       <tr><td>SBRT</td><td>PACE-B 支持 36.25 Gy／5 次，5 年 bPFS 約 95%</td></tr>
-      <tr><td>劑量升階</td><td>改善生化控制；FLAME 局部加量改善 bDFS，未顯著增加晚期 GU／GI 毒性</td></tr>
-      <tr><td>近接治療加量</td><td>ASCENDE-RT 改善 bPFS，但增加第 3 級以上 GU 毒性與尿道狹窄</td></tr>
+      <tr><td>劑量升階</td><td>改善生化控制；FLAME 局部boost改善 bDFS，未顯著增加晚期 GU／GI 毒性</td></tr>
+      <tr><td>近接治療boost</td><td>ASCENDE-RT 改善 bPFS，但增加第 3 級以上 GU 毒性與尿道狹窄</td></tr>
       <tr><td>骨盆淋巴結</td><td>POP-RT 改善 BFFS／DFS／DMFS，但未顯示 OS 改善</td></tr>
       <tr><td>術後 RT</td><td><span class="highlight">多數患者採早期救援 RT，而非常規輔助 RT</span></td></tr>
       <tr><td>救援 RT + ADT</td><td>RTOG 9601 與 GETUG-AFU 16 支持經選擇的較高風險患者合併 ADT</td></tr>
