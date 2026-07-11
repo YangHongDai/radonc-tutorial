@@ -32,15 +32,7 @@ NAV = """
 <nav class="top-nav">
   <div class="top-nav-inner">
 
-    <a href="index.html" class="top-nav-brand">
-      <span>☢️</span>
-      <span
-        data-zh="放射腫瘤學教學"
-        data-en="Rad Onc Tutorial"
-      >
-        Rad Onc Tutorial
-      </span>
-    </a>
+    <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="OncoBeam" data-en="OncoBeam">OncoBeam</span></a>
 
     <ul class="top-nav-links">
       <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
@@ -60,6 +52,7 @@ NAV = """
       <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
       <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
       <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li><a href="benign.html" data-zh="良性" data-en="Benign">良性</a></li>
       <li>
         <a
           href="radonc-quiz/index.html"
@@ -75,6 +68,31 @@ NAV = """
 
   </div>
 </nav>
+"""
+
+ANTI_FLICKER = """
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
 """
 
 
@@ -374,6 +392,23 @@ def render_section(section, section_index):
 def render_page_navigation(previous_page, next_page):
     """Render previous/next chapter navigation."""
 
+    def normalise_nav_item(item):
+        if not item:
+            return None
+        if isinstance(item, str):
+            stem = os.path.splitext(os.path.basename(item))[0]
+            labels = {
+                "benign": ("良性", "Benign"),
+                "palliative": ("緩和", "Palliative"),
+                "peds": ("兒童", "Peds"),
+            }
+            zh, en = labels.get(stem, (stem, stem.title()))
+            return [item, zh, en]
+        return item
+
+    previous_page = normalise_nav_item(previous_page)
+    next_page = normalise_nav_item(next_page)
+
     parts = ['<div class="page-nav">']
 
     if previous_page:
@@ -671,7 +706,7 @@ def build_topic_html(page):
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>{safe_title_en} — Rad Onc Tutorial</title>
+  <title>{safe_title_en} — OncoBeam</title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -680,6 +715,7 @@ def build_topic_html(page):
   {custom_css_html}
 
   {custom_head}
+{ANTI_FLICKER}
 </head>
 
 <body class="{body_classes}"{body_style_attribute}>
@@ -737,7 +773,7 @@ def build_topic_html(page):
     </a>
   </footer>
 
-  <script src="i18n.js"></script>
+  <script src="i18n.js?v=20260711-2"></script>
 
   <script>
     window.addEventListener("scroll", () => {{

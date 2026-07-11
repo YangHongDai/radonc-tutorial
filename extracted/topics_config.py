@@ -14028,7 +14028,6 @@ PAGES.append(
             "label_zh": "兒童放射治療共通原則、中樞神經系統腫瘤與顱脊髓照射",
             "label_en": "PRINCIPLES / CNS",
             "body_zh": """
-<p class="section-kicker"><strong>第一部分：兒童放射腫瘤學共通原則</strong></p>
 
 <h3>一、兒童癌症治療的核心邏輯</h3>
 <p>兒童癌症與成人腫瘤學最大的差異是：治癒率通常較高，但治療造成的晚期毒性也可能伴隨病人一生。</p>
@@ -14154,7 +14153,6 @@ PAGES.append(
             "label_zh": "髓母細胞瘤：背景、分期、風險分層、放射治療劑量與證據",
             "label_en": "MEDULLOBLASTOMA",
             "body_zh": """
-<p class="section-kicker"><strong>第三部分：髓母細胞瘤</strong></p>
 
 <h3>一、背景</h3>
 <p>髓母細胞瘤是兒童最常見的惡性腦瘤，約占兒童腦瘤 20%、後顱窩腫瘤 40%，以及全部原發性 CNS 腫瘤 5–10%。好發年齡為 5–9 歲。相關遺傳症候群包括 Gorlin／基底細胞痣症候群（PTCH1）、Turcot 第 2 型／家族性腺瘤性瘜肉症（APC）、Li-Fraumeni 症候群（TP53）與 NF1。</p>
@@ -14283,7 +14281,6 @@ PAGES.append(
             "label_zh": "室管膜瘤：局部控制、手術切除程度、局部放射治療與顱脊髓照射",
             "label_en": "EPENDYMOMA",
             "body_zh": """
-<p class="section-kicker"><strong>第四部分：室管膜瘤</strong></p>
 
 <h3>一、背景</h3>
 <p>室管膜瘤約占兒童 CNS 腫瘤的 6%。顱內室管膜瘤好發於幼兒期，中位診斷年齡為 3–5 歲，男性略多。脊髓室管膜瘤在兒童少見、成人較常見，並與 NF2 相關神經鞘瘤有關。腫瘤源自腦室內襯的膠質幹細胞或室管膜細胞。</p>
@@ -14376,7 +14373,6 @@ PAGES.append(
             "label_zh": "神經母細胞瘤：影像鑑別、INRG 分期、高風險治療與放射治療劑量",
             "label_en": "NEUROBLASTOMA",
             "body_zh": """
-<p class="section-kicker"><strong>第五部分：神經母細胞瘤</strong></p>
 
 <h3>一、背景</h3>
 <p>神經母細胞瘤是嬰兒最常見的惡性腫瘤，也是兒童最常見的顱外實體腫瘤；整體為兒童第三常見惡性腫瘤，也是致死性最高的兒童實體腫瘤之一，約占兒童癌症死亡的 15%。中位診斷年齡為 15–17 個月。<span class="highlight">90–95% 病人的兒茶酚胺代謝物 HVA 或 VMA 升高</span>，約 50% 初診時已屬高風險疾病。</p>
@@ -14530,7 +14526,6 @@ PAGES.append(
             "label_zh": "Wilms 腫瘤：遺傳症候群、先行手術、放射治療時序與劑量",
             "label_en": "WILMS TUMOR",
             "body_zh": """
-<p class="section-kicker"><strong>第六部分：Wilms 腫瘤</strong></p>
 
 <h3>一、背景</h3>
 <p>Wilms 腫瘤約占兒童癌症的 6%，美國每年約 500 例，是兒童最常見的腹部腫瘤。中位診斷年齡為 3–4 歲，75% 於 5 歲前確診；4–8% 為雙側腫瘤，雙側病例的中位年齡更低，約 2–3 歲。</p>
@@ -14644,7 +14639,6 @@ PAGES.append(
             "label_zh": "橫紋肌肉瘤：部位、風險分層、VAC／VAC-VI、放射治療適應症與劑量",
             "label_en": "RHABDOMYOSARCOMA",
             "body_zh": """
-<p class="section-kicker"><strong>第七部分：橫紋肌肉瘤</strong></p>
 
 <h3>一、背景</h3>
 <p>橫紋肌肉瘤（RMS）是兒童最常見的軟組織肉瘤，每年約 400–500 例，男性略多，男女比約 1.4：1；好發於 3–5 歲，70% 於 10 歲前診斷。主要病理包括胚胎型 RMS 與肺泡型 RMS；<span class="highlight">肺泡型／融合基因陽性通常預後較差</span>。</p>
@@ -14821,7 +14815,6 @@ PAGES.append(
             "label_zh": "尤文肉瘤：EWSR1 融合、VDC／IE、第 13 週局部治療與放射治療劑量",
             "label_en": "EWING SARCOMA",
             "body_zh": """
-<p class="section-kicker"><strong>第八部分：尤文肉瘤</strong></p>
 
 <h3>一、背景</h3>
 <p>尤文肉瘤是兒童第二常見骨腫瘤，男性較多，男女比約 1.5：1，好發年齡約 15 歲。<span class="highlight">尤文肉瘤具有放射敏感性，與骨肉瘤不同</span>。其定義與 EWSR1 易位相關：<span class="highlight">t(11;22) 約占 90%，t(21;22) 約占 5–10%</span>。非轉移性疾病 5 年 OS 約 70–80%，轉移性疾病約 30%。</p>
@@ -14964,7 +14957,6 @@ PAGES.append(
             "label_zh": "兒童腫瘤重要放射治療劑量表",
             "label_en": "DOSE TABLE",
             "body_zh": """
-<p class="section-kicker"><strong>第九部分：兒童腫瘤重要放射治療劑量表</strong></p>
 
 <div class="table-wrap">
 <table class="oncology-table dose-table">
@@ -15097,7 +15089,6 @@ PAGES.append(
             "label_zh": "緩和性放射治療與放射腫瘤急症共通原則",
             "label_en": "GENERAL PRINCIPLES",
             "body_zh": """
-<p class="section-kicker"><strong>第一部分：緩和性放射治療與放射腫瘤急症共通原則</strong></p>
 
 <h3>一、最重要的急症原則</h3>
 <p><span class="highlight">放射腫瘤急症不等於一定要立刻開始放射治療</span>。首先必須判斷病人是否真正處於立即危險、是否需要組織診斷、是否曾接受同部位放射治療，以及是否應先接受手術或介入處置。</p>
@@ -15152,7 +15143,6 @@ PAGES.append(
             "label_zh": "上腔靜脈症候群：病理生理、臨床表現、評估、嚴重度與治療",
             "label_en": "SVC SYNDROME",
             "body_zh": """
-<p class="section-kicker"><strong>第二部分：上腔靜脈症候群</strong></p>
 
 <h3>一、病理生理</h3>
 <p>上腔靜脈症候群（SVC syndrome）是上腔靜脈受到外部壓迫或內部阻塞，造成頭頸部、上肢與上胸部靜脈回流受阻，引起近端靜脈鬱血。上腔靜脈負責約<span class="highlight">全身三分之一的靜脈回流</span>，收集頭部、上肢與上半身血液；左右頭臂靜脈匯合形成上腔靜脈，最後進入右心房。側枝循環可經奇靜脈、內胸靜脈、椎靜脈、外側胸靜脈、椎旁靜脈與食道靜脈建立。</p>
@@ -15239,7 +15229,6 @@ PAGES.append(
             "label_zh": "出血、氣道阻塞、咳血與 QUADSHOT",
             "label_en": "BLEEDING/AIRWAY",
             "body_zh": """
-<p class="section-kicker"><strong>第三部分：出血、氣道阻塞與咳血</strong></p>
 
 <h3>一、氣道阻塞與咳血</h3>
 <p>鄰近或侵犯氣道的腫瘤可造成壓迫、阻塞、出血或咳血。若病人有明顯急性氣道受損，不應先做放射治療，因為放療通常不是恢復氣道最快的方法。<span class="highlight">急性氣道受損或大量咳血應先接受支氣管鏡、支架、雷射或局部止血處置</span>；病人穩定後，放射治療可提供較持久的症狀緩解。</p>
@@ -15317,7 +15306,6 @@ PAGES.append(
             "label_zh": "骨轉移：評估、預後、骨折風險、術後放射治療、劑量與放射性藥物",
             "label_en": "BONE METASTASES",
             "body_zh": """
-<p class="section-kicker"><strong>第四部分：骨轉移</strong></p>
 
 <h3>一、流行病學</h3>
 <p>有症狀骨轉移是緩和性放射治療最常見的適應症之一。最多可有 80% 癌症病人發生骨轉移，通常經血行播散，也可能由鄰近腫瘤直接侵犯。骨轉移最常侵犯中軸骨骼，包括頭顱、脊椎、胸骨與肋骨；脊椎以<span class="highlight">胸椎最常受侵犯</span>。常見原發癌包括攝護腺癌、乳癌、腎細胞癌、甲狀腺癌與肺癌。</p>
@@ -15441,7 +15429,6 @@ PAGES.append(
             "label_zh": "轉移性脊髓壓迫：解剖、臨床表現、評估、SINS 與 Bilsky 分級",
             "label_en": "MSCC BASICS",
             "body_zh": """
-<p class="section-kicker"><strong>第五部分：轉移性脊髓壓迫的基礎評估</strong></p>
 
 <h3>一、解剖與定義</h3>
 <p>成人脊髓由枕骨大孔延伸至 L1–L2；馬尾為 L1–L2 至 S2 的腰薦神經根；硬膜囊包覆脊髓，神經根由外側離開。MRI 上腦脊髓液（CSF）在 T2 呈高訊號、T1 呈低訊號。T1 異常低訊號常表示正常脂肪骨髓消失與含水量增加；T2 異常高訊號可見於創傷、感染或腫瘤。</p>
@@ -15729,7 +15716,673 @@ PAGES.append(
     ],
     "excel_sheet": "Palliation",
     "prev": ["peds.html", "兒童", "Peds"],
-    "next": None,
+    "next": ["benign.html", "良性", "Benign"]
 }
 )
 
+PAGES.append({
+    "slug": "benign",
+    "emoji": "🌿",
+    "title_zh": "良性疾病放射治療",
+    "title_en": "Radiotherapy for Benign Disease",
+    "sub_zh": "低劑量放射治療（LDRT）、纖維增生性疾病、退化性與發炎性骨骼肌肉疾病、良性腫瘤、血管畸形、功能性放射手術、心律不整與眼科新興應用。",
+    "sub_en": "Low-dose radiotherapy, fibroproliferative disorders, degenerative and inflammatory musculoskeletal disease, benign tumors, vascular malformations, functional radiosurgery, cardiac arrhythmia, and emerging ophthalmic applications.",
+    "sections": [
+        {
+            "label_zh": "良性疾病放射治療總論、分類、機轉與安全原則",
+            "label_en": "OVERVIEW & PRINCIPLES",
+            "body_zh": """
+<p>良性疾病放射治療是利用游離輻射的<strong>抗發炎、抗增生、血管調節、神經調控或組織消融作用</strong>，治療不具惡性生物學行為、但可能造成疼痛、功能障礙、出血、神經症狀或器官損害的疾病。</p>
+
+<p>它不是單一治療模式。不同疾病所需劑量可相差數十倍：退化性骨骼肌肉疾病可能只需總劑量 3–6 Gy；Dupuytren 氏病等纖維增生性疾病常使用 21–30 Gy；良性腫瘤常使用 45–54 Gy；功能性放射手術則可能對非常小的神經核團或神經束給予 70–150 Gy。</p>
+
+<div class="table-wrap">
+<table class="oncology-table benign-table">
+<thead><tr><th>治療目的</th><th>代表疾病</th><th>主要生物學作用</th><th>常見劑量概念</th></tr></thead>
+<tbody>
+<tr><td>低劑量抗發炎治療</td><td>骨關節炎、足底筋膜炎、肌腱附著點病變</td><td>調節巨噬細胞、內皮黏附、發炎細胞激素與氧化壓力</td><td><span class="highlight">每次 0.5–1 Gy，總劑量 3–6 Gy</span></td></tr>
+<tr><td>抗纖維母細胞增生</td><td>Dupuytren 氏病、Ledderhose 病、蟹足腫</td><td>抑制增生活躍的纖維母細胞與肌纖維母細胞</td><td><span class="highlight">21–30 Gy，通常採分段療程</span></td></tr>
+<tr><td>預防異常組織形成</td><td>異位性骨化</td><td>抑制間葉前驅細胞向成骨細胞分化</td><td><span class="highlight">7–8 Gy／1 次</span></td></tr>
+<tr><td>良性腫瘤控制</td><td>前庭神經鞘瘤、頭頸部副神經節瘤、局部類澱粉沉積症</td><td>抑制腫瘤細胞複製並造成長期生長停止</td><td>約 12–15 Gy 放射手術或 20–54 Gy 分次治療</td></tr>
+<tr><td>功能性神經調控</td><td>三叉神經痛、顫抖、難治型強迫症</td><td>造成極小靶區的神經傳導改變或延遲性病灶形成</td><td><span class="highlight">約 70–150 Gy 單次放射手術</span></td></tr>
+<tr><td>非侵入性消融</td><td>難治型心室頻脈</td><td>改變致心律不整疤痕基質與傳導</td><td><span class="highlight">25 Gy／1 次</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>病人選擇與知情同意</h3>
+<p>良性疾病病人的預期壽命通常較長，因此治療門檻應比惡性腫瘤更嚴格。應先確認診斷、疾病活動性、症狀與功能損害，並確認標準保守治療、藥物、注射、手術或介入治療是否已充分評估。</p>
+
+<p>知情同意必須討論急性皮膚反應、乾燥、色素改變、纖維化、器官特異性毒性、生育與胎兒風險，以及<span class="highlight">極低但非零的放射誘發惡性腫瘤風險</span>。年齡越輕、照射體積越大、越接近乳房、甲狀腺、骨髓或性腺，長期風險越重要。</p>
+
+<div class="clinical-note">
+核心原則：<span class="highlight">良性不代表不需要嚴謹分期與治療計畫</span>。應使用最小合理照射體積、最低有效劑量、適當遮蔽與影像導引，並記錄既往放射治療與累積危及器官劑量。
+</div>
+            """,
+            "body_en": """
+<p>Radiotherapy for benign disease uses the anti-inflammatory, antiproliferative, vascular-modifying, neuromodulatory, or ablative effects of ionizing radiation to treat disorders that are not malignant but can still cause pain, disability, bleeding, neurologic symptoms, or organ injury.</p>
+
+<p>It is not a single dose paradigm. Degenerative musculoskeletal disease may require only 3–6 Gy, fibroproliferative disease such as Dupuytren disease often uses 21–30 Gy, benign tumors may require 45–54 Gy, and functional radiosurgery can deliver 70–150 Gy to a very small neural target.</p>
+
+<div class="table-wrap">
+<table class="oncology-table benign-table">
+<thead><tr><th>Purpose</th><th>Representative conditions</th><th>Main biologic effect</th><th>Typical dose concept</th></tr></thead>
+<tbody>
+<tr><td>Low-dose anti-inflammatory therapy</td><td>Osteoarthritis, plantar fasciitis, insertional tendinopathy</td><td>Modulation of macrophages, endothelial adhesion, inflammatory cytokines, and oxidative signaling</td><td>0.5–1 Gy per fraction, 3–6 Gy total</td></tr>
+<tr><td>Antifibroblast treatment</td><td>Dupuytren disease, Ledderhose disease, keloid</td><td>Suppression of proliferating fibroblasts and myofibroblasts</td><td>21–30 Gy, often in split courses</td></tr>
+<tr><td>Prevention of abnormal tissue formation</td><td>Heterotopic ossification</td><td>Inhibition of mesenchymal precursor differentiation into osteoblasts</td><td>7–8 Gy in one fraction</td></tr>
+<tr><td>Benign tumor control</td><td>Vestibular schwannoma, head and neck paraganglioma, localized amyloidosis</td><td>Long-term growth arrest</td><td>Approximately 12–15 Gy SRS or 20–54 Gy fractionated RT</td></tr>
+<tr><td>Functional neuromodulation</td><td>Trigeminal neuralgia, tremor, refractory OCD</td><td>Alteration of neural conduction or delayed lesion formation in a very small target</td><td>Approximately 70–150 Gy single-fraction SRS</td></tr>
+<tr><td>Noninvasive ablation</td><td>Refractory ventricular tachycardia</td><td>Modification of arrhythmogenic scar and conduction substrate</td><td>25 Gy in one fraction</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Selection and consent</h3>
+<p>Because patients with benign disease often have long life expectancy, the treatment threshold should be higher than for malignant disease. Diagnosis, activity, symptom burden, and functional impairment should be confirmed, and standard conservative therapy, medication, injection, surgery, or intervention should be considered first.</p>
+
+<p>Consent should address acute skin effects, dryness, pigmentation change, fibrosis, organ-specific toxicity, reproductive and fetal risk, and the very low but non-zero risk of radiation-induced malignancy. Younger age, larger volume, and proximity to breast, thyroid, marrow, or gonads increase the importance of long-term risk.</p>
+
+<div class="clinical-note">
+Key principle: benign disease still requires rigorous diagnosis, planning, dose limitation, shielding, image guidance, and documentation of previous radiation exposure.
+</div>
+            """,
+        },
+        {
+            "label_zh": "纖維增生性疾病：Dupuytren 氏病、Ledderhose 病、蟹足腫與異位性骨化",
+            "label_en": "FIBROPROLIFERATIVE & PROPHYLACTIC RT",
+            "body_zh": """
+<h3>Dupuytren 氏病</h3>
+<p>Dupuytren 氏病是掌腱膜的良性纖維增生性疾病。放射治療的目標不是矯正已固定的嚴重攣縮，而是在結節與纖維索形成的早期活動期抑制進展。</p>
+
+<p>適合治療者通常為<span class="highlight">N 期或 N/I 期，攣縮不超過約 5–10 度，且過去 6–12 個月有明確進展</span>。已形成明顯固定攣縮者通常應接受針刺鬆解、膠原酶或手術，而非單獨放射治療。</p>
+
+<p>常用療程為<span class="highlight">15 Gy／5 次，再間隔 6–12 週給予第二個 15 Gy／5 次，總劑量 30 Gy</span>；另一選項為 21 Gy／7 次、隔日治療。靶區應涵蓋所有可觸及結節與纖維索，近端與遠端外擴約 1–2 cm，側向外擴約 0.5–1 cm，並遮蔽未受侵犯區域。</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>研究</th><th>設計</th><th>主要結果</th><th>臨床解讀</th></tr></thead>
+<tbody>
+<tr><td>Seegenschmiedt 長期研究</td><td>觀察組對比 21 Gy／7 次與 30 Gy／10 次</td><td><span class="highlight">任何進展：62% 對比 24% 對比約 20%；接受手術：30% 對比 12% 對比 8%</span></td><td>早期活動性疾病接受放射治療可降低進展與後續手術需求</td></tr>
+<tr><td>DEPART</td><td>第三期隨機試驗，觀察對比 30 Gy／10 次</td><td><span class="highlight">3 年 QuickDASH、疼痛與生活品質較佳；毒性大多輕微</span></td><td>提供現代隨機證據，但長期疾病進展與第二癌症仍需追蹤</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Ledderhose 病／足底纖維瘤病</h3>
+<p>Ledderhose 病與 Dupuytren 氏病具有相似病理，但位於足底筋膜。無症狀小結節通常觀察；<span class="highlight">症狀明顯增加、結節持續生長、行走或穿鞋受影響</span>時，可考慮放射治療。</p>
+
+<p>常用療程同樣為<span class="highlight">15 Gy／5 次 ×2 個療程，兩療程間隔約 10–12 週，總劑量 30 Gy</span>。LED-RAD 隨機雙盲試驗顯示，1 年疼痛緩解為 74% 對比假治療 56%，且生活品質、赤腳步行速度與步頻較佳。</p>
+
+<h3>蟹足腫與肥厚性疤痕</h3>
+<p>放射治療通常用於反覆復發、症狀明顯或高風險蟹足腫的手術後輔助治療。<span class="highlight">最好於切除後 24 小時內開始，最遲不超過 72 小時</span>。可使用表淺 X 光、正交電壓、電子束或近接治療；目前沒有單一獲普遍接受的標準劑量，應依部位、疤痕厚度與當地治療流程決定，並特別避免不必要照射甲狀腺、乳房、性腺與兒童。</p>
+
+<h3>異位性骨化</h3>
+<p>異位性骨化（HO）是軟組織內異常成骨，常見於高風險髖關節手術或髖臼骨折。NSAID 與放射治療皆有效；放射治療特別適合無法使用 NSAID、曾有嚴重 HO 或高復發風險者。</p>
+
+<p>標準療程為<span class="highlight">7 Gy／1 次，術前約 4 小時內或術後 96 小時內完成</span>。靶區涵蓋高風險髖關節周圍軟組織與既存異位骨化區域；不應為保護人工關節而過度遮蔽，否則可能降低預防效果。</p>
+            """,
+            "body_en": """
+<h3>Dupuytren disease</h3>
+<p>Dupuytren disease is a benign fibroproliferative disorder of the palmar fascia. Radiotherapy is intended to prevent progression during the active nodule-and-cord stage, not to correct an established severe fixed contracture.</p>
+
+<p>The best candidates are stage N or N/I disease, contracture no greater than approximately 5–10 degrees, and documented progression during the previous 6–12 months. More advanced fixed contracture is generally managed with needle release, collagenase, or surgery rather than RT alone.</p>
+
+<p>A common regimen is 15 Gy in 5 fractions followed by a second 15 Gy in 5 fractions after 6–12 weeks, for 30 Gy total. An alternative is 21 Gy in 7 alternate-day fractions. The target includes all palpable nodules and cords with approximately 1–2 cm proximal and distal margins and 0.5–1 cm lateral margins.</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Study</th><th>Design</th><th>Main findings</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>Seegenschmiedt long-term study</td><td>Observation versus 21 Gy/7 fractions versus 30 Gy/10 fractions</td><td>Any progression was 62% versus 24% versus approximately 20%; surgery was required in 30% versus 12% versus 8%</td><td>RT during active early disease reduces progression and later surgery</td></tr>
+<tr><td>DEPART</td><td>Phase III randomized observation versus 30 Gy/10 fractions</td><td>Better 3-year QuickDASH, pain, and quality-of-life outcomes; toxicity was generally mild</td><td>Provides modern randomized evidence, although long-term progression and second-cancer risk require follow-up</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Ledderhose disease</h3>
+<p>Ledderhose disease is plantar fibromatosis and is pathologically related to Dupuytren disease. Small asymptomatic nodules can be observed. RT can be considered for increasing symptoms, growing nodules, or impaired walking and footwear tolerance.</p>
+
+<p>The common regimen is 15 Gy in 5 fractions in two courses separated by approximately 10–12 weeks, for 30 Gy total. The randomized double-blind LED-RAD trial reported one-year pain relief of 74% versus 56% with sham treatment, together with better quality of life and walking measures.</p>
+
+<h3>Keloid and hypertrophic scar</h3>
+<p>RT is generally used after excision for recurrent, symptomatic, or high-risk keloid. Treatment should ideally begin within 24 hours and no later than 72 hours after surgery. Superficial X-rays, orthovoltage, electrons, or brachytherapy may be used. There is no single universally accepted regimen; site, thickness, local protocol, and avoidance of unnecessary breast, thyroid, gonadal, and pediatric exposure are important.</p>
+
+<h3>Heterotopic ossification</h3>
+<p>Heterotopic ossification is abnormal bone formation in soft tissue, particularly after high-risk hip surgery or acetabular fracture. NSAIDs and RT are both effective. RT is especially useful when NSAIDs are contraindicated or recurrence risk is high.</p>
+
+<p>A standard regimen is 7 Gy in one fraction, delivered within approximately four hours before surgery or within 96 hours after surgery. The field should encompass the high-risk periarticular soft tissues and existing ossification, without excessive prosthesis shielding.</p>
+            """,
+        },
+        {
+            "label_zh": "退化性與發炎性骨骼肌肉疾病：骨關節炎與足底筋膜炎",
+            "label_en": "MUSCULOSKELETAL LDRT",
+            "body_zh": """
+<h3>低劑量放射治療的作用與病人選擇</h3>
+<p>低劑量放射治療（LDRT）並非藉由殺死軟骨細胞，而是利用<span class="highlight">約 0.3–0.7 Gy 單次劑量範圍的非線性抗發炎效應</span>，降低白血球與內皮黏附、調節巨噬細胞表型與發炎細胞激素。</p>
+
+<p>臨床上應優先選擇年齡較大、症狀活動性明顯、尚未出現完全結構破壞、且已接受減重、物理治療、止痛藥、NSAID 或注射治療仍無法控制症狀的病人。<span class="highlight">放射治療不能再生已消失的軟骨，也不能取代必要的關節置換</span>。</p>
+
+<h3>骨關節炎證據仍有爭議</h3>
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>研究</th><th>設計</th><th>主要結果</th><th>解讀</th></tr></thead>
+<tbody>
+<tr><td>Mahler／Minten 荷蘭假治療試驗</td><td>手部或膝部 OA，6 Gy／6 次對比假治療</td><td><span class="highlight">未顯示明確症狀或發炎改善</span></td><td>病程長、疾病較晚期可能降低反應；證明安慰劑效應不可忽略</td></tr>
+<tr><td>ArthroRad</td><td>3 Gy／6 次對比 0.3 Gy／6 次</td><td>兩組均有疼痛改善，功能與生活品質改善有限</td><td>沒有真正未照射對照組，無法完全排除安慰劑效應</td></tr>
+<tr><td>Fazilat-Panah 隨機雙盲試驗</td><td>膝 OA，3 Gy／6 次對比假治療</td><td><span class="highlight">疼痛、功能與止痛藥使用顯著改善</span></td><td>支持 3 Gy 療程，但樣本較小且需長期驗證</td></tr>
+<tr><td>Kim 韓國隨機假治療試驗</td><td>3 Gy／6 次、0.3 Gy／6 次與假治療</td><td><span class="highlight">4 個月 OMERACT-OARSI 反應率約 70% 對比 42%；0.3 Gy 未優於假治療</span></td><td>支持 0.5 Gy ×6，而不是過低的 0.05 Gy ×6</td></tr>
+<tr><td>Makarova 長期研究</td><td>最高 4.5 Gy／10 次加標準治療對比標準治療</td><td>9 年關節置換約 4.1% 對比 7.5%</td><td>提示可能降低手術需求，但仍需更多獨立研究</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>因此，骨關節炎 LDRT 的合理結論是：<span class="highlight">證據正在增加，但仍不宜宣稱為普遍標準治療</span>。在許多國家仍屬選擇性或研究性治療，適合經多專科評估、保守治療失敗且充分知情同意的病人。</p>
+
+<h3>常用骨關節炎療程</h3>
+<p>常用療程為<span class="highlight">0.5 Gy ×6 次，總劑量 3 Gy，每週 2–3 次或隔日治療</span>。部分傳統方案使用 1 Gy ×6 次，總劑量 6 Gy。若 8–12 週後僅部分反應，可在重新評估後考慮第二療程，但需避免無限制重複治療。</p>
+
+<h3>足底筋膜炎</h3>
+<p>足底筋膜炎／疼痛性足跟適合在症狀持續超過 6 個月、影像與臨床診斷一致、且鞋墊、伸展、物理治療、止痛藥、類固醇注射或震波治療失敗後考慮 LDRT。</p>
+
+<p>推薦療程為<span class="highlight">3–6 Gy／6 次，每次 0.5–1 Gy，每週 2–3 次</span>。Canyilmaz 隨機試驗顯示，6 Gy／6 次相較局部類固醇注射，在 3 個月疼痛、功能與再次治療間隔方面較佳。</p>
+
+<div class="clinical-note">
+高頻考點：足底筋膜炎的證據與指引支持度通常高於骨關節炎；骨關節炎應強調<span class="highlight">適當病人選擇、較早期結構疾病、3 Gy／6 次，以及證據仍具異質性</span>。
+</div>
+            """,
+            "body_en": """
+<h3>Mechanism and selection</h3>
+<p>Low-dose radiotherapy does not work by destroying cartilage. It uses a nonlinear anti-inflammatory effect in the approximate 0.3–0.7 Gy per-fraction range, reducing leukocyte-endothelial adhesion and modulating macrophages and inflammatory cytokines.</p>
+
+<p>Reasonable candidates are generally older patients with active symptoms, preserved joint structure, and persistent pain despite weight reduction, physiotherapy, analgesics, NSAIDs, or injections. RT cannot regenerate absent cartilage and cannot replace necessary joint replacement.</p>
+
+<h3>Osteoarthritis evidence remains mixed</h3>
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Study</th><th>Design</th><th>Main findings</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>Mahler/Minten Dutch sham trials</td><td>Hand or knee OA, 6 Gy/6 fractions versus sham</td><td>No clear symptomatic or inflammatory benefit</td><td>Long-standing and advanced disease may be less responsive; placebo effect is substantial</td></tr>
+<tr><td>ArthroRad</td><td>3 Gy/6 fractions versus 0.3 Gy/6 fractions</td><td>Both groups improved in pain, with limited functional and quality-of-life change</td><td>No untreated control, so placebo effect cannot be excluded</td></tr>
+<tr><td>Fazilat-Panah randomized double-blind trial</td><td>Knee OA, 3 Gy/6 fractions versus sham</td><td>Significant improvement in pain, function, and analgesic use</td><td>Supports the 3 Gy regimen, but sample size was modest</td></tr>
+<tr><td>Kim Korean randomized sham-controlled trial</td><td>3 Gy/6 fractions, 0.3 Gy/6 fractions, and sham</td><td>Four-month OMERACT-OARSI response was approximately 70% versus 42%; 0.3 Gy was not superior to sham</td><td>Supports 0.5 Gy ×6 rather than 0.05 Gy ×6</td></tr>
+<tr><td>Makarova long-term study</td><td>Up to 4.5 Gy/10 fractions plus standard treatment versus standard treatment</td><td>Nine-year arthroplasty was approximately 4.1% versus 7.5%</td><td>Suggests possible reduction in surgery, requiring independent confirmation</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The balanced conclusion is that evidence is increasing but LDRT should not yet be described as a universal standard for osteoarthritis. In many countries it remains selective or investigational and should be offered after multidisciplinary review and informed consent.</p>
+
+<h3>Common OA regimen</h3>
+<p>A common regimen is 0.5 Gy ×6 fractions for 3 Gy total, delivered two to three times weekly or every other day. Traditional regimens also use 1 Gy ×6. A second course can be considered after reassessment at 8–12 weeks for partial responders.</p>
+
+<h3>Plantar fasciitis</h3>
+<p>LDRT can be considered when symptoms have persisted for more than six months and conservative management has failed. Recommended schedules are 3–6 Gy in six fractions of 0.5–1 Gy, delivered two to three times weekly. In the Canyilmaz randomized trial, 6 Gy/6 fractions produced better three-month pain and functional outcomes than local corticosteroid injection.</p>
+
+<div class="clinical-note">
+High-yield: guideline support is generally stronger for plantar fasciitis than for osteoarthritis. OA treatment should emphasize patient selection, earlier structural disease, the 3 Gy/6-fraction regimen, and uncertainty in the evidence.
+</div>
+            """,
+        },
+        {
+            "label_zh": "良性腫瘤、局部類澱粉沉積症、Graves 眼病與其他器官適應症",
+            "label_en": "BENIGN TUMORS & ORGAN-SPECIFIC INDICATIONS",
+            "body_zh": """
+<p>部分良性腫瘤或非惡性器官疾病會因解剖位置造成嚴重症狀，手術又可能帶來顱神經、聽力、視力、吞嚥或外觀損害。此時，分次放射治療或立體定位放射手術可提供高局部控制。</p>
+
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead><tr><th>疾病</th><th>適合情境</th><th>常用劑量</th><th>重點</th></tr></thead>
+<tbody>
+<tr><td>前庭神經鞘瘤</td><td>小型但持續增大的 Koos I–III；大型病灶不適合手術</td><td><span class="highlight">SRS 邊緣劑量 12–13 Gy</span>；大型病灶可分次治療</td><td>治療前須討論聽力保存、顏面神經與三叉神經風險</td></tr>
+<tr><td>頭頸部副神經節瘤</td><td>無症狀可觀察；進展、症狀或手術傷害風險高者</td><td><span class="highlight">45–54 Gy／1.8–2 Gy；SRS 12–15 Gy</span></td><td>目標通常是長期生長停止，而非影像完全消失</td></tr>
+<tr><td>青少年鼻咽血管纖維瘤</td><td>無法安全完整切除或復發</td><td>約 35–45 Gy；常用 <span class="highlight">36 Gy／20 次</span></td><td>年輕病人應優先減少正常組織劑量，可考慮質子治療</td></tr>
+<tr><td>多形性腺瘤</td><td>切緣陽性、不完全切除或多次復發</td><td>約 <span class="highlight">50 Gy／25 次</span></td><td>腮腺病灶靶區通常涵蓋整個腮腺床</td></tr>
+<tr><td>Graves 眼病</td><td>中度至重度活動期，靜脈類固醇反應不足</td><td><span class="highlight">20 Gy／10 次</span>，可合併類固醇</td><td>糖尿病視網膜病變與未控制高血壓應避免；年輕與糖尿病為相對禁忌</td></tr>
+<tr><td>局部 AL 類澱粉沉積症</td><td>復發、手術可能造成顯著功能損害或局部難控制</td><td><span class="highlight">20–45 Gy／10–25 次</span></td><td>治療概念類似低劑量漿細胞疾病的涉及部位治療</td></tr>
+<tr><td>流涎症</td><td>晚期神經退化疾病且藥物或肉毒桿菌治療不足</td><td>20 Gy／4 次或 12 Gy／2 次</td><td>常涵蓋雙側顎下腺及雙側腮腺尾端</td></tr>
+<tr><td>全淋巴系統照射</td><td>實體器官移植排斥且標準免疫抑制無效或無法耐受</td><td>8 Gy／10 次，每週兩次</td><td>需密切監測骨髓抑制與感染</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>局部 AL 類澱粉沉積症</h3>
+<p>局部免疫球蛋白輕鏈（AL）類澱粉沉積症由局部單株漿細胞分泌異常輕鏈形成沉積。治療前必須排除全身性類澱粉沉積症與多發性骨髓瘤。呼吸道病灶應進行 CT、支氣管鏡與切片。</p>
+
+<p>回溯性證據顯示外照射放射治療可提供良好且持久的局部控制，副作用通常可接受。治療範圍採<span class="highlight">涉及部位原則</span>，適合反覆復發、內視鏡或手術難以控制，或手術可能造成聲音、吞嚥、呼吸道或器官功能損害的病人。</p>
+            """,
+            "body_en": """
+<p>Some benign tumors and organ-specific nonmalignant disorders can cause major symptoms because of their location, while surgery can threaten cranial nerve function, hearing, vision, swallowing, or cosmesis. Fractionated RT or SRS can provide durable local control.</p>
+
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead><tr><th>Condition</th><th>Suitable setting</th><th>Typical dose</th><th>Key point</th></tr></thead>
+<tbody>
+<tr><td>Vestibular schwannoma</td><td>Small but enlarging Koos I–III lesion; large lesion in a nonsurgical patient</td><td>SRS marginal dose 12–13 Gy; fractionated RT for selected larger lesions</td><td>Discuss hearing preservation and facial and trigeminal nerve risk</td></tr>
+<tr><td>Head and neck paraganglioma</td><td>Observation for asymptomatic disease; RT for progression, symptoms, or high surgical morbidity</td><td>45–54 Gy in 1.8–2 Gy fractions; SRS 12–15 Gy</td><td>The goal is durable growth arrest rather than complete radiographic disappearance</td></tr>
+<tr><td>Juvenile nasopharyngeal angiofibroma</td><td>Unresectable or recurrent disease</td><td>Approximately 35–45 Gy; commonly 36 Gy/20 fractions</td><td>Reduce normal-tissue dose in young patients; protons may be considered</td></tr>
+<tr><td>Pleomorphic adenoma</td><td>Positive margin, incomplete resection, or multifocal recurrence</td><td>Approximately 50 Gy/25 fractions</td><td>For parotid disease, the target commonly includes the entire parotid bed</td></tr>
+<tr><td>Graves orbitopathy</td><td>Moderate-to-severe active disease with inadequate response to IV steroids</td><td>20 Gy/10 fractions, often with steroids</td><td>Avoid in diabetic retinopathy or uncontrolled hypertension; young age and diabetes are relative contraindications</td></tr>
+<tr><td>Localized AL amyloidosis</td><td>Recurrent disease, morbidity from surgery, or difficult local control</td><td>20–45 Gy in 10–25 fractions</td><td>Use an involved-site concept similar to low-dose plasma-cell treatment</td></tr>
+<tr><td>Sialorrhea</td><td>Advanced neurodegenerative disease refractory to medication or botulinum toxin</td><td>20 Gy/4 fractions or 12 Gy/2 fractions</td><td>Targets commonly include both submandibular glands and the caudal two-thirds of both parotids</td></tr>
+<tr><td>Total lymphatic irradiation</td><td>Solid-organ rejection refractory or intolerant to standard immunosuppression</td><td>8 Gy/10 fractions twice weekly</td><td>Monitor marrow suppression and infection</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Localized AL amyloidosis</h3>
+<p>Localized immunoglobulin light-chain amyloidosis results from local monoclonal plasma-cell secretion. Systemic amyloidosis and multiple myeloma must be excluded. Airway disease requires CT, bronchoscopy, and biopsy.</p>
+
+<p>Retrospective evidence indicates that EBRT can provide durable local control with acceptable toxicity. An involved-site approach is appropriate for recurrent disease, difficult endoscopic or surgical control, or when surgery would threaten voice, swallowing, airway, or organ function.</p>
+            """,
+        },
+        {
+            "label_zh": "腦動靜脈畸形：自然病史、ARUBA、放射手術與出血風險",
+            "label_en": "ARTERIOVENOUS MALFORMATION",
+            "body_zh": """
+<p>腦動靜脈畸形（AVM）是動脈與靜脈之間缺乏正常微血管床的異常血管叢。治療目標是完全閉塞病灶並降低未來出血風險，但治療本身也可能造成中風、出血、放射性腦病變或神經功能缺損。</p>
+
+<h3>治療選擇</h3>
+<p>決策需考量既往是否出血、年齡、病灶大小與位置、深部靜脈引流、Spetzler-Martin 分級、症狀、手術可及性與預期壽命。選項包括觀察、顯微手術、血管內栓塞、立體定位放射手術（SRS）或合併治療。</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>研究</th><th>族群與治療</th><th>主要結果</th><th>限制與解讀</th></tr></thead>
+<tbody>
+<tr><td>ARUBA</td><td>未破裂 AVM；藥物管理對比藥物管理加介入治療</td><td><span class="highlight">死亡或中風：3.39 對比 12.32／100 人年；不良事件 59% 對比 79%</span></td><td>短中期結果支持未破裂 AVM 應謹慎介入；不同介入方式並未隨機分層，不能據此直接比較手術、栓塞與 SRS</td></tr>
+<tr><td>Maruyama 等人</td><td>500 位接受 伽瑪刀（Gamma Knife） 的 AVM 病人</td><td><span class="highlight">潛伏期出血風險下降 54%，閉塞後下降 88%；5 年閉塞率 91%</span></td><td>顯示 SRS 可降低長期出血，但完全閉塞前仍存在潛伏期風險</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>SRS 適合較小、深部、位於功能區或手術風險高的 AVM。邊緣劑量常依病灶體積調整，約 18–25 Gy；上傳資料中的大型世代研究平均劑量約 21 Gy。</p>
+
+<div class="clinical-note">
+高頻考點：<span class="highlight">未破裂 AVM 不等於一定要介入</span>。ARUBA 強調短中期介入風險；SRS 的優點是非侵入性，但閉塞需要數年，期間仍可能出血。
+</div>
+            """,
+            "body_en": """
+<p>A cerebral arteriovenous malformation is an abnormal vascular nidus without a normal capillary bed between arteries and veins. Treatment aims to obliterate the nidus and reduce future hemorrhage, but treatment itself can cause stroke, bleeding, radiation injury, or neurologic deficit.</p>
+
+<h3>Treatment selection</h3>
+<p>Decision-making considers previous hemorrhage, age, size and location, deep venous drainage, Spetzler-Martin grade, symptoms, surgical accessibility, and life expectancy. Options include observation, microsurgery, embolization, SRS, or combined treatment.</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Study</th><th>Population and treatment</th><th>Main findings</th><th>Limitations and interpretation</th></tr></thead>
+<tbody>
+<tr><td>ARUBA</td><td>Unruptured AVM; medical management versus medical management plus intervention</td><td>Death or stroke was 3.39 versus 12.32 per 100 patient-years; adverse events were 59% versus 79%</td><td>Supports caution with intervention for unruptured AVM in the short-to-intermediate term; treatment modalities were not randomized against each other</td></tr>
+<tr><td>Maruyama et al.</td><td>500 patients treated with 伽瑪刀（Gamma Knife）</td><td>Hemorrhage risk fell by 54% during latency and 88% after obliteration; five-year obliteration was 91%</td><td>SRS can reduce long-term hemorrhage, but latency risk persists until complete obliteration</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>SRS is most suitable for smaller, deep, eloquent, or surgically high-risk AVMs. Marginal dose is commonly volume-adapted in the approximate 18–25 Gy range; the large cohort in the uploaded database used a mean dose of approximately 21 Gy.</p>
+
+<div class="clinical-note">
+High-yield: an unruptured AVM does not automatically require intervention. ARUBA highlights treatment risk, while SRS is noninvasive but requires years for obliteration and does not immediately eliminate hemorrhage risk.
+</div>
+            """,
+        },
+        {
+            "label_zh": "功能性放射手術：三叉神經痛、顫抖、強迫症與難治型疼痛",
+            "label_en": "FUNCTIONAL RADIOSURGERY",
+            "body_zh": """
+<p>功能性放射手術不是針對腫瘤，而是對神經、神經核團或神經迴路給予高度聚焦單次照射，以改變病理性神經傳導。它通常保留給<span class="highlight">藥物、外科、導管或深腦刺激無效、不適合或病人拒絕侵入性治療</span>者。</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>疾病</th><th>靶點與劑量概念</th><th>證據結果</th><th>主要風險</th></tr></thead>
+<tbody>
+<tr><td>三叉神經痛</td><td>三叉神經根進入區或近腦幹神經段；常用約 70–90 Gy</td><td><span class="highlight">初期無痛率約 80–87%；平均復發約 25–32%</span>；10 年疼痛控制約 30–45%</td><td>顏面麻木、感覺異常；效果可能在數週至數月後出現</td></tr>
+<tr><td>原發性或帕金森氏顫抖</td><td>對側丘腦腹中間核，4 mm 準直器；<span class="highlight">130–150 Gy</span></td><td>系統性回顧顯示平均顫抖降低約 88%，平均反應時間 4.8 個月</td><td>延遲性水腫、無力、感覺或語言障礙；不良事件平均約 17%</td></tr>
+<tr><td>難治型強迫症</td><td>腹側內囊 Gamma 放射囊切開術；中位 135 Gy</td><td><span class="highlight">約 45% 有反應</span>；雙等中心治療較可能改善</td><td>情緒障礙約 25%，神經併發症約 3%</td></tr>
+<tr><td>難治型疼痛</td><td>內側丘腦切開術，較後方靶點可能反應較佳</td><td><span class="highlight">約 55% 有具臨床意義的疼痛下降，約 38% 維持至最後追蹤</span></td><td>證據主要為回溯研究，病人選擇與靶點仍未標準化</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>三叉神經痛 SRS 的優點是不用全身麻醉與開顱，適合年長、抗凝治療或手術風險高者；缺點是止痛延遲且長期復發並不少見。對顫抖與強迫症，放射手術應在具功能性神經外科、神經科、精神科、影像與放射物理專長的中心進行。</p>
+
+<div class="clinical-note">
+功能性 SRS 的劑量雖高，但靶區極小。安全性依賴<span class="highlight">毫米級定位、嚴格影像融合、精確靶點與內囊／腦幹等鄰近結構限制</span>。
+</div>
+            """,
+            "body_en": """
+<p>Functional radiosurgery targets a nerve, nucleus, or neural circuit rather than a tumor. It is generally reserved for patients who have failed, cannot tolerate, or decline medication, surgery, catheter procedures, or deep-brain stimulation.</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Condition</th><th>Target and dose concept</th><th>Evidence</th><th>Main risks</th></tr></thead>
+<tbody>
+<tr><td>Trigeminal neuralgia</td><td>Root entry zone or cisternal trigeminal nerve; commonly approximately 70–90 Gy</td><td>Initial freedom from pain approximately 80–87%; recurrence approximately 25–32%; ten-year pain control approximately 30–45%</td><td>Facial numbness and sensory disturbance; response may take weeks to months</td></tr>
+<tr><td>Essential or parkinsonian tremor</td><td>Contralateral ventral intermediate thalamic nucleus using a 4-mm collimator; 130–150 Gy</td><td>Systematic review found mean tremor reduction of approximately 88%, with mean response at 4.8 months</td><td>Delayed edema, weakness, sensory or speech deficit; mean adverse-event rate approximately 17%</td></tr>
+<tr><td>Refractory OCD</td><td>Gamma ventral capsulotomy; median 135 Gy</td><td>Approximately 45% response; two-isocenter treatment was more likely to improve symptoms</td><td>Mood disturbance approximately 25%; neurologic complication approximately 3%</td></tr>
+<tr><td>Intractable pain</td><td>Medial thalamotomy; more posterior targets may perform better</td><td>Meaningful pain reduction in approximately 55%, persisting in approximately 38% at last follow-up</td><td>Evidence is mainly retrospective; selection and targeting are not standardized</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Trigeminal SRS avoids general anesthesia and craniotomy and is useful in older, anticoagulated, or surgically high-risk patients, but pain relief is delayed and recurrence is common. Tremor and OCD treatment should be performed in centers with functional neurosurgery, neurology or psychiatry, imaging, radiation oncology, and physics expertise.</p>
+
+<div class="clinical-note">
+Functional SRS uses a high dose to a tiny target. Safety depends on millimeter-level localization, rigorous image fusion, accurate target selection, and protection of the internal capsule, brainstem, and adjacent structures.
+</div>
+            """,
+        },
+        {
+            "label_zh": "心臟立體定位放射消融：難治型心室頻脈",
+            "label_en": "CARDIAC RADIOABLATION",
+            "body_zh": """
+<p>立體定位心律不整放射消融（STAR）使用電生理資訊、心電圖影像、心臟 CT／MRI、核醫或既往導管標測，界定致心律不整疤痕與關鍵傳導通道，再以 SBRT 非侵入性消融。</p>
+
+<h3>ENCORE-VT</h3>
+<p>ENCORE-VT 納入 19 位高度難治型心室心律不整病人，包括 17 位心室頻脈與 2 位早期心室收縮相關心肌病變。病人接受<span class="highlight">電生理影像導引 25 Gy／1 次</span>。</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>指標</th><th>結果</th></tr></thead>
+<tbody>
+<tr><td>心室頻脈發作中位數</td><td><span class="highlight">由治療前 119 次下降至治療後 3 次</span></td></tr>
+<tr><td>心室頻脈或 PVC 負荷降低 ≥75%</td><td>89%</td></tr>
+<tr><td>使用兩種抗心律不整藥物</td><td>由 59% 降至 12%</td></tr>
+<tr><td>早期嚴重治療相關事件</td><td>2／19，包括心包膜炎等；後續報告亦提醒可能有延遲性心包、食道、冠狀動脈或肺部毒性</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>STAR 的優勢是無需導管進入心臟，可用於多次導管消融失敗、無法接受麻醉或解剖上無法到達的致心律不整區域。但其作用機轉、最佳靶區、呼吸與心跳運動管理、劑量限制及長期毒性尚未完全確立。</p>
+
+<div class="clinical-note">
+目前定位：<span class="highlight">STAR 是高度專門、具潛力但仍屬新興／研究性治療</span>。必須由心臟電生理、心臟影像、放射腫瘤科與醫學物理共同完成，且需長期心臟與胸腔毒性追蹤。
+</div>
+            """,
+            "body_en": """
+<p>Stereotactic arrhythmia radioablation uses electrophysiology, electrocardiographic imaging, cardiac CT or MRI, nuclear imaging, and previous catheter maps to identify arrhythmogenic scar and critical conduction channels for noninvasive SBRT ablation.</p>
+
+<h3>ENCORE-VT</h3>
+<p>ENCORE-VT enrolled 19 patients with highly refractory ventricular arrhythmia, including 17 with ventricular tachycardia and two with PVC-related cardiomyopathy. Patients received electrophysiology-guided 25 Gy in one fraction.</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Endpoint</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Median VT episodes</td><td>Reduced from 119 before treatment to 3 after treatment</td></tr>
+<tr><td>VT or PVC burden reduced by at least 75%</td><td>89%</td></tr>
+<tr><td>Use of two antiarrhythmic drugs</td><td>Reduced from 59% to 12%</td></tr>
+<tr><td>Early serious treatment-related events</td><td>2 of 19; later experience also raises concern about delayed pericardial, esophageal, coronary, or pulmonary toxicity</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>STAR avoids intracardiac catheter access and may be useful after multiple failed ablations, in patients who cannot tolerate anesthesia, or for inaccessible arrhythmogenic substrate. The mechanism, optimal target, respiratory and cardiac motion management, dose constraints, and long-term toxicity remain incompletely defined.</p>
+
+<div class="clinical-note">
+Current status: STAR is a highly specialized and promising but still emerging or investigational treatment requiring collaboration among electrophysiology, cardiac imaging, radiation oncology, and medical physics, with long-term follow-up.
+</div>
+            """,
+        },
+        {
+            "label_zh": "眼科新興應用：新生血管型老年性黃斑部病變",
+            "label_en": "OPHTHALMIC STEREOTACTIC RT",
+            "body_zh": """
+<p>新生血管型老年性黃斑部病變（nAMD）的標準治療是玻璃體內抗血管內皮生長因子（anti-VEGF）注射。立體定位放射治療的目的不是取代 anti-VEGF，而是藉由抑制增生性血管、發炎細胞與纖維化，降低反覆注射負擔。</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>研究</th><th>設計</th><th>主要結果</th><th>臨床意義</th></tr></thead>
+<tbody>
+<tr><td>INTREPID</td><td>16 Gy、24 Gy SRS 對比假治療</td><td>降低玻璃體內注射需求；少數眼睛出現放射相關微血管異常，可能影響視力者極少</td><td>16 Gy 在病灶大小符合治療區時具有較佳效益與風險平衡</td></tr>
+<tr><td>STAR</td><td>慢性活動性 nAMD；<span class="highlight">16 Gy SRT 對比假治療</span>，兩組依標準條件接受 ranibizumab</td><td><span class="highlight">2 年平均注射 10.7 對比 13.3 次；視力變化達不劣性</span></td><td>可降低注射負擔而不犧牲平均視力</td></tr>
+<tr><td>STAR 安全性</td><td>影像判讀中心評估微血管變化</td><td><span class="highlight">微血管異常 35% 對比 12%</span></td><td>即使平均視力未變差，仍需長期眼底與微血管安全性追蹤</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>治療使用專用眼球追蹤與固定系統，將多束低能量 X 光聚焦於黃斑病灶。病人選擇需由視網膜專科與放射治療團隊共同完成，考量病灶大小、既往注射需求、視網膜血管疾病與預期壽命。</p>
+
+<div class="clinical-note">
+目前定位：STAR 提供高品質隨機證據，顯示<span class="highlight">16 Gy 可降低 anti-VEGF 注射次數且維持非劣性視力</span>；但此技術需要專用設備，且尚未成為全球普遍標準。
+</div>
+            """,
+            "body_en": """
+<p>The standard treatment for neovascular age-related macular degeneration is intravitreal anti-VEGF therapy. Stereotactic RT is not intended to replace anti-VEGF; it aims to reduce repeated injection burden by suppressing proliferative vessels, inflammatory cells, and fibrosis.</p>
+
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Study</th><th>Design</th><th>Main findings</th><th>Clinical meaning</th></tr></thead>
+<tbody>
+<tr><td>INTREPID</td><td>16 Gy and 24 Gy SRS versus sham</td><td>Reduced injection requirement; radiation-related microvascular abnormalities occurred in some eyes, but visual impact was uncommon</td><td>16 Gy offered a favorable benefit-risk balance when lesion size matched the treatment zone</td></tr>
+<tr><td>STAR</td><td>Chronic active nAMD; 16 Gy SRT versus sham, with ranibizumab given according to retreatment criteria</td><td>Mean two-year injections were 10.7 versus 13.3; visual-acuity change was noninferior</td><td>Reduced injection burden without sacrificing mean vision</td></tr>
+<tr><td>STAR safety</td><td>Reading-center assessment of microvascular change</td><td>Microvascular abnormalities were 35% versus 12%</td><td>Long-term retinal and microvascular surveillance remains necessary</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Treatment uses a dedicated eye-tracking and fixation system to focus multiple low-energy X-ray beams on the macular lesion. Selection requires collaboration between retinal specialists and the radiation team, considering lesion size, previous injection burden, retinal vascular disease, and life expectancy.</p>
+
+<div class="clinical-note">
+Current status: STAR provides high-quality randomized evidence that 16 Gy can reduce anti-VEGF injections with noninferior vision, but the technique requires dedicated equipment and is not yet a universal standard.
+</div>
+            """,
+        },
+        {
+            "label_zh": "新興與邊界適應症：腹腔神經叢放射手術及證據成熟度",
+            "label_en": "EMERGING & BOUNDARY INDICATIONS",
+            "body_zh": """
+<h3>腹腔神經叢放射手術</h3>
+<p>腹腔神經叢放射手術是以高精準放射治療神經叢，降低胰臟癌或上腹部惡性腫瘤造成的難治型疼痛。雖然靶點是非腫瘤神經結構，但病人的基礎疾病是惡性腫瘤，因此<span class="highlight">嚴格分類上應屬緩和治療，而不是良性疾病治療</span>。</p>
+
+<p>2024 年多中心第二期研究使用<span class="highlight">25 Gy 單次放射手術</span>，53% 病人至少達部分疼痛反應；第 3 級以上不良事件約 9%。此策略仍需與傳統腹腔神經叢阻斷或神經溶解術進行隨機比較。</p>
+
+<h3>如何判斷新興良性適應症是否可進入臨床</h3>
+<div class="table-wrap">
+<table class="oncology-table decision-table">
+<thead><tr><th>問題</th><th>最低要求</th></tr></thead>
+<tbody>
+<tr><td>診斷是否明確？</td><td>需有專科診斷、影像或病理，排除惡性腫瘤與可逆原因</td></tr>
+<tr><td>標準治療是否已充分嘗試？</td><td>應記錄藥物、復健、注射、手術或介入治療及其失敗原因</td></tr>
+<tr><td>是否有可量化的症狀或功能終點？</td><td>使用疼痛量表、功能量表、注射次數、心律不整負荷或影像閉塞率</td></tr>
+<tr><td>是否有合理的長期安全計畫？</td><td>良性疾病需追蹤數年，監測器官毒性與第二惡性腫瘤</td></tr>
+<tr><td>證據是否足以支持常規使用？</td><td><span class="highlight">優先採隨機假治療試驗；僅有回溯病例系列時應標示為研究性或高度選擇性</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>依目前證據成熟度，Dupuytren 氏病、Ledderhose 病、足底筋膜炎、異位性骨化、部分良性腫瘤與三叉神經痛具有較成熟臨床經驗；骨關節炎、心臟放射消融、功能性精神疾病放射手術及 AMD SRT 則應依地區規範、設備與專家中心經驗個別使用。</p>
+            """,
+            "body_en": """
+<h3>Celiac plexus radiosurgery</h3>
+<p>Celiac plexus radiosurgery targets a non-tumor neural structure to reduce refractory pain from pancreatic or other upper gastrointestinal malignancy. Because the underlying disease is malignant, it is more accurately classified as palliative oncology rather than benign-disease RT.</p>
+
+<p>A 2024 multicenter phase II study used 25 Gy in one fraction. Fifty-three percent of patients achieved at least a partial pain response, and grade 3 or higher adverse events occurred in approximately 9%. Randomized comparison with conventional celiac block or neurolysis is still needed.</p>
+
+<h3>How to judge an emerging benign indication</h3>
+<div class="table-wrap">
+<table class="oncology-table decision-table">
+<thead><tr><th>Question</th><th>Minimum requirement</th></tr></thead>
+<tbody>
+<tr><td>Is the diagnosis secure?</td><td>Specialist diagnosis, imaging or pathology, and exclusion of malignancy and reversible causes</td></tr>
+<tr><td>Have standard treatments been adequately tried?</td><td>Document medication, rehabilitation, injection, surgery, or intervention and reasons for failure</td></tr>
+<tr><td>Is there a measurable endpoint?</td><td>Pain and functional scales, injection burden, arrhythmia burden, or imaging obliteration</td></tr>
+<tr><td>Is there a long-term safety plan?</td><td>Benign disease requires multi-year follow-up for organ toxicity and second malignancy</td></tr>
+<tr><td>Is the evidence strong enough for routine care?</td><td>Prefer randomized sham-controlled evidence; retrospective series should be labeled investigational or highly selective</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Current maturity is greatest for selected Dupuytren disease, Ledderhose disease, plantar fasciitis, heterotopic ossification, some benign tumors, and trigeminal neuralgia. Osteoarthritis, cardiac radioablation, psychiatric functional radiosurgery, and AMD SRT remain more dependent on regional governance, specialized equipment, and expert-center experience.</p>
+            """,
+        },
+        {
+            "label_zh": "重點總表",
+            "label_en": "UPLOADED TRIAL DATABASE",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>疾病</th><th>重要研究</th><th>主要療程</th><th>關鍵結論</th></tr></thead>
+<tbody>
+<tr><td>新生血管型黃斑部病變</td><td>INTREPID、STAR</td><td>16 Gy SRT</td><td>降低 anti-VEGF 注射次數；視力不劣於假治療，但微血管異常增加</td></tr>
+<tr><td>局部 AL 類澱粉沉積症</td><td>Hall 等人回顧</td><td>20–45 Gy／10–25 次</td><td>局部控制佳、毒性低，可替代高傷害性手術</td></tr>
+<tr><td>未破裂 AVM</td><td>ARUBA</td><td>觀察對比手術／栓塞／SRS</td><td>短中期死亡或中風較支持藥物管理與觀察</td></tr>
+<tr><td>AVM SRS</td><td>Maruyama 等人</td><td>平均約 21 Gy</td><td>5 年閉塞率 91%，閉塞後出血風險下降 88%</td></tr>
+<tr><td>難治型 OCD</td><td>Gupta 等人</td><td>中位 135 Gy 腹側內囊放射囊切開術</td><td>反應率約 45%</td></tr>
+<tr><td>腹腔神經叢疼痛</td><td>Lawrence 等人</td><td>25 Gy／1 次</td><td>53% 至少部分疼痛反應；屬癌症緩和治療的邊界應用</td></tr>
+<tr><td>Dupuytren 氏病</td><td>DEPART、Seegenschmiedt</td><td>30 Gy／10 次，常分兩療程</td><td>降低進展與手術需求，改善疼痛與生活品質</td></tr>
+<tr><td>心室頻脈</td><td>ENCORE-VT</td><td>25 Gy／1 次</td><td>心律不整負荷大幅下降，但長期安全性仍需追蹤</td></tr>
+<tr><td>難治型疼痛</td><td>Franzini 系統性回顧</td><td>內側丘腦放射手術</td><td>55% 有具意義的疼痛下降</td></tr>
+<tr><td>Ledderhose 病</td><td>LED-RAD</td><td>30 Gy／10 次，分兩療程</td><td>1 年疼痛緩解與生活品質優於假治療</td></tr>
+<tr><td>足底筋膜炎</td><td>Canyilmaz</td><td>6 Gy／6 次</td><td>疼痛與功能優於類固醇注射</td></tr>
+<tr><td>顫抖</td><td>Martínez-Moreno 系統性回顧</td><td>丘腦腹中間核 130–150 Gy</td><td>平均顫抖降低約 88%</td></tr>
+<tr><td>三叉神經痛</td><td>Tuleasca 系統性回顧</td><td>單次 SRS</td><td>初期無痛率 80–87%，但長期可能復發</td></tr>
+<tr><td>骨關節炎</td><td>Fazilat-Panah、Kim、Makarova、Minten、ArthroRad</td><td>多數為 3 Gy／6 次或 6 Gy／6 次</td><td><span class="highlight">結果不一致：較新的膝 OA 假治療試驗陽性，較早手／膝 OA 假治療試驗陰性</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+閱讀良性疾病試驗時，應特別檢查：是否有假治療對照、症狀持續時間、疾病結構嚴重度、是否允許再次照射、主要終點是否為病人回報結果，以及追蹤是否足以評估延遲毒性。
+</div>
+            """,
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table trial-table">
+<thead><tr><th>Condition</th><th>Key study</th><th>Principal regimen</th><th>Main conclusion</th></tr></thead>
+<tbody>
+<tr><td>Neovascular AMD</td><td>INTREPID, STAR</td><td>16 Gy SRT</td><td>Reduced anti-VEGF injections with noninferior vision, but increased microvascular abnormalities</td></tr>
+<tr><td>Localized AL amyloidosis</td><td>Hall et al. review</td><td>20–45 Gy in 10–25 fractions</td><td>Good local control and low toxicity; alternative to morbid surgery</td></tr>
+<tr><td>Unruptured AVM</td><td>ARUBA</td><td>Observation versus surgery, embolization, or SRS</td><td>Short-to-intermediate-term death or stroke favored medical management</td></tr>
+<tr><td>AVM SRS</td><td>Maruyama et al.</td><td>Mean approximately 21 Gy</td><td>Five-year obliteration 91%; hemorrhage risk fell 88% after obliteration</td></tr>
+<tr><td>Refractory OCD</td><td>Gupta et al.</td><td>Median 135 Gy gamma ventral capsulotomy</td><td>Response approximately 45%</td></tr>
+<tr><td>Celiac plexus pain</td><td>Lawrence et al.</td><td>25 Gy in one fraction</td><td>At least partial pain response in 53%; a boundary application in cancer palliation</td></tr>
+<tr><td>Dupuytren disease</td><td>DEPART, Seegenschmiedt</td><td>30 Gy/10 fractions, commonly split into two courses</td><td>Reduced progression and surgery, with improved pain and quality of life</td></tr>
+<tr><td>Ventricular tachycardia</td><td>ENCORE-VT</td><td>25 Gy in one fraction</td><td>Marked reduction in arrhythmia burden; long-term safety still requires study</td></tr>
+<tr><td>Intractable pain</td><td>Franzini systematic review</td><td>Medial thalamotomy</td><td>Meaningful pain reduction in 55%</td></tr>
+<tr><td>Ledderhose disease</td><td>LED-RAD</td><td>30 Gy/10 fractions in two courses</td><td>Better one-year pain and quality of life than sham</td></tr>
+<tr><td>Plantar fasciitis</td><td>Canyilmaz</td><td>6 Gy/6 fractions</td><td>Better pain and function than steroid injection</td></tr>
+<tr><td>Tremor</td><td>Martínez-Moreno systematic review</td><td>VIM thalamotomy 130–150 Gy</td><td>Mean tremor reduction approximately 88%</td></tr>
+<tr><td>Trigeminal neuralgia</td><td>Tuleasca systematic review</td><td>Single-fraction SRS</td><td>Initial freedom from pain 80–87%, with later recurrence in some patients</td></tr>
+<tr><td>Osteoarthritis</td><td>Fazilat-Panah, Kim, Makarova, Minten, ArthroRad</td><td>Usually 3 Gy/6 fractions or 6 Gy/6 fractions</td><td>Mixed results: newer sham-controlled knee studies were positive, while earlier hand and knee sham studies were negative</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+When reading benign-disease trials, examine whether there was a sham control, symptom duration, structural severity, retreatment policy, use of patient-reported outcomes, and whether follow-up was long enough to assess delayed toxicity.
+</div>
+            """,
+        },
+        {
+            "label_zh": "良性疾病放射治療劑量與決策總表",
+            "label_en": "DOSE & DECISION SUMMARY",
+            "body_zh": """
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead><tr><th>疾病</th><th>典型適應症</th><th>常用劑量</th><th>關鍵限制</th></tr></thead>
+<tbody>
+<tr><td>Dupuytren 氏病</td><td>活動性 N／N-I 期，近 6–12 個月進展</td><td><span class="highlight">15 Gy／5 次 ×2，總劑量 30 Gy</span>；替代方案 21 Gy／7 次</td><td>不適合已固定的嚴重攣縮</td></tr>
+<tr><td>Ledderhose 病</td><td>疼痛增加、結節生長、行走受影響</td><td><span class="highlight">15 Gy／5 次 ×2，總劑量 30 Gy</span></td><td>無症狀結節通常觀察</td></tr>
+<tr><td>足底筋膜炎</td><td>&gt;6 個月且保守治療失敗</td><td><span class="highlight">3–6 Gy／6 次</span></td><td>確認診斷並排除其他足跟疼痛原因</td></tr>
+<tr><td>骨關節炎</td><td>較年長、輕中度結構疾病、保守治療失敗</td><td><span class="highlight">3 Gy／6 次，每次 0.5 Gy</span></td><td>證據仍混合；嚴重關節破壞不會被逆轉</td></tr>
+<tr><td>異位性骨化預防</td><td>高風險髖部手術或髖臼骨折</td><td><span class="highlight">7 Gy／1 次，術前 4 小時內或術後 96 小時內</span></td><td>NSAID 亦有效；注意性腺與生育風險</td></tr>
+<tr><td>蟹足腫</td><td>復發或高風險病灶切除後</td><td>依部位與流程個別化</td><td><span class="highlight">最好術後 24 小時內，最遲 72 小時內開始</span></td></tr>
+<tr><td>Graves 眼病</td><td>中重度活動期、類固醇反應不足</td><td>20 Gy／10 次</td><td>避免糖尿病視網膜病變與未控制高血壓</td></tr>
+<tr><td>前庭神經鞘瘤</td><td>小型但持續增大</td><td>12–13 Gy SRS</td><td>評估聽力、顏面神經與腦幹</td></tr>
+<tr><td>頭頸副神經節瘤</td><td>進展、症狀或手術傷害風險高</td><td>45–54 Gy 或 12–15 Gy SRS</td><td>無症狀病人可先觀察</td></tr>
+<tr><td>局部 AL 類澱粉沉積症</td><td>復發或手術傷害高</td><td>20–45 Gy／10–25 次</td><td>先排除全身性疾病</td></tr>
+<tr><td>AVM</td><td>較小、深部或手術風險高</td><td>約 18–25 Gy SRS</td><td>完全閉塞前仍有出血風險</td></tr>
+<tr><td>三叉神經痛</td><td>藥物失敗或不適合手術</td><td>約 70–90 Gy SRS</td><td>止痛延遲、顏面麻木與復發</td></tr>
+<tr><td>顫抖</td><td>難治型且不適合侵入性治療</td><td>130–150 Gy 丘腦放射手術</td><td>反應延遲且可能有永久神經毒性</td></tr>
+<tr><td>難治型 OCD</td><td>極度嚴重、長期藥物與心理治療失敗</td><td>約 120–180 Gy；中位約 135 Gy</td><td>僅限專家功能性神經外科中心</td></tr>
+<tr><td>心室頻脈</td><td>藥物與導管消融失敗</td><td>25 Gy／1 次</td><td>研究性；需長期監測心包、冠狀動脈、肺與食道</td></tr>
+<tr><td>nAMD</td><td>慢性活動性且需反覆 anti-VEGF 注射</td><td>16 Gy SRT</td><td>需專用設備；微血管異常增加</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+一句話記憶：良性疾病放射治療可分為<span class="highlight">低劑量抗發炎、低中劑量抗增生、良性腫瘤控制與高劑量功能性放射手術</span>。真正決定治療價值的不是「疾病是否良性」，而是症狀與功能損害、替代治療風險、證據品質、病人年齡、照射體積與長期安全性。
+</div>
+            """,
+            "body_en": """
+<div class="table-wrap">
+<table class="oncology-table dose-table">
+<thead><tr><th>Condition</th><th>Typical indication</th><th>Common dose</th><th>Key limitation</th></tr></thead>
+<tbody>
+<tr><td>Dupuytren disease</td><td>Active N/N-I stage with progression over 6–12 months</td><td>15 Gy/5 fractions ×2 for 30 Gy; alternative 21 Gy/7 fractions</td><td>Not appropriate for severe fixed contracture</td></tr>
+<tr><td>Ledderhose disease</td><td>Increasing pain, nodule growth, impaired walking</td><td>15 Gy/5 fractions ×2 for 30 Gy</td><td>Asymptomatic nodules are usually observed</td></tr>
+<tr><td>Plantar fasciitis</td><td>More than six months and failure of conservative care</td><td>3–6 Gy/6 fractions</td><td>Confirm diagnosis and exclude other causes of heel pain</td></tr>
+<tr><td>Osteoarthritis</td><td>Older patient, mild-to-moderate structural disease, failed conservative care</td><td>3 Gy/6 fractions of 0.5 Gy</td><td>Evidence remains mixed; severe joint destruction will not reverse</td></tr>
+<tr><td>Heterotopic ossification prophylaxis</td><td>High-risk hip surgery or acetabular fracture</td><td>7 Gy in one fraction within four hours preoperatively or 96 hours postoperatively</td><td>NSAIDs are also effective; consider gonadal and reproductive risk</td></tr>
+<tr><td>Keloid</td><td>After excision of recurrent or high-risk lesion</td><td>Site- and protocol-specific</td><td>Start ideally within 24 hours and no later than 72 hours</td></tr>
+<tr><td>Graves orbitopathy</td><td>Moderate-to-severe active disease after inadequate steroid response</td><td>20 Gy/10 fractions</td><td>Avoid diabetic retinopathy and uncontrolled hypertension</td></tr>
+<tr><td>Vestibular schwannoma</td><td>Small but enlarging lesion</td><td>12–13 Gy SRS</td><td>Assess hearing, facial nerve, and brainstem</td></tr>
+<tr><td>Head and neck paraganglioma</td><td>Progression, symptoms, or high surgical morbidity</td><td>45–54 Gy or 12–15 Gy SRS</td><td>Observation is reasonable when asymptomatic</td></tr>
+<tr><td>Localized AL amyloidosis</td><td>Recurrent disease or high surgical morbidity</td><td>20–45 Gy in 10–25 fractions</td><td>Exclude systemic disease first</td></tr>
+<tr><td>AVM</td><td>Small, deep, or surgically high-risk lesion</td><td>Approximately 18–25 Gy SRS</td><td>Hemorrhage risk persists until obliteration</td></tr>
+<tr><td>Trigeminal neuralgia</td><td>Medication failure or unsuitable for surgery</td><td>Approximately 70–90 Gy SRS</td><td>Delayed relief, facial numbness, and recurrence</td></tr>
+<tr><td>Tremor</td><td>Refractory and unsuitable for invasive treatment</td><td>130–150 Gy thalamotomy</td><td>Delayed response and possible permanent neurologic toxicity</td></tr>
+<tr><td>Refractory OCD</td><td>Extreme severity after prolonged medication and psychotherapy failure</td><td>Approximately 120–180 Gy; median about 135 Gy</td><td>Expert functional-neurosurgery center only</td></tr>
+<tr><td>Ventricular tachycardia</td><td>Drug and catheter-ablation failure</td><td>25 Gy in one fraction</td><td>Investigational; long-term pericardial, coronary, pulmonary, and esophageal follow-up</td></tr>
+<tr><td>nAMD</td><td>Chronic active disease requiring repeated anti-VEGF injections</td><td>16 Gy SRT</td><td>Dedicated equipment; increased microvascular abnormalities</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="clinical-note">
+One-sentence memory aid: benign-disease RT includes low-dose anti-inflammatory treatment, low-to-intermediate-dose antiproliferative treatment, benign tumor control, and high-dose functional radiosurgery. Value depends on symptom and functional burden, alternative-treatment risk, evidence quality, age, treatment volume, and long-term safety.
+</div>
+            """,
+        },
+    ],
+    "excel_sheet": "Benign",
+    "trial_filter": [
+        "Age-related macular degeneration",
+        "ARMD",
+        "INTREPID",
+        "STAR",
+        "Amyloidosis",
+        "Localized amyloid light chain amyloidosis",
+        "AVM",
+        "ARUBA",
+        "Behavioral disorders",
+        "OCD",
+        "Gamma ventral capsulotomy",
+        "Celiac plexus pain",
+        "Dupuytren",
+        "Dupuytren’s contracture",
+        "DEPART",
+        "Heart arrhythmia",
+        "Ventricular Tachycardia",
+        "ENCORE-VT",
+        "Intractable pain",
+        "Ledderhose",
+        "LED-RAD",
+        "Plantar fasciitis",
+        "Tremor",
+        "Trigeminal Neuralgia",
+        "Osteoarthritis",
+        "Low dose RT",
+        "Fazilat-Panah",
+        "Kim",
+        "Makarova",
+        "Dove",
+        "Mucke",
+        "Minten",
+        "ArthroRad",
+        "Niewald",
+        "Seegenschmiedt",
+        "Jackson",
+        "Maruyama",
+        "Gupta",
+        "Lawrence",
+        "Robinson",
+        "Franzini",
+        "Haan",
+        "Canyilmaz",
+        "Martínez-Moreno",
+        "Tuleasca",
+    ],
+    "prev": ["palliative.html", "緩和", "Palliative"],
+    "next": None,
+})

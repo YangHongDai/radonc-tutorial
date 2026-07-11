@@ -193,6 +193,34 @@
     });
   }
 
+  function ensureBenignNavLink() {
+    document.querySelectorAll(".top-nav-links").forEach(function (navLinks) {
+      if (navLinks.querySelector('a[href="benign.html"]')) {
+        return;
+      }
+
+      var palliativeLink = navLinks.querySelector('a[href="palliative.html"]');
+      var quizLink = navLinks.querySelector('a[href="radonc-quiz/index.html"]');
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+
+      link.href = "benign.html";
+      link.setAttribute("data-zh", "良性");
+      link.setAttribute("data-en", "Benign");
+      link.textContent = currentLanguage === "en" ? "Benign" : "良性";
+
+      item.appendChild(link);
+
+      if (palliativeLink && palliativeLink.parentElement) {
+        palliativeLink.parentElement.insertAdjacentElement("afterend", item);
+      } else if (quizLink && quizLink.parentElement) {
+        navLinks.insertBefore(item, quizLink.parentElement);
+      } else {
+        navLinks.appendChild(item);
+      }
+    });
+  }
+
   function bindLanguageButtons() {
     document.querySelectorAll(
       "#lang-toggle, .lang-toggle, [data-lang-toggle]"
@@ -221,6 +249,7 @@
     }
 
     isInitialised = true;
+    ensureBenignNavLink();
     ensureLiteratureNavLink();
     ensureLanguageButton();
     bindLanguageButtons();
