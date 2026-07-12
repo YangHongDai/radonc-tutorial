@@ -32,11 +32,11 @@ body{font-family:var(--font-body);background:var(--c-bg);color:var(--c-ink);line
 .page-hero .step-badge{display:inline-block;padding:4px 16px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;font-size:.82rem;font-weight:600;letter-spacing:.5px;margin-bottom:16px}
 .page-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3rem);font-weight:700;line-height:1.2;margin-bottom:12px}
 .page-hero .subtitle{font-size:1.05rem;opacity:.85;max-width:600px;margin:0 auto;line-height:1.6}
-.content-wrap{max-width:var(--max-w);margin:0 auto;padding:48px 24px 80px}
-.section{margin-bottom:56px;animation:fadeUp .5s ease both}
+.content-wrap{max-width:var(--max-w);margin:0 auto;padding:48px 24px 80px;counter-reset:topic-section}
+.section{margin-bottom:56px;animation:fadeUp .5s ease both;counter-increment:topic-section}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.section-label{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--c-accent);margin-bottom:8px}
-.section-label::before{content:'';width:18px;height:2px;background:var(--c-accent)}
+.section-label{display:inline-flex;align-items:center;gap:10px;max-width:100%;padding:8px 13px;margin-bottom:14px;border:1px solid #b9d9d0;border-radius:8px;background:var(--c-accent-light);color:var(--c-accent-dark);font-size:.95rem;font-weight:850;line-height:1.35;letter-spacing:.02em;text-transform:none;box-shadow:0 1px 0 rgba(255,255,255,.75)}
+.section-label::before{content:counter(topic-section,decimal-leading-zero);display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:24px;padding:0 5px;border-radius:6px;background:var(--c-accent);color:#fff;font-size:.78rem;font-weight:900;line-height:1;letter-spacing:0;flex:0 0 auto}
 .section h2{font-family:var(--font-display);font-size:1.75rem;font-weight:700;color:var(--c-ink);margin-bottom:16px;line-height:1.3}
 .section h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600;margin-top:32px;margin-bottom:12px}
 .section p{color:var(--c-ink-light);margin-bottom:16px}
@@ -350,4 +350,21 @@ textarea,
 
 html {
   font-synthesis: none;
+}
+
+@media (max-width: 640px) {
+  .section-label {
+    align-items: flex-start;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: .88rem;
+    line-height: 1.45;
+  }
+
+  .section-label::before {
+    margin-top: 1px;
+    min-width: 26px;
+    height: 22px;
+    font-size: .72rem;
+  }
 }

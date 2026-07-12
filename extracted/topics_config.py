@@ -17,29 +17,21 @@ PAGES.append({
     "sections": [
       {
         "label_zh": "概觀", "label_en": "OVERVIEW",
-        "h2_zh": "放射腫瘤科在癌症照護中的角色",
-        "h2_en": "The role of Rad Onc in cancer care",
         "body_zh": "<p>放射腫瘤科 (Radiation Oncology) 是使用<strong>游離輻射</strong>治療癌症與少數良性疾病的臨床專科。約 50% 的癌症病人在治療歷程中會接受放射治療，貢獻約 40% 的癌症治癒率。</p><p>放射腫瘤醫師與外科、腫瘤內科組成癌症多專科團隊，負責諮商、模擬、勾畫、計畫審核、治療執行與追蹤。</p>",
         "body_en": "<p>Radiation Oncology is the medical specialty using <strong>ionizing radiation</strong> to treat cancer and select benign conditions. About 50% of cancer patients receive radiation at some point, and RT contributes ~40% of cancer cures.</p><p>The rad onc physician works alongside surgical and medical oncology in multidisciplinary care, owning the workflow of consultation, simulation, contouring, plan review, on-treatment care, and survivorship follow-up.</p>"
       },
       {
         "label_zh": "工作流程", "label_en": "WORKFLOW",
-        "h2_zh": "放射治療的完整流程",
-        "h2_en": "The end-to-end RT workflow",
         "body_zh": "<div class='workflow'><div class='workflow-step' data-step='1'><h4>諮商 (Consultation)</h4><p>檢視病史、影像、病理與分期，決定是否放療、治療目的（根治 vs 姑息）與 informed consent。</p></div><div class='workflow-step' data-step='2'><h4>模擬 (Simulation)</h4><p>以 CT-Sim 取得治療姿勢的定位影像；必要時融合 MRI/PET。使用固定裝置（面罩、真空袋、乳房板等）。</p></div><div class='workflow-step' data-step='3'><h4>勾畫 (Contouring)</h4><p>依 ICRU 定義 GTV → CTV → ITV → PTV；同時勾畫 OARs。近年 AI auto-contouring 已可加速流程但需醫師審核。</p></div><div class='workflow-step' data-step='4'><h4>計畫 (Planning)</h4><p>物理師以 IMRT/VMAT/3DCRT/質子等技術製作劑量分佈；醫師審核並要求 QA。</p></div><div class='workflow-step' data-step='5'><h4>治療執行 (Delivery)</h4><p>直線加速器或質子機每日治療；每次治療前以 kV/CBCT 進行 image guidance (IGRT)。</p></div><div class='workflow-step' data-step='6'><h4>追蹤 (Follow-up)</h4><p>治療完成後定期評估腫瘤反應與晚期副作用，通常 2 年內每 3 個月，5 年內每 6 個月。</p></div></div>",
         "body_en": "<div class='workflow'><div class='workflow-step' data-step='1'><h4>Consultation</h4><p>Review history, imaging, pathology, and stage. Decide if RT is indicated, intent (curative vs palliative), and obtain informed consent.</p></div><div class='workflow-step' data-step='2'><h4>Simulation</h4><p>CT-simulation in treatment position; MRI/PET fusion as indicated. Immobilization devices (thermoplastic masks, vac-lok bags, breast boards).</p></div><div class='workflow-step' data-step='3'><h4>Contouring</h4><p>Per ICRU: GTV → CTV → ITV → PTV; contour OARs. AI auto-contouring can accelerate but requires MD review.</p></div><div class='workflow-step' data-step='4'><h4>Planning</h4><p>Medical physicist builds dose distribution with IMRT/VMAT/3DCRT/protons; MD reviews and orders QA.</p></div><div class='workflow-step' data-step='5'><h4>Delivery</h4><p>Daily fractions on a linac or proton unit with image guidance (kV/CBCT) before each treatment.</p></div><div class='workflow-step' data-step='6'><h4>Follow-up</h4><p>Assess tumor response and late toxicity — typically q3 months for 2 years, then q6 months to year 5, then annually.</p></div></div>"
       },
       {
         "label_zh": "劑量單位", "label_en": "DOSE UNITS",
-        "h2_zh": "劑量、分次與生物有效劑量",
-        "h2_en": "Dose, fractionation & biologically effective dose",
         "body_zh": "<p><strong>Gy (灰):</strong> 吸收劑量的 SI 單位，1 Gy = 1 J/kg。臨床通常以每日 <strong>分次 (fraction)</strong> 給予，如 2 Gy × 30 次 = 60 Gy。</p><p><strong>BED (生物有效劑量):</strong> BED = nd(1 + d/(α/β))，用於跨分次比較。腫瘤 α/β 通常較高 (~10)，晚期正常組織較低 (~3)，故大分次 (SBRT) 對腫瘤相對有利。</p><p><strong>EQD2:</strong> 等效於每次 2 Gy 的總劑量，臨床最常用來換算。</p>",
         "body_en": "<p><strong>Gray (Gy):</strong> SI unit of absorbed dose; 1 Gy = 1 J/kg. Clinical RT is delivered in daily <strong>fractions</strong>, e.g., 2 Gy × 30 = 60 Gy total.</p><p><strong>BED:</strong> BED = nd(1 + d/(α/β)) — enables comparison across fractionation schemes. Tumor α/β is typically high (~10) and late-responding normal tissue is low (~3), so hypofractionation (SBRT) can be biologically favorable.</p><p><strong>EQD2:</strong> Total dose expressed as-if delivered in 2 Gy fractions — the most common clinical conversion.</p>"
       },
       {
         "label_zh": "治療技術", "label_en": "MODALITIES",
-        "h2_zh": "常見治療技術",
-        "h2_en": "Common treatment modalities",
         "body_zh": "<ul><li><strong>3D-CRT:</strong> 三維適形放射治療，多野合成。</li><li><strong>IMRT:</strong> 強度調控，適合複雜靶區（頭頸、攝護腺）。</li><li><strong>VMAT:</strong> 旋轉式 IMRT，治療時間更短。</li><li><strong>SBRT / SABR:</strong> 立體定位大分次，用於早期肺癌、寡轉移、肝癌等。</li><li><strong>SRS:</strong> 顱內立體定位單次治療，用於腦轉移、AVM、聽神經瘤。</li><li><strong>近接治療 (Brachytherapy):</strong> 放射源直接置入腫瘤（婦科、攝護腺）。</li><li><strong>質子治療 (Proton):</strong> 利用 Bragg peak 減少出射劑量，特別用於兒童與顱底腫瘤。</li></ul>",
         "body_en": "<ul><li><strong>3D-CRT:</strong> 3D conformal RT, multiple shaped beams.</li><li><strong>IMRT:</strong> Intensity-modulated for complex targets (H&amp;N, prostate).</li><li><strong>VMAT:</strong> Rotational IMRT — faster delivery.</li><li><strong>SBRT / SABR:</strong> Stereotactic body RT, hypofractionated — early lung, oligomets, HCC.</li><li><strong>SRS:</strong> Intracranial single-fraction — brain mets, AVMs, vestibular schwannomas.</li><li><strong>Brachytherapy:</strong> Radioactive sources placed in/near tumor (Gyn, prostate).</li><li><strong>Protons:</strong> Bragg peak reduces exit dose — pediatric, skull-base tumors.</li></ul>"
       },
@@ -1436,8 +1428,6 @@ PAGES.append({
         {
             'label_zh': '互動式 LQ 模型：組織、射束、氧效應與存活曲線',
             'label_en': 'INTERACTIVE LQ MODEL: Tissue, Beam, Oxygen Effect, and Survival Curve',
-            'h2_zh': '互動式 Linear-Quadratic Survival Curve',
-            'h2_en': 'Interactive Linear-Quadratic Survival Curve',
             'body_zh': """
 <p>這個互動模型用 <span class="highlight">SF = exp[-(αD + βD²) × OMF × RBE]</span> 即時計算細胞存活率。你可以選擇組織類型、治療射束、氧合狀態與修復能力，並用拉桿調整 α/β ratio、α、單次劑量與總劑量。</p>
 <p>這不是臨床處方工具，而是用來直覺化理解：低 α/β 組織為何對大分次更敏感、缺氧為何會讓 survival curve 變平、質子／高 LET 射束如何透過 RBE 與 β 成分改變曲線。</p>
@@ -1938,8 +1928,6 @@ PAGES.append({
         {
             "label_zh": "總論：靶區勾畫不是畫影像，而是把臨床風險轉成幾何",
             "label_en": "OVERVIEW: Turning Clinical Risk Into Geometry",
-            "h2_zh": "靶區勾畫的核心邏輯",
-            "h2_en": "Core logic of target delineation",
             "body_zh": """
 <p>Target delineation 的本質不是把 CT 或 MRI 上看得到的東西圈起來而已，而是把 <span class="highlight">肉眼疾病、顯微侵犯風險、解剖屏障、淋巴引流、器官移動與擺位不確定性</span> 轉換成可治療的幾何體積。</p>
 <p>臨床上應先決定治療目的、術前或術後、根治或緩和、是否有同步全身治療，再選擇對應的 consensus atlas。不同 consensus 的差異通常不是誰對誰錯，而是它們服務的情境不同：trial credentialing、日常臨床、術後瘢痕、MRI-based boost、質子治療或高度 conformal IMRT/SBRT。</p>
@@ -1954,8 +1942,6 @@ PAGES.append({
         {
             "label_zh": "Consensus 地圖：不同指南如何使用",
             "label_en": "CONSENSUS MAP: How to Use Different Guidelines",
-            "h2_zh": "主要 consensus 與 atlas 的角色差異",
-            "h2_en": "How consensus atlases differ",
             "body_zh": """
 <p>以下整理常用 consensus 的定位。實際治療仍應以院內 protocol、trial atlas、主治醫師判斷與最新版本為準。</p>
 <div class="table-wrap"><table class="oncology-table"><thead><tr><th>來源</th><th>最適合用途</th><th>特點</th><th>注意事項</th></tr></thead><tbody><tr><td>eContour guideline database</td><td>快速查找各癌別 consensus contouring references</td><td>彙整多癌別 published consensus，適合當入口</td><td>它是索引與教學平台，不取代原始 guideline</td></tr><tr><td>NRG/RTOG atlases</td><td>trial credentialing、乳癌/骨盆/婦癌/前列腺 nodal atlas</td><td>結構命名與邊界較具 trial reproducibility</td><td>有些舊 RTOG atlas 已被 updated NRG consensus 修正</td></tr><tr><td>ESTRO ACROP</td><td>歐洲 consensus，常見於 prostate、lung、breast reconstruction、skull base、GI nodal areas</td><td>重視 CT/MRI fusion、解剖邊界與現代技術</td><td>與 NRG/RTOG 邊界可能略不同，需確認採用版本</td></tr><tr><td>ILROG</td><td>淋巴瘤 ISRT/INRT/INRT-like thinking</td><td>以 pre-chemotherapy extent、PET/CT fusion 與 disease response 決定 volume</td><td>不是把整個 nodal region 全包；也不是單純 post-chemo residual</td></tr><tr><td>ASTRO clinical guidelines</td><td>決定是否放療、劑量、技術、時機與某些 target planning 原則</td><td>臨床決策權重高，常搭配 atlas 使用</td><td>多數 ASTRO guideline 不是逐片 contour atlas</td></tr></tbody></table></div>
@@ -1968,8 +1954,6 @@ PAGES.append({
         {
             "label_zh": "各癌別 contour checklist：從影像到 CTV",
             "label_en": "DISEASE-SITE CHECKLISTS: From Imaging to CTV",
-            "h2_zh": "不同癌症的靶區勾畫重點",
-            "h2_en": "Disease-site contouring priorities",
             "body_zh": """
 <div class="table-wrap"><table class="oncology-table"><thead><tr><th>癌別</th><th>建議參考 consensus</th><th>GTV/CTV 核心</th><th>常見 pitfall</th></tr></thead><tbody>
 <tr><td>CNS / GBM</td><td>EORTC 與 NRG/RTOG contouring paradigms；skull base 可參考 ESTRO ACROP</td><td>GTV 通常為 enhancing tumor/resection cavity；CTV 是否納入 T2/FLAIR edema、margin 大小與 boost 分層依 protocol</td><td>把所有 FLAIR 都等同高風險；忽略 surgical tract、術後 MRI 時點與腦室/鐮/顱骨屏障</td></tr>
@@ -1992,8 +1976,6 @@ PAGES.append({
         {
             "label_zh": "互動 atlas 入口：用官方 CT case，看 axial contour 變化",
             "label_en": "INTERACTIVE ATLAS LAUNCHER: Official Cases and Axial Contour Logic",
-            "h2_zh": "先開官方 atlas，再用本頁核對 GTV / CTV / PTV / OAR",
-            "h2_en": "Launch the official atlas, then audit GTV / CTV / PTV / OAR logic",
             "body_zh": """
 <div class="contour-widget" id="contour-widget">
   <style>
@@ -2068,8 +2050,6 @@ PAGES.append({
         {
             "label_zh": "主要癌別：GTV / CTV / PTV 與 constraints 實務框架",
             "label_en": "MAJOR DISEASE SITES: GTV / CTV / PTV and Constraint Framework",
-            "h2_zh": "實際 contour 時每一層要畫什麼，constraint 怎麼限制",
-            "h2_en": "What to contour and how to think about constraints",
             "body_zh": """
 <p>以下是教學用框架，不是單一處方。真正臨床計畫必須依照分期、術前/術後、劑量分割、同步治療、技術（3DCRT/IMRT/VMAT/SBRT/proton/brachy）、院內 protocol 與 trial constraints 修正。</p>
 <div class="table-wrap"><table class="oncology-table"><thead><tr><th>癌別</th><th>GTV 畫什麼</th><th>CTV 畫什麼</th><th>PTV / ITV</th><th>Constraints 核心</th></tr></thead><tbody>
@@ -2093,8 +2073,6 @@ PAGES.append({
         {
             "label_zh": "Treatment planning：從 CT simulation 到 plan approval",
             "label_en": "TREATMENT PLANNING: From CT Simulation to Plan Approval",
-            "h2_zh": "現代放射治療 planning 的標準流程、概念與邏輯",
-            "h2_en": "A standard modern radiotherapy planning workflow",
             "body_zh": """
 <p>Treatment planning 的核心不是只做出一個漂亮的 dose distribution，而是把 <span class="highlight">臨床目標、幾何靶區、器官風險、機器限制、影像不確定性與病人安全</span> 放進同一個可驗證流程。最標準的思路是：先定義 intent 與處方，再把不確定性一層一層處理，最後用 DVH、isodose、robustness、QA 與 peer review 確認計畫真的能被安全執行。</p>
 
@@ -2162,8 +2140,6 @@ PAGES.append({
         {
             "label_zh": "參考來源與更新策略",
             "label_en": "REFERENCES AND UPDATE STRATEGY",
-            "h2_zh": "建議追蹤的 consensus 來源",
-            "h2_en": "Consensus sources to follow",
             "body_zh": """
 <p>建議把這頁當成 contour 前的框架。真正畫contour前，請回到原始 atlas 或 trial protocol。</p>
 <div class="table-wrap"><table class="oncology-table"><thead><tr><th>主題</th><th>主要來源</th></tr></thead><tbody><tr><td>跨癌別 guideline index</td><td><a href="https://econtour.org/references" target="_blank" rel="noopener">eContour Published Consensus Contouring Guidelines</a></td></tr><tr><td>乳癌與 RNI</td><td><a href="https://www.nrgoncology.org/about-us/center-for-innovation-in-radiation-oncology/breast-cancer-downloads/" target="_blank" rel="noopener">NRG Breast Cancer Atlases</a></td></tr><tr><td>骨盆/婦癌/前列腺 nodal</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7856050/" target="_blank" rel="noopener">NRG/RTOG postoperative endometrial and cervical pelvic atlas update</a></td></tr><tr><td>攝護腺與 prostate bed</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37251620/" target="_blank" rel="noopener">ESTRO ACROP prostate bed delineation</a></td></tr><tr><td>淋巴瘤</td><td><a href="https://www.ilrog.org/guidelines" target="_blank" rel="noopener">ILROG Guidelines</a></td></tr><tr><td>軟組織肉瘤</td><td><a href="https://www.astro.org/provider-resources/guidelines/clinical-practice-guidelines/soft-tissue-sarcoma-gl" target="_blank" rel="noopener">ASTRO Soft Tissue Sarcoma Guideline</a></td></tr><tr><td>Physics plan/chart review</td><td><a href="https://www.aapm.org/pubs/reports/detail.asp?docid=198" target="_blank" rel="noopener">AAPM TG-275 physics plan and chart review</a></td></tr><tr><td>SBRT/SRS constraints</td><td><a href="https://www.aapm.org/pubs/reports/detail.asp?docid=102" target="_blank" rel="noopener">AAPM TG-101 SBRT report</a></td></tr><tr><td>Normal tissue constraints</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3431964/" target="_blank" rel="noopener">QUANTEC dose-volume/outcome overview</a></td></tr><tr><td>品質與部門流程</td><td><a href="https://www.ranzcr.com/wp-content/uploads/edocman/professional-documents/guidelines/Quality%20Guidelines%20for%20Volume%20Delineation%20in%20Radiation%20Oncology.pdf" target="_blank" rel="noopener">RANZCR Quality Guidelines for Volume Delineation</a></td></tr></tbody></table></div>
@@ -16208,5 +16184,279 @@ One-sentence memory aid: benign-disease RT includes low-dose anti-inflammatory t
         "Tuleasca",
     ],
     "prev": ["palliative.html", "緩和", "Palliative"],
+    "next": ["systemic-therapy.html", "癌症藥物", "Cancer Drugs"],
+})
+
+
+PAGES.append({
+    "slug": "systemic-therapy",
+    "emoji": "💊",
+    "title_zh": "癌症藥物總覽",
+    "title_en": "Cancer Drugs",
+    "sub_zh": "整理傳統化學治療、分子標靶治療、抗體藥物複合體（ADC）、荷爾蒙治療、免疫治療與放射治療的交會重點。",
+    "sub_en": "Chemotherapy, molecular targeted therapy, antibody-drug conjugates, endocrine therapy, immunotherapy, and key intersections with radiation oncology.",
+    "sections": [
+        {
+            "label_zh": "總論：先分類，再看生物標記、治療線別與局部治療時機",
+            "label_en": "OVERVIEW: Classify, Biomarker, Line of Therapy, Local-Therapy Timing",
+            "body_zh": """
+<p>癌症藥物不能只粗分成「化療」與「標靶」。現代腫瘤治療需要同時評估 <span class="highlight">病理型態（histology）、分期（stage）、生物標記（biomarker）、治療線別（line of therapy）、疾病進展速度（disease tempo）、症狀負荷、既往治療與放射治療時機（RT timing）</span>。對放射腫瘤科而言，核心是判斷哪些藥物會改變局部治療時機、增加放射毒性，或在寡轉移（oligometastatic）、鞏固治療（consolidation）與救援治療（salvage）情境中與放療互補。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>核心概念</th><th>常見例子</th><th>Rad Onc 注意事項</th></tr></thead><tbody>
+<tr><td>傳統化學治療（chemotherapy）</td><td>攻擊 DNA、微管、核苷酸合成或拓撲異構酶；通常與細胞週期和增殖速度相關。</td><td>鉑類（platinum）、5-FU/capecitabine、gemcitabine、紫杉類（taxane）、etoposide、anthracycline、temozolomide、PCV。</td><td>Cisplatin、5-FU/capecitabine、gemcitabine、taxane 可作放射增敏劑（radiosensitizer）；同步治療時需評估黏膜、骨髓、皮膚與腸胃道毒性。</td></tr>
+<tr><td>分子標靶小分子藥物（small-molecule targeted therapy）</td><td>抑制造癌驅動基因（oncogenic driver）或存活路徑，常需伴隨診斷（companion diagnostic）。</td><td>EGFR、ALK、ROS1、BRAF/MEK、MET、RET、NTRK、PARP、CDK4/6、PI3K/AKT/mTOR、BTK、BCL2、HIF-2α。</td><td>可能延後或改變放療角色；腦轉移常因中樞有效標靶藥（CNS-active TKI）而先全身治療或合併 SRS；部分藥物需避開放療期間。</td></tr>
+<tr><td>單株抗體與抗血管新生治療</td><td>作用於細胞表面或腫瘤微環境靶點；可透過抗體依賴細胞毒殺（ADCC）、受體阻斷或配體中和。</td><td>Trastuzumab/pertuzumab、cetuximab、bevacizumab、ramucirumab、rituximab。</td><td>Bevacizumab 需注意傷口癒合、廔管、出血與腸胃道穿孔；頭頸癌 cetuximab 不是 cisplatin 的等效替代品。</td></tr>
+<tr><td>抗體藥物複合體（ADC）</td><td>抗體把細胞毒性載荷（payload）送到表現靶點的腫瘤；旁觀者效應（bystander effect）與載荷毒性很重要。</td><td>T-DXd、T-DM1、sacituzumab govitecan、enfortumab vedotin、datopotamab deruxtecan、mirvetuximab。</td><td>注意肺炎/間質性肺病（pneumonitis/ILD）、骨髓抑制、神經病變與眼毒性；與胸部放療或腦部放療的時機需個案化。</td></tr>
+<tr><td>荷爾蒙與核受體治療</td><td>阻斷雌激素受體（ER）、雄激素受體（AR）或類固醇合成；常與 CDK4/6、PI3K/AKT/mTOR 或 PARP 抑制劑併用。</td><td>Tamoxifen、aromatase inhibitor、fulvestrant、口服選擇性雌激素受體降解劑（SERD）、雄激素剝奪治療（ADT）、abiraterone、enzalutamide、apalutamide、darolutamide。</td><td>是乳癌與攝護腺癌放療的長程搭檔；ADT 期間長短、區域淋巴照射（RNI）、乳房切除後放療（PMRT）與攝護腺放療強化是常見考點。</td></tr>
+<tr><td>免疫治療（immunotherapy）</td><td>解除免疫抑制或直接導向 T 細胞/細胞治療。</td><td>PD-1/PD-L1、CTLA-4、LAG-3、嵌合抗原受體 T 細胞（CAR-T）、腫瘤浸潤淋巴球（TIL）、雙特異性 T 細胞導向藥物。</td><td>與放療可能有協同作用，但也可能增加肺炎、皮膚炎或腸炎；第三期 NSCLC 同步放化療後 durvalumab 是最經典的放療後免疫治療模式。</td></tr>
+<tr><td>輻射藥物治療（RPT）</td><td>利用配體（ligand）、抗體或離子型藥物把放射性核種送到腫瘤或微環境。</td><td>Lu-177 PSMA、Lu-177 DOTATATE、Ra-223、I-131、I-131 MIBG。</td><td>屬於全身性放射治療；需與體外放療（EBRT）、骨髓儲備、腎臟/唾液腺毒性、合理抑低劑量原則（ALARA）與授權醫師流程整合。</td></tr>
+</tbody></table></div>
+            """,
+            "body_en": "<p>Modern systemic therapy is organized by mechanism, biomarker, disease setting, line of therapy, and interaction with local therapy.</p>",
+        },
+        {
+            "label_zh": "化療：最常見藥物家族與放療交會點",
+            "label_en": "CHEMOTHERAPY: Core Families and RT Intersections",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>家族</th><th>常見藥物</th><th>典型癌別</th><th>高頻重點</th></tr></thead><tbody>
+<tr><td>鉑類（platinum）</td><td>Cisplatin、carboplatin、oxaliplatin</td><td>頭頸癌、肺癌、食道癌、胃癌、膀胱癌、子宮頸癌、卵巢癌、睪丸癌</td><td>Cisplatin 是頭頸癌與子宮頸癌同步放化療核心；carboplatin 常因腎功能、聽力或神經病變限制而替代；oxaliplatin 是腸胃道癌常用骨架。</td></tr>
+<tr><td>氟嘧啶類（fluoropyrimidine）</td><td>5-FU、capecitabine</td><td>直腸癌、肛門癌、食道癌、胃癌、胰臟癌、乳癌</td><td>Capecitabine 常作口服放射增敏劑（oral radiosensitizer）；注意手足症候群、腹瀉、黏膜炎與 DPD 缺乏。</td></tr>
+<tr><td>Gemcitabine</td><td>Gemcitabine</td><td>胰臟癌、膽道癌、膀胱癌、肺癌</td><td>是強效放射增敏劑；與大範圍腹部或胸部放療同步時毒性風險較高。</td></tr>
+<tr><td>紫杉類（taxane）</td><td>Paclitaxel、docetaxel、nab-paclitaxel</td><td>乳癌、肺癌、食道癌、胃癌、頭頸癌</td><td>CROSS regimen 使用每週 carboplatin/paclitaxel 加放療；注意神經病變、過敏反應與骨髓抑制。</td></tr>
+<tr><td>拓撲異構酶抑制劑（topoisomerase inhibitor）</td><td>Etoposide、irinotecan、topotecan</td><td>小細胞肺癌、肺癌、腸胃道癌、卵巢癌</td><td>Cisplatin/etoposide 是侷限期小細胞肺癌同步放療的經典化療骨架。</td></tr>
+<tr><td>蒽環類（anthracycline）</td><td>Doxorubicin、epirubicin、daunorubicin</td><td>乳癌、肉瘤、淋巴瘤、血液腫瘤</td><td>心臟毒性會與左側乳房或縱膈放療交會；需同時評估累積劑量與心臟劑量限制（constraints）。</td></tr>
+<tr><td>烷化劑與中樞神經口服藥物</td><td>Cyclophosphamide、ifosfamide、temozolomide、lomustine、procarbazine</td><td>淋巴瘤、肉瘤、中樞神經腫瘤、卵巢癌</td><td>Temozolomide（TMZ）加放療是 GBM 標準；PCV 常見於寡突膠質瘤與高風險低惡性度膠質瘤。</td></tr>
+</tbody></table></div>
+<div class="clinical-note">記憶方式：同步放化療常見放射增敏劑（radiosensitizer）包括 cisplatin、5-FU/capecitabine、gemcitabine、taxane、temozolomide（TMZ）與 etoposide；真正選擇取決於癌別證據與正常組織耐受度，不是只看藥物是否能增敏。</div>
+            """,
+            "body_en": "<p>Key chemotherapy families include platinum, fluoropyrimidines, gemcitabine, taxanes, topoisomerase inhibitors, anthracyclines, and alkylators.</p>",
+        },
+        {
+            "label_zh": "分子標靶與 ADC：以生物標記為核心的腫瘤治療",
+            "label_en": "TARGETED THERAPY AND ADCs: Biomarker-First Oncology",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>靶點/類別</th><th>代表藥物</th><th>常見癌別/情境</th><th>2026 實務重點</th></tr></thead><tbody>
+<tr><td>EGFR</td><td>Osimertinib、erlotinib/gefitinib/afatinib、amivantamab</td><td>非小細胞肺癌（NSCLC）；部分頭頸癌與大腸直腸癌使用 EGFR 抗體。</td><td>NSCLC 的 EGFR exon 19 deletion 或 L858R 以 osimertinib 為核心；腦轉移與寡進展（oligoprogression）常與 SRS/SBRT 交會。</td></tr>
+<tr><td>ALK/ROS1/RET/MET/NTRK</td><td>Alectinib、lorlatinib、entrectinib、selpercatinib、capmatinib、larotrectinib</td><td>NSCLC、甲狀腺癌與跨癌別靶點（basket tumor）。</td><td>中樞有效標靶藥（CNS-active TKI）會改變腦轉移局部治療排序；進展型態決定是否再切片、換 TKI 或加局部消融治療。</td></tr>
+<tr><td>BRAF/MEK</td><td>Dabrafenib/trametinib、encorafenib/binimetinib、vemurafenib/cobimetinib</td><td>黑色素瘤、NSCLC、甲狀腺癌、大腸直腸癌。</td><td>黑色素瘤需與免疫治療排序；大腸直腸癌 BRAF V600E 通常需合併 EGFR 阻斷。</td></tr>
+<tr><td>HER2</td><td>Trastuzumab、pertuzumab、T-DM1、T-DXd、tucatinib</td><td>乳癌、胃癌/胃食道交界癌，以及部分肺癌、大腸直腸癌與跨癌別適應症。</td><td>T-DXd 已擴展到 HER2-low/ultralow 乳癌；需注意間質性肺病/肺炎（ILD/pneumonitis），胸部放療前後尤其要謹慎。</td></tr>
+<tr><td>荷爾蒙受體（HR）/ CDK4/6 / PI3K-AKT-mTOR</td><td>AI、tamoxifen、fulvestrant、vepdegestrant、palbociclib/ribociclib/abemaciclib、alpelisib、capivasertib、everolimus</td><td>荷爾蒙受體陽性乳癌（HR+ breast cancer）。</td><td>內分泌治療是骨架，再依 ESR1、PIK3CA、AKT1、PTEN 等結果選擇標靶藥。</td></tr>
+<tr><td>PARP</td><td>Olaparib、talazoparib、niraparib、rucaparib</td><td>BRCA 或同源重組缺陷（HRD）相關乳癌、卵巢癌、胰臟癌、攝護腺癌。</td><td>與鉑類敏感性、HRD 檢測、骨髓儲備、既往放療與化療都有關。</td></tr>
+<tr><td>VEGF / 血管新生路徑</td><td>Bevacizumab、ramucirumab、lenvatinib、sunitinib、cabozantinib、axitinib</td><td>大腸直腸癌、肝癌、腎細胞癌、甲狀腺癌、子宮內膜癌、膠質瘤症狀控制。</td><td>放療範圍靠近腸道、支氣管或術後傷口時，要特別注意出血、穿孔、廔管與傷口癒合。</td></tr>
+<tr><td>ADC 載荷平台</td><td>T-DXd、sacituzumab、enfortumab、datopotamab、mirvetuximab</td><td>乳癌、泌尿上皮癌、卵巢癌、肺癌、三陰性乳癌（TNBC）。</td><td>ADC 正快速前移到早線治療；載荷毒性（payload toxicity）常比靶點名稱更能預測副作用。</td></tr>
+</tbody></table></div>
+<p>最新核准仍需以 FDA oncology approval notifications、NCCN/ESMO/ASCO guideline 與院內藥委會為準。近年趨勢是 <span class="highlight">抗體藥物複合體（ADC）、中樞有效標靶藥（CNS-active TKI）、分子殘存疾病（MRD）、跨癌別生物標記（tumor-agnostic biomarker）、新輔助免疫/標靶治療</span> 快速進入標準治療。</p>
+            """,
+            "body_en": "<p>Targeted therapy is increasingly biomarker-driven, with rapid expansion of ADCs, CNS-active TKIs, and tumor-agnostic indications.</p>",
+        },
+        {
+            "label_zh": "放射腫瘤科視角：藥物與 RT 的安全交會",
+            "label_en": "RAD ONC VIEW: Safe Integration With RT",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>情境</th><th>常見問題</th><th>實務原則</th></tr></thead><tbody>
+<tr><td>胸部放療 + 免疫治療/ADC/標靶藥</td><td>肺炎歸因困難</td><td>記錄基準間質性肺病（ILD）、肺 V20/平均肺劑量（MLD）、藥物起訖時間；T-DXd、免疫檢查點抑制劑（ICI）、EGFR/ALK TKI 需特別注意。</td></tr>
+<tr><td>骨盆/腹部放療 + VEGF 抑制</td><td>出血、穿孔、廔管、傷口癒合</td><td>手術前後與腸道、膀胱、陰道照射時需審慎停藥，並進行多專科討論。</td></tr>
+<tr><td>腦部 SRS + 全身治療</td><td>放射壞死、出血、中樞反應時序</td><td>黑色素瘤/腎細胞癌 ICI、HER2/EGFR/ALK 中樞有效藥物需個案化；不能只看顱外疾病控制。</td></tr>
+<tr><td>富含骨髓區域放療 + 化療/RPT</td><td>血球低下</td><td>骨盆、脊椎、多發骨轉移、PRRT 或 PSMA 放射配體治療前後，要評估骨髓儲備、既往化療與瀰漫性骨髓侵犯。</td></tr>
+<tr><td>再照射 + 全身治療</td><td>累積危及器官（OAR）劑量與藥物毒性相加</td><td>重建既往劑量、計算 EQD2/BED、設定務實限制；必要時先暫停高風險藥物。</td></tr>
+</tbody></table></div>
+            """,
+            "body_en": "<p>Radiation oncologists should track pneumonitis, fistula, marrow reserve, CNS toxicity, and re-irradiation interactions when integrating systemic therapy.</p>",
+        },
+        {
+            "label_zh": "更新來源",
+            "label_en": "Update Sources",
+            "body_zh": """
+<ul>
+  <li><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications" target="_blank" rel="noopener">FDA Oncology/Hematology Approval Notifications</a>：最新核准與適應症變更。</li>
+  <li><a href="https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies" target="_blank" rel="noopener">NCI Targeted Therapy</a> 與 <a href="https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies/approved-drug-list" target="_blank" rel="noopener">NCI approved targeted drug list</a>：標靶治療分類與藥物清單。</li>
+  <li><a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html" target="_blank" rel="noopener">American Cancer Society chemotherapy drug classes</a>：化療家族與機轉。</li>
+  <li><a href="https://www.oncokb.org/oncology-therapies" target="_blank" rel="noopener">OncoKB FDA-approved oncology therapies</a>：依 biomarker 與藥物分類查詢。</li>
+</ul>
+            """,
+            "body_en": "<p>Update from FDA approvals, NCI targeted therapy resources, ACS chemotherapy classes, and OncoKB.</p>",
+        },
+    ],
+    "excel_sheet": None,
+    "keywords": ["systemic therapy", "chemotherapy", "targeted therapy", "ADC", "endocrine therapy", "molecular oncology", "FDA approvals"],
+    "prev": ["benign.html", "良性", "Benign"],
+    "next": ["immunotherapy-evidence.html", "免疫治療", "Immunotherapy"],
+})
+
+
+PAGES.append({
+    "slug": "immunotherapy-evidence",
+    "emoji": "🛡️",
+    "title_zh": "免疫治療文獻與證據實況",
+    "title_en": "Immunotherapy Evidence",
+    "sub_zh": "整理目前免疫治療的使用情境、癌別、治療線別、生物標記（biomarker）、關鍵證據與放療交會點。",
+    "sub_en": "Current immunotherapy use by disease site, line of therapy, biomarkers, key evidence, and intersections with radiation therapy.",
+    "sections": [
+        {
+            "label_zh": "免疫治療家族：檢查點、細胞治療與 T 細胞導向治療",
+            "label_en": "IMMUNOTHERAPY FAMILIES",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>代表藥物/平台</th><th>核心概念</th><th>常用情境</th></tr></thead><tbody>
+<tr><td>PD-1 抑制劑</td><td>Pembrolizumab、nivolumab、cemiplimab、dostarlimab、penpulimab、retifanlimab、tislelizumab</td><td>解除 T 細胞上的 PD-1 煞車，使腫瘤反應性 T 細胞恢復功能。</td><td>肺癌、黑色素瘤、頭頸癌、腎細胞癌、MSI-H/dMMR 腫瘤、皮膚鱗狀細胞癌、子宮內膜癌、腸胃道癌、泌尿道癌等。</td></tr>
+<tr><td>PD-L1 抑制劑</td><td>Durvalumab、atezolizumab、avelumab</td><td>阻斷腫瘤細胞或免疫細胞上的 PD-L1，避免其抑制 T 細胞。</td><td>第三期 NSCLC 放化療後鞏固、廣泛期小細胞肺癌、泌尿上皮癌、膽道癌、肌肉侵犯性或非肌肉侵犯性膀胱癌、Merkel cell carcinoma 等。</td></tr>
+<tr><td>CTLA-4 抑制劑</td><td>Ipilimumab、tremelimumab</td><td>作用在較早期 T 細胞啟動（T-cell priming）階段，增強免疫反應。</td><td>黑色素瘤、腎細胞癌、肝細胞癌、MSI-H 大腸直腸癌；常與 PD-1/PD-L1 抑制劑併用。</td></tr>
+<tr><td>LAG-3 抑制</td><td>Relatlimab + nivolumab</td><td>針對 T 細胞耗竭路徑（T-cell exhaustion pathway）。</td><td>黑色素瘤第一線，可作為單純 PD-1 抑制以外的選項。</td></tr>
+<tr><td>細胞治療（cellular therapy）</td><td>嵌合抗原受體 T 細胞（CAR-T）、腫瘤浸潤淋巴球（TIL；lifileucel）</td><td>利用加工或擴增後的免疫細胞直接殺傷腫瘤。</td><td>B 細胞惡性腫瘤、多發性骨髓瘤、PD-1 失敗後黑色素瘤。</td></tr>
+<tr><td>雙特異性抗體 / T 細胞導向藥物</td><td>Blinatumomab、teclistamab、epcoritamab、glofitamab 等</td><td>把 T 細胞與腫瘤抗原拉近，促進免疫殺傷。</td><td>以血液腫瘤為主；細胞激素釋放症候群（CRS）與免疫效應細胞相關神經毒性（ICANS）管理很重要。</td></tr>
+</tbody></table></div>
+<p>高頻生物標記（biomarker）包括：<span class="highlight">PD-L1、微衛星不穩定高度/錯配修復缺陷（MSI-H/dMMR）、腫瘤突變負荷高（TMB-high）、EBV 相關鼻咽癌、病毒相關腫瘤、分子殘存疾病/循環腫瘤 DNA（MRD/ctDNA）、各癌別特有免疫表型</span>。但免疫治療不是 biomarker 陽性就一定有效，也不是 biomarker 陰性就永遠無效；最終仍需回到癌別與臨床試驗證據。</p>
+            """,
+            "body_en": "<p>Immunotherapy includes checkpoint inhibitors, cellular therapies, bispecifics, cytokines, vaccines, and TIL therapy, with PD-1/PD-L1 blockade being the most common solid-tumor backbone.</p>",
+        },
+        {
+            "label_zh": "各癌別常用免疫治療：第幾線、使用時機、證據實況",
+            "label_en": "DISEASE-SITE USE: Line, Timing, Evidence",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>癌別</th><th>常用時機/線別</th><th>常見 regimen</th><th>證據與限制</th></tr></thead><tbody>
+<tr><td>非小細胞肺癌（NSCLC）</td><td>轉移性且無可治療驅動基因突變的第一線；第三期同步放化療（CRT）後鞏固；部分手術前後情境。</td><td>Pembrolizumab ± 化療、nivolumab/ipilimumab ± 化療、atezolizumab-based regimen、CRT 後 durvalumab。</td><td>由 PD-L1 TPS、驅動基因突變、分期與手術/CRT 情境決定；PACIFIC 是放療後免疫治療最經典模式。</td></tr>
+<tr><td>小細胞肺癌（SCLC）</td><td>廣泛期第一線；侷限期 CRT 後鞏固正在成為新標準討論。</td><td>Atezolizumab 或 durvalumab + platinum/etoposide；侷限期 CRT 後 durvalumab 鞏固證據正在成熟。</td><td>整體存活改善幅度中等但已標準化；胸部放療、預防性顱照射（PCI）/SRS 與 ICI 時機需整合。</td></tr>
+<tr><td>黑色素瘤</td><td>高風險術後輔助；轉移性第一線；BRAF 突變需與標靶治療排序。</td><td>Nivolumab、pembrolizumab、nivolumab/ipilimumab、nivolumab/relatlimab；PD-1 失敗後可考慮 TIL。</td><td>免疫治療是核心；腦轉移常用 SRS + ICI，但需監測放射壞死與水腫。</td></tr>
+<tr><td>腎細胞癌（RCC）</td><td>轉移性第一線。</td><td>Nivolumab/ipilimumab；pembrolizumab/axitinib、nivolumab/cabozantinib、lenvatinib/pembrolizumab。</td><td>依 IMDC 風險與毒性輪廓選擇；SBRT 常用於寡進展或症狀緩解。</td></tr>
+<tr><td>頭頸部鱗狀細胞癌（H&N SCC）</td><td>復發/轉移性第一線或鉑類失敗後；術後高風險合併放化療的免疫治療證據正在發展。</td><td>Pembrolizumab ± platinum/5-FU；鉑類後 nivolumab 或 pembrolizumab；NIVOPOST-OP 支持部分術後高風險族群加 nivolumab。</td><td>PD-L1 CPS 重要；根治性放療同步免疫治療仍不是全面標準，需依試驗情境。</td></tr>
+<tr><td>泌尿上皮癌</td><td>轉移性第一線組合、維持治療、肌肉侵犯性膀胱癌（MIBC）手術前後/輔助/MRD 陽性、部分高風險非肌肉侵犯性膀胱癌（NMIBC）。</td><td>Nivolumab + cis/gem、avelumab 維持、輔助 nivolumab、MRD 陽性輔助 atezolizumab、高風險 NMIBC 可見 durvalumab + BCG 研究/適應症。</td><td>線別變化很快，ADC + ICI 正改變轉移性 UC 治療；膀胱保留三合一治療（trimodality）與 ICI 正在研究。</td></tr>
+<tr><td>腸胃道癌、胃食道交界癌、胃癌、食道癌</td><td>轉移性第一線依 PD-L1/HER2 選擇；食道/GEJ 新輔助 CRT + 手術後若有殘餘病灶可用輔助免疫治療。</td><td>Nivolumab + 化療、pembrolizumab + 化療、HER2+ 且 PD-L1+ 胃/GEJ 可用 pembrolizumab + trastuzumab + 化療；食道/GEJ 三合一治療後輔助 nivolumab。</td><td>由 PD-L1 CPS、病理型態、HER2、MSI 決定；放療後輔助 nivolumab 是重要交會點。</td></tr>
+<tr><td>MSI-H/dMMR 大腸直腸癌</td><td>轉移性第一線；局部晚期 dMMR 直腸癌器官保留越來越重要。</td><td>Pembrolizumab；nivolumab/ipilimumab；dMMR 直腸癌研究中常見 dostarlimab 策略。</td><td>dMMR 直腸癌完整反應數據非常亮眼，但需嚴格監測與多專科共識。</td></tr>
+<tr><td>子宮內膜癌</td><td>晚期/復發第一線化療 + ICI；復發 dMMR 或 pMMR 依組合治療。</td><td>Dostarlimab 或 pembrolizumab + carboplatin/paclitaxel；pMMR 復發疾病可用 pembrolizumab/lenvatinib。</td><td>dMMR 獲益最大；輔助放療與 ICI 的整合仍依風險分群與 protocol。</td></tr>
+<tr><td>子宮頸癌</td><td>轉移/復發 PD-L1+ 第一線；局部晚期高風險族群可見 CRT + ICI 後維持治療。</td><td>Pembrolizumab + platinum/taxane ± bevacizumab；高風險局部晚期可見 pembrolizumab 合併 CRT 後維持。</td><td>需整合 PD-L1 CPS、分期、bevacizumab 適用性與骨盆放療毒性。</td></tr>
+<tr><td>乳癌</td><td>三陰性乳癌（TNBC）：早期高風險新輔助/輔助；轉移性 PD-L1+ 或後線依 regimen。</td><td>高風險早期 TNBC：pembrolizumab + 化療；轉移性 PD-L1+ TNBC：pembrolizumab + 化療。</td><td>ER+ 與 HER2+ 乳癌免疫治療不是主軸；TNBC 需注意與手術/放療時機。</td></tr>
+<tr><td>肝細胞癌（HCC）/膽道癌（BTC）</td><td>晚期第一線。</td><td>Atezolizumab/bevacizumab、durvalumab/tremelimumab、nivolumab/ipilimumab；BTC 可用 durvalumab 或 pembrolizumab + gem/cis。</td><td>肝功能、出血風險、門脈高壓與肝臟放療劑量儲備是關鍵。</td></tr>
+<tr><td>皮膚 cSCC / Merkel / cBCC</td><td>局部晚期不可切除或轉移性；部分 cSCC 可作新輔助治療。</td><td>Cemiplimab、pembrolizumab；Merkel cell carcinoma 可用 avelumab/retifanlimab。</td><td>常與根治性或術後放療互補；免疫治療反應可能使手術/放療範圍需要重新評估。</td></tr>
+<tr><td>典型霍奇金淋巴瘤</td><td>復發/難治；晚期疾病第一線組合治療正在擴展。</td><td>Nivolumab、pembrolizumab、brentuximab/PD-1 組合。</td><td>放療仍可用於 bulky、殘餘病灶或局部控制；PD-1 後發炎性 PET 需小心判讀。</td></tr>
+</tbody></table></div>
+            """,
+            "body_en": "<p>Common disease-site uses include metastatic driver-negative NSCLC, stage III NSCLC after CRT, melanoma, RCC, urothelial cancer, MSI-H/dMMR tumors, endometrial cancer, cervical cancer, TNBC, HCC/BTC, cSCC, Merkel cell carcinoma, and Hodgkin lymphoma.</p>",
+        },
+        {
+            "label_zh": "放療與免疫治療：證據、時機與毒性",
+            "label_en": "RT AND IMMUNOTHERAPY: Evidence, Timing, Toxicity",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>情境</th><th>證據強度</th><th>實務重點</th></tr></thead><tbody>
+<tr><td>第三期 NSCLC 同步放化療後 durvalumab</td><td>最高，標準治療。</td><td>需確認無疾病進展，並處理放射性肺炎風險；PD-L1 條件與開始時間會依地區 guideline 不同。</td></tr>
+<tr><td>食道癌/胃食道交界癌三合一治療後輔助 nivolumab</td><td>標準治療。</td><td>新輔助 CRT + 手術後若有殘餘病灶可考慮；需同時評估放療後免疫毒性與術後恢復。</td></tr>
+<tr><td>腦轉移 SRS + ICI</td><td>常用，但證據異質性高。</td><td>黑色素瘤、腎細胞癌與 NSCLC 常見；注意放射壞死（radionecrosis）、水腫與類固醇需求，因類固醇可能削弱免疫效果。</td></tr>
+<tr><td>寡轉移/寡進展 SBRT + ICI</td><td>高度依賴癌別與試驗情境。</td><td>可用於局部控制並延長全身治療有效時間；遠隔效應（abscopal effect）不能當作主要治療目標。</td></tr>
+<tr><td>根治性 CRT + 同步 ICI</td><td>部分癌別快速發展中，但不是全面標準。</td><td>頭頸癌、子宮頸癌、肺癌、膀胱保留等正在演進；需看第三期試驗結果與毒性。</td></tr>
+</tbody></table></div>
+<div class="clinical-note">免疫相關不良反應（irAE）可影響任何器官。常見包括皮膚炎、腸炎、肝炎、內分泌病變、肺炎、腎炎、關節炎與神經毒性。胸部放療後最困難的是肺炎歸因，應記錄放療劑量指標、ICI 時機、影像分布與感染鑑別。</div>
+            """,
+            "body_en": "<p>The strongest radiation-immunotherapy paradigm remains durvalumab after concurrent chemoradiation for stage III NSCLC; other combinations are disease- and trial-specific.</p>",
+        },
+        {
+            "label_zh": "重要文獻與更新來源",
+            "label_en": "Key Evidence and Updates",
+            "body_zh": """
+<ul>
+  <li><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications" target="_blank" rel="noopener">FDA oncology approval notifications</a>：截至 2026 年仍是最新適應症最直接來源。</li>
+  <li><a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/immunotherapy/immune-checkpoint-inhibitors.html" target="_blank" rel="noopener">American Cancer Society checkpoint inhibitor overview</a>：PD-1、PD-L1、CTLA-4、LAG-3 分類。</li>
+  <li><a href="https://ascopubs.org/doi/10.1200/JCO.21.01440" target="_blank" rel="noopener">ASCO immune-related adverse event guideline</a> 與 <a href="https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-management-of-toxicities-from-immunotherapy" target="_blank" rel="noopener">ESMO immunotherapy toxicity guideline</a>：毒性管理。</li>
+  <li><a href="https://www.cancerresearch.org/regulatory-approval-timeline-of-active-immunotherapies" target="_blank" rel="noopener">Cancer Research Institute approval timeline</a>：免疫治療核准歷史與擴張趨勢。</li>
+</ul>
+            """,
+            "body_en": "<p>Follow FDA approvals, ASCO/ESMO toxicity guidance, ACS overview resources, and disease-specific NCCN/ESMO/ASCO guidelines.</p>",
+        },
+    ],
+    "excel_sheet": None,
+    "keywords": ["immunotherapy", "immune checkpoint inhibitors", "PD-1", "PD-L1", "CTLA-4", "LAG-3", "CAR-T", "TIL", "irAE"],
+    "prev": ["systemic-therapy.html", "癌症藥物", "Cancer Drugs"],
+    "next": ["radiopharmaceutical-therapy.html", "放射藥物", "Radiopharmaceutical Therapy"],
+})
+
+
+PAGES.append({
+    "slug": "radiopharmaceutical-therapy",
+    "emoji": "☢️",
+    "title_zh": "輻射藥物治療（Radiopharmaceutical Therapy, RPT）",
+    "title_en": "Radiopharmaceutical Therapy",
+    "sub_zh": "整理 PSMA 放射配體治療（PSMA-RLT）、胜肽受體放射核種治療（PRRT）、鐳-223、碘-131、MIBG 與診療一體化（theranostics）的適應症、證據、毒性、流程與 Radiopharm 關鍵試驗。",
+    "sub_en": "PSMA radioligand therapy, PRRT, radium-223, I-131, MIBG, theranostics, evidence, toxicity, workflow, and RadOncTables Radiopharm key studies.",
+    "sections": [
+        {
+            "label_zh": "總論：RPT 是全身性放射治療，不只是核醫檢查",
+            "label_en": "OVERVIEW: RPT Is Systemic Radiation Therapy",
+            "body_zh": """
+<p>輻射藥物治療（radiopharmaceutical therapy, RPT）利用配體（ligand）、胜肽（peptide）、抗體或小分子，把放射性核種送到腫瘤。它的臨床邏輯是 <span class="highlight">先用診斷示蹤劑（diagnostic tracer）證明靶點表現（target expression），再用治療核種遞送全身性放射劑量</span>。常見治療核種包括 β 發射體 Lu-177、α 發射體 Ra-223/Ac-225，以及 I-131。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>意思</th><th>臨床問題</th></tr></thead><tbody>
+<tr><td>靶點表現（target expression）</td><td>PSMA、SSTR、鈉碘共運輸體（NIS）、去甲腎上腺素轉運體（NET）等靶點需在病灶表現。</td><td>若影像陰性或病灶異質性高，RPT 可能失敗或只控制部分病灶。</td></tr>
+<tr><td>伴隨影像（companion imaging）</td><td>PSMA PET、DOTATATE PET、I-123/I-131 scan、MIBG scan。</td><td>需確認病灶攝取度（avidity），並辨認 FDG 陽性但治療示蹤劑陰性的 discordant lesions。</td></tr>
+<tr><td>放射生物學</td><td>低劑量率、全身多病灶、交叉照射效應（cross-fire）、骨髓/腎臟/唾液腺劑量。</td><td>不同於體外放療（EBRT）追求單一靶區高度順形；RPT 更像全身性、靶向、低劑量率照射。</td></tr>
+<tr><td>病人選擇</td><td>體能狀態（performance status）、骨髓儲備、腎功能、既往治療、腫瘤負荷。</td><td>瀰漫性骨髓侵犯或嚴重血球低下常限制治療。</td></tr>
+<tr><td>輻射安全</td><td>合理抑低劑量原則（ALARA）、排泄物處理、接觸限制、懷孕/照護者風險、授權醫師（authorized user）。</td><td>流程、病人教育與法規要求都比一般輸注治療更複雜。</td></tr>
+</tbody></table></div>
+            """,
+            "body_en": "<p>Radiopharmaceutical therapy uses target-seeking molecules to deliver systemic radiation, usually paired with diagnostic imaging to confirm target expression.</p>",
+        },
+        {
+            "label_zh": "FDA 核准與常用 RPT",
+            "label_en": "FDA-Approved and Common RPT Agents",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>藥物/核種</th><th>靶點</th><th>適應症與使用時機</th><th>關鍵毒性/限制</th></tr></thead><tbody>
+<tr><td>Lu-177 vipivotide tetraxetan（Pluvicto）</td><td>攝護腺特異膜抗原（PSMA）</td><td>PSMA 陽性轉移性去勢抗性攝護腺癌（mCRPC）；2025 FDA 擴展到 taxane 前較早線 mCRPC 情境。</td><td>骨髓抑制、口乾、噁心、腎功能監測；需以 PSMA PET 選擇病人。</td></tr>
+<tr><td>Lu-177 dotatate（Lutathera）</td><td>體抑素受體（SSTR）</td><td>SSTR 陽性胃腸胰神經內分泌腫瘤（GEP-NET）；成人與兒童適應症已擴展。</td><td>需胺基酸輸注保護腎臟；注意骨髓抑制、長期 MDS/AML 風險與類癌危象（carcinoid crisis）。</td></tr>
+<tr><td>Ra-223 dichloride（Xofigo）</td><td>骨基質/成骨性轉移</td><td>有症狀、骨轉移為主且無已知內臟轉移的 mCRPC。</td><td>骨髓毒性與骨折風險；避免不當與 abiraterone/prednisone 併用，並需骨健康策略。</td></tr>
+<tr><td>I-131 sodium iodide</td><td>鈉碘共運輸體（NIS）</td><td>分化型甲狀腺癌殘餘消融、輔助治療或轉移病灶；也用於甲狀腺機能亢進。</td><td>唾液腺/淚腺毒性、骨髓抑制、生育與次發癌風險；需低碘飲食與 TSH stimulation。</td></tr>
+<tr><td>I-131 iobenguane（Azedra）</td><td>去甲腎上腺素轉運體</td><td>MIBG avid 且不可切除或轉移性嗜鉻細胞瘤/副神經節瘤。</td><td>高血壓或兒茶酚胺危象、骨髓抑制、甲狀腺阻斷、腎肝功能監測。</td></tr>
+<tr><td>Ibritumomab tiuxetan / 早期放射免疫治療</td><td>CD20</td><td>B 細胞淋巴瘤的歷史性或特定情境使用。</td><td>骨髓毒性與流程複雜，現代日常使用較少。</td></tr>
+</tbody></table></div>
+            """,
+            "body_en": "<p>Major agents include Lu-177 PSMA therapy, Lu-177 DOTATATE PRRT, radium-223, I-131 sodium iodide, and I-131 MIBG.</p>",
+        },
+        {
+            "label_zh": "關鍵試驗：Radiopharm 證據地圖",
+            "label_en": "KEY STUDIES: Linked to RadOncTables Radiopharm",
+            "body_zh": """
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Study</th><th>疾病/藥物</th><th>設計與族群</th><th>核心結果與意義</th></tr></thead><tbody>
+<tr><td>VISION</td><td>Lu-177 PSMA-617 用於已接受 ARPI/taxane 的 mCRPC。</td><td>PSMA 陽性 mCRPC，既往接受雄激素受體路徑抑制劑（ARPI）與 taxane。</td><td>改善整體存活（OS）與影像無惡化存活（rPFS），建立 PSMA 放射配體治療後線標準。</td></tr>
+<tr><td>TheraP</td><td>Lu-177 PSMA-617 對比 cabazitaxel。</td><td>Docetaxel 後 mCRPC；PSMA PET 陽性且排除 FDG 陽性/PSMA 陰性不一致病灶。</td><td>PSA response 較高，凸顯影像篩選與 cabazitaxel 作為 active comparator 的重要性。</td></tr>
+<tr><td>PSMAfore</td><td>Taxane 前使用 Lu-177 PSMA-617。</td><td>Taxane-naive mCRPC，ARPI 後進展。</td><td>支持 Pluvicto 往較早線移動；FDA 於 2025 擴展適應症。</td></tr>
+<tr><td>LUNAR</td><td>Lu-177 PSMA + SBRT 用於寡復發攝護腺癌。</td><td>寡轉移/寡復發攝護腺癌，所有病灶 SBRT ± PSMA-targeted RLT。</td><td>探索全身性放射配體治療與轉移導向治療（MDT）的整合，仍需長期成熟資料。</td></tr>
+<tr><td>ALSYMPCA</td><td>Radium-223 用於有症狀骨轉移 mCRPC。</td><td>有症狀骨轉移、無內臟轉移的 mCRPC。</td><td>改善 OS 並延後骨相關事件，是 α 發射體骨轉移治療的經典試驗。</td></tr>
+<tr><td>ERA-223</td><td>Radium-223 + abiraterone/prednisone。</td><td>mCRPC 骨轉移。</td><td>增加骨折/死亡疑慮，提醒 RPT 併用治療不能只看理論協同作用。</td></tr>
+<tr><td>NETTER-1</td><td>Lu-177 DOTATATE 用於 midgut NET。</td><td>進展中、SSTR 陽性 midgut NET。</td><td>PRRT 大幅改善 PFS，建立 GEP-NET PRRT 標準。</td></tr>
+<tr><td>NETTER-2</td><td>第一線 Lu-177 DOTATATE + octreotide。</td><td>新診斷晚期 grade 2/3、分化良好、SSTR 陽性 GEP-NET。</td><td>支持 PRRT 往早線前移，尤其較高 grade 但仍分化良好的 SSTR 陽性 NET。</td></tr>
+<tr><td>甲狀腺 RAI 證據</td><td>I-131 用於分化型甲狀腺癌。</td><td>殘餘消融、輔助治療或轉移病灶。</td><td>需依 ATA 風險、術後 thyroglobulin（Tg）、RAI avidity 與轉移負荷決定；不是所有分化型甲狀腺癌都需要 RAI。</td></tr>
+</tbody></table></div>
+            """,
+            "body_en": "<p>The Radiopharm trial cards render automatically below; this section summarizes major trial logic including VISION, TheraP, PSMAfore, ALSYMPCA, NETTER-1, and NETTER-2.</p>",
+        },
+        {
+            "label_zh": "RPT 流程與毒性管理",
+            "label_en": "RPT Workflow and Toxicity",
+            "body_zh": """
+<ol>
+  <li><strong>確認適應症與靶點攝取度（target avidity）：</strong>使用 PSMA PET、DOTATATE PET、MIBG scan 或 iodine scan；特別注意 FDG 陽性但治療靶點陰性的 discordant disease。</li>
+  <li><strong>評估基準風險：</strong>檢查全血球計數（CBC）、腎功能、肝功能、體能狀態、疼痛、腫瘤負荷、骨髓侵犯、既往化療/放療/RPT。</li>
+  <li><strong>多專科排序：</strong>與腫瘤內科、核醫科、放射腫瘤科、泌尿科/內分泌科/外科討論治療排序；若有即將脊髓壓迫、病理性骨折、出血或 bulky symptomatic site，常需先用 EBRT 控制局部危急病灶。</li>
+  <li><strong>輻射安全：</strong>確認授權醫師（authorized user）、病人與家屬衛教、尿液/體液處理、接觸限制、懷孕與照護者風險、返回工作或搭機需求。</li>
+  <li><strong>治療期間：</strong>監測 CBC、腎肝功能、症狀、疼痛 flare、噁心、口乾、腹瀉、荷爾蒙危象或類癌危象。</li>
+  <li><strong>療效評估：</strong>整合 PSA、thyroglobulin（Tg）、chromogranin 等 biomarker、CT/MRI/PET、症狀與止痛藥需求；小心 flare 與 pseudoprogression。</li>
+</ol>
+<div class="clinical-note">RPT 與 EBRT 的關係不是互斥：EBRT 常用於局部危急病灶，RPT 用於全身靶點陽性疾病；若骨髓儲備差、脊椎/骨盆曾大範圍照射或有瀰漫性骨轉移，兩者治療排序需特別小心。</div>
+            """,
+            "body_en": "<p>RPT requires target-positive imaging, baseline marrow/renal assessment, multidisciplinary sequencing, radiation safety workflow, toxicity monitoring, and response assessment.</p>",
+        },
+        {
+            "label_zh": "新興方向與資料來源",
+            "label_en": "Emerging Directions and Sources",
+            "body_zh": """
+<ul>
+  <li><strong>α 發射體：</strong>Ac-225 PSMA、Bi-213 等可能提高殺傷力，但口乾、腎毒性、骨髓毒性與製造供應仍是挑戰。</li>
+  <li><strong>早線 RPT：</strong>PSMAfore 與 NETTER-2 顯示 RPT 正往更早線治療移動。</li>
+  <li><strong>併用治療：</strong>與雄激素受體路徑抑制劑（ARPI）、PARP 抑制劑、免疫檢查點抑制劑（ICI）、SBRT、DNA damage response inhibitor 併用都需臨床證據支持；ERA-223 提醒併用可能增加傷害。</li>
+  <li><strong>個人化劑量學：</strong>未來可能從固定活度（fixed activity）走向更個人化的腎臟、骨髓與腫瘤劑量學（dosimetry），但日常實作仍受流程限制。</li>
+  <li><strong>放射腫瘤科角色：</strong>RPT 是放射治療的一種形式；放腫醫師可在放射生物學、劑量限制、EBRT 排序、寡進展處理、毒性歸因與臨床試驗設計中扮演核心角色。</li>
+</ul>
+<p>資料來源：<a href="https://dctd.cancer.gov/research/research-areas/radiation-research/interest-groups/rpt" target="_blank" rel="noopener">NCI RPT Interest Group</a>、<a href="https://www.radonctables.com/" target="_blank" rel="noopener">RadOncTables</a>、Rad Onc Tables - Key Studies Estes 2025 的 Radiopharm sheet、<a href="https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications" target="_blank" rel="noopener">FDA oncology approvals</a> 與各藥物 prescribing information。頁尾會自動彙整 Radiopharm 關鍵試驗卡片。</p>
+            """,
+            "body_en": "<p>Emerging directions include alpha emitters, earlier-line RPT, combinations, patient-specific dosimetry, and a stronger radiation oncology role in theranostics.</p>",
+        },
+    ],
+    "excel_sheet": "Radiopharm",
+    "trial_limit": 10,
+    "keywords": ["radiopharmaceutical therapy", "RPT", "theranostics", "Pluvicto", "Lutathera", "PSMA", "PRRT", "radium-223", "I-131", "RadOncTables", "Radiopharm"],
+    "prev": ["immunotherapy-evidence.html", "免疫治療", "Immunotherapy"],
     "next": None,
 })

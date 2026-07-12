@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Radiopharmaceutical Therapy — OncoBeam</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  
+
+  
+
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
+
+</head>
+
+<body class="topic-page page-radiopharmaceutical-therapy">
+
+  
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="OncoBeam" data-en="OncoBeam">OncoBeam</span></a>
+
+    <ul class="top-nav-links">
+      <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
+      <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
+      <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
+      <li><a href="target-delineation.html" data-zh="靶區" data-en="Targets">Targets</a></li>
+      <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
+      <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
+      <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
+      <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
+      <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
+      <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
+      <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
+      <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
+      <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
+      <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
+      <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
+      <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
+      <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
+      <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li><a href="benign.html" data-zh="良性" data-en="Benign">良性</a></li>
+      <li><a href="systemic-therapy.html" data-zh="藥物" data-en="Drugs">Drugs</a></li>
+      <li><a href="immunotherapy-evidence.html" data-zh="免疫" data-en="Immuno">Immuno</a></li>
+      <li><a href="radiopharmaceutical-therapy.html" data-zh="放射藥物" data-en="RPT">RPT</a></li>
+      <li>
+        <a
+          href="radonc-quiz/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-zh="📝 考題"
+          data-en="📝 Quiz"
+        >
+          📝 Quiz
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header
+    class="page-hero"
+    
+  >
+
+    <div class="step-badge">
+      ☢️ RADIOPHARMACEUTICAL THERAPY
+    </div>
+
+    <h1
+      data-zh="輻射藥物治療（Radiopharmaceutical Therapy, RPT）"
+      data-en="Radiopharmaceutical Therapy"
+    >
+      輻射藥物治療（Radiopharmaceutical Therapy, RPT）
+    </h1>
+
+    <p class="subtitle" data-lang="zh">
+      整理 PSMA 放射配體治療（PSMA-RLT）、胜肽受體放射核種治療（PRRT）、鐳-223、碘-131、MIBG 與診療一體化（theranostics）的適應症、證據、毒性、流程與 Radiopharm 關鍵試驗。
+    </p>
+
+    <p class="subtitle" data-lang="en">
+      PSMA radioligand therapy, PRRT, radium-223, I-131, MIBG, theranostics, evidence, toxicity, workflow, and RadOncTables Radiopharm key studies.
+    </p>
+
+  </header>
+
+  <main class="content-wrap">
+
+    
+    <section
+      id="section-1"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="總論：RPT 是全身性放射治療，不只是核醫檢查"
+        data-en="OVERVIEW: RPT Is Systemic Radiation Therapy"
+      >
+        總論：RPT 是全身性放射治療，不只是核醫檢查
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>輻射藥物治療（radiopharmaceutical therapy, RPT）利用配體（ligand）、胜肽（peptide）、抗體或小分子，把放射性核種送到腫瘤。它的臨床邏輯是 <span class="highlight">先用診斷示蹤劑（diagnostic tracer）證明靶點表現（target expression），再用治療核種遞送全身性放射劑量</span>。常見治療核種包括 β 發射體 Lu-177、α 發射體 Ra-223/Ac-225，以及 I-131。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>意思</th><th>臨床問題</th></tr></thead><tbody>
+<tr><td>靶點表現（target expression）</td><td>PSMA、SSTR、鈉碘共運輸體（NIS）、去甲腎上腺素轉運體（NET）等靶點需在病灶表現。</td><td>若影像陰性或病灶異質性高，RPT 可能失敗或只控制部分病灶。</td></tr>
+<tr><td>伴隨影像（companion imaging）</td><td>PSMA PET、DOTATATE PET、I-123/I-131 scan、MIBG scan。</td><td>需確認病灶攝取度（avidity），並辨認 FDG 陽性但治療示蹤劑陰性的 discordant lesions。</td></tr>
+<tr><td>放射生物學</td><td>低劑量率、全身多病灶、交叉照射效應（cross-fire）、骨髓/腎臟/唾液腺劑量。</td><td>不同於體外放療（EBRT）追求單一靶區高度順形；RPT 更像全身性、靶向、低劑量率照射。</td></tr>
+<tr><td>病人選擇</td><td>體能狀態（performance status）、骨髓儲備、腎功能、既往治療、腫瘤負荷。</td><td>瀰漫性骨髓侵犯或嚴重血球低下常限制治療。</td></tr>
+<tr><td>輻射安全</td><td>合理抑低劑量原則（ALARA）、排泄物處理、接觸限制、懷孕/照護者風險、授權醫師（authorized user）。</td><td>流程、病人教育與法規要求都比一般輸注治療更複雜。</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Radiopharmaceutical therapy uses target-seeking molecules to deliver systemic radiation, usually paired with diagnostic imaging to confirm target expression.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-2"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="FDA 核准與常用 RPT"
+        data-en="FDA-Approved and Common RPT Agents"
+      >
+        FDA 核准與常用 RPT
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>藥物/核種</th><th>靶點</th><th>適應症與使用時機</th><th>關鍵毒性/限制</th></tr></thead><tbody>
+<tr><td>Lu-177 vipivotide tetraxetan（Pluvicto）</td><td>攝護腺特異膜抗原（PSMA）</td><td>PSMA 陽性轉移性去勢抗性攝護腺癌（mCRPC）；2025 FDA 擴展到 taxane 前較早線 mCRPC 情境。</td><td>骨髓抑制、口乾、噁心、腎功能監測；需以 PSMA PET 選擇病人。</td></tr>
+<tr><td>Lu-177 dotatate（Lutathera）</td><td>體抑素受體（SSTR）</td><td>SSTR 陽性胃腸胰神經內分泌腫瘤（GEP-NET）；成人與兒童適應症已擴展。</td><td>需胺基酸輸注保護腎臟；注意骨髓抑制、長期 MDS/AML 風險與類癌危象（carcinoid crisis）。</td></tr>
+<tr><td>Ra-223 dichloride（Xofigo）</td><td>骨基質/成骨性轉移</td><td>有症狀、骨轉移為主且無已知內臟轉移的 mCRPC。</td><td>骨髓毒性與骨折風險；避免不當與 abiraterone/prednisone 併用，並需骨健康策略。</td></tr>
+<tr><td>I-131 sodium iodide</td><td>鈉碘共運輸體（NIS）</td><td>分化型甲狀腺癌殘餘消融、輔助治療或轉移病灶；也用於甲狀腺機能亢進。</td><td>唾液腺/淚腺毒性、骨髓抑制、生育與次發癌風險；需低碘飲食與 TSH stimulation。</td></tr>
+<tr><td>I-131 iobenguane（Azedra）</td><td>去甲腎上腺素轉運體</td><td>MIBG avid 且不可切除或轉移性嗜鉻細胞瘤/副神經節瘤。</td><td>高血壓或兒茶酚胺危象、骨髓抑制、甲狀腺阻斷、腎肝功能監測。</td></tr>
+<tr><td>Ibritumomab tiuxetan / 早期放射免疫治療</td><td>CD20</td><td>B 細胞淋巴瘤的歷史性或特定情境使用。</td><td>骨髓毒性與流程複雜，現代日常使用較少。</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Major agents include Lu-177 PSMA therapy, Lu-177 DOTATATE PRRT, radium-223, I-131 sodium iodide, and I-131 MIBG.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-3"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="關鍵試驗：Radiopharm 證據地圖"
+        data-en="KEY STUDIES: Linked to RadOncTables Radiopharm"
+      >
+        關鍵試驗：Radiopharm 證據地圖
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Study</th><th>疾病/藥物</th><th>設計與族群</th><th>核心結果與意義</th></tr></thead><tbody>
+<tr><td>VISION</td><td>Lu-177 PSMA-617 用於已接受 ARPI/taxane 的 mCRPC。</td><td>PSMA 陽性 mCRPC，既往接受雄激素受體路徑抑制劑（ARPI）與 taxane。</td><td>改善整體存活（OS）與影像無惡化存活（rPFS），建立 PSMA 放射配體治療後線標準。</td></tr>
+<tr><td>TheraP</td><td>Lu-177 PSMA-617 對比 cabazitaxel。</td><td>Docetaxel 後 mCRPC；PSMA PET 陽性且排除 FDG 陽性/PSMA 陰性不一致病灶。</td><td>PSA response 較高，凸顯影像篩選與 cabazitaxel 作為 active comparator 的重要性。</td></tr>
+<tr><td>PSMAfore</td><td>Taxane 前使用 Lu-177 PSMA-617。</td><td>Taxane-naive mCRPC，ARPI 後進展。</td><td>支持 Pluvicto 往較早線移動；FDA 於 2025 擴展適應症。</td></tr>
+<tr><td>LUNAR</td><td>Lu-177 PSMA + SBRT 用於寡復發攝護腺癌。</td><td>寡轉移/寡復發攝護腺癌，所有病灶 SBRT ± PSMA-targeted RLT。</td><td>探索全身性放射配體治療與轉移導向治療（MDT）的整合，仍需長期成熟資料。</td></tr>
+<tr><td>ALSYMPCA</td><td>Radium-223 用於有症狀骨轉移 mCRPC。</td><td>有症狀骨轉移、無內臟轉移的 mCRPC。</td><td>改善 OS 並延後骨相關事件，是 α 發射體骨轉移治療的經典試驗。</td></tr>
+<tr><td>ERA-223</td><td>Radium-223 + abiraterone/prednisone。</td><td>mCRPC 骨轉移。</td><td>增加骨折/死亡疑慮，提醒 RPT 併用治療不能只看理論協同作用。</td></tr>
+<tr><td>NETTER-1</td><td>Lu-177 DOTATATE 用於 midgut NET。</td><td>進展中、SSTR 陽性 midgut NET。</td><td>PRRT 大幅改善 PFS，建立 GEP-NET PRRT 標準。</td></tr>
+<tr><td>NETTER-2</td><td>第一線 Lu-177 DOTATATE + octreotide。</td><td>新診斷晚期 grade 2/3、分化良好、SSTR 陽性 GEP-NET。</td><td>支持 PRRT 往早線前移，尤其較高 grade 但仍分化良好的 SSTR 陽性 NET。</td></tr>
+<tr><td>甲狀腺 RAI 證據</td><td>I-131 用於分化型甲狀腺癌。</td><td>殘餘消融、輔助治療或轉移病灶。</td><td>需依 ATA 風險、術後 thyroglobulin（Tg）、RAI avidity 與轉移負荷決定；不是所有分化型甲狀腺癌都需要 RAI。</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>The Radiopharm trial cards render automatically below; this section summarizes major trial logic including VISION, TheraP, PSMAfore, ALSYMPCA, NETTER-1, and NETTER-2.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="RPT 流程與毒性管理"
+        data-en="RPT Workflow and Toxicity"
+      >
+        RPT 流程與毒性管理
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<ol>
+  <li><strong>確認適應症與靶點攝取度（target avidity）：</strong>使用 PSMA PET、DOTATATE PET、MIBG scan 或 iodine scan；特別注意 FDG 陽性但治療靶點陰性的 discordant disease。</li>
+  <li><strong>評估基準風險：</strong>檢查全血球計數（CBC）、腎功能、肝功能、體能狀態、疼痛、腫瘤負荷、骨髓侵犯、既往化療/放療/RPT。</li>
+  <li><strong>多專科排序：</strong>與腫瘤內科、核醫科、放射腫瘤科、泌尿科/內分泌科/外科討論治療排序；若有即將脊髓壓迫、病理性骨折、出血或 bulky symptomatic site，常需先用 EBRT 控制局部危急病灶。</li>
+  <li><strong>輻射安全：</strong>確認授權醫師（authorized user）、病人與家屬衛教、尿液/體液處理、接觸限制、懷孕與照護者風險、返回工作或搭機需求。</li>
+  <li><strong>治療期間：</strong>監測 CBC、腎肝功能、症狀、疼痛 flare、噁心、口乾、腹瀉、荷爾蒙危象或類癌危象。</li>
+  <li><strong>療效評估：</strong>整合 PSA、thyroglobulin（Tg）、chromogranin 等 biomarker、CT/MRI/PET、症狀與止痛藥需求；小心 flare 與 pseudoprogression。</li>
+</ol>
+<div class="clinical-note">RPT 與 EBRT 的關係不是互斥：EBRT 常用於局部危急病灶，RPT 用於全身靶點陽性疾病；若骨髓儲備差、脊椎/骨盆曾大範圍照射或有瀰漫性骨轉移，兩者治療排序需特別小心。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>RPT requires target-positive imaging, baseline marrow/renal assessment, multidisciplinary sequencing, radiation safety workflow, toxicity monitoring, and response assessment.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-5"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="新興方向與資料來源"
+        data-en="Emerging Directions and Sources"
+      >
+        新興方向與資料來源
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<ul>
+  <li><strong>α 發射體：</strong>Ac-225 PSMA、Bi-213 等可能提高殺傷力，但口乾、腎毒性、骨髓毒性與製造供應仍是挑戰。</li>
+  <li><strong>早線 RPT：</strong>PSMAfore 與 NETTER-2 顯示 RPT 正往更早線治療移動。</li>
+  <li><strong>併用治療：</strong>與雄激素受體路徑抑制劑（ARPI）、PARP 抑制劑、免疫檢查點抑制劑（ICI）、SBRT、DNA damage response inhibitor 併用都需臨床證據支持；ERA-223 提醒併用可能增加傷害。</li>
+  <li><strong>個人化劑量學：</strong>未來可能從固定活度（fixed activity）走向更個人化的腎臟、骨髓與腫瘤劑量學（dosimetry），但日常實作仍受流程限制。</li>
+  <li><strong>放射腫瘤科角色：</strong>RPT 是放射治療的一種形式；放腫醫師可在放射生物學、劑量限制、EBRT 排序、寡進展處理、毒性歸因與臨床試驗設計中扮演核心角色。</li>
+</ul>
+<p>資料來源：<a href="https://dctd.cancer.gov/research/research-areas/radiation-research/interest-groups/rpt" target="_blank" rel="noopener">NCI RPT Interest Group</a>、<a href="https://www.radonctables.com/" target="_blank" rel="noopener">RadOncTables</a>、Rad Onc Tables - Key Studies Estes 2025 的 Radiopharm sheet、<a href="https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications" target="_blank" rel="noopener">FDA oncology approvals</a> 與各藥物 prescribing information。頁尾會自動彙整 Radiopharm 關鍵試驗卡片。</p>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Emerging directions include alpha emitters, earlier-line RPT, combinations, patient-specific dosimetry, and a stronger radiation oncology role in theranostics.</p>
+      </div>
+
+    </section>
+    
+
+    
+            <section
+              class="section trial-section "
+              
+            >
+
+              <div
+                class="section-label"
+                data-zh="關鍵試驗"
+                data-en="KEY TRIALS"
+              >
+                關鍵試驗
+              </div>
+
+              <p data-lang="en">
+                Core randomized trials and pivotal studies for this
+                topic, from the Estes 2025 Key Studies tables, are
+                integrated into this chapter.
+              </p>
+            
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>VISION</h4>
+
+        <span class="trial-topic">
+          Prostate · Lutetium-177–PSMA-617 (Pluvicto)
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Sartor et al, NEJM, 2021 
+Fizazi et al, Lancet Oncol, 2023</strong> · N=831
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          Metastatic castration-resistant prostate cancer
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          previous treatment with ADT and 1-2 taxanes<br><br>➜ 🏆 Lu-177–PSMA-617 (7.4 GBq) q6weeks x4-6 + SOC<br>vs. <br>➜ standard of care
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          Radiographic median PFS 8.7 vs. 3.4 mos<br>Median OS 15.3 vs. 11.3 mos<br><br>Median time to 1st skeletal event or death<br>11.5 vs. 6.8 mos<br>QOL metrics improved on surveys<br><br>Increased cytopenias with tx<br><br>Grade 5 adverse effects 1% (n=5) vs. 0<br>(pancytopenia [n=2], BM failure [n=1], subdural haematoma [n=1], and intracranial haemorrhage [n=1])<br><br>Only median outcomes were reported. Looking at Fig 2, it seems that 2-yr OS and time to first symptomatic skeletal event remain different. PFS curves seem to merge at 2 years
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Lu-177–PSMA-617 improves PFS and OS in metastatic castration-resistant prostate cancer treated with prior taxane.  Time to skeletal events or death is prolonged.
+        </p>
+        
+
+    </article>
+    
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>PSMAfore</h4>
+
+        <span class="trial-topic">
+          Prostate · Lutetium-177–PSMA-617 (Pluvicto)
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Morris et al, Lancet, 2024</strong> · N=468
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          Metastatic castration-resistant prostate cancer that progressed on one prior ADT.
+Ineligible: prior taxane
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          no prior taxanes<br><br>➜ 🏆 Lu-177–PSMA-617 (7.4 GBq) q6weeks x6 + no change in ADT<br>vs. <br>➜ change in ADT<br><br>Crossover allowed if radiographic progression (60%)
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          Median OS 24.5 vs. 23.1 mos by ITT, but high crossover<br>Crossover adjusted HR 0.59<br>60% overall crossed over, or 75% that had radiographic progression<br><br>Median radiographic PFS 11.6 vs. 5.6 mos<br>Median time to BF 10.6 vs. 4.2 mos<br>symptomatic skeletal event NR vs. 18.0 mos<br><br>grade 3-5 adverse events 36% vs. 48%<br>grade 5 2% in both arms
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Lu-177–PSMA-617 improves PFS, BF, and time to skeletal events in metastatic castration-resistant prostate cancer treated with one prior ADT and no taxane history.<br><br>There was no confirmed OS benefit, likely due to a high rate of crossover. Crossover adjusted analysis appears to show OS benefit.
+        </p>
+        
+
+    </article>
+    
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>LUNAR</h4>
+
+        <span class="trial-topic">
+          Prostate · Lutetium-177–PSMA-617 (Pluvicto)
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Kishan et al, JCO, 2025</strong> · N=92
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          prostate cancer, ≤5 oligometastatic lesions
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          Phase II<br>➜ 🏆 Lu-177–PSMA-617 (7.4 GBq) x2 then SBRT<br>vs. <br>➜ SBRT
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          Median PFS 17.6 vs. 7.4 mos<br><br>Grade ≥3 lymphopenia 6.7% vs. 4.8%
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Lu-177–PSMA-617 added to SBRT to all lesions improves PFS and OS in oligometastatic prostate cancer.
+        </p>
+        
+
+    </article>
+    
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>ALSYMPCA</h4>
+
+        <span class="trial-topic">
+          Prostate · Radium-223 (Xofigo)
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Parker et al, NEJM, 2013</strong> · N=921
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          Castration resistant prostate cancer with ≥2 bone metastases
+
+Prior docetaxel allowed
+
+Exclusion: visceral metastasis
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          ➜ 🏆 radium-223 qmonthly x6 plus best standard of care<br>vs. <br>➜ placebo and best standard of care (2:1 randomization)<br><br>Eligibility: ANC ≥ 1500, Plt ≥ 100, Hgb ≥ 10 at first dose<br>Subsequent doses: ANC ≥ 1000 and Plt ≥ 50
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          Median OS 14.9 mos vs. 11.3 mos<br>Median time to bony event 15.6 vs. 9.8 mos<br>Median time to alk phos rise 7.4 vs. 3.8 mos<br>PR of ≥30% reduction in alk phos 47% vs. 3%<br>CR in alk phos 34% vs. 1%<br>(total alk phos response rate 81%)<br>Improved QOL with radium-223<br><br>Only median outcomes were provided. Looking at Figure 1, OS and time to first symptomatic skeletal event curves seem to merge at 2 years<br><br>-The study was terminated early for efficacy at interim analysis<br>-Adverse effects in radium-223 group were significantly lower than in placebo arm
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Radium-223 improves OS in castrate resistant nonmetastatic prostate cancer with bone metastases.
+        </p>
+        
+
+    </article>
+    
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>NETTER-2</h4>
+
+        <span class="trial-topic">
+          Gastroenteropancreatic neuroendocrine · Lutetium-177-Dotatate (Lutathera)
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Singh et al, Lancet, 2024</strong> · N=261
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          Newly diagnosed grade 2-3 advanced gastroenteropancreatic neuroendocrine tumors, somatostatin receptor+
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          ➜ 🏆 Lu-177-Dotatate q8wks x 4 + octreotide LAR<br>vs. <br>➜ octreotide LAR alone<br><br><br>primary endpoint: 20-mos PFS<br>secondary endpoint: median OS
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          Median PFS 22.8 vs. 8.5 mos
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Lu-177-Dotatate improves PFS in newly diagnosed grade 2-3 advanced gastroenteropancreatic neuroendocrine tumors.
+        </p>
+        
+
+    </article>
+    
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>NETTER-1</h4>
+
+        <span class="trial-topic">
+          Gastroenteropancreatic neuroendocrine · Lutetium-177-Dotatate (Lutathera)
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Strogberg et al, NEJM, 2017
+Strogberg et al, Lancet Oncol, 2021
+Hope et al, J Nuc Med, 2019</strong> · N=229
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          metastatic or inoperable locally advanced and progressive midgut neuroendocrine tumors after first line treatment, somatostatin receptor+
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          ➜ 🏆 Lu-177-Dotatate q8wks x 4 + octreotide LAR<br>vs. <br>➜ octreotide LAR alone<br><br><br>primary endpoint: 20-mos PFS<br>secondary endpoint: median OS
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          Median OS 48 vs. 36.3 mos, p=0.30<br>2-yr OS 76% vs. 63%<br>5-yr OS ~36% both arms<br>20-mo PFS 65% vs. 11%<br>Response rate 18% vs. 3%<br><br>2% had MDS<br>Grade 3-4 neutropenia 1%<br>thrombocytopenia 2%<br>lymphopenia 9%
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Lu-177-Dotatate improves PFS in advanced progressive midgut neuroendocrine tumors. There was an improvement in OS that was nonsignificant.
+        </p>
+        
+
+    </article>
+    
+    <article class="card trial-card" style="margin-bottom:14px">
+
+      <div class="trial-card-header">
+        <h4>IoN</h4>
+
+        <span class="trial-topic">
+          Thyroid · RAI for low risk
+        </span>
+      </div>
+
+      <p class="trial-citation">
+        <strong>Mallick et al, Lancet, 2025</strong> · N=504
+      </p>
+
+      
+        <p class="trial-population">
+          <strong
+            data-zh="病人族群："
+            data-en="Population: "
+          >
+            Population:
+          </strong>
+          differentiated thyroid cancer pT1-T3a, N0-N1a
+        </p>
+        
+      
+        <p class="trial-methods">
+          <strong
+            data-zh="方法："
+            data-en="Methods: "
+          >
+            Methods:
+          </strong>
+          ➜ RAI 30 mCi<br>vs. <br>➜ 🏆 no RAI
+        </p>
+        
+      
+        <p class="trial-results">
+          <strong
+            data-zh="結果："
+            data-en="Results: "
+          >
+            Results:
+          </strong>
+          5-yr RFS 96% vs. 98%, noninferior<br><br>On subanalysis, no benefit in any subgroup
+        </p>
+        
+      
+        <p class="trial-interpretation">
+          <strong
+            data-zh="解讀："
+            data-en="Interpretation: "
+          >
+            Interpretation:
+          </strong>
+          Early stage low risk thyroid cancer can avoid RAI.
+        </p>
+        
+
+    </article>
+    </section>
+
+    <div class="page-nav">
+
+        <a href="immunotherapy-evidence.html" class="page-nav-link page-nav-prev">
+          <span class="nav-dir">
+            ←
+            <span data-zh="上一章" data-en="Previous">
+              上一章
+            </span>
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="免疫治療"
+            data-en="Immunotherapy"
+          >
+            免疫治療
+          </span>
+        </a>
+        
+<div class="placeholder"></div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    © Rad Onc Interactive Tutorial ·
+    <a
+      href="index.html"
+      data-zh="返回首頁"
+      data-en="Back to home"
+    >
+      Back to home
+    </a>
+  </footer>
+
+  <script src="i18n.js?v=20260711-2"></script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const progressBar = document.getElementById("progressBar");
+
+      if (!progressBar) {
+        return;
+      }
+
+      const documentElement = document.documentElement;
+      const body = document.body;
+
+      const scrollTop =
+        documentElement.scrollTop ||
+        body.scrollTop;
+
+      const scrollHeight =
+        documentElement.scrollHeight ||
+        body.scrollHeight;
+
+      const availableScroll =
+        scrollHeight - documentElement.clientHeight;
+
+      const progress =
+        availableScroll > 0
+          ? (scrollTop / availableScroll) * 100
+          : 0;
+
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+
+</body>
+</html>

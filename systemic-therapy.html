@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Cancer Drugs — OncoBeam</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  
+
+  
+
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
+
+</head>
+
+<body class="topic-page page-systemic-therapy">
+
+  
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="OncoBeam" data-en="OncoBeam">OncoBeam</span></a>
+
+    <ul class="top-nav-links">
+      <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
+      <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
+      <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
+      <li><a href="target-delineation.html" data-zh="靶區" data-en="Targets">Targets</a></li>
+      <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
+      <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
+      <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
+      <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
+      <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
+      <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
+      <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
+      <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
+      <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
+      <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
+      <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
+      <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
+      <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
+      <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li><a href="benign.html" data-zh="良性" data-en="Benign">良性</a></li>
+      <li><a href="systemic-therapy.html" data-zh="藥物" data-en="Drugs">Drugs</a></li>
+      <li><a href="immunotherapy-evidence.html" data-zh="免疫" data-en="Immuno">Immuno</a></li>
+      <li><a href="radiopharmaceutical-therapy.html" data-zh="放射藥物" data-en="RPT">RPT</a></li>
+      <li>
+        <a
+          href="radonc-quiz/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-zh="📝 考題"
+          data-en="📝 Quiz"
+        >
+          📝 Quiz
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header
+    class="page-hero"
+    
+  >
+
+    <div class="step-badge">
+      💊 CANCER DRUGS
+    </div>
+
+    <h1
+      data-zh="癌症藥物總覽"
+      data-en="Cancer Drugs"
+    >
+      癌症藥物總覽
+    </h1>
+
+    <p class="subtitle" data-lang="zh">
+      整理傳統化學治療、分子標靶治療、抗體藥物複合體（ADC）、荷爾蒙治療、免疫治療與放射治療的交會重點。
+    </p>
+
+    <p class="subtitle" data-lang="en">
+      Chemotherapy, molecular targeted therapy, antibody-drug conjugates, endocrine therapy, immunotherapy, and key intersections with radiation oncology.
+    </p>
+
+  </header>
+
+  <main class="content-wrap">
+
+    
+    <section
+      id="section-1"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="總論：先分類，再看生物標記、治療線別與局部治療時機"
+        data-en="OVERVIEW: Classify, Biomarker, Line of Therapy, Local-Therapy Timing"
+      >
+        總論：先分類，再看生物標記、治療線別與局部治療時機
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>癌症藥物不能只粗分成「化療」與「標靶」。現代腫瘤治療需要同時評估 <span class="highlight">病理型態（histology）、分期（stage）、生物標記（biomarker）、治療線別（line of therapy）、疾病進展速度（disease tempo）、症狀負荷、既往治療與放射治療時機（RT timing）</span>。對放射腫瘤科而言，核心是判斷哪些藥物會改變局部治療時機、增加放射毒性，或在寡轉移（oligometastatic）、鞏固治療（consolidation）與救援治療（salvage）情境中與放療互補。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>核心概念</th><th>常見例子</th><th>Rad Onc 注意事項</th></tr></thead><tbody>
+<tr><td>傳統化學治療（chemotherapy）</td><td>攻擊 DNA、微管、核苷酸合成或拓撲異構酶；通常與細胞週期和增殖速度相關。</td><td>鉑類（platinum）、5-FU/capecitabine、gemcitabine、紫杉類（taxane）、etoposide、anthracycline、temozolomide、PCV。</td><td>Cisplatin、5-FU/capecitabine、gemcitabine、taxane 可作放射增敏劑（radiosensitizer）；同步治療時需評估黏膜、骨髓、皮膚與腸胃道毒性。</td></tr>
+<tr><td>分子標靶小分子藥物（small-molecule targeted therapy）</td><td>抑制造癌驅動基因（oncogenic driver）或存活路徑，常需伴隨診斷（companion diagnostic）。</td><td>EGFR、ALK、ROS1、BRAF/MEK、MET、RET、NTRK、PARP、CDK4/6、PI3K/AKT/mTOR、BTK、BCL2、HIF-2α。</td><td>可能延後或改變放療角色；腦轉移常因中樞有效標靶藥（CNS-active TKI）而先全身治療或合併 SRS；部分藥物需避開放療期間。</td></tr>
+<tr><td>單株抗體與抗血管新生治療</td><td>作用於細胞表面或腫瘤微環境靶點；可透過抗體依賴細胞毒殺（ADCC）、受體阻斷或配體中和。</td><td>Trastuzumab/pertuzumab、cetuximab、bevacizumab、ramucirumab、rituximab。</td><td>Bevacizumab 需注意傷口癒合、廔管、出血與腸胃道穿孔；頭頸癌 cetuximab 不是 cisplatin 的等效替代品。</td></tr>
+<tr><td>抗體藥物複合體（ADC）</td><td>抗體把細胞毒性載荷（payload）送到表現靶點的腫瘤；旁觀者效應（bystander effect）與載荷毒性很重要。</td><td>T-DXd、T-DM1、sacituzumab govitecan、enfortumab vedotin、datopotamab deruxtecan、mirvetuximab。</td><td>注意肺炎/間質性肺病（pneumonitis/ILD）、骨髓抑制、神經病變與眼毒性；與胸部放療或腦部放療的時機需個案化。</td></tr>
+<tr><td>荷爾蒙與核受體治療</td><td>阻斷雌激素受體（ER）、雄激素受體（AR）或類固醇合成；常與 CDK4/6、PI3K/AKT/mTOR 或 PARP 抑制劑併用。</td><td>Tamoxifen、aromatase inhibitor、fulvestrant、口服選擇性雌激素受體降解劑（SERD）、雄激素剝奪治療（ADT）、abiraterone、enzalutamide、apalutamide、darolutamide。</td><td>是乳癌與攝護腺癌放療的長程搭檔；ADT 期間長短、區域淋巴照射（RNI）、乳房切除後放療（PMRT）與攝護腺放療強化是常見考點。</td></tr>
+<tr><td>免疫治療（immunotherapy）</td><td>解除免疫抑制或直接導向 T 細胞/細胞治療。</td><td>PD-1/PD-L1、CTLA-4、LAG-3、嵌合抗原受體 T 細胞（CAR-T）、腫瘤浸潤淋巴球（TIL）、雙特異性 T 細胞導向藥物。</td><td>與放療可能有協同作用，但也可能增加肺炎、皮膚炎或腸炎；第三期 NSCLC 同步放化療後 durvalumab 是最經典的放療後免疫治療模式。</td></tr>
+<tr><td>輻射藥物治療（RPT）</td><td>利用配體（ligand）、抗體或離子型藥物把放射性核種送到腫瘤或微環境。</td><td>Lu-177 PSMA、Lu-177 DOTATATE、Ra-223、I-131、I-131 MIBG。</td><td>屬於全身性放射治療；需與體外放療（EBRT）、骨髓儲備、腎臟/唾液腺毒性、合理抑低劑量原則（ALARA）與授權醫師流程整合。</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Modern systemic therapy is organized by mechanism, biomarker, disease setting, line of therapy, and interaction with local therapy.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-2"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="化療：最常見藥物家族與放療交會點"
+        data-en="CHEMOTHERAPY: Core Families and RT Intersections"
+      >
+        化療：最常見藥物家族與放療交會點
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>家族</th><th>常見藥物</th><th>典型癌別</th><th>高頻重點</th></tr></thead><tbody>
+<tr><td>鉑類（platinum）</td><td>Cisplatin、carboplatin、oxaliplatin</td><td>頭頸癌、肺癌、食道癌、胃癌、膀胱癌、子宮頸癌、卵巢癌、睪丸癌</td><td>Cisplatin 是頭頸癌與子宮頸癌同步放化療核心；carboplatin 常因腎功能、聽力或神經病變限制而替代；oxaliplatin 是腸胃道癌常用骨架。</td></tr>
+<tr><td>氟嘧啶類（fluoropyrimidine）</td><td>5-FU、capecitabine</td><td>直腸癌、肛門癌、食道癌、胃癌、胰臟癌、乳癌</td><td>Capecitabine 常作口服放射增敏劑（oral radiosensitizer）；注意手足症候群、腹瀉、黏膜炎與 DPD 缺乏。</td></tr>
+<tr><td>Gemcitabine</td><td>Gemcitabine</td><td>胰臟癌、膽道癌、膀胱癌、肺癌</td><td>是強效放射增敏劑；與大範圍腹部或胸部放療同步時毒性風險較高。</td></tr>
+<tr><td>紫杉類（taxane）</td><td>Paclitaxel、docetaxel、nab-paclitaxel</td><td>乳癌、肺癌、食道癌、胃癌、頭頸癌</td><td>CROSS regimen 使用每週 carboplatin/paclitaxel 加放療；注意神經病變、過敏反應與骨髓抑制。</td></tr>
+<tr><td>拓撲異構酶抑制劑（topoisomerase inhibitor）</td><td>Etoposide、irinotecan、topotecan</td><td>小細胞肺癌、肺癌、腸胃道癌、卵巢癌</td><td>Cisplatin/etoposide 是侷限期小細胞肺癌同步放療的經典化療骨架。</td></tr>
+<tr><td>蒽環類（anthracycline）</td><td>Doxorubicin、epirubicin、daunorubicin</td><td>乳癌、肉瘤、淋巴瘤、血液腫瘤</td><td>心臟毒性會與左側乳房或縱膈放療交會；需同時評估累積劑量與心臟劑量限制（constraints）。</td></tr>
+<tr><td>烷化劑與中樞神經口服藥物</td><td>Cyclophosphamide、ifosfamide、temozolomide、lomustine、procarbazine</td><td>淋巴瘤、肉瘤、中樞神經腫瘤、卵巢癌</td><td>Temozolomide（TMZ）加放療是 GBM 標準；PCV 常見於寡突膠質瘤與高風險低惡性度膠質瘤。</td></tr>
+</tbody></table></div>
+<div class="clinical-note">記憶方式：同步放化療常見放射增敏劑（radiosensitizer）包括 cisplatin、5-FU/capecitabine、gemcitabine、taxane、temozolomide（TMZ）與 etoposide；真正選擇取決於癌別證據與正常組織耐受度，不是只看藥物是否能增敏。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Key chemotherapy families include platinum, fluoropyrimidines, gemcitabine, taxanes, topoisomerase inhibitors, anthracyclines, and alkylators.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-3"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="分子標靶與 ADC：以生物標記為核心的腫瘤治療"
+        data-en="TARGETED THERAPY AND ADCs: Biomarker-First Oncology"
+      >
+        分子標靶與 ADC：以生物標記為核心的腫瘤治療
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>靶點/類別</th><th>代表藥物</th><th>常見癌別/情境</th><th>2026 實務重點</th></tr></thead><tbody>
+<tr><td>EGFR</td><td>Osimertinib、erlotinib/gefitinib/afatinib、amivantamab</td><td>非小細胞肺癌（NSCLC）；部分頭頸癌與大腸直腸癌使用 EGFR 抗體。</td><td>NSCLC 的 EGFR exon 19 deletion 或 L858R 以 osimertinib 為核心；腦轉移與寡進展（oligoprogression）常與 SRS/SBRT 交會。</td></tr>
+<tr><td>ALK/ROS1/RET/MET/NTRK</td><td>Alectinib、lorlatinib、entrectinib、selpercatinib、capmatinib、larotrectinib</td><td>NSCLC、甲狀腺癌與跨癌別靶點（basket tumor）。</td><td>中樞有效標靶藥（CNS-active TKI）會改變腦轉移局部治療排序；進展型態決定是否再切片、換 TKI 或加局部消融治療。</td></tr>
+<tr><td>BRAF/MEK</td><td>Dabrafenib/trametinib、encorafenib/binimetinib、vemurafenib/cobimetinib</td><td>黑色素瘤、NSCLC、甲狀腺癌、大腸直腸癌。</td><td>黑色素瘤需與免疫治療排序；大腸直腸癌 BRAF V600E 通常需合併 EGFR 阻斷。</td></tr>
+<tr><td>HER2</td><td>Trastuzumab、pertuzumab、T-DM1、T-DXd、tucatinib</td><td>乳癌、胃癌/胃食道交界癌，以及部分肺癌、大腸直腸癌與跨癌別適應症。</td><td>T-DXd 已擴展到 HER2-low/ultralow 乳癌；需注意間質性肺病/肺炎（ILD/pneumonitis），胸部放療前後尤其要謹慎。</td></tr>
+<tr><td>荷爾蒙受體（HR）/ CDK4/6 / PI3K-AKT-mTOR</td><td>AI、tamoxifen、fulvestrant、vepdegestrant、palbociclib/ribociclib/abemaciclib、alpelisib、capivasertib、everolimus</td><td>荷爾蒙受體陽性乳癌（HR+ breast cancer）。</td><td>內分泌治療是骨架，再依 ESR1、PIK3CA、AKT1、PTEN 等結果選擇標靶藥。</td></tr>
+<tr><td>PARP</td><td>Olaparib、talazoparib、niraparib、rucaparib</td><td>BRCA 或同源重組缺陷（HRD）相關乳癌、卵巢癌、胰臟癌、攝護腺癌。</td><td>與鉑類敏感性、HRD 檢測、骨髓儲備、既往放療與化療都有關。</td></tr>
+<tr><td>VEGF / 血管新生路徑</td><td>Bevacizumab、ramucirumab、lenvatinib、sunitinib、cabozantinib、axitinib</td><td>大腸直腸癌、肝癌、腎細胞癌、甲狀腺癌、子宮內膜癌、膠質瘤症狀控制。</td><td>放療範圍靠近腸道、支氣管或術後傷口時，要特別注意出血、穿孔、廔管與傷口癒合。</td></tr>
+<tr><td>ADC 載荷平台</td><td>T-DXd、sacituzumab、enfortumab、datopotamab、mirvetuximab</td><td>乳癌、泌尿上皮癌、卵巢癌、肺癌、三陰性乳癌（TNBC）。</td><td>ADC 正快速前移到早線治療；載荷毒性（payload toxicity）常比靶點名稱更能預測副作用。</td></tr>
+</tbody></table></div>
+<p>最新核准仍需以 FDA oncology approval notifications、NCCN/ESMO/ASCO guideline 與院內藥委會為準。近年趨勢是 <span class="highlight">抗體藥物複合體（ADC）、中樞有效標靶藥（CNS-active TKI）、分子殘存疾病（MRD）、跨癌別生物標記（tumor-agnostic biomarker）、新輔助免疫/標靶治療</span> 快速進入標準治療。</p>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Targeted therapy is increasingly biomarker-driven, with rapid expansion of ADCs, CNS-active TKIs, and tumor-agnostic indications.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="放射腫瘤科視角：藥物與 RT 的安全交會"
+        data-en="RAD ONC VIEW: Safe Integration With RT"
+      >
+        放射腫瘤科視角：藥物與 RT 的安全交會
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>情境</th><th>常見問題</th><th>實務原則</th></tr></thead><tbody>
+<tr><td>胸部放療 + 免疫治療/ADC/標靶藥</td><td>肺炎歸因困難</td><td>記錄基準間質性肺病（ILD）、肺 V20/平均肺劑量（MLD）、藥物起訖時間；T-DXd、免疫檢查點抑制劑（ICI）、EGFR/ALK TKI 需特別注意。</td></tr>
+<tr><td>骨盆/腹部放療 + VEGF 抑制</td><td>出血、穿孔、廔管、傷口癒合</td><td>手術前後與腸道、膀胱、陰道照射時需審慎停藥，並進行多專科討論。</td></tr>
+<tr><td>腦部 SRS + 全身治療</td><td>放射壞死、出血、中樞反應時序</td><td>黑色素瘤/腎細胞癌 ICI、HER2/EGFR/ALK 中樞有效藥物需個案化；不能只看顱外疾病控制。</td></tr>
+<tr><td>富含骨髓區域放療 + 化療/RPT</td><td>血球低下</td><td>骨盆、脊椎、多發骨轉移、PRRT 或 PSMA 放射配體治療前後，要評估骨髓儲備、既往化療與瀰漫性骨髓侵犯。</td></tr>
+<tr><td>再照射 + 全身治療</td><td>累積危及器官（OAR）劑量與藥物毒性相加</td><td>重建既往劑量、計算 EQD2/BED、設定務實限制；必要時先暫停高風險藥物。</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Radiation oncologists should track pneumonitis, fistula, marrow reserve, CNS toxicity, and re-irradiation interactions when integrating systemic therapy.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-5"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="更新來源"
+        data-en="Update Sources"
+      >
+        更新來源
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<ul>
+  <li><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications" target="_blank" rel="noopener">FDA Oncology/Hematology Approval Notifications</a>：最新核准與適應症變更。</li>
+  <li><a href="https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies" target="_blank" rel="noopener">NCI Targeted Therapy</a> 與 <a href="https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies/approved-drug-list" target="_blank" rel="noopener">NCI approved targeted drug list</a>：標靶治療分類與藥物清單。</li>
+  <li><a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/chemotherapy/types-of-chemo-drugs.html" target="_blank" rel="noopener">American Cancer Society chemotherapy drug classes</a>：化療家族與機轉。</li>
+  <li><a href="https://www.oncokb.org/oncology-therapies" target="_blank" rel="noopener">OncoKB FDA-approved oncology therapies</a>：依 biomarker 與藥物分類查詢。</li>
+</ul>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Update from FDA approvals, NCI targeted therapy resources, ACS chemotherapy classes, and OncoKB.</p>
+      </div>
+
+    </section>
+    
+
+    
+
+    <div class="page-nav">
+
+        <a href="benign.html" class="page-nav-link page-nav-prev">
+          <span class="nav-dir">
+            ←
+            <span data-zh="上一章" data-en="Previous">
+              上一章
+            </span>
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="良性"
+            data-en="Benign"
+          >
+            良性
+          </span>
+        </a>
+        
+
+        <a href="immunotherapy-evidence.html" class="page-nav-link page-nav-next">
+          <span class="nav-dir">
+            <span data-zh="下一章" data-en="Next">
+              下一章
+            </span>
+            →
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="免疫治療"
+            data-en="Immunotherapy"
+          >
+            免疫治療
+          </span>
+        </a>
+        
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    © Rad Onc Interactive Tutorial ·
+    <a
+      href="index.html"
+      data-zh="返回首頁"
+      data-en="Back to home"
+    >
+      Back to home
+    </a>
+  </footer>
+
+  <script src="i18n.js?v=20260711-2"></script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const progressBar = document.getElementById("progressBar");
+
+      if (!progressBar) {
+        return;
+      }
+
+      const documentElement = document.documentElement;
+      const body = document.body;
+
+      const scrollTop =
+        documentElement.scrollTop ||
+        body.scrollTop;
+
+      const scrollHeight =
+        documentElement.scrollHeight ||
+        body.scrollHeight;
+
+      const availableScroll =
+        scrollHeight - documentElement.clientHeight;
+
+      const progress =
+        availableScroll > 0
+          ? (scrollTop / availableScroll) * 100
+          : 0;
+
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+
+</body>
+</html>

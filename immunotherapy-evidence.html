@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Immunotherapy Evidence — OncoBeam</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  
+
+  
+
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
+
+</head>
+
+<body class="topic-page page-immunotherapy-evidence">
+
+  
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="OncoBeam" data-en="OncoBeam">OncoBeam</span></a>
+
+    <ul class="top-nav-links">
+      <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
+      <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
+      <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
+      <li><a href="target-delineation.html" data-zh="靶區" data-en="Targets">Targets</a></li>
+      <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
+      <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
+      <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
+      <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
+      <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
+      <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
+      <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
+      <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
+      <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
+      <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
+      <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
+      <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
+      <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
+      <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li><a href="benign.html" data-zh="良性" data-en="Benign">良性</a></li>
+      <li><a href="systemic-therapy.html" data-zh="藥物" data-en="Drugs">Drugs</a></li>
+      <li><a href="immunotherapy-evidence.html" data-zh="免疫" data-en="Immuno">Immuno</a></li>
+      <li><a href="radiopharmaceutical-therapy.html" data-zh="放射藥物" data-en="RPT">RPT</a></li>
+      <li>
+        <a
+          href="radonc-quiz/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-zh="📝 考題"
+          data-en="📝 Quiz"
+        >
+          📝 Quiz
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header
+    class="page-hero"
+    
+  >
+
+    <div class="step-badge">
+      🛡️ IMMUNOTHERAPY EVIDENCE
+    </div>
+
+    <h1
+      data-zh="免疫治療文獻與證據實況"
+      data-en="Immunotherapy Evidence"
+    >
+      免疫治療文獻與證據實況
+    </h1>
+
+    <p class="subtitle" data-lang="zh">
+      整理目前免疫治療的使用情境、癌別、治療線別、生物標記（biomarker）、關鍵證據與放療交會點。
+    </p>
+
+    <p class="subtitle" data-lang="en">
+      Current immunotherapy use by disease site, line of therapy, biomarkers, key evidence, and intersections with radiation therapy.
+    </p>
+
+  </header>
+
+  <main class="content-wrap">
+
+    
+    <section
+      id="section-1"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="免疫治療家族：檢查點、細胞治療與 T 細胞導向治療"
+        data-en="IMMUNOTHERAPY FAMILIES"
+      >
+        免疫治療家族：檢查點、細胞治療與 T 細胞導向治療
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>代表藥物/平台</th><th>核心概念</th><th>常用情境</th></tr></thead><tbody>
+<tr><td>PD-1 抑制劑</td><td>Pembrolizumab、nivolumab、cemiplimab、dostarlimab、penpulimab、retifanlimab、tislelizumab</td><td>解除 T 細胞上的 PD-1 煞車，使腫瘤反應性 T 細胞恢復功能。</td><td>肺癌、黑色素瘤、頭頸癌、腎細胞癌、MSI-H/dMMR 腫瘤、皮膚鱗狀細胞癌、子宮內膜癌、腸胃道癌、泌尿道癌等。</td></tr>
+<tr><td>PD-L1 抑制劑</td><td>Durvalumab、atezolizumab、avelumab</td><td>阻斷腫瘤細胞或免疫細胞上的 PD-L1，避免其抑制 T 細胞。</td><td>第三期 NSCLC 放化療後鞏固、廣泛期小細胞肺癌、泌尿上皮癌、膽道癌、肌肉侵犯性或非肌肉侵犯性膀胱癌、Merkel cell carcinoma 等。</td></tr>
+<tr><td>CTLA-4 抑制劑</td><td>Ipilimumab、tremelimumab</td><td>作用在較早期 T 細胞啟動（T-cell priming）階段，增強免疫反應。</td><td>黑色素瘤、腎細胞癌、肝細胞癌、MSI-H 大腸直腸癌；常與 PD-1/PD-L1 抑制劑併用。</td></tr>
+<tr><td>LAG-3 抑制</td><td>Relatlimab + nivolumab</td><td>針對 T 細胞耗竭路徑（T-cell exhaustion pathway）。</td><td>黑色素瘤第一線，可作為單純 PD-1 抑制以外的選項。</td></tr>
+<tr><td>細胞治療（cellular therapy）</td><td>嵌合抗原受體 T 細胞（CAR-T）、腫瘤浸潤淋巴球（TIL；lifileucel）</td><td>利用加工或擴增後的免疫細胞直接殺傷腫瘤。</td><td>B 細胞惡性腫瘤、多發性骨髓瘤、PD-1 失敗後黑色素瘤。</td></tr>
+<tr><td>雙特異性抗體 / T 細胞導向藥物</td><td>Blinatumomab、teclistamab、epcoritamab、glofitamab 等</td><td>把 T 細胞與腫瘤抗原拉近，促進免疫殺傷。</td><td>以血液腫瘤為主；細胞激素釋放症候群（CRS）與免疫效應細胞相關神經毒性（ICANS）管理很重要。</td></tr>
+</tbody></table></div>
+<p>高頻生物標記（biomarker）包括：<span class="highlight">PD-L1、微衛星不穩定高度/錯配修復缺陷（MSI-H/dMMR）、腫瘤突變負荷高（TMB-high）、EBV 相關鼻咽癌、病毒相關腫瘤、分子殘存疾病/循環腫瘤 DNA（MRD/ctDNA）、各癌別特有免疫表型</span>。但免疫治療不是 biomarker 陽性就一定有效，也不是 biomarker 陰性就永遠無效；最終仍需回到癌別與臨床試驗證據。</p>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Immunotherapy includes checkpoint inhibitors, cellular therapies, bispecifics, cytokines, vaccines, and TIL therapy, with PD-1/PD-L1 blockade being the most common solid-tumor backbone.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-2"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="各癌別常用免疫治療：第幾線、使用時機、證據實況"
+        data-en="DISEASE-SITE USE: Line, Timing, Evidence"
+      >
+        各癌別常用免疫治療：第幾線、使用時機、證據實況
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>癌別</th><th>常用時機/線別</th><th>常見 regimen</th><th>證據與限制</th></tr></thead><tbody>
+<tr><td>非小細胞肺癌（NSCLC）</td><td>轉移性且無可治療驅動基因突變的第一線；第三期同步放化療（CRT）後鞏固；部分手術前後情境。</td><td>Pembrolizumab ± 化療、nivolumab/ipilimumab ± 化療、atezolizumab-based regimen、CRT 後 durvalumab。</td><td>由 PD-L1 TPS、驅動基因突變、分期與手術/CRT 情境決定；PACIFIC 是放療後免疫治療最經典模式。</td></tr>
+<tr><td>小細胞肺癌（SCLC）</td><td>廣泛期第一線；侷限期 CRT 後鞏固正在成為新標準討論。</td><td>Atezolizumab 或 durvalumab + platinum/etoposide；侷限期 CRT 後 durvalumab 鞏固證據正在成熟。</td><td>整體存活改善幅度中等但已標準化；胸部放療、預防性顱照射（PCI）/SRS 與 ICI 時機需整合。</td></tr>
+<tr><td>黑色素瘤</td><td>高風險術後輔助；轉移性第一線；BRAF 突變需與標靶治療排序。</td><td>Nivolumab、pembrolizumab、nivolumab/ipilimumab、nivolumab/relatlimab；PD-1 失敗後可考慮 TIL。</td><td>免疫治療是核心；腦轉移常用 SRS + ICI，但需監測放射壞死與水腫。</td></tr>
+<tr><td>腎細胞癌（RCC）</td><td>轉移性第一線。</td><td>Nivolumab/ipilimumab；pembrolizumab/axitinib、nivolumab/cabozantinib、lenvatinib/pembrolizumab。</td><td>依 IMDC 風險與毒性輪廓選擇；SBRT 常用於寡進展或症狀緩解。</td></tr>
+<tr><td>頭頸部鱗狀細胞癌（H&N SCC）</td><td>復發/轉移性第一線或鉑類失敗後；術後高風險合併放化療的免疫治療證據正在發展。</td><td>Pembrolizumab ± platinum/5-FU；鉑類後 nivolumab 或 pembrolizumab；NIVOPOST-OP 支持部分術後高風險族群加 nivolumab。</td><td>PD-L1 CPS 重要；根治性放療同步免疫治療仍不是全面標準，需依試驗情境。</td></tr>
+<tr><td>泌尿上皮癌</td><td>轉移性第一線組合、維持治療、肌肉侵犯性膀胱癌（MIBC）手術前後/輔助/MRD 陽性、部分高風險非肌肉侵犯性膀胱癌（NMIBC）。</td><td>Nivolumab + cis/gem、avelumab 維持、輔助 nivolumab、MRD 陽性輔助 atezolizumab、高風險 NMIBC 可見 durvalumab + BCG 研究/適應症。</td><td>線別變化很快，ADC + ICI 正改變轉移性 UC 治療；膀胱保留三合一治療（trimodality）與 ICI 正在研究。</td></tr>
+<tr><td>腸胃道癌、胃食道交界癌、胃癌、食道癌</td><td>轉移性第一線依 PD-L1/HER2 選擇；食道/GEJ 新輔助 CRT + 手術後若有殘餘病灶可用輔助免疫治療。</td><td>Nivolumab + 化療、pembrolizumab + 化療、HER2+ 且 PD-L1+ 胃/GEJ 可用 pembrolizumab + trastuzumab + 化療；食道/GEJ 三合一治療後輔助 nivolumab。</td><td>由 PD-L1 CPS、病理型態、HER2、MSI 決定；放療後輔助 nivolumab 是重要交會點。</td></tr>
+<tr><td>MSI-H/dMMR 大腸直腸癌</td><td>轉移性第一線；局部晚期 dMMR 直腸癌器官保留越來越重要。</td><td>Pembrolizumab；nivolumab/ipilimumab；dMMR 直腸癌研究中常見 dostarlimab 策略。</td><td>dMMR 直腸癌完整反應數據非常亮眼，但需嚴格監測與多專科共識。</td></tr>
+<tr><td>子宮內膜癌</td><td>晚期/復發第一線化療 + ICI；復發 dMMR 或 pMMR 依組合治療。</td><td>Dostarlimab 或 pembrolizumab + carboplatin/paclitaxel；pMMR 復發疾病可用 pembrolizumab/lenvatinib。</td><td>dMMR 獲益最大；輔助放療與 ICI 的整合仍依風險分群與 protocol。</td></tr>
+<tr><td>子宮頸癌</td><td>轉移/復發 PD-L1+ 第一線；局部晚期高風險族群可見 CRT + ICI 後維持治療。</td><td>Pembrolizumab + platinum/taxane ± bevacizumab；高風險局部晚期可見 pembrolizumab 合併 CRT 後維持。</td><td>需整合 PD-L1 CPS、分期、bevacizumab 適用性與骨盆放療毒性。</td></tr>
+<tr><td>乳癌</td><td>三陰性乳癌（TNBC）：早期高風險新輔助/輔助；轉移性 PD-L1+ 或後線依 regimen。</td><td>高風險早期 TNBC：pembrolizumab + 化療；轉移性 PD-L1+ TNBC：pembrolizumab + 化療。</td><td>ER+ 與 HER2+ 乳癌免疫治療不是主軸；TNBC 需注意與手術/放療時機。</td></tr>
+<tr><td>肝細胞癌（HCC）/膽道癌（BTC）</td><td>晚期第一線。</td><td>Atezolizumab/bevacizumab、durvalumab/tremelimumab、nivolumab/ipilimumab；BTC 可用 durvalumab 或 pembrolizumab + gem/cis。</td><td>肝功能、出血風險、門脈高壓與肝臟放療劑量儲備是關鍵。</td></tr>
+<tr><td>皮膚 cSCC / Merkel / cBCC</td><td>局部晚期不可切除或轉移性；部分 cSCC 可作新輔助治療。</td><td>Cemiplimab、pembrolizumab；Merkel cell carcinoma 可用 avelumab/retifanlimab。</td><td>常與根治性或術後放療互補；免疫治療反應可能使手術/放療範圍需要重新評估。</td></tr>
+<tr><td>典型霍奇金淋巴瘤</td><td>復發/難治；晚期疾病第一線組合治療正在擴展。</td><td>Nivolumab、pembrolizumab、brentuximab/PD-1 組合。</td><td>放療仍可用於 bulky、殘餘病灶或局部控制；PD-1 後發炎性 PET 需小心判讀。</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Common disease-site uses include metastatic driver-negative NSCLC, stage III NSCLC after CRT, melanoma, RCC, urothelial cancer, MSI-H/dMMR tumors, endometrial cancer, cervical cancer, TNBC, HCC/BTC, cSCC, Merkel cell carcinoma, and Hodgkin lymphoma.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-3"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="放療與免疫治療：證據、時機與毒性"
+        data-en="RT AND IMMUNOTHERAPY: Evidence, Timing, Toxicity"
+      >
+        放療與免疫治療：證據、時機與毒性
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>情境</th><th>證據強度</th><th>實務重點</th></tr></thead><tbody>
+<tr><td>第三期 NSCLC 同步放化療後 durvalumab</td><td>最高，標準治療。</td><td>需確認無疾病進展，並處理放射性肺炎風險；PD-L1 條件與開始時間會依地區 guideline 不同。</td></tr>
+<tr><td>食道癌/胃食道交界癌三合一治療後輔助 nivolumab</td><td>標準治療。</td><td>新輔助 CRT + 手術後若有殘餘病灶可考慮；需同時評估放療後免疫毒性與術後恢復。</td></tr>
+<tr><td>腦轉移 SRS + ICI</td><td>常用，但證據異質性高。</td><td>黑色素瘤、腎細胞癌與 NSCLC 常見；注意放射壞死（radionecrosis）、水腫與類固醇需求，因類固醇可能削弱免疫效果。</td></tr>
+<tr><td>寡轉移/寡進展 SBRT + ICI</td><td>高度依賴癌別與試驗情境。</td><td>可用於局部控制並延長全身治療有效時間；遠隔效應（abscopal effect）不能當作主要治療目標。</td></tr>
+<tr><td>根治性 CRT + 同步 ICI</td><td>部分癌別快速發展中，但不是全面標準。</td><td>頭頸癌、子宮頸癌、肺癌、膀胱保留等正在演進；需看第三期試驗結果與毒性。</td></tr>
+</tbody></table></div>
+<div class="clinical-note">免疫相關不良反應（irAE）可影響任何器官。常見包括皮膚炎、腸炎、肝炎、內分泌病變、肺炎、腎炎、關節炎與神經毒性。胸部放療後最困難的是肺炎歸因，應記錄放療劑量指標、ICI 時機、影像分布與感染鑑別。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>The strongest radiation-immunotherapy paradigm remains durvalumab after concurrent chemoradiation for stage III NSCLC; other combinations are disease- and trial-specific.</p>
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="重要文獻與更新來源"
+        data-en="Key Evidence and Updates"
+      >
+        重要文獻與更新來源
+      </div>
+
+      
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<ul>
+  <li><a href="https://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications" target="_blank" rel="noopener">FDA oncology approval notifications</a>：截至 2026 年仍是最新適應症最直接來源。</li>
+  <li><a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/immunotherapy/immune-checkpoint-inhibitors.html" target="_blank" rel="noopener">American Cancer Society checkpoint inhibitor overview</a>：PD-1、PD-L1、CTLA-4、LAG-3 分類。</li>
+  <li><a href="https://ascopubs.org/doi/10.1200/JCO.21.01440" target="_blank" rel="noopener">ASCO immune-related adverse event guideline</a> 與 <a href="https://www.esmo.org/guidelines/esmo-clinical-practice-guideline-management-of-toxicities-from-immunotherapy" target="_blank" rel="noopener">ESMO immunotherapy toxicity guideline</a>：毒性管理。</li>
+  <li><a href="https://www.cancerresearch.org/regulatory-approval-timeline-of-active-immunotherapies" target="_blank" rel="noopener">Cancer Research Institute approval timeline</a>：免疫治療核准歷史與擴張趨勢。</li>
+</ul>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        <p>Follow FDA approvals, ASCO/ESMO toxicity guidance, ACS overview resources, and disease-specific NCCN/ESMO/ASCO guidelines.</p>
+      </div>
+
+    </section>
+    
+
+    
+
+    <div class="page-nav">
+
+        <a href="systemic-therapy.html" class="page-nav-link page-nav-prev">
+          <span class="nav-dir">
+            ←
+            <span data-zh="上一章" data-en="Previous">
+              上一章
+            </span>
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="癌症藥物"
+            data-en="Cancer Drugs"
+          >
+            癌症藥物
+          </span>
+        </a>
+        
+
+        <a href="radiopharmaceutical-therapy.html" class="page-nav-link page-nav-next">
+          <span class="nav-dir">
+            <span data-zh="下一章" data-en="Next">
+              下一章
+            </span>
+            →
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="放射藥物"
+            data-en="Radiopharmaceutical Therapy"
+          >
+            放射藥物
+          </span>
+        </a>
+        
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    © Rad Onc Interactive Tutorial ·
+    <a
+      href="index.html"
+      data-zh="返回首頁"
+      data-en="Back to home"
+    >
+      Back to home
+    </a>
+  </footer>
+
+  <script src="i18n.js?v=20260711-2"></script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const progressBar = document.getElementById("progressBar");
+
+      if (!progressBar) {
+        return;
+      }
+
+      const documentElement = document.documentElement;
+      const body = document.body;
+
+      const scrollTop =
+        documentElement.scrollTop ||
+        body.scrollTop;
+
+      const scrollHeight =
+        documentElement.scrollHeight ||
+        body.scrollHeight;
+
+      const availableScroll =
+        scrollHeight - documentElement.clientHeight;
+
+      const progress =
+        availableScroll > 0
+          ? (scrollTop / availableScroll) * 100
+          : 0;
+
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+
+</body>
+</html>

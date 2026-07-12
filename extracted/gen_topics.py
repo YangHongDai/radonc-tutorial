@@ -54,6 +54,9 @@ NAV = """
       <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
       <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
       <li><a href="benign.html" data-zh="良性" data-en="Benign">良性</a></li>
+      <li><a href="systemic-therapy.html" data-zh="藥物" data-en="Drugs">Drugs</a></li>
+      <li><a href="immunotherapy-evidence.html" data-zh="免疫" data-en="Immuno">Immuno</a></li>
+      <li><a href="radiopharmaceutical-therapy.html" data-zh="放射藥物" data-en="RPT">RPT</a></li>
       <li>
         <a
           href="radonc-quiz/index.html"
@@ -345,6 +348,19 @@ def render_section(section, section_index):
         section.get("en_class", "")
     )
 
+    heading_html = ""
+
+    if h2_zh or h2_en:
+        heading_html = f"""
+      <h2
+        class="{heading_class}"
+        data-zh="{h2_zh}"
+        data-en="{h2_en}"
+      >
+        {h2_zh}
+      </h2>
+        """
+
     return f"""
     <section
       id="{section_id}"
@@ -360,13 +376,7 @@ def render_section(section, section_index):
         {label_zh}
       </div>
 
-      <h2
-        class="{heading_class}"
-        data-zh="{h2_zh}"
-        data-en="{h2_en}"
-      >
-        {h2_zh}
-      </h2>
+      {heading_html}
 
       <div
         class="section-body section-body-zh {zh_class}"
