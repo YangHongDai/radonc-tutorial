@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Target Delineation — OncoBeam</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  
+
+  
+
+  
+
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        lang = localStorage.getItem("radonc-language") === "en" ? "en" : "zh";
+      } catch (error) {
+        lang = "zh";
+      }
+      var root = document.documentElement;
+      var initial = (root.lang || "").toLowerCase().indexOf("en") === 0 ? "en" : "zh";
+      root.dataset.uiLang = lang;
+      root.lang = lang === "en" ? "en" : "zh-TW";
+      if (lang !== initial) {
+        root.classList.add("i18n-pending");
+      }
+    })();
+  </script>
+  <style>
+    html.i18n-pending body { visibility: hidden; }
+    html[data-ui-lang="zh"] [data-lang="en"],
+    html[data-ui-lang="en"] [data-lang="zh"] { display: none !important; }
+  </style>
+
+</head>
+
+<body class="topic-page page-target-delineation">
+
+  
+<nav class="top-nav">
+  <div class="top-nav-inner">
+
+    <a href="index.html" class="top-nav-brand"><span>☢️</span> <span data-zh="OncoBeam" data-en="OncoBeam">OncoBeam</span></a>
+
+    <ul class="top-nav-links">
+      <li><a href="intro-clinical.html" data-zh="臨床" data-en="Clinical">Clinical</a></li>
+      <li><a href="physics.html" data-zh="物理" data-en="Physics">Physics</a></li>
+      <li><a href="radbio.html" data-zh="放射生物" data-en="RadBio">RadBio</a></li>
+      <li><a href="target-delineation.html" data-zh="靶區" data-en="Targets">Targets</a></li>
+      <li><a href="cns.html" data-zh="CNS" data-en="CNS">CNS</a></li>
+      <li><a href="headneck.html" data-zh="頭頸" data-en="H&amp;N">H&amp;N</a></li>
+      <li><a href="brain-mets.html" data-zh="腦轉移" data-en="Brain mets">Brain mets</a></li>
+      <li><a href="lung.html" data-zh="肺" data-en="Lung">Lung</a></li>
+      <li><a href="breast.html" data-zh="乳癌" data-en="Breast">Breast</a></li>
+      <li><a href="gi.html" data-zh="消化道" data-en="GI">GI</a></li>
+      <li><a href="gu.html" data-zh="泌尿" data-en="GU">GU</a></li>
+      <li><a href="prostate.html" data-zh="攝護腺" data-en="Prostate">Prostate</a></li>
+      <li><a href="gyn.html" data-zh="婦科" data-en="Gyn">Gyn</a></li>
+      <li><a href="lymphoma.html" data-zh="淋巴瘤" data-en="Lymphoma">Lymphoma</a></li>
+      <li><a href="sarcoma.html" data-zh="肉瘤" data-en="Sarcoma">Sarcoma</a></li>
+      <li><a href="skin.html" data-zh="皮膚" data-en="Skin">Skin</a></li>
+      <li><a href="peds.html" data-zh="兒童" data-en="Peds">Peds</a></li>
+      <li><a href="palliative.html" data-zh="緩和" data-en="Palliative">Palliative</a></li>
+      <li><a href="benign.html" data-zh="良性" data-en="Benign">良性</a></li>
+      <li>
+        <a
+          href="radonc-quiz/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-zh="📝 考題"
+          data-en="📝 Quiz"
+        >
+          📝 Quiz
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <header
+    class="page-hero"
+    
+  >
+
+    <div class="step-badge">
+      🎯 TARGET DELINEATION
+    </div>
+
+    <h1
+      data-zh="靶區勾畫與 Target Delineation"
+      data-en="Target Delineation"
+    >
+      靶區勾畫與 Target Delineation
+    </h1>
+
+    <p class="subtitle" data-lang="zh">
+      GTV、CTV、ITV、PTV、OAR 與各癌別靶區勾畫：整合 ESTRO ACROP、NRG/RTOG、ILROG、ASTRO 與 eContour consensus 的臨床框架。
+    </p>
+
+    <p class="subtitle" data-lang="en">
+      GTV, CTV, ITV, PTV, OARs, and disease-site contouring: a consensus-aware framework integrating ESTRO ACROP, NRG/RTOG, ILROG, ASTRO, and eContour resources.
+    </p>
+
+  </header>
+
+  <main class="content-wrap">
+
+    
+    <section
+      id="section-1"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="總論：靶區勾畫不是畫影像，而是把臨床風險轉成幾何"
+        data-en="OVERVIEW: Turning Clinical Risk Into Geometry"
+      >
+        總論：靶區勾畫不是畫影像，而是把臨床風險轉成幾何
+      </div>
+
+      <h2
+        class=""
+        data-zh="靶區勾畫的核心邏輯"
+        data-en="Core logic of target delineation"
+      >
+        靶區勾畫的核心邏輯
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>Target delineation 的本質不是把 CT 或 MRI 上看得到的東西圈起來而已，而是把 <span class="highlight">肉眼疾病、顯微侵犯風險、解剖屏障、淋巴引流、器官移動與擺位不確定性</span> 轉換成可治療的幾何體積。</p>
+<p>臨床上應先決定治療目的、術前或術後、根治或緩和、是否有同步全身治療，再選擇對應的 consensus atlas。不同 consensus 的差異通常不是誰對誰錯，而是它們服務的情境不同：trial credentialing、日常臨床、術後瘢痕、MRI-based boost、質子治療或高度 conformal IMRT/SBRT。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>體積</th><th>定義</th><th>勾畫問題</th><th>常見錯誤</th></tr></thead><tbody><tr><td>GTV</td><td>影像、理學或內視鏡可見的 gross disease</td><td>哪個影像最可信？治療前還是誘導治療後？</td><td>把 atelectasis、術後血腫或發炎全當成腫瘤</td></tr><tr><td>CTV</td><td>GTV 加上顯微侵犯風險區</td><td>沿黏膜、筋膜、神經、血管或淋巴路徑延伸多少？</td><td>機械式 isotropic margin，忽略解剖屏障</td></tr><tr><td>ITV</td><td>內部器官移動範圍</td><td>呼吸、膀胱、直腸、胃腸充盈如何處理？</td><td>肺、肝、胰臟沒有 4DCT 或 motion strategy</td></tr><tr><td>PTV</td><td>CTV/ITV 加上 setup uncertainty</td><td>IGRT、固定、治療部位、線上調整能力如何影響 margin？</td><td>把 PTV 當成生物風險區，或用 PTV 決定 CTV</td></tr><tr><td>PRV/OAR</td><td>危及器官與其不確定性</td><td>serial organ 看 Dmax，parallel organ 看 mean/Vx</td><td>只 contour target，不同步審 OAR 命名與限制</td></tr></tbody></table></div>
+<div class="clinical-note">一句話記憶：<span class="highlight">GTV 是現在看得到的病，CTV 是你相信可能有的病，ITV/PTV 是你對移動與擺位不確定性的保險。</span></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>Target delineation is not simply tracing visible abnormalities. It converts gross disease, microscopic-risk pathways, anatomic barriers, lymphatic drainage, organ motion, and setup uncertainty into treatable geometry.</p>
+<p>Choose the consensus atlas according to intent, disease site, preoperative versus postoperative setting, imaging quality, systemic therapy, motion management, and trial requirements.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-2"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Consensus 地圖：不同指南如何使用"
+        data-en="CONSENSUS MAP: How to Use Different Guidelines"
+      >
+        Consensus 地圖：不同指南如何使用
+      </div>
+
+      <h2
+        class=""
+        data-zh="主要 consensus 與 atlas 的角色差異"
+        data-en="How consensus atlases differ"
+      >
+        主要 consensus 與 atlas 的角色差異
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>以下整理常用 consensus 的定位。實際治療仍應以院內 protocol、trial atlas、主治醫師判斷與最新版本為準。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>來源</th><th>最適合用途</th><th>特點</th><th>注意事項</th></tr></thead><tbody><tr><td>eContour guideline database</td><td>快速查找各癌別 consensus contouring references</td><td>彙整多癌別 published consensus，適合當入口</td><td>它是索引與教學平台，不取代原始 guideline</td></tr><tr><td>NRG/RTOG atlases</td><td>trial credentialing、乳癌/骨盆/婦癌/前列腺 nodal atlas</td><td>結構命名與邊界較具 trial reproducibility</td><td>有些舊 RTOG atlas 已被 updated NRG consensus 修正</td></tr><tr><td>ESTRO ACROP</td><td>歐洲 consensus，常見於 prostate、lung、breast reconstruction、skull base、GI nodal areas</td><td>重視 CT/MRI fusion、解剖邊界與現代技術</td><td>與 NRG/RTOG 邊界可能略不同，需確認採用版本</td></tr><tr><td>ILROG</td><td>淋巴瘤 ISRT/INRT/INRT-like thinking</td><td>以 pre-chemotherapy extent、PET/CT fusion 與 disease response 決定 volume</td><td>不是把整個 nodal region 全包；也不是單純 post-chemo residual</td></tr><tr><td>ASTRO clinical guidelines</td><td>決定是否放療、劑量、技術、時機與某些 target planning 原則</td><td>臨床決策權重高，常搭配 atlas 使用</td><td>多數 ASTRO guideline 不是逐片 contour atlas</td></tr></tbody></table></div>
+<p class="clinical-note">實務順序：先決定 guideline family，再開啟對應 atlas；不要把頭頸、婦癌、GI、GU 的 pelvic nodal 區域混用。</p>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>Consensus sources serve different roles. eContour is a high-yield index; NRG/RTOG atlases support trial reproducibility; ESTRO ACROP often provides contemporary anatomy-based guidance; ILROG defines lymphoma ISRT principles; ASTRO guidelines frame indications and technique.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-3"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="各癌別 contour checklist：從影像到 CTV"
+        data-en="DISEASE-SITE CHECKLISTS: From Imaging to CTV"
+      >
+        各癌別 contour checklist：從影像到 CTV
+      </div>
+
+      <h2
+        class=""
+        data-zh="不同癌症的靶區勾畫重點"
+        data-en="Disease-site contouring priorities"
+      >
+        不同癌症的靶區勾畫重點
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>癌別</th><th>建議參考 consensus</th><th>GTV/CTV 核心</th><th>常見 pitfall</th></tr></thead><tbody>
+<tr><td>CNS / GBM</td><td>EORTC 與 NRG/RTOG contouring paradigms；skull base 可參考 ESTRO ACROP</td><td>GTV 通常為 enhancing tumor/resection cavity；CTV 是否納入 T2/FLAIR edema、margin 大小與 boost 分層依 protocol</td><td>把所有 FLAIR 都等同高風險；忽略 surgical tract、術後 MRI 時點與腦室/鐮/顱骨屏障</td></tr>
+<tr><td>頭頸癌</td><td>International consensus for CTV-P；DAHANCA/EORTC/GORTEC/AIRO 等共同建議；nodal level atlas</td><td>區分 GTV、high-risk CTV、intermediate/low-risk nodal CTV；沿黏膜與深部侵犯路徑，不機械等距擴張</td><td>沒有把 primary subsite、midline crossing、ENE、神經周圍侵犯與手術床風險分層</td></tr>
+<tr><td>肺癌</td><td>ESTRO ACROP locally advanced NSCLC；4DCT/ITV principles</td><td>GTV 包 primary 與 involved nodes；motion 用 ITV 或 gated strategy；不常規 elective nodal irradiation</td><td>把 atelectasis 全包、沒融合 PET、沒處理呼吸移動；post-obstructive change 與 tumor 不分</td></tr>
+<tr><td>乳癌 / PMRT / RNI</td><td>RTOG/NRG breast atlas、ESTRO breast/RNI guidance、implant reconstruction ACROP</td><td>Whole breast/chest wall、scar/boost、axillary levels、SCV、IMN 依風險選擇；胸壁深界與重建物情境需一致</td><td>RTOG vs ESTRO nodal 邊界混用；IMN 不考慮心肺劑量；implant 前後方 CTV 不清</td></tr>
+<tr><td>食道/胃/胰/上 GI</td><td>ESTRO ACROP upper GI nodal areas、institutional atlas、trial protocol</td><td>GTVp/GTVn 需 PET/CT、EUS、內視鏡長度；CTV 沿食道長軸或相關淋巴區</td><td>只看 CT 不看 endoscopy/PET；胃腸充盈與呼吸移動未納入</td></tr>
+<tr><td>直腸/肛門</td><td>International rectal CTV consensus、RTOG anorectal atlas、ASTRO rectal guideline 作臨床決策</td><td>Rectal CTV 通常重視 mesorectum、presacral、internal iliac；anal 需依 T/N 納入 inguinal/external iliac 等區域</td><td>把 GU/GYN pelvic atlas 套到 anorectal；漏掉 mesorectum 或 sphincter/ischioanal fossa 風險</td></tr>
+<tr><td>攝護腺 / 前列腺床</td><td>ESTRO ACROP localized prostate 與 prostate bed；NRG pelvic nodal atlas</td><td>Intact prostate 依風險納入 proximal SV；post-op bed 不只 contour recurrence，要 contour entire prostate bed</td><td>膀胱/直腸狀態不一致；只圈 PSMA recurrence 而漏掉 salvage prostate bed</td></tr>
+<tr><td>婦癌</td><td>RTOG/NRG postoperative endometrial/cervix pelvic atlas、intact cervix IMRT consensus、IGABT GEC-ESTRO/ABS</td><td>骨盆 nodal CTV 依 vessel-based/anatomic borders；cervix EBRT 與 brachy HR-CTV/IR-CTV 概念需分開</td><td>把術後 vaginal cuff、parametrium、paravaginal tissue、common iliac 上界處理不一致</td></tr>
+<tr><td>淋巴瘤</td><td>ILROG ISRT guidelines、NCTN lymphoma target nomenclature</td><td>以 pre-chemo involved site 為基礎，融合 PET/CT；依 response 與解剖區域建立 ISRT</td><td>只圈殘留 PET；或回到 old extended-field RT；忽略 pre-chemo imaging position</td></tr>
+<tr><td>軟組織肉瘤</td><td>RTOG pre-op consensus、ASTRO STS guideline、最新 ESTRO/ASTRO STS guidance</td><td>術前通常以 MRI GTV 加縱向/徑向 CTV，受 fascial barriers 修正；術後需納入 surgical bed、scar/drain tract 風險</td><td>術後 anatomy 改變未融合 pre-op MRI；myxofibrosarcoma 等浸潤型 margin 不足</td></tr>
+<tr><td>兒童 / CSI</td><td>COG/clinical trial atlas、CSI technical consensus、質子中心 protocol</td><td>CSI 需涵蓋 cranial subarachnoid space、cribriform plate、thecal sac；boost 依腫瘤類型</td><td>cribriform plate undercoverage、spinal canal junction hot/cold spot、兒童椎體成長考量不足</td></tr>
+</tbody></table></div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>The checklist table summarizes contouring priorities by disease site: CNS, head and neck, lung, breast, GI, GU, gynecology, lymphoma, sarcoma, and pediatric CSI.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="互動 atlas 入口：用官方 CT case，看 axial contour 變化"
+        data-en="INTERACTIVE ATLAS LAUNCHER: Official Cases and Axial Contour Logic"
+      >
+        互動 atlas 入口：用官方 CT case，看 axial contour 變化
+      </div>
+
+      <h2
+        class=""
+        data-zh="先開官方 atlas，再用本頁核對 GTV / CTV / PTV / OAR"
+        data-en="Launch the official atlas, then audit GTV / CTV / PTV / OAR logic"
+      >
+        先開官方 atlas，再用本頁核對 GTV / CTV / PTV / OAR
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<div class="contour-widget" id="contour-widget">
+  <style>
+    .contour-widget{border:1px solid var(--c-border-light);border-radius:14px;background:#fff;box-shadow:var(--shadow-md);margin:20px 0;overflow:hidden}.contour-widget *{box-sizing:border-box}.atlas-source-panel{padding:16px;border-bottom:1px solid var(--c-border-light);background:#fbfaf6}.atlas-source-grid{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:10px}.atlas-link-card{display:block;border:1px solid var(--c-border-light);border-radius:10px;background:#fff;padding:12px;text-decoration:none;color:inherit}.atlas-link-card strong{display:block;color:var(--c-accent-dark);margin-bottom:4px}.atlas-link-card span{display:block;color:#5a6a66;font-size:.86rem;line-height:1.45}.contour-widget-bar{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:12px;align-items:end;padding:16px;background:linear-gradient(135deg,#f7fbf9,#eef5f2);border-bottom:1px solid var(--c-border-light)}.contour-widget label{display:block;font-weight:800;color:var(--c-accent-dark);font-size:.82rem;margin-bottom:6px}.contour-widget select{width:100%;border:1px solid var(--c-border);border-radius:8px;background:#fff;padding:9px 10px;font:inherit}.contour-atlas{display:block;padding:18px}.ct-panel{display:none}.contour-box{border:1px solid var(--c-border-light);border-radius:10px;background:#fbfaf6;padding:14px;margin-bottom:12px}.contour-box h3{font-size:1rem;margin:0 0 8px;color:var(--c-accent-dark)}.contour-box ul{padding-left:20px;margin:0}.contour-box li{margin:4px 0}.contour-consensus-note{border-left:4px solid var(--c-accent);background:#eef8f4;padding:10px 12px;border-radius:8px;color:#18322c}.target-chip-row{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 0}.target-chip{border-radius:999px;padding:4px 8px;font-size:.76rem;font-weight:800}.chip-gtv{background:#ffe1e1;color:#9b1c1c}.chip-ctv{background:#fff2ca;color:#7a4b00}.chip-ptv{background:#dcf7e5;color:#14572d}.chip-oar{background:#dfeaff;color:#194b91}.ct-hidden{display:none}.contour-disclaimer{font-size:.86rem;color:#596b65;margin:8px 0 0}@media(max-width:900px){.contour-widget-bar,.atlas-source-grid{grid-template-columns:1fr}}
+  </style>
+  <div class="atlas-source-panel">
+    <p>真正要看 CT sim axial slices 與 contour 變化，請優先打開官方 atlas。eContour 的核心做法是 scroll 3D CT、開關 Target/OAR/Anatomy structures，並疊合 PET/MRI；NRG/RTOG atlas 則常以 CT image series + structure contours 或 PDF atlas 提供。基於授權與再散布限制，本頁不直接複製官方 CT 影像，而是提供官方入口與本頁核對表。</p>
+    <div class="atlas-source-grid">
+      <a class="atlas-link-card" href="https://econtour.org/" target="_blank" rel="noopener"><strong>eContour interactive cases</strong><span>3D CT scroll、target/OAR/anatomy 開關、PET/MRI overlay。</span></a>
+      <a class="atlas-link-card" href="https://econtour.org/references" target="_blank" rel="noopener"><strong>eContour consensus index</strong><span>依癌別查 published consensus contouring guideline。</span></a>
+      <a class="atlas-link-card" href="https://www.nrgoncology.org/about-us/center-for-innovation-in-radiation-oncology/" target="_blank" rel="noopener"><strong>NRG / RTOG atlases</strong><span>官方 CT atlas、DICOM/structure sets、trial RT templates。</span></a>
+      <a class="atlas-link-card" href="https://www.ilrog.org/guidelines" target="_blank" rel="noopener"><strong>ILROG lymphoma</strong><span>ISRT/INRT 概念、pre-chemo PET/CT fusion 與 lymphoma volume。</span></a>
+      <a class="atlas-link-card" href="https://www.astro.org/provider-resources/guidelines/consensus-documents" target="_blank" rel="noopener"><strong>ASTRO consensus</strong><span>正常組織 contouring、臨床 guideline 與品質文件。</span></a>
+      <a class="atlas-link-card" href="https://www.aapm.org/pubs/reports/detail.asp?docid=102" target="_blank" rel="noopener"><strong>AAPM TG-101</strong><span>SBRT/SABR OAR constraints 來源之一。</span></a>
+    </div>
+  </div>
+  <div class="contour-widget-bar">
+    <div><label for="contourSite">癌症類別</label><select id="contourSite"><option value="hn">頭頸癌</option><option value="lung">肺癌</option><option value="breast">乳癌/RNI</option><option value="rectal">直腸/肛門</option><option value="prostate">攝護腺/前列腺床</option><option value="gyn">婦癌</option><option value="lymphoma">淋巴瘤</option><option value="sarcoma">軟組織肉瘤</option><option value="cns">CNS/GBM</option></select></div>
+    <div><label for="contourConsensus">Consensus / atlas</label><select id="contourConsensus"></select></div>
+    <div><label for="contourSlice">CT sim 切面</label><select id="contourSlice"></select></div>
+  </div>
+  <div class="contour-atlas">
+    <div class="ct-panel">
+      <div class="ct-panel-head"><h3 id="ctTitle">CT sim teaching atlas</h3><span class="ct-panel-note">schematic axial CT</span></div>
+      <div class="ct-stage"><svg id="ctCanvas" viewBox="0 0 420 360" role="img" aria-label="CT simulation contour teaching schematic"></svg></div>
+      <div class="ct-layer-controls">
+        <label><input type="checkbox" data-layer-toggle="gtv" checked> GTV</label>
+        <label><input type="checkbox" data-layer-toggle="ctv" checked> CTV</label>
+        <label><input type="checkbox" data-layer-toggle="ptv" checked> PTV</label>
+        <label><input type="checkbox" data-layer-toggle="oar" checked> OAR</label>
+      </div>
+      <p class="contour-disclaimer">此圖是 CT sim 教學示意，用來說明「該畫哪些區域」與相對解剖關係；臨床 contour 必須回到病人影像、MRI/PET fusion、手術/pathology 與正式 atlas。</p>
+    </div>
+    <div>
+      <div class="contour-box"><h3>本切面要畫什麼</h3><ul id="contourChecklist"></ul><div class="target-chip-row" id="targetChips"></div></div>
+      <div class="contour-box"><h3>Consensus 注意事項</h3><div class="contour-consensus-note" id="consensusNote"></div></div>
+      <div class="contour-box"><h3>常見錯誤</h3><ul id="contourPitfalls"></ul></div>
+    </div>
+  </div>
+  <script>
+    (function(){var root=document.getElementById('contour-widget'); if(!root||root.dataset.ready==='1')return; root.dataset.ready='1';
+      var NS='http://www.w3.org/2000/svg';
+      var data={
+        hn:{title:'頭頸癌：primary + nodal CTV',cons:['International HN CTV-P consensus','DAHANCA/EORTC/GORTEC/AIRO nodal levels','術後依 op/pathology 修正'],notes:['以 primary subsite、黏膜延伸、PNI/ENE 與 nodal level 決定 high/intermediate/low-risk CTV；不要用單純等距 margin 取代解剖路徑。','Nodal level atlas 是 elective CTV 的骨架；口咽、鼻咽、喉/下咽、術後情境不能混用。','術後需把手術床、positive/close margin、ENE、flap 與 drain/scar 資訊整合進 CTV。'],pit:['漏掉 retropharyngeal 或 level II/III 交界','midline crossing 只靠肉眼判斷，未看黏膜/肌肉侵犯','術後未讀 op note/pathology'],slices:[{label:'口咽中央切面',items:['GTVp：影像/內視鏡可見 primary','CTV-HR：GTV 外擴但依 fascia、骨、氣腔修正','CTV-N：依 nodal level atlas 決定 elective neck','OAR：脊髓、腮腺、口腔、下頷骨'],targets:[['gtv','ellipse',218,165,25,18,'GTVp'],['ctv','ellipse',218,165,55,38,'CTV-HR'],['ptv','ellipse',218,165,70,52,'PTV'],['oar','ellipse',210,72,22,14,'Cord'],['oar','ellipse',120,145,28,22,'Parotid'],['oar','ellipse',300,145,28,22,'Parotid']]},{label:'頸部淋巴切面',items:['GTVn：病理或 PET/CT involved node','CTV-N high/intermediate：ENE 或 bulky node 周圍風險','Elective nodal CTV：依 level II-IV/V/SCV 風險選擇','OAR：脊髓、喉、咽縮肌、腮腺'],targets:[['gtv','ellipse',140,190,23,18,'GTVn'],['ctv','ellipse',140,190,55,42,'CTV-N'],['ctv','ellipse',280,195,46,38,'Elective'],['ptv','ellipse',210,195,160,75,'PTV'],['oar','ellipse',210,84,20,14,'Cord'],['oar','ellipse',210,168,35,24,'Larynx']]}]},
+        lung:{title:'肺癌：4DCT motion + involved nodes',cons:['ESTRO ACROP locally advanced NSCLC','NRG lung atlases / trial protocol','SBRT central/ultracentral institutional protocol'],notes:['以 PET/CT、diagnostic CT 與 4DCT 分辨 tumor、atelectasis 與 motion；通常不做 elective nodal irradiation。','Trial atlas 用於結構命名與 nodal station reproducibility；motion strategy 需由 4DCT、gating 或 breath hold 決定。','Central/ultracentral SBRT 必須同步審 bronchial tree、esophagus、great vessels 與 cord。'],pit:['atelectasis 全包進 GTV','沒有 4DCT 卻直接小 PTV','PET avid node 未與 EBUS/pathology 對照'],slices:[{label:'肺部腫瘤切面',items:['GTVp：primary tumor，避開 atelectasis/阻塞性肺炎','ITV/CTV：依呼吸移動與 microscopic risk 決定','PTV：依 IGRT 與 motion strategy 加 margin','OAR：雙肺、心臟、食道、脊髓、近端支氣管樹'],targets:[['gtv','ellipse',286,154,23,20,'GTVp'],['ctv','ellipse',286,154,37,31,'ITV/CTV'],['ptv','ellipse',286,154,52,42,'PTV'],['oar','ellipse',136,176,62,86,'Lung'],['oar','ellipse',284,176,62,86,'Lung'],['oar','ellipse',210,221,36,34,'Heart'],['oar','ellipse',210,102,16,13,'Cord']]},{label:'縱膈淋巴切面',items:['GTVn：involved mediastinal/hilar node','CTVn：依 nodal station 與 extracapsular risk','不常規包全部 elective mediastinum','OAR：食道、心臟、氣管/主支氣管'],targets:[['gtv','ellipse',225,159,22,18,'GTVn'],['ctv','ellipse',225,159,40,31,'CTVn'],['ptv','ellipse',225,159,55,44,'PTV'],['oar','ellipse',210,203,45,38,'Heart'],['oar','rect',198,91,24,96,'Esoph'],['oar','rect',182,118,56,24,'Airway']]}]},
+        breast:{title:'乳癌/RNI：胸壁、乳房與區域淋巴',cons:['NRG/RTOG breast atlas','ESTRO breast/RNI guidance','ESTRO ACROP implant reconstruction'],notes:['先決定 whole breast/chest wall、boost、RNI 與 IMN 適應症，再選定 NRG/RTOG 或 ESTRO 邊界並保持一致。','RTOG/NRG 與 ESTRO 在 axilla/SCV/IMN 邊界可不同；用於 trial 時以 trial atlas 為準。','重建/implant 後胸壁 CTV 的前後界與 implant capsule 關係要特別確認。'],pit:['混用 ESTRO 與 RTOG nodal border','IMN coverage 未同時看心肺劑量','boost 沒有用 clips/seroma/pathology 定位'],slices:[{label:'胸壁/乳房切面',items:['CTV-breast/chest wall：依術式、胸壁深界與皮膚風險','Boost CTV：seroma、clips、scar、pathology 綜合','PTV：避開超出皮膚過多但保留 setup margin','OAR：心臟、同側肺、對側乳房'],targets:[['ctv','ellipse',286,162,58,34,'Breast CTV'],['gtv','ellipse',302,152,18,12,'Boost'],['ptv','ellipse',286,162,72,45,'PTV'],['oar','ellipse',143,176,62,82,'Lung'],['oar','ellipse',210,225,35,32,'Heart']]},{label:'RNI/IMN 切面',items:['Axilla I-III/SCV：依 nodal risk 納入','IMN：依內乳鏈風險與心肺限制取捨','CTV 邊界依選用 atlas，不混用','OAR：臂叢、肺、心臟'],targets:[['ctv','ellipse',295,101,34,25,'SCV'],['ctv','ellipse',305,143,38,30,'Axilla'],['ctv','ellipse',230,151,18,46,'IMN'],['ptv','ellipse',284,138,82,68,'PTV'],['oar','ellipse',145,176,62,82,'Lung'],['oar','ellipse',210,225,36,33,'Heart']]}]},
+        rectal:{title:'直腸/肛門：mesorectum 與 pelvic nodal risk',cons:['International rectal CTV consensus','RTOG anorectal atlas','ASTRO rectal guideline + trial protocol'],notes:['Rectal cancer 以 MRI 定義 T stage、MRF、EMVI、nodes；CTV 以 mesorectum、presacral、internal iliac 為骨架。','Anal cancer 不是 rectal atlas 的小改版，依 T/N 與 anal canal/inguinal drainage 決定 inguinal/external iliac。','低位腫瘤需評估 sphincter complex、ischioanal fossa 與 inguinal risk。'],pit:['把 GU/GYN pelvic atlas 套到 anorectal','漏掉 mesorectum/presacral space','低位肛管癌未評估 inguinal CTV'],slices:[{label:'直腸腫瘤/Mesorectum',items:['GTV：MRI 可見 primary 與 involved nodes','CTV：mesorectum、presacral、internal iliac 依風險','低位病灶看 sphincter/ischioanal fossa','OAR：膀胱、小腸、股骨頭、肛門括約肌'],targets:[['gtv','ellipse',210,205,22,16,'GTV'],['ctv','ellipse',210,196,72,55,'Meso/CTV'],['ptv','ellipse',210,196,88,69,'PTV'],['oar','ellipse',210,132,45,28,'Bladder'],['oar','ellipse',126,210,24,24,'Femur'],['oar','ellipse',294,210,24,24,'Femur']]},{label:'骨盆淋巴切面',items:['Internal iliac/presacral：多數 rectal CTV 核心','External iliac：前方器官侵犯或 anal cancer 情境','Inguinal：anal cancer 或低位特定風險','OAR：小腸袋、膀胱、股骨頭'],targets:[['ctv','ellipse',165,185,34,58,'IIA'],['ctv','ellipse',255,185,34,58,'IIA'],['ctv','ellipse',210,206,48,36,'Presacral'],['ptv','ellipse',210,190,118,78,'PTV'],['oar','ellipse',210,126,48,30,'Bladder']]}]},
+        prostate:{title:'攝護腺/前列腺床：intact vs post-op',cons:['ESTRO ACROP localized prostate','ESTRO ACROP prostate bed','NRG/RTOG pelvic nodal atlas'],notes:['Intact prostate 依風險納入 proximal seminal vesicles；post-op salvage 通常需 contour prostate bed，而不只 PSMA/PET visible recurrence。','Prostate bed consensus 著重 vesicourethral anastomosis、bladder neck、seminal vesicle bed 與 rectal/anterior border。','Pelvic nodal irradiation 使用 vessel-based nodal atlas，且要有穩定膀胱/直腸準備。'],pit:['salvage 只圈 PSMA hot spot','SV coverage 與風險分層不一致','膀胱直腸充盈不一致造成 miss'],slices:[{label:'Intact prostate',items:['GTV/CTV：通常整個 prostate；高風險可納入 SV','CTV-SV：proximal SV 依 NCCN/風險與 protocol','PTV：依 IGRT、fiducial、rectal spacer 調整','OAR：rectum、bladder、urethra、femoral heads'],targets:[['ctv','ellipse',210,207,42,30,'Prostate'],['ctv','ellipse',210,184,54,20,'SV'],['ptv','ellipse',210,202,60,48,'PTV'],['oar','ellipse',210,127,50,32,'Bladder'],['oar','ellipse',210,246,38,24,'Rectum']]},{label:'Post-op prostate bed',items:['CTV-bed：vesicourethral anastomosis、bladder neck、SV bed','Visible recurrence：可 boost，但不取代 entire bed','Pelvic nodes：依風險與 NRG atlas','OAR：rectum、bladder、bowel bag'],targets:[['ctv','ellipse',210,199,55,36,'Bed CTV'],['gtv','ellipse',228,196,14,10,'Boost'],['ptv','ellipse',210,199,72,51,'PTV'],['oar','ellipse',210,127,50,32,'Bladder'],['oar','ellipse',210,246,38,24,'Rectum']]}]},
+        gyn:{title:'婦癌：骨盆 atlas + cervix brachy 思維分開',cons:['NRG/RTOG postoperative cervix/endometrium atlas','Intact cervix IMRT consensus','GEC-ESTRO/ABS IGABT concepts'],notes:['術後 cervix/endometrium 可用 updated NRG/RTOG pelvic atlas；intact cervix EBRT 與 brachy HR-CTV/IR-CTV 是不同框架。','骨盆 nodal CTV 多以 vessels 與解剖邊界定義；vaginal cuff、parametrium、paravaginal tissue 依 op/path 修正。','MRI/PET fusion、膀胱/直腸充盈與 applicator anatomy 會大幅影響 cervix contour。'],pit:['把 EBRT CTV 與 brachy HR-CTV 混在一起','術後未納入 cuff/parametrial risk','common iliac 上界或 external iliac border 不一致'],slices:[{label:'術後骨盆/Cuff',items:['CTV-cuff：vaginal cuff/paravaginal tissue 依 pathology','Parametrium/uterine bed：依術式與風險','Nodal CTV：external/internal/common iliac 依 atlas','OAR：膀胱、直腸、小腸、股骨頭'],targets:[['ctv','ellipse',210,196,60,38,'Cuff CTV'],['ctv','ellipse',166,178,28,54,'Nodal'],['ctv','ellipse',254,178,28,54,'Nodal'],['ptv','ellipse',210,190,115,75,'PTV'],['oar','ellipse',210,126,48,30,'Bladder'],['oar','ellipse',210,246,38,24,'Rectum']]},{label:'Intact cervix',items:['GTV：cervix gross disease on MRI/PET/clinical exam','CTV：cervix、uterus、parametrium、upper vagina 依 protocol','Nodes：pelvic nodal CTV 依 stage/nodal risk','Brachy HR-CTV/IR-CTV 需另依 applicator MRI 定義'],targets:[['gtv','ellipse',210,197,20,16,'GTV'],['ctv','ellipse',210,184,67,55,'CTV'],['ptv','ellipse',210,184,84,70,'PTV'],['oar','ellipse',210,125,48,30,'Bladder'],['oar','ellipse',210,244,38,24,'Rectum']]}]},
+        lymphoma:{title:'淋巴瘤：pre-chemo involved site RT',cons:['ILROG ISRT adult lymphomas','ILROG imaging guidelines','NCTN lymphoma nomenclature'],notes:['ISRT 以 pre-treatment disease extent 為核心，融合 pre-chemo PET/CT、diagnostic CT 與治療時 CT sim。','CTV/ISRT 不是 post-chemo residual 的外擴，也不是 old extended-field；需補償影像姿勢、呼吸與融合不確定性。','不同 histology、stage、bulk、response 與 systemic therapy 會改變 margin 與是否 treat residual only。'],pit:['只圈治療後殘留 PET','回到過大的 extended-field RT','pre-chemo 影像姿勢差異沒有補償'],slices:[{label:'縱膈 ISRT',items:['Pre-chemo GTV：原始 involved nodes 的空間範圍','Post-chemo residual：可協助 boost/確認 response','CTV/ISRT：依原始範圍、解剖區與 fusion uncertainty','OAR：心臟、肺、食道、乳房、脊髓'],targets:[['gtv','ellipse',210,145,48,31,'Pre-GTV'],['ctv','ellipse',210,151,75,50,'ISRT'],['ptv','ellipse',210,151,94,66,'PTV'],['oar','ellipse',140,177,62,84,'Lung'],['oar','ellipse',280,177,62,84,'Lung'],['oar','ellipse',210,225,38,35,'Heart']]},{label:'頸部 ISRT',items:['以診斷時 involved nodal chain 為基礎','CTV 沿相同 anatomic compartment，不包全頸','視 response 與 histology 決定 residual boost','OAR：腮腺、甲狀腺、脊髓、喉'],targets:[['gtv','ellipse',142,188,25,20,'Pre-GTV'],['ctv','ellipse',142,188,54,43,'ISRT'],['ptv','ellipse',142,188,70,58,'PTV'],['oar','ellipse',210,84,20,14,'Cord'],['oar','ellipse',210,170,32,24,'Larynx']]}]},
+        sarcoma:{title:'軟組織肉瘤：MRI extent + compartment barriers',cons:['RTOG 0630 pre-op STS contouring','ASTRO soft tissue sarcoma guideline','ESTRO/ASTRO STS guidance + institutional protocol'],notes:['術前以 MRI-defined GTV、edema 與 compartment anatomy 為核心；CTV margin 受 fascia、bone、skin 與 neurovascular bundle 修正。','術後 case 需要融合 pre-op MRI、op note、scar/drain tract 與 surgical bed；不要只看術後 CT。','Myxofibrosarcoma、epithelioid sarcoma 等浸潤型 histology margin 需更小心。'],pit:['術後才看 CT 低估原始 extent','機械外擴跨過明確 fascial barrier','忘記 scar/drain tract 或 biopsy tract'],slices:[{label:'肢體術前切面',items:['GTV：MRI T1/T2/STIR 可見 tumor 與高風險 edema','CTV：縱向/徑向 margin，受 fascia/bone 修正','PTV：依固定與 IGRT margin','OAR：bone、skin、neurovascular bundle、joint'],targets:[['gtv','ellipse',250,168,32,23,'GTV'],['ctv','ellipse',250,168,66,42,'CTV'],['ptv','ellipse',250,168,80,55,'PTV'],['oar','ellipse',210,178,32,32,'Bone'],['oar','ellipse',166,160,18,14,'NV']]},{label:'術後 surgical bed',items:['CTV-bed：pre-op tumor extent + operative bed','納入 scar/drain/biopsy tract 高風險路徑','依 margin、grade、histology 決定 boost','OAR：bone、skin、joint、neurovascular bundle'],targets:[['ctv','ellipse',248,169,78,47,'Bed CTV'],['gtv','rect',290,151,54,8,'Scar'],['ptv','ellipse',248,169,94,62,'PTV'],['oar','ellipse',210,178,32,32,'Bone'],['oar','ellipse',166,160,18,14,'NV']]}]},
+        cns:{title:'CNS/GBM：EORTC vs NRG/RTOG paradigms',cons:['EORTC/Stupp GBM target paradigm','NRG/RTOG GBM target paradigm','Skull base/brainstem disease-specific atlas'],notes:['EORTC 與 NRG/RTOG 對 T2/FLAIR edema 與 margin 處理不同；需先確認 protocol family，再畫 GTV/CTV。','術前 MRI、術後 24-72 小時 MRI、T1 contrast 與 FLAIR 都要看；surgical tract、cavity、enhancement 與 edema 不可混為一談。','Falx、tentorium、ventricle、skull 等 anatomical barriers 可修正 CTV。'],pit:['FLAIR 全包或全不包都未依 protocol','把術後血液/ischemia 當 tumor','未處理 surgical tract 或 cavity evolution'],slices:[{label:'GBM cavity/enhancement',items:['GTV：resection cavity + residual enhancement','CTV：依 EORTC/NRG 決定 margin 與是否納入 FLAIR','PTV：依 mask/IGRT 與機構 margin','OAR：optic pathway、brainstem、cochlea、normal brain'],targets:[['gtv','ellipse',252,155,28,22,'GTV'],['ctv','ellipse',252,155,68,55,'CTV'],['ptv','ellipse',252,155,82,68,'PTV'],['oar','ellipse',210,245,36,28,'Brainstem'],['oar','ellipse',185,119,16,10,'Optic']]},{label:'FLAIR / edema risk',items:['FLAIR edema：是否納入取決於 chosen protocol','避開解剖屏障，但沿白質路徑思考 microscopic spread','Boost phase 可與 initial phase 分開','OAR：optic structures、brainstem、hippocampus 視病灶'],targets:[['gtv','ellipse',250,155,25,19,'Enh'],['ctv','ellipse',247,158,92,70,'FLAIR/CTV'],['ptv','ellipse',247,158,108,84,'PTV'],['oar','ellipse',210,245,36,28,'Brainstem'],['oar','ellipse',185,119,16,10,'Optic']]}]}
+      };
+      function make(type, attrs, cls){var el=document.createElementNS(NS,type); Object.keys(attrs).forEach(function(k){el.setAttribute(k,attrs[k]);}); if(cls)el.setAttribute('class',cls); return el;}
+      function shape(svg, item, cls){var layer=item[0], type=item[1], label=item[item.length-1], el, x, y; if(type==='ellipse'){el=make('ellipse',{cx:item[2],cy:item[3],rx:item[4],ry:item[5]},cls+' layer-'+layer); x=item[2]; y=item[3];} else {el=make('rect',{x:item[2],y:item[3],width:item[4],height:item[5],rx:5},cls+' layer-'+layer); x=item[2]+item[4]/2; y=item[3]+item[5]/2;} svg.appendChild(el); var t=make('text',{x:x,y:y+4,'text-anchor':'middle'},'ct-target-label layer-'+layer); t.textContent=label; svg.appendChild(t);}
+      function base(svg, site){svg.innerHTML=''; svg.appendChild(make('rect',{x:0,y:0,width:420,height:360,fill:'transparent'},'')); if(site==='cns'){svg.appendChild(make('ellipse',{cx:210,cy:175,rx:128,ry:142},'ct-body')); svg.appendChild(make('ellipse',{cx:210,cy:175,rx:102,ry:116},'ct-organ')); svg.appendChild(make('ellipse',{cx:210,cy:245,rx:36,ry:28},'ct-bone'));} else if(site==='sarcoma'){svg.appendChild(make('ellipse',{cx:210,cy:180,rx:118,ry:82},'ct-body')); svg.appendChild(make('ellipse',{cx:210,cy:178,rx:32,ry:32},'ct-bone')); svg.appendChild(make('ellipse',{cx:255,cy:171,rx:76,ry:49},'ct-organ'));} else {svg.appendChild(make('ellipse',{cx:210,cy:180,rx:150,ry:125},'ct-body')); svg.appendChild(make('ellipse',{cx:210,cy:86,rx:22,ry:16},'ct-bone')); svg.appendChild(make('ellipse',{cx:132,cy:178,rx:52,ry:76},'ct-air')); svg.appendChild(make('ellipse',{cx:288,cy:178,rx:52,ry:76},'ct-air')); if(['rectal','prostate','gyn'].indexOf(site)>=0){svg.innerHTML=''; svg.appendChild(make('ellipse',{cx:210,cy:184,rx:146,ry:118},'ct-body')); svg.appendChild(make('ellipse',{cx:126,cy:210,rx:25,ry:25},'ct-bone')); svg.appendChild(make('ellipse',{cx:294,cy:210,rx:25,ry:25},'ct-bone')); svg.appendChild(make('ellipse',{cx:210,cy:128,rx:48,ry:31},'ct-organ')); svg.appendChild(make('ellipse',{cx:210,cy:246,rx:40,ry:25},'ct-organ'));}}}
+      function text(svg,x,y,s,cls){var t=make('text',{x:x,y:y,'text-anchor':'middle'},cls||'ct-label'); t.textContent=s; svg.appendChild(t);}
+      var siteSel=root.querySelector('#contourSite'), consSel=root.querySelector('#contourConsensus'), sliceSel=root.querySelector('#contourSlice'), svg=root.querySelector('#ctCanvas'), list=root.querySelector('#contourChecklist'), pit=root.querySelector('#contourPitfalls'), note=root.querySelector('#consensusNote'), title=root.querySelector('#ctTitle'), chips=root.querySelector('#targetChips');
+      function fillSelect(sel, arr){sel.innerHTML=arr.map(function(v,i){return '<option value="'+i+'">'+v+'</option>';}).join('');}
+      function syncSite(){var d=data[siteSel.value]; fillSelect(consSel,d.cons); fillSelect(sliceSel,d.slices.map(function(s){return s.label;})); render();}
+      function render(){var key=siteSel.value, d=data[key], s=d.slices[Number(sliceSel.value)||0]; title.textContent=d.title+' - '+s.label; base(svg,key); text(svg,210,30,s.label,'ct-label'); s.targets.forEach(function(item){var cls={gtv:'ct-gtv',ctv:'ct-ctv',ptv:'ct-ptv',oar:'ct-oar'}[item[0]]; shape(svg,item,cls);}); list.innerHTML=s.items.map(function(v){return '<li>'+v+'</li>';}).join(''); pit.innerHTML=d.pit.map(function(v){return '<li>'+v+'</li>';}).join(''); note.textContent=d.notes[Number(consSel.value)||0]; chips.innerHTML=['gtv','ctv','ptv','oar'].map(function(k){return '<span class="target-chip chip-'+k+'">'+k.toUpperCase()+'</span>';}).join(''); updateLayers();}
+      function updateLayers(){root.querySelectorAll('[data-layer-toggle]').forEach(function(cb){var layer=cb.getAttribute('data-layer-toggle'); svg.querySelectorAll('.layer-'+layer).forEach(function(el){el.classList.toggle('ct-hidden',!cb.checked);});});}
+      siteSel.addEventListener('change',syncSite); consSel.addEventListener('change',render); sliceSel.addEventListener('change',render); root.querySelectorAll('[data-layer-toggle]').forEach(function(cb){cb.addEventListener('change',updateLayers);}); syncSite();
+    })();
+  </script>
+</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>The interactive checklist allows quick review of site-specific contouring steps and common consensus pitfalls.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-5"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="主要癌別：GTV / CTV / PTV 與 constraints 實務框架"
+        data-en="MAJOR DISEASE SITES: GTV / CTV / PTV and Constraint Framework"
+      >
+        主要癌別：GTV / CTV / PTV 與 constraints 實務框架
+      </div>
+
+      <h2
+        class=""
+        data-zh="實際 contour 時每一層要畫什麼，constraint 怎麼限制"
+        data-en="What to contour and how to think about constraints"
+      >
+        實際 contour 時每一層要畫什麼，constraint 怎麼限制
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>以下是教學用框架，不是單一處方。真正臨床計畫必須依照分期、術前/術後、劑量分割、同步治療、技術（3DCRT/IMRT/VMAT/SBRT/proton/brachy）、院內 protocol 與 trial constraints 修正。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>癌別</th><th>GTV 畫什麼</th><th>CTV 畫什麼</th><th>PTV / ITV</th><th>Constraints 核心</th></tr></thead><tbody>
+<tr><td>CNS / GBM</td><td>術前 MRI、術後 24-72 小時 T1 contrast；resection cavity、residual enhancement；依 protocol 判斷 FLAIR 是否屬高風險</td><td>EORTC 常較不主張大範圍納入 FLAIR；NRG/RTOG paradigms 可有 initial/boost phase 與 edema/margin 差異；CTV 可依 falx、tentorium、ventricle、skull 修正</td><td>依 mask、IGRT 與機構 margin；SRS/SRT 通常較小，fractionated brain RT 可略大</td><td>Optic nerves/chiasm、brainstem、cochlea、lens、normal brain；SRS/SBRT 查 TG-101/HyTEC，常規分割查 QUANTEC 與 protocol</td></tr>
+<tr><td>頭頸癌</td><td>GTVp 來自 endoscopy、MRI/CT/PET 與理學；GTVn 為影像或病理 involved nodes，ENE 需標記</td><td>CTV-HR 包 gross disease 周圍高風險黏膜/深部空間；CTV-IR/LR 依 primary subsite 與 nodal level atlas 選 elective neck；術後看 margin、ENE、PNI、flap、手術床</td><td>依 mask、每日 IGRT、adaptive policy；避免把 PTV 回推成 CTV</td><td>Spinal cord/brainstem PRV、parotid/submandibular、oral cavity、pharyngeal constrictors、larynx、mandible、cochlea、optic pathway；prioritize serial OAR Dmax/PRV，再最佳化 salivary/swallowing dose</td></tr>
+<tr><td>肺癌</td><td>GTVp 用 CT/PET 區分 tumor、atelectasis、post-obstructive change；GTVn 為 involved hilar/mediastinal nodes</td><td>一般不做 elective nodal irradiation；CTV 包 microscopic extension 與 involved nodal station，依 histology/stage/protocol</td><td>4DCT 建 ITV，或用 gating/breath hold/tracking；SBRT PTV 依 motion 與 image guidance</td><td>Total lung V20/mean lung dose、heart mean/Vx、esophagus Dmax/mean、spinal cord/PRV、proximal bronchial tree/great vessels；central/ultracentral SBRT 必須用 SBRT-specific constraints</td></tr>
+<tr><td>乳癌 / RNI</td><td>術後通常無 GTV；boost GTV/CTV 依 clips、seroma、scar、pathology；gross nodal disease 另標</td><td>Whole breast 或 chest wall；RNI 依風險納入 axilla I-III、SCV、IMN；重建/implant 情境依 ESTRO ACROP/NRG 調整胸壁深界</td><td>Breast/chest wall PTV 需處理 skin flash、呼吸與擺位；DIBH 或 proton 可用於降低心肺劑量</td><td>Ipsilateral lung V20/mean、heart mean/V25 或 LAD dose、contralateral breast/lung、brachial plexus；左乳優先評估 DIBH</td></tr>
+<tr><td>直腸 / 肛門</td><td>Rectal GTV 以 MRI primary、MRF/EMVI、involved nodes；anal GTV 以 primary、inguinal/pelvic nodes 與 PET/clinical exam</td><td>Rectal：mesorectum、presacral、internal iliac，依低位/前方侵犯加 ischioanal/external iliac；Anal：pelvic + inguinal 依 RTOG anorectal atlas</td><td>膀胱/腸道準備影響小腸與 mesorectum；IMRT/VMAT PTV 依 setup 與 bowel motion</td><td>Small bowel bag V45/V50、bladder、femoral heads、external genitalia、skin/perineum；anal cancer 同時注意 bone marrow 與 genital dose</td></tr>
+<tr><td>攝護腺 / 前列腺床</td><td>Intact prostate 通常整腺為 CTV 而非只畫 MRI lesion；gross intraprostatic lesion 可 boost；post-op visible recurrence 可 boost</td><td>Intact：prostate ± proximal SV 依風險；post-op：prostate bed 包 vesicourethral anastomosis、bladder neck、SV bed；pelvic nodes 依 NRG/RTOG atlas</td><td>每日 IGRT/fiducial/MR-guidance 可縮小 margin；膀胱與直腸 preparation 必須一致</td><td>Rectum V70/V75、bladder V65/V70、bowel、femoral heads、penile bulb/urethra；hypofractionation/SBRT 不能直接套常規 constraints</td></tr>
+<tr><td>婦癌</td><td>Intact cervix GTV 來自 MRI/PET/clinical exam；術後通常無 GTV，除非 gross recurrence；brachy 另畫 HR-CTV/IR-CTV</td><td>術後 cervix/endometrium：vaginal cuff、paravaginal/parametrial tissue、pelvic nodes；intact cervix EBRT 包 cervix/uterus/parametrium/upper vagina 與 nodal CTV</td><td>膀胱/直腸充盈會讓 uterus/cervix 移動；必要時用 ITV 或 adaptive；brachy 不用 EBRT PTV 邏輯</td><td>Small bowel bag、rectum、bladder、sigmoid、femoral heads、bone marrow；brachy 用 D2cc/D0.1cc 等 DVH 指標</td></tr>
+<tr><td>淋巴瘤</td><td>Pre-chemo PET/CT 上原始 involved nodes/extranodal disease；post-chemo residual 可協助 boost 或 response 判讀</td><td>ILROG ISRT：以 pre-treatment extent 為核心，依 response、histology、anatomic compartment 與 fusion uncertainty 建 CTV</td><td>PTV 補償 CT sim 與診斷影像姿勢差、呼吸與 setup；不回到 extended-field RT</td><td>依部位限制 heart/lung/breast/thyroid/salivary/kidney/bowel/gonads；年輕病人要特別重視 secondary cancer 與 fertility</td></tr>
+<tr><td>軟組織肉瘤</td><td>術前 MRI 上 tumor、edema、neurovascular/compartment 關係；術後需回看 pre-op MRI 與 surgical bed</td><td>術前 CTV 依 longitudinal/radial margin，受 fascia、bone、skin 修正；術後納入 surgical bed、scar、drain/biopsy tract 與高風險 margin</td><td>肢體固定與 daily IGRT 決定 PTV；不可因保 OAR 跨越 tumor bed 造成 geographic miss</td><td>Bone circumference、joint、skin strip、neurovascular bundle、bowel/kidney/liver 依部位；術前 RT 注意 wound complication，術後 RT 注意 fibrosis/edema</td></tr>
+<tr><td>兒癌 / CSI</td><td>依病種：primary bed/residual disease、metastatic nodules；CSI 不是單一 GTV，而是 craniospinal subarachnoid space</td><td>CSI 包全腦 meninges、cribriform plate、thecal sac 至 S1-S2/nerve roots；boost 依 medulloblastoma、germinoma、ependymoma 等不同</td><td>長靶區需處理 junction、成長中椎體、仰臥固定；proton 常用於降低 integral dose</td><td>Lens、cochlea、thyroid、heart、lung、kidney、bowel、gonads、vertebral bodies、growth plates；兒童 constraints 應回到 COG/proton center protocol</td></tr>
+</tbody></table></div>
+<div class="clinical-note"><strong>Constraint 原則：</strong>常規分割不要直接套 SBRT constraints；SBRT/SRS 需查 TG-101、HyTEC 或 trial protocol。Serial OAR（脊髓、brainstem、optic pathway、bowel point dose）優先看 Dmax / D0.03cc / D0.1cc；parallel OAR（lung、liver、kidney、parotid）優先看 mean dose 與 Vx。所有 constraints 都要配合處方劑量、fractionation、prior RT、同步藥物與臨床取捨。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>This table summarizes what to contour for major disease sites and how to frame OAR constraints. Use the disease-specific atlas, prescription, fractionation, prior radiation history, and trial protocol for clinical plans.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-6"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="Treatment planning：從 CT simulation 到 plan approval"
+        data-en="TREATMENT PLANNING: From CT Simulation to Plan Approval"
+      >
+        Treatment planning：從 CT simulation 到 plan approval
+      </div>
+
+      <h2
+        class=""
+        data-zh="現代放射治療 planning 的標準流程、概念與邏輯"
+        data-en="A standard modern radiotherapy planning workflow"
+      >
+        現代放射治療 planning 的標準流程、概念與邏輯
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>Treatment planning 的核心不是只做出一個漂亮的 dose distribution，而是把 <span class="highlight">臨床目標、幾何靶區、器官風險、機器限制、影像不確定性與病人安全</span> 放進同一個可驗證流程。最標準的思路是：先定義 intent 與處方，再把不確定性一層一層處理，最後用 DVH、isodose、robustness、QA 與 peer review 確認計畫真的能被安全執行。</p>
+
+<h3>一、Planning 前：先把臨床問題寫成可規劃的 prescription</h3>
+<ul>
+  <li><strong>治療目的：</strong>根治、術前、術後、adjuvant、salvage、consolidation、SBRT/SRS、緩和或再照射。目的不同，GTV/CTV/PTV、劑量、fractionation、constraints 的優先順序會完全不同。</li>
+  <li><strong>處方層級：</strong>明確寫出 dose/fractions、target coverage 目標、boost / SIB / sequential phase、是否允許 hot spot、是否需要 simultaneous nodal dose levels。</li>
+  <li><strong>必備資料：</strong>pathology、stage、op note、margin、systemic therapy、prior RT、diagnostic MRI/PET/CT、內視鏡或臨床照片、implant/device、renal function、pregnancy/fertility 風險。</li>
+  <li><strong>選 guideline family：</strong>先決定要用 NRG/RTOG、ESTRO ACROP、ILROG、GEC-ESTRO/ABS、ASTRO/COG 或 trial-specific atlas；不要同一個 target 混用不同 atlas 邊界。</li>
+</ul>
+
+<h3>二、Simulation：把病人變成可重現的幾何狀態</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>步驟</th><th>標準做法</th><th>常見錯誤</th></tr></thead><tbody>
+<tr><td>固定與體位</td><td>依部位選 mask、vacuum bag、wing board、breast board、knee/foot lock、bite block、shoulder pull、stereotactic immobilization；治療體位要能每天重現</td><td>為了掃描方便犧牲治療可重現性；手臂、肩膀、下巴或膀胱直腸狀態沒有 protocol</td></tr>
+<tr><td>CT protocol</td><td>slice thickness 依技術決定：SRS/SBRT 通常更薄；掃描範圍要包含所有 beam path 與 junction；contrast 依癌別與腎功能決定</td><td>掃描範圍不夠、沒有包含整個 OAR 或 electron/proton beam path；contrast timing 不符合 target 判讀</td></tr>
+<tr><td>Motion management</td><td>肺、肝、胰、食道、胃、乳癌 DIBH 等需考慮 4DCT、breath hold、gating、compression、ITV 或 tracking</td><td>有明顯呼吸移動卻只用 single-phase CT 畫小 PTV；把 motion margin 與 setup margin 混在一起</td></tr>
+<tr><td>影像融合</td><td>MRI/PET/diagnostic CT rigid 或 deformable registration；融合後要人工檢查骨性、軟組織與 target 附近是否對齊</td><td>只相信 registration 軟體；PET/MRI 姿勢、膀胱直腸、呼吸相位不同造成錯誤 GTV</td></tr>
+</tbody></table></div>
+
+<h3>三、Contouring：先 target，後 OAR，再命名與審查</h3>
+<ol>
+  <li><strong>GTV：</strong>只畫可見或可證實的 gross disease；把 tumor、edema、atelectasis、post-op change、seroma、scar、clips、PET avidity 分清楚。</li>
+  <li><strong>CTV：</strong>把 microscopic risk 轉成解剖風險區。CTV 不是機械外擴，應受 fascia、bone、air cavity、mucosal spread、lymphatic drainage、neurovascular route、surgical bed 影響。</li>
+  <li><strong>ITV：</strong>只用來處理 internal motion，尤其肺、肝、胰、食道、胃、uterus/cervix、膀胱直腸變動；不要把 ITV 當成 setup margin。</li>
+  <li><strong>PTV：</strong>處理 setup uncertainty、IGRT 精度與固定誤差。PTV 是計畫/交付保險，不是生物風險區。</li>
+  <li><strong>OAR / PRV：</strong>serial OAR 加 PRV 或看 Dmax/D0.03cc；parallel OAR 看 mean/Vx；所有 OAR 命名最好符合 TG-263 或院內命名規則。</li>
+</ol>
+
+<h3>四、Optimization：先保生命/功能，再追求 conformality</h3>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>規劃決策</th><th>標準邏輯</th></tr></thead><tbody>
+<tr><td>Technique selection</td><td>3DCRT 適合簡單幾何；IMRT/VMAT 適合 concave target 與多 OAR；SBRT/SRS 需極小幾何不確定性；proton 適合降低 integral dose 或避開 distal OAR，但需 robust planning</td></tr>
+<tr><td>Beam arrangement</td><td>避開 critical OAR entry/exit、避免穿過大量低密度或金屬 artifact；乳癌考慮 tangent/DIBH/proton；pelvis 考慮 bowel bag 與 femoral heads；proton 要特別看 range uncertainty</td></tr>
+<tr><td>Objective priority</td><td>先滿足 hard constraints，例如 cord/brainstem/optic/bowel point dose；再處理 target coverage；最後最佳化 mean dose、low-dose bath、conformity、gradient 與 hot spot</td></tr>
+<tr><td>Hot spot</td><td>根治常規 IMRT 可允許靶內合理 hot spot；SBRT hot spot 通常集中在 GTV 內；術後或靠近 hollow organ 時要更保守</td></tr>
+<tr><td>Re-irradiation</td><td>必須做 prior dose reconstruction、EQD2/BED 加總、serial OAR cumulative dose、時間間隔與 tissue recovery 判斷；不可只看本次 plan constraints</td></tr>
+</tbody></table></div>
+
+<h3>五、Plan evaluation：看 DVH 之前，先看每一張 CT slice</h3>
+<ul>
+  <li><strong>Coverage：</strong>常見目標為 PTV V95% 或 D95%，但要依 protocol；GTV/CTV coverage 比 PTV 數字更重要，尤其 OAR overlap 時。</li>
+  <li><strong>Conformity / gradient：</strong>SRS/SBRT 要看 conformity index、gradient index、dose falloff；不要只看 target DVH。</li>
+  <li><strong>Isodose review：</strong>逐 slice 檢查 high dose 是否在 GTV/CTV 內、低劑量尾巴是否不必要地灑到正常組織、junction 是否有 hot/cold spot。</li>
+  <li><strong>DVH review：</strong>同時看 target、OAR、PRV、ring structures、body maximum、skin、beam path OAR；注意 DVH 不會告訴你劑量在哪裡。</li>
+  <li><strong>Clinical tradeoff：</strong>若 target 與 critical OAR overlap，要明確記錄 priority：是犧牲 PTV coverage、接受 higher OAR dose、改變 fractionation，還是改用 proton/brachy/adaptive。</li>
+</ul>
+
+<h3>六、Physics / QA / Peer review：plan 能通過才算完成</h3>
+<ul>
+  <li><strong>Physician review：</strong>確認 prescription、site、laterality、image fusion、GTV/CTV/PTV/OAR、dose levels、bolus、setup instructions、IGRT frequency。</li>
+  <li><strong>Dosimetry review：</strong>確認 optimization objectives、normalization、MLC modulation、jaw tracking、bolus/flash、avoidance structures、dose grid、calculation algorithm。</li>
+  <li><strong>Physics review：</strong>AAPM TG-275 的精神是用系統化 checklist 做 plan/chart review：處方、影像、結構、劑量、機器參數、可治療性、collision、QA、documentation 都要一致。</li>
+  <li><strong>Patient-specific QA：</strong>IMRT/VMAT/SBRT/SRS/proton 依院內流程做 measurement 或 log-based QA；SBRT/SRS 要更重視 end-to-end、isocenter、small field dosimetry、motion 與 IGRT。</li>
+  <li><strong>Peer review：</strong>高風險 case 最好 treatment 前完成 chart rounds / peer review，包括新診斷、SRS/SBRT、re-irradiation、pediatric、proton、brachy、complex head and neck、pelvis nodal atlas。</li>
+</ul>
+
+<h3>七、Treatment delivery 與 adaptive thinking</h3>
+<p>Plan approval 後仍不是結束。每日 CBCT/kV/MV/MRI guidance 要確認 anatomy 與計畫假設一致。若腫瘤縮小、體重下降、頭頸 mask 鬆動、肺 atelectasis 改變、膀胱直腸狀態失控、乳房/胸壁 seroma 改變、GI organ filling 變化或 proton range 風險增加，應啟動 offline review、repeat CT、adaptive replanning 或 physician override。</p>
+
+<div class="clinical-note"><strong>一句話總結：</strong>標準 treatment planning 是一條閉環：clinical intent → simulation reproducibility → image fusion → target/OAR contour → dose optimization → slice-by-slice review → DVH/constraint check → physics QA → peer review → image-guided delivery → adaptive reassessment。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>Modern treatment planning is a closed-loop safety process: clinical intent, reproducible simulation, image registration, target/OAR contouring, optimization, slice-by-slice review, DVH and constraint review, physics QA, peer review, image-guided delivery, and adaptive reassessment.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-7"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
+        data-zh="參考來源與更新策略"
+        data-en="REFERENCES AND UPDATE STRATEGY"
+      >
+        參考來源與更新策略
+      </div>
+
+      <h2
+        class=""
+        data-zh="建議追蹤的 consensus 來源"
+        data-en="Consensus sources to follow"
+      >
+        建議追蹤的 consensus 來源
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>建議把這頁當成 contour 前的框架。真正畫contour前，請回到原始 atlas 或 trial protocol。</p>
+<div class="table-wrap"><table class="oncology-table"><thead><tr><th>主題</th><th>主要來源</th></tr></thead><tbody><tr><td>跨癌別 guideline index</td><td><a href="https://econtour.org/references" target="_blank" rel="noopener">eContour Published Consensus Contouring Guidelines</a></td></tr><tr><td>乳癌與 RNI</td><td><a href="https://www.nrgoncology.org/about-us/center-for-innovation-in-radiation-oncology/breast-cancer-downloads/" target="_blank" rel="noopener">NRG Breast Cancer Atlases</a></td></tr><tr><td>骨盆/婦癌/前列腺 nodal</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7856050/" target="_blank" rel="noopener">NRG/RTOG postoperative endometrial and cervical pelvic atlas update</a></td></tr><tr><td>攝護腺與 prostate bed</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37251620/" target="_blank" rel="noopener">ESTRO ACROP prostate bed delineation</a></td></tr><tr><td>淋巴瘤</td><td><a href="https://www.ilrog.org/guidelines" target="_blank" rel="noopener">ILROG Guidelines</a></td></tr><tr><td>軟組織肉瘤</td><td><a href="https://www.astro.org/provider-resources/guidelines/clinical-practice-guidelines/soft-tissue-sarcoma-gl" target="_blank" rel="noopener">ASTRO Soft Tissue Sarcoma Guideline</a></td></tr><tr><td>Physics plan/chart review</td><td><a href="https://www.aapm.org/pubs/reports/detail.asp?docid=198" target="_blank" rel="noopener">AAPM TG-275 physics plan and chart review</a></td></tr><tr><td>SBRT/SRS constraints</td><td><a href="https://www.aapm.org/pubs/reports/detail.asp?docid=102" target="_blank" rel="noopener">AAPM TG-101 SBRT report</a></td></tr><tr><td>Normal tissue constraints</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3431964/" target="_blank" rel="noopener">QUANTEC dose-volume/outcome overview</a></td></tr><tr><td>品質與部門流程</td><td><a href="https://www.ranzcr.com/wp-content/uploads/edocman/professional-documents/guidelines/Quality%20Guidelines%20for%20Volume%20Delineation%20in%20Radiation%20Oncology.pdf" target="_blank" rel="noopener">RANZCR Quality Guidelines for Volume Delineation</a></td></tr></tbody></table></div>
+<div class="clinical-note">維護方式：每次新增癌別詳細 contour 前，先確認是否有新 ESTRO ACROP、NRG/RTOG、ILROG、ASTRO、GEC-ESTRO/ABS 或 trial-specific atlas。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>Use this page as a framework and return to the original atlas or protocol before clinical use.</p>
+            
+      </div>
+
+    </section>
+    
+
+    
+
+    <div class="page-nav">
+
+        <a href="radbio.html" class="page-nav-link page-nav-prev">
+          <span class="nav-dir">
+            ←
+            <span data-zh="上一章" data-en="Previous">
+              上一章
+            </span>
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="放射生物"
+            data-en="RadBio"
+          >
+            放射生物
+          </span>
+        </a>
+        
+
+        <a href="cns.html" class="page-nav-link page-nav-next">
+          <span class="nav-dir">
+            <span data-zh="下一章" data-en="Next">
+              下一章
+            </span>
+            →
+          </span>
+
+          <span
+            class="nav-title"
+            data-zh="CNS"
+            data-en="CNS"
+          >
+            CNS
+          </span>
+        </a>
+        
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    © Rad Onc Interactive Tutorial ·
+    <a
+      href="index.html"
+      data-zh="返回首頁"
+      data-en="Back to home"
+    >
+      Back to home
+    </a>
+  </footer>
+
+  <script src="i18n.js?v=20260711-2"></script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const progressBar = document.getElementById("progressBar");
+
+      if (!progressBar) {
+        return;
+      }
+
+      const documentElement = document.documentElement;
+      const body = document.body;
+
+      const scrollTop =
+        documentElement.scrollTop ||
+        body.scrollTop;
+
+      const scrollHeight =
+        documentElement.scrollHeight ||
+        body.scrollHeight;
+
+      const availableScroll =
+        scrollHeight - documentElement.clientHeight;
+
+      const progress =
+        availableScroll > 0
+          ? (scrollTop / availableScroll) * 100
+          : 0;
+
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+
+</body>
+</html>
