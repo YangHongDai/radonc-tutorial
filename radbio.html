@@ -247,6 +247,113 @@
 
       <div
         class="section-label "
+        data-zh="互動式 LQ 模型：組織、射束、氧效應與存活曲線"
+        data-en="INTERACTIVE LQ MODEL: Tissue, Beam, Oxygen Effect, and Survival Curve"
+      >
+        互動式 LQ 模型：組織、射束、氧效應與存活曲線
+      </div>
+
+      <h2
+        class=""
+        data-zh="互動式 Linear-Quadratic Survival Curve"
+        data-en="Interactive Linear-Quadratic Survival Curve"
+      >
+        互動式 Linear-Quadratic Survival Curve
+      </h2>
+
+      <div
+        class="section-body section-body-zh "
+        data-lang="zh"
+      >
+        
+<p>這個互動模型用 <span class="highlight">SF = exp[-(αD + βD²) × OMF × RBE]</span> 即時計算細胞存活率。你可以選擇組織類型、治療射束、氧合狀態與修復能力，並用拉桿調整 α/β ratio、α、單次劑量與總劑量。</p>
+<p>這不是臨床處方工具，而是用來直覺化理解：低 α/β 組織為何對大分次更敏感、缺氧為何會讓 survival curve 變平、質子／高 LET 射束如何透過 RBE 與 β 成分改變曲線。</p>
+
+<div class="lq-widget" id="lq-widget" data-lq-widget>
+  <style>
+    .lq-widget{border:1px solid var(--c-border-light);border-radius:14px;background:#fff;box-shadow:var(--shadow-md);overflow:hidden;margin:22px 0}.lq-widget *{box-sizing:border-box}.lq-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px;background:linear-gradient(135deg,#f7fbf9,#eef5f2);border-bottom:1px solid var(--c-border-light)}.lq-control{display:flex;flex-direction:column;gap:6px}.lq-control label{font-size:.78rem;font-weight:800;color:var(--c-accent-dark)}.lq-control select,.lq-control input[type=range]{width:100%}.lq-control select{border:1px solid var(--c-border);border-radius:8px;background:#fff;padding:8px 10px;font:inherit;color:var(--c-ink)}.lq-body{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:18px;padding:18px}.lq-plot-wrap{min-width:0}.lq-plot{width:100%;height:auto;display:block;border:1px solid var(--c-border-light);border-radius:10px;background:linear-gradient(#fff,#fbfaf6)}.lq-slider-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.lq-range{padding:10px;border:1px solid var(--c-border-light);border-radius:10px;background:#fbfaf6}.lq-range label{display:flex;justify-content:space-between;gap:10px;font-size:.82rem;font-weight:800;color:var(--c-ink)}.lq-range output{font-family:var(--font-mono);font-weight:700;color:var(--c-accent-dark)}.lq-range input{width:100%;margin-top:8px}.lq-readout{display:grid;gap:10px;align-content:start}.lq-metric{border:1px solid var(--c-border-light);border-radius:10px;background:#fbfaf6;padding:10px}.lq-metric span{display:block;font-size:.72rem;font-weight:800;color:var(--c-ink-muted);text-transform:uppercase}.lq-metric strong{display:block;margin-top:2px;font-family:var(--font-mono);font-size:1rem;color:var(--c-accent-dark)}.lq-legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;font-size:.82rem;color:var(--c-ink-light)}.lq-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.lq-note{font-size:.84rem;color:var(--c-ink-light);line-height:1.55}@media(max-width:820px){.lq-toolbar,.lq-body,.lq-slider-grid{grid-template-columns:1fr}.lq-body{padding:14px}.lq-readout{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.lq-readout{grid-template-columns:1fr}}
+  </style>
+
+  <div class="lq-toolbar">
+    <div class="lq-control"><label for="lqPreset">組織／腫瘤 preset</label><select id="lqPreset"><option value="tumor">多數腫瘤／急性反應組織 α/β 10</option><option value="late">晚期正常組織 α/β 3</option><option value="cord">脊髓 α/β 2</option><option value="prostate">攝護腺癌 α/β 1.5</option><option value="melanoma">低放射敏感腫瘤</option></select></div>
+    <div class="lq-control"><label for="lqBeam">治療射束／LET</label><select id="lqBeam"><option value="photon">Photon / electron RBE 1.0</option><option value="proton">Proton clinical RBE 1.1</option><option value="distalProton">Distal proton edge RBE 1.2</option><option value="carbon">Carbon ion / high LET RBE 2.5</option></select></div>
+    <div class="lq-control"><label for="lqOxygen">氧合狀態</label><select id="lqOxygen"><option value="oxic">充分氧合 OER 1</option><option value="moderate">中度缺氧 OER 1.7</option><option value="hypoxic">嚴重缺氧 OER 2.8</option><option value="reoxygenated">再氧合後 OER 1.25</option></select></div>
+    <div class="lq-control"><label for="lqRepair">修復／生物特性</label><select id="lqRepair"><option value="standard">標準修復</option><option value="repairDeficient">DNA repair deficient</option><option value="radioresistant">Radioresistant / slow cycling</option><option value="sensitizer">Radiosensitizer / concurrent systemic therapy</option></select></div>
+  </div>
+
+  <div class="lq-body">
+    <div class="lq-plot-wrap">
+      <svg class="lq-plot" viewBox="0 0 720 420" role="img" aria-label="LQ survival curve">
+        <rect x="58" y="28" width="610" height="330" fill="#fff" stroke="#d5cfc0"/>
+        <g id="lqGrid"></g><g id="lqCurves"></g><g id="lqAxes"></g>
+      </svg>
+      <div class="lq-legend"><span><i class="lq-dot" style="background:#1a6b5a"></i>目前模型</span><span><i class="lq-dot" style="background:#c0392b"></i>缺氧比較</span><span><i class="lq-dot" style="background:#2563a8"></i>參考 photon oxic</span></div>
+      <div class="lq-slider-grid">
+        <div class="lq-range"><label>α <output id="lqAlphaOut"></output></label><input id="lqAlpha" type="range" min="0.03" max="0.80" step="0.01"></div>
+        <div class="lq-range"><label>α/β ratio <output id="lqRatioOut"></output></label><input id="lqRatio" type="range" min="0.5" max="20" step="0.1"></div>
+        <div class="lq-range"><label>單次劑量 d <output id="lqFxOut"></output></label><input id="lqFx" type="range" min="0.5" max="24" step="0.1"></div>
+        <div class="lq-range"><label>總劑量 D <output id="lqDoseOut"></output></label><input id="lqDose" type="range" min="1" max="80" step="1"></div>
+      </div>
+    </div>
+
+    <div class="lq-readout">
+      <div class="lq-metric"><span>β = α/(α/β)</span><strong id="lqBetaMetric"></strong></div>
+      <div class="lq-metric"><span>有效 α</span><strong id="lqEffAlphaMetric"></strong></div>
+      <div class="lq-metric"><span>BED</span><strong id="lqBedMetric"></strong></div>
+      <div class="lq-metric"><span>EQD2</span><strong id="lqEqd2Metric"></strong></div>
+      <div class="lq-metric"><span>SF at d</span><strong id="lqSfFxMetric"></strong></div>
+      <div class="lq-metric"><span>SF after D</span><strong id="lqSfTotalMetric"></strong></div>
+      <p class="lq-note">OER 在此以 oxygen modification factor 近似：缺氧會降低有效殺傷；RBE／高 LET 則提高有效殺傷。高 LET 同時讓曲線較不彎，代表 β 成分相對降低。</p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var root=document.getElementById('lq-widget'); if(!root || root.dataset.ready==='1') return; root.dataset.ready='1';
+      var $=function(id){return root.querySelector('#'+id)};
+      var presets={tumor:{a:.30,r:10,d:2,D:60},late:{a:.10,r:3,d:2,D:60},cord:{a:.08,r:2,d:2,D:50},prostate:{a:.15,r:1.5,d:7.25,D:36},melanoma:{a:.08,r:6,d:8,D:40}};
+      var beams={photon:{rbe:1,let:1},proton:{rbe:1.1,let:.95},distalProton:{rbe:1.2,let:.9},carbon:{rbe:2.5,let:.45}};
+      var oxy={oxic:{oer:1},moderate:{oer:1.7},hypoxic:{oer:2.8},reoxygenated:{oer:1.25}};
+      var bio={standard:{scale:1},repairDeficient:{scale:1.3},radioresistant:{scale:.75},sensitizer:{scale:1.2}};
+      function sf(D,a,r,beam,oxygen,biology){var b=a/r; var omf=1/(oxygen.oer||1); var q=beam.let||1; return Math.exp(-biology.scale*beam.rbe*omf*(a*D + (b*q)*D*D));}
+      function fmtSF(x){if(x<1e-5)return x.toExponential(1); return x.toFixed(5).replace(/0+$/,'').replace(/[.]$/,'');}
+      function pt(D,a,r,beam,oxygen,biology){var x=58+(D/24)*610; var y=28+(-Math.log10(Math.max(sf(D,a,r,beam,oxygen,biology),1e-6))/6)*330; return [x,y];}
+      function pathFor(a,r,beam,oxygen,biology){var parts=[]; for(var i=0;i<=160;i++){var D=24*i/160; var p=pt(D,a,r,beam,oxygen,biology); parts.push((i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1));} return parts.join(' ');}
+      function line(x1,y1,x2,y2,c,w,dash){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+c+'" stroke-width="'+(w||1)+'" '+(dash?'stroke-dasharray="'+dash+'"':'')+'/>';}
+      function renderAxes(){var g=''; for(var i=0;i<=6;i++){var y=28+i*55; g+=line(58,y,668,y,'#eee',1); g+='<text x="48" y="'+(y+4)+'" text-anchor="end" font-size="12" fill="#666">10<tspan baseline-shift="super">-'+i+'</tspan></text>';} for(var d=0;d<=24;d+=4){var x=58+(d/24)*610; g+=line(x,28,x,358,'#f0f0f0',1); g+='<text x="'+x+'" y="382" text-anchor="middle" font-size="12" fill="#666">'+d+'</text>';} $('lqGrid').innerHTML=g; $('lqAxes').innerHTML=line(58,28,58,358,'#333',1.5)+line(58,358,668,358,'#333',1.5)+'<text x="363" y="408" text-anchor="middle" font-size="13" fill="#333">Dose per fraction or single exposure D (Gy)</text><text x="18" y="200" text-anchor="middle" transform="rotate(-90 18 200)" font-size="13" fill="#333">Surviving fraction, log scale</text>';}
+      function update(){var a=parseFloat($('lqAlpha').value), r=parseFloat($('lqRatio').value), d=parseFloat($('lqFx').value), D=parseFloat($('lqDose').value); var beam=beams[$('lqBeam').value], oxygen=oxy[$('lqOxygen').value], biology=bio[$('lqRepair').value]; var b=a/r; var n=D/d; var bed=D*(1+d/r); var eqd2=bed/(1+2/r); $('lqAlphaOut').textContent=a.toFixed(2); $('lqRatioOut').textContent=r.toFixed(1)+' Gy'; $('lqFxOut').textContent=d.toFixed(1)+' Gy'; $('lqDoseOut').textContent=D.toFixed(0)+' Gy'; $('lqBetaMetric').textContent=b.toFixed(4); $('lqEffAlphaMetric').textContent=(a*beam.rbe*biology.scale/oxygen.oer).toFixed(3); $('lqBedMetric').textContent=bed.toFixed(1)+' Gy'; $('lqEqd2Metric').textContent=eqd2.toFixed(1)+' Gy'; $('lqSfFxMetric').textContent=fmtSF(sf(d,a,r,beam,oxygen,biology)); $('lqSfTotalMetric').textContent=fmtSF(Math.pow(sf(d,a,r,beam,oxygen,biology),n)); var ref={rbe:1,let:1}, ox={oer:1}, hyp={oer:2.8}, std={scale:1}; $('lqCurves').innerHTML='<path d="'+pathFor(a,r,ref,ox,std)+'" fill="none" stroke="#2563a8" stroke-width="2" opacity=".65"/><path d="'+pathFor(a,r,beam,hyp,biology)+'" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 5"/><path d="'+pathFor(a,r,beam,oxygen,biology)+'" fill="none" stroke="#1a6b5a" stroke-width="4"/>';}
+      function applyPreset(){var p=presets[$('lqPreset').value]; $('lqAlpha').value=p.a; $('lqRatio').value=p.r; $('lqFx').value=p.d; $('lqDose').value=p.D; update();}
+      ['lqPreset','lqBeam','lqOxygen','lqRepair','lqAlpha','lqRatio','lqFx','lqDose'].forEach(function(id){$(id).addEventListener('input',id==='lqPreset'?applyPreset:update); $(id).addEventListener('change',id==='lqPreset'?applyPreset:update);});
+      renderAxes(); applyPreset();
+    })();
+  </script>
+</div>
+
+<div class="clinical-note">使用方式：先選組織 preset，再調整 α/β 與單次劑量。觀察低 α/β 組織在大分次時 survival curve 如何快速下墜；切到 hypoxia 會看到曲線變平；切到 carbon ion / high LET 則會看到 RBE 增加且曲線形狀改變。</div>
+            
+      </div>
+
+      <div
+        class="section-body section-body-en "
+        data-lang="en"
+      >
+        
+<p>This interactive model uses <span class="highlight">SF = exp[-(αD + βD²) × OMF × RBE]</span> to visualize the linear-quadratic survival curve. Adjust tissue type, beam quality, oxygenation, repair biology, α/β ratio, α, dose per fraction, and total dose.</p>
+<p>It is a teaching model, not a prescription calculator. It shows why low-α/β tissues are more sensitive to large fraction size, why hypoxia flattens the survival curve, and how proton/high-LET beams affect cell kill through RBE and the β component.</p>
+<p>The interactive controls are shown in the Chinese panel above and remain functional regardless of language mode.</p>
+            
+      </div>
+
+    </section>
+    
+    <section
+      id="section-4"
+      class="section"
+      
+    >
+
+      <div
+        class="section-label "
         data-zh="放射生物學的 4R"
         data-en="THE 4 RS OF RADIOBIOLOGY"
       >
@@ -285,7 +392,7 @@
     </section>
     
     <section
-      id="section-4"
+      id="section-5"
       class="section"
       
     >
@@ -339,7 +446,7 @@
     </section>
     
     <section
-      id="section-5"
+      id="section-6"
       class="section"
       
     >
@@ -391,7 +498,7 @@
     </section>
     
     <section
-      id="section-6"
+      id="section-7"
       class="section"
       
     >
@@ -456,7 +563,7 @@
     </section>
     
     <section
-      id="section-7"
+      id="section-8"
       class="section"
       
     >
@@ -502,7 +609,7 @@
     </section>
     
     <section
-      id="section-8"
+      id="section-9"
       class="section"
       
     >
@@ -556,7 +663,7 @@
     </section>
     
     <section
-      id="section-9"
+      id="section-10"
       class="section"
       
     >
@@ -619,7 +726,7 @@
     </section>
     
     <section
-      id="section-10"
+      id="section-11"
       class="section"
       
     >
@@ -668,7 +775,7 @@
     </section>
     
     <section
-      id="section-11"
+      id="section-12"
       class="section"
       
     >
@@ -723,7 +830,7 @@
     </section>
     
     <section
-      id="section-12"
+      id="section-13"
       class="section"
       
     >
@@ -777,7 +884,7 @@
     </section>
     
     <section
-      id="section-13"
+      id="section-14"
       class="section"
       
     >
@@ -824,7 +931,7 @@
     </section>
     
     <section
-      id="section-14"
+      id="section-15"
       class="section"
       
     >
@@ -872,7 +979,7 @@
     </section>
     
     <section
-      id="section-15"
+      id="section-16"
       class="section"
       
     >
@@ -918,7 +1025,7 @@
     </section>
     
     <section
-      id="section-16"
+      id="section-17"
       class="section"
       
     >
@@ -977,7 +1084,7 @@
     </section>
     
     <section
-      id="section-17"
+      id="section-18"
       class="section"
       
     >
@@ -1033,7 +1140,7 @@
     </section>
     
     <section
-      id="section-18"
+      id="section-19"
       class="section"
       
     >

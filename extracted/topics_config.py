@@ -1372,517 +1372,6 @@ PAGES.append({
     'emoji': '🧬',
     'title_zh': '放射生物學',
     'title_en': 'Radiobiology',
-    'sub_zh': 'Radiobiology 核心：TCP/NTCP、fractionation、BED/EQD2、4Rs、DNA damage/repair、OER、hypoxia、LET/RBE 與 QUANTEC/HYTEC constraints。',
-    'sub_en': 'Core radiobiology: TCP/NTCP, fractionation, BED/EQD2, the 4 Rs, DNA damage and repair, OER, hypoxia, LET/RBE, and QUANTEC/HYTEC constraints.',
-
-    'sections': [
-        {
-            'label_zh': '總論',
-            'label_en': 'OVERVIEW',
-            'h2_zh': 'Radiobiology 核心總論',
-            'h2_en': 'Core overview of radiobiology',
-            'body_zh': """
-<p>放射治療的核心目標是：<strong>maximize TCP，minimize NTCP</strong>，也就是最大化腫瘤控制、同時最小化正常組織併發症。</p>
-<p>有效放射生物劑量不只取決於 total dose，也取決於 <strong>dose per fraction、α/β ratio、treatment time</strong>，以及正常組織是 <strong>serial organ</strong> 還是 <strong>parallel organ</strong>。</p>
-<div class="clinical-note">一句話理解：RT 殺癌細胞靠 DNA damage；fractionation 的意義是利用正常組織 repair、腫瘤 reoxygenation / redistribution 的差異，讓 TCP 上升但 NTCP 不爆掉。</div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>核心概念</th><th>臨床意義</th></tr></thead><tbody><tr><td>TCP</td><td>Tumor control probability；腫瘤控制機率</td></tr><tr><td>NTCP</td><td>Normal tissue complication probability；正常組織併發症機率</td></tr><tr><td>Fractionation</td><td>利用 repair、reoxygenation、redistribution、repopulation 的差異</td></tr><tr><td>BED / EQD2</td><td>把不同 fractionation 轉換成 biological equivalent dose</td></tr><tr><td>Serial vs parallel organ</td><td>決定 constraint 應重視 Dmax / point dose 還是 mean / volume dose</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<p>The central goal of radiotherapy is to <strong>maximize TCP and minimize NTCP</strong>: maximize tumor control while minimizing normal-tissue complications.</p>
-<p>The effective biological radiation dose depends not only on total dose, but also on <strong>dose per fraction, α/β ratio, total treatment time</strong>, and whether the normal tissue behaves as a <strong>serial organ</strong> or a <strong>parallel organ</strong>.</p>
-<div class="clinical-note">One-sentence memory: RT kills cancer cells through DNA damage. Fractionation exploits differences in normal-tissue repair, tumor reoxygenation, redistribution, and repopulation so that TCP rises without unacceptable NTCP.</div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Core concept</th><th>Clinical meaning</th></tr></thead><tbody><tr><td>TCP</td><td>Tumor control probability</td></tr><tr><td>NTCP</td><td>Normal tissue complication probability</td></tr><tr><td>Fractionation</td><td>Uses repair, reoxygenation, redistribution, and repopulation differences</td></tr><tr><td>BED / EQD2</td><td>Converts different schedules into comparable biological dose</td></tr><tr><td>Serial vs parallel organ</td><td>Determines whether Dmax / point dose or mean / volume dose matters most</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': '分割/劑量',
-            'label_en': 'DOSE / FRACTIONATION',
-            'h2_zh': 'Dose、Fractionation 與 Toxicity',
-            'h2_en': 'Dose, fractionation, and toxicity',
-            'body_zh': """
-<p>Radiation dose 的生物效果取決於四大因素：<strong>total dose、dose per fraction、α/β ratio、total treatment time</strong>。BED 和 EQD2 可以把不同 fractionation 轉換成可比較的 biological dose，但公式本身不直接處理 treatment time。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>因素</th><th>意義</th></tr></thead><tbody><tr><td>Total dose</td><td>總劑量，例如 60 Gy</td></tr><tr><td>Dose per fraction</td><td>每次劑量，例如 2 Gy/Fx 或 10 Gy/Fx</td></tr><tr><td>α/β ratio</td><td>組織對 fraction size 的敏感度</td></tr><tr><td>Total treatment time</td><td>總療程時間，與 repopulation 有關</td></tr></tbody></table></div>
-<h3>Linear-quadratic model</h3>
-<div class="formula-box">SF(D) = e<sup>−αD − βD²</sup></div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>參數</th><th>意義</th></tr></thead><tbody><tr><td>α</td><td>linear component；single-hit cell kill</td></tr><tr><td>β</td><td>quadratic component；double-hit cell kill</td></tr><tr><td>α/β</td><td>αD = βD² 時的 dose，也就是 linear killing 和 quadratic killing 相等的劑量</td></tr></tbody></table></div>
-<p>α/β ratio 本質上代表組織對 fractionation 的敏感度。α/β 越低，代表 survival curve 越彎、越容易受到 fraction size 影響。</p>
-<h3>Early vs late responding tissues</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>組織類型</th><th>α/β ratio</th><th>對 fraction size 敏感度</th><th>例子</th></tr></thead><tbody><tr><td>Early responding tissues</td><td>約 10</td><td>較不敏感</td><td>多數腫瘤、skin、intestinal cells、bone marrow</td></tr><tr><td>Late responding tissues</td><td>約 3</td><td>較敏感</td><td>lung、kidney、liver、bladder</td></tr><tr><td>Spinal cord</td><td>約 2</td><td>非常敏感</td><td>spinal cord</td></tr></tbody></table></div>
-<div class="clinical-note">注意：late-responding tissues = low α/β ratio，且對 fraction size 更敏感。若有 slide 寫 late tissue high α/β，應視為筆誤。</div>
-<h3>BED 與 EQD2</h3>
-<div class="formula-box">BED = nd[1 + d/(α/β)]<br>EQD2 = D[(d + α/β)/(2 + α/β)] = BED / [1 + 2/(α/β)]</div>
-<p>Dose per fraction 越大，對低 α/β 組織的 BED / EQD2 增幅越明顯。</p>
-<h3>Acute vs late toxicity</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Toxicity</th><th>特徵</th><th>主要相關因素</th></tr></thead><tbody><tr><td>Acute toxicity</td><td>inflammation</td><td>total dose</td></tr><tr><td>Late toxicity</td><td>fibrosis、sclerosis</td><td>dose per fraction；需要用 BED / EQD2 評估</td></tr></tbody></table></div>
-<div class="clinical-note">簡單記法：Acute 看總量，Late 看單次量。</div>
-""",
-            'body_en': """
-<p>The biological effect of radiation depends on four major factors: <strong>total dose, dose per fraction, α/β ratio, and total treatment time</strong>. BED and EQD2 convert different schedules into comparable biological dose, but the formulas themselves do not directly incorporate treatment time.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>Meaning</th></tr></thead><tbody><tr><td>Total dose</td><td>Total delivered dose, such as 60 Gy</td></tr><tr><td>Dose per fraction</td><td>Dose per treatment, such as 2 Gy/Fx or 10 Gy/Fx</td></tr><tr><td>α/β ratio</td><td>Sensitivity of tissue to fraction size</td></tr><tr><td>Total treatment time</td><td>Overall treatment duration; related to repopulation</td></tr></tbody></table></div>
-<h3>Linear-quadratic model</h3>
-<div class="formula-box">SF(D) = e<sup>−αD − βD²</sup></div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Parameter</th><th>Meaning</th></tr></thead><tbody><tr><td>α</td><td>Linear component; single-hit cell kill</td></tr><tr><td>β</td><td>Quadratic component; double-hit cell kill</td></tr><tr><td>α/β</td><td>Dose at which αD equals βD²</td></tr></tbody></table></div>
-<p>The α/β ratio represents sensitivity to fractionation. Lower α/β means a more curved survival curve and greater sensitivity to fraction size.</p>
-<h3>Early versus late responding tissues</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Tissue type</th><th>α/β ratio</th><th>Fraction-size sensitivity</th><th>Examples</th></tr></thead><tbody><tr><td>Early responding tissues</td><td>About 10</td><td>Less sensitive</td><td>Many tumors, skin, intestinal cells, bone marrow</td></tr><tr><td>Late responding tissues</td><td>About 3</td><td>More sensitive</td><td>Lung, kidney, liver, bladder</td></tr><tr><td>Spinal cord</td><td>About 2</td><td>Very sensitive</td><td>Spinal cord</td></tr></tbody></table></div>
-<div class="clinical-note">Correct concept: late-responding tissues have low α/β and are more fraction-size sensitive.</div>
-<h3>BED and EQD2</h3>
-<div class="formula-box">BED = nd[1 + d/(α/β)]<br>EQD2 = D[(d + α/β)/(2 + α/β)] = BED / [1 + 2/(α/β)]</div>
-<p>As dose per fraction increases, BED/EQD2 rises especially strongly for low-α/β tissues.</p>
-<h3>Acute versus late toxicity</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Toxicity</th><th>Feature</th><th>Main driver</th></tr></thead><tbody><tr><td>Acute toxicity</td><td>Inflammation</td><td>Total dose</td></tr><tr><td>Late toxicity</td><td>Fibrosis, sclerosis</td><td>Dose per fraction; evaluate with BED/EQD2</td></tr></tbody></table></div>
-<div class="clinical-note">Simple memory: acute toxicity tracks total dose; late toxicity tracks fraction size.</div>
-""",
-        },
-
-        {
-            'label_zh': '4 Rs',
-            'label_en': '4 RS',
-            'h2_zh': '4 Rs of Radiobiology',
-            'h2_en': 'The 4 Rs of radiobiology',
-            'body_zh': """
-<p>Fractionation 的經典四個 R：</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>4R</th><th>中文意義</th><th>臨床意義</th></tr></thead><tbody><tr><td>Repair</td><td>DNA 損傷修復</td><td>正常組織在 fraction 間修復 sublethal damage</td></tr><tr><td>Repopulation</td><td>再增殖</td><td>腫瘤與正常組織都可能增殖；過長療程可能讓腫瘤 repopulate</td></tr><tr><td>Redistribution</td><td>細胞週期重新分布</td><td>細胞進入較 radiosensitive phase</td></tr><tr><td>Reoxygenation</td><td>再氧合</td><td>hypoxic tumor cells 變得較 radiosensitive</td></tr></tbody></table></div>
-<div class="clinical-note">Fractionation 的生物學效果可整理為：Repair、Repopulation、Redistribution、Reoxygenation。</div>
-""",
-            'body_en': """
-<p>The classic 4 Rs of fractionation are:</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>4R</th><th>Meaning</th><th>Clinical significance</th></tr></thead><tbody><tr><td>Repair</td><td>DNA damage repair</td><td>Normal tissues repair sublethal damage between fractions</td></tr><tr><td>Repopulation</td><td>Cell proliferation during treatment</td><td>Tumors and normal tissues can proliferate; prolonged treatment allows tumor repopulation</td></tr><tr><td>Redistribution</td><td>Cell-cycle redistribution</td><td>Cells may enter more radiosensitive phases</td></tr><tr><td>Reoxygenation</td><td>Improved oxygenation</td><td>Hypoxic tumor cells can become more radiosensitive</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': 'DNA 傷害',
-            'label_en': 'DNA DAMAGE',
-            'h2_zh': 'DNA damage：RT 如何造成細胞死亡？',
-            'h2_en': 'DNA damage: how RT causes cell death',
-            'body_zh': """
-<p>RT 的主要作用機制是造成 DNA damage，尤其是 <strong>DNA double-strand breaks, DSBs</strong>。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage type</th><th>每 1 Gy 大約數量</th><th>生物意義</th></tr></thead><tbody><tr><td>Single-strand breaks, SSBs</td><td>約 1000</td><td>多數容易修復，通常不致命</td></tr><tr><td>Double-strand breaks, DSBs</td><td>約 40</td><td>最重要的 lethal lesion，可導致 chromosome / chromatid aberrations 和 cell death</td></tr></tbody></table></div>
-<h3>直接與間接 DNA damage</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>機制</th><th>說明</th><th>代表 radiation</th></tr></thead><tbody><tr><td>Direct DNA damage</td><td>ionization 直接打到 DNA</td><td>high LET radiation 較重要，例如 α-particles、carbon ions</td></tr><tr><td>Indirect DNA damage</td><td>水分子被 ionized 產生 free radicals，再攻擊 DNA</td><td>low LET photons 較重要，例如 x-rays、γ-rays</td></tr></tbody></table></div>
-<h3>Radiation tracks：spurs、blobs、clustered lesions</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Track structure</th><th>特徵</th></tr></thead><tbody><tr><td>Low LET：x-rays、γ-rays</td><td>Spurs</td><td>約 3 ion pairs、100 eV、直徑約 4 nm</td></tr><tr><td>High LET：neutrons 等</td><td>Blobs</td><td>約 12 ion pairs、100–500 eV、直徑約 7 nm</td></tr></tbody></table></div>
-<p>多個 spurs / blobs 可形成 clustered lesions。Clustered DNA damage 比單一 SSB 更難修復，因此 high LET radiation 通常有較高 biological effectiveness。</p>
-""",
-            'body_en': """
-<p>The main mechanism of RT is DNA damage, especially <strong>DNA double-strand breaks, DSBs</strong>.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage type</th><th>Approximate number per 1 Gy</th><th>Biological significance</th></tr></thead><tbody><tr><td>Single-strand breaks, SSBs</td><td>About 1000</td><td>Usually repaired and often not lethal</td></tr><tr><td>Double-strand breaks, DSBs</td><td>About 40</td><td>The key lethal lesion; can cause chromosome/chromatid aberrations and cell death</td></tr></tbody></table></div>
-<h3>Direct and indirect DNA damage</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Mechanism</th><th>Description</th><th>Representative radiation</th></tr></thead><tbody><tr><td>Direct DNA damage</td><td>Ionization directly hits DNA</td><td>More important for high-LET radiation such as α-particles and carbon ions</td></tr><tr><td>Indirect DNA damage</td><td>Water ionization generates free radicals that attack DNA</td><td>More important for low-LET photons such as x-rays and γ-rays</td></tr></tbody></table></div>
-<h3>Radiation tracks: spurs, blobs, and clustered lesions</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Track structure</th><th>Feature</th></tr></thead><tbody><tr><td>Low LET: x-rays, γ-rays</td><td>Spurs</td><td>About 3 ion pairs, 100 eV, diameter about 4 nm</td></tr><tr><td>High LET: neutrons, etc.</td><td>Blobs</td><td>About 12 ion pairs, 100–500 eV, diameter about 7 nm</td></tr></tbody></table></div>
-<p>Multiple spurs or blobs can form clustered lesions. Clustered DNA damage is harder to repair, so high-LET radiation usually has greater biological effectiveness.</p>
-""",
-        },
-
-        {
-            'label_zh': 'DNA 測量',
-            'label_en': 'DNA DAMAGE ASSAYS',
-            'h2_zh': '如何測量 DNA damage？',
-            'h2_en': 'How DNA damage is measured',
-            'body_zh': """
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>方法</th><th>原理</th><th>高分重點</th></tr></thead><tbody><tr><td>PFGE</td><td>依 DNA fragment size 分離 DNA</td><td>DNA fragment 越小，在 agarose gel 中跑得越遠</td></tr><tr><td>Comet assay</td><td>single-cell gel electrophoresis</td><td>DNA damage 形成 comet tail；可在單細胞層級偵測 DNA damage</td></tr><tr><td>Radiation-induced foci assay</td><td>偵測 DNA DSB sites 上 recruit 的蛋白</td><td>γ-H2AX、53BP1 foci 增加代表 DNA damage response</td></tr></tbody></table></div>
-<h3>Comet assay</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>條件</th><th>偵測</th></tr></thead><tbody><tr><td>Alkaline buffer</td><td>偵測 DSBs</td></tr><tr><td>Neutral buffer</td><td>偵測 SSBs</td></tr></tbody></table></div>
-<h3>Radiation-induced foci</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Marker</th><th>意義</th></tr></thead><tbody><tr><td>γ-H2AX</td><td>H2AX 被 phosphorylation 後形成；DNA damage 後 15 分鐘內可偵測；24 小時仍存在通常代表 unrepaired DNA damage</td></tr><tr><td>53BP1</td><td>DNA damage response marker；與 NHEJ 選擇相關</td></tr></tbody></table></div>
-<div class="clinical-note">記法：SNoW DRoP = Southern blot DNA、Northern blot RNA、Western blot Protein。</div>
-""",
-            'body_en': """
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Method</th><th>Principle</th><th>High-yield point</th></tr></thead><tbody><tr><td>PFGE</td><td>Separates DNA by fragment size</td><td>Smaller fragments migrate farther through agarose gel</td></tr><tr><td>Comet assay</td><td>Single-cell gel electrophoresis</td><td>DNA damage creates a comet tail; detects damage at single-cell level</td></tr><tr><td>Radiation-induced foci assay</td><td>Detects proteins recruited to DSB sites</td><td>Increased γ-H2AX and 53BP1 foci indicate DNA damage response</td></tr></tbody></table></div>
-<h3>Comet assay</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Condition</th><th>Detects</th></tr></thead><tbody><tr><td>Alkaline buffer</td><td>DSBs</td></tr><tr><td>Neutral buffer</td><td>SSBs</td></tr></tbody></table></div>
-<h3>Radiation-induced foci</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Marker</th><th>Meaning</th></tr></thead><tbody><tr><td>γ-H2AX</td><td>Phosphorylated H2AX; detectable within 15 minutes after DNA damage; persistence at 24 hours suggests unrepaired damage</td></tr><tr><td>53BP1</td><td>DNA damage response marker; related to NHEJ pathway choice</td></tr></tbody></table></div>
-<div class="clinical-note">Memory: SNoW DRoP = Southern blot DNA, Northern blot RNA, Western blot Protein.</div>
-""",
-        },
-
-        {
-            'label_zh': 'DSB signaling',
-            'label_en': 'DSB SIGNALING',
-            'h2_zh': 'DSB 發生後，細胞怎麼感知？',
-            'h2_en': 'How cells sense DSBs',
-            'body_zh': """
-<p>DSB 發生後的核心 signaling cascade：</p>
-<ol>
-<li>DNA DSB occurs</li>
-<li>MRN complex：MRE11 / RAD50 / NBS1 被 recruit 到 damage site</li>
-<li>ATM 被 recruit 並 autophosphorylation</li>
-<li>ATM phosphorylates H2AX → γ-H2AX</li>
-<li>γ-H2AX 作為平台 recruit repair proteins</li>
-<li>ATM phosphorylates CHK2，讓 cell cycle arrest，提供修復時間</li>
-<li>53BP1 促進 NHEJ</li>
-<li>BRCA1 促進 HR</li>
-</ol>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Gene</th><th>Disease</th><th>典型症狀</th></tr></thead><tbody><tr><td>ATM</td><td>Ataxia telangiectasia</td><td>Telangiectasias、neurologic symptoms、RT sensitivity、lymphoma / leukemia / breast cancer risk</td></tr><tr><td>ATR</td><td>Seckel syndrome</td><td>Growth retardation、microcephaly、facial dysmorphism、skeletal abnormalities、immune deficiency</td></tr><tr><td>MRE11</td><td>AT-like disorder</td><td>無 telangiectasia，但有 neurologic symptoms 和 RT sensitivity</td></tr><tr><td>NBS1</td><td>Nijmegen break syndrome</td><td>Growth retardation、microcephaly、cancer risk、RT sensitivity</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<p>The core DSB signaling cascade is:</p>
-<ol>
-<li>DNA DSB occurs</li>
-<li>MRN complex, MRE11 / RAD50 / NBS1, is recruited to the damage site</li>
-<li>ATM is recruited and autophosphorylated</li>
-<li>ATM phosphorylates H2AX to form γ-H2AX</li>
-<li>γ-H2AX acts as a platform to recruit repair proteins</li>
-<li>ATM phosphorylates CHK2, causing cell-cycle arrest and allowing repair time</li>
-<li>53BP1 promotes NHEJ</li>
-<li>BRCA1 promotes HR</li>
-</ol>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Gene</th><th>Disease</th><th>Typical findings</th></tr></thead><tbody><tr><td>ATM</td><td>Ataxia telangiectasia</td><td>Telangiectasias, neurologic symptoms, RT sensitivity, lymphoma/leukemia/breast cancer risk</td></tr><tr><td>ATR</td><td>Seckel syndrome</td><td>Growth retardation, microcephaly, facial dysmorphism, skeletal abnormalities, immune deficiency</td></tr><tr><td>MRE11</td><td>AT-like disorder</td><td>No telangiectasia, but neurologic symptoms and RT sensitivity</td></tr><tr><td>NBS1</td><td>Nijmegen break syndrome</td><td>Growth retardation, microcephaly, cancer risk, RT sensitivity</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': '染色體異常',
-            'label_en': 'ABERRATIONS',
-            'h2_zh': 'Chromosome & chromatid aberrations',
-            'h2_en': 'Chromosome and chromatid aberrations',
-            'body_zh': """
-<p>DSB 的致死效應常不是「斷了就死」，而是錯誤修復後造成 chromosome / chromatid aberrations。某些 chromosome / chromatid aberrations 是 lethal，導致 cell death。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Aberration</th><th>發生時機</th><th>例子</th></tr></thead><tbody><tr><td>Chromosome aberrations</td><td>Early interphase，DNA 尚未 replicated</td><td>Dicentric chromosome、ring chromosome</td></tr><tr><td>Chromatid aberrations</td><td>Late interphase，DNA 已 replicated</td><td>Anaphase bridge</td></tr></tbody></table></div>
-<div class="clinical-note">臨床思維：DSB → misrepair → chromosome aberration → mitotic catastrophe / cell death。</div>
-""",
-            'body_en': """
-<p>The lethal effect of DSBs is often not simply the break itself, but incorrect repair that produces chromosome or chromatid aberrations. Some aberrations are lethal and lead to cell death.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Aberration</th><th>Timing</th><th>Examples</th></tr></thead><tbody><tr><td>Chromosome aberrations</td><td>Early interphase, before DNA replication</td><td>Dicentric chromosome, ring chromosome</td></tr><tr><td>Chromatid aberrations</td><td>Late interphase, after DNA replication</td><td>Anaphase bridge</td></tr></tbody></table></div>
-<div class="clinical-note">Clinical logic: DSB → misrepair → chromosome aberration → mitotic catastrophe / cell death.</div>
-""",
-        },
-
-        {
-            'label_zh': 'DNA repair',
-            'label_en': 'DNA REPAIR',
-            'h2_zh': 'DNA repair mechanisms',
-            'h2_en': 'DNA repair mechanisms',
-            'body_zh': """
-<p>DNA repair 可依 damage type 分類：</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage</th><th>Repair pathway</th></tr></thead><tbody><tr><td>SSB / base error</td><td>BER</td></tr><tr><td>Bulky adduct / pyrimidine dimer</td><td>NER</td></tr><tr><td>Replication mismatch</td><td>MMR</td></tr><tr><td>DSB</td><td>NHEJ、HR</td></tr><tr><td>DNA crosslink</td><td>Crosslink repair，常涉及 NER + HR / Fanconi pathway</td></tr></tbody></table></div>
-<h3>DNA repair 高分總表</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Repair mechanism</th><th>Damage repaired</th><th>Key proteins</th><th>Disease</th><th>Clinical clue</th></tr></thead><tbody><tr><td>BER</td><td>SSB / base errors</td><td>Glycosylase、APE1、XRCC1、PARP、FEN1</td><td>XRCC1 mutation slight radiosensitivity</td><td>通常不明顯 radiosensitive</td></tr><tr><td>NER</td><td>Pyrimidine dimers、bulky adducts</td><td>XPC、XPE、TFIIH、XPA、XPG</td><td>XP、Cockayne、TTD</td><td>UV / photosensitivity</td></tr><tr><td>MMR</td><td>Replication errors</td><td>MLH1、MSH2、MSH6、PMS2</td><td>Lynch syndrome</td><td>Colorectal / endometrial cancer risk</td></tr><tr><td>NHEJ</td><td>DSB，error-prone</td><td>Ku70/80、DNA-PKcs、Artemis、Ligase IV</td><td>SCID、LIG4 syndrome</td><td>Immunodeficiency + radiosensitivity</td></tr><tr><td>HR</td><td>DSB，accurate</td><td>RAD51、RAD52、BRCA1/2</td><td>BRCA mutation</td><td>PARP inhibitor sensitivity</td></tr><tr><td>Crosslink repair</td><td>DNA crosslinks</td><td>FANC proteins</td><td>Fanconi anemia</td><td>Pancytopenia、leukemia</td></tr></tbody></table></div>
-<h3>NHEJ vs HR</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Pathway</th><th>Timing</th><th>Accuracy</th><th>Key proteins</th><th>Clinical association</th></tr></thead><tbody><tr><td>NHEJ</td><td>G1 phase，DNA 尚未複製</td><td>Fast but error-prone</td><td>Ku70/80、DNA-PKcs、Artemis、XRCC4 / Ligase IV</td><td>VDJ recombination；SCID / immunodeficiency</td></tr><tr><td>HR</td><td>Late S / G2 phase，有 sister chromatid</td><td>Slow but accurate</td><td>BRCA1、BRCA2、RAD51、RAD52、MRN</td><td>BRCA mutation；PARP inhibitor synthetic lethality</td></tr></tbody></table></div>
-<div class="clinical-note">PARP inhibitor synthetic lethality：BRCA-mutant tumors 已有 HR defect；PARP inhibitor 阻斷 SSB repair，SSB 在 replication 時轉為 DSB，細胞無法用 HR 修復而死亡。</div>
-""",
-            'body_en': """
-<p>DNA repair can be organized by damage type:</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Damage</th><th>Repair pathway</th></tr></thead><tbody><tr><td>SSB / base error</td><td>BER</td></tr><tr><td>Bulky adduct / pyrimidine dimer</td><td>NER</td></tr><tr><td>Replication mismatch</td><td>MMR</td></tr><tr><td>DSB</td><td>NHEJ, HR</td></tr><tr><td>DNA crosslink</td><td>Crosslink repair, often involving NER + HR / Fanconi pathway</td></tr></tbody></table></div>
-<h3>High-yield DNA repair table</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Repair mechanism</th><th>Damage repaired</th><th>Key proteins</th><th>Disease</th><th>Clinical clue</th></tr></thead><tbody><tr><td>BER</td><td>SSB / base errors</td><td>Glycosylase, APE1, XRCC1, PARP, FEN1</td><td>XRCC1 mutation with slight radiosensitivity</td><td>Usually not strongly radiosensitive</td></tr><tr><td>NER</td><td>Pyrimidine dimers, bulky adducts</td><td>XPC, XPE, TFIIH, XPA, XPG</td><td>XP, Cockayne, TTD</td><td>UV / photosensitivity</td></tr><tr><td>MMR</td><td>Replication errors</td><td>MLH1, MSH2, MSH6, PMS2</td><td>Lynch syndrome</td><td>Colorectal / endometrial cancer risk</td></tr><tr><td>NHEJ</td><td>DSB, error-prone</td><td>Ku70/80, DNA-PKcs, Artemis, Ligase IV</td><td>SCID, LIG4 syndrome</td><td>Immunodeficiency + radiosensitivity</td></tr><tr><td>HR</td><td>DSB, accurate</td><td>RAD51, RAD52, BRCA1/2</td><td>BRCA mutation</td><td>PARP inhibitor sensitivity</td></tr><tr><td>Crosslink repair</td><td>DNA crosslinks</td><td>FANC proteins</td><td>Fanconi anemia</td><td>Pancytopenia, leukemia</td></tr></tbody></table></div>
-<h3>NHEJ versus HR</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Pathway</th><th>Timing</th><th>Accuracy</th><th>Key proteins</th><th>Clinical association</th></tr></thead><tbody><tr><td>NHEJ</td><td>G1 phase, before DNA replication</td><td>Fast but error-prone</td><td>Ku70/80, DNA-PKcs, Artemis, XRCC4 / Ligase IV</td><td>VDJ recombination; SCID / immunodeficiency</td></tr><tr><td>HR</td><td>Late S / G2 phase, when sister chromatid is available</td><td>Slow but accurate</td><td>BRCA1, BRCA2, RAD51, RAD52, MRN</td><td>BRCA mutation; PARP inhibitor synthetic lethality</td></tr></tbody></table></div>
-<div class="clinical-note">PARP inhibitor synthetic lethality: BRCA-mutant tumors have HR deficiency. PARP inhibition blocks SSB repair; unrepaired SSBs become DSBs during replication, and the cell cannot repair them through HR.</div>
-""",
-        },
-
-        {
-            'label_zh': 'OER',
-            'label_en': 'OER',
-            'h2_zh': 'OER，Oxygen Enhancement Ratio',
-            'h2_en': 'Oxygen enhancement ratio, OER',
-            'body_zh': """
-<div class="formula-box">OER = Dose under hypoxic condition / Dose under aerobic condition</div>
-<p>OER 代表達到相同 biological effect 時，hypoxic condition 需要多少倍 dose。OER 越高，代表 oxygen 越能增強 radiation cell kill。</p>
-<h3>Oxygen fixation hypothesis</h3>
-<p>Oxygen 的作用是把 free radicals 造成的 DNA damage fix 成永久損傷。沒有 oxygen 時，indirect DNA damage 較可能被修復。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>數值</th></tr></thead><tbody><tr><td>Oxygen 必須存在時間</td><td>radiation exposure 當下或 microseconds 內</td></tr><tr><td>Free radical lifespan</td><td>約 10⁻⁵ 到 10⁻⁹ 秒</td></tr></tbody></table></div>
-<h3>不同 radiation 的 OER</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Ionization density</th><th>Approximate OER</th></tr></thead><tbody><tr><td>X-rays / γ-rays / protons</td><td>Sparsely ionizing</td><td>2.5–3</td></tr><tr><td>Neutrons</td><td>Intermediately ionizing</td><td>1.6</td></tr><tr><td>α-particles</td><td>Densely ionizing</td><td>1</td></tr><tr><td>Minimum possible OER</td><td>—</td><td>1</td></tr></tbody></table></div>
-<h3>OER 與 cell cycle</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Cell cycle phase</th><th>OER</th><th>理由</th></tr></thead><tbody><tr><td>G1</td><td>Lowest</td><td>G1 細胞本來就較 radiosensitive</td></tr><tr><td>S phase</td><td>Highest</td><td>S phase 細胞最 radioresistant，因 DNA 已複製、repair 能力較強</td></tr></tbody></table></div>
-<h3>多少 oxygen 可達最大 OER？</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Oxygen concentration</th><th>OER effect</th></tr></thead><tbody><tr><td>0.5% O₂，約 3 mmHg</td><td>約 50% maximum OER</td></tr><tr><td>5% O₂，約 30 mmHg</td><td>約 100% maximum OER</td></tr><tr><td>100% O₂</td><td>不會再進一步增加 OER</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<div class="formula-box">OER = dose under hypoxic condition / dose under aerobic condition</div>
-<p>OER is the dose multiplier required under hypoxic conditions to achieve the same biological effect. Higher OER means oxygen more strongly enhances radiation cell kill.</p>
-<h3>Oxygen fixation hypothesis</h3>
-<p>Oxygen fixes free-radical DNA damage into permanent lesions. Without oxygen, indirect DNA damage is more likely to be repaired.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Value</th></tr></thead><tbody><tr><td>When oxygen must be present</td><td>During radiation exposure or within microseconds</td></tr><tr><td>Free radical lifespan</td><td>About 10⁻⁵ to 10⁻⁹ seconds</td></tr></tbody></table></div>
-<h3>OER by radiation type</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation type</th><th>Ionization density</th><th>Approximate OER</th></tr></thead><tbody><tr><td>X-rays / γ-rays / protons</td><td>Sparsely ionizing</td><td>2.5–3</td></tr><tr><td>Neutrons</td><td>Intermediately ionizing</td><td>1.6</td></tr><tr><td>α-particles</td><td>Densely ionizing</td><td>1</td></tr><tr><td>Minimum possible OER</td><td>—</td><td>1</td></tr></tbody></table></div>
-<h3>OER and cell cycle</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Cell-cycle phase</th><th>OER</th><th>Reason</th></tr></thead><tbody><tr><td>G1</td><td>Lowest</td><td>G1 cells are already more radiosensitive</td></tr><tr><td>S phase</td><td>Highest</td><td>S-phase cells are most radioresistant because DNA has replicated and repair capacity is strong</td></tr></tbody></table></div>
-<h3>Oxygen concentration and maximum OER</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Oxygen concentration</th><th>OER effect</th></tr></thead><tbody><tr><td>0.5% O₂, about 3 mmHg</td><td>About 50% of maximum OER</td></tr><tr><td>5% O₂, about 30 mmHg</td><td>About 100% of maximum OER</td></tr><tr><td>100% O₂</td><td>No additional OER increase</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': 'Hypoxia',
-            'label_en': 'HYPOXIA',
-            'h2_zh': 'Tumor hypoxia',
-            'h2_en': 'Tumor hypoxia',
-            'body_zh': """
-<p>Oxygen 只能擴散約 <strong>70–200 μm</strong>，因此只有接近血管的 tumor cells 能維持較好 oxygenation。遠離血管的區域容易 hypoxic 或 necrotic。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Hypoxia type</th><th>成因</th><th>特徵</th><th>Reoxygenation</th></tr></thead><tbody><tr><td>Acute hypoxia</td><td>Temporary vessel closing / blockage</td><td>暫時性低氧</td><td>可快速 reoxygenate</td></tr><tr><td>Chronic hypoxia</td><td>距血管太遠，或 permanent vessel closure</td><td>常伴 necrosis，較 radioresistant</td><td>慢速 reoxygenate</td></tr></tbody></table></div>
-<p>Hypoxia 會限制 RT success，因為 hypoxic cells 對 low LET radiation 較 resistant。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>類別</th><th>例子</th><th>意義</th></tr></thead><tbody><tr><td>Hypoxia marker</td><td>Pimonidazole</td><td>2-nitroimidazole，可標記 hypoxic cells</td></tr><tr><td>Hypoxia transcription factor</td><td>HIF-1α</td><td>Hypoxia 時不被 hydroxylated，因此不被 VHL ubiquitination degradation</td></tr><tr><td>Hypoxic radiosensitizer</td><td>Nitroimidazoles</td><td>在 hypoxic cells 中與 macromolecules irreversible binding</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<p>Oxygen diffuses only about <strong>70–200 μm</strong>, so tumor cells near blood vessels have better oxygenation. Regions far from vessels are prone to hypoxia or necrosis.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Hypoxia type</th><th>Cause</th><th>Feature</th><th>Reoxygenation</th></tr></thead><tbody><tr><td>Acute hypoxia</td><td>Temporary vessel closing or blockage</td><td>Transient hypoxia</td><td>Can reoxygenate quickly</td></tr><tr><td>Chronic hypoxia</td><td>Too far from vessels or permanent vessel closure</td><td>Often with necrosis and more radioresistant</td><td>Slow reoxygenation</td></tr></tbody></table></div>
-<p>Hypoxia limits RT success because hypoxic cells are more resistant to low-LET radiation.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Category</th><th>Example</th><th>Meaning</th></tr></thead><tbody><tr><td>Hypoxia marker</td><td>Pimonidazole</td><td>2-nitroimidazole marker for hypoxic cells</td></tr><tr><td>Hypoxia transcription factor</td><td>HIF-1α</td><td>Under hypoxia, it is not hydroxylated and avoids VHL-mediated ubiquitination/degradation</td></tr><tr><td>Hypoxic radiosensitizer</td><td>Nitroimidazoles</td><td>Irreversibly bind macromolecules in hypoxic cells</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': 'LET',
-            'label_en': 'LET',
-            'h2_zh': 'LET，Linear Energy Transfer',
-            'h2_en': 'Linear energy transfer, LET',
-            'body_zh': """
-<div class="formula-box">LET = ΔE / ΔL</div>
-<p>LET 是 particle track 每單位長度沉積的平均能量，單位為 keV/μm。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>意義</th></tr></thead><tbody><tr><td>Low LET</td><td>能量沉積稀疏，較依賴 indirect DNA damage 和 oxygen</td></tr><tr><td>High LET</td><td>能量沉積密集，造成 clustered DNA damage，較不依賴 oxygen</td></tr></tbody></table></div>
-<h3>不同 radiation 的 LET</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>LET，keV/μm</th></tr></thead><tbody><tr><td>Cobalt-60 γ-rays，1.1 MV</td><td>0.2</td></tr><tr><td>250 kV x-rays</td><td>2.0</td></tr><tr><td>150 MeV protons</td><td>0.5</td></tr><tr><td>10 MeV protons</td><td>4.7</td></tr><tr><td>2.5 MeV α-particles</td><td>166</td></tr></tbody></table></div>
-<p>高 LET radiation 包括 α-particles、neutrons；一般來說 α-particles / neutrons &gt; protons &gt; x-rays / γ-rays。對同一種 charged particle，能量越低，LET 越高。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>Survival curve</th><th>Biological implication</th></tr></thead><tbody><tr><td>Low LET photons</td><td>有明顯 shoulder</td><td>sublethal damage repair 較重要</td></tr><tr><td>High LET α / carbon ions</td><td>shoulder 小或近乎消失</td><td>單一 track 就可造成 lethal clustered DSB</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<div class="formula-box">LET = ΔE / ΔL</div>
-<p>LET is the average energy deposited per unit track length, measured in keV/μm.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Meaning</th></tr></thead><tbody><tr><td>Low LET</td><td>Sparse energy deposition; more dependent on indirect DNA damage and oxygen</td></tr><tr><td>High LET</td><td>Dense energy deposition; causes clustered DNA damage and is less oxygen-dependent</td></tr></tbody></table></div>
-<h3>LET of different radiation types</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>LET, keV/μm</th></tr></thead><tbody><tr><td>Cobalt-60 γ-rays, 1.1 MV</td><td>0.2</td></tr><tr><td>250 kV x-rays</td><td>2.0</td></tr><tr><td>150 MeV protons</td><td>0.5</td></tr><tr><td>10 MeV protons</td><td>4.7</td></tr><tr><td>2.5 MeV α-particles</td><td>166</td></tr></tbody></table></div>
-<p>High-LET radiation includes α-particles and neutrons. In general: α-particles / neutrons &gt; protons &gt; x-rays / γ-rays. For the same charged particle, lower energy means higher LET.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Radiation</th><th>Survival curve</th><th>Biological implication</th></tr></thead><tbody><tr><td>Low-LET photons</td><td>Clear shoulder</td><td>Sublethal damage repair is important</td></tr><tr><td>High-LET α / carbon ions</td><td>Small or absent shoulder</td><td>A single track can produce lethal clustered DSBs</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': 'RBE',
-            'label_en': 'RBE',
-            'h2_zh': 'RBE，Relative Biological Effectiveness',
-            'h2_en': 'Relative biological effectiveness, RBE',
-            'body_zh': """
-<div class="formula-box">RBE = D<sub>250 kV x-rays</sub> / D<sub>x</sub></div>
-<p>RBE 是達到相同 biological effect 時，250 kV x-rays 所需 dose 與某 radiation 所需 dose 的比值。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>影響</th></tr></thead><tbody><tr><td>Radiation quality / LET</td><td>LET 越高，通常 RBE 越高，直到 overkill region</td></tr><tr><td>Dose</td><td>不同 dose 水平 RBE 不同</td></tr><tr><td>Number of fractions</td><td>fraction size 會影響 RBE</td></tr><tr><td>Dose rate</td><td>對 low LET radiation 影響較大</td></tr><tr><td>Biological system / endpoint</td><td>不同組織、endpoint 不同</td></tr></tbody></table></div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>概念</th><th>重點</th></tr></thead><tbody><tr><td>Tissue type</td><td>Late-responding tissues 的 RBE 較高，因 low LET x-rays 的 shoulder / repair effect 較明顯</td></tr><tr><td>Fraction size</td><td>RBE 在小 fraction size 時較高，在大 fraction size 時下降</td></tr><tr><td>LET</td><td>RBE 隨 LET 增加而上升，到約 100 keV/μm 最高；之後因 overkill effect 下降</td></tr><tr><td>Oxygen</td><td>High LET RBE 在 hypoxic cells 較高，因 reference x-rays 在 hypoxia 中較弱</td></tr></tbody></table></div>
-<h3>OER、LET、RBE 三者關係</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>LET</th><th>OER</th><th>RBE</th></tr></thead><tbody><tr><td>Low LET</td><td>高，約 2.5–3</td><td>較低</td></tr><tr><td>Intermediate LET</td><td>中等，約 1.6</td><td>中等</td></tr><tr><td>High LET</td><td>接近 1</td><td>高，直到 overkill region</td></tr></tbody></table></div>
-<div class="clinical-note">核心記法：LET ↑ → OER ↓ → RBE ↑，但 RBE 到約 100 keV/μm 後因 overkill 下降。</div>
-""",
-            'body_en': """
-<div class="formula-box">RBE = D<sub>250 kV x-rays</sub> / D<sub>x</sub></div>
-<p>RBE is the ratio of the dose of 250 kV x-rays to the dose of another radiation required to produce the same biological effect.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Factor</th><th>Effect</th></tr></thead><tbody><tr><td>Radiation quality / LET</td><td>Higher LET usually increases RBE until the overkill region</td></tr><tr><td>Dose</td><td>RBE differs by dose level</td></tr><tr><td>Number of fractions</td><td>Fraction size affects RBE</td></tr><tr><td>Dose rate</td><td>More important for low-LET radiation</td></tr><tr><td>Biological system / endpoint</td><td>Different tissues and endpoints have different RBE</td></tr></tbody></table></div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Tissue type</td><td>RBE is higher in late-responding tissues because low-LET x-rays have more shoulder/repair effect</td></tr><tr><td>Fraction size</td><td>RBE is higher at small fraction size and lower at large fraction size</td></tr><tr><td>LET</td><td>RBE rises with LET up to about 100 keV/μm, then falls due to overkill</td></tr><tr><td>Oxygen</td><td>High-LET RBE is higher in hypoxic cells because reference x-rays are weaker under hypoxia</td></tr></tbody></table></div>
-<h3>Relationship among OER, LET, and RBE</h3>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>LET</th><th>OER</th><th>RBE</th></tr></thead><tbody><tr><td>Low LET</td><td>High, about 2.5–3</td><td>Lower</td></tr><tr><td>Intermediate LET</td><td>Intermediate, about 1.6</td><td>Intermediate</td></tr><tr><td>High LET</td><td>Close to 1</td><td>High until overkill region</td></tr></tbody></table></div>
-<div class="clinical-note">Core memory: LET ↑ → OER ↓ → RBE ↑, but RBE falls after about 100 keV/μm because of overkill.</div>
-""",
-        },
-
-        {
-            'label_zh': 'Constraints 概念',
-            'label_en': 'CONSTRAINT CONCEPTS',
-            'h2_zh': 'Dose constraints 基本概念',
-            'h2_en': 'Basic concepts for dose constraints',
-            'body_zh': """
-<p>Dose constraints 需要考慮 dose per fraction、normal tissue α/β ratio、serial vs parallel organ、prior RT history、disease-site protocol，以及 conventional fractionation vs SRS / SBRT。</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Organ type</th><th>Toxicity depends on</th><th>一句話理解</th><th>例子</th></tr></thead><tbody><tr><td>Serial organ</td><td>Max dose / point dose</td><td>戳破一點，整條功能壞掉</td><td>Spinal cord、brainstem、optic nerves、bowel</td></tr><tr><td>Parallel organ</td><td>Mean dose / volume dose</td><td>壞掉足夠多 volume，器官功能才壞</td><td>Lung、liver、kidney、parotid gland</td></tr></tbody></table></div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Constraint</th><th>意義</th></tr></thead><tbody><tr><td>V50% &lt; 50%</td><td>接受 ≥50% prescription dose 的 volume 要 &lt;50%</td></tr><tr><td>V15 Gy &lt; 50%</td><td>接受 ≥15 Gy 的 volume 要 &lt;50%</td></tr><tr><td>Dmax ≤110%</td><td>最大點劑量不能超過 110%</td></tr><tr><td>D0.03cc</td><td>接近 voxel-size 的 small-volume max dose</td></tr><tr><td>D90% ≥100%</td><td>90% target volume 至少接受 100% prescription dose</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<p>Dose constraints depend on dose per fraction, normal-tissue α/β ratio, serial versus parallel organ behavior, prior RT history, disease-site protocol, and whether treatment uses conventional fractionation or SRS/SBRT.</p>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Organ type</th><th>Toxicity depends on</th><th>One-sentence concept</th><th>Examples</th></tr></thead><tbody><tr><td>Serial organ</td><td>Max dose / point dose</td><td>Damage at one critical point can break the whole functional chain</td><td>Spinal cord, brainstem, optic nerves, bowel</td></tr><tr><td>Parallel organ</td><td>Mean dose / volume dose</td><td>Enough functional volume must be damaged before organ function fails</td><td>Lung, liver, kidney, parotid gland</td></tr></tbody></table></div>
-<div class="table-wrap"><table class="oncology-table"><thead><tr><th>Constraint</th><th>Meaning</th></tr></thead><tbody><tr><td>V50% &lt; 50%</td><td>Volume receiving ≥50% prescription dose must be &lt;50%</td></tr><tr><td>V15 Gy &lt; 50%</td><td>Volume receiving ≥15 Gy must be &lt;50%</td></tr><tr><td>Dmax ≤110%</td><td>Maximum point dose must not exceed 110%</td></tr><tr><td>D0.03cc</td><td>Small-volume maximum dose near voxel-size</td></tr><tr><td>D90% ≥100%</td><td>At least 90% of target volume receives 100% of prescription dose</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': 'QUANTEC',
-            'label_en': 'QUANTEC',
-            'h2_zh': 'Common QUANTEC constraints，2 Gy/Fx conventional fractionation',
-            'h2_en': 'Common QUANTEC constraints for 2 Gy/Fx conventional fractionation',
-            'body_zh': """
-<div class="table-wrap"><table class="oncology-table dose-table"><thead><tr><th>Organ</th><th>Constraint</th><th>Approximate risk</th></tr></thead><tbody><tr><td>Brain</td><td>Max &lt;60 Gy</td><td>&lt;3% symptomatic necrosis</td></tr><tr><td>Brainstem</td><td>Max &lt;54 Gy</td><td>&lt;5% neuropathy or necrosis</td></tr><tr><td>Optic nerves / chiasm</td><td>Max &lt;55 Gy</td><td>&lt;3% optic neuropathy</td></tr><tr><td>Spinal cord</td><td>Max &lt;50 Gy</td><td>&lt;0.3% myelopathy</td></tr><tr><td>Cochlea</td><td>Mean ≤45 Gy</td><td>&lt;30% sensorineural hearing loss</td></tr><tr><td>Bilateral parotid</td><td>Mean &lt;26 Gy</td><td>&lt;25% long-term salivary dysfunction</td></tr><tr><td>Lung</td><td>V20 ≤30%</td><td>&lt;20% symptomatic pneumonitis</td></tr><tr><td>Esophagus</td><td>Mean &lt;34 Gy</td><td>5–20% grade 3+ esophagitis</td></tr><tr><td>Heart</td><td>Mean &lt;26 Gy</td><td>&lt;15% pericarditis</td></tr><tr><td>Bilateral kidney</td><td>Mean &lt;15–18 Gy</td><td>&lt;5% clinical dysfunction</td></tr><tr><td>Stomach</td><td>Max &lt;45 Gy</td><td>&lt;7% ulceration</td></tr><tr><td>Small bowel / peritoneal cavity</td><td>V45 Gy &lt;195 cc</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Rectum</td><td>V75 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Bladder</td><td>V80 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Penile bulb</td><td>Mean &lt;50 Gy</td><td>&lt;35% severe erectile dysfunction</td></tr></tbody></table></div>
-<h3>Spinal cord QUANTEC risk</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Spinal cord total dose，2 Gy/Fx</th><th>Risk of myelopathy</th></tr></thead><tbody><tr><td>50 Gy</td><td>0.2%</td></tr><tr><td>60 Gy</td><td>6%</td></tr><tr><td>69 Gy</td><td>50%</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<div class="table-wrap"><table class="oncology-table dose-table"><thead><tr><th>Organ</th><th>Constraint</th><th>Approximate risk</th></tr></thead><tbody><tr><td>Brain</td><td>Max &lt;60 Gy</td><td>&lt;3% symptomatic necrosis</td></tr><tr><td>Brainstem</td><td>Max &lt;54 Gy</td><td>&lt;5% neuropathy or necrosis</td></tr><tr><td>Optic nerves / chiasm</td><td>Max &lt;55 Gy</td><td>&lt;3% optic neuropathy</td></tr><tr><td>Spinal cord</td><td>Max &lt;50 Gy</td><td>&lt;0.3% myelopathy</td></tr><tr><td>Cochlea</td><td>Mean ≤45 Gy</td><td>&lt;30% sensorineural hearing loss</td></tr><tr><td>Bilateral parotid</td><td>Mean &lt;26 Gy</td><td>&lt;25% long-term salivary dysfunction</td></tr><tr><td>Lung</td><td>V20 ≤30%</td><td>&lt;20% symptomatic pneumonitis</td></tr><tr><td>Esophagus</td><td>Mean &lt;34 Gy</td><td>5–20% grade 3+ esophagitis</td></tr><tr><td>Heart</td><td>Mean &lt;26 Gy</td><td>&lt;15% pericarditis</td></tr><tr><td>Bilateral kidney</td><td>Mean &lt;15–18 Gy</td><td>&lt;5% clinical dysfunction</td></tr><tr><td>Stomach</td><td>Max &lt;45 Gy</td><td>&lt;7% ulceration</td></tr><tr><td>Small bowel / peritoneal cavity</td><td>V45 Gy &lt;195 cc</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Rectum</td><td>V75 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Bladder</td><td>V80 Gy &lt;15%</td><td>&lt;10% grade 3+ toxicity</td></tr><tr><td>Penile bulb</td><td>Mean &lt;50 Gy</td><td>&lt;35% severe erectile dysfunction</td></tr></tbody></table></div>
-<h3>Spinal cord QUANTEC risk</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Spinal cord total dose, 2 Gy/Fx</th><th>Risk of myelopathy</th></tr></thead><tbody><tr><td>50 Gy</td><td>0.2%</td></tr><tr><td>60 Gy</td><td>6%</td></tr><tr><td>69 Gy</td><td>50%</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': 'HYTEC',
-            'label_en': 'HYTEC',
-            'h2_zh': 'HYTEC constraints for SRS / SBRT',
-            'h2_en': 'HYTEC constraints for SRS / SBRT',
-            'body_zh': """
-<p>HYTEC 是 SRS / SBRT constraints 的常用 reference。Spinal cord constraints 約對應 1–5% myelopathy risk。</p>
-<div class="table-wrap"><table class="oncology-table dose-table compact-table"><thead><tr><th>Fractions</th><th>Spinal cord Dmax</th><th>Risk</th></tr></thead><tbody><tr><td>1</td><td>12.4 Gy</td><td>1–5%</td></tr><tr><td>2</td><td>17 Gy</td><td>1–5%</td></tr><tr><td>3</td><td>20.3 Gy</td><td>1–5%</td></tr><tr><td>4</td><td>23 Gy</td><td>1–5%</td></tr><tr><td>5</td><td>25.3 Gy</td><td>1–5%</td></tr></tbody></table></div>
-<div class="clinical-note">臨床提醒：SBRT / SRS 不能只看 physical dose，要轉 BED / EQD2 並結合 organ-specific tolerance、prior RT、fractionation、hot spot location。QUANTEC 適合 conventional RT，HYTEC 適合 SRS / SBRT，但最終仍應看 disease-site protocol。</div>
-""",
-            'body_en': """
-<p>HYTEC is a common reference for SRS / SBRT constraints. The spinal cord constraints below correspond roughly to 1–5% myelopathy risk.</p>
-<div class="table-wrap"><table class="oncology-table dose-table compact-table"><thead><tr><th>Fractions</th><th>Spinal cord Dmax</th><th>Risk</th></tr></thead><tbody><tr><td>1</td><td>12.4 Gy</td><td>1–5%</td></tr><tr><td>2</td><td>17 Gy</td><td>1–5%</td></tr><tr><td>3</td><td>20.3 Gy</td><td>1–5%</td></tr><tr><td>4</td><td>23 Gy</td><td>1–5%</td></tr><tr><td>5</td><td>25.3 Gy</td><td>1–5%</td></tr></tbody></table></div>
-<div class="clinical-note">Clinical reminder: SRS/SBRT cannot be judged by physical dose alone. Convert using BED/EQD2 and integrate organ-specific tolerance, prior RT, fractionation, and hotspot location. QUANTEC is most relevant for conventional RT; HYTEC is used for SRS/SBRT; disease-site protocol still matters.</div>
-""",
-        },
-
-        {
-            'label_zh': '臨床轉譯',
-            'label_en': 'CLINICAL TRANSLATION',
-            'h2_zh': 'Radiobiology clinical translation',
-            'h2_en': 'Clinical translation of radiobiology',
-            'body_zh': """
-<h3>一、為什麼 hypoxia 讓 RT 失效？</h3>
-<p>Low LET photons 很依賴 indirect free radical damage；oxygen 會把 radical-induced damage 固定成 permanent lesion。Hypoxia 時這些 lesion 較可能被 repair，因此 cell kill 下降。Photon OER 約 2.5–3，代表 hypoxic cells 可能需要約 2.5–3 倍 dose 才達到相同效果。</p>
-
-<h3>二、為什麼高 LET radiation 對 hypoxic tumors 有吸引力？</h3>
-<p>High LET radiation 造成 dense ionization 和 clustered DNA damage，較不依賴 oxygen，所以 OER 較低。α-particles 的 OER 約 1，代表幾乎沒有 oxygen enhancement effect。因此 hypoxic tumors 理論上較適合 high LET approaches，例如 carbon ions 或 alpha-emitter radiopharmaceutical therapy。</p>
-
-<h3>三、為什麼 fractionation 可保護正常組織？</h3>
-<p>Fractionation 讓正常組織有時間修復 sublethal damage，尤其是 late-responding tissues。Late tissues 低 α/β，對 fraction size 敏感，所以減小 dose per fraction 可以大幅降低 late toxicity BED。</p>
-
-<h3>四、為什麼 SBRT late toxicity 特別需要小心？</h3>
-<p>SBRT dose per fraction 高，對低 α/β tissues 的 BED 增幅很大。Serial organs 如 spinal cord、brainstem、optic apparatus 只要小 volume hot spot 過高就可能造成嚴重 toxicity，因此看 Dmax / D0.03cc 特別重要。</p>
-""",
-            'body_en': """
-<h3>1. Why does hypoxia reduce RT effectiveness?</h3>
-<p>Low-LET photons depend heavily on indirect free-radical damage. Oxygen fixes radical-induced damage into permanent lesions. Under hypoxia, these lesions are more likely to be repaired, reducing cell kill. Photon OER is about 2.5–3, meaning hypoxic cells may need 2.5–3 times the dose to achieve the same effect.</p>
-
-<h3>2. Why is high-LET radiation attractive for hypoxic tumors?</h3>
-<p>High-LET radiation creates dense ionization and clustered DNA damage, making it less dependent on oxygen. α-particles have OER around 1, meaning almost no oxygen enhancement effect. Hypoxic tumors may therefore be theoretically suited to high-LET approaches such as carbon ions or alpha-emitter radiopharmaceutical therapy.</p>
-
-<h3>3. Why does fractionation protect normal tissue?</h3>
-<p>Fractionation allows normal tissues to repair sublethal damage, especially late-responding tissues. Late tissues have low α/β and are sensitive to fraction size, so reducing dose per fraction can substantially reduce late-toxicity BED.</p>
-
-<h3>4. Why is SBRT late toxicity especially important?</h3>
-<p>SBRT uses high dose per fraction, which sharply increases BED in low-α/β tissues. Serial organs such as spinal cord, brainstem, and optic apparatus can be severely damaged by a small-volume hotspot, so Dmax / D0.03cc is critical.</p>
-""",
-        },
-
-        {
-            'label_zh': '高分表',
-            'label_en': 'HIGH-YIELD TABLES',
-            'h2_zh': '高分記憶表',
-            'h2_en': 'High-yield memory tables',
-            'body_zh': """
-<h3>α/β</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>記憶點</th><th>內容</th></tr></thead><tbody><tr><td>Early = high α/β</td><td>約 10；多數腫瘤、skin、GI、bone marrow</td></tr><tr><td>Late = low α/β</td><td>約 3；lung、kidney、liver、bladder</td></tr><tr><td>Cord = very low</td><td>約 2</td></tr><tr><td>Fraction size ↑</td><td>Late toxicity 特別 ↑</td></tr></tbody></table></div>
-<h3>DNA repair</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Damage</th><th>Repair</th><th>Key words</th></tr></thead><tbody><tr><td>Base error / SSB</td><td>BER</td><td>Glycosylase、APE1、PARP、XRCC1</td></tr><tr><td>Bulky adduct / UV dimer</td><td>NER</td><td>XP、Cockayne、TFIIH</td></tr><tr><td>Replication mismatch</td><td>MMR</td><td>Lynch、MLH1/MSH2/MSH6/PMS2</td></tr><tr><td>DSB fast / G1</td><td>NHEJ</td><td>Ku70/80、DNA-PKcs、Artemis、Ligase IV</td></tr><tr><td>DSB accurate / S-G2</td><td>HR</td><td>BRCA1/2、RAD51</td></tr><tr><td>Crosslink</td><td>Fanconi pathway</td><td>Fanconi anemia</td></tr></tbody></table></div>
-<h3>OER / LET / RBE</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>OER</td><td>Hypoxic dose / aerobic dose</td></tr><tr><td>Photon OER</td><td>2.5–3</td></tr><tr><td>Neutron OER</td><td>1.6</td></tr><tr><td>α-particle OER</td><td>1</td></tr><tr><td>LET</td><td>Energy deposited per unit track length</td></tr><tr><td>LET ↑</td><td>OER ↓，RBE ↑，survival curve shoulder ↓</td></tr><tr><td>RBE peak</td><td>約 100 keV/μm</td></tr><tr><td>RBE after peak</td><td>Overkill → RBE 下降</td></tr></tbody></table></div>
-<h3>Dose constraints</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Serial organ</td><td>Dmax / point dose matters</td></tr><tr><td>Parallel organ</td><td>Mean / Vx matters</td></tr><tr><td>Conventional constraints</td><td>QUANTEC</td></tr><tr><td>SRS / SBRT constraints</td><td>HYTEC</td></tr><tr><td>Re-irradiation</td><td>要非常小心，尤其 prior RT within last year</td></tr></tbody></table></div>
-""",
-            'body_en': """
-<h3>α/β</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Memory point</th><th>Content</th></tr></thead><tbody><tr><td>Early = high α/β</td><td>About 10; many tumors, skin, GI, bone marrow</td></tr><tr><td>Late = low α/β</td><td>About 3; lung, kidney, liver, bladder</td></tr><tr><td>Cord = very low</td><td>About 2</td></tr><tr><td>Fraction size ↑</td><td>Late toxicity especially ↑</td></tr></tbody></table></div>
-<h3>DNA repair</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Damage</th><th>Repair</th><th>Key words</th></tr></thead><tbody><tr><td>Base error / SSB</td><td>BER</td><td>Glycosylase, APE1, PARP, XRCC1</td></tr><tr><td>Bulky adduct / UV dimer</td><td>NER</td><td>XP, Cockayne, TFIIH</td></tr><tr><td>Replication mismatch</td><td>MMR</td><td>Lynch, MLH1/MSH2/MSH6/PMS2</td></tr><tr><td>DSB fast / G1</td><td>NHEJ</td><td>Ku70/80, DNA-PKcs, Artemis, Ligase IV</td></tr><tr><td>DSB accurate / S-G2</td><td>HR</td><td>BRCA1/2, RAD51</td></tr><tr><td>Crosslink</td><td>Fanconi pathway</td><td>Fanconi anemia</td></tr></tbody></table></div>
-<h3>OER / LET / RBE</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>OER</td><td>Hypoxic dose / aerobic dose</td></tr><tr><td>Photon OER</td><td>2.5–3</td></tr><tr><td>Neutron OER</td><td>1.6</td></tr><tr><td>α-particle OER</td><td>1</td></tr><tr><td>LET</td><td>Energy deposited per unit track length</td></tr><tr><td>LET ↑</td><td>OER ↓, RBE ↑, survival curve shoulder ↓</td></tr><tr><td>RBE peak</td><td>About 100 keV/μm</td></tr><tr><td>RBE after peak</td><td>Overkill → RBE falls</td></tr></tbody></table></div>
-<h3>Dose constraints</h3>
-<div class="table-wrap"><table class="oncology-table compact-table"><thead><tr><th>Concept</th><th>Key point</th></tr></thead><tbody><tr><td>Serial organ</td><td>Dmax / point dose matters</td></tr><tr><td>Parallel organ</td><td>Mean / Vx matters</td></tr><tr><td>Conventional constraints</td><td>QUANTEC</td></tr><tr><td>SRS / SBRT constraints</td><td>HYTEC</td></tr><tr><td>Re-irradiation</td><td>Be very careful, especially if prior RT was within the last year</td></tr></tbody></table></div>
-""",
-        },
-
-        {
-            'label_zh': '總結',
-            'label_en': 'TAKE-HOME',
-            'h2_zh': '最後總結',
-            'h2_en': 'Final take-home summary',
-            'body_zh': """
-<p>Radiobiology 可以用一條線串起來：</p>
-<div class="clinical-note">Radiation → direct / indirect DNA damage → DSB → ATM / γ-H2AX / 53BP1 / BRCA signaling → NHEJ or HR repair；若 repair failed 或 misrepair → chromosome aberration → cell death。</div>
-<p>Dose fractionation 的臨床意義是：用 BED / EQD2 把不同 fractionation 轉換成 biological dose；低 α/β late tissues 對大 fraction 特別敏感，所以 SBRT / hypofractionation 必須嚴格看 OAR constraints。</p>
-<p>OER、LET、RBE 的核心關係是：hypoxia 讓 low LET photons 變弱；LET 越高，oxygen dependency 越低，RBE 越高，但 RBE 在約 100 keV/μm 後因 overkill 下降。</p>
-<div class="clinical-note">臨床最重要的一句話：好的放射治療計畫不是只把 tumor dose 開高，而是在 TCP、NTCP、fractionation biology、oxygenation、DNA repair capacity、serial/parallel organ constraints 之間取得最佳平衡。</div>
-""",
-            'body_en': """
-<p>Radiobiology can be connected as one chain:</p>
-<div class="clinical-note">Radiation → direct / indirect DNA damage → DSB → ATM / γ-H2AX / 53BP1 / BRCA signaling → NHEJ or HR repair. If repair fails or misrepair occurs → chromosome aberration → cell death.</div>
-<p>The clinical meaning of dose fractionation is to convert different schedules into biological dose using BED/EQD2. Low-α/β late tissues are especially sensitive to large fractions, so SBRT/hypofractionation requires strict OAR constraints.</p>
-<p>The core relationship among OER, LET, and RBE is: hypoxia weakens low-LET photons; as LET increases, oxygen dependency falls and RBE rises, but RBE falls after about 100 keV/μm because of overkill.</p>
-<div class="clinical-note">The most important clinical sentence: a good radiotherapy plan is not simply dose escalation to the tumor; it is the optimal balance among TCP, NTCP, fractionation biology, oxygenation, DNA repair capacity, and serial/parallel organ constraints.</div>
-""",
-        },
-
-    ],
-
-    'excel_sheet': 'Radiobiology',
-
-    'trial_filter': [
-        'radiobiology',
-        'TCP',
-        'NTCP',
-        'fractionation',
-        'linear quadratic model',
-        'LQ model',
-        'BED',
-        'EQD2',
-        'alpha beta',
-        'α/β',
-        '4 Rs',
-        'repair',
-        'repopulation',
-        'redistribution',
-        'reoxygenation',
-        'DNA damage',
-        'double strand break',
-        'DSB',
-        'single strand break',
-        'SSB',
-        'gamma H2AX',
-        'γ-H2AX',
-        '53BP1',
-        'ATM',
-        'MRN',
-        'MRE11',
-        'RAD50',
-        'NBS1',
-        'CHK2',
-        'BRCA1',
-        'BRCA2',
-        'RAD51',
-        'NHEJ',
-        'homologous recombination',
-        'HR',
-        'BER',
-        'NER',
-        'MMR',
-        'PARP inhibitor',
-        'Fanconi',
-        'OER',
-        'oxygen enhancement ratio',
-        'hypoxia',
-        'pimonidazole',
-        'HIF-1 alpha',
-        'LET',
-        'linear energy transfer',
-        'RBE',
-        'relative biological effectiveness',
-        'QUANTEC',
-        'HYTEC',
-        'serial organ',
-        'parallel organ',
-        'SBRT',
-        'SRS',
-    ],
-
-    "prev": ["physics.html", "物理", "Physics"],
-    "next": ["cns.html", "CNS", "CNS"],
-})
-
-
-PAGES.append({
-    'slug': 'radbio',
-    'emoji': '🧬',
-    'title_zh': '放射生物學',
-    'title_en': 'Radiobiology',
     'sub_zh': '放射生物學核心：TCP／NTCP、分割治療、BED／EQD2、4R、DNA 損傷與修復、OER、腫瘤缺氧、LET／RBE，以及 QUANTEC／HYTEC 劑量限制。',
     'sub_en': 'Core radiobiology: TCP/NTCP, fractionation, BED/EQD2, the 4 Rs, DNA damage and repair, OER, hypoxia, LET/RBE, and QUANTEC/HYTEC constraints.',
 
@@ -1941,6 +1430,84 @@ PAGES.append({
 <h3>Acute versus late toxicity</h3>
 <div class="table-wrap"><table class="oncology-table"><thead><tr><th>Toxicity</th><th>Feature</th><th>Main driver</th></tr></thead><tbody><tr><td>Acute toxicity</td><td>Inflammation</td><td>Total dose</td></tr><tr><td>Late toxicity</td><td>Fibrosis, sclerosis</td><td>Dose per fraction; evaluate with BED/EQD2</td></tr></tbody></table></div>
 <div class="clinical-note">Simple memory: acute toxicity tracks total dose; late toxicity tracks fraction size.</div>
+            """,
+        },
+
+        {
+            'label_zh': '互動式 LQ 模型：組織、射束、氧效應與存活曲線',
+            'label_en': 'INTERACTIVE LQ MODEL: Tissue, Beam, Oxygen Effect, and Survival Curve',
+            'h2_zh': '互動式 Linear-Quadratic Survival Curve',
+            'h2_en': 'Interactive Linear-Quadratic Survival Curve',
+            'body_zh': """
+<p>這個互動模型用 <span class="highlight">SF = exp[-(αD + βD²) × OMF × RBE]</span> 即時計算細胞存活率。你可以選擇組織類型、治療射束、氧合狀態與修復能力，並用拉桿調整 α/β ratio、α、單次劑量與總劑量。</p>
+<p>這不是臨床處方工具，而是用來直覺化理解：低 α/β 組織為何對大分次更敏感、缺氧為何會讓 survival curve 變平、質子／高 LET 射束如何透過 RBE 與 β 成分改變曲線。</p>
+
+<div class="lq-widget" id="lq-widget" data-lq-widget>
+  <style>
+    .lq-widget{border:1px solid var(--c-border-light);border-radius:14px;background:#fff;box-shadow:var(--shadow-md);overflow:hidden;margin:22px 0}.lq-widget *{box-sizing:border-box}.lq-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px;background:linear-gradient(135deg,#f7fbf9,#eef5f2);border-bottom:1px solid var(--c-border-light)}.lq-control{display:flex;flex-direction:column;gap:6px}.lq-control label{font-size:.78rem;font-weight:800;color:var(--c-accent-dark)}.lq-control select,.lq-control input[type=range]{width:100%}.lq-control select{border:1px solid var(--c-border);border-radius:8px;background:#fff;padding:8px 10px;font:inherit;color:var(--c-ink)}.lq-body{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:18px;padding:18px}.lq-plot-wrap{min-width:0}.lq-plot{width:100%;height:auto;display:block;border:1px solid var(--c-border-light);border-radius:10px;background:linear-gradient(#fff,#fbfaf6)}.lq-slider-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}.lq-range{padding:10px;border:1px solid var(--c-border-light);border-radius:10px;background:#fbfaf6}.lq-range label{display:flex;justify-content:space-between;gap:10px;font-size:.82rem;font-weight:800;color:var(--c-ink)}.lq-range output{font-family:var(--font-mono);font-weight:700;color:var(--c-accent-dark)}.lq-range input{width:100%;margin-top:8px}.lq-readout{display:grid;gap:10px;align-content:start}.lq-metric{border:1px solid var(--c-border-light);border-radius:10px;background:#fbfaf6;padding:10px}.lq-metric span{display:block;font-size:.72rem;font-weight:800;color:var(--c-ink-muted);text-transform:uppercase}.lq-metric strong{display:block;margin-top:2px;font-family:var(--font-mono);font-size:1rem;color:var(--c-accent-dark)}.lq-legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;font-size:.82rem;color:var(--c-ink-light)}.lq-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.lq-note{font-size:.84rem;color:var(--c-ink-light);line-height:1.55}@media(max-width:820px){.lq-toolbar,.lq-body,.lq-slider-grid{grid-template-columns:1fr}.lq-body{padding:14px}.lq-readout{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.lq-readout{grid-template-columns:1fr}}
+  </style>
+
+  <div class="lq-toolbar">
+    <div class="lq-control"><label for="lqPreset">組織／腫瘤 preset</label><select id="lqPreset"><option value="tumor">多數腫瘤／急性反應組織 α/β 10</option><option value="late">晚期正常組織 α/β 3</option><option value="cord">脊髓 α/β 2</option><option value="prostate">攝護腺癌 α/β 1.5</option><option value="melanoma">低放射敏感腫瘤</option></select></div>
+    <div class="lq-control"><label for="lqBeam">治療射束／LET</label><select id="lqBeam"><option value="photon">Photon / electron RBE 1.0</option><option value="proton">Proton clinical RBE 1.1</option><option value="distalProton">Distal proton edge RBE 1.2</option><option value="carbon">Carbon ion / high LET RBE 2.5</option></select></div>
+    <div class="lq-control"><label for="lqOxygen">氧合狀態</label><select id="lqOxygen"><option value="oxic">充分氧合 OER 1</option><option value="moderate">中度缺氧 OER 1.7</option><option value="hypoxic">嚴重缺氧 OER 2.8</option><option value="reoxygenated">再氧合後 OER 1.25</option></select></div>
+    <div class="lq-control"><label for="lqRepair">修復／生物特性</label><select id="lqRepair"><option value="standard">標準修復</option><option value="repairDeficient">DNA repair deficient</option><option value="radioresistant">Radioresistant / slow cycling</option><option value="sensitizer">Radiosensitizer / concurrent systemic therapy</option></select></div>
+  </div>
+
+  <div class="lq-body">
+    <div class="lq-plot-wrap">
+      <svg class="lq-plot" viewBox="0 0 720 420" role="img" aria-label="LQ survival curve">
+        <rect x="58" y="28" width="610" height="330" fill="#fff" stroke="#d5cfc0"/>
+        <g id="lqGrid"></g><g id="lqCurves"></g><g id="lqAxes"></g>
+      </svg>
+      <div class="lq-legend"><span><i class="lq-dot" style="background:#1a6b5a"></i>目前模型</span><span><i class="lq-dot" style="background:#c0392b"></i>缺氧比較</span><span><i class="lq-dot" style="background:#2563a8"></i>參考 photon oxic</span></div>
+      <div class="lq-slider-grid">
+        <div class="lq-range"><label>α <output id="lqAlphaOut"></output></label><input id="lqAlpha" type="range" min="0.03" max="0.80" step="0.01"></div>
+        <div class="lq-range"><label>α/β ratio <output id="lqRatioOut"></output></label><input id="lqRatio" type="range" min="0.5" max="20" step="0.1"></div>
+        <div class="lq-range"><label>單次劑量 d <output id="lqFxOut"></output></label><input id="lqFx" type="range" min="0.5" max="24" step="0.1"></div>
+        <div class="lq-range"><label>總劑量 D <output id="lqDoseOut"></output></label><input id="lqDose" type="range" min="1" max="80" step="1"></div>
+      </div>
+    </div>
+
+    <div class="lq-readout">
+      <div class="lq-metric"><span>β = α/(α/β)</span><strong id="lqBetaMetric"></strong></div>
+      <div class="lq-metric"><span>有效 α</span><strong id="lqEffAlphaMetric"></strong></div>
+      <div class="lq-metric"><span>BED</span><strong id="lqBedMetric"></strong></div>
+      <div class="lq-metric"><span>EQD2</span><strong id="lqEqd2Metric"></strong></div>
+      <div class="lq-metric"><span>SF at d</span><strong id="lqSfFxMetric"></strong></div>
+      <div class="lq-metric"><span>SF after D</span><strong id="lqSfTotalMetric"></strong></div>
+      <p class="lq-note">OER 在此以 oxygen modification factor 近似：缺氧會降低有效殺傷；RBE／高 LET 則提高有效殺傷。高 LET 同時讓曲線較不彎，代表 β 成分相對降低。</p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var root=document.getElementById('lq-widget'); if(!root || root.dataset.ready==='1') return; root.dataset.ready='1';
+      var $=function(id){return root.querySelector('#'+id)};
+      var presets={tumor:{a:.30,r:10,d:2,D:60},late:{a:.10,r:3,d:2,D:60},cord:{a:.08,r:2,d:2,D:50},prostate:{a:.15,r:1.5,d:7.25,D:36},melanoma:{a:.08,r:6,d:8,D:40}};
+      var beams={photon:{rbe:1,let:1},proton:{rbe:1.1,let:.95},distalProton:{rbe:1.2,let:.9},carbon:{rbe:2.5,let:.45}};
+      var oxy={oxic:{oer:1},moderate:{oer:1.7},hypoxic:{oer:2.8},reoxygenated:{oer:1.25}};
+      var bio={standard:{scale:1},repairDeficient:{scale:1.3},radioresistant:{scale:.75},sensitizer:{scale:1.2}};
+      function sf(D,a,r,beam,oxygen,biology){var b=a/r; var omf=1/(oxygen.oer||1); var q=beam.let||1; return Math.exp(-biology.scale*beam.rbe*omf*(a*D + (b*q)*D*D));}
+      function fmtSF(x){if(x<1e-5)return x.toExponential(1); return x.toFixed(5).replace(/0+$/,'').replace(/[.]$/,'');}
+      function pt(D,a,r,beam,oxygen,biology){var x=58+(D/24)*610; var y=28+(-Math.log10(Math.max(sf(D,a,r,beam,oxygen,biology),1e-6))/6)*330; return [x,y];}
+      function pathFor(a,r,beam,oxygen,biology){var parts=[]; for(var i=0;i<=160;i++){var D=24*i/160; var p=pt(D,a,r,beam,oxygen,biology); parts.push((i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1));} return parts.join(' ');}
+      function line(x1,y1,x2,y2,c,w,dash){return '<line x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'" stroke="'+c+'" stroke-width="'+(w||1)+'" '+(dash?'stroke-dasharray="'+dash+'"':'')+'/>';}
+      function renderAxes(){var g=''; for(var i=0;i<=6;i++){var y=28+i*55; g+=line(58,y,668,y,'#eee',1); g+='<text x="48" y="'+(y+4)+'" text-anchor="end" font-size="12" fill="#666">10<tspan baseline-shift="super">-'+i+'</tspan></text>';} for(var d=0;d<=24;d+=4){var x=58+(d/24)*610; g+=line(x,28,x,358,'#f0f0f0',1); g+='<text x="'+x+'" y="382" text-anchor="middle" font-size="12" fill="#666">'+d+'</text>';} $('lqGrid').innerHTML=g; $('lqAxes').innerHTML=line(58,28,58,358,'#333',1.5)+line(58,358,668,358,'#333',1.5)+'<text x="363" y="408" text-anchor="middle" font-size="13" fill="#333">Dose per fraction or single exposure D (Gy)</text><text x="18" y="200" text-anchor="middle" transform="rotate(-90 18 200)" font-size="13" fill="#333">Surviving fraction, log scale</text>';}
+      function update(){var a=parseFloat($('lqAlpha').value), r=parseFloat($('lqRatio').value), d=parseFloat($('lqFx').value), D=parseFloat($('lqDose').value); var beam=beams[$('lqBeam').value], oxygen=oxy[$('lqOxygen').value], biology=bio[$('lqRepair').value]; var b=a/r; var n=D/d; var bed=D*(1+d/r); var eqd2=bed/(1+2/r); $('lqAlphaOut').textContent=a.toFixed(2); $('lqRatioOut').textContent=r.toFixed(1)+' Gy'; $('lqFxOut').textContent=d.toFixed(1)+' Gy'; $('lqDoseOut').textContent=D.toFixed(0)+' Gy'; $('lqBetaMetric').textContent=b.toFixed(4); $('lqEffAlphaMetric').textContent=(a*beam.rbe*biology.scale/oxygen.oer).toFixed(3); $('lqBedMetric').textContent=bed.toFixed(1)+' Gy'; $('lqEqd2Metric').textContent=eqd2.toFixed(1)+' Gy'; $('lqSfFxMetric').textContent=fmtSF(sf(d,a,r,beam,oxygen,biology)); $('lqSfTotalMetric').textContent=fmtSF(Math.pow(sf(d,a,r,beam,oxygen,biology),n)); var ref={rbe:1,let:1}, ox={oer:1}, hyp={oer:2.8}, std={scale:1}; $('lqCurves').innerHTML='<path d="'+pathFor(a,r,ref,ox,std)+'" fill="none" stroke="#2563a8" stroke-width="2" opacity=".65"/><path d="'+pathFor(a,r,beam,hyp,biology)+'" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 5"/><path d="'+pathFor(a,r,beam,oxygen,biology)+'" fill="none" stroke="#1a6b5a" stroke-width="4"/>';}
+      function applyPreset(){var p=presets[$('lqPreset').value]; $('lqAlpha').value=p.a; $('lqRatio').value=p.r; $('lqFx').value=p.d; $('lqDose').value=p.D; update();}
+      ['lqPreset','lqBeam','lqOxygen','lqRepair','lqAlpha','lqRatio','lqFx','lqDose'].forEach(function(id){$(id).addEventListener('input',id==='lqPreset'?applyPreset:update); $(id).addEventListener('change',id==='lqPreset'?applyPreset:update);});
+      renderAxes(); applyPreset();
+    })();
+  </script>
+</div>
+
+<div class="clinical-note">使用方式：先選組織 preset，再調整 α/β 與單次劑量。觀察低 α/β 組織在大分次時 survival curve 如何快速下墜；切到 hypoxia 會看到曲線變平；切到 carbon ion / high LET 則會看到 RBE 增加且曲線形狀改變。</div>
+            """,
+            'body_en': """
+<p>This interactive model uses <span class="highlight">SF = exp[-(αD + βD²) × OMF × RBE]</span> to visualize the linear-quadratic survival curve. Adjust tissue type, beam quality, oxygenation, repair biology, α/β ratio, α, dose per fraction, and total dose.</p>
+<p>It is a teaching model, not a prescription calculator. It shows why low-α/β tissues are more sensitive to large fraction size, why hypoxia flattens the survival curve, and how proton/high-LET beams affect cell kill through RBE and the β component.</p>
+<p>The interactive controls are shown in the Chinese panel above and remain functional regardless of language mode.</p>
             """,
         },
 
